@@ -1,0 +1,50 @@
+/* Red Hat Common User Experience (RCUE) */
+/* Bootstrap overrides and RCUE-specific mixins */
+
+/* Bootstrap overrides */
+
+// Button variants
+.button-variant(@color; @background; @background-image-start; @background-image-stop; @border) {
+  background-color: @background;
+  #gradient .vertical(@background-image-start, @background-image-stop);
+  border-color: @border;
+  color: @color;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: @color;
+    background-color: @background;
+    background-image: none;
+    border-color: @border;
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border
+    }
+  }
+}
+
+// Placeholder text
+.placeholder(@color: @input-color-placeholder) {
+  &:-moz-placeholder            { color: @color; font-style: italic; } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; font-style: italic;} // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; font-style: italic; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; font-style: italic; } // Safari and Chrome
+}
+
+/* RCUE-specific */
