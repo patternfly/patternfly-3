@@ -32,6 +32,7 @@
     float: none;
   }
   .navbar-nav {
+    font-size: @font-size-base;
     margin: 0;
     > .active > a, > .active > a:hover, > .active > a:focus {
       color: #fff;
@@ -158,7 +159,7 @@
         font-size: @font-size-small;
         left: 20px;
         position: absolute;
-        top: 10px;
+        top: 11px;
       }
     }
     @media (max-width: @screen-xs-max) {
@@ -189,9 +190,12 @@
       padding: 7px 0 8px;
     }
     .navbar-nav > li > a {
-        padding-bottom: 14px;
-        padding-top: 14px;
-      }
+      padding-bottom: 14px;
+      padding-top: 14px;
+    }
+    .navbar-persistent {
+      font-size: @font-size-large;
+    }
     .navbar-primary {
       font-size: @font-size-large;
       #gradient .vertical(#474c50, #383f43);
