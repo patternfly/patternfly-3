@@ -1,9 +1,9 @@
 {
-  "name": "rcue",
-  "version": "0.1.0",
+  "name": "Red Hat Common User Experience (RCUE)",
+  "version": "0.1.2-alpha",
   "authors": "Red Hat",
   "license": "Apache-2.0",
-  "homepage": "http://uxd-rcue.rhcloud.com",
+  "homepage": "http://rcue-uxd.itos.redhat.com/",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,6 +14,9 @@
   ],
   "dependencies": {
     "bootstrap": "~3.0.1",
-    "font-awesome": "~4.0.1"
-  }
+    "font-awesome": "~4.0.1",
+    "html5shiv": "~3.7.0",
+    "respond": "~1.3.0"
+  },
+  "private": true
 }
