@@ -1,0 +1,19 @@
+{
+  "name": "rcue",
+  "version": "0.0.0",
+  "authors": [],
+  "license": "MIT",
+  "homepage": "http://uxd-rcue.rhcloud.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.1",
+    "font-awesome": "~4.0.1"
+  }
+}
