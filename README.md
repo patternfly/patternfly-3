@@ -49,4 +49,4 @@ This task will compile and minify the lesscss files into a single CSS file locat
 
 ## Documentation
 
-See [http://uxd-rcue.rhcloud.com](http://uxd-rcue.rhcloud.com).
+See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/) and [http://getbootstrap.com/](http://getbootstrap.com/)
