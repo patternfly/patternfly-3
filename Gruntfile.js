@@ -34,7 +34,7 @@ module.exports = function (grunt) {
             livereload: {
                 files: [
                     'examples/*.html',
-                    'dist/*.css'
+                    'dist/css/*.css'
                 ]
             }
         },
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
                     paths: ["less/"]
                 },
                 files: {
-                "dist/rcue.min.css": "less/rcue.less"
+                "dist/css/rcue.min.css": "less/rcue.less"
                 }
             },
             production: {
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
                     cleancss: true
                 },
                 files: {
-                    "dist/rcue.min.css": "less/rcue.less"
+                    "dist/css/rcue.min.css": "less/rcue.less"
                 }
             }
         }
