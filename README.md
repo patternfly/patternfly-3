@@ -1,4 +1,4 @@
-# [Red Hat Common User Experience (RCUE)](http://uxd-rcue.rhcloud.com) reference implementation
+# [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) reference implementation
 
 The Red Hat Common User Experience (RCUE) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.
 
