@@ -39,6 +39,14 @@
   }
 }
 
+// Horizontal dividers
+.nav-divider(@color: #e5e5e5, @margin: 4px 1px) {
+  background-color: @color;
+  height: 1px;
+  margin: @margin;
+  overflow: hidden;
+}
+
 // Placeholder text
 .placeholder(@color: @input-color-placeholder) {
   &:-moz-placeholder            { color: @color; font-style: italic; } // Firefox 4-18
