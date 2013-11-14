@@ -10,24 +10,10 @@
 .caret {
   font-family: @icon-font-name-rcue;
   font-weight: normal;
-  height: @font-size-base;
-  margin-left: 0;
+  height: @font-size-base - 3;
   position: relative;
+  vertical-align: baseline;
   width: @font-size-base;
-  .btn-lg & {
-    height: @font-size-large;
-    width: @font-size-large;
-    &:before {
-      line-height: @font-size-large;
-    }
-  }
-  .btn-sm &, .btn-xs & {
-    height: @font-size-small;
-    width: @font-size-small;
-    &:before {
-      line-height: @font-size-small;
-    }
-  }
   &:before {
     bottom: 0;
     content: @fa-var-angle-down;

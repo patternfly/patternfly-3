@@ -184,12 +184,6 @@
     li.dropdown > .dropdown-toggle {
       padding-left: 36px;
       position: relative;
-      .caret {
-        height: @font-size-base - 3;
-        &:before {
-          line-height: @font-size-base - 3;
-        }
-      }
       .glyphicon-user {
         font-size: @font-size-small;
         left: 20px;
@@ -224,10 +218,6 @@
         .context {
           .dropdown-menu {
             top: auto;
-          }
-          .dropdown-toggle .caret {
-            font-size: @font-size-large + 1;
-            margin-left: 2px;
           }
         }
         .dropup .dropdown-menu {
@@ -292,10 +282,9 @@
                 > .dropdown-toggle {
                   padding-right: 35px !important;
                   &:after {
-                    font-size: @font-size-large + 1;
                     position: absolute;
                     right: 20px;
-                    top: 9px;
+                    top: 10px;
                   }
                 }
               }
