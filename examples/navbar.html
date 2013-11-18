@@ -10,6 +10,10 @@
     <script src="../components/html5shiv/dist/html5shiv.js"></script>
     <script src="../components/respond/respond.min.js"></script>
     <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
     <style>
       body { padding: 0 !important; margin: 0 auto 300px; width: 90%; }
       h1 { color: #222; font-weight: 800;  font-size: 26px; }
@@ -4813,7 +4817,5 @@
       </div>
     </nav>
     <hr>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
