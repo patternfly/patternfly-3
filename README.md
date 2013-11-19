@@ -50,3 +50,8 @@ This task will compile and minify the lesscss files into a single CSS file locat
 ## Documentation
 
 See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/) and [http://getbootstrap.com/](http://getbootstrap.com/)
+
+## License
+
+Modifications to Bootstrap are copyright 2013 Red Hat, Inc. and licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+
