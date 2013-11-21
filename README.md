@@ -2,7 +2,7 @@
 
 The Red Hat Common User Experience (RCUE) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.
 
-This reference implementation of RCUE is based on [Bootstrap v3.0.1](http://getbootstrap.com/).
+This reference implementation of RCUE is based on [Bootstrap v3.0.X](http://getbootstrap.com/).
 
 ## Development
 
