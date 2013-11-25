@@ -4146,19 +4146,19 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding: 8px 15px;
   margin-bottom: 19px;
   list-style: none;
-  background-color: #f5f5f5;
+  background-color: transparent;
   border-radius: 1px;
 }
 .breadcrumb > li {
   display: inline-block;
 }
 .breadcrumb > li + li:before {
-  content: "/\00a0";
+  content: "\f105\00a0";
   padding: 0 5px;
-  color: #cccccc;
+  color: #4d5258;
 }
 .breadcrumb > .active {
-  color: #999999;
+  color: #4d5258;
 }
 .pagination {
   display: inline-block;
@@ -8207,4 +8207,19 @@ fieldset[disabled] .form-control {
 label {
   font-size: 11px;
   font-weight: 600;
+}
+.breadcrumb {
+  padding-left: 10px;
+}
+.breadcrumb:before {
+  font-family: "FontAwesome";
+  content: "\f100";
+  color: #0099d3;
+}
+.breadcrumb > li + li:before {
+  font-weight: normal;
+  font-family: "FontAwesome";
+}
+.breadcrumb > .active {
+  font-weight: bold;
 }

@@ -1,0 +1,22 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  &:before {
+    font-family: @icon-font-name-rcue;
+    content: "@{breadcrumb-back}"; // Unicode space added since inline-block means non-collapsing white-space
+    color: @link-color;
+  }
+  padding-left: 10px;
+  > li {
+    + li:before {
+      font-weight: normal;
+      font-family: @icon-font-name-rcue;
+    }
+  }
+  > .active {
+    font-weight: bold;
+  }
+}
