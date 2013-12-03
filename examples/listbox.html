@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html class="ie6"><![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>List Box - Red Hat&reg; Common User Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../components/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+      body { width: 90%; margin: auto; padding-bottom: 200px; }
+      h1 { color: #222; font-weight: 800;  font-size: 26px; }
+      h2 { color: #222; font-weight: 600; font-size: 22px; }
+      h3 { color: #222; font-weight: 600; font-size: 18px; }
+      .container { margin: 0; padding: 0; width: 250px; }
+    </style>
+  </head>
+  <body>
+    <h1>List Box</h1>
+    <div class="container">
+      <div class="list-group list-box-rcue">
+        <a href="#" class="list-group-item">Name ID</a>
+        <a href="#" class="list-group-item">Category ID</a>
+        <a href="#" class="list-group-item">System Up</a>
+        <a href="#" class="list-group-item">System Down</a>
+        <a href="#" class="list-group-item">System Suspended</a>
+      </div>
+    </div><!-- /container -->
+    
+    <h2>Active and Disabled Item</h2>
+    <div class="container">
+      <div class="list-group list-box-rcue">
+        <a href="#" class="list-group-item">Name ID</a>
+        <a href="#" class="list-group-item active">Category ID</a>
+        <a href="#" class="list-group-item">System Up</a>
+        <a href="#" class="list-group-item disabled">System Down</a>
+        <a href="#" class="list-group-item">System Suspended</a>
+      </div>
+    </div><!-- /container -->
+    
+    <h2>Scrolling List Box - Display 5 Items</h2>
+    <div class="container">
+      <div class="list-group list-box-rcue scroll-items-5">
+        <a href="#" class="list-group-item">Name ID</a>
+        <a href="#" class="list-group-item">Category ID</a>
+        <a href="#" class="list-group-item">System Up</a>
+        <a href="#" class="list-group-item">System Down</a>
+        <a href="#" class="list-group-item">Item 5</a>
+        <a href="#" class="list-group-item">Item 6</a>
+        <a href="#" class="list-group-item">Item 7</a>
+        <a href="#" class="list-group-item">Item 8</a>
+        <a href="#" class="list-group-item">Item 9</a>
+        <a href="#" class="list-group-item">Item 10</a>
+      </div>
+    </div><!-- /container -->
+    
+    <h2>Disabled All</h2>
+    <div class="container">
+      <div class="list-group list-box-rcue disabled">
+        <a href="#" class="list-group-item">Name ID</a>
+        <a href="#" class="list-group-item">Category ID</a>
+        <a href="#" class="list-group-item">System Up</a>
+        <a href="#" class="list-group-item">System Down</a>
+        <a href="#" class="list-group-item">System Suspended</a>
+      </div>
+    </div><!-- /container -->
+  </body>
+</html>

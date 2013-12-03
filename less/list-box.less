@@ -1,0 +1,94 @@
+//
+// List groups
+// --------------------------------------------------
+
+// Base class
+.list-box-rcue {
+  overflow: auto;
+  border: 1px solid @list-group-border;
+  .box-shadow(inset 0 1px 3px rgba(0,0,0,.09));
+  padding: 2px 0;
+  
+  // Individual list items
+  // -------------------------
+  .list-group-item {
+    outline: none;
+    padding: 0 10px;
+    // Place the border on the list items and negative margin up for better styling
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-width: 1px 0;
+    background-color: transparent;
+  }
+  
+  // Linked list items
+  // -------------------------
+  a.list-group-item {
+    // Hover state
+    &:hover {
+      background-color: @list-group-hover-bg;
+      border-color: @list-group-hover-border;
+    }
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+    }
+    &:active {
+      color: #fff;
+      background-color: @dropdown-link-active-bg;
+      border-color: @list-group-focus-border;
+    }
+  
+    // Active class on item itself, not parent
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      color: @list-group-active-color;
+      background-color: @dropdown-link-active-bg;
+      border-color: @list-group-focus-border;
+    }
+    
+    // Disabled state
+    &.disabled {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: @dropdown-link-disabled-color;
+        background-color: transparent;
+        border-color: transparent;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  // Disable All
+  &.disabled {
+    background-color: #f5f5f5;
+    .list-group-item {
+      background-color: transparent !important;
+      border-color: transparent !important;
+      color: #969696 !important;
+      cursor: not-allowed;
+    }
+  }
+  
+  // Scrollable List Box
+  // -------------------------
+  @border: 2px;
+  @padding: 2px;
+  @line-height: 20px;
+  @item-height: @border + @line-height;
+  
+  // Scroll List Box | Display Number of Items
+  .height-of-items(@items) {
+    height: (@items * @item-height) + @border + @padding;
+  }
+  
+  &.scroll-items-3 { .height-of-items(3); }
+  &.scroll-items-4 { .height-of-items(4); }
+  &.scroll-items-5 { .height-of-items(5); }
+  &.scroll-items-6 { .height-of-items(6); }
+  &.scroll-items-7 { .height-of-items(7); }
+  &.scroll-items-8 { .height-of-items(8); }
+}
