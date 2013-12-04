@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 login-rcue"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="login-rcue">
+<!--<![endif]-->
+  <head>
+    <title>Login - Red Hat&reg; Common User Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../components/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <a href="http://www.redhat.com/" id="redhat">
+      <img src="../dist/img/logo.svg" alt="Red Hat" />
+    </a>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="brand">
+            <img src="../dist/img/brand.svg">
+          </div><!--/#brand-->
+        </div><!--/.row-->
+        <div class="col-sm-7 col-md-6 col-lg-5 login">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="inputUsername" class="col-sm-2 col-md-2 control-label">Username</label>
+              <div class="col-sm-10 col-md-10">
+                <input type="text" class="form-control" id="inputUsername" placeholder="" tabindex="1">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword" class="col-sm-2 col-md-2 control-label">Password</label>
+              <div class="col-sm-10 col-md-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="" tabindex="2">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-8 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-6">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" tabindex="3"> Remember Username
+                  </label>
+                </div>
+                <span class="help-block"> Forgot <a href="#" tabindex="5">Username</a> or <a href="#" tabindex="6">Password</a>?</span>
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 submit">
+                <button type="submit" class="btn btn-primary btn-lg" tabindex="4">Log In</button>
+              </div>
+            </div>
+          </form>
+        </div><!--/.col-*-->
+        <div class="col-sm-5 col-md-6 col-lg-7 details">
+          <p><strong>Domain:</strong> 10.0.0.1</p>
+          <p><strong>Zone:</strong> Live</p>
+          <p><strong>Appliance:</strong> Yep</p>
+        </div><!--/.col-*-->
+      </div><!--/.row-->
+    </div><!--/.container-->
+  </body>
+</html>
