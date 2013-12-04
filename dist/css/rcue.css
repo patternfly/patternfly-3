@@ -2072,7 +2072,7 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger {
   color: #ffffff;
   background-color: #ab070f;
-  border-color: #340001;
+  border-color: #781919;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -2081,7 +2081,7 @@ fieldset[disabled] .btn-warning.active {
 .open .dropdown-toggle.btn-danger {
   color: #ffffff;
   background-color: #84050c;
-  border-color: #000000;
+  border-color: #450e0e;
 }
 .btn-danger:active,
 .btn-danger.active,
@@ -2104,7 +2104,7 @@ fieldset[disabled] .btn-danger:active,
 .btn-danger[disabled].active,
 fieldset[disabled] .btn-danger.active {
   background-color: #ab070f;
-  border-color: #340001;
+  border-color: #781919;
 }
 .btn-success {
   color: #ffffff;
@@ -8053,7 +8053,7 @@ fieldset[disabled] .btn.btn-link {
   background-image: linear-gradient(to bottom, #d60915 0%, #ac0710 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd60915', endColorstr='#ffac0710', GradientType=0);
-  border-color: #340001;
+  border-color: #781919;
   color: #ffffff;
 }
 .btn-danger:hover,
@@ -8064,7 +8064,7 @@ fieldset[disabled] .btn.btn-link {
   color: #ffffff;
   background-color: #ab070f;
   background-image: none;
-  border-color: #340001;
+  border-color: #781919;
 }
 .btn-danger:active,
 .btn-danger.active,
@@ -8087,7 +8087,7 @@ fieldset[disabled] .btn-danger:active,
 .btn-danger[disabled].active,
 fieldset[disabled] .btn-danger.active {
   background-color: #ab070f;
-  border-color: #340001;
+  border-color: #781919;
 }
 .btn-default {
   background-color: #eeeeee;
