@@ -7354,6 +7354,8 @@ td.visible-print {
 /* RCUE overrides and new stuff */
 /* Red Hat Common User Experience (RCUE) */
 /* Bootstrap overrides and RCUE-specific variables */
+/* @img-brand-ie8, @img-brand-lg-ie8, and @img-path-alt should be overwritten in 
+a separate variables file to point to the correct images and path */
 /* Bootstrap overrides */
 /* RCUE-specific */
 /* Red Hat Common User Experience (RCUE) */
@@ -8222,4 +8224,111 @@ label {
 }
 .breadcrumb > .active {
   font-weight: bold;
+}
+.login-rcue {
+  height: 100%;
+}
+.login-rcue #brand {
+  position: relative;
+  top: -70px;
+}
+.login-rcue #brand img {
+  display: block;
+  height: 18px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .login-rcue #brand img {
+    margin: 0;
+    text-align: left;
+  }
+}
+.login-rcue body {
+  background: #1d2226 url("../img/bg-login.jpg") repeat-x 45% 0;
+  background-size: auto;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .login-rcue body {
+    background-size: 100% auto;
+  }
+}
+.login-rcue .container {
+  background-color: #252a2e;
+  background-color: rgba(0, 0, 0, 0.3);
+  clear: right;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  width: auto;
+}
+@media (min-width: 768px) {
+  .login-rcue .container {
+    bottom: 13%;
+    padding-bottom: 10px;
+    padding-left: 80px;
+    position: absolute;
+    width: 100%;
+  }
+}
+.login-rcue .container .details p:first-child {
+  border-top: 1px solid #474747;
+  padding-top: 25px;
+}
+@media (min-width: 768px) {
+  .login-rcue .container .details {
+    border-left: 1px solid #474747;
+    padding-left: 40px;
+  }
+  .login-rcue .container .details p:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+.login-rcue .container .details p {
+  margin-bottom: 2px;
+}
+.login-rcue .container .form-horizontal .control-label {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+}
+.login-rcue .container .help-block {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .login-rcue .container .login {
+    padding-right: 40px;
+  }
+}
+.login-rcue .container .submit {
+  text-align: right;
+}
+.login-rcue #redhat {
+  display: block;
+  margin: 20px auto 70px;
+  position: relative;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .login-rcue #redhat {
+    float: right;
+    margin-right: 64px;
+    margin-top: 50px;
+  }
+}
+.ie8.login-rcue #brand {
+  background: url('../img/brand-lg.png') no-repeat;
+  background-size: cover auto;
+}
+.ie8.login-rcue #brand img {
+  width: 0;
+}
+.ie8.login-rcue #redhat {
+  background: url('../img/logo.png') no-repeat;
+  height: 44px;
+  width: 137px;
+}
+.ie8.login-rcue #redhat img {
+  width: 0;
 }
