@@ -5172,27 +5172,27 @@ button.close {
 }
 .tooltip.top {
   margin-top: -3px;
-  padding: 5px 0;
+  padding: 8px 0;
 }
 .tooltip.right {
   margin-left: 3px;
-  padding: 0 5px;
+  padding: 0 8px;
 }
 .tooltip.bottom {
   margin-top: 3px;
-  padding: 5px 0;
+  padding: 8px 0;
 }
 .tooltip.left {
   margin-left: -3px;
-  padding: 0 5px;
+  padding: 0 8px;
 }
 .tooltip-inner {
-  max-width: 200px;
+  max-width: 220px;
   padding: 3px 8px;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background-color: #000000;
+  background-color: #434343;
   border-radius: 1px;
 }
 .tooltip-arrow {
@@ -5205,54 +5205,54 @@ button.close {
 .tooltip.top .tooltip-arrow {
   bottom: 0;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #000000;
+  margin-left: -8px;
+  border-width: 8px 8px 0;
+  border-top-color: #434343;
 }
 .tooltip.top-left .tooltip-arrow {
   bottom: 0;
-  left: 5px;
-  border-width: 5px 5px 0;
-  border-top-color: #000000;
+  left: 8px;
+  border-width: 8px 8px 0;
+  border-top-color: #434343;
 }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
-  right: 5px;
-  border-width: 5px 5px 0;
-  border-top-color: #000000;
+  right: 8px;
+  border-width: 8px 8px 0;
+  border-top-color: #434343;
 }
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
-  margin-top: -5px;
-  border-width: 5px 5px 5px 0;
-  border-right-color: #000000;
+  margin-top: -8px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: #434343;
 }
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
-  margin-top: -5px;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #000000;
+  margin-top: -8px;
+  border-width: 8px 0 8px 8px;
+  border-left-color: #434343;
 }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #000000;
+  margin-left: -8px;
+  border-width: 0 8px 8px;
+  border-bottom-color: #434343;
 }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
-  left: 5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #000000;
+  left: 8px;
+  border-width: 0 8px 8px;
+  border-bottom-color: #434343;
 }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
-  right: 5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #000000;
+  right: 8px;
+  border-width: 0 8px 8px;
+  border-bottom-color: #434343;
 }
 .popover {
   position: absolute;
@@ -8402,4 +8402,15 @@ label {
 }
 .list-box-rcue.scroll-items-8 {
   height: 180px;
+}
+.tooltip {
+  font-size: 11px;
+}
+.tooltip.in {
+  opacity: 0.88;
+  filter: alpha(opacity=88);
+}
+.tooltip-inner {
+  padding: 10px 15px;
+  text-align: left;
 }
