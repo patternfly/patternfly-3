@@ -1,3 +1,7 @@
+//
+// RCUE - Navbar
+// --------------------------------------------------
+
 .navbar-rcue {
   background: #393F45;
   border: 0;
@@ -244,18 +248,11 @@
             }
             > li {
               &.active {
-                &:before, &:hover:before {
-                  background: #409cd3 !important;
-                  bottom: -1px;
-                  content: '';
-                  display: block;
-                  height: 2px;
-                  left: 20px;
-                  position: absolute;
-                  right: 20px;
+                &, &:hover {
+                  .tab-indicator(@background: @nav-tabs-active-link-hover-color, @left: 20px, @right: 20px);
                 }
                 > a, > a:hover, &:hover > a {
-                  color: #0092c7 !important;
+                  color: @link-color !important;
                 }
                 .active > a { 
                   color: #fff;
@@ -273,9 +270,9 @@
                     top: 100%;
                   }
                   > .dropdown-toggle {
-                    color: #222;
+                    color: @gray-darker;
                     &:after {
-                      border-top-color: #222;
+                      border-top-color: @gray-darker;
                     }
                   }
                 }
@@ -289,20 +286,11 @@
                 }
               }
               &:hover, &.open {
-                &:before {
-                  background: #aaa;
-                  bottom: -1px;
-                  content: '';
-                  display: block;
-                  height: 2px;
-                  left: 20px;
-                  position: absolute;
-                  right: 20px;
-                }
+                .tab-indicator(@left: 20px, @right: 20px);
                 > a {
-                  color: #222;
+                  color: @gray-darker;
                   &:after {
-                    border-top-color: #222;
+                    border-top-color: @gray-darker;
                   }
                 }
               }
@@ -321,11 +309,11 @@
                   }
                 }
                 &:hover {
-                  color: #222;
+                  color: @gray-darker;
                 }
               }
               a {
-                color: #4d5258;
+                color: @gray-rcue;
               }
             }
           }

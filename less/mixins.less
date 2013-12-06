@@ -56,3 +56,16 @@
 }
 
 /* RCUE-specific */
+
+.tab-indicator(@background: @gray-light-rcue, @left: 15px, @right: 15px) {
+  &:before {
+    background: @background;
+    bottom: -1px;
+    content: '';
+    display: block;
+    height: 2px;
+    left: @left;
+    position: absolute;
+    right: @right;
+  }
+}

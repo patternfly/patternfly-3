@@ -3455,7 +3455,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #e9e8e8;
 }
 .nav-tabs > li {
   float: left;
@@ -3468,13 +3468,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-radius: 1px 1px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #dddddd;
+  border-color: #eeeeee #eeeeee #e9e8e8;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
-  background-color: #ffffff;
+  color: #0099d3;
+  background-color: transparent;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -3510,11 +3510,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs.nav-justified > .active > a,
 .nav-tabs.nav-justified > .active > a:hover,
 .nav-tabs.nav-justified > .active > a:focus {
-  border: 1px solid #dddddd;
+  border: 1px solid #e9e8e8;
 }
 @media (min-width: 768px) {
   .nav-tabs.nav-justified > li > a {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #e9e8e8;
     border-radius: 1px 1px 0 0;
   }
   .nav-tabs.nav-justified > .active > a,
@@ -3584,11 +3584,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs-justified > .active > a,
 .nav-tabs-justified > .active > a:hover,
 .nav-tabs-justified > .active > a:focus {
-  border: 1px solid #dddddd;
+  border: 1px solid #e9e8e8;
 }
 @media (min-width: 768px) {
   .nav-tabs-justified > li > a {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #e9e8e8;
     border-radius: 1px 1px 0 0;
   }
   .nav-tabs-justified > .active > a,
@@ -7436,7 +7436,7 @@ a separate variables file to point to the correct images and path */
 .dropdown-menu > li > a:active {
   background-color: #0099d3;
   border-color: #0076b7;
-  color: #ffffff;
+  color: #ffffff !important;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .dropdown-menu > .active > a,
@@ -7799,7 +7799,7 @@ a separate variables file to point to the correct images and path */
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.active:before,
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.active:hover:before {
-    background: #409cd3 !important;
+    background: #0099d3;
     bottom: -1px;
     content: '';
     display: block;
@@ -7811,7 +7811,7 @@ a separate variables file to point to the correct images and path */
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.active > a,
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.active > a:hover,
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.active:hover > a {
-    color: #0092c7 !important;
+    color: #0099d3 !important;
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.active .active > a {
     color: #fff;
@@ -7826,10 +7826,10 @@ a separate variables file to point to the correct images and path */
     top: 100%;
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.dropdown-submenu.open > .dropdown-toggle {
-    color: #222;
+    color: #222222;
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.dropdown-submenu.open > .dropdown-toggle:after {
-    border-top-color: #222;
+    border-top-color: #222222;
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.dropdown-submenu > .dropdown-toggle {
     padding-right: 35px !important;
@@ -7841,7 +7841,7 @@ a separate variables file to point to the correct images and path */
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li:hover:before,
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.open:before {
-    background: #aaa;
+    background: #aaaaaa;
     bottom: -1px;
     content: '';
     display: block;
@@ -7852,11 +7852,11 @@ a separate variables file to point to the correct images and path */
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li:hover > a,
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.open > a {
-    color: #222;
+    color: #222222;
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li:hover > a:after,
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li.open > a:after {
-    border-top-color: #222;
+    border-top-color: #222222;
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li > a {
     background-color: transparent;
@@ -7874,7 +7874,7 @@ a separate variables file to point to the correct images and path */
     top: 9px;
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li > a:hover {
-    color: #222;
+    color: #222222;
   }
   .navbar-rcue .navbar-primary.persistent-secondary > li > .navbar-persistent > li a {
     color: #4d5258;
@@ -8402,4 +8402,95 @@ label {
 }
 .list-box-rcue.scroll-items-8 {
   height: 180px;
+}
+.nav-tabs {
+  font-size: 13px;
+}
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified {
+    border-bottom: 1px solid #e9e8e8;
+  }
+}
+.nav-tabs.nav-justified > li:first-child > a {
+  padding-left: 15px;
+}
+.nav-tabs.nav-justified > li > a {
+  border-bottom: 0;
+}
+.nav-tabs.nav-justified > li > a:before {
+  left: 0 !important;
+  right: 0 !important;
+}
+.nav-tabs > li {
+  margin-bottom: 0;
+}
+.nav-tabs > li.active > a {
+  font-weight: 600;
+}
+.nav-tabs > li.active > a:before {
+  background: #0099d3;
+  bottom: -1px;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 15px;
+  position: absolute;
+  right: 15px;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:active,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  border: 0 !important;
+  color: #0099d3;
+}
+.nav-tabs > li.active > a:before,
+.nav-tabs > li.active > a:active:before,
+.nav-tabs > li.active > a:focus:before,
+.nav-tabs > li.active > a:hover:before {
+  background: #0099d3;
+}
+.nav-tabs > li:first-child > a {
+  padding-left: 0;
+}
+.nav-tabs > li:first-child > a:before {
+  left: 0 !important;
+}
+.nav-tabs > li > a {
+  border: 0;
+  color: #4d5258;
+  line-height: 1;
+  margin-right: 0;
+}
+.nav-tabs > li > a:active,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover {
+  background-color: transparent;
+  color: #222222;
+}
+.nav-tabs > li > a:active:before,
+.nav-tabs > li > a:focus:before,
+.nav-tabs > li > a:hover:before {
+  background: #aaaaaa;
+  bottom: -1px;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 15px;
+  position: absolute;
+  right: 15px;
+}
+.nav-tabs > li > .dropdown-menu {
+  border-top: 0;
+  left: 15px;
+  margin-top: 1px;
+}
+.nav-tabs > li > .dropdown-menu.pull-right {
+  left: auto;
+  right: 15px;
+}
+.nav-tabs .open > a,
+.nav-tabs .open > a:hover,
+.nav-tabs .open > a:focus {
+  background-color: transparent;
 }
