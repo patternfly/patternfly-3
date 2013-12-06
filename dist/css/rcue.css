@@ -5260,13 +5260,13 @@ button.close {
   left: 0;
   z-index: 1010;
   display: none;
-  max-width: 276px;
+  max-width: 220px;
   padding: 1px;
   text-align: left;
   background-color: #ffffff;
   background-clip: padding-box;
   border: 1px solid #cccccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #bbbbbb;
   border-radius: 1px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -5290,8 +5290,8 @@ button.close {
   font-size: 11px;
   font-weight: normal;
   line-height: 18px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e8e8e8;
   border-radius: 5px 5px 0 0;
 }
 .popover-content {
@@ -5318,7 +5318,7 @@ button.close {
   margin-left: -11px;
   border-bottom-width: 0;
   border-top-color: #999999;
-  border-top-color: rgba(0, 0, 0, 0.25);
+  border-top-color: #bbbbbb;
   bottom: -11px;
 }
 .popover.top .arrow:after {
@@ -5334,7 +5334,7 @@ button.close {
   margin-top: -11px;
   border-left-width: 0;
   border-right-color: #999999;
-  border-right-color: rgba(0, 0, 0, 0.25);
+  border-right-color: #bbbbbb;
 }
 .popover.right .arrow:after {
   content: " ";
@@ -5348,7 +5348,7 @@ button.close {
   margin-left: -11px;
   border-top-width: 0;
   border-bottom-color: #999999;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-bottom-color: #bbbbbb;
   top: -11px;
 }
 .popover.bottom .arrow:after {
@@ -5364,7 +5364,7 @@ button.close {
   margin-top: -11px;
   border-right-width: 0;
   border-left-color: #999999;
-  border-left-color: rgba(0, 0, 0, 0.25);
+  border-left-color: #bbbbbb;
 }
 .popover.left .arrow:after {
   content: " ";
@@ -8509,4 +8509,44 @@ label {
 .tooltip-inner {
   padding: 7px 12px;
   text-align: left;
+}
+.popover {
+  padding: 0;
+  -webkit-box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+.popover-title {
+  color: #4d5258;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: none;
+  border-radius: 0;
+}
+.popover-title.x {
+  padding-right: 30px;
+}
+.popover-title span {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  color: #72767b;
+  font-weight: normal;
+  font-family: "FontAwesome";
+  line-height: 11px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.popover-title span:after {
+  position: absolute;
+  content: "\f00d";
+  color: #72767b;
+  top: 6px;
+  left: 6px;
+}
+.popover-content {
+  padding: 10px 18px;
+  color: #4d5258;
+  line-height: 18px;
 }

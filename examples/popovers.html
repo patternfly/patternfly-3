@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>Popovers - Red Hat&reg; Common User Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../components/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+    <style>
+      body { width: 90%; margin: auto; padding-bottom: 200px; }
+      h1 { color: #222; font-weight: 800;  font-size: 26px; }
+      h2 { color: #222; font-weight: 600; font-size: 22px; }
+      h3 { color: #222; font-weight: 600; font-size: 18px; }
+      .container { margin: 0; padding: 0; width: 80%; }
+    </style>
+  </head>
+  <body>
+    <h1>Popovers</h1>
+    <div class="bs-example" style="margin-top: 40px;">
+      <a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-original-title="1 http smartproxy 1 http http http" data-close="true">Click to toggle popover 1</a>
+    </div>
+    <div class="bs-example" style="margin-top: 40px;">
+      <a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="Close icon with no Title text. This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-close="true">Click to toggle popover 2</a>
+    </div>
+    <div class="bs-example" style="margin: 40px 0;">
+      <a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="Popover with no Close icon.<br>This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-original-title="3 popover example">Click to toggle popover 3</a>
+    </div>
+    <div class="bs-example" style="margin: 40px 0;">
+      <a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="Empty Title example.<br>This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy.">Click to toggle popover 4</a>
+    </div>
+    
+    <p>Note: To display the close (X) icon in popovers, add data attribute <strong>data-close="true"</strong> to the trigger button element.</p>
+    
+    <script src="../dist/js/rcue-util.js"></script>
+  </body>
+</html>
