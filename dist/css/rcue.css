@@ -8265,7 +8265,6 @@ label {
 @media (min-width: 768px) {
   .login-rcue .container {
     bottom: 13%;
-    padding-bottom: 10px;
     padding-left: 80px;
     position: absolute;
     width: 100%;
@@ -8274,6 +8273,7 @@ label {
 .login-rcue .container .details p:first-child {
   border-top: 1px solid #474747;
   padding-top: 25px;
+  margin-top: 25px;
 }
 @media (min-width: 768px) {
   .login-rcue .container .details {
@@ -8283,6 +8283,7 @@ label {
   .login-rcue .container .details p:first-child {
     border-top: 0;
     padding-top: 0;
+    margin-top: 0;
   }
 }
 .login-rcue .container .details p {
@@ -8292,6 +8293,10 @@ label {
   font-size: 12px;
   font-weight: 400;
   text-align: left;
+}
+.login-rcue .container .form-horizontal .form-group:last-child,
+.login-rcue .container .form-horizontal .form-group:last-child .help-block:last-child {
+  margin-bottom: 0;
 }
 .login-rcue .container .help-block {
   color: #fff;
