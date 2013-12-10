@@ -8211,19 +8211,17 @@ label {
   font-weight: 600;
 }
 .breadcrumb {
-  padding-left: 10px;
+  padding-left: 0;
 }
-.breadcrumb:before {
-  font-family: "FontAwesome";
-  content: "\f100";
-  color: #0099d3;
+.breadcrumb > .active strong {
+  font-weight: 600;
 }
 .breadcrumb > li + li:before {
-  font-weight: normal;
+  content: "\f101";
+  color: #999999;
   font-family: "FontAwesome";
-}
-.breadcrumb > .active {
-  font-weight: bold;
+  font-size: 10px;
+  padding: 0 9px 0 7px;
 }
 .login-rcue {
   height: 100%;
