@@ -1,8 +1,12 @@
 # [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) reference implementation
 
-The Red Hat Common User Experience (RCUE) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.
+The [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.
 
-This reference implementation of RCUE is based on [Bootstrap v3.0.X](http://getbootstrap.com/).
+This reference implementation of RCUE is based on [Bootstrap v3.0.X](http://getbootstrap.com/).  Think of RCUE as a "skinned" version of Bootstrap with additional components and customizations.
+
+## Dependencies
+
+RCUE includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".
 
 ## Development
 
@@ -14,7 +18,7 @@ After ensuring nodejs and npm are available, install [Bower](http://bower.io/) g
 
     npm install -g bower
 
-Now that bower is available, we can install the required development components:
+Now that Bower is available, we can install the required development components:
 
     bower install
 
@@ -36,7 +40,6 @@ A local development server can be quickly fired up by using the Gruntjs server t
 
 This local static asset server (i.e., [http://localhost:9000](http://localhost:9000)) has the advantage of having livereload integration. Thus, if you start the Gruntjs server, any changes you make to `.html` or `.less` files will be automatically reloaded into your browser and the changes reflected almost immediately. This has the obvious benefit of not having to refresh your browser and still be able to see the changes as you add or remove them from your development files.
 
-
 ## Build
 
 ### CSS
@@ -47,11 +50,14 @@ In development, styling is written and managed through multiple lesscss files. I
 
 This task will compile and minify the lesscss files into a single CSS file located at `dist/css/rcue.min.css`.
 
+## Tests
+
+The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use RCUE.
+
 ## Documentation
 
-See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/) and [http://getbootstrap.com/](http://getbootstrap.com/)
+See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/) and [http://getbootstrap.com/](http://getbootstrap.com/).
 
 ## License
 
 Modifications to Bootstrap are copyright 2013 Red Hat, Inc. and licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
-

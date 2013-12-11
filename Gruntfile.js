@@ -33,7 +33,7 @@ module.exports = function (grunt) {
             },
             livereload: {
                 files: [
-                    'examples/*.html',
+                    'tests/*.html',
                     'dist/css/*.css'
                 ]
             }
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
                         return [
                             lrSnippet,
                             mountFolder(connect, projectConfig.src),
-                            mountFolder(connect, projectConfig.src + 'examples')
+                            mountFolder(connect, projectConfig.src + 'tests')
                         ];
                     }
                 }

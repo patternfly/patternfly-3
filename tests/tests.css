@@ -1,0 +1,17 @@
+h1, h2, h3 { 
+  color: #222;
+}
+h1 { 
+  font-size: 26px;
+  font-weight: 800;
+}
+h2 { 
+  font-size: 20px;
+  font-weight: 600;
+}
+hr + h2 {
+  margin-top: 50px;
+}
+h3 {
+  font-size: 16px;
+}
