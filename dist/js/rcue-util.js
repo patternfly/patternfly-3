@@ -41,7 +41,7 @@ var RCUE = RCUE || {};
 		});
 		
 		// Bind Close Icon to Toggle Dispaly
-		allpopovers.on('click', function() {
+		allpopovers.on('click', function(e) {
 			var $this = $(this);
 				$title = $this.next('.popover').find('.popover-title');
 			
@@ -52,6 +52,9 @@ var RCUE = RCUE || {};
 			$title.find('span').on('click', function() {
 				$this.popover('toggle');
 			});
+			
+			// Prevent href="#" page scroll to top
+			e.preventDefault();
 		});
 	};
 	
