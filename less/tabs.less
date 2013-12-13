@@ -4,6 +4,37 @@
 
 .nav-tabs {
   font-size: @font-size-large;
+  > li {
+    > a {
+      color: @nav-tabs-color;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      &:active,
+      &:focus,
+      &:hover {
+        background: transparent;
+        color: @gray-darker;
+      }
+    }
+    > .dropdown-menu {
+      border-top: 0;
+      border-color: @nav-tabs-border-color;
+      &.pull-right {
+        right: 2px;
+      }
+    }
+  }
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: @nav-tabs-border-color;
+    }
+  }
+}
+
+.nav-tabs-rcue {
   &.nav-justified {
     @media (min-width: @grid-float-breakpoint) {
       border-bottom: 1px solid @nav-tabs-justified-link-border-color;
@@ -24,12 +55,12 @@
   > li {
     margin-bottom: 0;
     &.active > a {
-      font-weight: 600;
       .tab-indicator(@background: @nav-tabs-active-link-hover-color);
       &,
       &:active,
       &:focus,
       &:hover {
+        background-color: transparent;
         border: 0 !important;
         color: @link-color;
         &:before {
@@ -47,19 +78,17 @@
     }
     > a {
       border: 0;
-      color: @nav-tabs-color;
       line-height: 1;
       margin-right: 0;
+      padding-bottom: 10px;
+      padding-top: 10px;
       &:active,
       &:focus,
       &:hover {
-        background-color: transparent;
-        color: @gray-darker;
         .tab-indicator()
       }
     }
     > .dropdown-menu {
-      border-top: 0;
       left: 15px;
       margin-top: 1px;
       &.pull-right {
