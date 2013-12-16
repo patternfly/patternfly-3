@@ -1,6 +1,6 @@
 {
   "name": "RCUE",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "devDependencies": {

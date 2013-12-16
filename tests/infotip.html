@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>Info Tip - Red Hat&reg; Common User Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
+    <link href="tests.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../components/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="../components/bootstrap/js/tests/vendor/jquery.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h1>Info Tip</h1>
+          </div>
+          <div class="alert alert-warning">
+            These examples are included for development testing purposes.  For official documentation, see <a href="http://rcue-uxd.itos.redhat.com">http://rcue-uxd.itos.redhat.com</a> and <a href="http://getbootstrap.com">http://getbootstrap.com</a>.
+          </div>
+          
+          <nav class="navbar navbar-default navbar-rcue" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <img src="../dist/img/brand.svg" alt="Red Hat&reg; Common User Experience" />
+              </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-utility">
+                <li class="dropdown">
+                  <a href="#" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                    Messages: <strong>2</strong>
+                  </a>
+                  <div class="dropdown-menu infotip bottom-right">
+                    <div class="arrow"></div>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <a href="#">Added Datasources TestDS</a>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="i glyphicon glyphicon-info-sign"></span>
+                        <a href="#">Modified Datasources ExampleDS</a>
+                      </li>
+                    </ul>
+                    <div class="footer"><a href="#">Clear Messages</a></div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-primary">
+                <li>
+                  <a href="#">First Link</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+    
+    <script src="../dist/js/rcue-util.js"></script>
+  </body>
+</html>

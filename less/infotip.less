@@ -1,0 +1,151 @@
+//
+// RCUE - Info Tip
+// --------------------------------------------------
+// Uses Bootstrap's dropdown menu and list groups
+
+
+// Overwrites for navbar.less
+.navbar-nav > li > .dropdown-menu.infotip {
+  margin-top: @popover-arrow-width;
+}
+
+// Overwrites for RCUE - navbar.less
+@media (max-width: @screen-xs-max) {
+  .navbar-rcue .navbar-nav .open .dropdown-menu.infotip {
+    margin-top: 0;
+    background-color: #fff !important;
+  }
+}
+
+// Extends "dropdown-menu"
+.infotip {
+  min-width: 235px;
+  padding: 0;
+  .box-shadow(0 2px 2px rgba(0,0,0,.08));
+  
+  .list-group {
+    margin: 0;
+    padding: 8px 0;
+    
+    .list-group-item {
+      margin: 0 15px 0 40px;
+      padding: 5px 0;
+      border: none;
+      
+      > .i {
+        position: absolute;
+        top: 8px;
+        left: -20px;
+        color: @gray-rcue;
+        font-size: 13px;
+      }
+      > a {
+        color: @gray-rcue;
+        line-height: 13px;
+      }
+      > .close {
+        float: right;
+      }
+    }
+  }
+  
+  .footer {
+    padding: 6px 15px;
+    background-color: #f5f5f5;
+    a:hover {
+      color: @link-color;
+    }
+  }
+}
+
+
+// Arrows (Copy from popovers.less)
+//
+// .arrow is outer, .arrow:after is inner
+
+.infotip .arrow {
+  &,
+  &:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+}
+.infotip .arrow {
+  border-width: @popover-arrow-outer-width;
+}
+.infotip .arrow:after {
+  border-width: @popover-arrow-width;
+  content: "";
+}
+
+.infotip {
+  &.bottom-right .arrow,
+  &.bottom .arrow {
+    left: 50%;
+    margin-left: -@popover-arrow-outer-width;
+    border-top-width: 0;
+    border-bottom-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-bottom-color: @popover-arrow-outer-color;
+    top: -@popover-arrow-outer-width;
+    &:after {
+      content: " ";
+      top: 1px;
+      margin-left: -@popover-arrow-width;
+      border-top-width: 0;
+      border-bottom-color: @popover-arrow-color;
+    }
+  }
+  // Default:
+  &.bottom-right .arrow {
+    left: 80%;
+  }
+  &.top .arrow {
+    left: 50%;
+    margin-left: -@popover-arrow-outer-width;
+    border-bottom-width: 0;
+    border-top-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-top-color: @popover-arrow-outer-color;
+    bottom: -@popover-arrow-outer-width;
+    &:after {
+      content: " ";
+      bottom: 1px;
+      margin-left: -@popover-arrow-width;
+      border-bottom-width: 0;
+      border-top-color: #f5f5f5;
+    }
+  }
+  &.right .arrow {
+    top: 50%;
+    left: -@popover-arrow-outer-width;
+    margin-top: -@popover-arrow-outer-width;
+    border-left-width: 0;
+    border-right-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-right-color: @popover-arrow-outer-color;
+    &:after {
+      content: " ";
+      left: 1px;
+      bottom: -@popover-arrow-width;
+      border-left-width: 0;
+      border-right-color: @popover-arrow-color;
+    }
+  }
+  &.left .arrow {
+    top: 50%;
+    right: -@popover-arrow-outer-width;
+    margin-top: -@popover-arrow-outer-width;
+    border-right-width: 0;
+    border-left-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-left-color: @popover-arrow-outer-color;
+    &:after {
+      content: " ";
+      right: 1px;
+      border-right-width: 0;
+      border-left-color: @popover-arrow-color;
+      bottom: -@popover-arrow-width;
+    }
+  }
+}
