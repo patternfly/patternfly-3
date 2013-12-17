@@ -158,7 +158,7 @@
       &:after {
         content: @fa-var-angle-down;
         display: inline-block;
-        font-family: @icon-font-name-rcue;
+        font-family: @icon-font-name-fa;
         font-weight: normal;
         @media (max-width: @screen-xs-max) {
           height: 10px;
@@ -188,11 +188,10 @@
     li.dropdown > .dropdown-toggle {
       padding-left: 36px;
       position: relative;
-      .glyphicon-user {
-        font-size: @font-size-small;
+      .rcueicon-user {
         left: 20px;
         position: absolute;
-        top: 11px;
+        top: 10px;
       }
     }
     @media (max-width: @screen-xs-max) {
@@ -389,7 +388,7 @@
       }
       li.dropdown > .dropdown-toggle {
         padding-left: 26px;
-        .glyphicon-user {
+        .rcueicon-user {
           left: 10px;
           top: 7px;
         }

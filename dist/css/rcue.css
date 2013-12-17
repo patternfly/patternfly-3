@@ -4681,7 +4681,7 @@ a.thumbnail.active {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+  border: 1px solid #bababa;
 }
 .list-group-item:first-child {
   border-top-right-radius: 1px;
@@ -7398,6 +7398,113 @@ a separate variables file to point to the correct images and path */
   src: url('../fonts/OpenSans-ExtraBold-webfont.eot');
   src: url('../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'), url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
 }
+/* Custom icons and selections from IcoMoon - Free (http://icomoon.io/#icons) for use in RCUE */
+@font-face {
+  font-family: 'RCUEIcons-webfont';
+  src: url('../fonts/RCUEIcons-webfont.eot');
+  src: url('../fonts/RCUEIcons-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/RCUEIcons-webfont.ttf') format('truetype'), url('../fonts/RCUEIcons-webfont.woff') format('woff'), url('../fonts/RCUEIcons-webfont.svg#RCUEIcons-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="-exclamation"] {
+  color: #fff;
+}
+[class^="rcueicon-"],
+[class*=" rcueicon-"] {
+  display: inline-block;
+  font-family: 'RCUEIcons-webfont';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.rcueicon-layered {
+  position: relative;
+}
+.rcueicon-layered .rcueicon:first-child {
+  position: absolute;
+  z-index: -1;
+}
+.rcueicon-warning-exclamation:before {
+  content: "\e60d";
+}
+.rcueicon-screen:before {
+  content: "\e600";
+}
+.rcueicon-save:before {
+  content: "\e601";
+}
+.rcueicon-ok:before {
+  color: #57a81c;
+  content: "\e602";
+}
+.rcueicon-messages:before {
+  content: "\e603";
+}
+.rcueicon-info:before {
+  content: "\e604";
+}
+.rcueicon-help:before {
+  content: "\e605";
+}
+.rcueicon-folder-open:before {
+  content: "\e606";
+}
+.rcueicon-folder-close:before {
+  content: "\e607";
+}
+.rcueicon-error-exclamation:before {
+  content: "\e608";
+}
+.rcueicon-error-octagon:before {
+  color: #cc0000;
+  content: "\e609";
+}
+.rcueicon-edit:before {
+  content: "\e60a";
+}
+.rcueicon-close:before {
+  content: "\e60b";
+}
+.rcueicon-warning-triangle:before {
+  color: #ed7700;
+  content: "\e60c";
+}
+.rcueicon-user:before {
+  content: "\e60e";
+}
+.rcueicon-users:before {
+  content: "\e60f";
+}
+.rcueicon-settings:before {
+  content: "\e610";
+}
+.rcueicon-delete:before {
+  content: "\e611";
+}
+.rcueicon-print:before {
+  content: "\e612";
+}
+.rcueicon-refresh:before {
+  content: "\e613";
+}
+.rcueicon-running:before {
+  content: "\e614";
+}
+.rcueicon-import:before {
+  content: "\e615";
+}
+.rcueicon-export:before {
+  content: "\e616";
+}
+.rcueicon-history:before {
+  content: "\e617";
+}
 .caret {
   font-family: "FontAwesome";
   font-weight: normal;
@@ -7739,11 +7846,10 @@ a separate variables file to point to the correct images and path */
   padding-left: 36px;
   position: relative;
 }
-.navbar-rcue .navbar-utility li.dropdown > .dropdown-toggle .glyphicon-user {
-  font-size: 10px;
+.navbar-rcue .navbar-utility li.dropdown > .dropdown-toggle .rcueicon-user {
   left: 20px;
   position: absolute;
-  top: 11px;
+  top: 10px;
 }
 @media (max-width: 767px) {
   .navbar-rcue .navbar-utility > li + li {
@@ -7986,7 +8092,7 @@ a separate variables file to point to the correct images and path */
   .navbar-rcue .navbar-utility li.dropdown > .dropdown-toggle {
     padding-left: 26px;
   }
-  .navbar-rcue .navbar-utility li.dropdown > .dropdown-toggle .glyphicon-user {
+  .navbar-rcue .navbar-utility li.dropdown > .dropdown-toggle .rcueicon-user {
     left: 10px;
     top: 7px;
   }
@@ -8191,7 +8297,7 @@ fieldset[disabled] .btn-primary.active {
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
-  border-color: #D4D4D4 !important;
+  border-color: #d4d4d4 !important;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #969696;
@@ -8336,10 +8442,11 @@ label {
   width: 0;
 }
 .list-box-rcue {
+  border: 1px solid #bababa;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-size: 11px;
   overflow: auto;
-  border: 1px solid #dddddd;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.09);
   padding: 2px 0;
 }
 .list-box-rcue .list-group-item {
@@ -8380,7 +8487,10 @@ label {
   cursor: not-allowed;
 }
 .list-box-rcue.disabled {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
+  border-color: #d4d4d4;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .list-box-rcue.disabled .list-group-item {
   background-color: transparent !important;
@@ -8525,44 +8635,48 @@ label {
   text-align: left;
 }
 .popover {
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+  font-size: 11px;
   padding: 0;
-  -webkit-box-shadow: 0 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+.popover-content {
+  color: #4d5258;
+  line-height: 18px;
+  padding: 10px 14px;
 }
 .popover-title {
-  color: #4d5258;
-  font-size: 12px;
-  font-weight: bold;
   border-bottom: none;
   border-radius: 0;
+  color: #4d5258;
+  font-size: 12px;
+  font-weight: 700;
 }
 .popover-title.x {
   padding-right: 30px;
 }
 .popover-title span {
+  color: #72767b;
+  cursor: pointer;
+  font-family: "RCUEIcons-webfont";
+  font-size: 13px;
+  font-weight: normal;
+  height: 22px;
+  line-height: 11px;
   position: absolute;
   right: 10px;
   top: 5px;
   width: 22px;
-  height: 22px;
-  color: #72767b;
-  font-weight: normal;
-  font-family: "FontAwesome";
-  line-height: 11px;
-  font-size: 13px;
-  cursor: pointer;
 }
 .popover-title span:after {
-  position: absolute;
-  content: "\f00d";
   color: #72767b;
-  top: 6px;
+  content: "\e60b";
   left: 6px;
+  position: absolute;
+  top: 6px;
 }
-.popover-content {
-  padding: 10px 18px;
-  color: #4d5258;
-  line-height: 18px;
+.popover-title span:hover:after {
+  color: #111;
 }
 .navbar-nav > li > .dropdown-menu.infotip {
   margin-top: 10px;
@@ -8584,7 +8698,7 @@ label {
   padding: 8px 0;
 }
 .infotip .list-group .list-group-item {
-  margin: 0 15px 0 40px;
+  margin: 0 15px 0 34px;
   padding: 5px 0;
   border: none;
 }
