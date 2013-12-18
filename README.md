@@ -50,9 +50,9 @@ In development, styling is written and managed through multiple lesscss files. I
 
 This task will compile and minify the lesscss files into a single CSS file located at `dist/css/rcue.min.css`.
 
-### RCUEIcon Font
+### RCUEIcons Font
 
-RCUEIcon font is generated using [IcoMoon](http://icomoon.io/app).  [Load](http://icomoon.io/#docs/save-load) `RCUEIcons-webfont.json` as a new project in IcoMoon and update as necessary.  Please commit the updated `RCUEIcons-webfont.json` in addition to the updated font files and supporting CSS changes.
+RCUEIcons font is generated using [IcoMoon](http://icomoon.io/app).  [Load](http://icomoon.io/#docs/save-load) `RCUEIcons-webfont.json` as a new project in IcoMoon and update as necessary.  Please commit the updated `RCUEIcons-webfont.json` file in addition to the updated font files and supporting LESS/CSS changes.
 
 ## Tests
 
