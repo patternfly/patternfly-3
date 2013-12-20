@@ -61,3 +61,17 @@ var RCUE = RCUE || {};
 	$( RCUE.popovers('[data-toggle=popover]') );
 })(jQuery);
 
+
+// Util: Bootstrap Multiselect Plugin
+// http://davidstutz.github.io/bootstrap-multiselect/
+(function($) {
+	RCUE.multiselect = function( selector ) {
+		$(selector).multiselect({
+			buttonWidth: '100%',
+			buttonContainer: '<span class="btn-group btn-group-rcue btn-block" />',
+			buttonClass: 'btn btn-default btn-block'
+		});
+	};
+	
+	$( RCUE.multiselect('.multiselect') );
+})(jQuery);
