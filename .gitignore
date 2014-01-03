@@ -12,3 +12,9 @@ components/
 
 # Ignore local nodejs packages
 node_modules/
+
+# Ignore nodejs files
+*.man
+nodevars.bat
+npm.cmd
+npm
