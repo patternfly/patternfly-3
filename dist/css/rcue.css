@@ -4787,7 +4787,7 @@ a.list-group-item.active:focus .list-group-item-text {
 .panel-footer {
   padding: 10px 15px;
   background-color: #f5f5f5;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #cecdcd;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
@@ -4803,13 +4803,13 @@ a.list-group-item.active:focus .list-group-item-text {
   border-bottom: 0;
 }
 .panel-group .panel-heading + .panel-collapse .panel-body {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #cecdcd;
 }
 .panel-group .panel-footer {
   border-top: 0;
 }
 .panel-group .panel-footer + .panel-collapse .panel-body {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #cecdcd;
 }
 .panel-default {
   border-color: #dddddd;
@@ -7320,6 +7320,45 @@ td.visible-print {
 /* RCUE-specific */
 /* Bootstrap overrides */
 /* RCUE-specific */
+.multiselect-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+.multiselect-container .input-group {
+  margin: 5px;
+}
+.multiselect-container > li {
+  padding: 0;
+}
+.multiselect-container > li > a.multiselect-all label {
+  font-weight: bold;
+}
+.multiselect-container > li > label.multiselect-group {
+  font-weight: bold;
+  height: 100%;
+  margin: 0;
+  padding: 3px 20px 3px 20px;
+}
+.multiselect-container > li > a > label {
+  cursor: pointer;
+  font-weight: normal;
+  height: 100%;
+  margin: 0;
+}
+.multiselect-container > li > a > label.radio,
+.multiselect-container > li > a > label.checkbox {
+  margin: 0;
+}
+.multiselect-container > li > a > label > input[type="checkbox"] {
+  margin-bottom: 5px;
+}
+.btn-group > .btn-group:nth-child(2) > .multiselect.btn {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
 .breadcrumb {
   padding-left: 0;
 }
@@ -7496,45 +7535,6 @@ fieldset[disabled] .btn-primary.active {
 .btn-xs,
 .btn-group-xs .btn {
   font-weight: 400;
-}
-.multiselect-container {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  width: 100%;
-}
-.multiselect-container .input-group {
-  margin: 5px;
-}
-.multiselect-container > li {
-  padding: 0;
-}
-.multiselect-container > li > a.multiselect-all label {
-  font-weight: bold;
-}
-.multiselect-container > li > label.multiselect-group {
-  font-weight: bold;
-  height: 100%;
-  margin: 0;
-  padding: 3px 20px 3px 20px;
-}
-.multiselect-container > li > a > label {
-  cursor: pointer;
-  font-weight: normal;
-  height: 100%;
-  margin: 0;
-}
-.multiselect-container > li > a > label.radio,
-.multiselect-container > li > a > label.checkbox {
-  margin: 0;
-}
-.multiselect-container > li > a > label > input[type="checkbox"] {
-  margin-bottom: 5px;
-}
-.btn-group > .btn-group:nth-child(2) > .multiselect.btn {
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
 }
 .input-group-rcue > .input-group-btn {
   position: static;
@@ -8607,6 +8607,51 @@ label {
     padding-left: 0;
   }
 }
+.panel-group .panel {
+  color: #4d5258;
+}
+.panel-group .panel + .panel {
+  margin-top: -1px;
+}
+.panel-group .panel-default {
+  border-color: #bebdbd;
+  border-top-color: #c4c3c3;
+}
+.panel-group .panel-heading {
+  background-image: -webkit-linear-gradient(top, #fafafa 0%, #ededed 100%);
+  background-image: linear-gradient(to bottom, #fafafa 0%, #ededed 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffededed', GradientType=0);
+}
+.panel-group .panel-heading + .panel-collapse .panel-body {
+  border-top: 1px solid #cecdcd;
+}
+.panel-group .panel-title {
+  font-size: 11px;
+}
+.panel-group .panel-title > a {
+  color: #4d5258;
+  font-weight: 600;
+}
+.panel-group .panel-title > a:before {
+  content: "\f107";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  margin-right: 5px;
+  vertical-align: 0;
+}
+.panel-group .panel-title > a:focus {
+  outline: none;
+  text-decoration: none;
+}
+.panel-group .panel-title > a:hover {
+  text-decoration: none;
+}
+.panel-group .panel-title > a.collapsed:before {
+  content: "\f105";
+  margin-left: 4px;
+  margin-right: 7px;
+}
 .popover {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
@@ -8650,6 +8695,18 @@ label {
 }
 .popover-title span:hover:after {
   color: #111;
+}
+.btn-group-rcue > .dropdown-toggle {
+  padding-left: 10px;
+  padding-right: 22px;
+  text-align: left;
+}
+.btn-group-rcue > .dropdown-toggle .caret {
+  margin-top: -4px;
+  padding-right: 9px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
 }
 .nav-tabs {
   font-size: 13px;
@@ -8768,16 +8825,4 @@ label {
 .tooltip-inner {
   padding: 7px 12px;
   text-align: left;
-}
-.btn-group-rcue > .dropdown-toggle {
-  padding-left: 10px;
-  padding-right: 22px;
-  text-align: left;
-}
-.btn-group-rcue > .dropdown-toggle .caret {
-  margin-top: -4px;
-  padding-right: 9px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
 }
