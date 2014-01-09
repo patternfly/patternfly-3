@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>Modals - Red Hat&reg; Common User Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
+    <link href="tests.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../components/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h1>Modals</h1>
+          </div>
+          <div class="alert alert-warning">
+            These examples are included for development testing purposes.  For official documentation, see <a href="http://rcue-uxd.itos.redhat.com">http://rcue-uxd.itos.redhat.com</a> and <a href="http://getbootstrap.com">http://getbootstrap.com</a>.
+          </div>
+          <!-- Button trigger modal -->
+		  <button class="btn btn-default" data-toggle="modal" data-target="#myModal">
+            Launch demo modal
+		  </button>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="rcueicon rcueicon-close"></span></button>
+                  <h4 class="modal-title" id="myModalLabel">Modal Title</h4>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary">Next <div class="fa fa-angle-right"></div></button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+    <script src="../dist/js/rcue-util.js"></script>
+  </body>
+</html>
