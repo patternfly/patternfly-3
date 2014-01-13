@@ -40,6 +40,20 @@ A local development server can be quickly fired up by using the Gruntjs server t
 
 This local static asset server (i.e., [http://localhost:9000](http://localhost:9000)) has the advantage of having livereload integration. Thus, if you start the Gruntjs server, any changes you make to `.html` or `.less` files will be automatically reloaded into your browser and the changes reflected almost immediately. This has the obvious benefit of not having to refresh your browser and still be able to see the changes as you add or remove them from your development files.
 
+### Coding Style
+
+* Indentation
+    * Use spaces (not tabs)
+    * Indentation size is 2 spaces
+* Filenames
+    * All filenames will use a lowercase-hyphenated naming convention (e.g., single-select-dropdown.less)
+* LESSCSS
+    * CSS class names use lowercase-hyphenated naming convention (e.g., .navbar-nav)
+    * Alphabetize rules by selector
+    * Alphabetize properties by declaration
+    * Define or override variables centrally in less/variables.less
+    * Define or override mixins centrally in less/mixins.less
+
 ## Build
 
 ### CSS
