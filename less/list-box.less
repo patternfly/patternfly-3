@@ -9,19 +9,19 @@
   font-size: @font-size-base;
   overflow: auto;
   padding: 2px 0;
-  
+
   // Individual list items
   // -------------------------
   .list-group-item {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-width: 1px 0;
+    margin-bottom: 0;
     outline: none;
     padding: 0 10px;
     // Place the border on the list items and negative margin up for better styling
-    margin-bottom: 0;
-    border: 1px solid transparent;
-    border-width: 1px 0;
-    background-color: transparent;
   }
-  
+
   // Linked list items
   // -------------------------
   a.list-group-item {
@@ -31,38 +31,38 @@
       border-color: @list-group-hover-border;
     }
     &:focus {
-      border-color: transparent;
       background-color: transparent;
+      border-color: transparent;
     }
     &:active {
-      color: #fff;
       background-color: @dropdown-link-active-bg;
       border-color: @list-group-focus-border;
+      color: #fff;
     }
-  
+
     // Active class on item itself, not parent
     &.active,
     &.active:hover,
     &.active:focus {
-      color: @list-group-active-color;
       background-color: @dropdown-link-active-bg;
       border-color: @list-group-focus-border;
+      color: @list-group-active-color;
     }
-    
+
     // Disabled state
     &.disabled {
       &,
       &:hover,
       &:focus,
       &:active {
-        color: @dropdown-link-disabled-color;
         background-color: transparent;
         border-color: transparent;
+        color: @dropdown-link-disabled-color;
         cursor: not-allowed;
       }
     }
   }
-  
+
   // Disable All
   &.disabled {
     background-color: @input-bg-disabled;
@@ -75,14 +75,14 @@
       cursor: not-allowed;
     }
   }
-  
+
   // Scrollable List Box
   // -------------------------
   @border: 2px;
-  @padding: 2px;
-  @line-height: 20px;
   @item-height: @border + @line-height;
-  
+  @line-height: 20px;
+  @padding: 2px;
+
   // Scroll List Box | Display Number of Items
   .height-of-items(@items) {
     height: (@items * @item-height) + @border + @padding;
