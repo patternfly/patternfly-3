@@ -8894,7 +8894,6 @@ fieldset[disabled] .pagination > li > span.active {
   border-top-color: #c4c3c3;
 }
 .panel-group .panel-heading {
-  line-height: 1;
   background-image: -webkit-linear-gradient(top, #fafafa 0%, #ededed 100%);
   background-image: linear-gradient(to bottom, #fafafa 0%, #ededed 100%);
   background-repeat: repeat-x;
@@ -8905,6 +8904,7 @@ fieldset[disabled] .pagination > li > span.active {
 }
 .panel-group .panel-title {
   font-size: 11px;
+  line-height: 1;
 }
 .panel-group .panel-title > a {
   color: #4d5258;
