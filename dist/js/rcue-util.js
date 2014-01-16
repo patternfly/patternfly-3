@@ -24,7 +24,7 @@ var RCUE = RCUE || {};
   RCUE.multiselect = function( selector ) {
     $(selector).multiselect({
       buttonWidth: '100%',
-      buttonContainer: '<span class="btn-gr btn-group-rcue btn-block" />',
+      buttonContainer: '<span class="btn-group btn-group-rcue btn-block" />',
       buttonClass: 'btn btn-default btn-block'
     });
   };
