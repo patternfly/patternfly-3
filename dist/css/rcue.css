@@ -8636,6 +8636,9 @@ label {
     padding-left: 0;
   }
 }
+.pager {
+  font-size: 11px;
+}
 .pager li > a,
 .pager li > span {
   background-color: #eeeeee;
@@ -8748,6 +8751,9 @@ fieldset[disabled] .pager li > span.active {
 .pager-sm li > a > .i,
 .pager-sm li > span > .i {
   font-size: 12px;
+}
+.pagination {
+  font-size: 11px;
 }
 .pagination > li > a,
 .pagination > li > span {
