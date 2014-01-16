@@ -8889,6 +8889,9 @@ fieldset[disabled] .pagination > li > span.active {
 .panel-group .panel + .panel {
   margin-top: -1px;
 }
+.panel-group .panel-body {
+  font-size: 11px;
+}
 .panel-group .panel-default {
   border-color: #bebdbd;
   border-top-color: #c4c3c3;
