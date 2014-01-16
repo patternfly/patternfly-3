@@ -1,3 +1,7 @@
+//
+// Pager
+// --------------------------------------------------
+
 .pager {
   li {
     > a,
@@ -13,19 +17,16 @@
         margin: 2px 0;
       }
     }
-
     > a:hover
     > a:focus {
       color: @gray-rcue;
     }
-    
     a:active {
       background-image: none;
       .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
       outline: 0;
     }
   }
-  
   .disabled {
     > a,
     > a:hover,
@@ -38,35 +39,34 @@
       cursor: default;
     }
   }
-  
   .next {
      > a,
      > span {
        > .i {
-          margin-left: 5px;  
+          margin-left: 5px;
        }
      }
   }
-  
   .previous {
      > a,
      > span {
        > .i {
-          margin-right: 5px;  
+          margin-right: 5px;
        }
      }
   }
 }
+
 .pager-sm {
-    li {
-        > a,
-        > span {
-          font-weight: 400;
-          line-height: 16px;
-          padding: 1px 10px;
-          > .i {
-            font-size: 12px;
-          }
-        }
+  li {
+    > a,
+    > span {
+      font-weight: 400;
+      line-height: 16px;
+      padding: 1px 10px;
+      > .i {
+        font-size: 12px;
+      }
     }
+  }
 }
