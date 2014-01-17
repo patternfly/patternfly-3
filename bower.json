@@ -1,9 +1,9 @@
 {
-  "name": "Red Hat Common User Experience (RCUE)",
-  "version": "0.7.0",
+  "name": "PatternFly",
+  "version": "0.1.0",
   "authors": "Red Hat",
   "license": "Apache-2.0",
-  "homepage": "http://rcue-uxd.itos.redhat.com/",
+  "homepage": "http://site-patternfly.rhcloud.com/",
   "ignore": [
     "**/.*",
     "node_modules",

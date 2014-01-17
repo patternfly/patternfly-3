@@ -1,12 +1,10 @@
-# [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) reference implementation
+# [PatternFly](http://site-patternfly.rhcloud.com/) reference implementation
 
-The [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.
-
-This reference implementation of RCUE is based on [Bootstrap v3.0.X](http://getbootstrap.com/).  Think of RCUE as a "skinned" version of Bootstrap with additional components and customizations.
+This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations.
 
 ## Dependencies
 
-RCUE includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".
+PatternFly includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".
 
 ## Development
 
@@ -62,19 +60,19 @@ In development, styling is written and managed through multiple lesscss files. I
 
     grunt build
 
-This task will compile and minify the lesscss files into a single CSS file located at `dist/css/rcue.min.css`.
+This task will compile and minify the lesscss files into a single CSS file located at `dist/css/global.min.css`.
 
-### RCUEIcons Font
+### PatternFlyIcons Font
 
-RCUEIcons font is generated using [IcoMoon](http://icomoon.io/app).  [Load](http://icomoon.io/#docs/save-load) `RCUEIcons-webfont.json` as a new project in IcoMoon and update as necessary.  Please commit the updated `RCUEIcons-webfont.json` file in addition to the updated font files and supporting LESS/CSS changes.
+PatternFlyIcons font is generated using [IcoMoon](http://icomoon.io/app).  [Load](http://icomoon.io/#docs/save-load) `PatternFlyIcons-webfont.json` as a new project in IcoMoon and update as necessary.  Please commit the updated `PatternFlyIcons-webfont.json` file in addition to the updated font files and supporting LESS/CSS changes.
 
 ## Tests
 
-The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use RCUE.
+The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use PatternFly.
 
 ## Documentation
 
-See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/) and [http://getbootstrap.com/](http://getbootstrap.com/).
+See [http://site-patternfly.rhcloud.com/](http://site-patternfly.rhcloud.com/) and [http://getbootstrap.com/](http://getbootstrap.com/).
 
 ## License
 

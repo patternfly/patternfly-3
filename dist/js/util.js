@@ -1,10 +1,10 @@
-// RCUE Namespace
-var RCUE = RCUE || {};
+// PatternFly Namespace
+var PatternFly = PatternFly || {};
 
 
 // Util: Dropdown Combo-box Input Change on Selection
 (function($) {
-  RCUE.combobox = function( selector ) {
+  PatternFly.combobox = function( selector ) {
     $( selector ).each(function() {
       var input = $( this ).find('.form-control'),
           menu = $( this ).find('.dropdown-menu'),
@@ -21,20 +21,20 @@ var RCUE = RCUE || {};
 // Util: Dropdown Multi-select Plugin
 // http://davidstutz.github.io/bootstrap-multiselect/
 (function($) {
-  RCUE.multiselect = function( selector ) {
+  PatternFly.multiselect = function( selector ) {
     $(selector).multiselect({
       buttonWidth: '100%',
-      buttonContainer: '<span class="btn-group btn-group-rcue btn-block" />',
+      buttonContainer: '<span class="btn-group btn-group-pf btn-block" />',
       buttonClass: 'btn btn-default btn-block'
     });
   };
 })(jQuery);
 
 
-// Util: RCUE Popovers
+// Util: PatternFly Popovers
 // Add data-close="true" to insert close X icon
 (function($) {
-  RCUE.popovers = function( selector ) {
+  PatternFly.popovers = function( selector ) {
     var allpopovers = $(selector);
     
     // Initialize

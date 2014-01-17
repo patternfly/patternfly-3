@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"name": "RCUEIcons-webfont",
+		"name": "PatternFlyIcons-webfont",
 		"lastOpened": 1387390699838,
 		"created": 1381083457739
 	},
@@ -154,7 +154,7 @@
 			],
 			"id": 6,
 			"metadata": {
-				"name": "RCUEIcons-webfont",
+				"name": "PatternFlyIcons-webfont",
 				"url": "",
 				"designer": "Red Hat",
 				"designerURL": "http://www.redhat.com",
@@ -7915,9 +7915,9 @@
 	],
 	"preferences": {
 		"fontPref": {
-			"prefix": "rcueicon-",
+			"prefix": "pficon-",
 			"metadata": {
-				"fontFamily": "RCUEIcons-webfont",
+				"fontFamily": "PatternFlyIcons-webfont",
 				"fontURL": "",
 				"designer": "Red Hat",
 				"designerURL": "http://www.redhat.com",

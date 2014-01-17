@@ -59,7 +59,7 @@ module.exports = function (grunt) {
                     paths: ["less/"]
                 },
                 files: {
-                    "dist/css/rcue.css": "less/rcue.less"
+                    "dist/css/global.css": "less/global.less"
                 }
             },
             production: {
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
                     cleancss: true
                 },
                 files: {
-                    "dist/css/rcue.min.css": "less/rcue.less"
+                    "dist/css/global.min.css": "less/global.less"
                 }
             }
         }
