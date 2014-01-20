@@ -7738,7 +7738,11 @@ label {
 }
 .pficon-layered .pficon:first-child {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
+}
+.pficon-layered .pficon:first-child + .pficon {
+  position: relative;
+  z-index: 2;
 }
 .pficon-warning-exclamation:before {
   content: "\e60d";

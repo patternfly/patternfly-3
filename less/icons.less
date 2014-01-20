@@ -36,7 +36,11 @@
   position: relative;
   .@{icon-prefix}:first-child {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
+    + .@{icon-prefix} {
+      position: relative;
+      z-index: 2;
+    }
   }
 }
 
