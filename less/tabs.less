@@ -7,12 +7,14 @@
   > li {
     > a {
       color: @nav-tabs-color;
+      margin-right: -1px;
       padding-bottom: 5px;
       padding-top: 5px;
       &:active,
       &:focus,
       &:hover {
         background: transparent;
+        border-color: @nav-tabs-border-color;
         color: @gray-darker;
       }
     }
@@ -20,7 +22,7 @@
       border-top: 0;
       border-color: @nav-tabs-border-color;
       &.pull-right {
-        right: 2px;
+        right: -1px;
       }
     }
   }

@@ -9003,6 +9003,7 @@ fieldset[disabled] .pagination > li > span.active {
 }
 .nav-tabs > li > a {
   color: #4d5258;
+  margin-right: -1px;
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -9010,6 +9011,7 @@ fieldset[disabled] .pagination > li > span.active {
 .nav-tabs > li > a:focus,
 .nav-tabs > li > a:hover {
   background: transparent;
+  border-color: #e9e8e8;
   color: #222222;
 }
 .nav-tabs > li > .dropdown-menu {
@@ -9017,7 +9019,7 @@ fieldset[disabled] .pagination > li > span.active {
   border-color: #e9e8e8;
 }
 .nav-tabs > li > .dropdown-menu.pull-right {
-  right: 2px;
+  right: -1px;
 }
 .nav-tabs .open > a,
 .nav-tabs .open > a:hover,
