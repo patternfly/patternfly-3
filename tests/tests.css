@@ -13,9 +13,6 @@ h2 {
   font-size: 20px;
   font-weight: 600;
 }
-hr + h2 {
-  margin-top: 50px;
-}
 h3 {
   font-size: 16px;
 }

@@ -20,31 +20,14 @@
   color: @gray-pf;
   font-size: @font-size-base + 1;
   font-weight: 700;
-  
-  &.x {
-    padding-right: 30px;
-  }
-  span {
-    color: #72767b;
-    cursor: pointer;
-    font-family: @icon-font-name-pf;
-    font-size: 13px;
-    font-weight: normal;
+  min-height: 34px;
+  .close {
     height: 22px;
-    line-height: @font-size-base;
     position: absolute;
-    right: 10px;
-    top: 5px;
-    width: 22px;
-    &:after {
-      color: #72767b;
-      content: "\e60b";
-      left: 6px;
-      position: absolute;
-      top: 6px;
-    }
-    &:hover:after {
-      color: #111;
-    }
+    right: 8px;
+    top: 6px;
+  }
+  &.closable {
+    padding-right: 30px;
   }
 }

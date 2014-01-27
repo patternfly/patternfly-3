@@ -43,7 +43,7 @@ var PatternFly = PatternFly || {};
     // Add close icons
     allpopovers.filter('[data-close=true]').each(function(index, element) {
       var $this = $(element),
-        title = $this.attr('data-original-title') + '&nbsp;<span />';
+        title = $this.attr('data-original-title') + '<button type="button" class="close" aria-hidden="true"><span class="pficon pficon-close"></span></button>';
 
       $this.attr('data-original-title', title);
     });
@@ -54,10 +54,10 @@ var PatternFly = PatternFly || {};
         $title = $this.next('.popover').find('.popover-title');
       
       // Only if data-close is true add class "x" to title for right padding
-      $title.find('span').parent('.popover-title').addClass('x');
+      $title.find('.close').parent('.popover-title').addClass('closable');
       
       // Bind x icon to close popover
-      $title.find('span').on('click', function() {
+      $title.find('.close').on('click', function() {
         $this.popover('toggle');
       });
       
