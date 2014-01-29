@@ -7739,15 +7739,11 @@ fieldset[disabled] .form-control {
 .form-control:hover {
   border-color: #7BB2DD;
 }
-.help-block {
-  font-size: 11px;
-}
 .input-group .input-group-btn .btn {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 label {
-  font-size: 11px;
   font-weight: 600;
 }
 @font-face {
@@ -8003,7 +7999,6 @@ h6 .label {
   border: 1px solid #bababa;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  font-size: 11px;
   overflow: auto;
   padding: 2px 0;
 }
@@ -8253,7 +8248,6 @@ h6 .label {
   float: none;
 }
 .navbar-pf .navbar-nav {
-  font-size: 11px;
   margin: 0;
 }
 .navbar-pf .navbar-nav > .active > a,
@@ -8656,7 +8650,6 @@ h6 .label {
   }
   .navbar-pf .navbar-utility {
     border-bottom: 0;
-    font-size: 11px;
     position: absolute;
     right: 0;
     top: 0;
@@ -8717,9 +8710,6 @@ h6 .label {
   .navbar-pf .navbar-toggle {
     padding-left: 0;
   }
-}
-.pager {
-  font-size: 11px;
 }
 .pager li > a,
 .pager li > span {
@@ -8833,9 +8823,6 @@ fieldset[disabled] .pager li > span.active {
 .pager-sm li > a > .i,
 .pager-sm li > span > .i {
   font-size: 12px;
-}
-.pagination {
-  font-size: 11px;
 }
 .pagination > li > a,
 .pagination > li > span {
@@ -8980,9 +8967,6 @@ fieldset[disabled] .pagination > li > span.active {
 .panel-group .panel + .panel {
   margin-top: -1px;
 }
-.panel-group .panel-body {
-  font-size: 11px;
-}
 .panel-group .panel-default {
   border-color: #bebdbd;
   border-top-color: #c4c3c3;
@@ -8997,7 +8981,6 @@ fieldset[disabled] .pagination > li > span.active {
   border-top: 1px solid #cecdcd;
 }
 .panel-group .panel-title {
-  font-size: 11px;
   font-weight: 500;
   line-height: 1;
 }
@@ -9027,7 +9010,6 @@ fieldset[disabled] .pagination > li > span.active {
 .popover {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
-  font-size: 11px;
   padding: 0;
 }
 .popover-content {
