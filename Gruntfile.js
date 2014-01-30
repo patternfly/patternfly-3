@@ -59,7 +59,7 @@ module.exports = function (grunt) {
                     paths: ["less/"]
                 },
                 files: {
-                    "dist/css/global.css": "less/global.less"
+                    "dist/css/patternfly.css": "less/patternfly.less"
                 }
             },
             production: {
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
                     cleancss: true
                 },
                 files: {
-                    "dist/css/global.min.css": "less/global.less"
+                    "dist/css/patternfly.min.css": "less/patternfly.less"
                 }
             }
         }
