@@ -1,4 +1,4 @@
-# [PatternFly](http://site-patternfly.rhcloud.com/) reference implementation
+# [PatternFly](https://www.patternfly.org) reference implementation
 
 This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations.
 
@@ -72,7 +72,7 @@ The `tests/` directory contains HTML pages with component and pattern examples i
 
 ## Documentation
 
-See [http://site-patternfly.rhcloud.com/](http://site-patternfly.rhcloud.com/) and [http://getbootstrap.com/](http://getbootstrap.com/).
+See [https://www.patternfly.org](https://www.patternfly.org) and [http://getbootstrap.com/](http://getbootstrap.com/).
 
 ## License
 

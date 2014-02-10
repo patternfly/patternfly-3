@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "authors": "Red Hat",
   "license": "Apache-2.0",
-  "homepage": "http://site-patternfly.rhcloud.com/",
+  "homepage": "https://www.patternfly.org",
   "ignore": [
     "**/.*",
     "node_modules",
