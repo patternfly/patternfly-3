@@ -402,15 +402,15 @@ h6 .small {
 }
 h1,
 .h1 {
-  font-size: 28px;
+  font-size: 24px;
 }
 h2,
 .h2 {
-  font-size: 23px;
+  font-size: 22px;
 }
 h3,
 .h3 {
-  font-size: 19px;
+  font-size: 16px;
 }
 h4,
 .h4 {
@@ -9154,6 +9154,12 @@ fieldset[disabled] .pagination > li > span.active {
 .nav-tabs-pf .open > a:hover,
 .nav-tabs-pf .open > a:focus {
   background-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2 {
+  font-weight: 300;
 }
 .tooltip {
   font-size: 11px;

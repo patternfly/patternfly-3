@@ -2,21 +2,6 @@ body {
   padding-bottom: 100px;
 }
 
-h1, h2, h3 { 
-  color: #222;
-}
-h1 { 
-  font-size: 26px;
-  font-weight: 800;
-}
-h2 { 
-  font-size: 20px;
-  font-weight: 600;
-}
-h3 {
-  font-size: 16px;
-}
-
 .icons {
   float: left;
   list-style: none;
