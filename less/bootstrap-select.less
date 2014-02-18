@@ -1,0 +1,42 @@
+.bootstrap-select.btn-group {
+  .btn {
+    .caret {
+      font-size:16px;
+      margin-top: -4px;
+    }
+  }
+  .dropdown-menu {
+    & > .active {
+      & > a:hover {
+        background-color:#0099d3 !important;
+        border-color:#0076b7 !important;
+        small {
+          color:rgba(225, 255, 255, 0.4) !important;
+        }
+      }
+    }
+    dt {
+      color: #969696;
+      font-weight:normal;
+      padding: 1px 10px;
+    }
+    li {
+      & > a.opt {
+        padding: 1px 10px;
+      }
+      &:not(.disabled) {
+        & > a:focus {
+          small {
+            color: rgba(225, 255, 255, 0.4) !important;
+          }
+        }
+        & > a:active,
+        & > a:hover {
+          small {
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}
