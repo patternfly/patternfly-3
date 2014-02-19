@@ -4607,16 +4607,16 @@ a.thumbnail.active {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #ffffff;
-  border: 1px solid #bababa;
+  border: 1px solid #f2f2f2;
 }
 .list-group-item:first-child {
-  border-top-right-radius: 1px;
-  border-top-left-radius: 1px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 1px;
-  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .list-group-item > .badge {
   float: right;
@@ -8214,6 +8214,19 @@ h4 .label,
 h5 .label,
 h6 .label {
   font-size: 75%;
+}
+.list-group {
+  border-top: 1px solid #e9e8e8;
+}
+.list-group .list-group-item:first-child {
+  border-top: 0;
+}
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
+.list-group-item-heading {
+  font-weight: 700;
 }
 .login-pf {
   height: 100%;
