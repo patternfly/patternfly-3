@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>Bootstrap-Select - Patternfly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/css/patternfly.css" rel="stylesheet" media="screen, print">
+    <link href="tests.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../components/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h1>Bootstrap-Select</h1>
+          </div>
+          <div class="alert alert-warning">
+             <span class="pficon-layered">
+              <span class="pficon pficon-warning-triangle"></span>
+              <span class="pficon pficon-warning-exclamation"></span>
+            </span>
+            These examples are include for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org/" class="alert-link">https://www.patternfly.org/</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+          </div>
+          <hr>
+          <h3>Single-Select Dropdown</h3>
+          <select class="selectpicker">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+            <option disabled>Onions</option>
+          </select>
+          <br/>
+          <h3>Disabled</h3>
+          <select class="selectpicker" disabled>
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
+          <br/>
+          <h3>Option Groups</h3>
+          <select class="selectpicker">
+            <optgroup label="Picnic">
+              <option>Mustard</option>
+              <option>Ketchup</option>
+              <option>Relish</option>
+              <option>Onions</option>
+            </optgroup>
+            <optgroup label="Camping">
+              <option>Tent</option>
+              <option>Flashlight</option>
+              <option>Toilet Paper</option>
+              <option>Sleeping Bag</option>
+            </optgroup>
+          </select>
+          <br/>
+          <h3>Multiple Select</h3>
+          <select class="selectpicker" multiple data-selected-text-format="count>3">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+            <option>Onions</option>
+            <option>Mushrooms</option>
+            <option>Pickles</option>
+            <option>Mayonnaise</option>
+            <option data-divider="true"></option>
+            <option data-subtext="Hot">Tabasco</option>
+            <option data-subtext="Hotter">Sriracha</option>
+            <option data-subtext="Hottest">Wasabi</option>
+          </select>
+          <br/>
+          <h3>Data Live Search</h3>
+          <select class="selectpicker" data-live-search="true">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+            <option>Onions</option>
+            <option>Mushrooms</option>
+            <option>Pickles</option>
+            <option>Mayonnaise</option>
+            <option data-divider="true"></option>
+            <option data-subtext="Hot">Tabasco</option>
+            <option data-subtext="Hotter">Sriracha</option>
+            <option data-subtext="Hottest">Wasabi</option>
+          </select>
+          <br/>
+          <h3>Icons</h3>
+          <select class="selectpicker">
+            <option data-icon="glyphicon-headphones">Mustard</option>
+            <option data-icon="glyphicon-tint">Ketchup</option>
+            <option data-icon="glyphicon-tree-conifer">Relish</option>
+          </select>
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+    <script src="../components/bootstrap-select/bootstrap-select.min.js"></script>
+    <script>
+      // Initialize Boostrap-select
+      $('.selectpicker').selectpicker();
+    </script>
+  </body>
+</html>
