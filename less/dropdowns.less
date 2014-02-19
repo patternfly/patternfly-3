@@ -42,13 +42,13 @@
 // Hover/Focus state
 .dropdown-menu > li > a {
   &:hover {
-    border-color: #b3d3e7;
+    border-color: @dropdown-link-hover-border-color;
     .reset-filter();
   }
   &:focus,
   &:active {
     background-color: @dropdown-link-focus-bg;
-    border-color: #0076b7;
+    border-color: @dropdown-link-active-border-color;
     color: @dropdown-link-focus-color !important;
     .reset-filter();
   }
@@ -60,7 +60,7 @@
   &:hover,
   &:focus {
     background-color: @dropdown-link-active-bg !important;
-    border-color: #0076b7 !important;
+    border-color: @dropdown-link-active-border-color !important;
     .reset-filter();
   }
 }
@@ -106,7 +106,7 @@
   &:hover {
     > a {
       background-color: @dropdown-link-hover-bg;
-      border-color: #b3d3e7;
+      border-color: @dropdown-link-hover-border-color;
     }
     > .dropdown-menu {
       display: block;

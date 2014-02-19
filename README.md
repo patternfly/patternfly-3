@@ -4,7 +4,7 @@ This reference implementation of PatternFly is based on [Bootstrap v3](http://ge
 
 ## Dependencies
 
-PatternFly includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".
+PatternFly includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".  And make sure you keep them updated (see "Keeping Bower Components Updated").
 
 ## Development
 
@@ -21,6 +21,14 @@ Now that Bower is available, we can install the required development components:
     bower install
 
 At this point, you should now have a top level components/ folder with all dependencies listed in the bower.json file installed.  Unless you plan to contribute to PatternFly itself, you're done.  Celebrate by working on integrating PatternFly and its dependencies in your app!
+
+#### Keeping Bower Components Updated
+
+Anytime you pull a new version of PatternFly, make sure you also run
+
+    bower update
+
+so you get the latest version of the components specified in bower.json.
 
 ### Install Development Dependencies
 

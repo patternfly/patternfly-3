@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="ie8"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html>
-<!--<![endif]-->
+<!--[if IE 8]><html class="ie8"><![endif]--> 
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
   <head>
-    <title>Data Tables - PatternFly</title>
+    <title>Tab - PatternFly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/css/patternfly.css" rel="stylesheet" media="screen, print">
-    <link href="tests.css" rel="stylesheet" media="screen, print">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="../components/html5shiv/dist/html5shiv.js"></script>
@@ -17,22 +14,121 @@
     <!-- IE8 requires jQuery v1.x -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="../dist/js/patternfly.min.js"></script>
+    <script>
+      // Initialize Datatables
+      $(document).ready( function() {
+        $('.datatable').dataTable({
+          "fnDrawCallback": function( oSettings ) {
+            // if .sidebar-pf exists, call sidebar() after the data table is drawn
+            if ($('.sidebar-pf').length > 0) {
+              sidebar();
+            }
+          }
+        });
+      });
+    </script>
   </head>
   <body>
-    <div class="container">
+    <nav class="navbar navbar-default navbar-pf" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="../dist/img/brand.svg" alt="PatternFly" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-utility">
+          <li>
+            <a href="#">Status</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="pficon pficon-user"></span>
+              Brian Johnson <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">More options</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li>
+                    <a href="#">Another link</a>
+                  </li>
+                  <li>
+                    <a href="#">Something else here</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li>
+                    <a href="#">Separated link</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#">One more separated link</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-primary">
+          <li>
+            <a href="dashboard.html">Dashboard</a>
+          </li>
+          <li>
+            <a href="form.html">Form</a>
+          </li>
+          <li class="active">
+            <a href="tab.html">Tab</a>
+          </li>
+          <li>
+            <a href="#">Ut Bibendum</a>
+          </li>
+          <li>
+            <a href="#">Sodales Tellus</a>
+          </li>
+          <li>
+            <a href="#">Morbi</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
-          <div class="page-header">
-            <h1>Data Tables</h1>
-          </div>
-          <div class="alert alert-warning">
-             <span class="pficon-layered">
-              <span class="pficon pficon-warning-triangle"></span>
-              <span class="pficon pficon-warning-exclamation"></span>
-            </span>
-            These examples are include for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
-          </div>
-          <hr>
+        <div class="col-sm-8 col-md-9 col-sm-push-4 col-md-push-3">
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li>Tab</li>
+          </ol>
+          <h1>Tab</h1>
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li class="active"><a href="#">Adipiscing elit</a></li>
+            <li><a href="#">Duis</a></li>
+            <li><a href="#">Pellentesque</a></li>
+          </ul>
           <table class="datatable table table-striped table-bordered">
             <thead>
               <tr>
@@ -452,16 +548,16 @@
               </tr>
             </tbody>
           </table>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget eros tincidunt, semper ante nec, dapibus ante.</p>
+        </div><!-- /col -->
+        <div class="col-sm-4 col-md-3 col-sm-pull-8 col-md-pull-9 sidebar-pf sidebar-pf-left">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">Dolor sit amet</a></li>
+            <li><a href="#">Consectetur</a></li>
+          </ul>
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
-    <script src="../components/datatables/media/js/jquery.dataTables.js"></script>
-    <script src="../dist/js/patternfly.js"></script>
-    <script type="text/javascript">
-      // Initialize Datatables
-      $(document).ready(function() {
-        $('.datatable').dataTable();
-      });
-    </script>
   </body>
 </html>

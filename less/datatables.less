@@ -95,9 +95,13 @@
   }
 }
 
-@media (max-width: @screen-xs-max) {
-  .dataTables_wrapper .table-responsive {
-    margin-bottom: 0;
+
+.dataTables_wrapper {
+  margin: @line-height-computed 0;
+  @media (max-width: @screen-xs-max) {
+    .table-responsive {
+      margin-bottom: 0;
+    }
   }
 }
 

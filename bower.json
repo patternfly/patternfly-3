@@ -1,6 +1,6 @@
 {
   "name": "PatternFly",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "authors": "Red Hat",
   "license": "Apache-2.0",
   "homepage": "https://www.patternfly.org",
@@ -13,7 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.1",
+    "bootstrap": "~3.1.1",
     "bootstrap-select": "~1.4.3",
     "datatables": "~1.9.4",
     "font-awesome": "~4.0.1",
