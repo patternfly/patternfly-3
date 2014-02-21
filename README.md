@@ -30,6 +30,10 @@ The development includes the use of a number of helpful tasks. In order to setup
 
 This will install all necessary development packages into `node_modules/`. At this point, the gruntjs tasks are available for use such as starting a local development server or building the master CSS file.
 
+Additionally you may need to install the grunt command line utility.  To do this run:
+
+    npm install -g grunt-cli
+
 ### Live Reload Server
 
 A local development server can be quickly fired up by using the Gruntjs server task:
@@ -60,7 +64,7 @@ In development, styling is written and managed through multiple lesscss files. I
 
     grunt build
 
-This task will compile and minify the lesscss files into a single CSS file located at `dist/css/global.min.css`.
+This task will compile and minify the lesscss files into a single CSS file located at `dist/css/patternfly.min.css`.
 
 ### PatternFlyIcons Font
 
