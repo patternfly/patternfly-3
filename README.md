@@ -2,6 +2,14 @@
 
 This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations.
 
+## Install with Bower
+
+PatternFly can be installed and managed through Bower. To do so, either add `patternfly` as a dependency in your `bower.json` or run the following:
+
+```
+bower install patternfly
+```
+
 ## Dependencies
 
 PatternFly includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".  And make sure you keep them updated (see "Keeping Bower Components Updated").
@@ -81,6 +89,31 @@ PatternFlyIcons font is generated using [IcoMoon](http://icomoon.io/app).  [Load
 ## Tests
 
 The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use PatternFly.
+
+## Release
+
+The PatternFly library is released through the Bower package manager. This package manager determines available versions and installs based upon git tags. To release a new version version of PatternFly the version listed in `bower.json` needs to be updated and the repository tagged and pushed upstream. 
+
+Update the version listed in `bower.json` by editing the file and changing the line:
+
+```
+"version": "<new_version>"
+```
+
+Commit the version bump:
+
+```
+git commit -a -m "Version bump to <new_version>"
+```
+
+Tag and push upstream (assuming you have commit access):
+
+```
+git tag <new_version>
+git push && git push --tags
+```
+
+The new version will now be automatically available via Bower.
 
 ## Documentation
 
