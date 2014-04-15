@@ -8046,6 +8046,7 @@ label {
   content: "\e617";
 }
 .navbar-nav > li > .dropdown-menu.infotip {
+  border-top-width: 1px !important;
   margin-top: 10px;
 }
 @media (max-width: 767px) {
@@ -8061,6 +8062,7 @@ label {
   padding: 0;
 }
 .infotip .list-group {
+  border-top: 0;
   margin: 0;
   padding: 8px 0;
 }
