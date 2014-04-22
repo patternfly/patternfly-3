@@ -8045,6 +8045,15 @@ label {
 .pficon-history:before {
   content: "\e617";
 }
+.pficon-home:before {
+  content: "\e618";
+}
+.pficon-remove:before {
+  content: "\e619";
+}
+.pficon-add:before {
+  content: "\e61a";
+}
 .navbar-nav > li > .dropdown-menu.infotip {
   border-top-width: 1px !important;
   margin-top: 10px;
