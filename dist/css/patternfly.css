@@ -1685,7 +1685,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 26px;
+  height: 27px;
   padding: 2px 6px;
   font-size: 12px;
   line-height: 1.81818181;
@@ -1745,7 +1745,7 @@ input[type="search"] {
   -webkit-appearance: none;
 }
 input[type="date"] {
-  line-height: 26px;
+  line-height: 27px;
 }
 .form-group {
   margin-bottom: 15px;
@@ -1837,16 +1837,16 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 32.5px;
+  padding-right: 33.75px;
 }
 .has-feedback .form-control-feedback {
   position: absolute;
   top: 26px;
   right: 0;
   display: block;
-  width: 26px;
-  height: 26px;
-  line-height: 26px;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
   text-align: center;
 }
 .has-success .help-block,
@@ -3855,8 +3855,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 11.5px;
+  margin-bottom: 11.5px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -3923,8 +3923,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 11.5px;
+  margin-bottom: 11.5px;
 }
 .navbar-btn.btn-sm {
   margin-top: 14px;
