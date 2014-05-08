@@ -36,7 +36,7 @@
           display: block;
           position: absolute;
           right: @grid-gutter-width/2/2;
-          top: 2px;
+          top: 1px;
         }
       }
     }
@@ -63,13 +63,13 @@
     background: transparent;
   }
   .panel-body {
-    padding: 2px @grid-gutter-width/2;
+    padding: 6px @grid-gutter-width/2;
     .nav-pills > li > a {
       padding-left: @grid-gutter-width/2 + 17;
     }
   }
   .panel-heading {
-    padding: 7px @grid-gutter-width/2;
+    padding: 9px @grid-gutter-width/2;
   }
   .panel-title {
     font-size: @font-size-base;
@@ -115,11 +115,29 @@
     &.sidebar-pf-right {
       border-left: 1px solid @sidebar-pf-border-color;
     }
-    .panel-group .panel-default {
+    > .nav-stacked {
+      margin-top: 5px;
+    }
+    .panel-group .panel-default, .treeview {
       border-left: 0;
       border-right: 0;
       margin-left: -@grid-gutter-width/2;
       margin-right: -@grid-gutter-width/2;
+    }
+    .treeview {
+      margin-top: 5px;
+      .list-group-item {
+        padding-left: @grid-gutter-width/2;
+        padding-right: @grid-gutter-width/2;
+        &.node-selected:after {
+          content: @fa-var-angle-right;
+          font-family: @icon-font-name-fa;
+          display: block;
+          position: absolute;
+          right: @grid-gutter-width/2/2;
+          top: 1px;
+        }
+      }
     }
   }
 }
