@@ -9307,6 +9307,61 @@ td > .progress:first-child:last-child {
 .progress-description .pficon {
   margin-right: 3px;
 }
+.search-pf.has-button {
+  border-collapse: separate;
+  display: table;
+}
+.search-pf.has-button .form-group {
+  display: table-cell;
+  width: 100%;
+}
+.search-pf.has-button .form-group .btn {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  float: left;
+  margin-left: -1px;
+}
+.search-pf.has-button .form-group .btn.btn-lg {
+  font-size: 14.5px;
+}
+.search-pf.has-button .form-group .form-control {
+  float: left;
+}
+.search-pf .has-clear .clear {
+  background: transparent;
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  height: 25px;
+  line-height: 1;
+  padding: 0;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 28px;
+}
+.search-pf .has-clear .clear:focus {
+  outline: none;
+}
+.search-pf .has-clear .form-control {
+  padding-right: 30px;
+}
+.search-pf .has-clear .form-control::-ms-clear {
+  display: none;
+}
+.search-pf .has-clear .input-lg + .clear {
+  height: 31px;
+  width: 28px;
+}
+.search-pf .has-clear .input-sm + .clear {
+  height: 20px;
+  width: 28px;
+}
+.search-pf .has-clear .input-sm + .clear span {
+  font-size: 10px;
+}
+.search-pf .has-clear .search-pf-input-group {
+  position: relative;
+}
 .sidebar-header {
   border-bottom: 1px solid #e9e9e9;
   padding-bottom: 11px;
