@@ -9641,6 +9641,15 @@ td > .progress:first-child:last-child {
 .nav-tabs > li > .dropdown-menu.pull-right {
   right: -1px;
 }
+.nav-tabs + .nav-tabs-pf {
+  font-size: 12px;
+}
+.nav-tabs + .nav-tabs-pf > li:first-child > a {
+  padding-left: 15px;
+}
+.nav-tabs + .nav-tabs-pf > li:first-child > a:before {
+  left: 15px !important;
+}
 .nav-tabs .open > a,
 .nav-tabs .open > a:hover,
 .nav-tabs .open > a:focus {
