@@ -7475,6 +7475,10 @@ button.close {
 .breadcrumb > .active strong {
   font-weight: 600;
 }
+.breadcrumb > li {
+  display: inline;
+  /* IE8 */
+}
 .breadcrumb > li + li:before {
   color: #999999;
   content: "\f101";
