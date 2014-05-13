@@ -9328,6 +9328,9 @@ td > .progress:first-child:last-child {
 .search-pf.has-button .form-group .btn.btn-lg {
   font-size: 14.5px;
 }
+.search-pf.has-button .form-group .btn.btn-sm {
+  font-size: 10.7px;
+}
 .search-pf.has-button .form-group .form-control {
   float: left;
 }
