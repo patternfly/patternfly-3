@@ -7448,7 +7448,7 @@ button.close {
   border-bottom: 1px solid transparent !important;
   border-top: 1px solid transparent !important;
   margin-bottom: 0;
-  padding: 1px 10px;
+  padding: 0 10px;
 }
 .treeview .list-group-item:hover {
   background: #d4edfa !important;
@@ -7460,11 +7460,12 @@ button.close {
 }
 .treeview span.icon {
   display: inline-block;
+  font-size: 13px;
   min-width: 10px;
   text-align: center;
 }
 .treeview span.icon > [class*="fa-angle"] {
-  font-size: 14px;
+  font-size: 15px;
 }
 .treeview span.indent {
   margin-right: 5px;

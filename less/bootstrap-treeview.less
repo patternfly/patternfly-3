@@ -11,7 +11,7 @@
     border-bottom: 1px solid transparent !important;
     border-top: 1px solid transparent !important;
     margin-bottom: 0;
-    padding: 1px 10px;
+    padding: 0 10px;
     &:hover {
       background: @dropdown-link-hover-bg !important;
       border-color: @dropdown-link-hover-border-color !important;
@@ -23,10 +23,11 @@
   }
   span.icon {
     display: inline-block;
+    font-size: @font-size-base + 1;
     min-width: 10px;
     text-align: center;
     > [class*="fa-angle"] {
-      font-size: @font-size-base + 2;
+      font-size: @font-size-base + 3;
     }
   }
   span.indent {
