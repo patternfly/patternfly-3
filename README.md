@@ -92,7 +92,7 @@ The `tests/` directory contains HTML pages with component and pattern examples i
 
 ## Release
 
-The PatternFly library is released through the Bower package manager. This package manager determines available versions and installs based upon git tags. To release a new version version of PatternFly the version listed in `bower.json` needs to be updated and the repository tagged and pushed upstream. 
+The PatternFly library is released through the Bower package manager. This package manager determines available versions and installs based upon git tags. To release a new version version of PatternFly the version listed in `bower.json` needs to be updated and the repository tagged and pushed upstream. **Note:**  also update the version number in `package.json` so it stays in sync.
 
 Update the version listed in `bower.json` by editing the file and changing the line:
 
