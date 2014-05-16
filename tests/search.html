@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="ie8"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
 <html>
 <!--<![endif]-->
   <head>
@@ -18,6 +19,22 @@
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../dist/js/patternfly.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Hide the clear button
+        $(".search-pf .clear").hide($(this).prev('input').val());
+        // Show the clear button upon entering text in the search input
+        $(".search-pf .has-clear .form-control").keyup(function () {
+          var t = $(this);
+          t.next('button').toggle(Boolean(t.val()));
+        });
+        // Upon clicking the clear button, empty the entered text and hide the clear button
+        $(".search-pf .clear").click(function () {
+          $(this).prev('input').val('').focus();
+          $(this).hide();
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="container">
@@ -31,7 +48,7 @@
               <span class="pficon pficon-warning-triangle"></span>
               <span class="pficon pficon-warning-exclamation"></span>
             </span>
-            These examples are include for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+            These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
           </div>
           <hr>
           <form role="form" class="search-pf has-button">
@@ -127,21 +144,5 @@
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
-    <script>
-      $(document).ready(function() {
-        // Hide the clear button
-        $(".search-pf .clear").hide($(this).prev('input').val());
-        // Show the clear button upon entering text in the search input
-        $(".search-pf .has-clear .form-control").keyup(function () {
-          var t = $(this);
-          t.next('button').toggle(Boolean(t.val()));
-        });
-        // Upon clicking the clear button, empty the entered text and hide the clear button
-        $(".search-pf .clear").click(function () {
-          $(this).prev('input').val('').focus();
-          $(this).hide();
-        });
-      });
-    </script>
   </body>
 </html>
