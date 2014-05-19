@@ -20,20 +20,22 @@
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../dist/js/patternfly.min.js"></script>
     <script>
-      $(document).ready(function() {
-        // Hide the clear button
-        $(".search-pf .clear").hide($(this).prev('input').val());
-        // Show the clear button upon entering text in the search input
-        $(".search-pf .has-clear .form-control").keyup(function () {
-          var t = $(this);
-          t.next('button').toggle(Boolean(t.val()));
+      (function($) {
+        $(document).ready(function() {
+          // Hide the clear button
+          $(".search-pf .clear").hide($(this).prev('input').val());
+          // Show the clear button upon entering text in the search input
+          $(".search-pf .has-clear .form-control").keyup(function () {
+            var t = $(this);
+            t.next('button').toggle(Boolean(t.val()));
+          });
+          // Upon clicking the clear button, empty the entered text and hide the clear button
+          $(".search-pf .clear").click(function () {
+            $(this).prev('input').val('').focus();
+            $(this).hide();
+          });
         });
-        // Upon clicking the clear button, empty the entered text and hide the clear button
-        $(".search-pf .clear").click(function () {
-          $(this).prev('input').val('').focus();
-          $(this).hide();
-        });
-      });
+      })(jQuery);
     </script>
   </head>
   <body>
