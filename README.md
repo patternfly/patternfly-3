@@ -4,11 +4,13 @@ This reference implementation of PatternFly is based on [Bootstrap v3](http://ge
 
 ## Install with Bower
 
-PatternFly can be installed and managed through [Bower](http://bower.io/). To do so, either add `patternfly` as a dependency in your `bower.json` or run the following:
+PatternFly can be installed and managed through [Bower](http://bower.io/). To do so, copy [`.bowerrc`](https://github.com/patternfly/patternfly/blob/master/.bowerrc) to your working directory [1] and either add `patternfly` as a dependency in your `bower.json` or run the following:
 
 ```
 bower install patternfly
 ```
+
+[1] In order to maintain the correct pathing to assets such as fonts within PatternFly as PatternFly utilizes a [custom install directory](http://bower.io/#custom-install-directory).
 
 ## Dependencies
 
