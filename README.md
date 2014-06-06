@@ -4,35 +4,23 @@ This reference implementation of PatternFly is based on [Bootstrap v3](http://ge
 
 ## Install with Bower
 
-A bug has been discovered when installing via Bower.  See https://github.com/patternfly/patternfly/issues/20#issuecomment-45257830.  
+PatternFly can be installed and managed through [Bower](http://bower.io/). To do so, either add `patternfly` as a dependency in your `bower.json` or run the following:
 
-## Dependencies
-
-PatternFly includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".  And make sure you keep them updated (see "Keeping Bower Components Updated").
+```
+bower install patternfly
+```
 
 ## Development
 
 Development setup requires nodejs. If you do not already have nodejs and npm installed on your system, please see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager for how to install on your distribution.
 
-### Install Bower Components
+### Install Bower
 
 After ensuring nodejs and npm are available, install [Bower](http://bower.io/) globally:
 
     npm install -g bower
 
-Now that Bower is available, we can install the required development components:
-
-    bower install
-
-At this point, you should now have a top level components/ folder with all dependencies listed in the bower.json file installed.  Unless you plan to contribute to PatternFly itself, you're done.  Celebrate by working on integrating PatternFly and its dependencies in your app!
-
-#### Keeping Bower Components Updated
-
-Anytime you pull a new version of PatternFly, make sure you also run
-
-    bower update
-
-so you get the latest version of the components specified in bower.json.
+Bower is used to install and update PatternFly's dependencies.
 
 ### Install Development Dependencies
 

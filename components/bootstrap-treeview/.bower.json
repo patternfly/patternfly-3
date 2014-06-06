@@ -1,0 +1,36 @@
+{
+  "name": "bootstrap-treeview",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jonmiles/bootstrap-treeview",
+  "description": "Tree View for Twitter Bootstrap",
+  "main": "bootstrap-treeview.min.js",
+  "keywords": [
+    "Twitter",
+    "Bootstrap",
+    "Tree",
+    "TreeView",
+    "Navigation"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.0.3"
+  },
+  "devDependencies": {},
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "3bc6c6062f58a1ea328d57061e5b2b3533ac00d3"
+  },
+  "_source": "git://github.com/jonmiles/bootstrap-treeview.git",
+  "_target": "~1.0.0",
+  "_originalSource": "bootstrap-treeview",
+  "_direct": true
+}

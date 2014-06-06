@@ -7,9 +7,6 @@
 *.swn
 *.swo
 
-# Ignore Bower installed libraries
-components/
-
 # Ignore local nodejs packages
 node_modules/
 

@@ -1,6 +1,6 @@
 {
   "name": "PatternFly",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": "Red Hat",
   "license": "Apache-2.0",
   "homepage": "https://www.patternfly.org",
@@ -13,16 +13,6 @@
     "tests",
     "package.json",
     "Gruntfile.js",
-    "PatternFlyIcons-webfont.json",
-    "README.md"
-  ],
-  "dependencies": {
-    "bootstrap": "~3.1.1",
-    "bootstrap-select": "~1.5.2",
-    "bootstrap-treeview": "~1.0.0",
-    "datatables": "~1.10.0",
-    "font-awesome": "~4.1.0",
-    "html5shiv": "~3.7.2",
-    "respond": "~1.4.2"
-  }
+    "PatternFlyIcons-webfont.json"
+  ]
 }
