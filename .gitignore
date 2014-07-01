@@ -15,3 +15,7 @@ node_modules/
 nodevars.bat
 npm
 npm.cmd
+
+# Ignore generated files
+patternfly.spec
+build
