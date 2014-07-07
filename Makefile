@@ -25,10 +25,6 @@ all:	patternfly.spec
 	sed -i "s#../../components#../components#g" \
 		build/css/patternfly*.css \
 		$(NULL)
-	mv build/css/patternfly.css build/css/styles.css
-	mv build/css/patternfly.min.css build/css/styles.min.css
-	ln -s styles.css build/css/patternfly.css
-	ln -s styles.min.css build/css/patternfly.min.css
 
 clean:
 	rm -rf build
