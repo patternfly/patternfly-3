@@ -1,15 +1,15 @@
 PACKAGE_NAME=patternfly
-VERSION=1.0.5
-MILESTONE=
+VERSION=1.0.6
+MILESTONE=master
 ifneq ($(MILESTONE),)
 SUFFIX:=_$(MILESTONE)
 endif
 PACKAGE_VERSION=$(VERSION)$(SUFFIX)
 PACKAGE_RPM_VERSION=$(VERSION)
 # for milestones
-#PACKAGE_RPM_RELEASE=0.0.$(MILESTONE)
+PACKAGE_RPM_RELEASE=0.0.$(MILESTONE)
 # for releases
-PACKAGE_RPM_RELEASE=1
+#PACKAGE_RPM_RELEASE=1
 ABI=1
 
 PREFIX=/usr/local
@@ -40,12 +40,11 @@ install:	all
 
 .PHONY:	patternfly.spec.in
 dist:	patternfly.spec
-	TMP="$$(mktemp -d)" && mkdir "$${TMP}/$(PACKAGE_NAME)-$(PACKAGE_VERSION)" && \
-		git ls-files | \
-		tar --files-from /proc/self/fd/0 -c patternfly.spec | \
-		tar -C "$${TMP}/$(PACKAGE_NAME)-$(PACKAGE_VERSION)" -x && \
-		tar -C "$${TMP}" -czf "$(PACKAGE_NAME)-$(PACKAGE_VERSION).tar.gz" "$(PACKAGE_NAME)-$(PACKAGE_VERSION)"; \
-		rm -fr "$${TMP}"
+	git ls-files | tar --files-from /proc/self/fd/0 \
+		--xform 's#^#$(PACKAGE_NAME)-$(PACKAGE_VERSION)/#' \
+		-czf "$(PACKAGE_NAME)-$(PACKAGE_VERSION).tar.gz" \
+		patternfly.spec \
+		$(NULL)
 
 .in:
 	sed \
