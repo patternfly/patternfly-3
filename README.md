@@ -80,7 +80,7 @@ The `tests/` directory contains HTML pages with component and pattern examples i
 
 ## Release
 
-The PatternFly library is released through the Bower package manager and RPM. 
+PatternFly is released through the Bower package manager and RPM. 
 
 ### Bower
 
@@ -130,17 +130,21 @@ Verify `MAKEFILE` is properly configured.
 
 Make the dist:
 
-`make dist`
+```
+make dist
+```
 
-Copy the resulting tarball from the previous step to your rpmbuild/SOURCES directly
+Copy the resulting tarball from the previous step to your rpmbuild/SOURCES directly.
 
 e.g., `cp patternfly1-1.0.3-0.0.master.fc20.src.rpm ~/rpmbuild/SOURCES`
 
-Build the RPM
+Build the RPM:
 
-`rpmbuild -ba patternfly.spec`
+```
+rpmbuild -ba patternfly.spec
+```
 
-Upload the source RPM [1] to a public web server
+Upload the source RPM [1] to a public web server.
 
 [1] e.g., ~/rpmbuild/SRPMS/patternfly1-1.0.3-0.0.master.fc20.src.rpm
 
