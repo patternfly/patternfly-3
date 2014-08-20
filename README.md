@@ -80,12 +80,31 @@ The `tests/` directory contains HTML pages with component and pattern examples i
 
 ## Release
 
-The PatternFly library is released through the Bower package manager. This package manager determines available versions and installs based upon git tags. To release a new version version of PatternFly the version listed in `bower.json` needs to be updated and the repository tagged and pushed upstream. **Note:**  also update the version number in `package.json` and `MAKEFILE` so they stay in sync.
+PatternFly is released through the Bower package manager and RPM. 
+
+### Bower
+
+The Bower package manager determines available versions and installs based upon git tags. To release a new version version of PatternFly, edit `bower.json`, `package.json`, and `MAKEFILE` accordingly.
 
 Update the version listed in `bower.json` by editing the file and changing the line:
 
 ```
 "version": "<new_version>"
+```
+
+Update the version listed in `package.json` by editing the file and changing the line:
+
+```
+"version": "<new_version>"
+```
+
+Update the `MAKEFILE` by editing the file and changing the following lines:
+
+```
+VERSION=<new_version>
+MILESTONE=
+# PACKAGE_RPM_RELEASE=0.0.$(MILESTONE)
+PACKAGE_RPM_RELEASE=1
 ```
 
 Commit the version bump:
@@ -102,6 +121,43 @@ git push && git push --tags
 ```
 
 The new version will now be automatically available via Bower.
+
+### RPM
+
+RPMs of PatternFly Bower releases are built using Fedora or RHEL and rpm-build.
+
+Verify `MAKEFILE` is properly configured.
+
+Make the dist:
+
+```
+make dist
+```
+
+Copy the resulting tarball from the previous step to your rpmbuild/SOURCES directly.
+
+e.g., `cp patternfly1-1.0.3-0.0.master.fc20.src.rpm ~/rpmbuild/SOURCES`
+
+Build the RPM:
+
+```
+rpmbuild -ba patternfly.spec
+```
+
+Upload the source RPM [1] to a public web server.
+
+[1] e.g., ~/rpmbuild/SRPMS/patternfly1-1.0.3-0.0.master.fc20.src.rpm
+
+Ask @rhamilto or @EmilyDirsh to add a new build on [Fedora Copr](https://copr.fedoraproject.org/coprs/patternfly/patternfly1/add_build/) using the URL created in the previous step.
+
+Edit `MAKEFILE` as follows and commit the change:
+
+```
+VERSION=<new_version + 1>
+MILESTONE=master
+PACKAGE_RPM_RELEASE=0.0.$(MILESTONE)
+# PACKAGE_RPM_RELEASE=1
+```
 
 ## Documentation
 
