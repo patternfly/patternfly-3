@@ -7920,12 +7920,6 @@ fieldset[disabled] .btn-primary.active {
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-.input-group-pf > .input-group-btn {
-  position: static;
-}
-.ie8 .input-group-pf .input-group-btn .dropdown-toggle {
-  margin-left: -1px;
-}
 .dataTables_header {
   background-color: #f6f6f6;
   border: 1px solid #d1d1d1;
