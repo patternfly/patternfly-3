@@ -8,7 +8,7 @@
 // Button variants
 .button-variant(@color; @background; @background-image-start; @background-image-stop; @border) {
   background-color: @background;
-  #gradient .vertical(@background-image-start, @background-image-stop);
+  #gradient > .vertical(@background-image-start, @background-image-stop);
   border-color: @border;
   color: @color;
 

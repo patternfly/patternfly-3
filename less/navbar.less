@@ -219,7 +219,7 @@
     }
     .navbar-primary {
       font-size: @font-size-large;
-      #gradient .vertical(@navbar-pf-navbar-primary-bg-color-start, @navbar-pf-navbar-primary-bg-color-stop);
+      #gradient > .vertical(@navbar-pf-navbar-primary-bg-color-start, @navbar-pf-navbar-primary-bg-color-stop);
       &.persistent-secondary {
         .context {
           .dropdown-menu {
@@ -330,7 +330,7 @@
           background-color: @navbar-pf-navbar-primary-hover-bg-color-stop;
           border-top-color: @navbar-pf-navbar-primary-hover-border-color;
           color: @navbar-pf-color;
-          #gradient .vertical(@navbar-pf-navbar-primary-hover-bg-color-start, @navbar-pf-navbar-primary-hover-bg-color-stop);
+          #gradient > .vertical(@navbar-pf-navbar-primary-hover-bg-color-start, @navbar-pf-navbar-primary-hover-bg-color-stop);
         }
       }
       > .active > a, > .active > a:hover, > .active > a:focus, > .open > a, > .open > a:hover, > .open > a:focus {
@@ -339,7 +339,7 @@
         border-top-color: @navbar-pf-navbar-primary-active-border-color;
         .box-shadow(none);
         color: @navbar-pf-active-color;
-        #gradient .vertical(@navbar-pf-navbar-primary-active-bg-color-start, @navbar-pf-navbar-primary-active-bg-color-stop);
+        #gradient > .vertical(@navbar-pf-navbar-primary-active-bg-color-start, @navbar-pf-navbar-primary-active-bg-color-stop);
       }
       li.dropdown.context {
         border-bottom: 0;
@@ -349,13 +349,13 @@
           border-right: 1px solid @navbar-pf-navbar-primary-context-border-color;
           border-top-color: @navbar-pf-navbar-primary-context-border-top-color;
           font-weight: 600;
-          #gradient .vertical(@navbar-pf-navbar-primary-context-bg-color-start, @navbar-pf-navbar-primary-context-bg-color-stop);
+          #gradient > .vertical(@navbar-pf-navbar-primary-context-bg-color-start, @navbar-pf-navbar-primary-context-bg-color-stop);
           &:hover {
             background-color: @navbar-pf-navbar-primary-context-hover-bg-color-stop;
             border-bottom-color: @navbar-pf-navbar-primary-context-hover-border-color;
             border-right-color: @navbar-pf-navbar-primary-context-hover-border-color;
             border-top-color: @navbar-pf-navbar-primary-context-hover-border-top-color;
-            #gradient .vertical(@navbar-pf-navbar-primary-context-hover-bg-color-start, @navbar-pf-navbar-primary-context-hover-bg-color-stop);
+            #gradient > .vertical(@navbar-pf-navbar-primary-context-hover-bg-color-start, @navbar-pf-navbar-primary-context-hover-bg-color-stop);
           }
         }
         &.open > a {
@@ -363,7 +363,7 @@
           border-bottom-color: @navbar-pf-navbar-primary-context-active-border-color;
           border-right-color: @navbar-pf-navbar-primary-context-active-border-right-color;
           border-top-color: @navbar-pf-navbar-primary-context-active-border-top-color;
-          #gradient .vertical(@navbar-pf-navbar-primary-context-active-bg-color-start, @navbar-pf-navbar-primary-context-active-bg-color-stop);
+          #gradient > .vertical(@navbar-pf-navbar-primary-context-active-bg-color-start, @navbar-pf-navbar-primary-context-active-bg-color-stop);
         }
       }
     }
