@@ -3,6 +3,101 @@
 // --------------------------------------------------
 // Bootstrap overrides and PatternFly-specific variables
 
+/* PatternFly specific */
+@btn-danger-bg-img-start:                                           #d60915;
+@btn-danger-bg-img-stop:                                            #ac0710;
+@btn-default-bg-img-start:                                          #fafafa;
+@btn-default-bg-img-stop:                                           #ededed;
+@btn-primary-bg-img-start:                                          #1CACE8;
+@btn-primary-bg-img-stop:                                           #1998CC;
+@btn-xs-font-weight:                                                400;
+@dropdown-divider-margin:                                           4px 1px;
+@dropdown-link-active-border-color:                                 #0076b7;
+@dropdown-link-hover-border-color:                                  #b3d3e7;
+@dropdown-link-focus-color:                                         #fff;
+@fa-font-path:                                                      "../../components/font-awesome/fonts";
+@font-path:                                                         "../fonts";
+@gray-light-pf:                                                     #aaa;
+@gray-pf:                                                           #4d5258;
+@icon-font-name-fa:                                                 "FontAwesome";
+@icon-font-name-pf:                                                 "PatternFlyIcons-webfont";
+@icon-prefix:                                                       pficon;
+@img-badge-ie8:                                                     "logo.png";
+@img-badge-ie8-height:                                              69px;
+@img-badge-ie8-width:                                               73px;
+@img-bg-login:                                                      "bg-login.jpg";
+@img-brand-ie8:                                                     "brand.png";
+@img-brand-lg-ie8:                                                  "brand-lg.png";
+@img-path:                                                          "../img";
+@img-spinner:                                                       "spinner.gif";
+@img-spinner-lg:                                                    "spinner-lg.gif";
+@img-spinner-sm:                                                    "spinner-sm.gif";
+@img-spinner-xs:                                                    "spinner-xs.gif";
+@input-border-disabled:                                             #d4d4d4;
+@list-group-top-border:                                             #e9e8e8;
+@login-bg-color:                                                    #080808;
+@login-container-bg-color:                                          #181818;
+@login-container-bg-color-rgba:                                     rgba(255, 255, 255, 0.055);
+@modal-title-padding-horizontal:                                    18px;
+@modal-title-padding-vertical:                                      10px;
+@navbar-pf-bg-color:                                                #030303; //#393F45
+@navbar-pf-border-color:                                            #199dde;
+@navbar-pf-active-color:                                            #f1f1f1;
+@navbar-pf-color:                                                   #cfcfcf;
+@navbar-pf-icon-bar-bg-color:                                       #fff;
+@navbar-pf-navbar-navbar-brand-padding:                             8px 0 7px;
+@navbar-pf-navbar-navbar-brand-min-width:                           270px;
+@navbar-pf-navbar-navbar-persistent-bg-color:                       #f6f6f6;
+@navbar-pf-navbar-navbar-persistent-border-color:                   #cecdcd;
+@pagination-padding-small-vertical:                                 0;
+@panel-default-border-color:                                        #bebdbd;
+@sidebar-pf-bg:                                                     #fafafa;
+@sidebar-pf-border-color:                                           #d0d0d0;
+@table-border-hover:                                                #a7cadf;
+@table-cell-padding-bottom:                                         3px;
+@table-cell-padding-top:                                            2px;
+
+@img-path-alt:                                                      @img-path;
+@nav-tabs-color:                                                    @gray-pf;
+
+@navbar-pf-navbar-nav-active-bg-color:                              lighten(@navbar-pf-bg-color, 12.5%);
+@navbar-pf-navbar-nav-active-active-bg-color:                       lighten(@navbar-pf-bg-color, 8%);
+@navbar-pf-navbar-nav-active-active-open-bg-color:                  lighten(@navbar-pf-bg-color, 11%);
+
+@navbar-pf-navbar-primary-bg-color-stop:                            @navbar-pf-bg-color; // #383F43;
+@navbar-pf-navbar-primary-bg-color-start:                           lighten(@navbar-pf-bg-color, 10%); // #474C50;
+@navbar-pf-navbar-primary-context-bg-color-start:                   lighten(@navbar-pf-navbar-primary-bg-color-start, 8.5%);
+@navbar-pf-navbar-primary-context-bg-color-stop:                    lighten(@navbar-pf-navbar-primary-bg-color-stop, 11%);
+
+@navbar-pf-navbar-primary-hover-bg-color-start:                     lighten(@navbar-pf-navbar-primary-bg-color-start, 10%);
+@navbar-pf-navbar-primary-hover-bg-color-stop:                      lighten(@navbar-pf-navbar-primary-bg-color-stop, 10%);
+
+@navbar-pf-navbar-header-border-color:                              lighten(@navbar-pf-bg-color, 15%);
+@navbar-pf-navbar-primary-hover-border-color:                       lighten(@navbar-pf-navbar-header-border-color, 20%);
+@navbar-pf-navbar-primary-context-border-color:                     lighten(@navbar-pf-navbar-header-border-color, 8%);
+@navbar-pf-navbar-primary-context-border-top-color:                 lighten(@navbar-pf-navbar-header-border-color, 7%);
+
+@navbar-pf-navbar-primary-context-hover-bg-color-start:             lighten(@navbar-pf-navbar-primary-context-bg-color-start, 5%);
+@navbar-pf-navbar-primary-context-hover-bg-color-stop:              lighten(@navbar-pf-navbar-primary-context-bg-color-stop, 7.5%);
+@navbar-pf-navbar-primary-context-hover-border-color:               lighten(@navbar-pf-navbar-primary-context-border-color, 5%);
+@navbar-pf-navbar-primary-context-hover-border-top-color:           lighten(@navbar-pf-navbar-primary-context-border-top-color, 6%);
+
+@navbar-pf-navbar-primary-active-bg-color-start:                    lighten(@navbar-pf-navbar-primary-hover-bg-color-start, 5%);
+@navbar-pf-navbar-primary-active-bg-color-stop:                     lighten(@navbar-pf-navbar-primary-hover-bg-color-stop, 7.5%);
+@navbar-pf-navbar-primary-active-border-color:                      lighten(@navbar-pf-navbar-primary-hover-border-color, 5%);
+@navbar-pf-navbar-primary-context-active-bg-color-start:            lighten(@navbar-pf-navbar-primary-context-hover-bg-color-start, 5%);
+@navbar-pf-navbar-primary-context-active-bg-color-stop:             lighten(@navbar-pf-navbar-primary-context-hover-bg-color-stop, 7.5%);
+@navbar-pf-navbar-primary-context-active-border-color:              lighten(@navbar-pf-navbar-primary-context-hover-border-color, 5%);
+@navbar-pf-navbar-primary-context-active-border-right-color:        @navbar-pf-navbar-primary-context-active-border-color;
+@navbar-pf-navbar-primary-context-active-border-top-color:          lighten(@navbar-pf-navbar-primary-context-hover-border-top-color, 6%);
+
+@navbar-pf-navbar-utility-color:                                    @navbar-pf-color;
+@navbar-pf-navbar-utility-border-color:                             lighten(@navbar-pf-bg-color, 15.5%);
+@navbar-pf-navbar-utility-hover-bg-color:                           lighten(@navbar-pf-bg-color, 12.5%);
+@navbar-pf-navbar-utility-hover-border-color:                       lighten(@navbar-pf-navbar-utility-border-color, 5%);
+@navbar-pf-navbar-utility-open-bg-color:                            lighten(@navbar-pf-navbar-utility-hover-bg-color, 7.5%);
+@navbar-pf-navbar-utility-open-border-color:                        lighten(@navbar-pf-navbar-utility-hover-border-color, 5%);
+
 /* Bootstrap overrides */
 @alert-danger-bg:                                                   @body-bg;
 @alert-danger-border:                                               @brand-danger;
@@ -109,93 +204,8 @@
 @tooltip-bg:                                                        #434343;
 @tooltip-max-width:                                                 220px;
 
-/* PatternFly-specific */
-@btn-danger-bg-img-start:                                           #d60915;
-@btn-danger-bg-img-stop:                                            #ac0710;
-@btn-default-bg-img-start:                                          #fafafa;
-@btn-default-bg-img-stop:                                           #ededed;
-@btn-primary-bg-img-start:                                          #1CACE8;
-@btn-primary-bg-img-stop:                                           #1998CC;
-@btn-xs-font-weight:                                                400;
-@dropdown-divider-margin:                                           4px 1px;
-@dropdown-link-active-border-color:                                 #0076b7;
-@dropdown-link-hover-border-color:                                  #b3d3e7;
+/* PatternFly specific variables based on Bootstrap overides */
 @dropdown-link-focus-bg:                                            @link-color;
-@dropdown-link-focus-color:                                         #fff;
-@fa-font-path:                                                      "../../components/font-awesome/fonts";
-@font-path:                                                         "../fonts";
-@gray-light-pf:                                                     #aaa;
-@gray-pf:                                                           #4d5258;
-@icon-font-name-fa:                                                 "FontAwesome";
-@icon-font-name-pf:                                                 "PatternFlyIcons-webfont";
-@icon-prefix:                                                       pficon;
-@img-badge-ie8:                                                     "logo.png";
-@img-badge-ie8-height:                                              69px;
-@img-badge-ie8-width:                                               73px;
-@img-bg-login:                                                      "bg-login.jpg";
-@img-brand-ie8:                                                     "brand.png";
-@img-brand-lg-ie8:                                                  "brand-lg.png";
-@img-path:                                                          "../img";
-@img-path-alt:                                                      @img-path;
-@img-spinner:                                                       "spinner.gif";
-@img-spinner-lg:                                                    "spinner-lg.gif";
-@img-spinner-sm:                                                    "spinner-sm.gif";
-@img-spinner-xs:                                                    "spinner-xs.gif";
-@input-border-disabled:                                             #d4d4d4;
-@list-group-top-border:                                             #e9e8e8;
-@login-bg-color:                                                    #080808;
-@login-container-bg-color:                                          #181818;
-@login-container-bg-color-rgba:                                     rgba(255, 255, 255, 0.055);
-@modal-title-padding-horizontal:                                    18px;
-@modal-title-padding-vertical:                                      10px;
-@nav-tabs-color:                                                    @gray-pf;
-@navbar-pf-bg-color:                                                #030303; //#393F45
-@navbar-pf-border-color:                                            #199dde;
-@navbar-pf-active-color:                                            #f1f1f1;
-@navbar-pf-color:                                                   #cfcfcf;
-@navbar-pf-icon-bar-bg-color:                                       #fff;
-@navbar-pf-navbar-header-border-color:                              lighten(@navbar-pf-bg-color, 15%);
-@navbar-pf-navbar-nav-active-bg-color:                              lighten(@navbar-pf-bg-color, 12.5%);
-@navbar-pf-navbar-nav-active-active-bg-color:                       lighten(@navbar-pf-bg-color, 8%);
-@navbar-pf-navbar-nav-active-active-open-bg-color:                  lighten(@navbar-pf-bg-color, 11%);;
-@navbar-pf-navbar-navbar-brand-padding:                             8px 0 7px;
-@navbar-pf-navbar-navbar-brand-min-width:                           270px;
-@navbar-pf-navbar-navbar-persistent-bg-color:                       #f6f6f6;
-@navbar-pf-navbar-navbar-persistent-border-color:                   #cecdcd;
-@navbar-pf-navbar-primary-active-bg-color-start:                    lighten(@navbar-pf-navbar-primary-hover-bg-color-start, 5%);
-@navbar-pf-navbar-primary-active-bg-color-stop:                     lighten(@navbar-pf-navbar-primary-hover-bg-color-stop, 7.5%);
-@navbar-pf-navbar-primary-active-border-color:                      lighten(@navbar-pf-navbar-primary-hover-border-color, 5%);
-@navbar-pf-navbar-primary-bg-color-start:                           lighten(@navbar-pf-bg-color, 10%); // #474C50; 
-@navbar-pf-navbar-primary-bg-color-stop:                            @navbar-pf-bg-color; // #383F43; 
-@navbar-pf-navbar-primary-context-active-bg-color-start:            lighten(@navbar-pf-navbar-primary-context-hover-bg-color-start, 5%);
-@navbar-pf-navbar-primary-context-active-bg-color-stop:             lighten(@navbar-pf-navbar-primary-context-hover-bg-color-stop, 7.5%);
-@navbar-pf-navbar-primary-context-active-border-color:              lighten(@navbar-pf-navbar-primary-context-hover-border-color, 5%);
-@navbar-pf-navbar-primary-context-active-border-right-color:        @navbar-pf-navbar-primary-context-active-border-color;
-@navbar-pf-navbar-primary-context-active-border-top-color:          lighten(@navbar-pf-navbar-primary-context-hover-border-top-color, 6%);
-@navbar-pf-navbar-primary-context-bg-color-start:                   lighten(@navbar-pf-navbar-primary-bg-color-start, 8.5%);
-@navbar-pf-navbar-primary-context-bg-color-stop:                    lighten(@navbar-pf-navbar-primary-bg-color-stop, 11%);
-@navbar-pf-navbar-primary-context-border-color:                     lighten(@navbar-pf-navbar-header-border-color, 8%);
-@navbar-pf-navbar-primary-context-border-top-color:                 lighten(@navbar-pf-navbar-header-border-color, 7%);
-@navbar-pf-navbar-primary-context-hover-bg-color-start:             lighten(@navbar-pf-navbar-primary-context-bg-color-start, 5%);
-@navbar-pf-navbar-primary-context-hover-bg-color-stop:              lighten(@navbar-pf-navbar-primary-context-bg-color-stop, 7.5%);
-@navbar-pf-navbar-primary-context-hover-border-color:               lighten(@navbar-pf-navbar-primary-context-border-color, 5%);
-@navbar-pf-navbar-primary-context-hover-border-top-color:           lighten(@navbar-pf-navbar-primary-context-border-top-color, 6%);
-@navbar-pf-navbar-primary-hover-bg-color-start:                     lighten(@navbar-pf-navbar-primary-bg-color-start, 10%);
-@navbar-pf-navbar-primary-hover-bg-color-stop:                      lighten(@navbar-pf-navbar-primary-bg-color-stop, 10%);
-@navbar-pf-navbar-primary-hover-border-color:                       lighten(@navbar-pf-navbar-header-border-color, 20%);
-@navbar-pf-navbar-utility-border-color:                             lighten(@navbar-pf-bg-color, 15.5%);
-@navbar-pf-navbar-utility-color:                                    @navbar-pf-color;
-@navbar-pf-navbar-utility-hover-bg-color:                           lighten(@navbar-pf-bg-color, 12.5%);
-@navbar-pf-navbar-utility-hover-border-color:                       lighten(@navbar-pf-navbar-utility-border-color, 5%);
-@navbar-pf-navbar-utility-open-bg-color:                            lighten(@navbar-pf-navbar-utility-hover-bg-color, 7.5%);
-@navbar-pf-navbar-utility-open-border-color:                        lighten(@navbar-pf-navbar-utility-hover-border-color, 5%);
-@pagination-padding-small-vertical:                                 0;
-@panel-default-border-color:                                        #bebdbd;
 @progress-sm:                                                       @line-height-computed - 6;
 @progress-xs:                                                       @line-height-computed - 14;
-@sidebar-pf-bg:                                                     #fafafa;
-@sidebar-pf-border-color:                                           #d0d0d0;
-@table-border-hover:                                                #a7cadf;
-@table-cell-padding-bottom:                                         3px;
-@table-cell-padding-top:                                            2px;
 @tooltip-font-size:                                                 @font-size-base;
