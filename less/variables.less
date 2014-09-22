@@ -99,6 +99,26 @@
 @navbar-pf-navbar-utility-open-border-color:                        lighten(@navbar-pf-navbar-utility-hover-border-color, 5%);
 
 /* Bootstrap overrides */
+@body-bg:                                                           #ffffff;
+@gray-darker:                                                       lighten(#000, 13.5%); // #222
+@gray-dark:                                                         lighten(#000, 20%);   // #333
+@gray-light:                                                        lighten(#000, 60%);   // #999
+@gray-lighter:                                                      lighten(#000, 93.5%); // #eee
+@panel-primary-text:                                                @body-bg;
+
+@brand-danger:                                                      #c90813;
+@brand-primary:                                                     #1cace9;
+@brand-success:                                                     #5cb75c;
+@brand-info:                                                        #27799c;
+@brand-warning:                                                     #eb7720;
+
+@border-radius-base:                                                1px;
+@border-radius-large:                                               @border-radius-base;
+@border-radius-small:                                               @border-radius-base;
+
+@line-height-base:                                                  1.66666667; // 20/12
+@link-color:                                                        #0099d3;
+
 @alert-danger-bg:                                                   @body-bg;
 @alert-danger-border:                                               @brand-danger;
 @alert-danger-text:                                                 @gray-dark;
@@ -114,18 +134,10 @@
 @alert-warning-border:                                              @brand-warning;
 @alert-warning-text:                                                @gray-dark;
 @badge-border-radius:                                               @border-radius-base;
-@border-radius-base:                                                1px;
-@border-radius-large:                                               @border-radius-base;
-@border-radius-small:                                               @border-radius-base;
-@brand-primary:                                                     #1cace9;
-@brand-success:                                                     #5cb75c;
-@brand-info:                                                        #27799c;
-@brand-warning:                                                     #eb7720;
-@brand-danger:                                                      #c90813;
 @breadcrumb-active-color:                                           @gray-pf;
 @breadcrumb-bg:                                                     transparent;
 @breadcrumb-color:                                                  @gray-pf;
-@breadcrumb-separator:                                              @fa-var-angle-right;
+@breadcrumb-separator:                                              "\f105";
 @btn-danger-bg:                                                     #ab070f;
 @btn-danger-border:                                                 #781919;
 @btn-default-bg:                                                    @gray-lighter;
@@ -156,8 +168,6 @@
 @input-bg-disabled:                                                 #F8F8F8;
 @input-border:                                                      #BABABA;
 @input-color:                                                       @gray-dark;
-@line-height-base:                                                  1.66666667; // 20/12
-@link-color:                                                        #0099d3;
 @list-group-border:                                                 #f2f2f2;
 @list-group-border-radius:                                          0;
 @list-group-hover-bg:                                               #d4edfa;
@@ -205,6 +215,7 @@
 @tooltip-max-width:                                                 220px;
 
 /* PatternFly specific variables based on Bootstrap overides */
+@line-height-computed:                                              floor((@font-size-base * @line-height-base));
 @dropdown-link-focus-bg:                                            @link-color;
 @progress-sm:                                                       @line-height-computed - 6;
 @progress-xs:                                                       @line-height-computed - 14;
