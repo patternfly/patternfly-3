@@ -21,6 +21,7 @@
   ],
   "devDependencies": {
     "bootstrap": "~3.1.1",
+    "bootstrap-combobox": "~1.1.6",
     "bootstrap-select": "~1.5.2",
     "bootstrap-treeview": "~1.0.0",
     "datatables": "~1.10.0",
