@@ -140,7 +140,7 @@ make dist
 
 Copy the resulting tarball from the previous step to your rpmbuild/SOURCES directly.
 
-e.g., `cp patternfly1-1.0.3-0.0.master.fc20.src.rpm ~/rpmbuild/SOURCES`
+e.g., `cp patternfly-1.1.1.tar.gz ~/rpmbuild/SOURCES`
 
 Build the RPM:
 
@@ -150,7 +150,7 @@ rpmbuild -ba patternfly.spec
 
 Upload the source RPM [1] to a public web server.
 
-[1] e.g., ~/rpmbuild/SRPMS/patternfly1-1.0.3-0.0.master.fc20.src.rpm
+[1] e.g., ~/rpmbuild/SRPMS/patternfly1-1.1.1-1.fc20.src.r
 
 Ask @rhamilto or @EmilyDirsh to add a new build on [Fedora Copr](https://copr.fedoraproject.org/coprs/patternfly/patternfly1/add_build/) using the URL created in the previous step.
 
