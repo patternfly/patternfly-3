@@ -27,16 +27,20 @@
     <script>
       (function($) {
         $(document).ready(function() {
-          // Hide the clear button
-          $(".search-pf .clear").hide($(this).prev('input').val());
+          // Hide the clear button if the search input is empty
+          $(".search-pf .has-clear .clear").each(function() {
+            if (!$(this).prev('.form-control').val()) {
+              $(this).hide();
+            }
+          });
           // Show the clear button upon entering text in the search input
           $(".search-pf .has-clear .form-control").keyup(function () {
             var t = $(this);
             t.next('button').toggle(Boolean(t.val()));
           });
           // Upon clicking the clear button, empty the entered text and hide the clear button
-          $(".search-pf .clear").click(function () {
-            $(this).prev('input').val('').focus();
+          $(".search-pf .has-clear .clear").click(function () {
+            $(this).prev('.form-control').val('').focus();
             $(this).hide();
           });
         });
@@ -67,7 +71,20 @@
               </div>
             </div>
             <div class="form-group">
-              <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+              <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
+            </div>
+          </form>
+          <h2>Pre-populated</h2>
+          <form role="form" class="search-pf has-button">
+            <div class="form-group has-clear">
+              <div class="search-pf-input-group">
+                <label for="search1" class="sr-only">Search</label>
+                <input id="search1" type="search" class="form-control" placeholder="Search" value="Search term">
+                <button type="button" class="clear" aria-hidden="true"><span class="pficon pficon-close"></span></button>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
             </div>
           </form>
           <h2>Without Button</h2>
@@ -89,7 +106,7 @@
               </div>
             </div>
             <div class="form-group">
-              <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+              <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
             </div>
           </form>
           <h2>Sizes</h2>
@@ -102,7 +119,7 @@
               </div>
             </div>
             <div class="form-group">
-              <button class="btn btn-default btn-lg" type="button"><span class="fa fa-search"></span></button>
+              <button class="btn btn-default btn-lg" type="submit"><span class="fa fa-search"></span></button>
             </div>
           </form>
           <br />
@@ -115,7 +132,7 @@
               </div>
             </div>
             <div class="form-group">
-              <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+              <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
             </div>
           </form>
           <br />
@@ -128,7 +145,7 @@
               </div>
             </div>
             <div class="form-group">
-              <button class="btn btn-default btn-sm" type="button"><span class="fa fa-search"></span></button>
+              <button class="btn btn-default btn-sm" type="submit"><span class="fa fa-search"></span></button>
             </div>
           </form>
           <h2>Within the grid</h2>
@@ -143,7 +160,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                  <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
                 </div>
               </form>
             </div>
