@@ -7745,7 +7745,6 @@ button.close {
   font-family: "PatternFlyIcons-webfont";
 }
 .bootstrap-select.btn-group .btn .caret {
-  font-size: 16px;
   margin-top: -4px;
 }
 .bootstrap-select.btn-group .dropdown-menu > .active > a:hover {
@@ -8755,6 +8754,55 @@ h6 .label {
   box-shadow: none;
   padding: 0;
 }
+.navbar-pf .navbar-context .bootstrap-select,
+.navbar-pf .navbar-context3 .bootstrap-select {
+  margin-bottom: 0 !important;
+  width: auto !important;
+}
+.navbar-pf .navbar-context .bootstrap-select .btn-default,
+.navbar-pf .navbar-context3 .bootstrap-select .btn-default {
+  background: none;
+  border: 0;
+  color: #cfcfcf;
+  font-weight: normal;
+  line-height: 1;
+  padding: 10px 20px;
+}
+.navbar-pf .navbar-context .bootstrap-select .btn-default:focus,
+.navbar-pf .navbar-context3 .bootstrap-select .btn-default:focus {
+  outline: none !important;
+}
+.navbar-pf .navbar-context .bootstrap-select .btn-default .caret,
+.navbar-pf .navbar-context3 .bootstrap-select .btn-default .caret {
+  font-size: inherit;
+  right: auto;
+}
+.navbar-pf .navbar-context .bootstrap-select .btn-default .filter-option,
+.navbar-pf .navbar-context3 .bootstrap-select .btn-default .filter-option {
+  overflow: visible;
+}
+.navbar-pf .navbar-context2,
+.navbar-pf .navbar-context3 {
+  border-bottom: 1px solid #292929;
+  float: none;
+  padding: 7px 20px;
+}
+.navbar-pf .navbar-context2 .bootstrap-select,
+.navbar-pf .navbar-context3 .bootstrap-select {
+  margin-bottom: 0;
+  width: auto !important;
+}
+.navbar-pf .navbar-context3 {
+  padding: 0;
+}
+.navbar-pf .navbar-context3 .bootstrap-select {
+  margin-left: 20px;
+}
+.navbar-pf .navbar-context3 .bootstrap-select .btn {
+  padding-bottom: 7px;
+  padding-left: 0;
+  padding-top: 7px;
+}
 .navbar-pf .navbar-header {
   border-bottom: 1px solid #292929;
   float: none;
@@ -8915,18 +8963,29 @@ h6 .label {
 }
 .navbar-pf .navbar-primary .context {
   border-bottom: 1px solid #292929;
+  border-right: 1px solid #292929;
 }
-.navbar-pf .navbar-primary > li > .navbar-persistent > .dropdown-submenu > a {
+.navbar-pf .navbar-primary .context .bootstrap-select {
+  margin: 8px 20px;
+  width: auto !important;
+}
+.navbar-pf .navbar-primary .context .bootstrap-select .btn:focus {
+  outline: none !important;
+}
+.navbar-pf .navbar-primary .context .bootstrap-select .dropdown-menu {
+  border-top-width: 1px !important;
+}
+.navbar-pf .navbar-primary > li > navbar-persistent > .dropdown-submenu > a {
   position: relative;
 }
-.navbar-pf .navbar-primary > li > .navbar-persistent > .dropdown-submenu > a:after {
+.navbar-pf .navbar-primary > li > navbar-persistent > .dropdown-submenu > a:after {
   content: "\f107";
   display: inline-block;
   font-family: "FontAwesome";
   font-weight: normal;
 }
 @media (max-width: 767px) {
-  .navbar-pf .navbar-primary > li > .navbar-persistent > .dropdown-submenu > a:after {
+  .navbar-pf .navbar-primary > li > navbar-persistent > .dropdown-submenu > a:after {
     height: 10px;
     margin-left: 4px;
     vertical-align: baseline;
@@ -8967,9 +9026,36 @@ h6 .label {
     border-top: 1px solid #292929;
   }
 }
+@media (max-width: 767px) {
+  .navbar-context li {
+    border-bottom: 1px solid #292929;
+  }
+}
 @media (min-width: 768px) {
   .navbar-pf .navbar-brand {
     padding: 8px 0 7px;
+  }
+  .navbar-pf .navbar-context {
+    position: absolute;
+    left: 310px;
+    top: 0;
+  }
+  .navbar-pf .navbar-context .bootstrap-select.open .btn-default {
+    background: #363636 !important;
+    border-left-color: #444444;
+    border-right-color: #444444;
+    color: #f1f1f1 !important;
+  }
+  .navbar-pf .navbar-context .bootstrap-select .btn-default {
+    border-right: 1px solid #2b2b2b;
+    border-left: 1px solid #2b2b2b;
+    font-size: 11px;
+    padding: 7px 22px 7px 10px;
+  }
+  .navbar-pf .navbar-context .bootstrap-select .btn-default:hover {
+    background: #232323;
+    border-left-color: #373737;
+    border-right-color: #373737;
   }
   .navbar-pf .navbar-nav > li > a {
     padding-bottom: 14px;
@@ -9191,6 +9277,9 @@ h6 .label {
   }
   .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
     padding-left: 26px;
+  }
+  .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .caret:before {
+    top: 0;
   }
   .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .pficon-user {
     left: 10px;
