@@ -150,7 +150,7 @@ rpmbuild -ba patternfly.spec
 
 Upload the source RPM [1] to a public web server.
 
-[1] e.g., ~/rpmbuild/SRPMS/patternfly1-1.1.1-1.fc20.src.r
+[1] e.g., ~/rpmbuild/SRPMS/patternfly1-1.1.1-1.fc20.src.rpm
 
 Ask @rhamilto or @EmilyDirsh to add a new build on [Fedora Copr](https://copr.fedoraproject.org/coprs/patternfly/patternfly1/add_build/) using the URL created in the previous step.
 
