@@ -5,7 +5,7 @@
 <html>
 <!--<![endif]-->
   <head>
-    <title>Data Tables - PatternFly</title>
+    <title>Data Tables with column visibility, reordering - PatternFly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../dist/img/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-144-precomposed.png">
@@ -25,11 +25,32 @@
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- jquery.dataTables.js must load before patternfly.min.js -->
     <script src="../components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="../components/datatables-colvis/js/dataTables.colVis.js"></script>
+    <script src="../components/datatables-colreorder/js/dataTables.colReorder.js"></script>
     <script src="../dist/js/patternfly.min.js"></script>
     <script>
-      // Initialize Datatables
       $(document).ready(function() {
-        $('.datatable').dataTable();
+        // Initialize Datatables
+        var table = $('.datatable').DataTable({
+          // Customize the header and footer
+          "dom": 'R<"dataTables_header"fCi>t<"dataTables_footer"p>',
+          // Customize the ColVis button text so it's an icon and align the dropdown to the right side
+          "colVis": {
+            "buttonText": "<i class='fa fa-columns'></i>",
+            "sAlign": "right"
+          }
+        });
+        // On click of ColVis_Button, add Bootstrap classes and...
+        $(".ColVis_Button").addClass("btn btn-default dropdown-toggle").click(function() {
+          // Add Bootstrap classes to ColVis_Button's parent
+          $(this).parent(".ColVis").addClass("btn-group open");
+          // Add Bootstrap classes to the checkboxes
+          $(".ColVis_collection label").addClass("checkbox");
+          // Remove class from ColVis when clicking outside ColVis_Collection
+          $(".ColVis_collectionBackground, .ColVis_catcher").click(function() {
+            $(".ColVis").removeClass("open");
+          });
+        });
       });
     </script>
   </head>
@@ -38,7 +59,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="page-header">
-            <h1>Data Tables</h1>
+            <h1>Data Tables with column visibility, reordering</h1>
           </div>
           <div class="alert alert-warning">
              <span class="pficon-layered">

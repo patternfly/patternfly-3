@@ -8012,6 +8012,40 @@ fieldset[disabled] .btn-primary.active {
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
+.ColVis_Button:active:focus {
+  outline: none;
+}
+.ColVis_catcher {
+  position: absolute;
+  z-index: 999;
+}
+.ColVis_collection {
+  background-color: #ffffff;
+  border: 1px solid #b6b6b6;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  list-style: none;
+  margin: -1px 0 0 0;
+  padding: 5px 10px;
+  width: 150px;
+  z-index: 1000;
+}
+.ColVis_collection label {
+  font-weight: normal;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.ColVis_collectionBackground {
+  background-color: #fff;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+}
 .dataTables_header {
   background-color: #f6f6f6;
   border: 1px solid #d1d1d1;
@@ -8019,6 +8053,19 @@ fieldset[disabled] .btn-primary.active {
   padding: 5px;
   position: relative;
   text-align: center;
+}
+.dataTables_header .btn {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.dataTables_header .ColVis {
+  position: absolute;
+  right: 5px;
+  text-align: left;
+  top: 5px;
+}
+.dataTables_header .ColVis + .dataTables_info {
+  padding-right: 30px;
 }
 .dataTables_header .dataTables_filter {
   position: absolute;
@@ -8112,6 +8159,15 @@ fieldset[disabled] .btn-primary.active {
   .dataTables_wrapper .table-responsive {
     margin-bottom: 0;
   }
+}
+.DTCR_clonedTable {
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 202;
+}
+.DTCR_pointer {
+  background-color: #0099d3;
+  width: 1px;
+  z-index: 201;
 }
 table.datatable {
   margin-bottom: 0;
