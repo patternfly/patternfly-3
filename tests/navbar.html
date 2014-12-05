@@ -286,31 +286,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -334,6 +322,108 @@
             </div>
           </nav>
           <hr>
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-3">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <img src="../dist/img/brand.svg" alt="PatternFly" />
+              </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-3">
+              <ul class="nav navbar-nav navbar-utility">
+                <li>
+                  <a href="#">Status</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="pficon pficon-user"></span>
+                    Brian Johnson
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li>
+                          <a href="#">Separated link</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">One more separated link</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-primary">
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
+                </li>
+                <li>
+                  <a href="#">First Link</a>
+                </li>
+                <li class="active">
+                  <a href="#">Another Link</a>
+                </li>
+                <li>
+                  <a href="#">And Another</a>
+                </li>
+                <li>
+                  <a href="#">As a General Rule</a>
+                </li>
+                <li>
+                  <a href="#">Five to Seven Links</a>
+                </li>
+                <li>
+                  <a href="#">Is Good</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <hr>
+          <h3>Deprecated Design</h3>
           <nav class="navbar navbar-default navbar-pf" role="navigation">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-3">
@@ -428,7 +518,7 @@
                 <li>
                   <a href="#">First Link</a>
                 </li>
-                <li class="active">
+                <li>
                   <a href="#">Another Link</a>
                 </li>
                 <li>
@@ -1165,7 +1255,6 @@
           <h2>
             Multi-level Menu and Context Selector
           </h2>
-          
           <nav class="navbar navbar-default navbar-pf" role="navigation">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-8">
@@ -1231,31 +1320,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -1495,31 +1572,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -1759,31 +1824,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -1837,6 +1890,271 @@
                       <a tabindex="-1" href="#">More options</a>
                       <ul class="dropdown-menu">
                         <li class="active">
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">Separated link</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">One more separated link</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Dropdown with Dropup Submenu
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu dropup">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">Separated link</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">One more separated link</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Dropdown with Pull-left Submenu
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                    <li class="dropdown-submenu pull-left">
+                      <a tabindex="-1" href="#">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">Separated link</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">One more separated link</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">No Dropdown</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <hr>
+          <h3>Deprecated Design</h3>
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-8">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <img src="../dist/img/brand.svg" alt="PatternFly" />
+              </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-8">
+              <ul class="nav navbar-nav navbar-utility">
+                <li>
+                  <a href="#">Status</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="pficon pficon-user"></span>
+                    Brian Johnson
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li>
+                          <a href="#">Separated link</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">One more separated link</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-primary">
+                <li class="dropdown context">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Context
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Dropdown
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Dropdown with Submenu
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
                           <a href="#">Link</a>
                         </li>
                         <li>
@@ -2819,29 +3137,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary persistent-secondary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">First Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -3001,29 +3309,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary persistent-secondary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">First Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -3183,29 +3481,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary persistent-secondary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">First Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -3365,29 +3653,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary persistent-secondary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">First Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -3547,29 +3825,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary persistent-secondary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">First Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -3664,12 +3932,10 @@
             </div>
           </nav>
           <hr>
-          <h2>
-            Persistent Secondary and Tertiary with Submenu Menu and Context Selector
-          </h2>
+          <h3>Deprecated Design</h3>
           <nav class="navbar navbar-default navbar-pf" role="navigation">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-21">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-16">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -3679,7 +3945,7 @@
                 <img src="../dist/img/brand.svg" alt="PatternFly" />
               </a>
             </div>
-            <div class="collapse navbar-collapse navbar-collapse-21">
+            <div class="collapse navbar-collapse navbar-collapse-16">
               <ul class="nav navbar-nav navbar-utility">
                 <li>
                   <a href="#">Status</a>
@@ -3755,6 +4021,180 @@
                       <a href="#">One more separated link</a>
                     </li>
                   </ul>
+                </li>
+                <li>
+                  <a href="#">First Link</a>
+                </li>
+                <li class="active">
+                  <a href="#">Another Link</a>
+                  <ul class="nav navbar-nav navbar-persistent">
+                    <li class="dropdown-submenu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Link</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li>
+                          <a href="#">Remembering to keep</a>
+                        </li>
+                        <li>
+                          <a href="#">It between five and seven</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Another Link</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Something Else Here</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li>
+                          <a href="#">Remembering to keep</a>
+                        </li>
+                        <li>
+                          <a href="#">It between five and seven</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Remembering to Keep</a>
+                    </li>
+                    <li>
+                      <a href="#">It Between Five and Seven</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li>
+                          <a href="#">Remembering to keep</a>
+                        </li>
+                        <li>
+                          <a href="#">It between five and seven</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">And Another</a>
+                </li>
+                <li>
+                  <a href="#">As a General Rule</a>
+                </li>
+                <li>
+                  <a href="#">Five to Seven Links</a>
+                </li>
+                <li>
+                  <a href="#">Is Good</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <h2>
+            Persistent Secondary and Tertiary with Submenu Menu and Context Selector
+          </h2>
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-21">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <img src="../dist/img/brand.svg" alt="PatternFly" />
+              </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-21">
+              <ul class="nav navbar-nav navbar-utility">
+                <li>
+                  <a href="#">Status</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="pficon pficon-user"></span>
+                    Brian Johnson
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li>
+                          <a href="#">Separated link</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">One more separated link</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-primary persistent-secondary">
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -3914,29 +4354,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary persistent-secondary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">First Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -4162,29 +4592,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary persistent-secondary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">First Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -4410,29 +4830,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary persistent-secondary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">First Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -4658,29 +5068,19 @@
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-primary persistent-secondary">
-                <li class="dropdown context">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Context
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">First Link</a>
-                    </li>
-                    <li>
-                      <a href="#">Another link</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
                 </li>
                 <li>
                   <a href="#">First Link</a>
@@ -4820,6 +5220,189 @@
                               <a href="#">One more separated link</a>
                             </li>
                           </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">And Another</a>
+                </li>
+                <li>
+                  <a href="#">As a General Rule</a>
+                </li>
+                <li>
+                  <a href="#">Five to Seven Links</a>
+                </li>
+                <li>
+                  <a href="#">Is Good</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <hr>
+          <h3>Deprecated Design</h3>
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-21">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <img src="../dist/img/brand.svg" alt="PatternFly" />
+              </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-21">
+              <ul class="nav navbar-nav navbar-utility">
+                <li>
+                  <a href="#">Status</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="pficon pficon-user"></span>
+                    Brian Johnson
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li>
+                          <a href="#">Separated link</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">One more separated link</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-primary persistent-secondary">
+                <li class="dropdown context">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Context
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">First Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">First Link</a>
+                </li>
+                <li class="active">
+                  <a href="#">Another Link</a>
+                  <ul class="nav navbar-nav navbar-persistent">
+                    <li class="dropdown-submenu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Link</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li>
+                          <a href="#">Remembering to keep</a>
+                        </li>
+                        <li>
+                          <a href="#">It between five and seven</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Another Link</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Something Else Here</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li>
+                          <a href="#">Remembering to keep</a>
+                        </li>
+                        <li>
+                          <a href="#">It between five and seven</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Remembering to Keep</a>
+                    </li>
+                    <li>
+                      <a href="#">It Between Five and Seven</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li>
+                          <a href="#">Remembering to keep</a>
+                        </li>
+                        <li>
+                          <a href="#">It between five and seven</a>
                         </li>
                       </ul>
                     </li>

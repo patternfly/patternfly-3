@@ -9,7 +9,7 @@
     }
   }
   .dropdown-menu { // Also see navbar.less
-    > .active:not(.disabled) > a {
+    > .active > a {
       &, &:active {
         background-color: @dropdown-link-hover-bg !important;
         border-color: @dropdown-link-hover-border-color !important;
@@ -22,11 +22,12 @@
     > .disabled > a {
       color: @gray-light !important;
     }
-    > .selected:not(.disabled) > a {
+    > .selected > a {
       background-color: @dropdown-link-active-bg !important;
       border-color: @dropdown-link-active-border-color !important;
       color: #fff !important;
       small {
+        color: #70c8e7 !important;
         color:rgba(225, 255, 255, 0.5) !important;
       }
     }
@@ -43,15 +44,14 @@
       & > a.opt {
         padding: 1px 10px;
       }
-      &:not(.disabled) {
-        a {
-          &:active small {
-            color:rgba(225, 255, 255, 0.5) !important;
-          }
-          &:hover, &:focus {
-            small {
-              color: @gray-light;
-            }
+      & a {
+        &:active small {
+          color: #70c8e7 !important;
+          color:rgba(225, 255, 255, 0.5) !important;
+        }
+        &:hover, &:focus {
+          small {
+            color: @gray-light;
           }
         }
       }

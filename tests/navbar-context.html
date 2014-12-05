@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>Navbar - PatternFly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../dist/img/apple-touch-icon-57-precomposed.png">
+    <link href="../dist/css/patternfly.css" rel="stylesheet" media="screen, print">
+    <link href="tests.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/patternfly.min.js"></script>
+    <script src="../components/bootstrap-select/bootstrap-select.min.js"></script>
+    <script>
+      $( document ).ready(function() {
+        // Initialize Boostrap-select
+        $('.selectpicker').selectpicker();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h1>Navbar</h1>
+          </div>
+          <div class="alert alert-warning">
+             <span class="pficon-layered">
+              <span class="pficon pficon-warning-triangle"></span>
+              <span class="pficon pficon-warning-exclamation"></span>
+            </span>
+            These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+          </div>
+          <hr>
+          <h2>Context Selector</h2>
+          <h3>With Boostrap-Select</h3>
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-3">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <img src="../dist/img/brand.svg" alt="PatternFly" />
+              </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-3">
+              <ul class="nav navbar-nav navbar-utility">
+                <li>
+                  <a href="#">Status</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="pficon pficon-user"></span>
+                    Brian Johnson
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li>
+                          <a href="#">Separated link</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">One more separated link</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-primary">
+                <li class="context context-bootstrap-select">
+                  <select class="selectpicker" data-live-search="true">
+                    <optgroup label="Context Label">
+                      <option>First Option</option>
+                      <option>Another Option</option>
+                      <option>And Another</option>
+                      <option>Fourth Option That Is a Lot Longer And Will Be Too Long At Small Resolutions</option>
+                      <option data-divider="true"></option>
+                      <option data-subtext="supplemental data">Fifth Option</option>
+                      <option disabled>Disabled Option</option>
+                      <option data-subtext="end">Final Option</option>
+                    </optgroup>
+                  </select>
+                </li>
+                <li>
+                  <a href="#">First Link</a>
+                </li>
+                <li>
+                  <a href="#">Another Link</a>
+                </li>
+                <li>
+                  <a href="#">And Another</a>
+                </li>
+                <li>
+                  <a href="#">As a General Rule</a>
+                </li>
+                <li>
+                  <a href="#">Five to Seven Links</a>
+                </li>
+                <li>
+                  <a href="#">Is Good</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <h3>Original</h3>
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-3">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <img src="../dist/img/brand.svg" alt="PatternFly" />
+              </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-3">
+              <ul class="nav navbar-nav navbar-utility">
+                <li>
+                  <a href="#">Status</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="pficon pficon-user"></span>
+                    Brian Johnson
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="-1" href="#">More options</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Another link</a>
+                        </li>
+                        <li>
+                          <a href="#">Something else here</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li>
+                          <a href="#">Separated link</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="#">One more separated link</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-primary">
+                <li class="dropdown context">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Context
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">First Link</a>
+                </li>
+                <li>
+                  <a href="#">Another Link</a>
+                </li>
+                <li>
+                  <a href="#">And Another</a>
+                </li>
+                <li>
+                  <a href="#">As a General Rule</a>
+                </li>
+                <li>
+                  <a href="#">Five to Seven Links</a>
+                </li>
+                <li>
+                  <a href="#">Is Good</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </body>
+</html>

@@ -31,50 +31,6 @@
     .box-shadow(none);
     padding: 0;
   }
-  .navbar-context, .navbar-context3 {
-    .bootstrap-select {
-      margin-bottom: 0 !important;
-      width: auto !important;
-      .btn-default {
-        background: none;
-        border: 0;
-        color: @navbar-pf-color;
-        font-weight: normal;
-        line-height: 1;
-        padding: 10px 20px;
-        &:focus {
-          outline: none !important;
-        }
-        .caret {
-          font-size: inherit;
-          right: auto;
-        }
-        .filter-option {
-          overflow: visible;
-        }
-      }
-    }
-  }
-  .navbar-context2, .navbar-context3 {
-    border-bottom: 1px solid @navbar-pf-navbar-header-border-color;
-    float: none;
-    padding: 7px 20px;
-    .bootstrap-select {
-      margin-bottom: 0;
-      width: auto !important;
-    }
-  }
-  .navbar-context3 {
-    padding: 0;
-    .bootstrap-select {
-      margin-left: 20px;
-      .btn {
-        padding-bottom: 7px;
-        padding-left: 0;
-        padding-top: 7px;
-      }
-    }
-  }
   .navbar-header {
     border-bottom: 1px solid @navbar-pf-navbar-header-border-color;
     float: none;
@@ -187,6 +143,59 @@
           }
         }
       }
+      .context-bootstrap-select { // Also see bootstrap-select.less
+        .open > .dropdown-menu {
+          background-color: #fff !important;
+          > .active > a {
+            &, &:active {
+              background-color: @dropdown-link-hover-bg !important;
+              border-color: @dropdown-link-hover-border-color !important;
+              color: @gray-dark !important;
+              small {
+                color: @gray-light !important;
+              }
+            }
+          }
+          > .disabled > a {
+            color: @gray-light !important;
+          }
+          > .selected > a {
+            &, &:active {
+              background-color: @dropdown-link-active-bg !important;
+              border-color: @dropdown-link-active-border-color !important;
+              color: #fff !important;
+              small {
+                color: #70c8e7 !important;
+                color:rgba(225, 255, 255, 0.5) !important;
+              }
+            }
+          }
+          li {
+            > a.opt {
+              border-bottom: 1px solid transparent;
+              border-top: 1px solid transparent;
+              color: @gray-dark;
+              padding-left: 10px;
+              padding-right: 10px;
+            }
+            & a {
+              &:active small {
+                color: #70c8e7 !important;
+                color:rgba(225, 255, 255, 0.5) !important;
+              }
+              &:hover, &:focus {
+                small {
+                  color: @gray-light;
+                }
+              }
+            }
+          }
+        }
+        > .open > .dropdown-menu {
+          padding-bottom: 5px;
+          padding-top: 5px;
+        }
+      }
     }
   }
   .navbar-persistent {
@@ -199,19 +208,14 @@
     float: none;
     .context {
       border-bottom: 1px solid @navbar-pf-navbar-header-border-color;
-      border-right: 1px solid @navbar-pf-navbar-header-border-color;
-      .bootstrap-select {
-        margin: 8px 20px;
-        width: auto !important;
-        .btn:focus {
-          outline: none !important;
-        }
-        .dropdown-menu {
-          border-top-width: 1px !important;
+      &.context-bootstrap-select .bootstrap-select.btn-group {
+        &, &[class*="span"] {
+          margin: 8px 20px 9px;
+          width: auto; // known bug:  IE8 will make it as wide as the longest string
         }
       }
     }
-    > li > navbar-persistent > .dropdown-submenu > a {
+    > li > .navbar-persistent > .dropdown-submenu > a {
       position: relative;
       &:after {
         content: @fa-var-angle-down;
@@ -260,40 +264,10 @@
   }
 }
 
-@media (max-width: @grid-float-breakpoint-max) {
-  .navbar-context li {
-    border-bottom: 1px solid @navbar-pf-navbar-header-border-color;
-  }
-}
-
 @media (min-width: @grid-float-breakpoint) {
   .navbar-pf {
     .navbar-brand {
       padding: @navbar-pf-navbar-navbar-brand-padding;
-    }
-    .navbar-context {
-      position: absolute;
-      left: 310px;
-      top: 0;
-      .bootstrap-select {
-        &.open .btn-default {
-          background: @navbar-pf-navbar-utility-open-bg-color !important;
-          border-left-color: @navbar-pf-navbar-utility-open-border-color;
-          border-right-color: @navbar-pf-navbar-utility-open-border-color;
-          color: @navbar-pf-active-color !important;
-        }
-        .btn-default {
-          border-right: 1px solid @navbar-pf-navbar-utility-border-color;
-          border-left: 1px solid @navbar-pf-navbar-utility-border-color;
-          font-size: @font-size-small;
-          padding: 7px 22px 7px 10px;
-          &:hover {
-            background: @navbar-pf-navbar-utility-hover-bg-color;
-            border-left-color: @navbar-pf-navbar-utility-hover-border-color;
-            border-right-color: @navbar-pf-navbar-utility-hover-border-color;
-          }
-        }
-      }
     }
     .navbar-nav > li > a {
       padding-bottom: 14px;
@@ -426,9 +400,18 @@
         color: @navbar-pf-active-color;
         #gradient > .vertical(@navbar-pf-navbar-primary-active-bg-color-start, @navbar-pf-navbar-primary-active-bg-color-stop);
       }
-      li.dropdown.context {
-        border-bottom: 0;
-        > a {
+      li.context {
+        &.context-bootstrap-select .filter-option {
+          max-width: 160px;
+          text-overflow: ellipsis;
+          .ie8 & {
+            max-width: none;
+          }
+        }
+        &.dropdown {
+          border-bottom: 0;
+        }
+        > a, &.context-bootstrap-select {
           background-color: @navbar-pf-navbar-primary-context-bg-color-stop;
           border-bottom-color: @navbar-pf-navbar-primary-context-border-color;
           border-right: 1px solid @navbar-pf-navbar-primary-context-border-color;
@@ -477,9 +460,6 @@
       }
       li.dropdown > .dropdown-toggle {
         padding-left: 26px;
-        .caret:before {
-          top: 0;
-        }
         .pficon-user {
           left: 10px;
           top: 7px;
@@ -498,7 +478,7 @@
       .dropdown-menu {
         border-top-width: 0 !important;
       }
-      .dropdown-submenu > .dropdown-menu {
+      &.bootstrap-select .dropdown-menu, .dropdown-submenu > .dropdown-menu {
         border-top-width: 1px !important;
       }
     }
