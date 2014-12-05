@@ -41,11 +41,10 @@
 
 // Hover/Focus state
 .dropdown-menu > li > a {
-  &:hover {
+  &:hover, &:focus {
     border-color: @dropdown-link-hover-border-color;
     .reset-filter();
   }
-  &:focus,
   &:active {
     background-color: @dropdown-link-focus-bg;
     border-color: @dropdown-link-active-border-color;
