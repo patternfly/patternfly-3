@@ -10,8 +10,8 @@ module.exports = function (grunt) {
 
   // configurable paths
   var projectConfig = {
-      src: '',
-      dist: 'dist'
+      dist: 'dist',
+      src: ''
   };
 
   try {
@@ -19,14 +19,13 @@ module.exports = function (grunt) {
   } catch (e) {}
 
   grunt.initConfig({
-    config: projectConfig,
     clean: {
       build: '<%= config.dist %>'
     },
+    config: projectConfig,
     connect: {
       server: {
         options: {
-          port: 9000,
           hostname: '0.0.0.0',
           middleware: function (connect) {
             return [
@@ -34,46 +33,27 @@ module.exports = function (grunt) {
                 mountFolder(connect, projectConfig.src),
                 mountFolder(connect, projectConfig.src + 'tests')
             ];
-          }
+          },
+          port: 9000
         }
-      }
-    },
-    watch: {
-      options: {
-        livereload: true
-      },
-      css: {
-        files: 'less/*.less',
-        tasks: ['less']
-      },
-      js: {
-        files: 'dist/js/patternfly.js',
-        tasks: ['uglify']
-      },
-      livereload: {
-        files: [
-          'tests/*.html',
-          'dist/css/*.css',
-          'dist/js/*.js'
-        ]
       }
     },
     less: {
       development: {
-        options: {
-          paths: ['less/']
-        },
         files: {
           'dist/css/patternfly.css': 'less/patternfly.less'
+        },
+        options: {
+          paths: ['less/']
         }
       },
       production: {
-        options: {
-          paths: ['less/'],
-          cleancss: true
-        },
         files: {
           'dist/css/patternfly.min.css': 'less/patternfly.less'
+        },
+        options: {
+          cleancss: true,
+          paths: ['less/']
         }
       }
     },
@@ -86,17 +66,37 @@ module.exports = function (grunt) {
           'dist/js/patternfly.min.js': ['dist/js/patternfly.js']
         }
       }
+    },
+    watch: {
+      css: {
+        files: 'less/*.less',
+        tasks: ['less']
+      },
+      js: {
+        files: ['dist/js/*.js', '!dist/js/*.min.js'],
+        tasks: ['uglify']
+      },
+      livereload: {
+        files: [
+          'dist/css/*.css',
+          'dist/js/*.js',
+          'tests/*.html'
+        ]
+      },
+      options: {
+        livereload: true
+      }
     }
   });
-
-  grunt.registerTask('server', [
-    'connect:server',
-    'watch'
-  ]);
 
   grunt.registerTask('build', [
     'less',
     'uglify'
+  ]);
+
+  grunt.registerTask('server', [
+    'connect:server',
+    'watch'
   ]);
 
   grunt.registerTask('default', ['build']);
