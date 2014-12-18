@@ -38,6 +38,16 @@ module.exports = function (grunt) {
         }
       }
     },
+    jekyll: {
+      options: {
+        src: 'tests-src'
+      },
+      tests: {
+        options: {
+          dest: 'tests'
+        }
+      }
+    },
     less: {
       development: {
         files: {
@@ -72,16 +82,16 @@ module.exports = function (grunt) {
         files: 'less/*.less',
         tasks: ['less']
       },
+      jekyll: {
+        files: 'tests-src/**/*',
+        tasks: ['jekyll']
+      },
       js: {
         files: ['dist/js/*.js', '!dist/js/*.min.js'],
         tasks: ['uglify']
       },
       livereload: {
-        files: [
-          'dist/css/*.css',
-          'dist/js/*.js',
-          'tests/*.html'
-        ]
+        files: ['dist/css/*.css', 'dist/js/*.js', 'tests/*.html', '!tests-src/*.html']
       },
       options: {
         livereload: true
@@ -90,6 +100,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
+    'jekyll',
     'less',
     'uglify'
   ]);

@@ -1,0 +1,12 @@
+# Site settings
+alert-message: ' and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.'
+category-list: [Widgets, Layouts]
+company: PatternFly
+title: PatternFly
+title-product: 'PatternFly Enterprise Application'
+url-components: '../components/'
+url-css-extra: 'tests.css'
+url-css-main: '../dist/css/patternfly.min.css'
+url-img: 'img/'
+url-jquery: '//code.jquery.com/jquery-1.10.2.min.js'
+url-js: '../dist/js/patternfly.min.js'

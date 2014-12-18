@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../dist/img/apple-touch-icon-57-precomposed.png">
-    <link href="../dist/css/patternfly.css" rel="stylesheet" media="screen, print">
+    <link href="../dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
     <link href="tests.css" rel="stylesheet" media="screen, print">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -22,50 +22,46 @@
     <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
     <!-- IE8 requires jQuery v1.x -->
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../dist/js/patternfly.min.js"></script>
-    <script>
-      // Initialize Tooltip
-      $(document).ready(function() {
-        $('.tooltip-demo').tooltip({
-          selector: "[data-toggle=tooltip]",
-          container: "body"
-        });
-      });
-    </script>
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="page-header">
-            <h1>Tooltip</h1>
-          </div>
-          <div class="alert alert-warning">
-             <span class="pficon-layered">
-              <span class="pficon pficon-warning-triangle"></span>
-              <span class="pficon pficon-warning-exclamation"></span>
-            </span>
-            These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
-          </div>
-          <hr>
-          <div class="tooltip-demo">
-            <a href="#" class="btn btn-default" data-toggle="tooltip" data-original-title="Caribbean Monk Seal, Barbary Lion, Seaside Sparrow">Caribbean Monk Seal, Barbary L...</a>
-          </div>
-          <br>
-          <h2>Tooltip Directions</h2>
-          <div class="tooltip-demo">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pretium mi at ante luctus dapibus. Fusce in tempus felis. Suspendisse tristique diam vel.</p>
-            <div class="bs-example-tooltips">
-              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Tooltip on left</button>
-              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Tooltip on right</button>
-            </div>
-            <p style="margin-top: 10px;">Suspendisse tristique diam vel hendrerit aliquet. Vestibulum laoreet nisi ac egestas porttitor. Donec tempus elit convallis.</p>
-          </div>
-        </div><!-- /col -->
-      </div><!-- /row -->
+      <div class="page-header">
+        <h1>Tooltip</h1>
+      </div>
+      <div class="alert alert-warning">
+        <span class="pficon-layered">
+          <span class="pficon pficon-warning-triangle"></span>
+          <span class="pficon pficon-warning-exclamation"></span>
+        </span>
+        These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+      </div>
+      <hr>
+      <div class="tooltip-demo">
+        <a href="#" class="btn btn-default" data-toggle="tooltip" data-original-title="Caribbean Monk Seal, Barbary Lion, Seaside Sparrow">Caribbean Monk Seal, Barbary L...</a>
+      </div>
+      <br>
+      <h2>Tooltip Directions</h2>
+      <div class="tooltip-demo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pretium mi at ante luctus dapibus. Fusce in tempus felis. Suspendisse tristique diam vel.</p>
+        <div class="bs-example-tooltips">
+          <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Tooltip on left</button>
+          <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+          <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+          <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Tooltip on right</button>
+        </div>
+        <p style="margin-top: 10px;">Suspendisse tristique diam vel hendrerit aliquet. Vestibulum laoreet nisi ac egestas porttitor. Donec tempus elit convallis.</p>
+      </div>
+      <script>
+        // Initialize Tooltip
+        $(document).ready(function() {
+          $('.tooltip-demo').tooltip({
+            selector: "[data-toggle=tooltip]",
+            container: "body"
+          });
+        });
+      </script>
     </div><!-- /container -->
   </body>
 </html>

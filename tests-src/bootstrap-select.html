@@ -1,0 +1,79 @@
+---
+alert-message: ', <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a>.'
+categories: [Widgets]
+layout: page
+title: Bootstrap-Select
+resource: true
+url-js-extra: '!URL_COMPONENTS!bootstrap-select/bootstrap-select.min.js'
+---
+      <h3>Single-Select Dropdown</h3>
+      <select class="selectpicker">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+        <option disabled>Onions</option>
+      </select>
+      <br/>
+      <h3>Disabled</h3>
+      <select class="selectpicker" disabled>
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+      </select>
+      <br/>
+      <h3>Option Groups</h3>
+      <select class="selectpicker">
+        <optgroup label="Picnic">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+          <option>Onions</option>
+        </optgroup>
+        <optgroup label="Camping">
+          <option>Tent</option>
+          <option>Flashlight</option>
+          <option>Toilet Paper</option>
+          <option>Sleeping Bag</option>
+        </optgroup>
+      </select>
+      <br/>
+      <h3>Multiple Select</h3>
+      <select class="selectpicker" multiple data-selected-text-format="count>3">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+        <option>Onions</option>
+        <option>Mushrooms</option>
+        <option>Pickles</option>
+        <option>Mayonnaise</option>
+        <option data-divider="true"></option>
+        <option data-subtext="Hot">Tabasco</option>
+        <option data-subtext="Hotter" disabled>Sriracha</option>
+        <option data-subtext="Hottest">Wasabi</option>
+      </select>
+      <br/>
+      <h3>Data Live Search</h3>
+      <select class="selectpicker" data-live-search="true">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+        <option>Onions</option>
+        <option>Mushrooms</option>
+        <option>Pickles</option>
+        <option>Mayonnaise</option>
+        <option data-divider="true"></option>
+        <option data-subtext="Hot">Tabasco</option>
+        <option data-subtext="Hotter" disabled>Sriracha</option>
+        <option data-subtext="Hottest">Wasabi</option>
+      </select>
+      <br/>
+      <h3>Icons</h3>
+      <select class="selectpicker">
+        <option data-icon="glyphicon-headphones">Mustard</option>
+        <option data-icon="glyphicon-tint">Ketchup</option>
+        <option data-icon="glyphicon-tree-conifer">Relish</option>
+      </select>
+      <script>
+        // Initialize Boostrap-select
+        $('.selectpicker').selectpicker();
+      </script>

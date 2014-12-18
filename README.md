@@ -20,7 +20,7 @@ PatternFly incorporates other libraries and components; therefore, in addition t
 
 ## Development
 
-Development setup requires nodejs. If you do not already have nodejs and npm installed on your system, please see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager for how to install on your distribution.
+Development setup requires nodejs and Ruby. If you do not already have nodejs, npm, and Ruby installed on your system, see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager and https://www.ruby-lang.org/en/downloads.
 
 ### Install Bower
 
@@ -42,13 +42,17 @@ Additionally you may need to install the grunt command line utility.  To do this
 
     npm install -g grunt-cli
 
+Test pages are generated using [Jekyll](http://jekyllrb.com/).  After ensuring Ruby is installed and available, run:
+
+    gem install jekyll
+
 ### Live Reload Server
 
 A local development server can be quickly fired up by using the Gruntjs server task:
 
     grunt server
 
-This local static asset server (i.e., [http://localhost:9000](http://localhost:9000)) has the advantage of having livereload integration. Thus, if you start the Gruntjs server, any changes you make to `.html` or `.less` files will be automatically reloaded into your browser and the changes reflected almost immediately. This has the obvious benefit of not having to refresh your browser and still be able to see the changes as you add or remove them from your development files.
+This local static asset server (i.e., [http://localhost:9000](http://localhost:9000)) has the advantage of having livereload integration. Thus, if you start the Gruntjs server, any changes you make to `.html` or `.less` files will be automatically reloaded into your browser and the changes reflected almost immediately. This has the obvious benefit of not having to refresh your browser and still be able to see the changes as you add or remove them from your development files.  Additionally, any changes made to Jekyll source files (`tests-src/`) will trigger a Jekyll build.
 
 ### Coding Style
 
@@ -81,6 +85,8 @@ PatternFlyIcons font is generated using [IcoMoon](http://icomoon.io/app).  [Load
 ## Tests
 
 The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use PatternFly.
+
+The HTML pages in `tests/` are generated using Jekyll.  Do *not* edit these files directly.  See `tests-src/` to change these files.
 
 ## Release
 

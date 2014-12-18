@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../dist/img/apple-touch-icon-57-precomposed.png">
-    <link href="../dist/css/patternfly.css" rel="stylesheet" media="screen, print">
+    <link href="../dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
@@ -22,76 +22,9 @@
     <!-- IE8 requires jQuery v1.x -->
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../dist/js/patternfly.min.js"></script>
+    <script src="../components/bootstrap-select/bootstrap-select.min.js"></script>
     <script src="../components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
-    <script>
-      $(function() {
-        var defaultData = [
-          {
-            text: 'Parent 1',
-            href: '#parent1',
-            tags: ['4'],
-            nodes: [
-              {
-                text: 'Child 1',
-                href: '#child1',
-                icon: 'fa fa-file-o',
-                tags: ['2'],
-                nodes: [
-                  {
-                    text: 'Grandchild 1',
-                    href: '#grandchild1',
-                    icon: 'fa fa-file-o',
-                    tags: ['0']
-                  },
-                  {
-                    text: 'Grandchild 2',
-                    href: '#grandchild2',
-                    icon: 'fa fa-file-o',
-                    tags: ['0']
-                  }
-                ]
-              },
-              {
-                text: 'Child 2',
-                href: '#child2',
-                icon: 'fa fa-file-o',
-                tags: ['0']
-              }
-            ]
-          },
-          {
-            text: 'Parent 2',
-            href: '#parent2',
-            tags: ['0']
-          },
-          {
-            text: 'Parent 3',
-            href: '#parent3',
-             tags: ['0']
-          },
-          {
-            text: 'Parent 4',
-            href: '#parent4',
-            tags: ['0']
-          },
-          {
-            text: 'Parent 5',
-            href: '#parent5'  ,
-            tags: ['0']
-          }
-        ];
-        $('#treeview1').treeview({
-          collapseIcon: "fa fa-angle-down",
-          data: defaultData,
-          expandIcon: "fa fa-angle-right",
-          nodeIcon: "fa fa-folder",
-          showBorder: false
-        });
-        // set selected menu item
-        $('.list-group-item[data-nodeid="3"]').addClass('node-selected');
-      });
-    </script>
+    <script src="../dist/js/patternfly.min.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-pf" role="navigation">
@@ -103,7 +36,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/">
-          <img src="../dist/img/brand.svg" alt="PatternFly" />
+          <img src="../dist/img/brand.svg" alt="PatternFly Enterprise Application" />
         </a>
       </div>
       <div class="collapse navbar-collapse navbar-collapse-1">
@@ -159,24 +92,23 @@
         </ul>
         <ul class="nav navbar-nav navbar-primary">
           <li>
+            <a href="basic.html">Basic</a>
+          </li>
+          <li class="active">
+            <a href="bootstrap-treeview-2.html" class="active">Tree View</a>
+          </li>
+          <li>
             <a href="dashboard.html">Dashboard</a>
           </li>
           <li>
             <a href="form.html">Form</a>
           </li>
-          <li class="active">
-            <a href="bootstrap-treeview-2.html">Tree View</a>
-          </li>
           <li>
             <a href="tab.html">Tab</a>
           </li>
           <li>
-            <a href="basic.html">Basic</a>
-          </li>
-          <li>
             <a href="typography-2.html">Typography</a>
           </li>
-          <li>
         </ul>
       </div>
     </nav>
@@ -185,9 +117,9 @@
         <div class="col-sm-9 col-md-10 col-sm-push-3 col-md-push-2">
           <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
-            <li>Form</li>
+            <li>Tree View</li>
           </ol>
-          <h1>Form</h1>
+          <h1>Tree View</h1>
           <form class="form-horizontal">
             <div class="form-group">
               <label class="col-md-2 control-label" for="textInput">Praesent urna</label>
@@ -264,10 +196,76 @@
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
-    <script src="../components/bootstrap-select/bootstrap-select.min.js"></script>
     <script>
       // Initialize Boostrap-select
       $('.selectpicker').selectpicker();
+      // Intialize Boostrap-Treeview
+      $(function() {
+        var defaultData = [
+          {
+            text: 'Parent 1',
+            href: '#parent1',
+            tags: ['4'],
+            nodes: [
+              {
+                text: 'Child 1',
+                href: '#child1',
+                icon: 'fa fa-file-o',
+                tags: ['2'],
+                nodes: [
+                  {
+                    text: 'Grandchild 1',
+                    href: '#grandchild1',
+                    icon: 'fa fa-file-o',
+                    tags: ['0']
+                  },
+                  {
+                    text: 'Grandchild 2',
+                    href: '#grandchild2',
+                    icon: 'fa fa-file-o',
+                    tags: ['0']
+                  }
+                ]
+              },
+              {
+                text: 'Child 2',
+                href: '#child2',
+                icon: 'fa fa-file-o',
+                tags: ['0']
+              }
+            ]
+          },
+          {
+            text: 'Parent 2',
+            href: '#parent2',
+            tags: ['0']
+          },
+          {
+            text: 'Parent 3',
+            href: '#parent3',
+             tags: ['0']
+          },
+          {
+            text: 'Parent 4',
+            href: '#parent4',
+            tags: ['0']
+          },
+          {
+            text: 'Parent 5',
+            href: '#parent5'  ,
+            tags: ['0']
+          }
+        ];
+        $('#treeview1').treeview({
+          collapseIcon: "fa fa-angle-down",
+          data: defaultData,
+          expandIcon: "fa fa-angle-right",
+          nodeIcon: "fa fa-folder",
+          showBorder: false
+        });
+        // set selected menu item
+        $('.list-group-item[data-nodeid="3"]').addClass('node-selected');
+      });
     </script>
   </body>
 </html>

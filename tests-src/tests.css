@@ -1,0 +1,46 @@
+body {
+  padding-bottom: 100px;
+}
+
+.icons {
+  float: left;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  width: 100%;
+}
+.icons li {
+  border: 1px solid #eee;
+  float: left;
+  font-size: 12px;
+  height: 200px;
+  line-height: 1.4;
+  margin: 0 -1px -1px 0;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  width: 25%;
+}
+@media (min-width: 960px) {
+  .icons li {
+    height: 150px;
+    width: 12.5%;
+  }
+}
+@media (min-width: 768px) {
+  .icons li {
+    height: 150px;
+    width: 16.6667%;
+  }
+}
+.icons .fa, .icons .glyphicon, .icons .pficon {
+  font-size: 28px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.icons .icon-class {
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  word-wrap: break-word;
+}

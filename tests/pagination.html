@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../dist/img/apple-touch-icon-57-precomposed.png">
-    <link href="../dist/css/patternfly.css" rel="stylesheet" media="screen, print">
+    <link href="../dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
     <link href="tests.css" rel="stylesheet" media="screen, print">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,258 +27,254 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="page-header">
-            <h1>Pagination</h1>
-          </div>
-          <div class="alert alert-warning">
-             <span class="pficon-layered">
-              <span class="pficon pficon-warning-triangle"></span>
-              <span class="pficon pficon-warning-exclamation"></span>
-            </span>
-            These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
-          </div>
-          <hr>
-          <h2>Pager - default size</h2>
-          <ul class="pager">
-            <li class="previous">
-              <a href="#">
-                <span class="i fa fa-angle-left"></span>
-                Previous
-              </a>
-            </li>
-            <li class="next">
-              <a href="#">
-                Next
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-          <ul class="pager">
-            <li class="previous disabled">
-              <a href="#">
-                <span class="i fa fa-angle-left"></span>
-                Previous
-              </a>
-            </li>
-            <li class="next disabled">
-              <a href="#">
-                Next
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-          <hr>
-          <h2>Pager - mini size</h2>
-          <ul class="pager pager-sm">
-            <li class="previous">
-              <a href="#">
-                <span class="i fa fa-angle-left"></span>
-                Previous
-              </a>
-            </li>
-            <li class="next">
-              <a href="#">
-                Next
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-          <ul class="pager pager-sm">
-            <li class="previous disabled">
-              <a href="#">
-                <span class="i fa fa-angle-left"></span>
-                Previous
-              </a>
-            </li>
-            <li class="next disabled">
-              <a href="#">
-                Next
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-          <hr>
-          <h2>Pagination - default size</h2>
-          <ul class="pagination">
-            <li>
-              <a href="#">
-                <span class="i fa fa-angle-left"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">1</a>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-            <li>
-              <a href="#">4</a>
-            </li>
-            <li>
-              <a href="#">5</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-          <ul class="pagination">
-            <li class="disabled">
-              <span>
-                <span class="i fa fa-angle-left"></span>
-              </span>
-            </li>
-            <li class="active">
-              <span>
-                1
-                <span class="sr-only">(current)</span>
-              </span>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-            <li>
-              <a href="#">4</a>
-            </li>
-            <li>
-              <a href="#">5</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-          <ul class="pagination">
-            <li class="disabled">
-              <span>
-                <span class="i fa fa-angle-left"></span>
-              </span>
-            </li>
-            <li class="disabled">
-              <span>
-                1
-                <span class="sr-only">(current)</span>
-              </span>
-            </li>
-            <li class="disabled">
-              <a href="#">2</a>
-            </li>
-            <li class="disabled">
-              <a href="#">3</a>
-            </li>
-            <li class="disabled">
-              <a href="#">4</a>
-            </li>
-            <li class="disabled">
-              <a href="#">5</a>
-            </li>
-            <li class="disabled">
-              <a href="#">
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-          <hr>
-          <h2>Pagination - mini size</h2>
-          <ul class="pagination pagination-sm">
-            <li>
-              <a href="#">
-                <span class="i fa fa-angle-left"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">1</a>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-            <li>
-              <a href="#">4</a>
-            </li>
-            <li>
-              <a href="#">5</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-          <ul class="pagination pagination-sm">
-            <li class="disabled">
-              <span>
-                <span class="i fa fa-angle-left"></span>
-              </span>
-            </li>
-            <li class="active">
-              <span>
-                1
-                <span class="sr-only">(current)</span>
-              </span>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-            <li>
-              <a href="#">4</a>
-            </li>
-            <li>
-              <a href="#">5</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-          <ul class="pagination pagination-sm">
-            <li class="disabled">
-              <span>
-                <span class="i fa fa-angle-left"></span>
-              </span>
-            </li>
-            <li class="disabled">
-              <span>
-                1
-                <span class="sr-only">(current)</span>
-              </span>
-            </li>
-            <li class="disabled">
-              <a href="#">2</a>
-            </li>
-            <li class="disabled">
-              <a href="#">3</a>
-            </li>
-            <li class="disabled">
-              <a href="#">4</a>
-            </li>
-            <li class="disabled">
-              <a href="#">5</a>
-            </li>
-            <li class="disabled">
-              <a href="#">
-                <span class="i fa fa-angle-right"></span>
-              </a>
-            </li>
-          </ul>
-        </div><!-- /col -->
-      </div><!-- /row -->
+      <div class="page-header">
+        <h1>Pagination</h1>
+      </div>
+      <div class="alert alert-warning">
+        <span class="pficon-layered">
+          <span class="pficon pficon-warning-triangle"></span>
+          <span class="pficon pficon-warning-exclamation"></span>
+        </span>
+        These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+      </div>
+      <hr>
+      <h2>Pager - default size</h2>
+      <ul class="pager">
+        <li class="previous">
+          <a href="#">
+            <span class="i fa fa-angle-left"></span>
+            Previous
+          </a>
+        </li>
+        <li class="next">
+          <a href="#">
+            Next
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="pager">
+        <li class="previous disabled">
+          <a href="#">
+            <span class="i fa fa-angle-left"></span>
+            Previous
+          </a>
+        </li>
+        <li class="next disabled">
+          <a href="#">
+            Next
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <h2>Pager - mini size</h2>
+      <ul class="pager pager-sm">
+        <li class="previous">
+          <a href="#">
+            <span class="i fa fa-angle-left"></span>
+            Previous
+          </a>
+        </li>
+        <li class="next">
+          <a href="#">
+            Next
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="pager pager-sm">
+        <li class="previous disabled">
+          <a href="#">
+            <span class="i fa fa-angle-left"></span>
+            Previous
+          </a>
+        </li>
+        <li class="next disabled">
+          <a href="#">
+            Next
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <h2>Pagination - default size</h2>
+      <ul class="pagination">
+        <li>
+          <a href="#">
+            <span class="i fa fa-angle-left"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">4</a>
+        </li>
+        <li>
+          <a href="#">5</a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="pagination">
+        <li class="disabled">
+          <span>
+            <span class="i fa fa-angle-left"></span>
+          </span>
+        </li>
+        <li class="active">
+          <span>
+            1
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">4</a>
+        </li>
+        <li>
+          <a href="#">5</a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="pagination">
+        <li class="disabled">
+          <span>
+            <span class="i fa fa-angle-left"></span>
+          </span>
+        </li>
+        <li class="disabled">
+          <span>
+            1
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        <li class="disabled">
+          <a href="#">2</a>
+        </li>
+        <li class="disabled">
+          <a href="#">3</a>
+        </li>
+        <li class="disabled">
+          <a href="#">4</a>
+        </li>
+        <li class="disabled">
+          <a href="#">5</a>
+        </li>
+        <li class="disabled">
+          <a href="#">
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <h2>Pagination - mini size</h2>
+      <ul class="pagination pagination-sm">
+        <li>
+          <a href="#">
+            <span class="i fa fa-angle-left"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">4</a>
+        </li>
+        <li>
+          <a href="#">5</a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="pagination pagination-sm">
+        <li class="disabled">
+          <span>
+            <span class="i fa fa-angle-left"></span>
+          </span>
+        </li>
+        <li class="active">
+          <span>
+            1
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">4</a>
+        </li>
+        <li>
+          <a href="#">5</a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="pagination pagination-sm">
+        <li class="disabled">
+          <span>
+            <span class="i fa fa-angle-left"></span>
+          </span>
+        </li>
+        <li class="disabled">
+          <span>
+            1
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        <li class="disabled">
+          <a href="#">2</a>
+        </li>
+        <li class="disabled">
+          <a href="#">3</a>
+        </li>
+        <li class="disabled">
+          <a href="#">4</a>
+        </li>
+        <li class="disabled">
+          <a href="#">5</a>
+        </li>
+        <li class="disabled">
+          <a href="#">
+            <span class="i fa fa-angle-right"></span>
+          </a>
+        </li>
+      </ul>
     </div><!-- /container -->
   </body>
 </html>
