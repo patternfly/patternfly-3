@@ -27,7 +27,7 @@
     "datatables": "~1.10.0",
     "datatables-colreorder": "~1.1.2",
     "datatables-colvis": "~1.1.1",
-    "font-awesome": "~4.1.0",
+    "font-awesome": "~4.2.0",
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2"
   }
