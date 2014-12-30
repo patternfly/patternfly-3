@@ -29,7 +29,7 @@
       background: @dropdown-link-active-bg !important;
       border-color: @dropdown-link-active-border-color !important;
       color: #fff;
-      @media (min-width: @grid-float-breakpoint-max) {
+      @media (min-width: @grid-float-breakpoint) {
         &:after {
           content: @fa-var-angle-right;
           font-family: @icon-font-name-fa;
@@ -39,22 +39,36 @@
           top: 1px;
         }
       }
+      .fa {
+        color: #fff;
+      }
     }
     > a {
       border-bottom: 1px solid transparent;
       border-radius: 0;
       border-top: 1px solid transparent;
       color: @text-color;
+      font-size: @font-size-base + 1;
+      line-height: @line-height-computed + 1;
       padding: 1px @grid-gutter-width/2;
       &:hover {
         background: @dropdown-link-hover-bg;
         border-color: @dropdown-link-hover-border-color;
+      }
+      .fa {
+        color: #6f6f6f;
+        font-size: @font-size-base + 3;
+        margin-right: @grid-gutter-width/4;
+        text-align: center;    
+        vertical-align: middle;
+        width: @font-size-base + 3;
       }
     }
   }
   .nav-stacked {
     margin-left: -@grid-gutter-width/2;
     margin-right: -@grid-gutter-width/2;
+    margin-bottom: @grid-gutter-width/3;
     li + li {
       margin-top: 0;
     }
@@ -86,6 +100,20 @@
       }
     }
   }
+  .nav-category {
+    h1 {
+      color: #9e9e9e;
+      font-size: @font-size-base - 1;
+      font-weight: 700;
+      line-height: @line-height-computed + 1;
+      margin: 0;
+      padding: 8px 0;
+      text-transform: uppercase;
+    }
+    + .nav-category {
+      margin-top: @grid-gutter-width/4;
+    }    
+  } 
 }
 
 @media (min-width: @grid-float-breakpoint-max) {
@@ -108,16 +136,6 @@
     }
   }
   .sidebar-pf {
-    background: @sidebar-pf-bg;
-    &.sidebar-pf-left {
-      border-right: 1px solid @sidebar-pf-border-color;
-    }
-    &.sidebar-pf-right {
-      border-left: 1px solid @sidebar-pf-border-color;
-    }
-    > .nav-stacked {
-      margin-top: 5px;
-    }
     .panel-group .panel-default, .treeview {
       border-left: 0;
       border-right: 0;
@@ -138,6 +156,21 @@
           top: 1px;
         }
       }
+    }
+  }
+}
+
+@media (min-width: @grid-float-breakpoint) {
+  .sidebar-pf {
+    background: @sidebar-pf-bg;
+    &.sidebar-pf-left {
+      border-right: 1px solid @sidebar-pf-border-color;
+    }
+    &.sidebar-pf-right {
+      border-left: 1px solid @sidebar-pf-border-color;
+    }
+    > .nav-stacked {
+      margin-top: 5px;
     }
   }
 }

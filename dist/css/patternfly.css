@@ -9965,7 +9965,7 @@ td > .progress:first-child:last-child {
   border-color: #0076b7 !important;
   color: #fff;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .sidebar-pf .nav-pills > li.active > a:after {
     content: "\f105";
     font-family: "FontAwesome";
@@ -9975,20 +9975,34 @@ td > .progress:first-child:last-child {
     top: 1px;
   }
 }
+.sidebar-pf .nav-pills > li.active > a .fa {
+  color: #fff;
+}
 .sidebar-pf .nav-pills > li > a {
   border-bottom: 1px solid transparent;
   border-radius: 0;
   border-top: 1px solid transparent;
   color: #333333;
+  font-size: 13px;
+  line-height: 21px;
   padding: 1px 20px;
 }
 .sidebar-pf .nav-pills > li > a:hover {
   background: #d4edfa;
   border-color: #b3d3e7;
 }
+.sidebar-pf .nav-pills > li > a .fa {
+  color: #6f6f6f;
+  font-size: 15px;
+  margin-right: 10px;
+  text-align: center;
+  vertical-align: middle;
+  width: 15px;
+}
 .sidebar-pf .nav-stacked {
   margin-left: -20px;
   margin-right: -20px;
+  margin-bottom: 13.333333333333334px;
 }
 .sidebar-pf .nav-stacked li + li {
   margin-top: 0;
@@ -10018,6 +10032,18 @@ td > .progress:first-child:last-child {
   margin-left: 3px;
   margin-right: 2px;
 }
+.sidebar-pf .nav-category h1 {
+  color: #9e9e9e;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 21px;
+  margin: 0;
+  padding: 8px 0;
+  text-transform: uppercase;
+}
+.sidebar-pf .nav-category + .nav-category {
+  margin-top: 10px;
+}
 @media (min-width: 767px) {
   .sidebar-header-bleed-left {
     margin-left: -20px;
@@ -10036,18 +10062,6 @@ td > .progress:first-child:last-child {
   }
   .sidebar-header-bleed-right + .list-group {
     margin-right: -20px;
-  }
-  .sidebar-pf {
-    background: #fafafa;
-  }
-  .sidebar-pf.sidebar-pf-left {
-    border-right: 1px solid #d0d0d0;
-  }
-  .sidebar-pf.sidebar-pf-right {
-    border-left: 1px solid #d0d0d0;
-  }
-  .sidebar-pf > .nav-stacked {
-    margin-top: 5px;
   }
   .sidebar-pf .panel-group .panel-default,
   .sidebar-pf .treeview {
@@ -10070,6 +10084,20 @@ td > .progress:first-child:last-child {
     position: absolute;
     right: 10px;
     top: 1px;
+  }
+}
+@media (min-width: 768px) {
+  .sidebar-pf {
+    background: #fafafa;
+  }
+  .sidebar-pf.sidebar-pf-left {
+    border-right: 1px solid #d0d0d0;
+  }
+  .sidebar-pf.sidebar-pf-right {
+    border-left: 1px solid #d0d0d0;
+  }
+  .sidebar-pf > .nav-stacked {
+    margin-top: 5px;
   }
 }
 @-webkit-keyframes rotation {
