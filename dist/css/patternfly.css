@@ -9965,7 +9965,7 @@ td > .progress:first-child:last-child {
   border-color: #0076b7 !important;
   color: #fff;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .sidebar-pf .nav-pills > li.active > a:after {
     content: "\f105";
     font-family: "FontAwesome";
@@ -10002,6 +10002,7 @@ td > .progress:first-child:last-child {
 .sidebar-pf .nav-stacked {
   margin-left: -20px;
   margin-right: -20px;
+  margin-bottom: 13.333333333333334px;
 }
 .sidebar-pf .nav-stacked li + li {
   margin-top: 0;
@@ -10062,18 +10063,6 @@ td > .progress:first-child:last-child {
   .sidebar-header-bleed-right + .list-group {
     margin-right: -20px;
   }
-  .sidebar-pf {
-    background: #fafafa;
-  }
-  .sidebar-pf.sidebar-pf-left {
-    border-right: 1px solid #d0d0d0;
-  }
-  .sidebar-pf.sidebar-pf-right {
-    border-left: 1px solid #d0d0d0;
-  }
-  .sidebar-pf > .nav-stacked {
-    margin-top: 5px;
-  }
   .sidebar-pf .panel-group .panel-default,
   .sidebar-pf .treeview {
     border-left: 0;
@@ -10095,6 +10084,20 @@ td > .progress:first-child:last-child {
     position: absolute;
     right: 10px;
     top: 1px;
+  }
+}
+@media (min-width: 768px) {
+  .sidebar-pf {
+    background: #fafafa;
+  }
+  .sidebar-pf.sidebar-pf-left {
+    border-right: 1px solid #d0d0d0;
+  }
+  .sidebar-pf.sidebar-pf-right {
+    border-left: 1px solid #d0d0d0;
+  }
+  .sidebar-pf > .nav-stacked {
+    margin-top: 5px;
   }
 }
 @-webkit-keyframes rotation {
