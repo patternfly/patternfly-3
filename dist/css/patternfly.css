@@ -10032,8 +10032,8 @@ td > .progress:first-child:last-child {
   margin-left: 3px;
   margin-right: 2px;
 }
-.sidebar-pf .nav-category h1 {
-  color: #aaaaaa;
+.sidebar-pf .nav-category h2 {
+  color: #999999;
   font-size: 12px;
   font-weight: 400;
   line-height: 21px;
