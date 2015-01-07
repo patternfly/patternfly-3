@@ -9960,6 +9960,17 @@ td > .progress:first-child:last-child {
 .sidebar-pf .sidebar-header + .list-group .list-group-item-heading {
   font-size: 12px;
 }
+.sidebar-pf .nav-category h2 {
+  color: #999999;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+  padding: 8px 0;
+}
+.sidebar-pf .nav-category + .nav-category {
+  margin-top: 10px;
+}
 .sidebar-pf .nav-pills > li.active > a {
   background: #0099d3 !important;
   border-color: #0076b7 !important;
@@ -10002,7 +10013,6 @@ td > .progress:first-child:last-child {
 .sidebar-pf .nav-stacked {
   margin-left: -20px;
   margin-right: -20px;
-  margin-bottom: 13.333333333333334px;
 }
 .sidebar-pf .nav-stacked li + li {
   margin-top: 0;
@@ -10031,17 +10041,6 @@ td > .progress:first-child:last-child {
 .sidebar-pf .panel-title > a.collapsed:before {
   margin-left: 3px;
   margin-right: 2px;
-}
-.sidebar-pf .nav-category h2 {
-  color: #999999;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 21px;
-  margin: 0;
-  padding: 8px 0;
-}
-.sidebar-pf .nav-category + .nav-category {
-  margin-top: 10px;
 }
 @media (min-width: 767px) {
   .sidebar-header-bleed-left {
@@ -10095,6 +10094,7 @@ td > .progress:first-child:last-child {
   .sidebar-pf.sidebar-pf-right {
     border-left: 1px solid #d0d0d0;
   }
+  .sidebar-pf > .nav-category,
   .sidebar-pf > .nav-stacked {
     margin-top: 5px;
   }
