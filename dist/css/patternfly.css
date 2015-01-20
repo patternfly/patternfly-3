@@ -8803,7 +8803,6 @@ h6 .label {
 .login-pf body {
   background: #080808 url("../img/bg-login.jpg") repeat-x 50% 0;
   background-size: auto;
-  color: #fff;
 }
 @media (min-width: 768px) {
   .login-pf body {
@@ -8814,6 +8813,7 @@ h6 .label {
   background-color: #181818;
   background-color: rgba(255, 255, 255, 0.055);
   clear: right;
+  color: #fff;
   padding-bottom: 40px;
   padding-top: 20px;
   width: auto;
