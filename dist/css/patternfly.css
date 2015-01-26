@@ -8826,6 +8826,10 @@ h6 .label {
     width: 100%;
   }
 }
+.login-pf .container [class^='alert'] {
+  background: transparent;
+  color: #fff;
+}
 .login-pf .container .details p:first-child {
   border-top: 1px solid #474747;
   padding-top: 25px;
