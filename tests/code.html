@@ -23,6 +23,7 @@
     <!-- IE8 requires jQuery v1.x -->
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../components/google-code-prettify/bin/prettify.min.js"></script>
     <script src="../dist/js/patternfly.min.js"></script>
   </head>
   <body>
@@ -44,11 +45,36 @@
       <p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
       To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd></p>
       <h2>Basic block</h2>
-      <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+      <pre>&lt;p class="my-class"&gt;Sample text here...&lt;/p&gt;</pre>
       <h2>Variables</h2>
       <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
       <h2>Sample output</h2>
       <samp>This text is meant to be treated as sample output from a computer program.</samp>
+      <h2>Syntax highlighting with google-code-prettify</h2>
+      <h3>Basic block</h3>
+      <pre class="prettyprint">&lt;p class="my-class"&gt;Sample text here...&lt;/p&gt;</pre>
+      <h3>Larger block with line numbers</h3>
+      <pre class="prettyprint linenums lang-html">
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;&lt;/header&gt;
+  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;
+  &lt;footer&gt;&lt;/footer&gt;
+  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      <script>
+        $(document).ready(function(){
+          prettyPrint();
+        });
+      </script>
     </div><!-- /container -->
   </body>
 </html>

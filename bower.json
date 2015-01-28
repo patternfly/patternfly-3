@@ -28,6 +28,7 @@
     "datatables-colreorder": "~1.1.2",
     "datatables-colvis": "~1.1.1",
     "font-awesome": "~4.2.0",
+    "google-code-prettify": "~1.0.3",
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2"
   }
