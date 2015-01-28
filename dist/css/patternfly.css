@@ -10116,13 +10116,13 @@ td > .progress:first-child:last-child {
     margin-top: 5px;
   }
 }
-/* GitHub Theme */
+/* Patternfly Theme */
 .prettyprint {
-  background: white;
-  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  background: #fff;
+  font-family: Menlo, Monaco, Consolas, monospace;
   font-size: 12px;
   line-height: 1.5;
-  border: 1px solid #ccc;
+  border: 1px solid #999999;
   padding: 10px;
 }
 .pln {
@@ -10142,7 +10142,7 @@ td > .progress:first-child:last-child {
     color: #006e9c;
   }
   .lit {
-    color: #006d9c;
+    color: #006e9c;
   }
   .pun {
     color: #333333;
@@ -10170,41 +10170,6 @@ td > .progress:first-child:last-child {
   }
   .fun {
     color: #3f9c35;
-  }
-}
-@media print, projection {
-  .str {
-    color: #006600;
-  }
-  .kwd {
-    color: #006;
-    font-weight: bold;
-  }
-  .com {
-    color: #600;
-    font-style: italic;
-  }
-  .typ {
-    color: #404;
-    font-weight: bold;
-  }
-  .lit {
-    color: #004444;
-  }
-  .pun,
-  .opn,
-  .clo {
-    color: #444400;
-  }
-  .tag {
-    color: #006;
-    font-weight: bold;
-  }
-  .atn {
-    color: #440044;
-  }
-  .atv {
-    color: #006600;
   }
 }
 /* Specify class=linenums on a pre to get line numbering */

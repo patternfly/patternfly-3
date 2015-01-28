@@ -1,53 +1,53 @@
 //
-// Code (inline and block)
+// Based on  http://jmblog.github.io/color-themes-for-google-code-prettify/github/
 // --------------------------------------------------
 
-/* GitHub Theme */
+/* Patternfly Theme */
 .prettyprint {
-  background: white;
-  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
-  font-size: 12px;
+  background: #fff;
+  font-family: @font-family-monospace;
+  font-size: @font-size-base;
   line-height: 1.5;
-  border: 1px solid #ccc;
-  padding: 10px;
+  border: 1px solid @gray-light;
+  padding: @padding-large-horizontal;
 }
 
 .pln {
-  color: #333333;
+  color: @gray-dark;
 }
 
 
 @media screen {
   .str {
-    color: #a30000;
+    color: @btn-danger-bg;
   }
 
   .kwd {
-    color: #333333;
+    color: @gray-dark;
   }
 
   .com {
-    color: #3f9c35;
+    color: @brand-success;
   }
 
   .typ {
-    color: #006e9c;
+    color: @brand-info;
   }
 
   .lit {
-    color: #006d9c;
+    color: @brand-info;
   }
 
   .pun {
-    color: #333333;
+    color: @gray-dark;
   }
 
   .opn {
-    color: #333333;
+    color: @gray-dark;
   }
 
   .clo {
-    color: #333333;
+    color: @gray-dark;
   }
 
   .tag {
@@ -59,11 +59,11 @@
   }
 
   .atv {
-    color: #a30000;
+    color: @btn-danger-bg;
   }
 
   .dec {
-    color: #333333;
+    color: @gray-dark;
   }
 
   .var {
@@ -71,50 +71,10 @@
   }
 
   .fun {
-    color: #3f9c35;
+    color: @brand-success;
   }
 }
-@media print, projection {
-  .str {
-    color: #006600;
-  }
 
-  .kwd {
-    color: #006;
-    font-weight: bold;
-  }
-
-  .com {
-    color: #600;
-    font-style: italic;
-  }
-
-  .typ {
-    color: #404;
-    font-weight: bold;
-  }
-
-  .lit {
-    color: #004444;
-  }
-
-  .pun, .opn, .clo {
-    color: #444400;
-  }
-
-  .tag {
-    color: #006;
-    font-weight: bold;
-  }
-
-  .atn {
-    color: #440044;
-  }
-
-  .atv {
-    color: #006600;
-  }
-}
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
   margin-top: 0;
