@@ -10119,7 +10119,6 @@ td > .progress:first-child:last-child {
 /* Patternfly Theme */
 .prettyprint {
   background: #fff;
-  border: 1px solid #999999;
   font-family: Menlo, Monaco, Consolas, monospace;
   font-size: 12px;
   line-height: 1.5;
