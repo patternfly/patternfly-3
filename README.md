@@ -144,7 +144,7 @@ Make the dist:
 make dist
 ```
 
-Copy the resulting tarball from the previous step to your rpmbuild/SOURCES directly.
+Copy the resulting tarball from the previous step to your rpmbuild/SOURCES directory.
 
 e.g., `cp patternfly-1.1.1.tar.gz ~/rpmbuild/SOURCES`
 
