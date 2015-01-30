@@ -10,6 +10,15 @@
   }
   &:hover {
     border-color: #7BB2DD;
+    .has-error & {
+      border-color: darken(@state-danger-text, 10%);
+    }
+    .has-success & {
+      border-color: darken(@state-success-text, 10%);
+    }
+    .has-warning & {
+      border-color: darken(@state-warning-text, 10%);
+    }
   }
 }
 

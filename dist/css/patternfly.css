@@ -8485,6 +8485,15 @@ fieldset[disabled] .form-control {
 .form-control:hover {
   border-color: #7BB2DD;
 }
+.has-error .form-control:hover {
+  border-color: #843534;
+}
+.has-success .form-control:hover {
+  border-color: #2b542c;
+}
+.has-warning .form-control:hover {
+  border-color: #66512c;
+}
 .input-group .input-group-btn .btn {
   -webkit-box-shadow: none;
   box-shadow: none;
