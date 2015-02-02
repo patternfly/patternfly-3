@@ -10116,6 +10116,87 @@ td > .progress:first-child:last-child {
     margin-top: 5px;
   }
 }
+/* Patternfly Theme */
+.prettyprint {
+  background: #fff;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 10px;
+}
+.pln {
+  color: #333333;
+}
+@media screen {
+  .str {
+    color: #a30000;
+  }
+  .kwd {
+    color: #333333;
+  }
+  .com {
+    color: #3f9c35;
+  }
+  .typ {
+    color: #006e9c;
+  }
+  .lit {
+    color: #006e9c;
+  }
+  .pun {
+    color: #333333;
+  }
+  .opn {
+    color: #333333;
+  }
+  .clo {
+    color: #333333;
+  }
+  .tag {
+    color: navy;
+  }
+  .atn {
+    color: teal;
+  }
+  .atv {
+    color: #a30000;
+  }
+  .dec {
+    color: #333333;
+  }
+  .var {
+    color: teal;
+  }
+  .fun {
+    color: #3f9c35;
+  }
+}
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  /* */
+}
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* */
+}
 @-webkit-keyframes rotation {
   from {
     -webkit-transform: rotate(0deg);

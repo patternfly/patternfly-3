@@ -23,6 +23,7 @@
     <!-- IE8 requires jQuery v1.x -->
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../components/google-code-prettify/bin/prettify.min.js"></script>
     <script src="../dist/js/patternfly.min.js"></script>
   </head>
   <body>
@@ -38,13 +39,18 @@
         These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
       </div>
       <hr>
+<script>
+$(document).ready(function(){
+  prettyPrint();
+});
+</script>
       <h2>Inline</h2>
       <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
       <h2>User input</h2>
       <p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
       To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd></p>
       <h2>Basic block</h2>
-      <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+      <pre class="prettyprint">&lt;p class="my-class"&gt;Sample text here...&lt;/p&gt;</pre>
       <h2>Variables</h2>
       <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
       <h2>Sample output</h2>
