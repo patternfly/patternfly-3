@@ -10116,33 +10116,6 @@ td > .progress:first-child:last-child {
     margin-top: 5px;
   }
 }
-.prettyprint .atn,
-.prettyprint .com,
-.prettyprint .fun,
-.prettyprint .var {
-  color: #3f9c35;
-}
-.prettyprint .atv,
-.prettyprint .str {
-  color: #a30000;
-}
-.prettyprint .clo,
-.prettyprint .dec,
-.prettyprint .kwd,
-.prettyprint .opn,
-.prettyprint .pln,
-.prettyprint .pun {
-  color: #333333;
-}
-.prettyprint .lit,
-.prettyprint .tag,
-.prettyprint .typ {
-  color: #006e9c;
-}
-.prettyprint ol.linenums {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 @-webkit-keyframes rotation {
   from {
     -webkit-transform: rotate(0deg);
@@ -10207,6 +10180,32 @@ td > .progress:first-child:last-child {
 .ie8 .spinner.spinner-xs,
 .ie9 .spinner.spinner-xs {
   background-image: url("../img/spinner-xs.gif");
+}
+.prettyprint .atn,
+.prettyprint .com,
+.prettyprint .fun,
+.prettyprint .var {
+  color: #3f9c35;
+}
+.prettyprint .atv,
+.prettyprint .str {
+  color: #a30000;
+}
+.prettyprint .clo,
+.prettyprint .dec,
+.prettyprint .kwd,
+.prettyprint .opn,
+.prettyprint .pln,
+.prettyprint .pun {
+  color: #333333;
+}
+.prettyprint .lit,
+.prettyprint .tag,
+.prettyprint .typ {
+  color: #006e9c;
+}
+.prettyprint ol.linenums {
+  margin-bottom: 0;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
