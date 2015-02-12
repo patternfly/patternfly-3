@@ -514,10 +514,10 @@ a.text-info:hover {
   color: #245269;
 }
 .text-warning {
-  color: #8a6d3b;
+  color: #ec7a08;
 }
 a.text-warning:hover {
-  color: #66512c;
+  color: #bb6106;
 }
 .text-danger {
   color: #a94442;
@@ -1881,25 +1881,25 @@ select[multiple].input-lg {
 .has-warning .checkbox,
 .has-warning .radio-inline,
 .has-warning .checkbox-inline {
-  color: #8a6d3b;
+  color: #ec7a08;
 }
 .has-warning .form-control {
-  border-color: #8a6d3b;
+  border-color: #ec7a08;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-warning .form-control:focus {
-  border-color: #66512c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  border-color: #bb6106;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #faad60;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #faad60;
 }
 .has-warning .input-group-addon {
-  color: #8a6d3b;
-  border-color: #8a6d3b;
+  color: #ec7a08;
+  border-color: #ec7a08;
   background-color: #fcf8e3;
 }
 .has-warning .form-control-feedback {
-  color: #8a6d3b;
+  color: #ec7a08;
 }
 .has-error .help-block,
 .has-error .control-label,
@@ -4734,26 +4734,26 @@ a.list-group-item-info.active:focus {
   border-color: #31708f;
 }
 .list-group-item-warning {
-  color: #8a6d3b;
+  color: #ec7a08;
   background-color: #fcf8e3;
 }
 a.list-group-item-warning {
-  color: #8a6d3b;
+  color: #ec7a08;
 }
 a.list-group-item-warning .list-group-item-heading {
   color: inherit;
 }
 a.list-group-item-warning:hover,
 a.list-group-item-warning:focus {
-  color: #8a6d3b;
+  color: #ec7a08;
   background-color: #faf2cc;
 }
 a.list-group-item-warning.active,
 a.list-group-item-warning.active:hover,
 a.list-group-item-warning.active:focus {
   color: #fff;
-  background-color: #8a6d3b;
-  border-color: #8a6d3b;
+  background-color: #ec7a08;
+  border-color: #ec7a08;
 }
 .list-group-item-danger {
   color: #a94442;
@@ -8492,7 +8492,7 @@ fieldset[disabled] .form-control {
   border-color: #2b542c;
 }
 .has-warning .form-control:hover {
-  border-color: #66512c;
+  border-color: #bb6106;
 }
 .input-group .input-group-btn .btn {
   -webkit-box-shadow: none;
