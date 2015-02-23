@@ -185,6 +185,11 @@ See [https://www.patternfly.org](https://www.patternfly.org) and [http://getboot
 
 Since PatternFly is based on Bootstrap, PatternFly supports [the same browsers as Bootstrap](http://getbootstrap.com/getting-started/#support), plus the latest version of [Firefox for Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux).
 
+*Important:*  the following features of PatternFly are not compatible with Internet Explorer 8:
+
+* [Bootstrap Tree View](https://github.com/jonmiles/bootstrap-treeview)
+* Charts (which utilizes [C3.js](http://c3js.org/) and [D3](https://github.com/mbostock/d3/wiki#browser--platform-support))
+
 ### Product Backlog
 
 See [https://trello.com/b/Hz3Nmwk4/patternfly-reference-implementation](https://trello.com/b/Hz3Nmwk4/patternfly-reference-implementation).

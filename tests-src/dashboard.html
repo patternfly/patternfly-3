@@ -4,6 +4,7 @@ css-extra: false
 layout: layout
 title: Dashboard
 resource: true
+url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
 weight: 3
 ---
 {% include layouts-navbar-primary.html %}
@@ -17,12 +18,12 @@ weight: 3
             <h1>{{ page.title }}</h1>
           </div>
           <h2 class="h4">Infrastructure Performance</h2>
-          <img src="{{site.url-img}}dashboard-1.png" alt="Placeholder graph" class="img-responsive" />
+          <div id="chart"></div>
           <hr>
           <h2 class="h4">Resource Usage</h2>
           <div class="row">
             <div class="col-sm-6">
-              <img src="{{site.url-img}}dashboard-2.png" alt="Placeholder graph" class="img-responsive" />
+                <div id="chart2"></div>
             </div>
             <div class="col-sm-6">
               <img src="{{site.url-img}}dashboard-3.png" alt="Placeholder graph" class="img-responsive" />
@@ -32,7 +33,7 @@ weight: 3
           <h2 class="h4">Infrastructure Capacity</h2>
           <div class="row">
             <div class="col-sm-6">
-              <img src="{{site.url-img}}dashboard-4.png" alt="Placeholder graph" class="img-responsive" />
+              <div id="chart4"></div>
             </div>
             <div class="col-sm-6">
               <table class="table">
@@ -110,3 +111,115 @@ weight: 3
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
+    <script>
+      var chart = c3.generate({
+        axis: {
+          x: {
+            tick: {
+              format: '%m-%d',
+              outer: false
+            },
+            type: 'timeseries'
+          },
+          y: {
+            tick: {
+              format: function(d) { return d + "%"; },
+              outer: false
+            }
+          }
+        },
+        bindto: '#chart',
+        color: {
+          pattern: ['#006e9c','#00a8e1', '#3f9c35', '#ec7a08', '#cc0000']
+        },
+        data: {
+          columns: [
+            ['x', '2015-04-01', '2015-04-02', '2015-04-03', '2015-04-04', '2015-04-05', '2015-04-06', '2015-04-07'],
+            ['data1', 16, 44, 33, 88, 50, 76, 21]
+          ],
+          x: 'x'
+        },
+        grid: {
+          y: {
+            show: true
+          }
+        },
+        legend: {
+          hide: true
+        },
+        point: {
+          r: 4
+        },
+        size: {
+          height: 220
+        }
+      });
+      var chart2 = c3.generate({
+        bindto: '#chart2',
+        data: {
+          colors: {
+            Cloud: '#006e9c',
+            Virtual: '#00a8e1',
+            Baremetal: '#969696'
+          },
+          columns: [
+            ['Cloud', 4,828],
+            ['Virtual', 13,258],
+            ['Baremetal', 11,1124]
+          ],
+          type : 'donut',
+          onclick: function (d, i) { console.log("onclick", d, i); },
+          onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+        },
+        donut: {
+          title: "29,210 Hosts"
+        },
+        legend: {
+          position: 'right'
+        },
+        size: {
+          height: 220
+        }
+      });
+      var chart4 = c3.generate({
+        axis: {
+          rotated: true,
+          x: {
+            categories: ['Location 1', 'Location 2', 'Location 3', 'Location 4'],
+            tick: {
+              outer: false
+            },
+            type: 'category'
+          },
+          y: {
+            tick: {
+              format: function(d) { return d + "%"; },
+              outer: false
+            }
+          }
+        },
+        bindto: '#chart4',
+        color: {
+          pattern: ['#006e9c','#00a8e1', '#3f9c35', '#ec7a08', '#cc0000']
+        },
+        data: {
+          columns: [
+            ['Virtual Resources', 25, 35, 18, 78],
+            ['Physical Resources', 60, 40, 48, 8]
+          ],
+          groups: [
+            ['Virtual Resources', 'Physical Resources']
+          ],
+          type: 'bar'
+        },
+        grid: {
+          y: {
+            show: true
+          }
+        },
+        size: {
+          height: 200
+        }
+      });
+    </script>
