@@ -15,9 +15,12 @@
     "app/components",
     "test",
     "tests",
+    "tests-src",
     "package.json",
     "Gruntfile.js",
-    "PatternFlyIcons-webfont.json"
+    "PatternFlyIcons-webfont.json",
+    "Makefile",
+    "patternfly.spec.in"
   ],
   "devDependencies": {
     "bootstrap": "~3.1.1",
