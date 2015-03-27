@@ -15,7 +15,6 @@
     "app/components",
     "test",
     "tests",
-    "tests-src",
     "package.json",
     "Gruntfile.js",
     "PatternFlyIcons-webfont.json",
