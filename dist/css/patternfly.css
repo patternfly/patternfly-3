@@ -7829,6 +7829,30 @@ button.close {
 .nav-pills > li > a > .badge {
   margin-left: 6px;
 }
+.blank-slate-pf {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .blank-slate-pf {
+    padding: 60px 60px;
+  }
+}
+@media (min-width: 992px) {
+  .blank-slate-pf {
+    padding: 90px 120px;
+  }
+}
+.blank-slate-pf .blank-slate-pf-icon {
+  color: #999999;
+  font-size: 57.599999999999994px;
+  line-height: 57.599999999999994px;
+}
+.blank-slate-pf .blank-slate-pf-main-action {
+  margin-top: 20px;
+}
+.blank-slate-pf .blank-slate-pf-secondary-action {
+  margin-top: 20px;
+}
 .combobox-container.combobox-selected .glyphicon-remove {
   display: inline-block;
 }
