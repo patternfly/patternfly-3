@@ -7830,6 +7830,10 @@ button.close {
   margin-left: 6px;
 }
 .blank-slate-pf {
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 1px;
+  margin-bottom: 20px;
   text-align: center;
 }
 @media (min-width: 768px) {
