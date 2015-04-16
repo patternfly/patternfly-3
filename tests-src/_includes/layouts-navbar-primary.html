@@ -63,7 +63,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-primary">
           {% for node in site.weighted_pages %}
-          {% if node.categories contains 'Layouts' %}
+          {% if node.categories contains 'Layouts' and node.weight %}
           {% if page.url == node.url %}
           <li class="active">
             <a href="{{ node.url| remove_first:'/' }}" class="active">{{ node.title }}</a>
