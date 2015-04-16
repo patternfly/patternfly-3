@@ -193,7 +193,7 @@
       </div>
 
       <div class="progress-description">
-        <span class="pficon pficon-ok"></span> <strong>Network Activity:</strong>  10.10.121.02
+        <span class="pficon pficon-ok" data-toggle="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></span> <strong>Network Activity:</strong>  10.10.121.02
       </div>
       <div class="progress progress-label-top-right">
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
@@ -201,7 +201,7 @@
         </div>
       </div>
       <div class="progress-description">
-        <span class="pficon-layered">
+        <span class="pficon-layered" data-toggle="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
           <span class="pficon pficon-warning-triangle"></span>
           <span class="pficon pficon-warning-exclamation"></span>
         </span> 
@@ -213,7 +213,7 @@
         </div>
       </div>
       <div class="progress-description">
-        <span class="pficon-layered">
+        <span class="pficon-layered" data-toggle="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
           <span class="pficon pficon-error-octagon"></span>
           <span class="pficon pficon-error-exclamation"></span>
         </span> 
@@ -269,6 +269,12 @@
           </tr>
         </tbody>
       </table>
+      <script>
+        // Initialize Tooltip
+        jQuery(document).ready(function() {
+          jQuery('[data-toggle="tooltip"]').tooltip();
+        });
+      </script>
     </div><!-- /container -->
   </body>
 </html>

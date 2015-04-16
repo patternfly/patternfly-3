@@ -9964,6 +9964,9 @@ td > .progress:first-child:last-child {
 .progress-description .pficon {
   margin-right: 3px;
 }
+.progress-description .tooltip {
+  white-space: normal;
+}
 .search-pf.has-button {
   border-collapse: separate;
   display: table;
