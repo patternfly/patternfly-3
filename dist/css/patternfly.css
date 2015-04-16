@@ -7868,6 +7868,7 @@ button.close {
 }
 .combobox-container .dropdown-menu {
   margin-top: -1px;
+  width: 100%;
 }
 .combobox-container .glyphicon-remove {
   display: none;
