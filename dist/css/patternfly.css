@@ -7887,10 +7887,7 @@ button.close {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffededed', GradientType=0);
   border-color: #b7b7b7;
   color: #4d5258;
-}
-.combobox-container .input-group-addon:active {
-  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 .combobox-container .input-group-addon:hover,
 .combobox-container .input-group-addon:focus,
@@ -7924,6 +7921,10 @@ fieldset[disabled] .combobox-container .input-group-addon:active,
 fieldset[disabled] .combobox-container .input-group-addon.active {
   background-color: #eeeeee;
   border-color: #b7b7b7;
+}
+.combobox-container .input-group-addon:active {
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .bootstrap-select.btn-group .btn {
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
