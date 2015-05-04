@@ -7926,6 +7926,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+.bootstrap-select.btn-group.form-control {
+  margin-bottom: 0;
+}
 .bootstrap-select.btn-group .btn {
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
