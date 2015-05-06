@@ -48,17 +48,13 @@
   }
 }
 
-.table-striped > tbody {
-   > tr:nth-child(odd) {
-    > td,
-    > th {
-      background-color: transparent;
-    }
-  }
-  > tr:nth-child(even) {
-    > td,
-    > th {
+.table-striped {
+  > tbody > tr{
+    &:nth-of-type(even) {
       background-color: @table-bg-accent;
+    }
+    &:nth-of-type(odd) {
+      background-color: transparent;
     }
   }
 }
