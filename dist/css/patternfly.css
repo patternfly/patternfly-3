@@ -7834,6 +7834,7 @@ button.close {
   border: 1px solid #e3e3e3;
   border-radius: 1px;
   margin-bottom: 20px;
+  padding: 30px;
   text-align: center;
 }
 @media (min-width: 768px) {
