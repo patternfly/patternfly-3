@@ -33,7 +33,6 @@
     "commit": "1472290917f17af05e98007136096784f9051fab"
   },
   "_source": "git://github.com/jquery/jquery.git",
-  "_target": "1.11.3",
-  "_originalSource": "jquery",
-  "_direct": true
+  "_target": "~1.11.3",
+  "_originalSource": "jquery"
 }

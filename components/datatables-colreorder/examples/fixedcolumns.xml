@@ -11,10 +11,10 @@ $(document).ready(function() {
 		scrollX: true,
 		scrollCollapse: true,
 		columnDefs: [
-			{ sortable: false, targets: 0 },
-			{ sortable: false, targets: -1 }
+			{ orderable: false, targets: 0 },
+			{ orderable: false, targets: -1 }
 		],
-		sorting: [[ 1, 'asc' ]],
+		ordering: [[ 1, 'asc' ]],
 		colReorder: {
 			fixedColumnsLeft: 1,
 			fixedColumnsRight: 1
