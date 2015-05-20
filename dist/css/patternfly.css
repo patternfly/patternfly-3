@@ -9482,6 +9482,17 @@ label {
 .pficon-users:before {
   content: "\e60f";
 }
+.pficon-add-circle-o:before {
+  content: "\e61b";
+}
+.pficon-warning-triangle-o:before {
+  color: #ec7a08;
+  content: "\e61c";
+}
+.pficon-error-circle-o:before {
+  color: #cc0000;
+  content: "\e61d";
+}
 .pficon-settings:before {
   content: "\e610";
 }
@@ -10803,6 +10814,7 @@ td > .progress:first-child:last-child {
 }
 .progress-description .fa,
 .progress-description .pficon {
+  font-size: 14px;
   margin-right: 3px;
 }
 .progress-description .tooltip {
