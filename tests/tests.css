@@ -4,12 +4,12 @@ body {
 
 .icons .fa, .icons .glyphicon, .icons .pficon {
   font-size: 14px;
+  margin-right: 5px;
   text-align: center;
   width: 14px;
 }
 .icons .icon-class {
   display: inline-block;
-  margin-left: 5px;
 }
 .icons li {
   margin: 0 0 7px;
