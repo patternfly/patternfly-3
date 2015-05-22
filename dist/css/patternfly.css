@@ -9444,7 +9444,8 @@ label {
   color: #3f9c35;
   content: "\e602";
 }
-.pficon-messages:before {
+.pficon-messages:before,
+.pficon-flag:before {
   content: "\e603";
 }
 .pficon-info:before {
@@ -9511,7 +9512,8 @@ label {
 .pficon-print:before {
   content: "\e612";
 }
-.pficon-refresh:before {
+.pficon-refresh:before,
+.pficon-restart:before {
   content: "\e613";
 }
 .pficon-running:before {
