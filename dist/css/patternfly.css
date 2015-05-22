@@ -9482,6 +9482,9 @@ label {
 .pficon-users:before {
   content: "\e60f";
 }
+.pficon-add:before {
+  content: "\e61a";
+}
 .pficon-add-circle-o:before {
   content: "\e61b";
 }
@@ -9492,6 +9495,12 @@ label {
 .pficon-error-circle-o:before {
   color: #cc0000;
   content: "\e61d";
+}
+.pficon-service:before {
+  content: "\e61e";
+}
+.pficon-image:before {
+  content: "\e61f";
 }
 .pficon-settings:before {
   content: "\e610";
@@ -9523,8 +9532,11 @@ label {
 .pficon-remove:before {
   content: "\e619";
 }
-.pficon-add:before {
-  content: "\e61a";
+.pficon-cluster:before {
+  content: "\e620";
+}
+.pficon-container-node:before {
+  content: "\e621";
 }
 .navbar-nav > li > .dropdown-menu.infotip {
   border-top-width: 1px !important;
