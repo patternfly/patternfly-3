@@ -14,6 +14,14 @@ bower install patternfly
 
 PatternFly is also available as an RPM.  See https://copr.fedoraproject.org/coprs/patternfly/patternfly1/.
 
+## AngularJS
+
+A set of [common AngularJS directives](https://github.com/patternfly/angular-patternfly) for use with PatternFly is available.
+
+## Sass and/or Rails
+
+A [Sass port of PatternFly](https://github.com/patternfly/patternfly-sass) is available, as is a [Sass-based Rails Gem](https://rubygems.org/gems/patternfly-sass).
+
 ## Dependencies
 
 PatternFly incorporates other libraries and components; therefore, in addition to the contents of `dist`, the contents of `components` are also required for a complete installation of PatternFly.
