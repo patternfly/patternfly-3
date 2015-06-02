@@ -34,6 +34,7 @@
     "google-code-prettify": "~1.0.3",
     "html5shiv": "~3.7.2",
     "jquery": "~1.11.3",
+    "matchHeight": "~0.6.0",
     "respond": "~1.4.2"
   }
 }

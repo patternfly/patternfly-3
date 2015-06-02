@@ -9302,6 +9302,55 @@ fieldset[disabled] .btn-primary.active {
 .btn-group-xs > .btn {
   font-weight: 400;
 }
+.container-cards-pf {
+  margin-top: 20px;
+}
+.card-pf {
+  background: #ffffff;
+  border-top: 2px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.175);
+  padding: 0 20px;
+  margin: 0 -10px 20px;
+}
+.card-pf.card-pf-accented {
+  border-top-color: #39a5dc;
+}
+.card-pf-body {
+  margin: 20px 0;
+  padding: 0 0 20px;
+}
+.card-pf-body > *:last-child {
+  margin-bottom: 0;
+}
+.card-pf-footer {
+  background-color: #fafafa;
+  border-top: 1px solid #d1d1d1;
+  margin: 0 -20px !important;
+  padding: 20px 20px 10px;
+}
+.card-pf-footer a .fa,
+.card-pf-footer a .pficon {
+  margin-right: 5px;
+}
+.card-pf-heading {
+  border-bottom: 1px solid #d1d1d1;
+  margin: 0 -20px 20px;
+  padding: 0 20px 0;
+}
+.card-pf-title {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 20px 0;
+  padding: 0;
+}
+.cards-pf {
+  background: #f5f5f5;
+}
+.row-cards-pf {
+  margin-left: -10px;
+  margin-right: -10px;
+}
 .c3 path {
   stroke: #d1d1d1;
 }
