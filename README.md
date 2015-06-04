@@ -188,7 +188,7 @@ Since PatternFly is based on Bootstrap, PatternFly supports [the same browsers a
 *Important:*  the following features of PatternFly are not compatible with Internet Explorer 8:
 
 * [Bootstrap Tree View](https://github.com/jonmiles/bootstrap-treeview)
-* Charts (which utilizes [C3.js](http://c3js.org/) and [D3](https://github.com/mbostock/d3/wiki#browser--platform-support))
+* Charts (which utilizes [C3](http://c3js.org/) and [D3](https://github.com/mbostock/d3/wiki#browser--platform-support))
 
 ### Product Backlog
 
