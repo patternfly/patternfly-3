@@ -9859,6 +9859,24 @@ label {
 .pficon-container-node:before {
   content: "\e621";
 }
+.pficon-project:before {
+  content: "\e622";
+}
+.pficon-registry:before {
+  content: "\e623";
+}
+.pficon-replicator:before {
+  content: "\e624";
+}
+.pficon-route:before {
+  content: "\e625";
+}
+.pficon-openshift:before {
+  content: "\e626";
+}
+.pficon-kubernetes:before {
+  content: "\e627";
+}
 .pficon[class*="-exclamation"] {
   color: #fff;
 }
