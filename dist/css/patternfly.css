@@ -9756,7 +9756,7 @@ label {
   font-weight: normal;
   font-style: normal;
 }
-[class*="-exclamation"] {
+.pficon[class*="-exclamation"] {
   color: #fff;
 }
 [class^="pficon-"],
