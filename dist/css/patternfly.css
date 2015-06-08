@@ -9756,9 +9756,6 @@ label {
   font-weight: normal;
   font-style: normal;
 }
-.pficon[class*="-exclamation"] {
-  color: #fff;
-}
 [class^="pficon-"],
 [class*=" pficon-"] {
   display: inline-block;
@@ -9772,20 +9769,6 @@ label {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.pficon-layered {
-  position: relative;
-}
-.pficon-layered .pficon:first-child {
-  position: absolute;
-  z-index: 1;
-}
-.pficon-layered .pficon:first-child + .pficon {
-  position: relative;
-  z-index: 2;
-}
-.pficon-warning-exclamation:before {
-  content: "\e60d";
 }
 .pficon-screen:before {
   content: "\e600";
@@ -9813,31 +9796,17 @@ label {
 .pficon-folder-close:before {
   content: "\e607";
 }
-.pficon-error-exclamation:before {
-  content: "\e608";
-}
-.pficon-error-octagon:before {
-  color: #cc0000;
-  content: "\e609";
-}
 .pficon-edit:before {
   content: "\e60a";
 }
 .pficon-close:before {
   content: "\e60b";
 }
-.pficon-warning-triangle:before {
-  color: #ec7a08;
-  content: "\e60c";
-}
 .pficon-user:before {
   content: "\e60e";
 }
 .pficon-users:before {
   content: "\e60f";
-}
-.pficon-add:before {
-  content: "\e61a";
 }
 .pficon-add-circle-o:before {
   content: "\e61b";
@@ -9884,14 +9853,45 @@ label {
 .pficon-home:before {
   content: "\e618";
 }
-.pficon-remove:before {
-  content: "\e619";
-}
 .pficon-cluster:before {
   content: "\e620";
 }
 .pficon-container-node:before {
   content: "\e621";
+}
+.pficon[class*="-exclamation"] {
+  color: #fff;
+}
+.pficon-layered {
+  position: relative;
+}
+.pficon-layered .pficon:first-child {
+  position: absolute;
+  z-index: 1;
+}
+.pficon-layered .pficon:first-child + .pficon {
+  position: relative;
+  z-index: 2;
+}
+.pficon-error-exclamation:before {
+  content: "\e608";
+}
+.pficon-error-octagon:before {
+  color: #cc0000;
+  content: "\e609";
+}
+.pficon-warning-triangle:before {
+  color: #ec7a08;
+  content: "\e60c";
+}
+.pficon-warning-exclamation:before {
+  content: "\e60d";
+}
+.pficon-add:before {
+  content: "\e61a";
+}
+.pficon-remove:before {
+  content: "\e619";
 }
 .navbar-nav > li > .dropdown-menu.infotip {
   border-top-width: 1px !important;
