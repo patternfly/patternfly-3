@@ -1,10 +1,13 @@
 /*global module,require*/
 var lrSnippet = require('connect-livereload')();
+
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
-};
+  };
 
 module.exports = function (grunt) {
+  'use strict';
+
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -12,16 +15,13 @@ module.exports = function (grunt) {
   var projectConfig = {
       dist: 'dist',
       src: ''
-  };
+    };
 
   try {
       projectConfig.src = require('./bower.json').appPath || projectConfig.src;
-  } catch (e) {}
+    } catch (e) {}
 
   grunt.initConfig({
-    clean: {
-      build: '<%= config.dist %>'
-    },
     config: projectConfig,
     connect: {
       server: {
@@ -32,10 +32,16 @@ module.exports = function (grunt) {
                 lrSnippet,
                 mountFolder(connect, projectConfig.src),
                 mountFolder(connect, projectConfig.src + 'tests')
-            ];
+              ];
           },
           port: 9000
         }
+      }
+    },
+    concat: {
+      dist: {
+        src: ['src/js/common.js', 'src/js/*.js'],
+        dest: 'dist/js/patternfly.js'
       }
     },
     jekyll: {
@@ -48,10 +54,17 @@ module.exports = function (grunt) {
         }
       }
     },
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc',
+        ignores: ['**.min.js']
+      },
+      files: ['gruntfile.js', 'src/**/*.js']
+    },
     less: {
       development: {
         files: {
-          'dist/css/patternfly.css': 'less/patternfly.less'
+          'dist/css/patternfly.css': 'src/less/patternfly.less'
         },
         options: {
           paths: ['less/']
@@ -59,7 +72,7 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          'dist/css/patternfly.min.css': 'less/patternfly.less'
+          'dist/css/patternfly.min.css': 'src/less/patternfly.less'
         },
         options: {
           cleancss: true,
@@ -67,6 +80,19 @@ module.exports = function (grunt) {
         }
       }
     },
+    clean: {
+			distCSS: 'dist/css/**',
+      distJS: 'dist/js/**',
+      distLESS: 'dist/less/**',
+		},
+		copy: {
+			less: {
+				expand: true,
+				cwd: 'src/less',
+				src: ['variables.less', 'mixins.less'],
+				dest: 'dist/less'
+			}
+		},
     uglify: {
       options: {
         mangle: false
@@ -79,7 +105,7 @@ module.exports = function (grunt) {
     },
     watch: {
       css: {
-        files: 'less/*.less',
+        files: 'src/less/*.less',
         tasks: ['less']
       },
       jekyll: {
@@ -90,6 +116,10 @@ module.exports = function (grunt) {
         files: ['dist/js/*.js', '!dist/js/*.min.js'],
         tasks: ['uglify']
       },
+      concat: {
+        files: ['src/js/*.js'],
+        tasks: ['concat']
+      },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'tests/*.html', '!tests-src/*.html']
       },
@@ -99,13 +129,28 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('lint', [
+    'jshint'
+  ]);
+
   grunt.registerTask('build', [
+    'clean:distCSS',
+    'clean:distJS',
+    'clean:distLESS',
+    'lint',
+    'concat:dist',
     'jekyll',
     'less',
+    'copy:less',
     'uglify'
   ]);
 
-  grunt.registerTask('server', [
+  grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
+    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+    grunt.task.run(['serve:' + target]);
+  });
+
+  grunt.registerTask('serve', [
     'connect:server',
     'watch'
   ]);
