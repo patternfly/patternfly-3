@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>Bootstrap-Datepicker - PatternFly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../dist/img/apple-touch-icon-57-precomposed.png">
+    <link href="../dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+    <link href="tests.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="../components/jquery/dist/jquery.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../dist/js/patternfly.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Bootstrap-Datepicker</h1>
+      </div>
+      <div class="alert alert-warning">
+        <span class="pficon pficon-warning-triangle-o"></span>
+        These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a>, <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://bootstrap-datepicker.readthedocs.org/en/latest/">http://bootstrap-datepicker.readthedocs.org/en/latest/</a>.
+      </div>
+      <hr>
+      <h2>Text Input</h2>
+      <input type="text" class="form-control bootstrap-datepicker">
+      <h2>Component</h2>
+      <div class="input-group date">
+        <input type="text" class="form-control"><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+      <h2>Inline</h2>
+      <div class="bootstrap-datepicker-inline"></div>
+      <h2>Range</h2>
+      <div class="input-daterange input-group">
+        <input type="text" class="form-control" name="start">
+        <span class="input-group-addon">to</span>
+        <input type="text" class="form-control" name="end">
+      </div>
+      <script>
+        // Initialize Boostrap-Datepicker
+        $('.bootstrap-datepicker, .input-group.date, .bootstrap-datepicker-inline').datepicker({
+          autoclose: true,
+          orientation: "top auto",
+          todayBtn: "linked",
+          todayHighlight: true
+        });
+        $('.input-daterange').datepicker({
+          autoclose: true,
+          todayBtn: "linked",
+          todayHighlight: true
+        });
+      </script>
+    </div><!-- /container -->
+  </body>
+</html>
