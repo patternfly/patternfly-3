@@ -2,7 +2,7 @@
 // Set height of sidebar-pf to height of document minus height of navbar-pf if not mobile
 (function ($) {
   'use strict';
-  var sidebar = function () {
+  $.fn.sidebar = function () {
     var documentHeight = 0,
       navbarpfHeight = 0,
       colHeight = 0;
@@ -18,14 +18,14 @@
   $(document).ready(function () {
     // Call sidebar() on ready if .sidebar-pf exists and .datatable does not exist
     if ($('.sidebar-pf').length > 0 && $('.datatable').length === 0) {
-      sidebar();
+      $.fn.sidebar();
     }
   });
 
   $(window).resize(function () {
     // Call sidebar() on resize if .sidebar-pf exists
     if ($('.sidebar-pf').length > 0) {
-      sidebar();
+      $.fn.sidebar();
     }
   });
 }(jQuery));
