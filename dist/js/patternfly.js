@@ -35,7 +35,7 @@
 (function ($) {
   'use strict';
   // PatternFly Namespace
-  var PatternFly = this.PatternFly || {};
+  var PatternFly = window.PatternFly || {};
 
   PatternFly.popovers = function (selector) {
     var allpopovers = $(selector);
