@@ -77,6 +77,30 @@ module.exports = function (grunt) {
         }
       }
     },
+    jslint: {
+      client: {
+        src: [
+          'dist/js/patternfly.js'
+        ],
+        directives: {
+          // node environment
+          node: false,
+          // browser environment
+          browser: true,
+          // allow dangling underscores
+          nomen: true,
+          // allow todo statements
+          todo: true,
+          // allow unused parameters
+          unparam: true,
+          // add predefined libraries
+          predef: [
+            'jQuery'
+          ],
+          indent: 2
+        }
+      }
+    },
     watch: {
       css: {
         files: 'less/*.less',
@@ -102,6 +126,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'jekyll',
     'less',
+    'jslint',
     'uglify'
   ]);
 

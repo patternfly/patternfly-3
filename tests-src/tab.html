@@ -64,7 +64,7 @@ weight: 5
           "fnDrawCallback": function( oSettings ) {
             // if .sidebar-pf exists, call sidebar() after the data table is drawn
             if ($('.sidebar-pf').length > 0) {
-              sidebar();
+              $(document).sidebar();
             }
           }
         });
