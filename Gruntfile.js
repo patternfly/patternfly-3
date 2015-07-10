@@ -29,9 +29,9 @@ module.exports = function (grunt) {
           hostname: '0.0.0.0',
           middleware: function (connect) {
             return [
-                lrSnippet,
-                mountFolder(connect, projectConfig.src),
-                mountFolder(connect, projectConfig.src + 'tests')
+              lrSnippet,
+              mountFolder(connect, projectConfig.src),
+              mountFolder(connect, projectConfig.src + 'tests')
             ];
           },
           port: 9000
@@ -45,6 +45,30 @@ module.exports = function (grunt) {
       tests: {
         options: {
           dest: 'tests'
+        }
+      }
+    },
+    jslint: {
+      client: {
+        src: [
+          'dist/js/patternfly.js'
+        ],
+        directives: {
+          // node environment
+          node: false,
+          // browser environment
+          browser: true,
+          // allow dangling underscores
+          nomen: true,
+          // allow todo statements
+          todo: true,
+          // allow unused parameters
+          unparam: true,
+          // add predefined libraries
+          predef: [
+            'jQuery'
+          ],
+          indent: 2
         }
       }
     },
@@ -77,30 +101,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    jslint: {
-      client: {
-        src: [
-          'dist/js/patternfly.js'
-        ],
-        directives: {
-          // node environment
-          node: false,
-          // browser environment
-          browser: true,
-          // allow dangling underscores
-          nomen: true,
-          // allow todo statements
-          todo: true,
-          // allow unused parameters
-          unparam: true,
-          // add predefined libraries
-          predef: [
-            'jQuery'
-          ],
-          indent: 2
-        }
-      }
-    },
     watch: {
       css: {
         files: 'less/*.less',
@@ -112,7 +112,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['dist/js/*.js', '!dist/js/*.min.js'],
-        tasks: ['uglify']
+        tasks: ['jslint', 'uglify']
       },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'tests/*.html', '!tests-src/*.html']
