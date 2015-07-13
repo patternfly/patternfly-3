@@ -14,16 +14,8 @@
     height: auto;
     padding: 12px 0;
     margin: 0 0 0 20px;
-    .ie8 & {
-      background: url('@{img-path}/@{img-brand-ie8}') no-repeat 0 49%;
-      min-width: @navbar-pf-navbar-navbar-brand-min-width;
-    }
     img {
       display: block;
-      .ie8 & {
-        height: 10px;
-        width: 0;
-      }
     }
   }
   .navbar-collapse {
@@ -404,9 +396,6 @@
         &.context-bootstrap-select .filter-option {
           max-width: 160px;
           text-overflow: ellipsis;
-          .ie8 & {
-            max-width: none;
-          }
         }
         &.dropdown {
           border-bottom: 0;
