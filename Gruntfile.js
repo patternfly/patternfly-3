@@ -38,6 +38,16 @@ module.exports = function (grunt) {
         }
       }
     },
+    csscount: {
+      dev: {
+        src: [
+          'dist/css/patternfly.min.css', 'dist/css/patternfly-additions.min.css'
+        ],
+        options: {
+          maxSelectors: 4096
+        }
+      }
+    },
     jekyll: {
       options: {
         src: 'tests-src'
@@ -108,6 +118,10 @@ module.exports = function (grunt) {
         files: 'less/*.less',
         tasks: ['less']
       },
+      csscount: {
+        files: ['dist/css/patternfly.min.css', 'dist/css/patternfly-additions.min.css'],
+        tasks: ['csscount']
+      },
       jekyll: {
         files: 'tests-src/**/*',
         tasks: ['jekyll']
@@ -129,7 +143,8 @@ module.exports = function (grunt) {
     'jekyll',
     'less',
     'jslint',
-    'uglify'
+    'uglify',
+    'csscount'
   ]);
 
   grunt.registerTask('server', [
