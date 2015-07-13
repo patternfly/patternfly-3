@@ -8426,8 +8426,7 @@ button.close {
 .alert .alert-link:hover {
   color: #00618a;
 }
-.alert > .pficon,
-.alert > .pficon-layered {
+.alert > .pficon {
   font-size: 20px;
   position: absolute;
   left: 7px;

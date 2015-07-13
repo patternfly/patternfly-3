@@ -1092,40 +1092,6 @@ table.datatable th:active {
 .pficon-kubernetes:before {
   content: "\e627";
 }
-.pficon[class*="-exclamation"] {
-  color: #fff;
-}
-.pficon-layered {
-  position: relative;
-}
-.pficon-layered .pficon:first-child {
-  position: absolute;
-  z-index: 1;
-}
-.pficon-layered .pficon:first-child + .pficon {
-  position: relative;
-  z-index: 2;
-}
-.pficon-error-exclamation:before {
-  content: "\e608";
-}
-.pficon-error-octagon:before {
-  color: #cc0000;
-  content: "\e609";
-}
-.pficon-warning-triangle:before {
-  color: #ec7a08;
-  content: "\e60c";
-}
-.pficon-warning-exclamation:before {
-  content: "\e60d";
-}
-.pficon-add:before {
-  content: "\e61a";
-}
-.pficon-remove:before {
-  content: "\e619";
-}
 .navbar-nav > li > .dropdown-menu.infotip {
   border-top-width: 1px !important;
   margin-top: 10px;
