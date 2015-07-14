@@ -17,6 +17,6 @@
     "commit": "2c88d7dc85ff255ad36db427bc7d359daa36f2dc"
   },
   "_source": "git://github.com/DataTables/ColVis.git",
-  "_target": "~1.1.1",
+  "_target": "~1.1.2",
   "_originalSource": "datatables-colvis"
 }
