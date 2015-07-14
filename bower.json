@@ -25,7 +25,7 @@
     "bootstrap": "~3.3.4",
     "bootstrap-combobox": "~1.1.6",
     "bootstrap-select": "~1.5.4",
-    "bootstrap-treeview": "~1.0.1",
+    "bootstrap-treeview": "~1.2.0",
     "c3": "~0.4.10",
     "datatables": "~1.10.7",
     "datatables-colreorder": "~1.1.3",
