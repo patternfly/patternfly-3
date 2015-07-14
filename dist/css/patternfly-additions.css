@@ -530,6 +530,18 @@ select.mobile-device {
 .open .dropdown-toggle.combobox-container .input-group-addon {
   background-image: none;
 }
+.combobox-container .input-group-addon:active:hover,
+.combobox-container .input-group-addon.active:hover,
+.open .dropdown-toggle.combobox-container .input-group-addon:hover,
+.combobox-container .input-group-addon:active:focus,
+.combobox-container .input-group-addon.active:focus,
+.open .dropdown-toggle.combobox-container .input-group-addon:focus,
+.combobox-container .input-group-addon:active.focus,
+.combobox-container .input-group-addon.active.focus,
+.open .dropdown-toggle.combobox-container .input-group-addon.focus {
+  background-color: #e2e2e2;
+  border-color: #a5a5a5;
+}
 .combobox-container .input-group-addon.disabled,
 .combobox-container .input-group-addon[disabled],
 fieldset[disabled] .combobox-container .input-group-addon,

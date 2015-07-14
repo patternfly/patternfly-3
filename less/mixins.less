@@ -26,6 +26,12 @@
   &.active,
   .open .dropdown-toggle& {
     background-image: none;
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken(@background, 5%);
+          border-color: darken(@border, 7%);
+    }
   }
   &.disabled,
   &[disabled],

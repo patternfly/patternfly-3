@@ -57,7 +57,7 @@
 
       // Bind x icon to close popover
       $title.find('.close').on('click', function () {
-        $this.popover('toggle');
+        $this.popover('hide');
       });
 
       // Prevent href="#" page scroll to top
