@@ -24,6 +24,7 @@
   "devDependencies": {
     "bootstrap": "~3.3.5",
     "bootstrap-combobox": "~1.1.6",
+    "bootstrap-datepicker": "~1.4.0",
     "bootstrap-select": "~1.7.3",
     "bootstrap-treeview": "~1.2.0",
     "c3": "~0.4.10",
