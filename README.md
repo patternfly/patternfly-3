@@ -2,7 +2,9 @@
 
 This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations.
 
-## Install with Bower
+# Installation
+
+### Install with Bower
 
 PatternFly can be installed and managed through [Bower](http://bower.io/). To do so, either add `patternfly` as a dependency in your `bower.json` or run the following:
 
@@ -10,17 +12,25 @@ PatternFly can be installed and managed through [Bower](http://bower.io/). To do
 bower install patternfly
 ```
 
-## RPM
+### Install with npm
+
+PatternFly can be installed and managed through [npm](https://www.npmjs.com/).  To do so, run the following:
+
+```
+npm install patternfly
+```
+
+### RPM
 
 PatternFly is also available as an RPM.  See https://copr.fedoraproject.org/coprs/patternfly/patternfly1/.
 
-## AngularJS
-
-A set of [common AngularJS directives](https://github.com/patternfly/angular-patternfly) for use with PatternFly is available.
-
-## Sass and/or Rails
+### Sass and/or Rails
 
 A [Sass port of PatternFly](https://github.com/patternfly/patternfly-sass) is available, as is a [Sass-based Rails Gem](https://rubygems.org/gems/patternfly-sass).
+
+### AngularJS
+
+A set of [common AngularJS directives](https://github.com/patternfly/angular-patternfly) for use with PatternFly is available.
 
 ## Dependencies
 
@@ -98,11 +108,11 @@ The HTML pages in `tests/` are generated using Jekyll.  Do *not* edit these file
 
 ## Release
 
-PatternFly is released through the Bower package manager and RPM. 
+PatternFly is released through the Bower, npm, and RPM. 
 
-### Bower
+### Bower and npm
 
-The Bower package manager determines available versions and installs based upon git tags. To release a new version version of PatternFly, edit `bower.json`, `package.json`, and `MAKEFILE` accordingly.
+To release a new version version of PatternFly, edit `bower.json`, `package.json`, and `MAKEFILE` accordingly.
 
 Update the version listed in `bower.json` by editing the file and changing the line:
 
@@ -138,7 +148,13 @@ git tag <new_version>
 git push && git push --tags
 ```
 
-The new version will now be automatically available via Bower.
+The Bower package manager determines available versions and installs based upon git tags, so the new version will now be automatically available via Bower.
+
+To publish a new version to npm, run:
+
+```
+npm publish
+```
 
 ### RPM
 
