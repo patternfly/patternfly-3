@@ -84,7 +84,7 @@ In development, styling is written and managed through multiple lesscss files. I
 
     grunt build
 
-This task will compile and minify the lesscss files into a single CSS file located at `dist/css/patternfly.min.css`.
+This task will compile and minify the lesscss files into CSS files located at `dist/css/patternfly.min.css` and `dist/css/patternfly-additional.min.css`.
 
 ### PatternFlyIcons Font
 
@@ -183,12 +183,9 @@ See [https://www.patternfly.org](https://www.patternfly.org) and [http://getboot
 
 ### Browser and Device Support
 
-Since PatternFly is based on Bootstrap, PatternFly supports [the same browsers as Bootstrap](http://getbootstrap.com/getting-started/#support), plus the latest version of [Firefox for Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux).
+Since PatternFly is based on Bootstrap, PatternFly supports [the same browsers as Bootstrap](http://getbootstrap.com/getting-started/#support) **excluding Internet Explorer 8**, plus the latest version of [Firefox for Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux).
 
-*Important:*  the following features of PatternFly are not compatible with Internet Explorer 8:
-
-* [Bootstrap Tree View](https://github.com/jonmiles/bootstrap-treeview)
-* Charts (which utilizes [C3](http://c3js.org/) and [D3](https://github.com/mbostock/d3/wiki#browser--platform-support))
+*Important:*  starting with the v2.0.0 release, **PatternFly no longer supports Internet Explorer 8**.
 
 ### Product Backlog
 
