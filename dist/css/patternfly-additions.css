@@ -1551,8 +1551,6 @@ select.mobile-device {
   fill: #000;
   /*  font-size: 28px !important;*/
 }
-/* Bootstrap overrides */
-/* PatternFly-specific */
 .blank-slate-pf {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;

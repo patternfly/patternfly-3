@@ -8630,8 +8630,6 @@ button.close {
 .fa-medium:before {
   content: "\f23a";
 }
-/* Bootstrap overrides */
-/* PatternFly-specific */
 .alert {
   border-width: 2px;
   padding-left: 34px;
