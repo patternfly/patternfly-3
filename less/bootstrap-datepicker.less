@@ -33,20 +33,6 @@
       &.selected.disabled:hover {
         text-shadow: none;
       }
-      &.today,
-      &.today:hover,
-      &.today.disabled,
-      &.today.disabled:hover,{
-        @today-bg: #80c4e6;
-        .button-variant(@text-color, @today-bg, transparent);
-      }
-      &.range.today,
-      &.range.today:hover,
-      &.range.today.disabled,
-      &.range.today.disabled:hover {
-        @today-bg: mix(#80c4e6, @gray-lighter, 40%);
-        .button-variant(@text-color, @today-bg, transparent);
-      }
       span {
         border-radius: @border-radius-base;
         &.active.active,
@@ -56,7 +42,15 @@
           background: @dropdown-link-active-bg;
           text-shadow: none;
         }
+        &:hover {
+          background: @dropdown-link-hover-bg;
+        }
       }
+    }
+  }
+  thead tr:first-child th, tfoot tr th {
+    &:hover {
+      background: @dropdown-link-hover-bg;
     }
   }
 }
