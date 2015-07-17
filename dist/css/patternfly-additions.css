@@ -1572,8 +1572,8 @@ select.mobile-device {
 }
 .blank-slate-pf .blank-slate-pf-icon {
   color: #999999;
-  font-size: 57.599999999999994px;
-  line-height: 57.599999999999994px;
+  font-size: 57.6px;
+  line-height: 57.6px;
 }
 .blank-slate-pf .blank-slate-pf-main-action {
   margin-top: 20px;
@@ -3741,3 +3741,4 @@ table.datatable th:active {
 .prettyprint ol.linenums {
   margin-bottom: 0;
 }
+/*# sourceMappingURL=patternfly-additions.css.map */

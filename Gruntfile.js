@@ -39,12 +39,26 @@ module.exports = function (grunt) {
       }
     },
     csscount: {
-      dev: {
+      production: {
         src: [
-          'dist/css/patternfly.min.css', 'dist/css/patternfly-additions.min.css'
+          'dist/css/patternfly*.min.css'
         ],
         options: {
           maxSelectors: 4096
+        }
+      }
+    },
+    cssmin: {
+      production: {
+        files: [{
+          expand: true,
+          cwd: 'dist/css',
+          src: ['patternfly*.css', '!*.min.css'],
+          dest: 'dist/css',
+          ext: '.min.css',
+        }],
+        options: {
+          sourceMap: true
         }
       }
     },
@@ -83,23 +97,28 @@ module.exports = function (grunt) {
       }
     },
     less: {
-      development: {
+      patternfly: {
         files: {
           'dist/css/patternfly.css': 'less/patternfly.less',
-          'dist/css/patternfly-additions.css': 'less/patternfly-additions.less',
         },
         options: {
-          paths: ['less/']
+          paths: ['less/'],
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapFilename: 'dist/css/patternfly.css.map',
+          sourceMapURL: 'patternfly.css.map'
         }
       },
-      production: {
+      patternflyAdditions: {
         files: {
-          'dist/css/patternfly.min.css': 'less/patternfly.less',
-          'dist/css/patternfly-additions.min.css': 'less/patternfly-additions.less'
+          'dist/css/patternfly-additions.css': 'less/patternfly-additions.less'
         },
         options: {
-          cleancss: true,
-          paths: ['less/']
+          paths: ['less/'],
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapFilename: 'dist/css/patternfly-additions.css.map',
+          sourceMapURL: 'patternfly-additions.css.map'
         }
       }
     },
@@ -114,17 +133,17 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      css: {
-        files: 'less/*.less',
-        tasks: ['less']
-      },
-      csscount: {
-        files: ['dist/css/patternfly.min.css', 'dist/css/patternfly-additions.min.css'],
-        tasks: ['csscount']
-      },
       jekyll: {
         files: 'tests-src/**/*',
         tasks: ['jekyll']
+      },
+      less: {
+        files: 'less/*.less',
+        tasks: ['less']
+      },
+      css: {
+        files: ['dist/css/patternfly*.css', 'dist/css/!*.min.css'],
+        tasks: ['cssmin', 'csscount']
       },
       js: {
         files: ['dist/js/*.js', '!dist/js/*.min.js'],
@@ -142,9 +161,10 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'jekyll',
     'less',
+    'cssmin',
+    'csscount',
     'jslint',
-    'uglify',
-    'csscount'
+    'uglify'
   ]);
 
   grunt.registerTask('server', [
