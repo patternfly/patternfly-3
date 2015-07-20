@@ -1,7 +1,7 @@
 /*global module,require*/
 var lrSnippet = require('connect-livereload')();
 var mountFolder = function (connect, dir) {
-    return connect.static(require('path').resolve(dir));
+  return connect.static(require('path').resolve(dir));
 };
 
 module.exports = function (grunt) {
@@ -10,8 +10,8 @@ module.exports = function (grunt) {
 
   // configurable paths
   var projectConfig = {
-      dist: 'dist',
-      src: ''
+    dist: 'dist',
+    src: ''
   };
 
   try {
