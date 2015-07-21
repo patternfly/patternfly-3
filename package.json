@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "devDependencies": {
@@ -15,5 +15,14 @@
     "grunt-jekyll": "^0.4.2",
     "grunt-jslint": "^1.1.14",
     "matchdep": "~0.3.0"
-  }
+  },
+  "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patternfly/patternfly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/patternfly/patternfly/issues"
+  },
+  "homepage": "https://github.com/patternfly/patternfly"
 }
