@@ -2574,6 +2574,10 @@ table.datatable th:active {
 .height-100 {
   height: 100%;
 }
+.fixed-container-colored-bg {
+  height: 100%;
+  background: #f5f5f5;
+}
 .fixed-left-nav-pf {
   margin-left: 240px;
   transition: all 0.2s cubic-bezier(0.35, 0, 0.25, 1);
@@ -3362,7 +3366,7 @@ table.datatable th:active {
     padding-left: 0px;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 460px) {
   .navbar-header-pf .navbar-brand {
     display: none;
   }
