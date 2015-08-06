@@ -1,0 +1,20 @@
+---
+categories: [Layouts]
+css-extra: false
+layout: fixed-layout
+resource: true
+title: Sticky Header & Footer
+weight: 8
+---
+<div class="container-fluid">
+  {% include layouts-navbar-small.html %}
+</div><!-- /container -->
+
+<div class="container-fluid fixed-container-pf">
+  <div class="fixed-container-inner-pf">
+    <!-- Inner Content Goes Here -->
+    Hello Content
+  </div>
+</div>
+
+{% include layouts-footer.html %}
