@@ -1,0 +1,38 @@
+.height-100 {
+  height: 100%;
+}
+
+.fixed-left-nav-pf {
+	margin-left: (@navigation-left-hand-width-pf + 5px);
+	transition: @flyout-transition-pf;
+}
+
+.fixed-collapsed-left-nav-pf{
+	margin-left: (@navigation-left-hand-collapsed-width-pf + 5px);
+	transition: @flyout-transition-pf;
+}
+
+.fixed-hide-left-nav-pf {
+	margin-left: 5px;
+	transition: @flyout-transition-pf;
+}
+
+.fixed-container-pf {
+  height: 100%;
+  overflow: auto;
+}
+
+.fixed-container-inner-pf {
+  margin-top: @navbar-header-height-pf;
+  margin-bottom: @footer-height-pf;
+}
+
+.fixed-footer-pf {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: @footer-height-pf;
+    background-color: @footer-bg-color-pf;
+    color: #fff;
+    padding: 5px 20px;
+}
