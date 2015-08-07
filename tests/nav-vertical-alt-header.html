@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="height-100">
+  <!--<![endif]-->
+    <head>
+    <title>Alternate Left Hand Navigation With Sticky Header - PatternFly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <!-- iPad retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../dist/img/apple-touch-icon-precomposed-152.png">
+    <!-- iPad retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-precomposed-144.png">
+    <!-- iPad non-retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../dist/img/apple-touch-icon-precomposed-76.png">
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-precomposed-72.png">
+    <!-- iPhone 6 Plus icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../dist/img/apple-touch-icon-precomposed-180.png">
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-precomposed-114.png">
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../dist/img/apple-touch-icon-precomposed-57.png">
+    <link href="../dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+    <link href="../dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
+    <script src="../components/jquery/dist/jquery.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/patternfly.min.js"></script>
+  </head>
+  <body class="height-100 container-pf-scroll-body">
+    <header class="navbar navbar-pf-header" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <a href="../" class="navbar-brand"><img class="navbar-brand-icon" src="../dist/img/logo.svg" alt=""/><img class="navbar-brand-name" src="../dist/img/brand.svg" alt="PatternFly Enterprise Application" /></a>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <nav class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="#" target="_blank" class="action"><i title="Open" class="pf-icon pficon-export fa-rotate-270"></i></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle action" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i title="Notifications" class="fa pficon-flag"></i>
+        <span class="notification-icon-count">2</span>
+        </a>
+        <div class="dropdown-menu infotip bottom-right">
+          <div class="arrow"></div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
+            </li>
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Error: System Failure
+            </li>
+          </ul>
+          <div class="footer">
+            <a>Clear Messages</a>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle action" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i title="Help" class="fa pficon-help"></i>
+        <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle action" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i title="Username" class="fa pficon-user"></i>
+        <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li class="action"><a href="#">Preferences</a></li>
+          <li class="action"><a href="#">Logout</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="action"><i title="Search" class="fa fa-search"></i></a></li>
+    </ul>
+    </nav><!-- /.navbar-collapse -->
+    </header> <!--/.navbar-->
+<div class="nav-pf-vertical-alt">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <a href="#">
+      <i class="fa fa-dashboard" title="Dashboard"></i>
+      <span class="list-group-item-value">Dashboard</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+      <i class="fa fa-file-o" title="Services"></i>
+      <span class="list-group-item-value">My Services</span>
+      <span ng-if="item.count" class="badge">12</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+      <i class="fa fa-file-text-o" title="My Requests"></i>
+      <span class="list-group-item-value">My Requests</span>
+      <span ng-if="item.count" class="badge">2</span>
+      </a>
+    </li>
+    <li class="list-group-item active">
+      <a href="#">
+      <i class="fa fa-copy" title="My Items"></i>
+      <span class="list-group-item-value">My Items</span>
+      </a>
+    </li>
+    <div class="list-group-item-secondary hidden-sm hidden-md hidden-lg">
+      <li class="list-group-item">
+        <a href="#">
+        <i class="pf-icon pficon-export fa-rotate-270" title="Launch"></i>
+        <span class="list-group-item-value">Launch</span>
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="#">
+        <i class="fa pficon-flag" title="Launch"></i>
+        <span class="list-group-item-value">Notifications</span>
+        <span ng-if="item.count" class="badge notifications">2</span>
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="#">
+        <i class="fa pficon-help" title="Help"></i>
+        <span class="list-group-item-value">Help</span>
+        </a>
+      </li>
+       <li class="list-group-item">
+        <a href="#">
+        <i class="fa fa-info-circle" title="About"></i>
+        <span class="list-group-item-value">About</span>
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="#">
+        <i class="fa pficon-user" title="Preferences"></i>
+        <span class="list-group-item-value">Preferences</span>
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="#">
+        <i class="fa fa-sign-out" title="Preferences"></i>
+        <span class="list-group-item-value">Log Out</span>
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="#">
+        <i class="fa fa-search" title="Search"></i>
+        <span class="list-group-item-value">Search</span>
+        </a>
+      </li>
+    </div>
+  </ul>
+</div>
+<div class="container-fluid container-pf-scroll container-pf-nav-pf-vertical-alt">
+  <!-- Inner Content Goes Here -->
+  <p>The standard Lorem Ipsum passage, used since the 1500s
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+  <p>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+  1914 translation by H. Rackham</p>
+
+  <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
+
+  <p>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+  "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+  1914 translation by H. Rackham</p>
+
+  <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</p>
+</div>
+  </body>
+</html>

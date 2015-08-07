@@ -1,34 +1,22 @@
-.navbar-header-pf {
-  margin-bottom: 0px;
-  height: @navbar-header-height-pf;
-  padding-top: 3px;
+.navbar-pf-header {
+  background: @navbar-pf-header-bg-color url('../img/nav-header-banner.svg') top left no-repeat;
+  border: none;
+  border-radius: 0px;
   border-top: 2px solid @navbar-pf-border-color;
-  background: @navbar-header-bg-color-pf url('../img/nav-header-banner.png') top left no-repeat;
+  height: @navbar-pf-header-height;
+  margin-bottom: 0px;
+  padding-top: 3px;
 
-  .navbar-brand {
-    padding: 8px 20px 15px 15px;
-
-    .appIcon {
-      display: inline;
-      margin-right: 15px;
-    }
-
-    .appName {
-      display: inline;
-      height: 12px;
-    }
+  .infotip.bottom-right .arrow {
+    left: 90%;
   }
-
-  .navbar-right {
-    margin-right: 10px;
-  }
-
+  
   .nav {
-  	padding-top: 3px;
+    padding-top: 2px;
 
   	.action {
-	  .fa, .caret, .pf-icon{
-  	    color: @navbar-header-color-pf;
+	    .caret, .fa, .pf-icon {
+  	    color: @navbar-pf-header-color;
         font-size: 18px;
   	  }
 
@@ -39,79 +27,91 @@
       &:hover{
         background-color: transparent;
 
-        .fa, .caret, .pf-icon{
-      	  color: #fff;
+        .caret, .fa, .pf-icon {
+      	  color: @navbar-pf-header-active-color;
   	    }
       }
 
       &:focus{
         background: transparent;
 
-        .fa, .caret {
-      	  color: @navbar-header-active-color-pf;
+        .caret, .fa {
+      	  color: @navbar-pf-header-active-color;
   	    }
-      }
-      
-      .notification-icon-count {
-        display: inline-block;
-        height: 15px;
-        width: 15px;
-        position: relative;
-        right: 8px;
-        top: 6px;
-        border-radius: 50%;
-        background-color: #ce0000;
-        color: @navbar-header-active-color-pf;
-        text-align: center;
-        line-height: 14px;
-        cursor: pointer;
-        font-size: 10px;
-        padding-left: 0px;
       }
 
       .dropdown-menu {
-    	color: @gray-dark;
-    	z-index: 2000;
-    	margin-top: -5px;
-    	font-size: 12px;
+        color: @gray-dark;
+        font-size: @font-size-base;
+        margin-top: -5px;
+        z-index: 2000;
       }
+      
+      .notification-icon-count {
+        background-color: @notification-badge-color;
+        border-radius: 50%;
+        color: @navbar-pf-header-active-color;
+        cursor: pointer;
+        font-size: 9px;
+        font-weight: 700;
+        height: 15px;
+        line-height: 15px;
+        padding-left: 0px;
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
+        text-align: center;
+        width: 15px;    
+      }
+
     }
 
-    .open > a.action, .open > a.action:hover, .open > a.action:focus {
-  		background: transparent;
+    .open > a.action {
+      &, &:hover, &:focus {
+        background: transparent;
 
-  		.fa, .caret, .pf-icon {
-      	  color: @navbar-header-active-color-pf;
-  	    }
-  	}
+        .caret, .fa, .pf-icon {
+          color: @navbar-pf-header-active-color;
+        }
+      }
+    }
+  }
 
+  .navbar-brand {
+    padding: 8px 20px 15px 0px;
+
+    .navbar-brand-name {
+      display: inline;
+      height: @navbar-pf-header-brand-name-height;
+    }
+
+    .navbar-brand-icon {
+      display: inline;
+      height: @navbar-pf-header-brand-icon-height;
+      margin-right: 15px;
+    }
+  }
+
+  //This logo is too long. Need to hide it
+  @media (max-width: 460px) {
+    .navbar-brand .navbar-brand-name{
+      display: none;
+    }
+  }
+
+  .navbar-right {
+    margin-right: 0px;
   }
 
   .navbar-toggle {
   	float: left;
-  	margin-left: 10px;
-  	margin-right: 0px;
+  	margin-left: 12px;
+  	margin-right: 5px;
+    display: block;
 
   	.icon-bar {
-  		background: @navbar-header-color-pf;
+  		background: @navbar-pf-header-color;
   	}
   }
-
-  .infotip.bottom-right .arrow {
-    left: 85%;
-   }
-
-   @media (max-width: 768px) {
-     .navbar-brand {
-    	padding-left: 0px;
-     }
-   }
-
-   //This logo is too long. Need to hide it
-   @media (max-width: 460px) {
-     .navbar-brand {
-    	display: none;
-     }
-   }
 
 }
