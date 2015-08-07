@@ -15,13 +15,19 @@
 @card-pf-border-top-color:                                          transparent;
 @card-pf-container-bg-color:                                        #f5f5f5;
 @card-pf-footer-bg-color:                                           #fafafa;
+@container-nav-pf-vertical-alt-colored-bg:                          #f5f5f5;
+@container-nav-pf-vertical-alt-height-calc:                         calc(~"100% - 60px");
+@container-nav-pf-vertical-alt-with-footer-height-calc:             calc(~"100% - 95px");
 @dropdown-divider-margin:                                           4px 1px;
 @dropdown-link-active-border-color:                                 #0076b7;
 @dropdown-link-hover-border-color:                                  #b3d3e7;
 @dropdown-link-focus-color:                                         #fff;
-@font-family-monospace:                                             Menlo, Monaco, Consolas, monospace;
 @fa-font-path:                                                      "../../components/font-awesome/fonts";
+@flyout-transition-pf:                                              all .2s cubic-bezier(.35,0,.25,1);
+@font-family-monospace:                                             Menlo, Monaco, Consolas, monospace;
 @font-path:                                                         "../fonts";
+@footer-pf-alt-line-height:                                         35px;
+@footer-pf-alt-bg-color:                                            #030303;
 @gray-light-pf:                                                     #aaa;
 @gray-pf:                                                           #4d5258;
 @icon-font-name-fa:                                                 "FontAwesome";
@@ -41,10 +47,27 @@
 @login-container-bg-color-rgba:                                     rgba(255, 255, 255, 0.055);
 @modal-title-padding-horizontal:                                    18px;
 @modal-title-padding-vertical:                                      10px;
+@nav-pf-vertical-alt-active-color:                                  #39a5dc;
+@nav-pf-vertical-alt-background-color:                              #fff;
+@nav-pf-vertical-alt-badge-color:                                   #fff;
+@nav-pf-vertical-alt-collapsed-width:                               70px;
+@nav-pf-vertical-alt-color:                                         #464952;
+@nav-pf-vertical-alt-link-height:                                   63px;
+@nav-pf-vertical-alt-link-padding-left:                             25px;
+@nav-pf-vertical-alt-link-padding-right:                            20px;
+@nav-pf-vertical-alt-link-padding-vertical:                         17px;
+@nav-pf-vertical-alt-separator:                                     #f3f3f3;
+@nav-pf-vertical-alt-width:                                         235px;
 @navbar-pf-active-color:                                            #f1f1f1;
 @navbar-pf-bg-color:                                                #030303; //#393F45
 @navbar-pf-border-color:                                            #199dde;
 @navbar-pf-color:                                                   #cfcfcf;
+@navbar-pf-header-alt-active-color:                                 #fff;
+@navbar-pf-header-alt-bg-color:                                     #030303;
+@navbar-pf-header-alt-brand-line-height:                            31px;
+@navbar-pf-header-alt-brand-padding:                                11px 20px 15px 0;
+@navbar-pf-header-alt-color:                                        #cfcfcf;
+@navbar-pf-header-alt-height:                                       60px;
 @navbar-pf-icon-bar-bg-color:                                       #fff;
 @navbar-pf-navbar-navbar-brand-min-width:                           270px;
 @navbar-pf-navbar-navbar-brand-padding:                             8px 0 7px;
@@ -222,6 +245,7 @@
 @btn-primary-bg-img-stop:                                           @btn-primary-bg;
 @dropdown-link-focus-bg:                                            @link-color;
 @line-height-computed:                                              floor((@font-size-base * @line-height-base));
+@notification-badge-color:                                          @brand-danger;
 @progress-sm:                                                       @line-height-computed - 6;
 @progress-xs:                                                       @line-height-computed - 14;
 @syntax-1:                                                          @btn-danger-bg;
@@ -229,24 +253,3 @@
 @syntax-3:                                                          @brand-success;
 @syntax-4:                                                          @brand-info;
 @tooltip-font-size:                                                 @font-size-base;
-
-// Top Nav Bar Styles
-@navbar-header-bg-color-pf:											#030303;
-@navbar-header-color-pf:											#bbbdbe;
-@navbar-header-active-color-pf:										#fff;
-@navbar-header-height-pf:											60px;
-
-//Layout Styles
-@container-fixed-colored-bg: 										#f5f5f5;
-
-// Collapsible Left Hand Navigation Styles
-@navigation-left-hand-color-pf:         							#464952;
-@navigation-left-hand-background-color-pf: 							#fff;
-@navigation-left-hand-active-color-pf:     							#39a5dc;
-@navigation-left-hand-width-pf:         							235px;
-@navigation-left-hand-collapsed-width-pf:         					70px;
-@flyout-transition-pf: 												all .2s cubic-bezier(.35,0,.25,1);
-
-// Footer Styles
-@footer-height-pf:													35px;
-@footer-bg-color-pf:												#030303;
