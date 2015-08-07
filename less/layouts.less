@@ -1,43 +1,34 @@
 .height-100 {
   height: 100%;
 }
-
-.fixed-container-colored-bg{
-  height: 100%;
+.body-fixed {
+  overflow: hidden;
   background: @container-fixed-colored-bg;
 }
-
 .fixed-left-nav-pf {
-	margin-left: (@navigation-left-hand-width-pf + 5px);
-	transition: @flyout-transition-pf;
+  margin-left: (@navigation-left-hand-width-pf + 5px);
+  transition: @flyout-transition-pf;
 }
-
-.fixed-collapsed-left-nav-pf{
-	margin-left: (@navigation-left-hand-collapsed-width-pf + 5px);
-	transition: @flyout-transition-pf;
+.fixed-collapsed-left-nav-pf {
+  margin-left: (@navigation-left-hand-collapsed-width-pf + 5px);
+  transition: @flyout-transition-pf;
 }
-
 .fixed-hide-left-nav-pf {
-	margin-left: 5px;
-	transition: @flyout-transition-pf;
+  margin-left: 5px;
+  transition: @flyout-transition-pf;
 }
-
 .fixed-container-pf {
-  height: 100%;
+  height: @container-height-calc;
   overflow: auto;
 }
-
-.fixed-container-inner-pf {
-  margin-top: @navbar-header-height-pf;
-  margin-bottom: @footer-height-pf;
-}
-
 .fixed-footer-pf {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: @footer-height-pf;
-    background-color: @footer-bg-color-pf;
-    color: #fff;
-    padding: 5px 20px;
+  background-color: @footer-bg-color-pf;
+  bottom: 0;
+  color: #999;
+  font-size: 11px;
+  height: @footer-height-pf;
+  line-height: @footer-height-pf;
+  padding: 0 20px;
+  position: absolute;
+  width: 100%;
 }
