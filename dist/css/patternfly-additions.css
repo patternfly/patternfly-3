@@ -1721,6 +1721,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border-radius: 0 1px 1px 0;
 }
 .input-daterange .input-group-addon {
+  background-color: #eeeeee;
+  border-color: #bababa;
+  line-height: 1.66666667;
   padding: 2px 6px;
 }
 .bootstrap-select.btn-group.form-control {
