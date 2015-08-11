@@ -8,7 +8,7 @@
 	PKG_DATA_DIR=%{_datadir}/%{name} \\\
 	%{nil}
 
-Name:		patternfly1
+Name:		patternfly2
 Summary:	PatternFly open interface project and its dependencies
 Version:	@PACKAGE_RPM_VERSION@
 Release:	@PACKAGE_RPM_RELEASE@%{?release_suffix}%{?dist}
