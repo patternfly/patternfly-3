@@ -22,7 +22,7 @@ npm install patternfly
 
 ### RPM
 
-PatternFly is also available as an RPM.  See https://copr.fedoraproject.org/coprs/patternfly/patternfly1/.
+PatternFly is also available as an RPM.  See https://copr.fedoraproject.org/coprs/patternfly/patternfly2/.
 
 ### Sass and/or Rails
 
