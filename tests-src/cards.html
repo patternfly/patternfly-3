@@ -11,73 +11,74 @@ weight: 8
     <div class="container-fluid container-cards-pf">
       <div class="row row-cards-pf">
         <div class="col-xs-6 col-sm-4 col-md-2">
-          <div class="card-pf card-pf-accented">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status">
             <h2 class="card-pf-title">
-              Card Title
+              <span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">0</span> Ipsum
             </h2>
             <div class="card-pf-body">
-              <p>
-                [card contents]
+              <p class="card-pf-aggregate-status-notifications">
+                <span class="card-pf-aggregate-status-notification"><a href="#" class="add" data-toggle="tooltip" data-placement="top" title="Add Ipsum"><span class="pficon pficon-add-circle-o"></span></a></span>
               </p>
             </div>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2">
-          <div class="card-pf card-pf-accented">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-with-action">
             <h2 class="card-pf-title">
-              Card Title
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">20</span> Amet</a>
             </h2>
             <div class="card-pf-body">
-              <p>
-                [card contents]
+              <p class="card-pf-aggregate-status-notifications">
+                <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-error-circle-o"></span>4</a></span>
+                <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-warning-triangle-o"></span>1</a></span>
               </p>
             </div>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2">
-          <div class="card-pf card-pf-accented">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-with-action">
             <h2 class="card-pf-title">
-              Card Title
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">9</span> Adipiscing</a>
             </h2>
             <div class="card-pf-body">
-              <p>
-                [card contents]
+              <p class="card-pf-aggregate-status-notifications">
+                <span class="card-pf-aggregate-status-notification"><span class="pficon pficon-ok"></span></span>
               </p>
             </div>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2">
-          <div class="card-pf card-pf-accented">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status">
             <h2 class="card-pf-title">
-              Card Title
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">12</span> Lorem</a>
             </h2>
             <div class="card-pf-body">
-              <p>
-                [card contents]
+              <p class="card-pf-aggregate-status-notifications">
+                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
               </p>
             </div>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2">
-          <div class="card-pf card-pf-accented">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status">
             <h2 class="card-pf-title">
-              Card Title
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">6</span> Dolar Sit</a>
             </h2>
             <div class="card-pf-body">
-              <p>
-                [card contents]
+              <p class="card-pf-aggregate-status-notifications">
+                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
               </p>
             </div>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2">
-          <div class="card-pf card-pf-accented">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status">
             <h2 class="card-pf-title">
-              Card Title
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">199</span> Consectetur</a>
             </h2>
             <div class="card-pf-body">
-              <p>
-                [card contents]
+              <p class="card-pf-aggregate-status-notifications">
+                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
               </p>
             </div>
           </div>
@@ -186,5 +187,7 @@ weight: 8
         $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
         $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
         $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+        // initialize tooltips
+        $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
