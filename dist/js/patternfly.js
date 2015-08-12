@@ -212,3 +212,98 @@
     });
   }
 }(jQuery));
+
+// Util: PatternFly Collapable Left Hand Navigation
+// Must have hamburger menu in top bar for exapand/collapse and class of fixed-left-nav-pf on the peer body content
+(function ($) {
+
+  'use strict';
+
+  $.fn.navigation = function () {
+
+    var navElement = $('.navigation-left-pf'),
+      bodyContentElement = $('.fixed-left-nav-pf'),
+      collapseNavBarButton = $('.action-collapse'),
+      toggleNavBarButton = $('.navbar-toggle'),
+      breakpoints = {
+        'tablet': 768,
+        'desktop': 1024
+      },
+      bindCollapseMenuBehavior = function () {
+        collapseNavBarButton.on('click', function (e) {
+          var $this = $(this);
+          if (navElement.hasClass('collapsed')) {
+            navElement.removeClass('collapsed');
+            $this.addClass('fa-angle-double-left').removeClass('fa-angle-double-right');
+            bodyContentElement.removeClass('fixed-collapsed-left-nav-pf');
+          } else {
+            navElement.addClass('collapsed');
+            $this.removeClass('fa-angle-double-left').addClass('fa-angle-double-right');
+            bodyContentElement.addClass('fixed-collapsed-left-nav-pf');
+          }
+        });
+      },
+      bindToggleMenuBehavior = function () {
+        toggleNavBarButton.on('click', function (e) {
+          if (navElement.hasClass('showMobileNav')) {
+            navElement.removeClass('showMobileNav');
+          } else {
+            navElement.addClass('showMobileNav');
+          }
+        });
+      },
+      checkNavState = function () {
+        var width = $(window).width();
+
+        //Always remove the hidden & peek class
+        navElement.removeClass('hidden showMobileNav collapsed');
+
+        //Set the body class back to the default 
+        bodyContentElement.removeClass('fixed-collapsed-left-nav-pf fixed-hide-left-nav-pf');
+
+        // Check to see if the nav needs to collapse
+        if (width < breakpoints.desktop) {
+          navElement.addClass('collapsed');
+          bodyContentElement.addClass('fixed-collapsed-left-nav-pf');
+        }
+
+        // Check to see if we need to move down to the mobile state
+        if (width < breakpoints.tablet) {
+          //Set the nav to being hidden
+          navElement.addClass('hidden');
+
+          //Make sure this is expanded
+          navElement.removeClass('collapsed');
+
+          //Set the body class to the correct state
+          bodyContentElement.removeClass('fixed-collapsed-left-nav-pf');
+          bodyContentElement.addClass('fixed-hide-left-nav-pf');
+        }
+      },
+      init = function () {
+        //Set correct state on load
+        checkNavState();
+
+        // Bind Close Icon to Toggle Display
+        bindCollapseMenuBehavior();
+
+        // Bind Top level hamburger menu with show/hide menu in mobile state;
+        bindToggleMenuBehavior();
+      };
+
+    //Listen for the window resize event and collapse/hide as needed
+    $(window).on('resize', function () {
+      checkNavState();
+    });
+
+    init();
+
+  };
+
+  $(document).ready(function () {
+    if ($('.navigation-left-pf').length > 0) {
+      $.fn.navigation();
+    }
+  });
+
+}(jQuery));

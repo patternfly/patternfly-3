@@ -1,0 +1,121 @@
+.navbar-header-pf {
+  background: @navbar-header-bg-color-pf url('../img/nav-header-banner.png') top left no-repeat;
+  border: none;
+  border-radius: 0px;
+  border-top: 2px solid @navbar-pf-border-color;
+  height: @navbar-header-height-pf;
+  margin-bottom: 0px;
+  padding-top: 3px;
+  
+  .navbar-brand {
+    padding: 8px 20px 15px 15px;
+
+    .appIcon {
+      display: inline;
+      height: 35px;
+      margin-right: 15px;
+    }
+
+    .appName {
+      display: inline;
+      height: 12px;
+    }
+  }
+
+  .navbar-right {
+    margin-right: 0px;
+  }
+
+  .nav {
+  	padding-top: 2px;
+
+  	.action {
+	  .fa, .caret, .pf-icon{
+  	    color: @navbar-header-color-pf;
+        font-size: 18px;
+  	  }
+
+  	  .pf-icon {
+  	  	font-size: 15px;
+  	  }
+   
+      &:hover{
+        background-color: transparent;
+
+        .fa, .caret, .pf-icon{
+      	  color: @navbar-header-active-color-pf;
+  	    }
+      }
+
+      &:focus{
+        background: transparent;
+
+        .fa, .caret {
+      	  color: @navbar-header-active-color-pf;
+  	    }
+      }
+      
+      .notification-icon-count {
+        background-color: @navbar-header-badge-color;
+        border-radius: 50%;
+        color: @navbar-header-active-color-pf;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 9px;
+        font-weight: 700;
+        height: 15px;
+        line-height: 15px;
+        padding-left: 0px;
+        position: relative;
+        right: 10px;
+        top: 6px;
+        text-align: center;
+        width: 15px;    
+      }
+
+      .dropdown-menu {
+    	  color: @gray-dark;
+    	  font-size: 12px;
+    	  margin-top: -5px;
+        z-index: 2000;
+      }
+    }
+
+    .open > a.action, .open > a.action:hover, .open > a.action:focus {
+  		background: transparent;
+
+  		.fa, .caret, .pf-icon {
+      	  color: @navbar-header-active-color-pf;
+  	    }
+  	}
+
+  }
+
+  .navbar-toggle {
+  	float: left;
+  	margin-left: 10px;
+  	margin-right: 0px;
+
+  	.icon-bar {
+  		background: @navbar-header-color-pf;
+  	}
+  }
+
+  .infotip.bottom-right .arrow {
+    left: 85%;
+   }
+
+   @media (max-width: 768px) {
+     .navbar-brand {
+    	padding-left: 0px;
+     }
+   }
+
+   //This logo is too long. Need to hide it
+   @media (max-width: 460px) {
+     .navbar-brand .appName{
+       display: none;
+     }
+   }
+
+}
