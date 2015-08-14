@@ -1663,6 +1663,31 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+.bootstrap-datepicker[readonly] {
+  background-color: #ffffff;
+  border-color: #bababa !important;
+  color: #333333;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.bootstrap-datepicker[readonly]:focus {
+  border-color: #66afe9 !important;
+  outline: 0 !important;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6) !important;
+}
+.bootstrap-datepicker[readonly]:hover {
+  border-color: #7bb2dd !important;
+}
+.has-error .bootstrap-datepicker[readonly]:hover {
+  border-color: #843534 !important;
+}
+.has-success .bootstrap-datepicker[readonly]:hover {
+  border-color: #2b542c !important;
+}
+.has-warning .bootstrap-datepicker[readonly]:hover {
+  border-color: #bb6106 !important;
+}
 .datepicker {
   border-radius: 1px;
 }
