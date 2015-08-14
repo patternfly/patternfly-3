@@ -1692,6 +1692,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border-radius: 1px;
 }
 .datepicker .datepicker-switch,
+.datepicker tfoot .clear,
 .datepicker tfoot .today {
   font-size: 14px;
   font-weight: 500;
