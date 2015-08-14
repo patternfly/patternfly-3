@@ -3254,7 +3254,7 @@ table.datatable th:active {
   color: #333333;
   display: block;
   font-size: 14px;
-  padding: 20px 20px 20px 25px;
+  padding: 17px 20px 17px 25px;
   white-space: nowrap;
 }
 .nav-pf-vertical-alt .list-group-item a:focus {
@@ -3292,9 +3292,11 @@ table.datatable th:active {
   font-size: 9px;
   min-width: 20px;
   padding: 5px 5px;
-  position: relative;
+  position: absolute;
+  right: 15px;
   text-align: center;
-  top: 3px;
+  top: 20px;
+  transition: all 0.2s cubic-bezier(0.35, 0, 0.25, 1);
 }
 .nav-pf-vertical-alt .list-group-item .badge.notifications {
   background: #cc0000;
@@ -3303,13 +3305,19 @@ table.datatable th:active {
   font-size: 20px;
   padding-right: 5px;
   position: relative;
-  top: 2px;
+  top: -2px;
   width: 25px;
 }
 .nav-pf-vertical-alt .list-group-item .list-group-item-value {
+  display: inline-block;
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+  top: 2px;
+  text-overflow: ellipsis;
   transition: opacity 0.5s ease-out;
   transition-delay: .15s;
-  opacity: 1;
+  width: 140px;
 }
 .nav-pf-vertical-alt .list-group-item-secondary {
   border-top: 5px solid #f3f3f3;
@@ -3318,8 +3326,7 @@ table.datatable th:active {
   width: 70px !important;
 }
 .nav-pf-vertical-alt.collapsed .badge {
-  top: -8px;
-  left: 7px;
+  top: 36px;
 }
 .nav-pf-vertical-alt.collapsed .list-group-item-value {
   opacity: 0;

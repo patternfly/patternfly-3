@@ -25,7 +25,7 @@
 	  color: @gray-dark;
   	  display: block;
       font-size: 14px;
-	  padding: 20px 20px 20px 25px;
+	  padding: 17px 20px 17px 25px;
 	  white-space: nowrap;
 
 	  &:focus {
@@ -69,9 +69,11 @@
 	  font-size: 9px;
 	  min-width: 20px;
 	  padding: 5px 5px;
-	  position: relative;
+	  position: absolute;
+	  right: 15px;
 	  text-align: center;
-	  top: 3px;
+	  top: 20px;
+	  transition: @flyout-transition-pf;
 	}
 
 	.badge.notifications {
@@ -82,14 +84,20 @@
 	  font-size: 20px;
 	  padding-right: 5px;
 	  position: relative;
-	  top: 2px;
+	  top: -2px;
 	  width: 25px;
 	}
 
 	.list-group-item-value {
+	  display: inline-block;
+	  opacity: 1;
+	  overflow: hidden;
+	  position: relative;
+	  top: 2px;
+      text-overflow: ellipsis; 
 	  transition: opacity .5s ease-out;
 	  transition-delay: .15s;
-	  opacity: 1;
+	  width: 140px;
 	}
   }
   
@@ -101,8 +109,7 @@
     width: @nav-pf-vertical-alt-collapsed-width !important;
 
     .badge {
-	  top: -8px;
-	  left: 7px;
+	  top: 36px;
 	}
 
     //Hide the text

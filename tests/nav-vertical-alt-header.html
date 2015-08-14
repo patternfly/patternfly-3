@@ -4,7 +4,7 @@
 <html class="height-100">
   <!--<![endif]-->
     <head>
-    <title>Alternate Left Hand Navigation With Sticky Header - PatternFly</title>
+    <title>Alternate Header w&sol; Left Hand Navigation - PatternFly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../dist/img/favicon.ico">
     <!-- iPad retina icon -->
@@ -36,7 +36,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     </button>
-    <a href="../" class="navbar-brand"><img class="navbar-brand-icon" src="../dist/img/logo.svg" alt=""/><img class="navbar-brand-name" src="../dist/img/brand.svg" alt="PatternFly Enterprise Application" /></a>
+    <a href="/" class="navbar-brand"><img class="navbar-brand-icon" src="../dist/img/logo.svg" alt=""/><img class="navbar-brand-name" src="../dist/img/brand.svg" alt="PatternFly Enterprise Application" /></a>
   </div>
   <!-- Collect the nav links, forms, and other content for toggling -->
   <nav class="collapse navbar-collapse">
@@ -92,27 +92,27 @@
   <ul class="list-group">
     <li class="list-group-item">
       <a href="#">
-      <i class="fa fa-dashboard" title="Dashboard"></i>
+      <i class="fa fa-dashboard" title="Dashboard" data-toggle="tooltip" data-placement="right"></i>
       <span class="list-group-item-value">Dashboard</span>
       </a>
     </li>
     <li class="list-group-item">
       <a href="#">
-      <i class="fa fa-file-o" title="Services"></i>
+      <i class="fa fa-file-o" title="My Services" data-toggle="tooltip" data-placement="right"></i>
       <span class="list-group-item-value">My Services</span>
       <span ng-if="item.count" class="badge">12</span>
       </a>
     </li>
     <li class="list-group-item">
       <a href="#">
-      <i class="fa fa-file-text-o" title="My Requests"></i>
+      <i class="fa fa-file-text-o" title="My Requests" data-toggle="tooltip" data-placement="right"></i>
       <span class="list-group-item-value">My Requests</span>
       <span ng-if="item.count" class="badge">2</span>
       </a>
     </li>
     <li class="list-group-item active">
       <a href="#">
-      <i class="fa fa-copy" title="My Items"></i>
+      <i class="fa fa-copy" title="My Items" data-toggle="tooltip" data-placement="right"></i>
       <span class="list-group-item-value">My Items</span>
       </a>
     </li>

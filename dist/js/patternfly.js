@@ -289,12 +289,25 @@
           }
         });
       },
+      setTooltips = function () {
+        $('.nav-pf-vertical-alt [data-toggle="tooltip"]').tooltip({'container': 'body', 'delay': { 'show': '500', 'hide': '200' }});
+
+        $(".nav-pf-vertical-alt").on("show.bs.tooltip", function (e) {
+          if (!$(this).hasClass("collapsed")) {
+            return false;
+          }
+        });
+
+      },
       init = function () {
         //Set correct state on load
         checkNavState();
 
         // Bind Top level hamburger menu with menu behavior;
         bindMenuBehavior();
+
+        //Set tooltips
+        setTooltips();
       };
 
     //Listen for the window resize event and collapse/hide as needed
