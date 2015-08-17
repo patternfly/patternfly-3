@@ -97,7 +97,3 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <!-- See https://github.com/patternfly/angular-patternfly for more information -->
 
 5. Enjoy!!!
-
-
-
-

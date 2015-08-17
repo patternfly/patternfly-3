@@ -15,10 +15,19 @@
     padding-top: 2px;
 
   	.action {
+      padding-left: 20px;
+      position: relative;
+
 	    .caret, .fa, .pf-icon {
   	    color: @navbar-pf-header-color;
         font-size: 18px;
   	  }
+
+      .caret {
+        bottom: 18px;
+        position: absolute;
+        right: 0px;
+      }
 
   	  .pf-icon {
   	  	font-size: 15px;
@@ -78,6 +87,7 @@
   }
 
   .navbar-brand {
+    line-height: @navbar-pf-header-brand-line-height;
     padding: 8px 20px 15px 0px;
 
     .navbar-brand-name {
@@ -106,7 +116,7 @@
   .navbar-toggle {
   	float: left;
   	margin-left: 14px;
-  	margin-right:20px;
+  	margin-right: 20px;
     display: block;
 
   	.icon-bar {

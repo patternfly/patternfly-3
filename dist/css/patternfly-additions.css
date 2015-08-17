@@ -3247,11 +3247,20 @@ table.datatable th:active {
 .navbar-pf-header .nav {
   padding-top: 2px;
 }
+.navbar-pf-header .nav .action {
+  padding-left: 20px;
+  position: relative;
+}
 .navbar-pf-header .nav .action .caret,
 .navbar-pf-header .nav .action .fa,
 .navbar-pf-header .nav .action .pf-icon {
   color: #cfcfcf;
   font-size: 18px;
+}
+.navbar-pf-header .nav .action .caret {
+  bottom: 18px;
+  position: absolute;
+  right: 0px;
 }
 .navbar-pf-header .nav .action .pf-icon {
   font-size: 15px;
@@ -3310,6 +3319,7 @@ table.datatable th:active {
   color: #ffffff;
 }
 .navbar-pf-header .navbar-brand {
+  line-height: 31px;
   padding: 8px 20px 15px 0px;
 }
 .navbar-pf-header .navbar-brand .navbar-brand-name {
@@ -3432,6 +3442,9 @@ table.datatable th:active {
   transition: opacity 0.5s ease-out;
   transition-delay: .15s;
   width: 140px;
+}
+.nav-pf-vertical-alt .list-group-item .pf-icon {
+  font-size: 15px;
 }
 .nav-pf-vertical-alt .list-group-item-secondary {
   border-top: 5px solid #f3f3f3;
