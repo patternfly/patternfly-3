@@ -2,9 +2,29 @@
 // Bootstrap-Datepicker
 // --------------------------------------------------
 
+.bootstrap-datepicker[readonly] {
+  background-color: @input-bg;
+  border-color: @input-border !important;
+  color: @input-color;
+  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  .form-control-focus() !important;
+  &:hover {
+    border-color: @input-border-hover !important;
+    .has-error & {
+      border-color: darken(@state-danger-text, 10%) !important;
+    }
+    .has-success & {
+      border-color: darken(@state-success-text, 10%) !important;
+    }
+    .has-warning & {
+      border-color: darken(@state-warning-text, 10%) !important;
+    }
+  }
+}
+
 .datepicker {
   border-radius: @border-radius-base;
-  .datepicker-switch, tfoot .today {
+  .datepicker-switch, tfoot .clear, tfoot .today {
     font-size: @font-size-large;
     font-weight: 500;
   }

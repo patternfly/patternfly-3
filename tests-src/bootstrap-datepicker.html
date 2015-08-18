@@ -6,19 +6,38 @@ title: Bootstrap-Datepicker
 resource: true
 url-js-extra: '!URL_COMPONENTS!bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js'
 ---
-      <h2>Text Input</h2>
-      <input type="text" class="form-control bootstrap-datepicker">
-      <h2>Component</h2>
+      <h2>Readonly Inputs</h2>
+      <p><span class="text-success">Recommended.</span>  To prevent invalid dates, setting the inputs to readonly only allows a date to be input via the date picker widget.</p>
+      <h3>Text Input</h3>
+      <input type="text" class="form-control bootstrap-datepicker" readonly>
+      <h3>Component</h3>
       <div class="input-group date">
-        <input type="text" class="form-control"><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+        <input type="text" class="form-control bootstrap-datepicker" readonly><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
       </div>
-      <h2>Inline</h2>
+      <h3>Inline</h3>
       <div class="bootstrap-datepicker-inline"></div>
-      <h2>Range <small>Do not use.  PatternFly-approved design coming in a future update.</small></h2>
+      <h3>Range <small>Do not use.  PatternFly-approved design coming in a future update.</small></h3>
       <div class="input-daterange input-group">
-        <input type="text" class="form-control" name="start">
+        <input type="text" class="form-control bootstrap-datepicker" name="start" readonly>
         <span class="input-group-addon">to</span>
-        <input type="text" class="form-control" name="end">
+        <input type="text" class="form-control bootstrap-datepicker" name="end" readonly>
+      </div>
+      <hr>
+      <h2>Normal Inputs</h2>
+      <p><span class="text-warning">Not recommended.</span>  For comparison only.</p>
+      <h3>Text Input</h3>
+      <input type="text" class="form-control bootstrap-datepicker">
+      <h3>Component</h3>
+      <div class="input-group date">
+        <input type="text" class="form-control bootstrap-datepicker"><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+      <h3>Inline</h3>
+      <div class="bootstrap-datepicker-inline"></div>
+      <h3>Range <small>Do not use.  PatternFly-approved design coming in a future update.</small></h3>
+      <div class="input-daterange input-group">
+        <input type="text" class="form-control bootstrap-datepicker" name="start">
+        <span class="input-group-addon">to</span>
+        <input type="text" class="form-control bootstrap-datepicker" name="end">
       </div>
       <script>
         // Initialize Boostrap-Datepicker
