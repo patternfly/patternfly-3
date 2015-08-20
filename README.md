@@ -1,6 +1,7 @@
 # [PatternFly](https://www.patternfly.org) reference implementation
 
-This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations.
+This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations. For information on how to quickly get started using PatternFly see the [Quick Start Guide](QUICKSTART.md)
+
 
 # Installation
 
