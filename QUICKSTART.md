@@ -8,8 +8,6 @@ Within the download you'll find the following directories and files, logically g
 
 ```
 patternfly/
-├── components/
-│   ├── third-party repos (may need to pull in additional JS includes based on usage, but no additional CSS includes are needed)
 ├── dist/
 │   ├── css/
 │   │   │── patternfly.min.css (* need to include)
@@ -56,48 +54,48 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 4. Add the following script includes to your HTML file(s), adjusting where necessary to pull in only what you need:
 
         <!-- jQuery -->
-        <script src="bower_components/patternfly/components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
         <!-- Bootstrap JS -->
-        <script src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
         <!-- C3, D3 - Charting Libraries -->
-        <script src="bower_components/patternfly/components/c3/c3.min.js"></script>
-        <script src="bower_components/patternfly/components/d3/d3.min.js"></script>
+        <script src="bower_components/c3/c3.min.js"></script>
+        <script src="bower_components/d3/d3.min.js"></script>
 
         <!-- Datatables, jQuery Grid Component -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="bower_components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
-        <script src="bower_components/patternfly/components/datatables-colvis/js/dataTables.colVis.js"></script>
-        <script src="bower_components/patternfly/components/datatables-colreorder/js/dataTables.colReorder.js"></script>
+        <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+        <script src="bower_components/datatables-colvis/js/dataTables.colVis.js"></script>
+        <script src="bower_components/datatables-colreorder/js/dataTables.colReorder.js"></script>
 
         <!-- PatternFly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="bower_components/patternfly/dist/js/patternfly.js"></script>
+        <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
 
         <!-- Bootstrap Combobox -->
-        <script src="bower_components/patternfly/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+        <script src="bower_components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
 
         <!-- Bootstrap Date Picker -->
-        <script src="bower_components/patternfly/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
         <!-- Bootstrap Select -->
-        <script src="bower_components/patternfly/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+        <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
         <!-- Bootstrap Switch -->
-        <script src="bower_components/patternfly/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+        <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
 
         <!-- Bootstrap Touchspin -->
-        <script src="bower_components/patternfly/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+        <script src="bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
 
         <!-- Bootstrap Tree View -->
-        <script src="bower_components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+        <script src="bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
 
         <!-- Google Code Prettify - Syntax highlighting of code snippets -->
-        <script src="bower_components/patternfly/components/google-code-prettify/bin/prettify.min.js"></script>
+        <script src="bower_components/google-code-prettify/bin/prettify.min.js"></script>
 
         <!-- MatchHeight - Used to make sure dashboard cards are the same height -->
-        <script src="bower_components/patternfly/components/matchHeight/jquery.matchHeight.js"></script>
+        <script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
 
         <!-- Angular Application? You May Want to Consider Pulling Angular-PatternFly And Angular-UI Bootstrap instead of bootstrap.js -->
         <!-- See https://github.com/patternfly/angular-patternfly for more information -->

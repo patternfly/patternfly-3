@@ -5,10 +5,8 @@ company: PatternFly
 navbar-pf-alt-navbar-brand-icon: true
 title: PatternFly
 title-product: 'PatternFly Enterprise Application'
-url-components: '../components/'
 url-css-additions: '../dist/css/patternfly-additions.min.css'
 url-css-extra: 'tests.css'
 url-css-main: '../dist/css/patternfly.min.css'
 url-img: 'img/'
-url-jquery: '../components/jquery/dist/jquery.min.js'
 url-js: '../dist/js/patternfly.min.js'

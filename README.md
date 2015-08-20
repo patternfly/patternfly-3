@@ -55,19 +55,31 @@ A set of [common AngularJS directives](https://github.com/patternfly/angular-pat
 
 ## Dependencies
 
-PatternFly incorporates other libraries and components; therefore, in addition to the contents of `dist`, the contents of `components` are also required for a complete installation of PatternFly.
+PatternFly includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".  And make sure you keep them updated (see "Keeping Bower Components Updated").
 
 ## Development
 
 Development setup requires nodejs and Ruby. If you do not already have nodejs, npm, and Ruby installed on your system, see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager and https://www.ruby-lang.org/en/downloads.
 
-### Install Bower
+### Install Bower Components
 
 After ensuring nodejs and npm are available, install [Bower](http://bower.io/) globally:
 
     npm install -g bower
 
-Bower is used to install and update PatternFly's dependencies.
+Now that Bower is available, we can install the required development components:
+
+    bower install
+
+At this point, you should now have a top level components/ folder with all dependencies listed in the bower.json file installed.  Unless you plan to contribute to PatternFly itself, you're done.  Celebrate by working on integrating PatternFly and its dependencies in your app!
+
+#### Keeping Bower Components Updated
+
+Anytime you pull a new version of PatternFly, make sure you also run
+
+    bower update
+
+so you get the latest version of the components specified in bower.json.
 
 ### Install Development Dependencies
 

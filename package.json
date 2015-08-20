@@ -1,11 +1,12 @@
 {
   "name": "patternfly",
-  "version": "2.10.0",
+  "version": "3.0.0",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "devDependencies": {
     "connect-livereload": "~0.3.0",
     "grunt": "~0.4.1",
+    "grunt-contrib-copy": "^0.8.1",
     "grunt-contrib-connect": "~0.5.0",
     "grunt-contrib-cssmin": "^0.12.3",
     "grunt-contrib-less": "^1.0.1",

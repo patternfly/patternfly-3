@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="{{site.url-css-main}}" >
     <link rel="stylesheet" href="{{site.url-css-additions}}" >
     {% if page.css-extra %}<link href="{% if page.url-css-extra %}{{ page.url-css-extra }}{% else %}{{ site.url-css-extra }}{% endif %}" rel="stylesheet" media="screen, print">{% endif %}
-    <script src="{{site.url-jquery}}"></script>
-    <script src="{{site.url-components}}bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     {% if page.url-js-extra %}{% for urlextrajs in page.url-js-extra %}
-    <script src="{{ urlextrajs | replace: '!URL_COMPONENTS!', site.url-components }}"></script>
+    <script src="{{ urlextrajs, site.url-components }}"></script>
     {% endfor %}{% endif %}
     <script src="{{site.url-js}}"></script>
   </head>{% endstrip %}

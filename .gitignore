@@ -8,6 +8,10 @@
 *.swn
 *.swo
 
+# Ignore local Bower packages
+components/
+bower_components/
+
 # Ignore local nodejs packages
 node_modules/
 
