@@ -2,33 +2,33 @@
 
 This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations. PatternFly is meant to be used as a replacement for Bootstrap, so please don't include the Bootstrap CSS if you are including the PatternFly CSS in your project. 
 
-### What's included
+### What's Included
 
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
 ```
 patternfly/
 ├── components/
-│   ├── 3rd Party Repos. May need to pull in additional JS includes based on Patternfly Usage (No additional CSS includes needed)
+│   ├── third-party repos (may need to pull in additional JS includes based on usage, but no additional CSS includes are needed)
 ├── dist/
 │   ├── css/
-│   │   │── patternfly.min.css (* Need to include)
-│   │   │── patternfly-additions.min.css (* Need to include)
+│   │   │── patternfly.min.css (* need to include)
+│   │   │── patternfly-additions.min.css (* need to include)
 │   └── fonts/
-│   │   │── Font and icon libraries (Already included via CSS - Nothing to do here)
+│   │   │── font and icon libraries (included via above CSS)
 │   └── img/
-│   │   │── Branding Materials and Loading Indicators
+│   │   │── branding materials and loading indicators
 │   └── js/
-│   │   │── patternfly.min.js (May need to include if you are using Patternfly jQuery Sidebar, Popovers or Datatables)  
+│   │   │── patternfly.min.js (may need to include if you are using PatternFly jQuery Sidebar, Popovers or Datatables)  
 ├── less/
-│   ├── Variables, Mixin, and Component LESS files. May need to include if you want to customize the already built CSS
+│   ├── variables, mixin, and component Less files (may need to include if you want to customize the already built CSS)
 └── test-src/
-    ├── Example Code Src Files
+    ├── example markup source files
 ```
 
-We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minified CSS and JS (`pattternfly.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`patternfly.*.map`) are available for use with certain browsers' developer tools. Fonts from OpenSans, FontAwesome, Patternfly Icons are included, as well as numerous other 3rd party JS components and libraries.
+We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minified CSS and JS (`pattternfly.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`patternfly.*.map`) are available for use with certain browsers' developer tools. Fonts from OpenSans, FontAwesome, PatternFly Icons are included, as well as numerous other 3rd party JS components and libraries.
 
-## Using Patternfly In Your Application
+## Using PatternFly In Your Application
 
 1. Ensure you have installed the following utilities:
     - [Git](http://git-scm.com/downloads): a free and open source distributed version control system.
@@ -40,7 +40,7 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
     - [Bower](http://bower.io/#installing-bower): a package manager for the web.
 
-2. Add Patternfly as a dependency for your project and you'll receive all the libraries you'll need:
+2. Add PatternFly as a dependency for your project and you'll receive all the libraries you'll need:
 
         $ bower install patternfly --save
 
@@ -48,10 +48,10 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
 3. Add the follwing CSS includes to your HTML file(s), adjusting path where needed:
 
-        <!-- Patternfly Styles -->
+        <!-- PatternFly Styles -->
         <!-- Note: No other CSS files are needed regardless of what other JS packages located in patternfly/components that you decide to pull in -->
-        <link rel="stylesheet" href="bower_components/patternfly/dist/patternfly.min.css" />
-        <link rel="stylesheet" href="bower_components/patternfly/dist/patternfly-additions.min.css" />
+        <link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly.min.css" />
+        <link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly-additions.min.css" />
 
 4. Add the following script includes to your HTML file(s), adjusting where necessary to pull in only what you need:
 
@@ -71,7 +71,7 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <script src="bower_components/patternfly/components/datatables-colvis/js/dataTables.colVis.js"></script>
         <script src="bower_components/patternfly/components/datatables-colreorder/js/dataTables.colReorder.js"></script>
 
-        <!-- Patternfly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
+        <!-- PatternFly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
         <script src="bower_components/patternfly/dist/js/patternfly.js"></script>
 
@@ -93,7 +93,7 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <!-- MatchHeight - Used to make sure dashboard cards are the same height -->
         <script src="bower_components/patternfly/components/matchHeight/jquery.matchHeight.js"></script>
 
-        <!-- Angular Application? You May Want to Consider Pulling Angular-Patternfly And Angular-UI Bootstrap instead of bootstrap.js -->
+        <!-- Angular Application? You May Want to Consider Pulling Angular-PatternFly And Angular-UI Bootstrap instead of bootstrap.js -->
         <!-- See https://github.com/patternfly/angular-patternfly for more information -->
 
 5. Enjoy!!!
