@@ -1,6 +1,6 @@
 # Using [PatternFly](https://www.patternfly.org) - Quick Start Guide
 
-This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations. PatternFly is meant to be used as a replacement for Bootstrap so please don't include the Bootstrap CSS if you are including the PatternFly CSS in your project. 
+This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations. PatternFly is meant to be used as a replacement for Bootstrap, so please don't include the Bootstrap CSS if you are including the PatternFly CSS in your project. 
 
 ### What's included
 
