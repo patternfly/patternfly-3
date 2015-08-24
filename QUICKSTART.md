@@ -26,7 +26,7 @@ patternfly/
     ├── example markup source files
 ```
 
-We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minified CSS and JS (`pattternfly.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`patternfly.*.map`) are available for use with certain browsers' developer tools. Fonts from OpenSans, FontAwesome, PatternFly Icons are included, as well as numerous other 3rd party JS components and libraries.
+We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minified CSS and JS (`patternfly.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`patternfly.*.map`) are available for use with certain browsers' developer tools. Fonts from OpenSans, FontAwesome, PatternFly Icons are included, as well as numerous other 3rd party JS components and libraries.
 
 ## Using PatternFly In Your Application
 
