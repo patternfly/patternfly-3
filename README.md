@@ -179,11 +179,13 @@ Build the RPM:
 rpmbuild -ba patternfly.spec
 ```
 
-Upload the source RPM [1] to a public web server.
+Commit the source RPM [1] to [https://github.com/patternfly/patternfly-srpms](https://github.com/patternfly/patternfly-srpms).
 
 [1] e.g., ~/rpmbuild/SRPMS/patternfly1-1.1.1-1.fc20.src.rpm
 
-Ask @rhamilto or @gregsheremeta to add a new build on [Fedora Copr](https://copr.fedoraproject.org/coprs/patternfly/patternfly1) using the URL created in the previous step.
+Serve the commited source RPM via [RawGit](https://rawgit.com).
+
+Ask @rhamilto or @gregsheremeta to add a new build on [Fedora Copr](https://copr.fedoraproject.org/coprs/patternfly/patternfly2) using the URL created in the previous step.
 
 Edit `MAKEFILE` as follows and commit the change:
 
