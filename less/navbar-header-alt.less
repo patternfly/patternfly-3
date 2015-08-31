@@ -1,0 +1,125 @@
+.navbar-pf-header-alt {
+  background: @navbar-pf-header-alt-bg-color url('../img/nav-header-banner.svg') top left no-repeat;
+  border: none;
+  border-radius: 0;
+  border-top: 2px solid @navbar-pf-border-color;
+  height: @navbar-pf-header-alt-height;
+  margin-bottom: 0;
+
+  .infotip.bottom-right .arrow {
+    left: 90%;
+  }
+
+  .nav {
+    padding-top: 5px;
+
+    .action {
+      padding-left: 20px;
+      position: relative;
+
+      .caret, .fa, .pf-icon {
+        color: @navbar-pf-header-alt-color;
+        font-size: 18px;
+      }
+
+      .caret {
+        bottom: 18px;
+        position: absolute;
+        right: 0px;
+      }
+
+      .pf-icon {
+        font-size: 15px;
+      }
+   
+      &:hover{
+        background-color: transparent;
+
+        .caret, .fa, .pf-icon {
+          color: @navbar-pf-header-alt-active-color;
+        }
+      }
+
+      &:focus{
+        background: transparent;
+
+        .caret, .fa {
+          color: @navbar-pf-header-alt-active-color;
+        }
+      }
+
+      .dropdown-menu {
+        color: @gray-dark;
+        font-size: @font-size-base;
+        margin-top: -5px;
+        z-index: 2000;
+      }
+      
+      .badge {
+        background-color: @notification-badge-color;
+        border-radius: 50%;
+        color: @navbar-pf-header-alt-active-color;
+        cursor: pointer;
+        font-size: @font-size-base - 3;
+        font-weight: 700;
+        height: 15px;
+        line-height: 15px;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
+        text-align: center;
+        width: 15px;    
+      }
+
+    }
+
+    .open > a.action {
+      &, &:hover, &:focus {
+        background: transparent;
+
+        .caret, .fa, .pf-icon {
+          color: @navbar-pf-header-alt-active-color;
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    line-height: @navbar-pf-header-alt-brand-line-height;
+    padding: @navbar-pf-header-alt-brand-padding;
+
+    .navbar-brand-name {
+      display: inline;
+    }
+
+    .navbar-brand-icon {
+      display: inline;
+      margin-right: 15px;
+    }
+  }
+
+  //This logo is too long. Need to hide it
+  @media (max-width: 460px) {
+    .navbar-brand .navbar-brand-name {
+      display: none;
+    }
+  }
+
+  .navbar-right {
+    margin-right: 0;
+  }
+
+  .navbar-toggle {
+    display: block;
+    float: left;
+    margin-left: 14px;
+    margin-right: 20px;
+    padding-top: 12px;
+    
+    .icon-bar {
+      background: @navbar-pf-header-alt-color;
+    }
+  }
+
+}
