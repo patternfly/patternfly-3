@@ -214,15 +214,15 @@
 }(jQuery));
 
 // Util: PatternFly Collapsible Left Hand Navigation
-// Must have hamburger menu in top bar for exapand/collapse and class of fixed-left-nav-pf on the peer body content
+// Must have navbar-toggle in navbar-pf-alt for expand/collapse
 (function ($) {
 
   'use strict';
 
   $.fn.navigation = function () {
 
-    var navElement = $('.nav-pf-vertical-alt'),
-      bodyContentElement = $('.container-pf-nav-pf-vertical-alt'),
+    var navElement = $('.layout-pf-alt-fixed .nav-pf-vertical-alt'),
+      bodyContentElement = $('.container-pf-alt-nav-pf-vertical-alt'),
       toggleNavBarButton = $('.navbar-toggle'),
       explicitCollapse = false,
       breakpoints = {
@@ -265,6 +265,10 @@
 
         explicitCollapse = true;
       },
+      enableTransitions = function () {
+        // enable transitions only when toggleNavBarButton is clicked or window is resized
+        $('html').addClass('transitions');
+      },
       expandMenu = function () {
         //Make sure this is expanded
         navElement.removeClass('collapsed');
@@ -275,6 +279,7 @@
       },
       bindMenuBehavior = function () {
         toggleNavBarButton.on('click', function (e) {
+          enableTransitions();
           var inMobileState = bodyContentElement.hasClass('hidden-nav');
 
           if (inMobileState && navElement.hasClass('show-mobile-nav')) {
@@ -313,6 +318,7 @@
     //Listen for the window resize event and collapse/hide as needed
     $(window).on('resize', function () {
       checkNavState();
+      enableTransitions();
     });
 
     init();

@@ -1,44 +1,45 @@
-.container-pf-scroll-body {
-  background: @container-nav-pf-vertical-alt-colored-bg;
-  overflow: hidden;
-}
+//
+// Layouts
+// --------------------------------------------------
 
-.container-pf-scroll {
-  height: @container-nav-pf-vertical-alt-height-calc;
-  overflow: auto;
-  .container-pf-sticky-footer  > & {
-    height: @container-nav-pf-vertical-alt-with-footer-height-calc;
+.layout-pf-alt {
+  &, & body {
+    min-height: 100%
+  }
+  &.layout-pf-alt-fixed {
+    &.layout-pf-alt-fixed-inner-scroll {
+       &, & body {
+        height: 100%;
+        min-height: 0;
+      }
+      .container-pf-alt-nav-pf-vertical-alt {
+        height: 100%;
+        overflow: auto;
+        &.container-cards-pf {
+          margin-top: 0;
+          padding-top: (@grid-gutter-width/2);
+        }
+      }
+    }
+    &.transitions .container-pf-alt-nav-pf-vertical-alt {
+      transition: @flyout-transition-pf;
+    }
+    body {
+      padding-top: @navbar-pf-alt-height; // make space for the navbar
+    }
+    .container-pf-alt-nav-pf-vertical-alt {
+      margin-left: (@nav-pf-vertical-alt-width);
+      &.collapsed-nav {
+        margin-left: (@nav-pf-vertical-alt-collapsed-width); // adjust space for the collapsed left nav
+      }
+      &.hidden-nav {
+        margin-left: 0; // remove space as left nav is hidden
+      }
+    }
+  }
+  &.layout-pf-alt-fixed-with-footer {
+    body {
+      padding-bottom: @footer-pf-alt-height;
+    }
   }
 }
-
-.container-pf-scroll-content-area {
-  padding: 20px 0;
-}
-
-.container-pf-nav-pf-vertical-alt {
-  margin-left: (@nav-pf-vertical-alt-width + 5px);
-  transition: @flyout-transition-pf;
-  &.collapsed-nav {
-    margin-left: (@nav-pf-vertical-alt-collapsed-width + 5px);
-  }
-  &.hidden-nav {
-    margin-left: 5px;
-  }
-}
-
-.footer-pf-alt {
-  background-color: @footer-pf-alt-bg-color;
-  bottom: 0;
-  color: @gray-light;
-  font-size: @font-size-base - 1;
-  line-height: @footer-pf-alt-line-height;
-  padding: 0 20px;
-  position: absolute;
-  width: 100%;
-
-  p {
-    margin: 0;
-  }
-}
-
-
