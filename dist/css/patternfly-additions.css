@@ -3532,4 +3532,70 @@ table.datatable th:active {
 .prettyprint ol.linenums {
   margin-bottom: 0;
 }
+.toolbar-pf {
+  background: #fff;
+  border-bottom: 1px solid #d0d0d0;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.045);
+  padding-top: 10px;
+}
+.toolbar-pf .form-group {
+  margin-bottom: 0;
+  width: 200px;
+}
+@media (min-width: 768px) {
+  .toolbar-pf .form-group {
+    width: 300px;
+  }
+}
+.toolbar-pf-results {
+  border-top: 1px solid #d0d0d0;
+  margin-top: 10px;
+}
+.toolbar-pf-results h5,
+.toolbar-pf-results p,
+.toolbar-pf-results ul {
+  display: inline-block;
+  line-height: 26.66666667px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .toolbar-pf-results h5,
+  .toolbar-pf-results p,
+  .toolbar-pf-results ul {
+    line-height: 40px;
+  }
+}
+.toolbar-pf-results h5 {
+  font-weight: 700;
+  margin-right: 20px;
+}
+.toolbar-pf-results .label {
+  font-size: 11px;
+}
+.toolbar-pf-results .label a {
+  color: #fff;
+  display: inline-block;
+  margin-left: 5px;
+}
+.toolbar-pf-results .list-inline {
+  margin: 0 10px 0 5px;
+}
+.toolbar-pf-results .list-inline li {
+  padding-left: 0;
+  padding-right: 0;
+}
+.toolbar-pf-view-selector {
+  font-size: 16px;
+}
+.toolbar-pf-view-selector .active a {
+  color: #0099d3;
+  cursor: default;
+}
+.toolbar-pf-view-selector a {
+  color: #222222;
+}
+.toolbar-pf-view-selector a:hover {
+  color: #0099d3;
+}
 /*# sourceMappingURL=patternfly-additions.css.map */
