@@ -2353,6 +2353,12 @@ table.datatable th:active {
 .pficon-folder-close:before {
   content: "\e607";
 }
+.pficon-topology:before {
+  content: "\e608";
+}
+.pficon-thumb-tack-o:before {
+  content: "\e609";
+}
 .pficon-edit:before {
   content: "\e60a";
 }
