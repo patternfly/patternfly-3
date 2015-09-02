@@ -1,0 +1,62 @@
+//
+// Toolbar (Filter and view options)
+// --------------------------------------------------
+
+.toolbar-pf {
+  background: #fff;
+  border-bottom: 1px solid @sidebar-pf-border-color;
+  box-shadow: 0 1px 0px rgba(0,0,0,0.045);
+  padding-top: @grid-gutter-width/4;
+  .form-group {
+    margin-bottom: 0;
+    width: 200px;
+    @media (min-width: @screen-sm-min){
+      width: 300px;
+    }
+  }
+}
+.toolbar-pf-results {
+  border-top: 1px solid @sidebar-pf-border-color;
+  margin-top: @grid-gutter-width/4;
+  h5, p, ul {
+    display: inline-block;
+    line-height: @grid-gutter-width/1.5;
+    margin-bottom: 0; 
+    margin-top: 0;
+    @media (min-width: @screen-sm-min){
+      line-height: @grid-gutter-width;
+    }
+  }
+  h5 {
+    font-weight: 700;
+    margin-right: 20px;
+  }
+  .label {
+    font-size: @font-size-base - 1;
+    a {
+      color: #fff;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+  .list-inline {
+    margin: 0 10px 0 5px;
+    li {
+      padding-left: 0;
+      padding-right: 0;  
+    }
+  }
+}
+.toolbar-pf-view-selector {
+  font-size: @font-size-base + 4;
+  .active a {
+    color: @link-color;
+    cursor: default;
+  }
+  a {
+    color: @gray-darker;
+    &:hover{
+      color: @link-color;
+    }
+  }
+}
