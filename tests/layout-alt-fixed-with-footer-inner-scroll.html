@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="ie9 layout-pf-alt layout-pf-alt-fixed layout-pf-alt-fixed-with-footer layout-pf-alt-fixed-inner-scroll"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="layout-pf-alt layout-pf-alt-fixed layout-pf-alt-fixed-with-footer layout-pf-alt-fixed-inner-scroll">
+  <!--<![endif]-->
+    <head>
+    <title>Fixed Navbar Alt With Fixed Left Nav Alt And Fixed Footer Alt, Inner Scroll - PatternFly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <!-- iPad retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../dist/img/apple-touch-icon-precomposed-152.png">
+    <!-- iPad retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-precomposed-144.png">
+    <!-- iPad non-retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../dist/img/apple-touch-icon-precomposed-76.png">
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-precomposed-72.png">
+    <!-- iPhone 6 Plus icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../dist/img/apple-touch-icon-precomposed-180.png">
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-precomposed-114.png">
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../dist/img/apple-touch-icon-precomposed-57.png">
+    <link href="../dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+    <link href="../dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
+    <script src="../components/jquery/dist/jquery.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../components/matchHeight/jquery.matchHeight-min.js"></script>
+    <script src="../dist/js/patternfly.min.js"></script>
+  </head>
+  <body class="cards-pf">
+    <nav class="navbar navbar-pf-alt">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">
+      <img class="navbar-brand-icon" src="../dist/img/logo-alt.svg" alt=""/><img class="navbar-brand-name" src="../dist/img/brand-alt.svg" alt="PatternFly Enterprise Application" />
+    </a>
+  </div>
+  <nav class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="#" target="_blank" class="nav-item-iconic nav-item-iconic-new-window"><span title="Launch" class="fa fa-external-link"></span></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right navbar-iconic">
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Notifications" class="fa pficon-flag"></span>
+          <span class="badge">2</span>
+        </a>
+        <div class="dropdown-menu infotip bottom-right">
+          <div class="arrow"></div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
+            </li>
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Error: System Failure
+            </li>
+          </ul>
+          <div class="footer">
+            <a>Clear Messages</a>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Help" class="fa pficon-help"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Username" class="fa pficon-user"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Preferences</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+</nav> <!--/.navbar-->
+
+<nav class="nav-pf-vertical-alt">
+  <ul class="list-group">
+    <li class="list-group-item active">
+      <a href="#">
+        <span class="fa fa-dashboard" title="Dashboard" data-toggle="tooltip" data-placement="right"></span>
+        <span class="list-group-item-value">Dashboard</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="fa fa-file-o" title="My Services" data-toggle="tooltip" data-placement="right"></span>
+        <span class="list-group-item-value">My Services</span>
+        <span class="badge">12</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="fa fa-file-text-o" title="My Requests" data-toggle="tooltip" data-placement="right"></span>
+        <span class="list-group-item-value">My Requests</span>
+        <span class="badge">2</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="fa fa-copy" title="My Items" data-toggle="tooltip" data-placement="right"></span>
+        <span class="list-group-item-value">My Items</span>
+      </a>
+    </li>
+    <li class="list-group-item list-group-item-separator hidden-sm hidden-md hidden-lg">
+      <a href="#">
+        <span class="fa fa-external-link" title="Launch"></span>
+        <span class="list-group-item-value">Launch</span>
+      </a>
+    </li>
+    <li class="list-group-item hidden-sm hidden-md hidden-lg">
+      <a href="#">
+        <span class="pficon pficon-flag" title="Notifications"></span>
+        <span class="list-group-item-value">Notifications</span>
+        <span class="badge notifications">2</span>
+      </a>
+    </li>
+    <li class="list-group-item hidden-sm hidden-md hidden-lg">
+      <a href="#">
+        <span class="pficon pficon-help" title="Help"></span>
+        <span class="list-group-item-value">Help</span>
+      </a>
+    </li>
+     <li class="list-group-item hidden-sm hidden-md hidden-lg">
+      <a href="#">
+        <span class="fa fa-info-circle" title="About"></span>
+        <span class="list-group-item-value">About</span>
+      </a>
+    </li>
+    <li class="list-group-item hidden-sm hidden-md hidden-lg">
+      <a href="#">
+        <span class="pficon pficon-user" title="Preferences"></span>
+        <span class="list-group-item-value">Preferences</span>
+      </a>
+    </li>
+    <li class="list-group-item hidden-sm hidden-md hidden-lg">
+      <a href="#">
+        <span class="fa fa-sign-out" title="Log Out"></span>
+        <span class="list-group-item-value">Log Out</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid container-cards-pf container-pf-alt-nav-pf-vertical-alt">
+      <div class="row row-cards-pf">
+      <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status">
+            <h2 class="card-pf-title">
+              <span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">0</span> Ipsum
+            </h2>
+            <div class="card-pf-body">
+              <p class="card-pf-aggregate-status-notifications">
+                <span class="card-pf-aggregate-status-notification"><a href="#" class="add" data-toggle="tooltip" data-placement="top" title="Add Ipsum"><span class="pficon pficon-add-circle-o"></span></a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-with-action">
+            <h2 class="card-pf-title">
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">20</span> Amet</a>
+            </h2>
+            <div class="card-pf-body">
+              <p class="card-pf-aggregate-status-notifications">
+                <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-error-circle-o"></span>4</a></span>
+                <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-warning-triangle-o"></span>1</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-with-action">
+            <h2 class="card-pf-title">
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">9</span> Adipiscing</a>
+            </h2>
+            <div class="card-pf-body">
+              <p class="card-pf-aggregate-status-notifications">
+                <span class="card-pf-aggregate-status-notification"><span class="pficon pficon-ok"></span></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status">
+            <h2 class="card-pf-title">
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">12</span> Lorem</a>
+            </h2>
+            <div class="card-pf-body">
+              <p class="card-pf-aggregate-status-notifications">
+                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status">
+            <h2 class="card-pf-title">
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">6</span> Dolar Sit</a>
+            </h2>
+            <div class="card-pf-body">
+              <p class="card-pf-aggregate-status-notifications">
+                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+          <div class="card-pf card-pf-accented card-pf-aggregate-status">
+            <h2 class="card-pf-title">
+              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">199</span> Consectetur</a>
+            </h2>
+            <div class="card-pf-body">
+              <p class="card-pf-aggregate-status-notifications">
+                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+      <div class="row row-cards-pf">
+      <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+        <div class="col-xs-6 col-sm-5 col-md-5">
+          <div class="card-pf">
+            <h2 class="card-pf-title">
+              Card Title
+            </h2>
+            <div class="card-pf-body">
+              <p>[card contents]</p>
+            </div>
+            <div class="card-pf-footer">
+              <p><a href="#">Footer link</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-7 col-md-7">
+          <div class="card-pf">
+            <h2 class="card-pf-title">
+              Card Title
+            </h2>
+            <div class="card-pf-body">
+              <p>[card contents]</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+      <div class="row row-cards-pf">
+      <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <div class="card-pf">
+            <div class="card-pf-heading">
+              <h2 class="card-pf-title">
+                Card Title
+              </h2>
+            </div>
+            <div class="card-pf-body">
+              <p>[card contents]</p>
+            </div>
+            <div class="card-pf-footer">
+              <p><a href="#">Footer link</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-9 col-md-9">
+          <div class="card-pf">
+            <div class="card-pf-heading">
+              <h2 class="card-pf-title">
+                Card Title
+              </h2>
+            </div>
+            <div class="card-pf-body">
+              <p>[card contents]</p>
+            </div>
+            <div class="card-pf-footer">
+              <p><a href="#">Footer link</a></p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+      <div class="row row-cards-pf">
+      <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+        <div class="col-xs-6 col-sm-8 col-md-8">
+          <div class="card-pf">
+            <div class="card-pf-body">
+              <p>[card contents]</p>
+            </div>
+            <div class="card-pf-footer">
+              <p><a href="#">Footer link</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <div class="card-pf">
+            <div class="card-pf-body">
+              <p>[card contents]</p>
+            </div>
+            <div class="card-pf-footer">
+              <p><a href="#">Footer link</a></p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+      <div class="row row-cards-pf">
+      <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <div class="card-pf">
+            <div class="card-pf-body">
+              <p>[card contents]</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <div class="card-pf">
+            <div class="card-pf-body">
+              <p>[card contents]</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+</div>
+<footer class="container-fluid footer-pf-alt">
+  <p>&copy; 2015 Company Name</p>
+</footer>
+
+<script>
+  $(function() {
+    // matchHeight the contents of each .card-pf and then the .card-pf itself
+    $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+    // initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+  </body>
+</html>

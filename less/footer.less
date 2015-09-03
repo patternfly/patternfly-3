@@ -1,0 +1,19 @@
+//
+// Footer
+// --------------------------------------------------
+
+.footer-pf-alt {
+  background-color: @footer-pf-alt-bg-color;
+  color: @gray-light;
+  font-size: @font-size-small;
+  line-height: 17px; // whole px unit to avoid height differences among browsers
+  padding-left: @footer-pf-alt-padding-left;
+  padding-top: @footer-pf-alt-padding-top;
+  .layout-pf-alt-fixed-with-footer & {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: @zindex-navbar-fixed;
+  }
+}
