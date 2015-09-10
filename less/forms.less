@@ -3,7 +3,9 @@
 // --------------------------------------------------
 
 .form-control {
-  &[disabled], &[readonly], fieldset[disabled] & {
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
     border-color: @input-border-disabled !important;
     .box-shadow(none);
     color: #969696;
