@@ -6,7 +6,8 @@
   "homepage": "https://www.patternfly.org",
   "main": [
     "dist/js/patternfly.js",
-    "dist/css/patternfly.css"
+    "dist/css/patternfly.css",
+    "dist/css/patternfly-additions.css"
   ],
   "ignore": [
     "**/.*",
