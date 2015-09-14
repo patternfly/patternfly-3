@@ -8944,6 +8944,7 @@ fieldset[disabled] .btn-primary.active {
   text-transform: uppercase;
 }
 .btn-group > .dropdown-menu,
+.dropdown > .dropdown-menu,
 .input-group-btn > .dropdown-menu {
   margin-top: -1px;
 }
