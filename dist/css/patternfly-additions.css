@@ -3842,13 +3842,76 @@ table.datatable th:active {
   padding-top: 10px;
 }
 .toolbar-pf .form-group {
-  margin-bottom: 0;
-  width: 200px;
+  margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   .toolbar-pf .form-group {
-    width: 300px;
+    border-right: 1px solid #d0d0d0;
+    display: table-cell;
+    float: left;
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+}
+.toolbar-pf .form-group:last-child {
+  margin-bottom: 0;
+}
+.toolbar-pf .form-group .btn + .btn,
+.toolbar-pf .form-group .btn-group + .btn,
+.toolbar-pf .form-group .btn + .btn-group,
+.toolbar-pf .form-group .btn-group + .btn-group {
+  margin-left: 5px;
+}
+.toolbar-pf .form-group .btn + .btn-link,
+.toolbar-pf .form-group .btn-group + .btn-link,
+.toolbar-pf .form-group .btn + .dropdown,
+.toolbar-pf .form-group .btn-group + .dropdown {
+  margin-left: 10px;
+}
+.toolbar-pf .form-group .btn-link {
+  color: #222222;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 0;
+}
+.toolbar-pf .form-group .btn-link:active,
+.toolbar-pf .form-group .btn-link:focus,
+.toolbar-pf .form-group .btn-link:hover {
+  color: #0099d3;
+}
+.toolbar-pf-actions {
+  display: table;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .toolbar-pf-actions .toolbar-pf-filter {
+    padding-left: 0;
+    width: 25%;
+  }
+}
+.toolbar-pf-actions .toolbar-pf-view-selector {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .toolbar-pf-actions .toolbar-pf-view-selector {
+    border-right: 0;
+    float: right;
+    padding-right: 0;
+  }
+}
+.toolbar-pf-actions .toolbar-pf-view-selector .active a {
+  color: #0099d3;
+  cursor: default;
+}
+.toolbar-pf-actions .toolbar-pf-view-selector a {
+  color: #222222;
+}
+.toolbar-pf-actions .toolbar-pf-view-selector a:hover {
+  color: #0099d3;
+}
+.toolbar-pf-actions .toolbar-pf-view-selector .list-inline {
+  margin-bottom: 0;
 }
 .toolbar-pf-results {
   border-top: 1px solid #d0d0d0;
@@ -3887,18 +3950,5 @@ table.datatable th:active {
 .toolbar-pf-results .list-inline li {
   padding-left: 0;
   padding-right: 0;
-}
-.toolbar-pf-view-selector {
-  font-size: 16px;
-}
-.toolbar-pf-view-selector .active a {
-  color: #0099d3;
-  cursor: default;
-}
-.toolbar-pf-view-selector a {
-  color: #222222;
-}
-.toolbar-pf-view-selector a:hover {
-  color: #0099d3;
 }
 /*# sourceMappingURL=patternfly-additions.css.map */
