@@ -1999,7 +1999,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .card-pf-aggregate-status .card-pf-title .fa,
 .card-pf-aggregate-status .card-pf-title .pficon {
-  color: #72767b;
+  color: #333333;
   font-size: 16px;
   margin-right: 7px;
 }
@@ -2014,7 +2014,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .card-pf-status .card-pf-title .fa,
 .card-pf-status .card-pf-title .pficon {
-  color: #72767b;
+  color: #333333;
   font-size: 28px;
   position: absolute;
   left: 10px;
