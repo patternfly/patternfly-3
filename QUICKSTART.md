@@ -1,6 +1,6 @@
 # Using [PatternFly](https://www.patternfly.org) - Quick Start Guide
 
-This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations. PatternFly is meant to be used as a replacement for Bootstrap, so please don't include the Bootstrap CSS if you are including the PatternFly CSS in your project. 
+This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations. PatternFly is meant to be used as a replacement for Bootstrap, so please don't include the Bootstrap CSS if you are including the PatternFly CSS in your project.
 
 ### What's Included
 
@@ -19,7 +19,7 @@ patternfly/
 │   └── img/
 │   │   │── branding materials and loading indicators
 │   └── js/
-│   │   │── patternfly.min.js (may need to include if you are using PatternFly jQuery Sidebar, Popovers or Datatables)  
+│   │   │── patternfly.min.js (may need to include if you are using PatternFly jQuery Sidebar, Popovers or Datatables)
 ├── less/
 │   ├── variables, mixin, and component Less files (may need to include if you want to customize the already built CSS)
 └── test-src/
@@ -83,6 +83,9 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
         <!-- Bootstrap Select -->
         <script src="bower_components/patternfly/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+        <!-- Bootstrap Switch -->
+        <script src="bower_components/patternfly/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
 
         <!-- Bootstrap Tree View -->
         <script src="bower_components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
