@@ -8641,6 +8641,9 @@ button.close {
 .alert .alert-link:hover {
   color: #00618a;
 }
+.alert > .btn.pull-right {
+  margin-top: -3px;
+}
 .alert > .pficon {
   font-size: 20px;
   position: absolute;
