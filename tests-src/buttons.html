@@ -485,3 +485,31 @@ resource: true
           </ul>
         </div><!-- /btn-group -->
       </div><!-- /btn-toolbar -->
+      <h2>Advanced Buttons - requires bootstrap.js</h2>
+      <h3>Single toggle</h3>
+      <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">
+        Single toggle
+      </button>
+      <h3>Checkbox / Radio</h3>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default active">
+          <input type="checkbox" autocomplete="off" checked> Checkbox 1 (pre-checked)
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" autocomplete="off"> Checkbox 2
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" autocomplete="off"> Checkbox 3
+        </label>
+      </div>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+        </label>
+        <label class="btn btn-default">
+          <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+        </label>
+        <label class="btn btn-default">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+        </label>
+      </div>
