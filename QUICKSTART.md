@@ -75,17 +75,20 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
         <script src="bower_components/patternfly/dist/js/patternfly.js"></script>
 
-        <!-- Bootstrap Date Picker -->
-        <script src="bower_components/patternfly/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
         <!-- Bootstrap Combobox -->
         <script src="bower_components/patternfly/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+
+        <!-- Bootstrap Date Picker -->
+        <script src="bower_components/patternfly/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
         <!-- Bootstrap Select -->
         <script src="bower_components/patternfly/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
         <!-- Bootstrap Switch -->
         <script src="bower_components/patternfly/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+
+        <!-- Bootstrap Touchspin -->
+        <script src="bower_components/patternfly/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
 
         <!-- Bootstrap Tree View -->
         <script src="bower_components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>

@@ -28,6 +28,7 @@
     "bootstrap-datepicker": "~1.4.0",
     "bootstrap-select": "~1.7.3",
     "bootstrap-switch": "~3.3.2",
+    "bootstrap-touchspin": "~3.0.3",
     "bootstrap-treeview": "~1.2.0",
     "c3": "~0.4.10",
     "datatables": "~1.10.7",
