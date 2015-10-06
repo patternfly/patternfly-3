@@ -31,6 +31,8 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
       <div id="chart7"></div>
       <h2>Donut Chart</h2>
       <div id="chart8"></div>
+      <h2>Custom Donut Chart</h2>
+      <div id="chart9"></div>
       <script>
         var chart = c3.generate({
           axis: {
@@ -345,4 +347,48 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
             title: "29,210 Host Totals"
           }
         });
+        var chart9 = c3.generate({
+          bindto: '#chart9',
+          type: "donut",
+          donut: {
+            title: "A",
+            label: {show: false},
+            width: 10
+          },
+          size: {
+            height: 130
+          },
+          legend: {
+            show: false
+          },
+          color: {
+            pattern: ["#EC7A08","#D1D1D1"]
+          },
+          tooltip: {
+            contents: function (d) {
+              return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                      Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                      '</span>';
+            }
+          },
+          data: {
+            type: "donut",
+            columns: [
+              ["Used", 60],
+              ["Available", 40]
+            ],
+            groups: [
+              ["used", "available"]
+            ],
+            order: null
+          },
+        });
+
+        $( "#chart9 .c3-chart-arcs-title" ).html(
+                '<tspan dy="0" x="0" class="donut-title-big-pf">' +
+                '60' +
+                '</tspan>' +
+                '<tspan dy="20" x="0" class="donut-title-small-pf">' +
+                'MHz Used' +
+                '</tspan>');
       </script>
