@@ -2,10 +2,6 @@
 // Cards
 // --------------------------------------------------
 
-.container-cards-pf {
-  margin-top: @grid-gutter-width/2;
-}
-
 .card-pf {
   background: @card-pf-bg-color;
   border-top: 2px solid @card-pf-border-top-color;
@@ -75,6 +71,10 @@
   }
 }
 
+.card-pf-cell {
+  display: table-cell;
+}
+
 .card-pf-footer {
   background-color: @card-pf-footer-bg-color;
   border-top: 1px solid @card-pf-border-color;
@@ -91,6 +91,11 @@
   border-bottom: 1px solid @card-pf-border-color;
   margin: 0 (-(@grid-gutter-width/2)) @grid-gutter-width/2;
   padding: 0 @grid-gutter-width/2 0;
+}
+
+.card-pf-table {
+  display: table;
+  width: 100%;
 }
 
 .card-pf-title {
@@ -130,6 +135,10 @@
 
 .cards-pf {
   background: @card-pf-container-bg-color;
+}
+
+.container-cards-pf {
+  margin-top: @grid-gutter-width/2;
 }
 
 .row-cards-pf {
