@@ -43,11 +43,29 @@
     height: @font-size-base;
     width: @font-size-base;
   }
+  &.spinner-inverse {
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+    border-left-color: rgba(255, 255, 255, 0.25);
+    border-right-color: rgba(255, 255, 255, 0.25);
+    border-top-color: rgba(255, 255, 255, 0.75);
+  }
 }
 
 .ie9 .spinner {
   background: url("@{img-path}/@{img-spinner}") no-repeat;
   border: 0;
+  &.spinner-inverse {
+    background-image: url("@{img-path}/@{img-spinner-inverse}");
+  }
+  &.spinner-inverse-lg {
+    background-image: url("@{img-path}/@{img-spinner-inverse-lg}");
+  }
+  &.spinner-inverse-sm {
+    background-image: url("@{img-path}/@{img-spinner-inverse-sm}");
+  }
+  &.spinner-inverse-xs {
+    background-image: url("@{img-path}/@{img-spinner-inverse-xs}");
+  }
   &.spinner-lg {
     background-image: url("@{img-path}/@{img-spinner-lg}");
   }
@@ -58,3 +76,4 @@
     background-image: url("@{img-path}/@{img-spinner-xs}");
   }
 }
+
