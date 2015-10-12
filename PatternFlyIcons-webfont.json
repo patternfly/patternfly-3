@@ -1,35 +1,27 @@
 {
 	"metadata": {
 		"name": "PatternFlyIcons-webfont",
-		"lastOpened": 1441137533828,
-		"created": 1441137529850
+		"lastOpened": 1444655317418,
+		"created": 1444655315312
 	},
 	"iconSets": [
 		{
-			"selection": [],
-			"id": 7,
-			"metadata": {
-				"name": "Untitled Set",
-				"importSize": {
-					"width": 448,
-					"height": 448
-				}
-			},
-			"height": 1024,
-			"prevSize": 32,
-			"icons": [],
-			"invisible": false,
-			"colorThemes": []
-		},
-		{
 			"selection": [
+				{
+					"order": 51,
+					"id": 19,
+					"prevSize": 14,
+					"code": 59392,
+					"name": "builder-image",
+					"tempChar": ""
+				},
 				{
 					"order": 49,
 					"id": 18,
 					"prevSize": 14,
 					"code": 58888,
 					"name": "topology",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 50,
@@ -37,7 +29,7 @@
 					"prevSize": 14,
 					"code": 58889,
 					"name": "thumb-tack-o",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 27,
@@ -45,7 +37,7 @@
 					"prevSize": 14,
 					"code": 58904,
 					"name": "home",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -54,7 +46,7 @@
 					"prevSize": 14,
 					"code": 58903,
 					"name": "history",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -63,7 +55,7 @@
 					"prevSize": 14,
 					"code": 58901,
 					"name": "import",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -72,7 +64,7 @@
 					"prevSize": 14,
 					"code": 58902,
 					"name": "export",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -81,7 +73,7 @@
 					"prevSize": 14,
 					"code": 58881,
 					"name": "save",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -90,7 +82,7 @@
 					"prevSize": 14,
 					"code": 58882,
 					"name": "ok",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -99,7 +91,7 @@
 					"prevSize": 14,
 					"code": 58883,
 					"name": "messages",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -108,7 +100,7 @@
 					"prevSize": 14,
 					"code": 58884,
 					"name": "info",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -117,7 +109,7 @@
 					"prevSize": 14,
 					"code": 58885,
 					"name": "help",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -126,7 +118,7 @@
 					"prevSize": 14,
 					"code": 58886,
 					"name": "folder-open",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -135,7 +127,7 @@
 					"prevSize": 14,
 					"code": 58887,
 					"name": "folder-close",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -144,7 +136,7 @@
 					"prevSize": 14,
 					"code": 58890,
 					"name": "edit",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -153,7 +145,7 @@
 					"prevSize": 14,
 					"code": 58891,
 					"name": "close",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -162,7 +154,7 @@
 					"prevSize": 14,
 					"code": 58907,
 					"name": "add-circle-o",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 30,
@@ -170,7 +162,7 @@
 					"prevSize": 14,
 					"code": 58908,
 					"name": "warning-triangle-o",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 31,
@@ -178,7 +170,7 @@
 					"prevSize": 14,
 					"code": 58909,
 					"name": "error-circle-o",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 33,
@@ -186,7 +178,7 @@
 					"prevSize": 14,
 					"code": 58910,
 					"name": "service",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 37,
@@ -194,7 +186,7 @@
 					"prevSize": 14,
 					"code": 58911,
 					"name": "image",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 35,
@@ -202,7 +194,7 @@
 					"prevSize": 14,
 					"code": 58912,
 					"name": "cluster",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 38,
@@ -210,7 +202,7 @@
 					"prevSize": 14,
 					"code": 58913,
 					"name": "container-node",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 40,
@@ -218,7 +210,7 @@
 					"prevSize": 14,
 					"code": 58914,
 					"name": "project",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 41,
@@ -226,7 +218,7 @@
 					"prevSize": 14,
 					"code": 58915,
 					"name": "registry",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 42,
@@ -234,7 +226,7 @@
 					"prevSize": 14,
 					"code": 58916,
 					"name": "replicator",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 43,
@@ -242,7 +234,7 @@
 					"prevSize": 14,
 					"code": 58917,
 					"name": "route",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 47,
@@ -250,7 +242,7 @@
 					"prevSize": 14,
 					"code": 58918,
 					"name": "openshift",
-					"tempChar": ""
+					"tempChar": ""
 				},
 				{
 					"order": 46,
@@ -258,7 +250,7 @@
 					"prevSize": 14,
 					"code": 58919,
 					"name": "kubernetes",
-					"tempChar": ""
+					"tempChar": ""
 				}
 			],
 			"id": 6,
@@ -277,6 +269,18 @@
 			"height": 1024,
 			"prevSize": 14,
 			"icons": [
+				{
+					"id": 39,
+					"paths": [
+						"M937.223 238.834c-8.066-11.57-18.759-19.803-32.080-24.715l-370.203-134.624c-7.399-2.683-14.802-4.073-22.192-4.185v-0.009c-0.192-0.005-0.386-0.011-0.578-0.011-0.062 0-0.123 0.005-0.185 0.005s-0.123-0.005-0.185-0.005c-0.192 0-0.386 0.007-0.578 0.011v0.009c-7.392 0.11-14.793 1.499-22.192 4.185l-370.201 134.624c-13.321 4.912-24.014 13.145-32.080 24.715-8.059 11.568-12.096 24.37-12.096 38.386v403.854c0 12.265 3.157 23.666 9.465 34.171 6.311 10.523 14.905 18.761 25.767 24.718l370.203 201.927c9.547 5.456 19.931 8.238 31.136 8.389v0.011c0.197 0.005 0.386 0.018 0.583 0.018 0.059 0 0.119-0.007 0.181-0.007 0.059 0 0.119 0.007 0.181 0.007 0.197 0 0.386-0.014 0.583-0.018v-0.011c11.205-0.149 21.584-2.933 31.136-8.389l370.203-201.927c10.864-5.957 19.458-14.199 25.767-24.718 6.309-10.512 9.465-21.906 9.465-34.176v-403.849c-0.002-14.016-4.037-26.818-12.098-38.386zM141.961 346.633l128.549 46.448-128.549 44.254v-90.702zM141.961 565.856l97.691 43.554-97.691 33.63v-77.184zM462.080 841.143l-276.43-149.648 138.069-44.608 138.361 61.685v132.571zM462.080 604.651c0 0-201.586-80.112-284.823-113.047l187.387-64.51 97.435 35.205v142.352zM511.986 409.671v0 0 0 0zM513.76 395.945l-0.752-0.274-0.103 0.037v-0.002l0.101-0.037-326.11-119.23 326.857-121.815 327.893 121.456-327.886 119.865zM659.326 427.095l187.387 64.51c-83.237 32.939-284.823 113.047-284.823 113.047v-142.352l97.435-35.205zM561.89 841.143v-132.571l138.359-61.682 138.071 44.615-276.43 149.639zM882.009 643.040l-97.691-33.63 97.691-43.554v77.184zM882.009 437.335l-128.549-44.254 128.549-46.448v90.702z"
+					],
+					"attrs": [],
+					"isMulticolor": false,
+					"grid": 14,
+					"tags": [
+						"builder-image"
+					]
+				},
 				{
 					"id": 38,
 					"paths": [
@@ -7229,7 +7233,7 @@
 					"prevSize": 14,
 					"code": 58898,
 					"name": "print",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7242,7 +7246,7 @@
 					"prevSize": 14,
 					"code": 58880,
 					"name": "screen",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7367,7 +7371,7 @@
 					"prevSize": 14,
 					"code": 58894,
 					"name": "user",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7376,7 +7380,7 @@
 					"prevSize": 14,
 					"code": 58895,
 					"name": "users",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7417,7 +7421,7 @@
 					"prevSize": 14,
 					"code": 58900,
 					"name": "spinner",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7434,7 +7438,7 @@
 					"prevSize": 14,
 					"code": 58899,
 					"name": "spinner2",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7503,7 +7507,7 @@
 					"prevSize": 14,
 					"code": 58896,
 					"name": "equalizer",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -7612,7 +7616,7 @@
 					"prevSize": 14,
 					"code": 58897,
 					"name": "remove2",
-					"tempChar": "",
+					"tempChar": "",
 					"ligatures": ""
 				},
 				{
@@ -8762,7 +8766,7 @@
 				"license": "Apache 2.0",
 				"licenseURL": "http://www.apache.org/licenses/LICENSE-2.0.html",
 				"majorVersion": 2,
-				"minorVersion": 2
+				"minorVersion": 4
 			},
 			"showGlyphs": true,
 			"metrics": {
