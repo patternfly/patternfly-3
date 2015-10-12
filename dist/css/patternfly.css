@@ -9523,6 +9523,9 @@ td > .progress:first-child:last-child {
 .progress-xs .progress-bar {
   line-height: 6px;
 }
+.progress-bar-remaining {
+  background: transparent;
+}
 .progress-description {
   margin-bottom: 10px;
   max-width: 52%;
