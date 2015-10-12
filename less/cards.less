@@ -2,16 +2,12 @@
 // Cards
 // --------------------------------------------------
 
-.container-cards-pf {
-  margin-top: @grid-gutter-width/2;
-}
-
 .card-pf {
   background: @card-pf-bg-color;
   border-top: 2px solid @card-pf-border-top-color;
   .box-shadow(0 1px 1px rgba(0,0,0,.175));
-  margin: 0 (-(@grid-gutter-width/4)) @grid-gutter-width/2;
-  padding: 0 @grid-gutter-width/2;
+  margin: 0 (-(@grid-gutter-width / 4)) (@grid-gutter-width / 2);
+  padding: 0 (@grid-gutter-width / 2);
   &.card-pf-accented {
     border-top-color: @card-pf-accented-border-top-color;
   }
@@ -26,49 +22,61 @@
           }
         }
         &:hover {
-          color: @link-color;
+          color: @link-hover-color;
         }
       }
     }
   }
-  &.card-pf-aggregate-status, &.card-pf-status {
-    padding: 0 @grid-gutter-width/4;
+  &.card-pf-aggregate-status {
+    padding: 0 (@grid-gutter-width / 4);
     text-align: center;
   }
-  &.card-pf-status {
+  &.card-pf-aggregate-status-mini {
+    padding-bottom: (@grid-gutter-width / 4);
     position: relative;
   }
   @media (min-width: @grid-float-breakpoint) {
     &.card-pf-bleed-left {
-      margin-left: -(@grid-gutter-width/2);
+      margin-left: (-(@grid-gutter-width / 2));
     }
     &.card-pf-bleed-right {
       border-right: 1px solid @card-pf-border-color;
-      margin-right: -(@grid-gutter-width/2);
+      margin-right: (-(@grid-gutter-width / 2));
     }
   }
 }
 
 .card-pf-aggregate-status-notifications {
-  font-size: @font-size-base * 2; // 24px
+  font-size: (@font-size-base * 2); // 24px
   font-weight: 300;
-  .fa, .pficon {
-    font-size: @font-size-base * 1.5; // 18px
-    margin-right: 7px;
+  .card-pf-aggregate-status-mini & {
+    line-height: 1;
   }
   .card-pf-aggregate-status-notification + .card-pf-aggregate-status-notification {
     border-left: 1px solid @card-pf-border-color;
-    margin-left: @grid-gutter-width/8 - 2;
-    padding-left: @grid-gutter-width/4;
+    margin-left: (@grid-gutter-width / 8 - 2);
+    padding-left: (@grid-gutter-width / 4);
+  }
+  .fa, .pficon {
+    font-size: (@font-size-base * 1.5); // 18px
+    margin-right: 7px;
   }
 }
 
 .card-pf-body {
-  margin: @grid-gutter-width/2 0;
-  padding: 0 0 @grid-gutter-width/2;
+  margin: (@grid-gutter-width / 2) 0;
+  padding: 0 0 (@grid-gutter-width / 2);
   .card-pf-aggregate-status & {
-    margin-top: @grid-gutter-width/4;
-    padding-bottom: @grid-gutter-width/4;
+    margin-top: (@grid-gutter-width / 4);
+    padding-bottom: (@grid-gutter-width / 4);
+  }
+  .card-pf-aggregate-status-mini & {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    right: (@grid-gutter-width / 2);
+    top: 15px;
   }
   > *:last-child {
     margin-bottom: 0;
@@ -78,8 +86,8 @@
 .card-pf-footer {
   background-color: @card-pf-footer-bg-color;
   border-top: 1px solid @card-pf-border-color;
-  margin: 0 (-(@grid-gutter-width/2)) !important;
-  padding: @grid-gutter-width/2 @grid-gutter-width/2 @grid-gutter-width/4;
+  margin: 0 (-(@grid-gutter-width / 2)) !important;
+  padding: (@grid-gutter-width / 2) (@grid-gutter-width / 2) (@grid-gutter-width / 4);
   a > {
     .fa, .pficon {
       margin-right: 5px;
@@ -89,42 +97,49 @@
 
 .card-pf-heading {
   border-bottom: 1px solid @card-pf-border-color;
-  margin: 0 (-(@grid-gutter-width/2)) @grid-gutter-width/2;
-  padding: 0 @grid-gutter-width/2 0;
+  margin: 0 (-(@grid-gutter-width / 2)) (@grid-gutter-width / 2);
+  padding: 0 (@grid-gutter-width / 2) 0;
 }
 
 .card-pf-title {
   font-size: @font-size-h3;
   font-weight: 400;
-  margin: @grid-gutter-width/2 0;
+  margin: (@grid-gutter-width / 2) 0;
   padding: 0;
   .card-pf-aggregate-status & {
     font-size: @font-size-large;
-    margin: @grid-gutter-width/4 0 0;
+    margin: (@grid-gutter-width / 4) 0 0;
     .fa, .pficon {
       color: @card-pf-aggregate-status-title-icon-color;
       font-size: @font-size-h3;
       margin-right: 7px;
     }
   }
-  .card-pf-aggregate-status-count, .card-pf-status-count {
+  .card-pf-aggregate-status-count {
     font-size: @font-size-h3;
-  }
-  .card-pf-status & {
-    font-size: @font-size-base;
-    margin: @grid-gutter-width/4 0 0;
-    padding: 0 0 @grid-gutter-width/4;
-    .fa, .pficon {
-      color: @card-pf-aggregate-status-title-icon-color;
-      font-size: @font-size-large * 2;
-      position: absolute;
-      left: @grid-gutter-width/4;
-      margin-top: -@font-size-large;
-      top: 50%;
+    .card-pf-aggregate-status-mini & {
+      display: block;
+      font-size: @font-size-base * 2; // 24px
+      font-weight: 300;
+      margin-bottom: 3px;
     }
   }
-  .card-pf-status-count {
-    display: block;
+  .card-pf-aggregate-status-mini & {
+    font-size: @font-size-base;
+    margin-top: (@grid-gutter-width / 8);
+    a {
+      display: inline-block;
+    }
+    .fa,
+    .pficon {
+      font-size: (@font-size-base * 2 + 2); // 26px
+      margin-right: 0;
+      min-width: (@font-size-base * 2 + 2); // 26px
+      position: absolute;
+      left: (@grid-gutter-width / 2);
+      text-align: center;
+      top: 15px;
+    }
   }
 }
 
@@ -132,7 +147,11 @@
   background: @card-pf-container-bg-color;
 }
 
+.container-cards-pf {
+  margin-top: (@grid-gutter-width / 2);
+}
+
 .row-cards-pf {
-  margin-left: -(@grid-gutter-width/4);
-  margin-right: -(@grid-gutter-width/4);
+  margin-left: (-(@grid-gutter-width / 4));
+  margin-right: (-(@grid-gutter-width / 4));
 }

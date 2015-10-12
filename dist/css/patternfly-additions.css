@@ -2157,9 +2157,6 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .treeview span.indent {
   margin-right: 5px;
 }
-.container-cards-pf {
-  margin-top: 20px;
-}
 .card-pf {
   background: #ffffff;
   border-top: 2px solid transparent;
@@ -2185,14 +2182,14 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .card-pf.card-pf-aggregate-status .card-pf-title a:hover,
 .card-pf.card-pf-aggregate-status .card-pf-aggregate-status-notifications a:hover {
-  color: #0099d3;
+  color: #00618a;
 }
-.card-pf.card-pf-aggregate-status,
-.card-pf.card-pf-status {
+.card-pf.card-pf-aggregate-status {
   padding: 0 10px;
   text-align: center;
 }
-.card-pf.card-pf-status {
+.card-pf.card-pf-aggregate-status-mini {
+  padding-bottom: 10px;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -2208,15 +2205,18 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   font-size: 24px;
   font-weight: 300;
 }
-.card-pf-aggregate-status-notifications .fa,
-.card-pf-aggregate-status-notifications .pficon {
-  font-size: 18px;
-  margin-right: 7px;
+.card-pf-aggregate-status-mini .card-pf-aggregate-status-notifications {
+  line-height: 1;
 }
 .card-pf-aggregate-status-notifications .card-pf-aggregate-status-notification + .card-pf-aggregate-status-notification {
   border-left: 1px solid #d1d1d1;
   margin-left: 3px;
   padding-left: 10px;
+}
+.card-pf-aggregate-status-notifications .fa,
+.card-pf-aggregate-status-notifications .pficon {
+  font-size: 18px;
+  margin-right: 7px;
 }
 .card-pf-body {
   margin: 20px 0;
@@ -2225,6 +2225,14 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .card-pf-aggregate-status .card-pf-body {
   margin-top: 10px;
   padding-bottom: 10px;
+}
+.card-pf-aggregate-status-mini .card-pf-body {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  position: absolute;
+  right: 20px;
+  top: 15px;
 }
 .card-pf-body > *:last-child {
   margin-bottom: 0;
@@ -2260,29 +2268,37 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   font-size: 16px;
   margin-right: 7px;
 }
-.card-pf-title .card-pf-aggregate-status-count,
-.card-pf-title .card-pf-status-count {
+.card-pf-title .card-pf-aggregate-status-count {
   font-size: 16px;
 }
-.card-pf-status .card-pf-title {
-  font-size: 12px;
-  margin: 10px 0 0;
-  padding: 0 0 10px;
-}
-.card-pf-status .card-pf-title .fa,
-.card-pf-status .card-pf-title .pficon {
-  color: #333333;
-  font-size: 28px;
-  position: absolute;
-  left: 10px;
-  margin-top: -14px;
-  top: 50%;
-}
-.card-pf-title .card-pf-status-count {
+.card-pf-aggregate-status-mini .card-pf-title .card-pf-aggregate-status-count {
   display: block;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 3px;
+}
+.card-pf-aggregate-status-mini .card-pf-title {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.card-pf-aggregate-status-mini .card-pf-title a {
+  display: inline-block;
+}
+.card-pf-aggregate-status-mini .card-pf-title .fa,
+.card-pf-aggregate-status-mini .card-pf-title .pficon {
+  font-size: 26px;
+  margin-right: 0;
+  min-width: 26px;
+  position: absolute;
+  left: 20px;
+  text-align: center;
+  top: 15px;
 }
 .cards-pf {
   background: #f5f5f5;
+}
+.container-cards-pf {
+  margin-top: 20px;
 }
 .row-cards-pf {
   margin-left: -10px;
