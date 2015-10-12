@@ -9492,22 +9492,26 @@ td > .progress:first-child:last-child {
 .progress-label-left .progress-bar span,
 .progress-label-top-right .progress-bar span {
   color: #333333;
-  font-size: 14px;
   position: absolute;
   text-align: right;
 }
 .progress-label-left .progress-bar span {
+  font-size: 14px;
   left: -40px;
   top: 0;
   width: 35px;
 }
 .progress-label-top-right .progress-bar span {
-  max-width: 25%;
+  font-size: 11px;
+  max-width: 47%;
   overflow: hidden;
   right: 0;
   text-overflow: ellipsis;
-  top: -31px;
+  top: -30px;
   white-space: nowrap;
+}
+.progress-label-top-right .progress-bar span strong {
+  font-weight: 600;
 }
 .progress-label-left.progress-sm .progress-bar span,
 .progress-label-top-right.progress-sm .progress-bar span {
@@ -9521,7 +9525,7 @@ td > .progress:first-child:last-child {
 }
 .progress-description {
   margin-bottom: 10px;
-  max-width: 74%;
+  max-width: 52%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
