@@ -41,6 +41,7 @@
 .progress-bar {
   box-shadow: none;
   .progress-label-left & span,
+  .progress-label-right & span,
   .progress-label-top-right & span {
     color: @text-color;
     position: absolute;
@@ -52,17 +53,24 @@
     top: 0;
     width: 35px;
   }
+  .progress-label-right & span,
   .progress-label-top-right & span {
     font-size: @font-size-small;
-    max-width: 47%;
     overflow: hidden;
     right: 0;
     text-overflow: ellipsis;
-    top: (-(@line-height-computed * 1.5)); // -30px
     white-space: nowrap;
     strong {
       font-weight: 600;
     }
+  }
+  .progress-label-right & span {
+    max-width: @progress-description-label-width;
+    top: 0;
+  }
+  .progress-label-top-right & span {
+    max-width: 47%;
+    top: (-(@line-height-computed * 1.5)); // -30px
   }
   .progress-label-left.progress-sm & span,
   .progress-label-top-right.progress-sm & span {
@@ -80,6 +88,16 @@
   background: transparent;
 }
 
+.progress-container {
+  position: relative;
+  &.progress-description-left {
+    padding-left :(@progress-description-label-width + 5);
+  }
+  &.progress-label-right {
+    padding-right :(@progress-description-label-width + 5);
+  }
+}
+
 .progress-description {
   margin-bottom: (@line-height-computed / 2); // 10px
   max-width: 52%;
@@ -95,6 +113,13 @@
   .fa, .pficon {
     font-size: 14px;
     margin-right: 3px;
+  }
+  .progress-description-left & {
+    left: 0;
+    margin-bottom: 0;
+    max-width: @progress-description-label-width;
+    position: absolute;
+    top: 0;
   }
   .tooltip {
     white-space: normal;
