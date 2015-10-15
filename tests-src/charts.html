@@ -329,7 +329,7 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
           bindto: '#chart8',
           data: {
             colors: {
-              Cloud: 
+              Cloud:
           '#00659c',     Virtual: '#0088ce',
               Baremetal: '#969696'
             },
@@ -353,10 +353,10 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
           donut: {
             title: "A",
             label: {show: false},
-            width: 10
+            width: 11
           },
           size: {
-            height: 130
+            height: 171, // produces a diameter of 150 and a centered chart
           },
           legend: {
             show: false
@@ -383,12 +383,12 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
             order: null
           },
         });
-
         $( "#chart9 .c3-chart-arcs-title" ).html(
-                '<tspan dy="0" x="0" class="donut-title-big-pf">' +
-                '60' +
-                '</tspan>' +
-                '<tspan dy="20" x="0" class="donut-title-small-pf">' +
-                'MHz Used' +
-                '</tspan>');
+          '<tspan dy="0" x="0" class="donut-title-big-pf">' +
+          '60' +
+          '</tspan>' +
+          '<tspan dy="20" x="0" class="donut-title-small-pf">' +
+          'MHz Used' +
+          '</tspan>'
+        );
       </script>

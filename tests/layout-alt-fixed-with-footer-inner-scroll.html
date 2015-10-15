@@ -26,6 +26,8 @@
     <script src="../components/jquery/dist/jquery.min.js"></script>
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../components/matchHeight/jquery.matchHeight-min.js"></script>
+    <script src="../components/c3/c3.min.js"></script>
+    <script src="../components/d3/d3.min.js"></script>
     <script src="../dist/js/patternfly.min.js"></script>
   </head>
   <body class="cards-pf">
@@ -512,7 +514,53 @@
               Card Title
             </h2>
             <div class="card-pf-body">
-              <p>[card contents]</p>
+              <div id="chart-pf-donut"></div>
+              <script>
+                var chart = c3.generate({
+                  bindto: '#chart-pf-donut',
+                  type: "donut",
+                  donut: {
+                    title: "A",
+                    label: {show: false},
+                    width: 11
+                  },
+                  size: {
+                    height: 171, // produces a diameter of 150 and a centered chart
+                  },
+                  legend: {
+                    show: false
+                  },
+                  color: {
+                    pattern: ["#EC7A08","#D1D1D1"]
+                  },
+                  tooltip: {
+                    contents: function (d) {
+                      return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                              Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                              '</span>';
+                    }
+                  },
+                  data: {
+                    type: "donut",
+                    columns: [
+                      ["Used", 60],
+                      ["Available", 40]
+                    ],
+                    groups: [
+                      ["used", "available"]
+                    ],
+                    order: null
+                  },
+                });
+                $( "#chart-pf-donut .c3-chart-arcs-title" ).html(
+                  '<tspan dy="0" x="0" class="donut-title-big-pf">' +
+                  '60' +
+                  '</tspan>' +
+                  '<tspan dy="20" x="0" class="donut-title-small-pf">' +
+                  'MHz Used' +
+                  '</tspan>'
+                );
+              </script>
             </div>
             <div class="card-pf-footer">
               <div class="dropdown card-pf-time-frame-filter">
@@ -650,5 +698,6 @@
     $('[data-toggle="tooltip"]').tooltip();
   });
 </script>
+
   </body>
 </html>
