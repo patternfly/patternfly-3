@@ -210,6 +210,10 @@ Since PatternFly is based on Bootstrap, PatternFly supports [the same browsers a
 
 See [https://patternfly.atlassian.net/secure/RapidBoard.jspa?projectKey=PTNFLY&rapidView=4&view=planning](https://patternfly.atlassian.net/secure/RapidBoard.jspa?projectKey=PTNFLY&rapidView=4&view=planning).
 
+### Bug List
+
+Official tracking of bugs occurs in Jira.  See https://patternfly.atlassian.net/secure/RapidBoard.jspa?rapidView=4&view=planning&selectedIssue=PTNFLY-428&quickFilter=35&quickFilter=24
+
 ## License
 
 Modifications to Bootstrap are copyright 2013 Red Hat, Inc. and licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
