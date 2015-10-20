@@ -4089,9 +4089,27 @@ table.datatable th:active {
   height: 12px;
   width: 12px;
 }
+.spinner.spinner-inverse {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  border-left-color: rgba(255, 255, 255, 0.25);
+  border-right-color: rgba(255, 255, 255, 0.25);
+  border-top-color: rgba(255, 255, 255, 0.75);
+}
 .ie9 .spinner {
   background: url("../img/spinner.gif") no-repeat;
   border: 0;
+}
+.ie9 .spinner.spinner-inverse {
+  background-image: url("../img/spinner-inverse.gif");
+}
+.ie9 .spinner.spinner-inverse-lg {
+  background-image: url("../img/spinner-inverse-lg.gif");
+}
+.ie9 .spinner.spinner-inverse-sm {
+  background-image: url("../img/spinner-inverse-sm.gif");
+}
+.ie9 .spinner.spinner-inverse-xs {
+  background-image: url("../img/spinner-inverse-xs.gif");
 }
 .ie9 .spinner.spinner-lg {
   background-image: url("../img/spinner-lg.gif");
