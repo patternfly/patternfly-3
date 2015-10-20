@@ -506,7 +506,7 @@
       </div><!-- /row -->
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-        <div class="col-xs-6 col-sm-5 col-md-5">
+        <div class="col-xs-12 col-sm-5 col-md-5">
           <div class="card-pf">
             <h2 class="card-pf-title">
               Card Title
@@ -515,11 +515,24 @@
               <p>[card contents]</p>
             </div>
             <div class="card-pf-footer">
-              <p><a href="#">Footer link</a></p>
+              <div class="dropdown card-pf-time-frame-filter">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  Last 30 Days <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li><a href="#">Last 60 Days</a></li>
+                  <li><a href="#">Last 90 Days</a></li>
+                </ul>
+              </div>
+              <p>
+                <a href="#" class="card-pf-link-with-icon">
+                  <span class="pficon pficon-flag"></span>View CPU Events
+                </a>
+              </p>
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-7 col-md-7">
+        <div class="col-xs-12 col-sm-7 col-md-7">
           <div class="card-pf">
             <h2 class="card-pf-title">
               Card Title
@@ -532,33 +545,50 @@
       </div><!-- /row -->
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-        <div class="col-xs-6 col-sm-3 col-md-3">
+        <div class="col-xs-12 col-sm-6 col-md-5">
           <div class="card-pf">
             <div class="card-pf-heading">
+              <div class="dropdown card-pf-time-frame-filter">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  Last 30 Days <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li><a href="#">Last 60 Days</a></li>
+                  <li><a href="#">Last 90 Days</a></li>
+                </ul>
+              </div>
               <h2 class="card-pf-title">
                 Card Title
               </h2>
             </div>
             <div class="card-pf-body">
               <p>[card contents]</p>
-            </div>
-            <div class="card-pf-footer">
-              <p><a href="#">Footer link</a></p>
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-9 col-md-9">
+        <div class="col-xs-12 col-sm-6 col-md-7">
           <div class="card-pf">
-            <div class="card-pf-heading">
-              <h2 class="card-pf-title">
-                Card Title
-              </h2>
-            </div>
+            <h2 class="card-pf-title">
+              Card Title
+            </h2>
             <div class="card-pf-body">
               <p>[card contents]</p>
             </div>
             <div class="card-pf-footer">
-              <p><a href="#">Footer link</a></p>
+              <div class="dropdown card-pf-time-frame-filter">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  Last 30 Days <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li><a href="#">Last 60 Days</a></li>
+                  <li><a href="#">Last 90 Days</a></li>
+                </ul>
+              </div>
+              <p>
+                <a href="#" class="card-pf-link-with-icon">
+                  <span class="pficon pficon-add-circle-o"></span>Add New Cluster
+                </a>
+              </p>
             </div>
           </div>
         </div>
