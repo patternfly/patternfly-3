@@ -3,8 +3,9 @@
 // --------------------------------------------------
 
 .alert {
-  border-width: 2px;
-  padding-left: 34px;
+  border-width: 1px;
+  padding-left: 47px;
+  padding-right: (@alert-padding + 3);
   position: relative;
   .alert-link {
     color: @link-color;
@@ -16,17 +17,27 @@
     margin-top: -3px;
   }
   > .pficon {
-    font-size: 20px;
+    font-size: 22px;
     position: absolute;
-    left: 7px;
-    top: 7px;
+    left: 13px;
+    top: 10px;
+  }
+  .close {
+    .opacity(.85);
+    &:hover,
+    &:focus {
+      .opacity(1);
+    }
   }
   .pficon-info {
-    color: #72767b;
+    color: #4d5258;
   }
 }
 
-.alert-dismissable .close {
-  right: -16px;
-  top: 1px;
+.alert-dismissable {
+  padding-right: (@alert-padding + 17);
+  .close {
+    right: -13px;
+    top: 1px;
+  }
 }
