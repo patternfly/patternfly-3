@@ -9490,6 +9490,7 @@ td > .progress:first-child:last-child {
   box-shadow: none;
 }
 .progress-label-left .progress-bar span,
+.progress-label-right .progress-bar span,
 .progress-label-top-right .progress-bar span {
   color: #333333;
   position: absolute;
@@ -9501,17 +9502,25 @@ td > .progress:first-child:last-child {
   top: 0;
   width: 35px;
 }
+.progress-label-right .progress-bar span,
 .progress-label-top-right .progress-bar span {
   font-size: 11px;
-  max-width: 47%;
   overflow: hidden;
   right: 0;
   text-overflow: ellipsis;
-  top: -30px;
   white-space: nowrap;
 }
+.progress-label-right .progress-bar span strong,
 .progress-label-top-right .progress-bar span strong {
   font-weight: 600;
+}
+.progress-label-right .progress-bar span {
+  max-width: 85px;
+  top: 0;
+}
+.progress-label-top-right .progress-bar span {
+  max-width: 47%;
+  top: -30px;
 }
 .progress-label-left.progress-sm .progress-bar span,
 .progress-label-top-right.progress-sm .progress-bar span {
@@ -9525,6 +9534,15 @@ td > .progress:first-child:last-child {
 }
 .progress-bar-remaining {
   background: transparent;
+}
+.progress-container {
+  position: relative;
+}
+.progress-container.progress-description-left {
+  padding-left: 90px;
+}
+.progress-container.progress-label-right {
+  padding-right: 90px;
 }
 .progress-description {
   margin-bottom: 10px;
@@ -9543,6 +9561,13 @@ td > .progress:first-child:last-child {
 .progress-description .pficon {
   font-size: 14px;
   margin-right: 3px;
+}
+.progress-description-left .progress-description {
+  left: 0;
+  margin-bottom: 0;
+  max-width: 85px;
+  position: absolute;
+  top: 0;
 }
 .progress-description .tooltip {
   white-space: normal;
