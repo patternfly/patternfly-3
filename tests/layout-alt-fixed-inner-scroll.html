@@ -26,6 +26,8 @@
     <script src="../components/jquery/dist/jquery.min.js"></script>
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../components/matchHeight/jquery.matchHeight-min.js"></script>
+    <script src="../components/c3/c3.min.js"></script>
+    <script src="../components/d3/d3.min.js"></script>
     <script src="../dist/js/patternfly.min.js"></script>
   </head>
   <body class="cards-pf">
@@ -422,7 +424,7 @@
                   Pods
                 </div>
                 <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="62.5%" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%;" data-toggle="tooltip" title="62.5% Used">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="62.5" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%;" data-toggle="tooltip" title="62.5% Used">
                     <span><strong>5 of 8</strong> Total</span>
                   </div>
                   <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="37.5" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%;" data-toggle="tooltip" title="37.5% Available">
@@ -506,39 +508,426 @@
       </div><!-- /row -->
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-        <div class="col-xs-12 col-sm-5 col-md-5">
-          <div class="card-pf">
-            <h2 class="card-pf-title">
-              Card Title
-            </h2>
-            <div class="card-pf-body">
-              <p>[card contents]</p>
+        <div class="col-md-12">
+          <div class="card-pf card-pf-utilization">
+            <div class="card-pf-heading">
+              <p class="card-pf-heading-details">Last 30 days</p>
+              <h2 class="card-pf-title">
+                Utilization
+              </h2>
             </div>
-            <div class="card-pf-footer">
-              <div class="dropdown card-pf-time-frame-filter">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                  Last 30 Days <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                  <li><a href="#">Last 60 Days</a></li>
-                  <li><a href="#">Last 90 Days</a></li>
-                </ul>
+            <div class="card-pf-body">
+              <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <h3 class="card-pf-subtitle">CPU</h3>
+                  <p class="card-pf-utilization-details">
+                    <span class="card-pf-utilization-card-details-count">50</span>
+                    <span class="card-pf-utilization-card-details-description">
+                      <span class="card-pf-utilization-card-details-line-1">Available</span>
+                      <span class="card-pf-utilization-card-details-line-2">of 1000 MHz</span>
+                    </span>
+                  </p>
+                  <div id="chart-pf-donut"></div>
+                  <div id="chart-pf-sparkline"></div>
+                  <script>
+                    var chart1 = c3.generate({
+                      bindto: '#chart-pf-donut',
+                      type: "donut",
+                      donut: {
+                        title: "A",
+                        label: {show: false},
+                        width: 11
+                      },
+                      size: {
+                        height: 171, // produces a diameter of 150 and a centered chart
+                      },
+                      legend: {
+                        show: false
+                      },
+                      color: {
+                        pattern: ["#cc0000","#D1D1D1"]
+                      },
+                      tooltip: {
+                        contents: function (d) {
+                          return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                                  Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                                  '</span>';
+                        }
+                      },
+                      data: {
+                        type: "donut",
+                        columns: [
+                          ["Used", 95],
+                          ["Available", 5]
+                        ],
+                        groups: [
+                          ["used", "available"]
+                        ],
+                        order: null
+                      },
+                    });
+                    $( "#chart-pf-donut .c3-chart-arcs-title" ).html(
+                      '<tspan dy="0" x="0" class="donut-title-big-pf">' +
+                      '950' +
+                      '</tspan>' +
+                      '<tspan dy="20" x="0" class="donut-title-small-pf">' +
+                      'MHz Used' +
+                      '</tspan>'
+                    );
+                    var chart2 = c3.generate({
+                      axis: {
+                        x: {
+                          show: false
+                        },
+                        y: {
+                          show: false
+                        }
+                      },
+                      bindto: '#chart-pf-sparkline',
+                      color: {
+                        pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
+                      },
+                      data: {
+                        columns: [
+                          ['Less than one year remaining', 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
+                        ],
+                        type: 'area'
+                      },
+                      legend: {
+                        show: false
+                      },
+                      point: {
+                        r: 1,
+                        focus: {
+                          expand: {
+                            r: 4
+                          }
+                        }
+                      },
+                      size: {
+                        height: 40
+                      },
+                      tooltip: {
+                        // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
+                        contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+                          for (i = 0; i < d.length; i++) {
+                            return '<span class="c3-tooltip-sparkline">' + d[i].value + '%' + '</span>'
+                          }
+                        }
+                      }
+                    });
+                  </script>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <h3 class="card-pf-subtitle">Memory</h3>
+                  <p class="card-pf-utilization-details">
+                    <span class="card-pf-utilization-card-details-count">256</span>
+                    <span class="card-pf-utilization-card-details-description">
+                      <span class="card-pf-utilization-card-details-line-1">Available</span>
+                      <span class="card-pf-utilization-card-details-line-2">of 432 GB</span>
+                    </span>
+                  </p>
+                  <div id="chart-pf-donut-2"></div>
+                  <div id="chart-pf-sparkline-2"></div>
+                  <script>
+                    var chart3 = c3.generate({
+                      bindto: '#chart-pf-donut-2',
+                      type: "donut",
+                      donut: {
+                        title: "A",
+                        label: {show: false},
+                        width: 11
+                      },
+                      size: {
+                        height: 171, // produces a diameter of 150 and a centered chart
+                      },
+                      legend: {
+                        show: false
+                      },
+                      color: {
+                        pattern: ["#3f9c35","#D1D1D1"]
+                      },
+                      tooltip: {
+                        contents: function (d) {
+                          return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                                  Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                                  '</span>';
+                        }
+                      },
+                      data: {
+                        type: "donut",
+                        columns: [
+                          ["Used", 41],
+                          ["Available", 59]
+                        ],
+                        groups: [
+                          ["used", "available"]
+                        ],
+                        order: null
+                      },
+                    });
+                    $( "#chart-pf-donut-2 .c3-chart-arcs-title" ).html(
+                      '<tspan dy="0" x="0" class="donut-title-big-pf">' +
+                      '176' +
+                      '</tspan>' +
+                      '<tspan dy="20" x="0" class="donut-title-small-pf">' +
+                      'GB Used' +
+                      '</tspan>'
+                    );
+                    var chart4 = c3.generate({
+                      axis: {
+                        x: {
+                          show: false
+                        },
+                        y: {
+                          show: false
+                        }
+                      },
+                      bindto: '#chart-pf-sparkline-2',
+                      color: {
+                        pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
+                      },
+                      data: {
+                        columns: [
+                          ['Less than one year remaining', 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
+                        ],
+                        type: 'area'
+                      },
+                      legend: {
+                        show: false
+                      },
+                      point: {
+                        r: 1,
+                        focus: {
+                          expand: {
+                            r: 4
+                          }
+                        }
+                      },
+                      size: {
+                        height: 40
+                      },
+                      tooltip: {
+                        // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
+                        contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+                          for (i = 0; i < d.length; i++) {
+                            return '<span class="c3-tooltip-sparkline">' + d[i].value + '%' + '</span>'
+                          }
+                        }
+                      }
+                    });
+                  </script>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <h3 class="card-pf-subtitle">Network</h3>
+                  <p class="card-pf-utilization-details">
+                    <span class="card-pf-utilization-card-details-count">200</span>
+                    <span class="card-pf-utilization-card-details-description">
+                      <span class="card-pf-utilization-card-details-line-1">Available</span>
+                      <span class="card-pf-utilization-card-details-line-2">of 1300 Gpbs</span>
+                    </span>
+                  </p>
+                  <div id="chart-pf-donut-3"></div>
+                  <div id="chart-pf-sparkline-3"></div>
+                  <script>
+                    var chart5 = c3.generate({
+                      bindto: '#chart-pf-donut-3',
+                      type: "donut",
+                      donut: {
+                        title: "A",
+                        label: {show: false},
+                        width: 11
+                      },
+                      size: {
+                        height: 171, // produces a diameter of 150 and a centered chart
+                      },
+                      legend: {
+                        show: false
+                      },
+                      color: {
+                        pattern: ["#EC7A08","#D1D1D1"]
+                      },
+                      tooltip: {
+                        contents: function (d) {
+                          return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                                  Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                                  '</span>';
+                        }
+                      },
+                      data: {
+                        type: "donut",
+                        columns: [
+                          ["Used", 85],
+                          ["Available", 15]
+                        ],
+                        groups: [
+                          ["used", "available"]
+                        ],
+                        order: null
+                      },
+                    });
+                    $( "#chart-pf-donut-3 .c3-chart-arcs-title" ).html(
+                      '<tspan dy="0" x="0" class="donut-title-big-pf">' +
+                      '1100' +
+                      '</tspan>' +
+                      '<tspan dy="20" x="0" class="donut-title-small-pf">' +
+                      'Gpbs Used' +
+                      '</tspan>'
+                    );
+                    var chart6 = c3.generate({
+                      axis: {
+                        x: {
+                          show: false
+                        },
+                        y: {
+                          show: false
+                        }
+                      },
+                      bindto: '#chart-pf-sparkline-3',
+                      color: {
+                        pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
+                      },
+                      data: {
+                        columns: [
+                          ['Less than one year remaining', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+                        ],
+                        type: 'area'
+                      },
+                      legend: {
+                        show: false
+                      },
+                      point: {
+                        r: 1,
+                        focus: {
+                          expand: {
+                            r: 4
+                          }
+                        }
+                      },
+                      size: {
+                        height: 40
+                      },
+                      tooltip: {
+                        // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
+                        contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+                          for (i = 0; i < d.length; i++) {
+                            return '<span class="c3-tooltip-sparkline">' + d[i].value + '%' + '</span>'
+                          }
+                        }
+                      }
+                    });
+                  </script>
+                </div>
               </div>
-              <p>
-                <a href="#" class="card-pf-link-with-icon">
-                  <span class="pficon pficon-flag"></span>View CPU Events
-                </a>
-              </p>
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-7 col-md-7">
-          <div class="card-pf">
+      </div><!-- /row -->
+      <div class="row row-cards-pf">
+      <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="card-pf card-pf-utilization">
             <h2 class="card-pf-title">
-              Card Title
+              Network
             </h2>
             <div class="card-pf-body">
-              <p>[card contents]</p>
+              <p class="card-pf-utilization-details">
+                <span class="card-pf-utilization-card-details-count">200</span>
+                <span class="card-pf-utilization-card-details-description">
+                  <span class="card-pf-utilization-card-details-line-1">Available</span>
+                  <span class="card-pf-utilization-card-details-line-2">of 1300 Gpbs</span>
+                </span>
+              </p>
+              <div id="chart-pf-donut-4"></div>
+              <div id="chart-pf-sparkline-4"></div>
+              <script>
+                var chart7 = c3.generate({
+                  bindto: '#chart-pf-donut-4',
+                  type: "donut",
+                  donut: {
+                    title: "A",
+                    label: {show: false},
+                    width: 11
+                  },
+                  size: {
+                    height: 171, // produces a diameter of 150 and a centered chart
+                  },
+                  legend: {
+                    show: false
+                  },
+                  color: {
+                    pattern: ["#EC7A08","#D1D1D1"]
+                  },
+                  tooltip: {
+                    contents: function (d) {
+                      return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                              Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                              '</span>';
+                    }
+                  },
+                  data: {
+                    type: "donut",
+                    columns: [
+                      ["Used", 85],
+                      ["Available", 15]
+                    ],
+                    groups: [
+                      ["used", "available"]
+                    ],
+                    order: null
+                  },
+                });
+                $( "#chart-pf-donut-4 .c3-chart-arcs-title" ).html(
+                  '<tspan dy="0" x="0" class="donut-title-big-pf">' +
+                  '1100' +
+                  '</tspan>' +
+                  '<tspan dy="20" x="0" class="donut-title-small-pf">' +
+                  'Gpbs Used' +
+                  '</tspan>'
+                );
+                var chart8 = c3.generate({
+                  axis: {
+                    x: {
+                      show: false
+                    },
+                    y: {
+                      show: false
+                    }
+                  },
+                  bindto: '#chart-pf-sparkline-4',
+                  color: {
+                    pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
+                  },
+                  data: {
+                    columns: [
+                      ['Less than one year remaining', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+                    ],
+                    type: 'area'
+                  },
+                  legend: {
+                    show: false
+                  },
+                  point: {
+                    r: 1,
+                    focus: {
+                      expand: {
+                        r: 4
+                      }
+                    }
+                  },
+                  size: {
+                    height: 40
+                  },
+                  tooltip: {
+                    // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
+                    contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+                      for (i = 0; i < d.length; i++) {
+                        return '<span class="c3-tooltip-sparkline">' + d[i].value + '%' + '</span>'
+                      }
+                    }
+                  }
+                });
+              </script>
             </div>
           </div>
         </div>
@@ -595,6 +984,45 @@
       </div><!-- /row -->
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+        <div class="col-xs-12 col-sm-5 col-md-5">
+          <div class="card-pf" style="height: 180px;">
+            <h2 class="card-pf-title" style="height: 17px;">
+              Card Title
+            </h2>
+            <div class="card-pf-body" style="height: 40px;">
+              <p>[card contents]</p>
+            </div>
+            <div class="card-pf-footer" style="">
+              <div class="dropdown card-pf-time-frame-filter">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  Last 30 Days <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li><a href="#">Last 60 Days</a></li>
+                  <li><a href="#">Last 90 Days</a></li>
+                </ul>
+              </div>
+              <p>
+                <a href="#" class="card-pf-link-with-icon">
+                  <span class="pficon pficon-flag"></span>View CPU Events
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-7">
+          <div class="card-pf" style="height: 180px;">
+            <h2 class="card-pf-title" style="height: 17px;">
+              Card Title
+            </h2>
+            <div class="card-pf-body" style="height: 40px;">
+              <p>[card contents]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cards-pf">
+      <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
         <div class="col-xs-6 col-sm-8 col-md-8">
           <div class="card-pf">
             <div class="card-pf-body">
@@ -646,5 +1074,6 @@
     $('[data-toggle="tooltip"]').tooltip();
   });
 </script>
+
   </body>
 </html>
