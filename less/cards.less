@@ -12,7 +12,8 @@
     border-top-color: @card-pf-accented-border-top-color;
   }
   &.card-pf-aggregate-status {
-    .card-pf-title, .card-pf-aggregate-status-notifications {
+    .card-pf-aggregate-status-notifications,
+    .card-pf-title {
       a {
         color: @text-color;
         &.add {
@@ -89,9 +90,33 @@
   margin: 0 (-(@grid-gutter-width / 2)) !important;
   padding: (@grid-gutter-width / 2) (@grid-gutter-width / 2) (@grid-gutter-width / 4);
   a > {
-    .fa, .pficon {
+    .fa,
+    .pficon {
       margin-right: 5px;
     }
+  }
+  .card-pf-time-frame-filter {
+    margin-top: -2px;
+  }
+}
+
+.card-pf-link-with-icon {
+  padding-left: 21px;
+  position: relative;
+  .fa,
+  .pficon {
+    font-size: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.card-pf-time-frame-filter {
+  .card-pf-heading &,
+  .card-pf-footer & {
+    float: right;
+    margin-left: 20px;
   }
 }
 
@@ -99,6 +124,9 @@
   border-bottom: 1px solid @card-pf-border-color;
   margin: 0 (-(@grid-gutter-width / 2)) (@grid-gutter-width / 2);
   padding: 0 (@grid-gutter-width / 2) 0;
+  & .card-pf-time-frame-filter {
+    margin-top: -5px;
+  }
 }
 
 .card-pf-title {

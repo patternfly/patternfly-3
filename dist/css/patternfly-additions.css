@@ -2168,20 +2168,20 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .card-pf.card-pf-accented {
   border-top-color: #39a5dc;
 }
-.card-pf.card-pf-aggregate-status .card-pf-title a,
-.card-pf.card-pf-aggregate-status .card-pf-aggregate-status-notifications a {
+.card-pf.card-pf-aggregate-status .card-pf-aggregate-status-notifications a,
+.card-pf.card-pf-aggregate-status .card-pf-title a {
   color: #333333;
 }
-.card-pf.card-pf-aggregate-status .card-pf-title a.add,
-.card-pf.card-pf-aggregate-status .card-pf-aggregate-status-notifications a.add {
+.card-pf.card-pf-aggregate-status .card-pf-aggregate-status-notifications a.add,
+.card-pf.card-pf-aggregate-status .card-pf-title a.add {
   color: #0099d3;
 }
-.card-pf.card-pf-aggregate-status .card-pf-title a.add:hover,
-.card-pf.card-pf-aggregate-status .card-pf-aggregate-status-notifications a.add:hover {
+.card-pf.card-pf-aggregate-status .card-pf-aggregate-status-notifications a.add:hover,
+.card-pf.card-pf-aggregate-status .card-pf-title a.add:hover {
   color: #00618a;
 }
-.card-pf.card-pf-aggregate-status .card-pf-title a:hover,
-.card-pf.card-pf-aggregate-status .card-pf-aggregate-status-notifications a:hover {
+.card-pf.card-pf-aggregate-status .card-pf-aggregate-status-notifications a:hover,
+.card-pf.card-pf-aggregate-status .card-pf-title a:hover {
   color: #00618a;
 }
 .card-pf.card-pf-aggregate-status {
@@ -2247,10 +2247,32 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .card-pf-footer a .pficon {
   margin-right: 5px;
 }
+.card-pf-footer .card-pf-time-frame-filter {
+  margin-top: -2px;
+}
+.card-pf-link-with-icon {
+  padding-left: 21px;
+  position: relative;
+}
+.card-pf-link-with-icon .fa,
+.card-pf-link-with-icon .pficon {
+  font-size: 16px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.card-pf-heading .card-pf-time-frame-filter,
+.card-pf-footer .card-pf-time-frame-filter {
+  float: right;
+  margin-left: 20px;
+}
 .card-pf-heading {
   border-bottom: 1px solid #d1d1d1;
   margin: 0 -20px 20px;
   padding: 0 20px 0;
+}
+.card-pf-heading .card-pf-time-frame-filter {
+  margin-top: -5px;
 }
 .card-pf-title {
   font-size: 16px;
