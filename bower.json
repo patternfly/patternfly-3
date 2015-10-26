@@ -13,13 +13,10 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "app/components",
     "test",
     "tests",
-    "package.json",
-    "Gruntfile.js",
-    "PatternFlyIcons-webfont.json",
     "Makefile",
+    "PatternFlyIcons-webfont.json",
     "patternfly.spec.in"
   ],
   "devDependencies": {
