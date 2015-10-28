@@ -212,7 +212,7 @@ See [https://patternfly.atlassian.net/secure/RapidBoard.jspa?projectKey=PTNFLY&r
 
 ### Bug List
 
-Official tracking of bugs occurs in Jira.  See https://patternfly.atlassian.net/secure/RapidBoard.jspa?rapidView=4&view=planning&selectedIssue=PTNFLY-428&quickFilter=35&quickFilter=24
+Official tracking of bugs occurs in Jira.  See https://patternfly.atlassian.net/issues/?filter=10300
 
 ## License
 
