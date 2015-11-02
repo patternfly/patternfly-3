@@ -2430,6 +2430,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .c3-ygrid {
   stroke-dasharray: 0 0;
 }
+.chart-pf-sparkline {
+  margin-left: -5px;
+  margin-right: -5px;
+}
 .donut-title-big-pf {
   color: #333333;
   font-size: 30px;
