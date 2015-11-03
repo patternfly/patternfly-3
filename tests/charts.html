@@ -416,14 +416,11 @@
             order: null
           },
         });
-        $( "#chart9 .c3-chart-arcs-title" ).html(
-          '<tspan dy="0" x="0" class="donut-title-big-pf">' +
-          '60' +
-          '</tspan>' +
-          '<tspan dy="20" x="0" class="donut-title-small-pf">' +
-          'MHz Used' +
-          '</tspan>'
-        );
+
+        var donutChartTitle = d3.select("#chart9").select('text.c3-chart-arcs-title');
+        donutChartTitle.text("");
+        donutChartTitle.insert('tspan').text("60").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+        donutChartTitle.insert('tspan').text("MHz Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
       </script>
 
     </div><!-- /container -->
