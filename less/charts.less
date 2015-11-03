@@ -39,7 +39,7 @@
   td {
     background: transparent;
     border: 0;
-    color: #fff;
+    color: @tooltip-color;
     font-size: @font-size-base;
     padding: 5px 10px;
   }
@@ -58,9 +58,10 @@
   }
 }
 
-.c3-tooltip-sparkline {
+.c3-tooltip-sparkline,
+.donut-tooltip-pf {
   background: @tooltip-bg;
-  color: #fff;
+  color: @tooltip-color;
   .opacity(@tooltip-opacity);
   padding: 2px 6px;
 }
@@ -75,21 +76,11 @@
 }
 
 .donut-title-big-pf {
-  color: @gray-dark;
   font-size: @donut-font-size-big;
   font-weight: 300;
 }
 
 .donut-title-small-pf {
-  color: @gray-dark;
   font-size: @font-size-base;
   font-weight: 400;
-}
-
-.donut-tooltip-pf {
-  background: @tooltip-bg;
-  color: @tooltip-color;
-  filter: alpha(opacity=90);
-  opacity: 0.9;
-  padding: 2px 6px;
 }
