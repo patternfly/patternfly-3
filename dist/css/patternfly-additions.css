@@ -2803,6 +2803,12 @@ table.datatable th:active {
 .pficon-topology:before {
   content: "\e608";
 }
+.pficon-trend-down:before {
+  content: "\e900";
+}
+.pficon-trend-up:before {
+  content: "\e901";
+}
 .pficon-user:before {
   content: "\e60e";
 }
