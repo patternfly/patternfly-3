@@ -42,7 +42,8 @@
   }
   .dropdown-menu { // Also see navbar.less
     > .active > a {
-      &, &:active {
+      &,
+      &:active {
         background-color: @dropdown-link-hover-bg !important;
         border-color: @dropdown-link-hover-border-color !important;
         color: @gray-dark !important;
@@ -60,7 +61,7 @@
       color: #fff !important;
       small {
         color: #70c8e7 !important;
-        color:rgba(225, 255, 255, 0.5) !important;
+        color:rgba(225,255,255,0.5) !important;
       }
     }
     .divider {
@@ -79,16 +80,18 @@
       & a {
         &:active small {
           color: #70c8e7 !important;
-          color:rgba(225, 255, 255, 0.5) !important;
+          color:rgba(225,255,255,0.5) !important;
         }
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           small {
             color: @gray-light;
           }
         }
       }
       &:not(.disabled) {
-        a:hover, a:focus {
+        a:hover,
+        a:focus {
           small {
             color: @gray-light;
           }

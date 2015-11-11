@@ -29,7 +29,9 @@
   }
   .navbar-nav {
     margin: 0;
-    > .active > a, > .active > a:hover, > .active > a:focus {
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
       background-color: @navbar-pf-navbar-nav-active-bg-color;
       color: @navbar-pf-active-color;
     }
@@ -38,26 +40,34 @@
       line-height: 1;
       padding: 10px 20px;
       text-shadow: none;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: @navbar-pf-active-color;
       }
     }
     > .open {
       > a {
-        &, &:hover, &:focus {
+        &,
+        &:hover,
+        &:focus {
           background-color: @navbar-pf-navbar-nav-active-bg-color;
           color: @navbar-pf-active-color;
         }
       }
     }
     @media (max-width: @grid-float-breakpoint-max) {
-      .active .navbar-persistent, .active .dropdown-menu, .open .dropdown-menu {
+      .active .dropdown-menu,
+      .active .navbar-persistent,
+      .open .dropdown-menu {
         background-color: @navbar-pf-navbar-nav-active-active-bg-color !important;
         margin-left: 0;
         padding-bottom: 0;
         padding-top: 0;
-        > .active > a, .dropdown-submenu.open > a {
-          &, &:hover, &:focus {
+        > .active > a,
+        .dropdown-submenu.open > a {
+          &,
+          &:hover,
+          &:focus {
             background-color: @navbar-pf-navbar-nav-active-active-open-bg-color !important;
             color: @navbar-pf-active-color;
           }
@@ -139,7 +149,8 @@
         .open > .dropdown-menu {
           background-color: #fff !important;
           > .active > a {
-            &, &:active {
+            &,
+            &:active {
               background-color: @dropdown-link-hover-bg !important;
               border-color: @dropdown-link-hover-border-color !important;
               color: @gray-dark !important;
@@ -152,13 +163,14 @@
             color: @gray-light !important;
           }
           > .selected > a {
-            &, &:active {
+            &,
+            &:active {
               background-color: @dropdown-link-active-bg !important;
               border-color: @dropdown-link-active-border-color !important;
               color: #fff !important;
               small {
                 color: #70c8e7 !important;
-                color:rgba(225, 255, 255, 0.5) !important;
+                color:rgba(225,255,255,0.5) !important;
               }
             }
           }
@@ -173,9 +185,10 @@
             & a {
               &:active small {
                 color: #70c8e7 !important;
-                color:rgba(225, 255, 255, 0.5) !important;
+                color:rgba(225,255,255,0.5) !important;
               }
-              &:hover, &:focus {
+              &:hover,
+              &:focus {
                 small {
                   color: @gray-light;
                 }
@@ -201,7 +214,8 @@
     .context {
       border-bottom: 1px solid @navbar-pf-navbar-header-border-color;
       &.context-bootstrap-select .bootstrap-select.btn-group {
-        &, &[class*="span"] {
+        &,
+        &[class*="span"] {
           margin: 8px 20px 9px;
           width: auto; // known bug:  IE8 will make it as wide as the longest string
         }
@@ -226,7 +240,8 @@
     border: 0;
     margin: 0;
     padding: 10px 20px;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: transparent;
       outline: none;
       .icon-bar {
@@ -301,13 +316,16 @@
             }
             > li {
               &.active {
-                &, &:hover {
+                &,
+                &:hover {
                   .tab-indicator(@background: @nav-tabs-active-link-hover-color, @left: 20px, @right: 20px);
                 }
-                > a, > a:hover, &:hover > a {
+                > a,
+                > a:hover,
+                &:hover > a {
                   color: @link-color !important;
                 }
-                .active > a { 
+                .active > a {
                   color: @navbar-pf-active-color;
                 }
               }
@@ -338,7 +356,8 @@
                   }
                 }
               }
-              &:hover, &.open {
+              &:hover,
+              &.open {
                 .tab-indicator(@left: 20px, @right: 20px);
                 > a {
                   color: @gray-darker;
@@ -384,7 +403,12 @@
           #gradient > .vertical(@navbar-pf-navbar-primary-hover-bg-color-start, @navbar-pf-navbar-primary-hover-bg-color-stop);
         }
       }
-      > .active > a, > .active > a:hover, > .active > a:focus, > .open > a, > .open > a:hover, > .open > a:focus {
+      > .active > a,
+      > .active > a:hover,
+      > .active > a:focus,
+      > .open > a,
+      > .open > a:hover,
+      > .open > a:focus {
         background-color: @navbar-pf-navbar-primary-active-bg-color-stop;
         border-bottom-color: @navbar-pf-navbar-primary-active-bg-color-stop;
         border-top-color: @navbar-pf-navbar-primary-active-border-color;
@@ -400,7 +424,8 @@
         &.dropdown {
           border-bottom: 0;
         }
-        > a, &.context-bootstrap-select {
+        > a,
+        &.context-bootstrap-select {
           background-color: @navbar-pf-navbar-primary-context-bg-color-stop;
           border-bottom-color: @navbar-pf-navbar-primary-context-border-color;
           border-right: 1px solid @navbar-pf-navbar-primary-context-border-color;
@@ -430,7 +455,12 @@
       position: absolute;
       right: 0;
       top: 0;
-      > .active > a, > .active > a:hover, > .active > a:focus, > .open > a, > .open > a:hover, > .open > a:focus {
+      > .active > a,
+      > .active > a:hover,
+      > .active > a:focus,
+      > .open > a,
+      > .open > a:hover,
+      > .open > a:focus {
         background: @navbar-pf-navbar-utility-open-bg-color;
         color: @navbar-pf-navbar-utility-color;
       }
@@ -467,7 +497,8 @@
       .dropdown-menu {
         border-top-width: 0 !important;
       }
-      &.bootstrap-select .dropdown-menu, .dropdown-submenu > .dropdown-menu {
+      &.bootstrap-select .dropdown-menu,
+      .dropdown-submenu > .dropdown-menu {
         border-top-width: 1px !important;
       }
     }
