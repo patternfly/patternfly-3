@@ -75,7 +75,7 @@ This local static asset server (i.e., [http://localhost:9000](http://localhost:9
 
 ### Coding Style
 
-See [http://codeguide.patternfly.org//](http://codeguide.patternfly.org//).
+See [http://codeguide.patternfly.org/](http://codeguide.patternfly.org/).
 
 ## Build
 
