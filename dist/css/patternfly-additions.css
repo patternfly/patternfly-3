@@ -2700,6 +2700,9 @@ table.datatable th:active {
 .pficon-add-circle-o:before {
   content: "\e61b";
 }
+.pficon-build:before {
+  content: "\e902";
+}
 .pficon-builder-image:before {
   content: "\e800";
 }
