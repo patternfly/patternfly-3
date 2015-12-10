@@ -1,0 +1,102 @@
+<div class="col-xs-12 col-sm-4 col-md-4">
+  <div class="card-pf card-pf-utilization">
+    <h2 class="card-pf-title">
+      Network
+    </h2>
+    <div class="card-pf-body">
+      <p class="card-pf-utilization-details">
+        <span class="card-pf-utilization-card-details-count">200</span>
+        <span class="card-pf-utilization-card-details-description">
+          <span class="card-pf-utilization-card-details-line-1">Available</span>
+          <span class="card-pf-utilization-card-details-line-2">of 1300 Gbps</span>
+        </span>
+      </p>
+      <div id="{{ include.chart1 }}"></div>
+      <div class="chart-pf-sparkline" id="{{ include.chart2 }}"></div>
+      <script>
+        var chart1 = c3.generate({
+          bindto: '#{{ include.chart1 }}',
+          type: "donut",
+          donut: {
+            title: "A",
+            label: {show: false},
+            width: 11
+          },
+          size: {
+            height: 171, // produces a diameter of 150 and a centered chart
+          },
+          legend: {
+            show: false
+          },
+          color: {
+            pattern: ["#EC7A08","#D1D1D1"]
+          },
+          tooltip: {
+            contents: function (d) {
+              return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                      Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+                      '</span>';
+            }
+          },
+          data: {
+            type: "donut",
+            columns: [
+              ["Used", 85],
+              ["Available", 15]
+            ],
+            groups: [
+              ["used", "available"]
+            ],
+            order: null
+          },
+        });
+        var donutChartTitle = d3.select("#{{ include.chart1 }}").select('text.c3-chart-arcs-title');
+        donutChartTitle.text("");
+        donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+        donutChartTitle.insert('tspan').text("Gpbs Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+        var chart2 = c3.generate({
+          axis: {
+            x: {
+              show: false
+            },
+            y: {
+              show: false
+            }
+          },
+          bindto: '#{{ include.chart2 }}',
+          color: {
+            pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
+          },
+          data: {
+            columns: [
+              ['Last 30 days', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+            ],
+            type: 'area'
+          },
+          legend: {
+            show: false
+          },
+          point: {
+            r: 1,
+            focus: {
+              expand: {
+                r: 4
+              }
+            }
+          },
+          size: {
+            height: 40
+          },
+          tooltip: {
+            // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
+            contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+              for (i = 0; i < d.length; i++) {
+                return '<span class="c3-tooltip-sparkline">' + d[i].value + '%' + '</span>'
+              }
+            }
+          }
+        });
+      </script>
+    </div>
+  </div>
+</div>
