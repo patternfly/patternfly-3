@@ -1,6 +1,7 @@
-# Ignore Sublime files
+# Ignore Project files
 *.sublime-workspace
 *.sublime-project
+*.idea
 
 # Ignore vim files
 *.swp

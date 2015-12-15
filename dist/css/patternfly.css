@@ -9008,6 +9008,13 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-submenu.active > .dropdown-menu {
   display: block;
 }
+.chars-remaining-pf span {
+  font-weight: 600;
+  padding-right: 5px;
+}
+.chars-warn-remaining-pf {
+  color: #cc0000;
+}
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {

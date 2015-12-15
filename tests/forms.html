@@ -61,6 +61,38 @@
           </div>
         </div>
       </form>
+      <h2>Count Remaining Characters Control</h2>
+      <form>
+        <div class="form-group">
+          <label for="messageArea"></label>
+          <textarea class="form-control" id="messageArea" name="text" placeholder="Type in your message" rows="5"></textarea>
+        </div>
+          <span class="pull-right chars-remaining-pf">
+            <span id="charRemainingCntFld"></span>
+            <button id="postBtn" type="submit" class="btn btn-default">Post New Message</button>
+          </span>
+      </form>
+      <script>
+        // countFld is the id of the field where you want the 'remaining chars. count' number
+        // to be displayed.
+        $('#messageArea').countRemainingChars( {countFld: 'charRemainingCntFld'} );
+
+        // all settings/options
+        // $('#messageArea').countRemainingChars( {countFld: 'charRemainingCntFld',
+        //                                         charsMaxLimit: 20,
+        //                                         charsWarnRemaining: 5,
+        //                                         blockInputAtMaxLimit: true} );
+
+
+        // taId is the id of the textArea field which triggered the event
+        // Helpful if counting remaining chars on multiple TAs
+        $('#messageArea').on("overCharsMaxLimitEvent", function( event, taId ) {
+          $('#postBtn').prop("disabled",true);
+        });
+        $('#messageArea').on("underCharsMaxLimitEvent", function( event, taId) {
+          $('#postBtn').prop("disabled",false);
+        });
+      </script></br>
       <h2>Basic Example</h2>
       <form role="form">
         <div class="form-group">
@@ -426,6 +458,7 @@
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
       </form>
+
     </div><!-- /container -->
   </body>
 </html>
