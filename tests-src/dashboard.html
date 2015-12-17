@@ -112,6 +112,8 @@ weight: 3
       </div><!-- /row -->
     </div><!-- /container -->
     <script>
+      var c3ChartDefaults = $().c3ChartDefaults();
+
       var chart = c3.generate({
         axis: {
           x: {
@@ -129,9 +131,7 @@ weight: 3
           }
         },
         bindto: '#chart',
-        color: {
-          pattern: ['#006e9c','#00a8e1', '#3f9c35', '#ec7a08', '#cc0000']
-        },
+        color: c3ChartDefaults.getDefaultColors(),
         data: {
           columns: [
             ['x', '2015-04-01', '2015-04-02', '2015-04-03', '2015-04-04', '2015-04-05', '2015-04-06', '2015-04-07'],
@@ -154,34 +154,28 @@ weight: 3
           height: 220
         }
       });
-      var chart2 = c3.generate({
-        bindto: '#chart2',
-        data: {
-          colors: {
-            Cloud: '#006e9c',
-            Virtual: '#00a8e1',
-            Baremetal: '#969696'
-          },
-          columns: [
-            ['Cloud', 4,828],
-            ['Virtual', 13,258],
-            ['Baremetal', 11,1124]
-          ],
-          type : 'donut',
-          onclick: function (d, i) { console.log("onclick", d, i); },
-          onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+
+      var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig('29,210 Host');
+      donutChartConfig.bindto = '#chart2';
+      donutChartConfig.tooltip = {show: true};
+      donutChartConfig.data = {
+        colors: {
+          Cloud: '#006e9c',
+          Virtual: '#00a8e1',
+          Baremetal: '#969696'
         },
-        donut: {
-          title: "29,210 Hosts"
-        },
-        legend: {
-          position: 'right'
-        },
-        size: {
-          height: 220
-        }
-      });
+        columns: [
+          ['Cloud', 4,828],
+          ['Virtual', 13,258],
+          ['Baremetal', 11,1124]
+        ],
+        type : 'donut',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+      };
+      var chart2 = c3.generate(donutChartConfig);
+
       var chart4 = c3.generate({
         axis: {
           rotated: true,
@@ -200,9 +194,7 @@ weight: 3
           }
         },
         bindto: '#chart4',
-        color: {
-          pattern: ['#006e9c','#00a8e1', '#3f9c35', '#ec7a08', '#cc0000']
-        },
+        color: c3ChartDefaults.getDefaultColors(),
         data: {
           columns: [
             ['Virtual Resources', 25, 35, 18, 78],
