@@ -492,88 +492,42 @@
           <div id="chart-pf-donut-1"></div>
           <div class="chart-pf-sparkline" id="chart-pf-sparkline-1"></div>
           <script>
-            var chart1 = c3.generate({
-              bindto: '#chart-pf-donut-1',
+            var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+            donutConfig.bindto = '#chart-pf-donut-1';
+            donutConfig.data = {
               type: "donut",
-              donut: {
-                title: "A",
-                label: {show: false},
-                width: 11
-              },
-              size: {
-                height: 171, // produces a diameter of 150 and a centered chart
-              },
-              legend: {
-                show: false
-              },
-              color: {
-                pattern: ["#cc0000","#D1D1D1"]
-              },
-              tooltip: {
-                contents: function (d) {
-                  return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                          Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
-                          '</span>';
-                }
-              },
-              data: {
-                type: "donut",
-                columns: [
-                  ["Used", 95],
-                  ["Available", 5]
-                ],
-                groups: [
-                  ["used", "available"]
-                ],
-                order: null
-              },
-            });
+              columns: [
+                ["Used", 95],
+                ["Available", 5]
+              ],
+              groups: [
+                ["used", "available"]
+              ],
+              order: null
+            };
+            donutConfig.tooltip = {
+              contents: function (d) {
+                return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                  Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                  '</span>';
+              }
+            };
+
+            var chart1 = c3.generate(donutConfig);
             var donutChartTitle = d3.select("#chart-pf-donut-1").select('text.c3-chart-arcs-title');
             donutChartTitle.text("");
             donutChartTitle.insert('tspan').text("950").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
             donutChartTitle.insert('tspan').text("MHz Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
-            var chart2 = c3.generate({
-              axis: {
-                x: {
-                  show: false
-                },
-                y: {
-                  show: false
-                }
-              },
-              bindto: '#chart-pf-sparkline-1',
-              color: {
-                pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
-              },
-              data: {
-                columns: [
-                  ['Last 30 days', 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
-                ],
-                type: 'area'
-              },
-              legend: {
-                show: false
-              },
-              point: {
-                r: 1,
-                focus: {
-                  expand: {
-                    r: 4
-                  }
-                }
-              },
-              size: {
-                height: 40
-              },
-              tooltip: {
-                // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
-                contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-                  for (i = 0; i < d.length; i++) {
-                    return '<span class="c3-tooltip-sparkline">' + d[i].value + '%' + '</span>'
-                  }
-                }
-              }
-            });
+
+            var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
+            sparklineConfig.bindto = '#chart-pf-sparkline-1';
+            sparklineConfig.data = {
+              columns: [
+                ['%', 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
+              ],
+              type: 'area'
+            };
+            var chart2 = c3.generate(sparklineConfig);
           </script>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4">
@@ -588,88 +542,42 @@
           <div id="chart-pf-donut-2"></div>
           <div class="chart-pf-sparkline" id="chart-pf-sparkline-2"></div>
           <script>
-            var chart3 = c3.generate({
-              bindto: '#chart-pf-donut-2',
+            var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+            donutConfig.bindto = '#chart-pf-donut-2';
+            donutConfig.data = {
               type: "donut",
-              donut: {
-                title: "A",
-                label: {show: false},
-                width: 11
-              },
-              size: {
-                height: 171, // produces a diameter of 150 and a centered chart
-              },
-              legend: {
-                show: false
-              },
-              color: {
-                pattern: ["#3f9c35","#D1D1D1"]
-              },
-              tooltip: {
-                contents: function (d) {
-                  return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                          Math.round(d[0].ratio * 100) + '%' + ' GB ' + d[0].name +
-                          '</span>';
-                }
-              },
-              data: {
-                type: "donut",
-                columns: [
-                  ["Used", 41],
-                  ["Available", 59]
-                ],
-                groups: [
-                  ["used", "available"]
-                ],
-                order: null
-              },
-            });
+              columns: [
+                ["Used", 41],
+                ["Available", 59]
+              ],
+              groups: [
+                ["used", "available"]
+              ],
+              order: null
+            };
+            donutConfig.tooltip = {
+              contents: function (d) {
+                return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                  Math.round(d[0].ratio * 100) + '%' + ' GB ' + d[0].name +
+                  '</span>';
+              }
+            };
+
+            var chart3 = c3.generate(donutConfig);
             var donutChartTitle = d3.select("#chart-pf-donut-2").select('text.c3-chart-arcs-title');
             donutChartTitle.text("");
             donutChartTitle.insert('tspan').text("176").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
             donutChartTitle.insert('tspan').text("GB Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
-            var chart4 = c3.generate({
-              axis: {
-                x: {
-                  show: false
-                },
-                y: {
-                  show: false
-                }
-              },
-              bindto: '#chart-pf-sparkline-2',
-              color: {
-                pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
-              },
-              data: {
-                columns: [
-                  ['Last 30 days', 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
-                ],
-                type: 'area'
-              },
-              legend: {
-                show: false
-              },
-              point: {
-                r: 1,
-                focus: {
-                  expand: {
-                    r: 4
-                  }
-                }
-              },
-              size: {
-                height: 40
-              },
-              tooltip: {
-                // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
-                contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-                  for (i = 0; i < d.length; i++) {
-                    return '<span class="c3-tooltip-sparkline">' + d[i].value + '%' + '</span>'
-                  }
-                }
-              }
-            });
+
+            var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
+            sparklineConfig.bindto = '#chart-pf-sparkline-2';
+            sparklineConfig.data = {
+              columns: [
+                ['%', 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
+              ],
+              type: 'area'
+            };
+            var chart4 = c3.generate(sparklineConfig);
           </script>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4">
@@ -684,88 +592,42 @@
           <div id="chart-pf-donut-3"></div>
           <div class="chart-pf-sparkline" id="chart-pf-sparkline-3"></div>
           <script>
-            var chart5 = c3.generate({
-              bindto: '#chart-pf-donut-3',
+            var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+            donutConfig.bindto = '#chart-pf-donut-3';
+            donutConfig.data = {
               type: "donut",
-              donut: {
-                title: "A",
-                label: {show: false},
-                width: 11
-              },
-              size: {
-                height: 171, // produces a diameter of 150 and a centered chart
-              },
-              legend: {
-                show: false
-              },
-              color: {
-                pattern: ["#EC7A08","#D1D1D1"]
-              },
-              tooltip: {
-                contents: function (d) {
-                  return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                          Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
-                          '</span>';
-                }
-              },
-              data: {
-                type: "donut",
-                columns: [
-                  ["Used", 85],
-                  ["Available", 15]
-                ],
-                groups: [
-                  ["used", "available"]
-                ],
-                order: null
-              },
-            });
+              columns: [
+                ["Used", 85],
+                ["Available", 15]
+              ],
+              groups: [
+                ["used", "available"]
+              ],
+              order: null
+            };
+            donutConfig.tooltip = {
+              contents: function (d) {
+                return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+                  Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+                  '</span>';
+              }
+            };
+
+            var chart5 = c3.generate(donutConfig);
             var donutChartTitle = d3.select("#chart-pf-donut-3").select('text.c3-chart-arcs-title');
             donutChartTitle.text("");
             donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-            donutChartTitle.insert('tspan').text("Gpbs Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
-            var chart6 = c3.generate({
-              axis: {
-                x: {
-                  show: false
-                },
-                y: {
-                  show: false
-                }
-              },
-              bindto: '#chart-pf-sparkline-3',
-              color: {
-                pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
-              },
-              data: {
-                columns: [
-                  ['Last 30 days', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
-                ],
-                type: 'area'
-              },
-              legend: {
-                show: false
-              },
-              point: {
-                r: 1,
-                focus: {
-                  expand: {
-                    r: 4
-                  }
-                }
-              },
-              size: {
-                height: 40
-              },
-              tooltip: {
-                // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
-                contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-                  for (i = 0; i < d.length; i++) {
-                    return '<span class="c3-tooltip-sparkline">' + d[i].value + '%' + '</span>'
-                  }
-                }
-              }
-            });
+            donutChartTitle.insert('tspan').text("Gbps Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+
+            var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
+            sparklineConfig.bindto = '#chart-pf-sparkline-3';
+            sparklineConfig.data = {
+              columns: [
+                ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+              ],
+              type: 'area'
+            };
+            var chart6 = c3.generate(sparklineConfig);
           </script>
         </div>
       </div>
@@ -792,88 +654,45 @@
       <div id="chart-pf-donut-4"></div>
       <div class="chart-pf-sparkline" id="chart-pf-sparkline-4"></div>
       <script>
-        var chart1 = c3.generate({
-          bindto: '#chart-pf-donut-4',
+        var c3ChartDefaults = $().c3ChartDefaults();
+
+        var donutConfig = c3ChartDefaults.getDefaultDonutConfig('A');
+        donutConfig.bindto = '#chart-pf-donut-4';
+        donutConfig.data = {
           type: "donut",
-          donut: {
-            title: "A",
-            label: {show: false},
-            width: 11
-          },
-          size: {
-            height: 171, // produces a diameter of 150 and a centered chart
-          },
-          legend: {
-            show: false
-          },
-          color: {
-            pattern: ["#EC7A08","#D1D1D1"]
-          },
-          tooltip: {
-            contents: function (d) {
-              return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                      Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
-                      '</span>';
-            }
-          },
-          data: {
-            type: "donut",
-            columns: [
-              ["Used", 85],
-              ["Available", 15]
-            ],
-            groups: [
-              ["used", "available"]
-            ],
-            order: null
-          },
-        });
+          columns: [
+            ["Used", 85],
+            ["Available", 15]
+          ],
+          groups: [
+            ["used", "available"]
+          ],
+          order: null
+        };
+        donutConfig.tooltip = {
+          contents: function (d) {
+            return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
+              Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+              '</span>';
+          }
+        };
+
+        var chart1 = c3.generate(donutConfig);
         var donutChartTitle = d3.select("#chart-pf-donut-4").select('text.c3-chart-arcs-title');
         donutChartTitle.text("");
         donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
         donutChartTitle.insert('tspan').text("Gpbs Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
-        var chart2 = c3.generate({
-          axis: {
-            x: {
-              show: false
-            },
-            y: {
-              show: false
-            }
-          },
-          bindto: '#chart-pf-sparkline-4',
-          color: {
-            pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
-          },
-          data: {
-            columns: [
-              ['Last 30 days', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
-            ],
+
+        var sparklineConfig = c3ChartDefaults.getDefaultSparklineConfig();
+        sparklineConfig.bindto = '#chart-pf-sparkline-4';
+        sparklineConfig.data = {
+          columns: [
+            ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+          ],
             type: 'area'
-          },
-          legend: {
-            show: false
-          },
-          point: {
-            r: 1,
-            focus: {
-              expand: {
-                r: 4
-              }
-            }
-          },
-          size: {
-            height: 40
-          },
-          tooltip: {
-            // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
-            contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-              for (i = 0; i < d.length; i++) {
-                return '<span class="c3-tooltip-sparkline">' + d[i].value + '%' + '</span>'
-              }
-            }
-          }
-        });
+        };
+
+        var chart2 = c3.generate(sparklineConfig);
       </script>
     </div>
   </div>
