@@ -18,6 +18,9 @@
 
         var donutConfig = c3ChartDefaults.getDefaultDonutConfig('A');
         donutConfig.bindto = '#{{ include.chart1 }}';
+        donutConfig.color =  {
+          pattern: ["#EC7A08","#D1D1D1"]
+        };
         donutConfig.data = {
           type: "donut",
           columns: [
