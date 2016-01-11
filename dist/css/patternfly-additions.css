@@ -4220,6 +4220,103 @@ table.datatable th:active {
 .prettyprint ol.linenums {
   margin-bottom: 0;
 }
+.toast-pf {
+  background-color: rgba(255, 255, 255, 0.94);
+  border-color: #b1b1b1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding-left: 68px;
+  /* Medium devices (desktops, 992px and up) */
+}
+.toast-pf.alert-danger > .pficon {
+  background-color: #cc0000;
+}
+.toast-pf.alert-info > .pficon {
+  background-color: #8b8d8f;
+}
+.toast-pf.alert-success > .pficon {
+  background-color: #3f9c35;
+}
+.toast-pf.alert-warning > .pficon {
+  background-color: #ec7a08;
+}
+.toast-pf .dropdown {
+  float: right;
+  margin: -11px 0px -12px 12px;
+}
+.toast-pf .dropdown .btn-link {
+  color: #222222;
+  font-size: 16px;
+  line-height: 1;
+  padding: 13px 5px 13px 5px;
+}
+.toast-pf .dropdown .btn-link:active,
+.toast-pf .dropdown .btn-link:focus,
+.toast-pf .dropdown .btn-link:hover {
+  color: #0099d3;
+}
+.toast-pf .dropdown .dropdown-menu {
+  right: -15px;
+}
+.toast-pf .dropdown .dropdown-menu:before {
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid #ccc;
+  border-left: 11px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 11px;
+  top: -11px;
+}
+.toast-pf .dropdown .dropdown-menu:after {
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  border-left: 10px solid transparent;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 12px;
+  top: -10px;
+}
+.toast-pf > .pficon {
+  background-color: #4d5258;
+  bottom: -1px;
+  box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.2);
+  left: -1px;
+  padding-top: 10px;
+  text-align: center;
+  top: -1px;
+  width: 53px;
+}
+.toast-pf > .pficon:before {
+  color: rgba(255, 255, 255, 0.74);
+}
+.toast-pf .toast-pf-action {
+  margin-left: 15px;
+}
+@media (min-width: 992px) {
+  .toast-pf {
+    display: inline-block;
+  }
+}
+@media (min-width: 992px) {
+  .toast-pf-max-width {
+    max-width: 31.1% ;
+  }
+}
+.toast-pf-top-right {
+  left: 20px;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  z-index: 1035;
+  /* Medium devices (desktops, 992px and up) */
+}
+@media (min-width: 992px) {
+  .toast-pf-top-right {
+    left: auto;
+  }
+}
 .toolbar-pf {
   background: #fff;
   border-bottom: 1px solid #d0d0d0;

@@ -1,0 +1,89 @@
+//
+// Toast notifications
+// --------------------------------------------------
+
+.toast-pf {
+  background-color: hsla(0, 0%, 100%, .94);
+  border-color: #b1b1b1;
+  box-shadow: 0 2px 6px hsla(0, 0%, 0%, .2);
+  padding-left: 68px; //15px space between the icon and the text 
+  &.alert-danger > .pficon  { background-color: @alert-danger-border; }
+  &.alert-info > .pficon    { background-color: @alert-info-border; }
+  &.alert-success > .pficon { background-color: @alert-success-border; }
+  &.alert-warning > .pficon { background-color: @alert-warning-border; }
+  .dropdown {
+    float: right;
+    margin: -11px 0px -12px 12px;
+    .btn-link {
+      color: @gray-darker;
+      font-size: (@font-size-base + 4);
+      line-height: 1;
+      padding: 13px 5px 13px 5px;
+      &:active,
+      &:focus,
+      &:hover {
+        color: @link-color;
+      }
+    }
+    .dropdown-menu {
+      right: -15px;
+      &:before {
+        border-right: 11px solid transparent;
+        border-bottom: 11px solid #ccc;
+        border-left: 11px solid transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        content: '';
+        display: inline-block;
+        position: absolute;
+        right: 11px;
+        top: -11px;
+      }
+      &:after {
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #ffffff;
+        border-left: 10px solid transparent;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        right: 12px;
+        top: -10px;
+      }
+    }
+  }
+  > .pficon {
+    background-color: @gray-pf;
+    bottom:  -1px;
+    box-shadow: 2px 0 5px -2px rgba(0,0,0,.2);
+    left: -1px;
+    padding-top: 10px;
+    text-align: center;  
+    top: -1px;
+    width: 53px;
+    &:before { color: hsla(0, 0%, 100%, .74); }
+  }
+  .toast-pf-action {
+    margin-left: 15px;
+  }
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+    display: inline-block;
+  }
+}
+// To set max width on toast notifications
+.toast-pf-max-width {
+ @media (min-width: @screen-md-min) {
+    max-width: 31.1% ; // sets the size to 4 cols;
+  }
+}
+// To position the notification on the top right corner, used in context on cards layout
+.toast-pf-top-right {
+  left: @grid-gutter-width / 2;
+  position: absolute;
+  right: @grid-gutter-width / 2;
+  top: 12px;
+  z-index: 1035; // More than @zindex-navbar-fixed and less than @zindex-modal-background
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: @screen-md-min) {
+    left: auto;
+  }
+}

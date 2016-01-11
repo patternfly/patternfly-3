@@ -1,0 +1,95 @@
+---
+categories: [Widgets]
+layout: page
+title: Toast Notifications
+resource: true
+---
+      <div class="toast-pf alert alert-success">
+        <div class="pull-right toast-pf-action">
+          <a href="#">Start Server</a>
+        </div>
+        <span class="pficon pficon-ok"></span>
+        <strong>server</strong> has been added to <a href="#" class="alert-link">main server</a>.
+      </div>
+      <br>
+      <div class="toast-pf alert alert-warning">
+        <div class="pull-right toast-pf-action">
+          <a href="#">Reload Server</a>
+        </div>
+        <span class="pficon pficon-warning-triangle-o"></span>
+        The server configuration changed.
+      </div>
+      <br>
+      <div class="toast-pf alert alert-danger">
+        <div class="pull-right toast-pf-action">
+          <a href="#">Retry</a>
+        </div>
+        <span class="pficon pficon-error-circle-o"></span>
+        Failed to add <strong>server_abc</strong>.
+      </div>
+      <br>
+      <div class="toast-pf alert alert-info">
+        <div class="pull-right toast-pf-action">
+          <a href="#">View Details</a>
+        </div>
+        <span class="pficon pficon-info"></span>
+        This server is in the North West Datacenter.
+      </div>
+      <hr>
+      <div class="toast-pf alert alert-info">
+        <div class="dropdown btn-group">
+          <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="fa fa-ellipsis-v"></span></button>
+           <ul class="dropdown-menu pull-right">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        <div class="pull-right toast-pf-action">
+          <a href="#">Reload Server</a>
+        </div>
+        <span class="pficon pficon-info"></span>
+        <strong>Great job!</strong> This is really working out.
+      </div>
+      <br>
+      <div class="toast-pf alert alert-success alert-dismissable">
+        {% include toast.html %}
+      </div>
+      <br>
+      <div class="toast-pf alert alert-warning alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <div class="pull-right toast-pf-action">
+          <a href="#">Reload Server</a>
+        </div>
+        <span class="pficon pficon-warning-triangle-o"></span>
+        The server configuration changed.
+      </div>
+      <br>
+      <div class="toast-pf alert alert-danger">
+        <span class="pficon pficon-error-circle-o"></span>
+        Failed to add <strong>server_abc</strong>.
+      </div>
+      <hr>
+      <div class="toast-pf toast-pf-max-width alert alert-warning alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <div class="pull-right toast-pf-action">
+          <a href="#">Reload Server</a>
+        </div>
+        <span class="pficon pficon-warning-triangle-o"></span>
+        Max-width is set on this example.
+      </div>
+      <script>
+        // Initialize Tooltip
+        $(document).ready(function() {
+          $('.toast-pf').tooltip({
+            selector: "[data-toggle=tooltip]",
+            container: "body"
+          });
+        });
+      </script>
