@@ -270,12 +270,12 @@
 @dropdown-fallback-border:                                          @dropdown-border;
 @dropdown-link-active-bg:                                           @link-color;
 @dropdown-link-hover-color:                                         @gray-pf;
-@font-size-h1:                                                      ceil(@font-size-base * 2); // ~24px
-@font-size-h2:                                                      ceil(@font-size-base * 1.8333); // ~22px
-@font-size-h3:                                                      ceil(@font-size-base * 1.3333); // ~16px
-@font-size-h5:                                                      ceil(@font-size-base * 1.0833); // ~13px
-@font-size-large:                                                   ceil(@font-size-base * 1.1666); // ~14px
-@font-size-small:                                                   ceil(@font-size-base * .9166); // ~11px
+@font-size-h1:                                                      ceil((@font-size-base * 2)); // ~24px
+@font-size-h2:                                                      ceil((@font-size-base * 1.8333)); // ~22px
+@font-size-h3:                                                      ceil((@font-size-base * 1.3333)); // ~16px
+@font-size-h5:                                                      ceil((@font-size-base * 1.0833)); // ~13px
+@font-size-large:                                                   ceil((@font-size-base * 1.1666)); // ~14px
+@font-size-small:                                                   ceil((@font-size-base * .9166)); // ~11px
 @input-color:                                                       @gray-dark;
 @nav-tabs-active-link-hover-color:                                  @link-color;
 @nav-tabs-justified-link-border-color:                              @nav-tabs-border-color;
@@ -307,8 +307,8 @@
 @dropdown-link-focus-bg:                                            @link-color;
 @line-height-computed:                                              floor((@font-size-base * @line-height-base));
 @notification-badge-color:                                          @brand-danger;
-@progress-sm:                                                       @line-height-computed - 6;
-@progress-xs:                                                       @line-height-computed - 14;
+@progress-sm:                                                       (@line-height-computed - 6);
+@progress-xs:                                                       (@line-height-computed - 14);
 @syntax-1:                                                          @btn-danger-bg;
 @syntax-2:                                                          @gray-dark;
 @syntax-3:                                                          @brand-success;

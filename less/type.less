@@ -18,12 +18,12 @@ h2,
 
 @media (min-width: @grid-float-breakpoint-max) {
   .page-header-bleed-left {
-    margin-left: -@grid-gutter-width/2;
+    margin-left: (-(@grid-gutter-width / 2));
   }
   .page-header-bleed-right {
-    margin-right: -@grid-gutter-width/2;
+    margin-right: ((-@grid-gutter-width / 2));
     .actions {
-      margin-right: @grid-gutter-width/2;
+      margin-right: (@grid-gutter-width / 2);
     }
   }
 }
