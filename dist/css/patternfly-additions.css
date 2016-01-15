@@ -2694,8 +2694,8 @@ table.datatable th:active {
   speak: none;
   text-transform: none;
   /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 .pficon-add-circle-o:before {
   content: "\e61b";
