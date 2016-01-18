@@ -103,6 +103,7 @@ module.exports = function (grunt) {
         },
         options: {
           paths: ['less/'],
+          strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapFilename: 'dist/css/patternfly.css.map',
@@ -115,6 +116,7 @@ module.exports = function (grunt) {
         },
         options: {
           paths: ['less/'],
+          strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapFilename: 'dist/css/patternfly-additions.css.map',

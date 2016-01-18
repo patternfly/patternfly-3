@@ -5,7 +5,7 @@
 .sidebar-header {
   border-bottom: 1px solid darken(@page-header-border-color, 2%);
   padding-bottom: ((@line-height-computed / 2) + 1);
-  margin: (@line-height-computed * 2)+10 0 @line-height-computed;
+  margin: ((@line-height-computed * 2) + 10) 0 @line-height-computed;
   .actions {
     margin-top: -2px;
   }
@@ -14,7 +14,7 @@
 .sidebar-pf {
   .sidebar-header + .list-group {
     border-top: 0;
-    margin-top: -@grid-gutter-width/2/2;
+    margin-top: (-@grid-gutter-width / 2 / 2);
     .list-group-item {
       background: transparent;
       border-color: darken(@page-header-border-color, 2%);
@@ -29,12 +29,12 @@
       color: @dropdown-header-color;
       font-size: @font-size-base;
       font-weight: 400;
-      line-height: @line-height-computed + 1;
+      line-height: (@line-height-computed + 1);
       margin: 0;
       padding: 8px 0;
     }
     + .nav-category {
-      margin-top: @grid-gutter-width/4;
+      margin-top: (@grid-gutter-width / 4);
     }
   }
   .nav-pills > li {
@@ -48,7 +48,7 @@
           font-family: @icon-font-name-fa;
           display: block;
           position: absolute;
-          right: @grid-gutter-width/2/2;
+          right: (@grid-gutter-width / 2 / 2) ;
           top: 1px;
         }
       }
@@ -61,26 +61,26 @@
       border-radius: 0;
       border-top: 1px solid transparent;
       color: @text-color;
-      font-size: @font-size-base + 1;
-      line-height: @line-height-computed + 1;
-      padding: 1px @grid-gutter-width/2;
+      font-size: (@font-size-base + 1);
+      line-height: (@line-height-computed + 1);
+      padding: 1px (@grid-gutter-width / 2);
       &:hover {
         background: @dropdown-link-hover-bg;
         border-color: @dropdown-link-hover-border-color;
       }
       .fa {
         color: lighten(@gray-pf, 12%);
-        font-size: @font-size-base + 3;
-        margin-right: @grid-gutter-width/4;
+        font-size: (@font-size-base + 3);
+        margin-right: (@grid-gutter-width / 4);
         text-align: center;
         vertical-align: middle;
-        width: @font-size-base + 3;
+        width: (@font-size-base + 3);
       }
     }
   }
   .nav-stacked {
-    margin-left: -@grid-gutter-width/2;
-    margin-right: -@grid-gutter-width/2;
+    margin-left: (-(@grid-gutter-width / 2));
+    margin-right: (-(@grid-gutter-width / 2));
     li + li {
       margin-top: 0;
     }
@@ -89,13 +89,13 @@
     background: transparent;
   }
   .panel-body {
-    padding: 6px @grid-gutter-width/2;
+    padding: 6px (@grid-gutter-width / 2);
     .nav-pills > li > a {
-      padding-left: @grid-gutter-width/2 + 17;
+      padding-left: (@grid-gutter-width / 2 + 17);
     }
   }
   .panel-heading {
-    padding: 9px @grid-gutter-width/2;
+    padding: 9px (@grid-gutter-width / 2);
   }
   .panel-title {
     font-size: @font-size-base;
@@ -116,21 +116,21 @@
 
 @media (min-width: @grid-float-breakpoint-max) {
   .sidebar-header-bleed-left {
-    margin-left: -@grid-gutter-width/2;
+    margin-left: (-(@grid-gutter-width / 2));
     > h2 {
-      margin-left: @grid-gutter-width/2;
+      margin-left: (@grid-gutter-width / 2);
     }
   }
   .sidebar-header-bleed-right {
-    margin-right: -@grid-gutter-width/2;
+    margin-right: (-(@grid-gutter-width / 2));
     .actions {
-      margin-right: @grid-gutter-width/2;
+      margin-right: (@grid-gutter-width / 2);
     }
     > h2 {
-      margin-right: @grid-gutter-width/2;
+      margin-right: (@grid-gutter-width / 2);
     }
     + .list-group {
-      margin-right: -@grid-gutter-width/2;
+      margin-right: (-(@grid-gutter-width / 2));
     }
   }
   .sidebar-pf {
@@ -138,20 +138,20 @@
     .treeview {
       border-left: 0;
       border-right: 0;
-      margin-left: -@grid-gutter-width/2;
-      margin-right: -@grid-gutter-width/2;
+      margin-left: (-(@grid-gutter-width / 2));
+      margin-right: (-(@grid-gutter-width / 2));
     }
     .treeview {
       margin-top: 5px;
       .list-group-item {
-        padding-left: @grid-gutter-width/2;
-        padding-right: @grid-gutter-width/2;
+        padding-left: (@grid-gutter-width / 2);
+        padding-right: (@grid-gutter-width / 2);
         &.node-selected:after {
           content: @fa-var-angle-right;
           font-family: @icon-font-name-fa;
           display: block;
           position: absolute;
-          right: @grid-gutter-width/2/2;
+          right: (@grid-gutter-width/2 / 2);
           top: 1px;
         }
       }
