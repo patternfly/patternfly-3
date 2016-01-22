@@ -13,6 +13,26 @@ PatternFly can be installed and managed through [Bower](http://bower.io/). To do
 bower install patternfly
 ```
 
+#### Using Wiredep?
+
+Are you using [Wiredep](https://github.com/taptapship/wiredep)?  PatternFly's CSS includes the CSS of its dependencies.  As a result, you'll want to add the following to your [Wiredep configuration](https://github.com/taptapship/wiredep#configuration) so you don't end up with duplicate CSS.
+
+```
+exclude: [
+  "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css",
+  "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css",
+  "bower_components/bootstrap-select/dist/css/bootstrap-select.css",
+  "bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css",
+  "bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.css",
+  "bower_components/c3/c3.css",
+  "bower_components/datatables/media/css/jquery.dataTables.css",
+  "bower_components/datatables-colreorder/css/dataTables.colReorder.css",
+  "bower_components/datatables-colvis/css/dataTables.colVis.css",
+  "bower_components/font-awesome/css/font-awesome.css",
+  "bower_components/google-code-prettify/bin/prettify.min.css"
+],
+```
+
 ### Install with npm
 
 PatternFly can be installed and managed through [npm](https://www.npmjs.com/).  To do so, run the following:
