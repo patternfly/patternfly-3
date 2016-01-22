@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!--[if IE 9]><html lang="en-us" class="ie9"><![endif]-->
+<!--[if IE 9]><html lang="en-us" class="ie9 layout-pf layout-pf-fixed layout-pf-fixed-with-footer"><![endif]-->
 <!--[if gt IE 9]><!-->
-<html lang="en-us">
-<!--<![endif]-->
-  <head>
-    <title>Cards - PatternFly</title>
+<html lang="en-us" class="layout-pf layout-pf-fixed layout-pf-fixed-with-footer">
+  <!--<![endif]-->
+    <head>
+    <title>Fixed Navbar With Footer - PatternFly</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,18 +33,9 @@
     <script src="../dist/js/patternfly.min.js"></script>
   </head>
 
-<div class="toast-pf toast-pf-max-width toast-pf-top-right alert alert-success alert-dismissable">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-          <span class="pficon pficon-close"></span>
-        </button>
-        <span class="pficon pficon-ok"></span>
-        The server configuration changed.
- 
-</div>
-
-  <body class="cards-pf">
-    <nav class="navbar navbar-default navbar-pf" role="navigation">
-      <div class="navbar-header">
+  <body class="cards-pf navbar-collapse">
+    <nav class="navbar navbar-pf navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -107,32 +98,157 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-primary">
+          
+          
+          
           <li>
             <a href="basic.html">Basic</a>
           </li>
+          
+          
+          
+          
+          
           <li>
             <a href="bootstrap-treeview-2.html">Tree View</a>
           </li>
+          
+          
+          
+          
+          
           <li>
             <a href="dashboard.html">Dashboard</a>
           </li>
+          
+          
+          
+          
+          
           <li>
             <a href="form.html">Form</a>
           </li>
+          
+          
+          
+          
+          
           <li>
             <a href="tab.html">Tab</a>
           </li>
+          
+          
+          
+          
+          
           <li>
             <a href="typography-2.html">Typography</a>
           </li>
-          <li class="active">
-            <a href="cards.html" class="active">Cards</a>
+          
+          
+          
+          
+          
+          <li>
+            <a href="cards.html">Cards</a>
           </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
         </ul>
       </div>
-    </nav> 
 
-    <div class="container-fluid container-cards-pf">
+</nav> <!--/.navbar-->
+
+<div class="container-fluid container-cards-pf">
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
         <div class="col-xs-6 col-sm-4 col-md-2">
@@ -851,18 +967,22 @@
         </div>
       </div><!-- /row -->
 
-    </div><!-- /container -->
-    <script>
-      $(function() {
-        // matchHeight the contents of each .card-pf and then the .card-pf itself
-        $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
-        $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
-        $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
-        $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
-        // initialize tooltips
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
+</div>
+<footer class="container-fluid footer-pf">
+  <p>&copy; 2015 Company Name</p>
+</footer>
+
+<script>
+  $(function() {
+    // matchHeight the contents of each .card-pf and then the .card-pf itself
+    $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+    // initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
 
   </body>
 </html>

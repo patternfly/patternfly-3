@@ -2,13 +2,12 @@
 // Footer
 // --------------------------------------------------
 
+.footer-pf,
 .footer-pf-alt {
-  background-color: @footer-pf-alt-bg-color;
   color: @gray-light;
   font-size: @font-size-small;
   line-height: 17px; // whole px unit to avoid height differences among browsers
-  padding-left: @footer-pf-alt-padding-left;
-  padding-top: @footer-pf-alt-padding-top;
+  .layout-pf-fixed-with-footer &,
   .layout-pf-alt-fixed-with-footer & {
     bottom: 0;
     left: 0;
@@ -16,4 +15,16 @@
     right: 0;
     z-index: @zindex-navbar-fixed;
   }
+}
+
+.footer-pf {
+  background-color: @footer-pf-bg-color;
+  padding-left: @footer-pf-padding-left;
+  padding-top: @footer-pf-padding-top;
+}
+
+.footer-pf-alt {
+  background-color: @footer-pf-alt-bg-color;
+  padding-left: @footer-pf-alt-padding-left;
+  padding-top: @footer-pf-alt-padding-top;
 }
