@@ -2,18 +2,49 @@
 // Layouts
 // --------------------------------------------------
 
+.layout-pf,
 .layout-pf-alt {
   &,
   & body {
     min-height: 100%
   }
-  &.layout-pf-alt-fixed {
+  &.layout-pf-fixed,
+  &.layout-pf-alt {
+    &.layout-pf-fixed-inner-scroll,
     &.layout-pf-alt-fixed-inner-scroll {
-       &,
-       & body {
+      &,
+      & body {
         height: 100%;
         min-height: 0;
       }
+    }
+  }
+}
+
+.layout-pf {
+  &.layout-pf-fixed {
+    body {
+      padding-top: @navbar-pf-height; // make space for the navbar
+
+      &.navbar-collapse {
+        padding-top: @navbar-pf-height-collpased;
+
+        @media (min-width: @grid-float-breakpoint) {
+          padding-top: @navbar-pf-height;
+        }
+      }
+    }
+  }
+  &.layout-pf-fixed-with-footer {
+    body {
+      padding-bottom: @footer-pf-height;
+    }
+  }
+}
+
+.layout-pf-alt {
+  &.layout-pf-alt-fixed {
+    &.layout-pf-alt-fixed-inner-scroll {
       .container-pf-alt-nav-pf-vertical-alt {
         height: 100%;
         overflow: auto;

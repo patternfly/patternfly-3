@@ -2661,20 +2661,31 @@ table.datatable thead .sorting_asc:after {
 table.datatable th:active {
   outline: none;
 }
+.footer-pf,
 .footer-pf-alt {
-  background-color: #030303;
   color: #999999;
   font-size: 11px;
   line-height: 17px;
-  padding-left: 25px;
-  padding-top: 10px;
 }
+.layout-pf-fixed-with-footer .footer-pf,
+.layout-pf-fixed-with-footer .footer-pf-alt,
+.layout-pf-alt-fixed-with-footer .footer-pf,
 .layout-pf-alt-fixed-with-footer .footer-pf-alt {
   bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
   z-index: 1030;
+}
+.footer-pf {
+  background-color: #030303;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+.footer-pf-alt {
+  background-color: #030303;
+  padding-left: 25px;
+  padding-top: 10px;
 }
 @font-face {
   font-family: 'PatternFlyIcons-webfont';
@@ -2953,14 +2964,44 @@ table.datatable th:active {
   content: " ";
   right: 1px;
 }
+.layout-pf,
 .layout-pf-alt,
+.layout-pf body,
 .layout-pf-alt body {
   min-height: 100%;
 }
-.layout-pf-alt.layout-pf-alt-fixed.layout-pf-alt-fixed-inner-scroll,
-.layout-pf-alt.layout-pf-alt-fixed.layout-pf-alt-fixed-inner-scroll body {
+.layout-pf.layout-pf-fixed.layout-pf-fixed-inner-scroll,
+.layout-pf-alt.layout-pf-fixed.layout-pf-fixed-inner-scroll,
+.layout-pf.layout-pf-alt.layout-pf-fixed-inner-scroll,
+.layout-pf-alt.layout-pf-alt.layout-pf-fixed-inner-scroll,
+.layout-pf.layout-pf-fixed.layout-pf-alt-fixed-inner-scroll,
+.layout-pf-alt.layout-pf-fixed.layout-pf-alt-fixed-inner-scroll,
+.layout-pf.layout-pf-alt.layout-pf-alt-fixed-inner-scroll,
+.layout-pf-alt.layout-pf-alt.layout-pf-alt-fixed-inner-scroll,
+.layout-pf.layout-pf-fixed.layout-pf-fixed-inner-scroll body,
+.layout-pf-alt.layout-pf-fixed.layout-pf-fixed-inner-scroll body,
+.layout-pf.layout-pf-alt.layout-pf-fixed-inner-scroll body,
+.layout-pf-alt.layout-pf-alt.layout-pf-fixed-inner-scroll body,
+.layout-pf.layout-pf-fixed.layout-pf-alt-fixed-inner-scroll body,
+.layout-pf-alt.layout-pf-fixed.layout-pf-alt-fixed-inner-scroll body,
+.layout-pf.layout-pf-alt.layout-pf-alt-fixed-inner-scroll body,
+.layout-pf-alt.layout-pf-alt.layout-pf-alt-fixed-inner-scroll body {
   height: 100%;
   min-height: 0;
+}
+.layout-pf.layout-pf-fixed body {
+  padding-top: 72px;
+}
+.layout-pf.layout-pf-fixed body.navbar-collapse {
+  padding-top: 38px;
+}
+@media (min-width: 768px) {
+  .layout-pf.layout-pf-fixed body.navbar-collapse {
+    padding-top: 72px;
+  }
+}
+.layout-pf.layout-pf-fixed-with-footer body {
+  padding-bottom: 37px;
 }
 .layout-pf-alt.layout-pf-alt-fixed.layout-pf-alt-fixed-inner-scroll .container-pf-alt-nav-pf-vertical-alt {
   height: 100%;
