@@ -530,3 +530,73 @@
     };
   };
 }(jQuery));
+
+// Util: PatternFly Collapse with fixed heights
+// Update the max-height of collapse elements based on the parent container's height.
+(function ($) {
+  'use strict';
+
+  $.fn.initCollapseHeights = function () {
+    var parentElement = this, setCollapseHeights;
+
+    setCollapseHeights = function () {
+      var height, openPanel, contentHeight, bodyHeight, overflowY = 'hidden';
+
+      height = parentElement.height();
+
+      // Close any open panel
+      openPanel = parentElement.find('.collapse.in');
+      if (openPanel && openPanel.length > 0) {
+        openPanel.removeClass('in');
+      }
+
+      // Determine the necessary height for the closed content
+      contentHeight = 0;
+      parentElement.children().each($.proxy(function (i, element) {
+        var $element = $(element);
+        contentHeight += $element.outerHeight(true);
+      }, parentElement)).end();
+
+      // Determine the height remaining for opened collapse panels
+      bodyHeight = height - contentHeight;
+
+      // Make sure we have enough height to be able to scroll the contents if necessary
+      if (bodyHeight < 25) {
+        bodyHeight = 25;
+
+        // Allow the parent to scroll so the child elements are accessible
+        overflowY = 'auto';
+      }
+
+      // Set the max-height for the collapse panels
+      parentElement.find('[data-toggle="collapse"]').each($.proxy(function (i, element) {
+        var $element, selector, $target;
+        $element = $(element);
+
+        // Determine the selector to find the target
+        selector = $element.attr('data-target');
+        if (!selector) {
+          selector = $element.attr('href');
+        }
+
+        // Get the target and set the max-height
+        $target = $(selector);
+        $target.css({'max-height': bodyHeight + 'px', 'overflow-y': 'auto'});
+      }, parentElement)).end();
+
+      // Reopen the initially opened panel
+      if (openPanel && openPanel.length > 0) {
+        openPanel.addClass("in");
+      }
+
+      parentElement.css({'overflow-y': overflowY});
+    };
+
+    setCollapseHeights();
+
+    // Update on window resizing
+    $(window).resize(setCollapseHeights);
+
+  };
+}(jQuery));
+
