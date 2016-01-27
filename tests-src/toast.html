@@ -37,16 +37,7 @@ resource: true
       </div>
       <hr>
       <div class="toast-pf alert alert-info">
-        <div class="dropdown btn-group">
-          <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="fa fa-ellipsis-v"></span></button>
-           <ul class="dropdown-menu pull-right">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-          </ul>
-        </div>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
         <div class="pull-right toast-pf-action">
           <a href="#">Reload Server</a>
         </div>

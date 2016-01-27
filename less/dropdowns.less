@@ -146,3 +146,65 @@
     display: block;
   }
 }
+
+// Kebab dropmenu
+.dropdown-kebab-pf {
+  .btn-link {
+    color: @gray-darker;
+    font-size: (@font-size-base + 4);
+    line-height: 1;
+    padding: 4px 0;
+    &:active,
+    &:focus,
+    &:hover {
+      color: @link-color;
+    }
+  }
+  .dropdown-menu {
+    left: -15px;
+    margin-top: 11px;
+    &.dropdown-menu-right {
+      left: auto;
+      right: -15px;
+      &:after,
+      &:before {
+        left: auto;
+        right: 6px;
+      }
+    }
+    &:after,
+    &:before {
+      border-bottom-color: @dropdown-border;
+      border-bottom-style: solid;
+      border-bottom-width: 10px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      content: "";
+      display: inline-block;
+      left: 6px;
+      position: absolute;
+      top: -11px;
+    }
+    &:after {
+      border-bottom-color: @dropdown-bg;
+      top: -10px;
+    }
+  }
+  &.dropup .dropdown-menu {
+    margin-bottom: 11px;
+    margin-top: 0;
+    &:after,
+    &:before {
+      border-bottom: none;
+      border-top-color: @dropdown-border;
+      border-top-style: solid;
+      border-top-width: 10px;
+      bottom: -11px;
+      top: auto;
+    }
+    &:after {
+      border-top-color: @dropdown-bg;
+      bottom: -10px;
+    }
+  }
+}
