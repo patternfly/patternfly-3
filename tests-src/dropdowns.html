@@ -29,3 +29,11 @@ resource: true
           <li><a href="#">Separated link</a></li>
         </ul>
       </div>
+
+      <h2>Dropdown Kebab</h2>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuId="dropdownKebab" %}
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight" dropdownPosition="dropdown-menu-right" %}
+
+      <h2>Dropup Kebab</h2>
+      {% include widgets/kebab.html dropmenuType="dropup" dropmenuId="dropupKebab" %}
+      {% include widgets/kebab.html dropmenuType="dropup" dropmenuPosition="pull-right" dropmenuId="dropupKebabRight" dropdownPosition="dropdown-menu-right" %}
