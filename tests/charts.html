@@ -287,6 +287,10 @@
               ['data1', 5, 200, 200, 400],
               ['data2', 130, 100, 20, 200]
             ],
+            // optional drilldown behavior
+            onclick: function (d, element) {
+              window.location = chart6Urls[d.id][d.index];
+            },
             type: 'bar'
           },
           grid: {
@@ -295,6 +299,21 @@
             }
           }
         });
+        // URLs for optional drilldown behavior
+        var chart6Urls = {
+          data1: [
+            'https://www.gogole.com',
+            'https://www.yahoo.com',
+            'https://www.bing.com/',
+            'https://duckduckgo.com/'
+          ],
+          data2: [
+            'https://www.redhat.com',
+            'http://mozilla.org',
+            'https://www.acquia.com/',
+            'https://wordpress.org/'
+          ]
+        };
 
         // Stacked Bar Chart, Rotated
         var chart7 = c3.generate({
@@ -323,14 +342,36 @@
             groups: [
               ['data1', 'data2']
             ],
+            // optional drilldown behavior
+            onclick: function (d, element) {
+              window.location = chart7Urls[d.id][d.index];
+            },
             type: 'bar'
           },
           grid: {
             y: {
               show: true
             }
+          },
+          legend: {
+            position: 'right'
           }
         });
+        // URLs for optional drilldown behavior
+        var chart7Urls = {
+          data1: [
+            'https://www.gogole.com',
+            'https://www.yahoo.com',
+            'https://www.bing.com/',
+            'https://duckduckgo.com/'
+          ],
+          data2: [
+            'https://www.redhat.com',
+            'http://mozilla.org',
+            'https://www.acquia.com/',
+            'https://wordpress.org/'
+          ]
+        };
 
         // Donut Chart
         var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig('29,210 Host Totals');
