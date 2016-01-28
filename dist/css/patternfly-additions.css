@@ -2771,9 +2771,6 @@ table.datatable th:active {
 .pficon-info:before {
   content: "\e604";
 }
-.pficon-kubernetes:before {
-  content: "\e627";
-}
 .pficon-memory:before {
   content: "\e908";
 }
@@ -2783,9 +2780,6 @@ table.datatable th:active {
 .pficon-ok:before {
   color: #3f9c35;
   content: "\e602";
-}
-.pficon-openshift:before {
-  content: "\e626";
 }
 .pficon-print:before {
   content: "\e612";
