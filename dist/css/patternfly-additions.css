@@ -2709,17 +2709,29 @@ table.datatable th:active {
 .pficon-close:before {
   content: "\e60b";
 }
+.pficon-cloud-security:before {
+  content: "\e903";
+}
+.pficon-cloud-tenant:before {
+  content: "\e904";
+}
 .pficon-cluster:before {
   content: "\e620";
 }
 .pficon-container-node:before {
   content: "\e621";
 }
+.pficon-cpu:before {
+  content: "\e905";
+}
 .pficon-delete:before {
   content: "\e611";
 }
 .pficon-edit:before {
   content: "\e60a";
+}
+.pficon-enterprise:before {
+  content: "\e906";
 }
 .pficon-error-circle-o:before {
   color: #cc0000;
@@ -2731,6 +2743,9 @@ table.datatable th:active {
 .pficon-flag:before,
 .pficon-messages:before {
   content: "\e603";
+}
+.pficon-flavor:before {
+  content: "\e907";
 }
 .pficon-folder-close:before {
   content: "\e607";
@@ -2759,6 +2774,12 @@ table.datatable th:active {
 .pficon-kubernetes:before {
   content: "\e627";
 }
+.pficon-memory:before {
+  content: "\e908";
+}
+.pficon-network:before {
+  content: "\e909";
+}
 .pficon-ok:before {
   color: #3f9c35;
   content: "\e602";
@@ -2776,11 +2797,20 @@ table.datatable th:active {
 .pficon-restart:before {
   content: "\e613";
 }
+.pficon-regions:before {
+  content: "\e90a";
+}
 .pficon-registry:before {
   content: "\e623";
 }
 .pficon-replicator:before {
   content: "\e624";
+}
+.pficon-repository:before {
+  content: "\e90b";
+}
+.pficon-resource-pool:before {
+  content: "\e90c";
 }
 .pficon-route:before {
   content: "\e625";
@@ -2794,11 +2824,17 @@ table.datatable th:active {
 .pficon-screen:before {
   content: "\e600";
 }
+.pficon-server:before {
+  content: "\e90d";
+}
 .pficon-service:before {
   content: "\e61e";
 }
 .pficon-settings:before {
   content: "\e610";
+}
+.pficon-storage-domain:before {
+  content: "\e90e";
 }
 .pficon-thumb-tack-o:before {
   content: "\e609";
@@ -2818,9 +2854,18 @@ table.datatable th:active {
 .pficon-users:before {
   content: "\e60f";
 }
+.pficon-virtual-machine:before {
+  content: "\e90f";
+}
+.pficon-volume:before {
+  content: "\e910";
+}
 .pficon-warning-triangle-o:before {
   color: #ec7a08;
   content: "\e61c";
+}
+.pficon-zone:before {
+  content: "\e911";
 }
 .navbar-nav > li > .dropdown-menu.infotip {
   border-top-width: 1px !important;
