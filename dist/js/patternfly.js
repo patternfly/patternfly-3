@@ -187,8 +187,8 @@
             i;
 
           for (i = 0; i < ien; i += 1) {
-            $('.paginate_input').val(iCurrentPage);
-            $('.paginate_of b').html(iPages);
+            $('.paginate_input', an[i]).val(iCurrentPage)
+              .siblings('.paginate_of').find('b').html(iPages);
 
             // Add / remove disabled classes from the static elements
             if (oPaging.iPage === 0) {
