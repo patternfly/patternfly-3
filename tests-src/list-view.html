@@ -1,0 +1,107 @@
+---
+categories: [Widgets]
+layout: page
+title: List View
+resource: true
+url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
+---
+
+{% include widgets/list-view-default.html %}
+<h2>Row Variations</h2>
+{% include widgets/list-view-variations.html %}
+
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+
+  // Donut Charts
+  var c3ChartDefaults = $().c3ChartDefaults();
+  var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('34%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#chart1';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 34],
+      ["Available", 86]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  var donutChartTitle = d3.select("#chart1").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("34%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('21%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#chart2';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 21],
+      ["Available", 79]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#chart2").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("21%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('14%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#chart3';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 14],
+      ["Available", 86]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#chart3").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("14%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('25%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#chart4';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 25],
+      ["Available", 75]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#chart4").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("25%").classed('list-view-donut-title', true);
+
+</script>

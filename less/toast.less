@@ -11,45 +11,7 @@
   &.alert-info > .pficon    { background-color: @alert-info-border; }
   &.alert-success > .pficon { background-color: @alert-success-border; }
   &.alert-warning > .pficon { background-color: @alert-warning-border; }
-  .dropdown {
-    float: right;
-    margin: -11px 0px -12px 12px;
-    .btn-link {
-      color: @gray-darker;
-      font-size: (@font-size-base + 4);
-      line-height: 1;
-      padding: 13px 5px 13px 5px;
-      &:active,
-      &:focus,
-      &:hover {
-        color: @link-color;
-      }
-    }
-    .dropdown-menu {
-      right: -15px;
-      &:before {
-        border-right: 11px solid transparent;
-        border-bottom: 11px solid #ccc;
-        border-left: 11px solid transparent;
-        border-bottom-color: rgba(0, 0, 0, 0.2);
-        content: '';
-        display: inline-block;
-        position: absolute;
-        right: 11px;
-        top: -11px;
-      }
-      &:after {
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid #ffffff;
-        border-left: 10px solid transparent;
-        content: '';
-        display: inline-block;
-        position: absolute;
-        right: 12px;
-        top: -10px;
-      }
-    }
-  }
+  .dropdown-kebab-pf { margin-left: 10px; }
   > .pficon {
     background-color: @gray-pf;
     bottom:  -1px;
@@ -69,7 +31,7 @@
     display: inline-block;
   }
 }
-// To set max width on toast notifications
+// Sets max width on toast notifications
 .toast-pf-max-width {
  @media (min-width: @screen-md-min) {
     max-width: 31.1% ; // sets the size to 4 cols;
