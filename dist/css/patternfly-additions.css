@@ -3159,7 +3159,7 @@ table.datatable th:active {
   -ms-flex: 1;
   flex: 1;
   vertical-align: top;
-  width: 10000px;
+  width: 100%;
 }
 @media (min-width: 992px) {
   .list-view-pf-body {
@@ -3168,9 +3168,6 @@ table.datatable th:active {
     display: flex;
     flex-direction: row;
   }
-}
-@supports (display: flex) {
-  width: auto!important;
 }
 .list-view-pf-checkbox {
   border-right: 1px solid #d1d1d1;
