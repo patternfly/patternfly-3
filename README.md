@@ -41,10 +41,6 @@ PatternFly can be installed and managed through [npm](https://www.npmjs.com/).  
 npm install patternfly
 ```
 
-### RPM
-
-PatternFly is also available as an RPM.  See https://copr.fedoraproject.org/coprs/patternfly/patternfly2/.
-
 ### Sass and/or Rails
 
 A [Sass port of PatternFly](https://github.com/patternfly/patternfly-sass) is available, as is a [Sass-based Rails Gem](https://rubygems.org/gems/patternfly-sass).
@@ -131,11 +127,9 @@ The HTML pages in `tests/` are generated using Jekyll.  Do *not* edit these file
 
 ## Release
 
-PatternFly is released through the Bower, npm, and RPM.
+PatternFly is released through the Bower and npm.
 
-### Bower and npm
-
-To release a new version version of PatternFly, edit `bower.json`, `package.json`, and `MAKEFILE` accordingly.
+To release a new version version of PatternFly, edit `bower.json` and `package.json` accordingly.
 
 Update the version listed in `bower.json` by editing the file and changing the line:
 
@@ -147,15 +141,6 @@ Update the version listed in `package.json` by editing the file and changing the
 
 ```
 "version": "<new_version>"
-```
-
-Update the `MAKEFILE` by editing the file and changing the following lines:
-
-```
-VERSION=<new_version>
-MILESTONE=
-# PACKAGE_RPM_RELEASE=0.0.$(MILESTONE)
-PACKAGE_RPM_RELEASE=1
 ```
 
 Commit the version bump:
@@ -177,45 +162,6 @@ To publish a new version to npm, run:
 
 ```
 npm publish
-```
-
-### RPM
-
-RPMs of PatternFly Bower releases are built using Fedora or RHEL and rpm-build.
-
-Verify `MAKEFILE` is properly configured.
-
-Make the dist:
-
-```
-make dist
-```
-
-Copy the resulting tarball from the previous step to your rpmbuild/SOURCES directory.
-
-e.g., `cp patternfly-1.1.1.tar.gz ~/rpmbuild/SOURCES`
-
-Build the RPM:
-
-```
-rpmbuild -ba patternfly.spec
-```
-
-Commit the source RPM [1] to [https://github.com/patternfly/patternfly-srpms](https://github.com/patternfly/patternfly-srpms).
-
-[1] e.g., ~/rpmbuild/SRPMS/patternfly1-1.1.1-1.fc20.src.rpm
-
-Serve the commited source RPM via [RawGit](https://rawgit.com).
-
-Ask @rhamilto or @gregsheremeta to add a new build on [Fedora Copr](https://copr.fedoraproject.org/coprs/patternfly/patternfly2) using the URL created in the previous step.
-
-Edit `MAKEFILE` as follows and commit the change:
-
-```
-VERSION=<new_version + 1>
-MILESTONE=master
-PACKAGE_RPM_RELEASE=0.0.$(MILESTONE)
-# PACKAGE_RPM_RELEASE=1
 ```
 
 ## Documentation
