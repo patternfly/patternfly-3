@@ -112,15 +112,12 @@
   -ms-flex: 1; // IE10 prefix
   flex:     1;
   vertical-align: top; //IE9 fallback
-  width: 10000px; // IE9 fallback, it extends the cell to size of the container
+  width: 100%; // IE9 fallback, it extends the cell to size of the container
   @media (min-width: @screen-md-min) {
     align-items: center;
     display: -ms-flexbox;// IE10 fallback
     display: flex;
     flex-direction: row;
-  }
-  @supports (display: flex) {
-    width: auto!important; // ignores IE9 fallback on FireFox
   }
 }
 .list-view-pf-checkbox {
