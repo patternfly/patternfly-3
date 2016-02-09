@@ -9719,6 +9719,10 @@ td > .progress:first-child:last-child {
   min-width: 10px;
   text-align: center;
 }
+.table-treegrid span.expand-icon,
+.table-treegrid span.collapse-icon {
+  cursor: pointer;
+}
 .table-treegrid > tbody > tr.odd {
   background-color: #f5f5f5;
 }
