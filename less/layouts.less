@@ -1,7 +1,72 @@
 //
 // Layouts
 // --------------------------------------------------
-
+.layout-pf {
+  &,
+  & body {
+    min-height: 100%
+  }
+  &.layout-pf-fixed {
+    &.transitions .container-pf-nav-pf-vertical {
+      transition: @flyout-transition-pf;
+    }
+    body {
+      padding-top: @navbar-pf-height; // make space for the navbar
+    }
+    .container-pf-nav-pf-vertical {
+      margin-left: @nav-pf-vertical-width;
+      &.hidden-icons-pf {
+        margin-left: @nav-pf-vertical-hidden-icons-width;
+      }
+      &.collapsed-nav {
+        margin-left: 0; // adjust space for the collapsed left nav
+      }
+      &.hidden-nav {
+        margin-left: 0; // remove space as left nav is hidden
+      }
+      &.container-pf-nav-pf-vertical-with-secondary {
+        &.collapsed-nav {
+          margin-left: @nav-pf-vertical-collapsed-width;
+          &.hidden-icons-pf {
+            margin-left: 0;
+          }
+        }
+        &.secondary-visible-pf {
+          margin-left: @nav-pf-vertical-width;
+          &.hidden-icons-pf {
+            margin-left: @nav-pf-vertical-hidden-icons-width;
+          }
+          &.hidden-nav {
+            margin-left: 0; // remove space as left nav is hidden
+          }
+          &.collapsed-nav {
+            margin-left: @nav-pf-vertical-collapsed-width;
+            &.hidden-icons-pf {
+              margin-left: 0;
+            }
+          }
+          @media (min-width: 1200px) {
+            margin-left: (@nav-pf-vertical-width + @nav-pf-vertical-secondary-width);
+            &.hidden-icons-pf {
+              margin-left: (@nav-pf-vertical-hidden-icons-width + @nav-pf-vertical-secondary-width);
+            }
+            &.hidden-nav {
+              margin-left: 0; // remove space as left nav is hidden
+            }
+          }
+        }
+        &.hidden-nav {
+          margin-left: 0; // remove space as left nav is hidden
+        }
+      }
+    }
+  }
+  &.layout-pf-fixed-with-footer {
+    body {
+      padding-bottom: @footer-pf-height;
+    }
+  }
+}
 .layout-pf-alt {
   &,
   & body {
@@ -9,8 +74,8 @@
   }
   &.layout-pf-alt-fixed {
     &.layout-pf-alt-fixed-inner-scroll {
-       &,
-       & body {
+      &,
+      & body {
         height: 100%;
         min-height: 0;
       }

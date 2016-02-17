@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!--[if IE 9]><html lang="en-us" class="ie9 layout-pf-alt layout-pf-alt-fixed"><![endif]-->
+<!--[if IE 9]><html lang="en-us" class="ie9 layout-pf layout-pf-fixed"><![endif]-->
 <!--[if gt IE 9]><!-->
-<html lang="en-us" class="layout-pf-alt layout-pf-alt-fixed">
+<html lang="en-us" class="layout-pf layout-pf-fixed">
   <!--<![endif]-->
     <head>
-    <title>Fixed Navbar Alt With Fixed Left Nav Alt - PatternFly</title>
+    <title>Vertical Navigation with Persistent Secondary (no icons) - PatternFly</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,11 +37,11 @@
       <span class="pficon pficon-close"></span>
     </button>
     <span class="pficon pficon-warning-triangle-o"></span>
-    The alternate layouts are not officially supported by Patternfly.  These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+    These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
   </div>
 
   <body class="cards-pf">
-    <nav class="navbar navbar-pf-alt">
+    <nav class="navbar navbar-pf-vertical">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle">
       <span class="sr-only">Toggle navigation</span>
@@ -100,80 +100,244 @@
       </li>
     </ul>
   </nav>
-
 </nav> <!--/.navbar-->
 
-<nav class="nav-pf-vertical-alt">
+
+<div class="nav-pf-vertical nav-pf-vertical-with-secondary-nav hidden-icons-pf">
+
   <ul class="list-group">
     <li class="list-group-item active">
       <a href="#">
-        <span class="fa fa-dashboard" title="Dashboard" data-toggle="tooltip" data-placement="right"></span>
+        <span class="fa fa-dashboard"></span>
         <span class="list-group-item-value">Dashboard</span>
       </a>
     </li>
     <li class="list-group-item">
       <a href="#">
-        <span class="fa fa-file-o" title="My Services" data-toggle="tooltip" data-placement="right"></span>
-        <span class="list-group-item-value">My Services</span>
-        <span class="badge">12</span>
+        <span class="pficon pficon-cluster"></span>
+        <span class="list-group-item-value">Clusters</span>
       </a>
     </li>
     <li class="list-group-item">
       <a href="#">
-        <span class="fa fa-file-text-o" title="My Requests" data-toggle="tooltip" data-placement="right"></span>
-        <span class="list-group-item-value">My Requests</span>
-        <span class="badge">2</span>
+        <span class="pficon pficon-screen"></span>
+        <span class="list-group-item-value">Hosts</span>
+      </a>
+    </li>
+    <li class="list-group-item persistent-secondary" data-target="#storage-secondary">
+      <a href="#">
+        <span class="pficon pficon-container-node"></span>
+        <span class="list-group-item-value">Storage</span>
+      </a>
+      <div id="storage-secondary" class="nav-pf-persistent-secondary">
+  <div class="persistent-secondary-header">
+    <a class="fa fa-arrow-circle-o-left" href="#" data-toggle="collapse-secondary-nav"></a>
+    <span>Storage</span>
+  </div>
+  <h5>File</h5>
+  <ul class="list-group">
+    <li class="list-group-item active">
+      <a href="#">
+        <span class="list-group-item-value">Volumes</span>
+        <div class="badge-container-pf">
+          <div class="badge">
+            <span class="pficon pficon-error-circle-o"></span>
+            <span>1</span>
+          </div>
+          <div class="badge">
+            <span class="pficon pficon-warning-triangle-o"></span>
+            <span>3</span>
+          </div>
+        </div>
       </a>
     </li>
     <li class="list-group-item">
       <a href="#">
-        <span class="fa fa-copy" title="My Items" data-toggle="tooltip" data-placement="right"></span>
-        <span class="list-group-item-value">My Items</span>
+        <span class="list-group-item-value">Bricks</span>
+        <div class="badge-container-pf">
+          <div class="badge">
+            <span class="pficon pficon-warning-triangle-o"></span>
+            <span>3</span>
+          </div>
+          <span class="badge">12</span>
+        </div>
       </a>
     </li>
-    <li class="list-group-item list-group-item-separator hidden-sm hidden-md hidden-lg">
+    <li class="list-group-item">
       <a href="#">
-        <span class="fa fa-external-link" title="Launch"></span>
-        <span class="list-group-item-value">Launch</span>
+        <span class="list-group-item-value">Quotas</span>
+        <div class="badge-container-pf">
+          <span class="badge">3</span>
+        </div>
       </a>
     </li>
-    <li class="list-group-item hidden-sm hidden-md hidden-lg">
+    <li class="list-group-item">
       <a href="#">
-        <span class="pficon pficon-flag" title="Notifications"></span>
-        <span class="list-group-item-value">Notifications</span>
-        <span class="badge notifications">2</span>
-      </a>
-    </li>
-    <li class="list-group-item hidden-sm hidden-md hidden-lg">
-      <a href="#">
-        <span class="pficon pficon-help" title="Help"></span>
-        <span class="list-group-item-value">Help</span>
-      </a>
-    </li>
-     <li class="list-group-item hidden-sm hidden-md hidden-lg">
-      <a href="#">
-        <span class="fa fa-info-circle" title="About"></span>
-        <span class="list-group-item-value">About</span>
-      </a>
-    </li>
-    <li class="list-group-item hidden-sm hidden-md hidden-lg">
-      <a href="#">
-        <span class="pficon pficon-user" title="Preferences"></span>
-        <span class="list-group-item-value">Preferences</span>
-      </a>
-    </li>
-    <li class="list-group-item hidden-sm hidden-md hidden-lg">
-      <a href="#">
-        <span class="fa fa-sign-out" title="Log Out"></span>
-        <span class="list-group-item-value">Log Out</span>
+        <span class="list-group-item-value">Logical Volumes</span>
+        <div class="badge-container-pf">
+          <div class="badge">
+            <span class="pficon pficon-error-circle-o"></span>
+            <span>1</span>
+          </div>
+          <span class="badge">10</span>
+        </div>
       </a>
     </li>
   </ul>
-</nav>
-<div class="container-fluid container-cards-pf container-pf-alt-nav-pf-vertical-alt">
+  <h5>Object</h5>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Pools</span>
+        <div class="badge-container-pf">
+          <span class="badge">10</span>
+        </div>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">OSDs</span>
+        <div class="badge-container-pf">
+          <div class="badge">
+            <span class="pficon pficon-error-circle-o"></span>
+            <span>1</span>
+          </div>
+          <div class="badge">
+            <span class="pficon pficon-warning-triangle-o"></span>
+            <span>3</span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <h5>Block</h5>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">RBDs</span>
+        <div class="badge-container-pf">
+          <div class="badge">
+            <span class="pficon pficon-warning-triangle-o"></span>
+            <span>2</span>
+          </div>
+          <span class="badge">14</span>
+        </div>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Quotas</span>
+        <div class="badge-container-pf">
+          <span class="badge">0</span>
+        </div>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Snapshots</span>
+        <div class="badge-container-pf">
+          <div class="badge">
+            <span class="pficon pficon-warning-triangle-o"></span>
+            <span>3</span>
+          </div>
+          <span class="badge">9</span>
+        </div>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Storage Profiles</span>
+        <div class="badge-container-pf">
+          <span class="badge">7</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+    </li>
+    <li class="list-group-item persistent-secondary" data-target="#admin-secondary">
+      <a href="#">
+        <span class="fa fa-cog"></span>
+        <span class="list-group-item-value">Admin</span>
+      </a>
+      <div id="admin-secondary" class="nav-pf-persistent-secondary">
+  <div class="persistent-secondary-header">
+    <a class="fa fa-arrow-circle-o-left" href="#" data-toggle="collapse-secondary-nav"></a>
+    <span>Admin</span>
+  </div>
+  <h5>User Administration</h5>
+  <ul class="list-group">
+    <li class="list-group-item active">
+      <a href="#">
+        <span class="list-group-item-value">Users</span>
+        <div class="badge-container-pf">
+          <span class="badge">10</span>
+        </div>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Groups</span>
+        <div class="badge-container-pf">
+          <span class="badge">3</span>
+        </div>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Roles</span>
+        <div class="badge-container-pf">
+          <span class="badge">5</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <h5>Storage</h5>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Local Storage</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">History</span>
+        <div class="badge-container-pf">
+          <span class="badge">0</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+  <h5>Preferences</h5>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Appearance</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Notifications</span>
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="#">
+        <span class="list-group-item-value">Sound</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+    </li>
+  </ul>
+</div>
+
+<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical container-pf-nav-pf-vertical-with-secondary hidden-icons-pf">
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-        <div class="col-xs-6 col-sm-4 col-md-2">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card-pf card-pf-accented card-pf-aggregate-status">
             <h2 class="card-pf-title">
               <span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">0</span> Ipsum
@@ -185,7 +349,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card-pf card-pf-accented card-pf-aggregate-status">
             <h2 class="card-pf-title">
               <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">20</span> Amet</a>
@@ -198,7 +362,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card-pf card-pf-accented card-pf-aggregate-status">
             <h2 class="card-pf-title">
               <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">9</span> Adipiscing</a>
@@ -210,7 +374,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card-pf card-pf-accented card-pf-aggregate-status">
             <h2 class="card-pf-title">
               <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">12</span> Lorem</a>
@@ -222,34 +386,10 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
-          <div class="card-pf card-pf-accented card-pf-aggregate-status">
-            <h2 class="card-pf-title">
-              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">6</span> Dolar Sit</a>
-            </h2>
-            <div class="card-pf-body">
-              <p class="card-pf-aggregate-status-notifications">
-                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
-          <div class="card-pf card-pf-accented card-pf-aggregate-status">
-            <h2 class="card-pf-title">
-              <a href="#"><span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">199</span> Consectetur</a>
-            </h2>
-            <div class="card-pf-body">
-              <p class="card-pf-aggregate-status-notifications">
-                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
-              </p>
-            </div>
-          </div>
-        </div>
       </div><!-- /row -->
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
             <h2 class="card-pf-title">
               <span class="fa fa-rebel"></span>
@@ -262,7 +402,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
             <h2 class="card-pf-title">
               <span class="fa fa-paper-plane"></span>
@@ -277,7 +417,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
             <h2 class="card-pf-title">
               <span class="pficon pficon-cluster"></span>
@@ -292,7 +432,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
             <h2 class="card-pf-title">
               <span class="pficon pficon-image"></span>
@@ -307,40 +447,10 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-          <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
-            <h2 class="card-pf-title">
-              <span class="fa fa-shield"></span>
-              <a href="#">
-                <span class="card-pf-aggregate-status-count">6</span> Dolar Sit
-              </a>
-            </h2>
-            <div class="card-pf-body">
-              <p class="card-pf-aggregate-status-notifications">
-                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>1</span></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-          <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
-            <h2 class="card-pf-title">
-              <span class="fa fa-rocket"></span>
-              <a href="#">
-                <span class="card-pf-aggregate-status-count">199</span> Consectetur
-              </a>
-            </h2>
-            <div class="card-pf-body">
-              <p class="card-pf-aggregate-status-notifications">
-                <a href="#"><span class="card-pf-aggregate-status-notification"><span class="pficon pficon-error-circle-o"></span>23</span></a>
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6">
           <div class="card-pf">
             <div class="card-pf-heading">
               <h2 class="card-pf-title">
@@ -395,7 +505,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6">
           <div class="card-pf">
             <div class="card-pf-heading">
               <h2 class="card-pf-title">
@@ -449,66 +559,6 @@
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" data-toggle="tooltip" title="100% Used">
                     <span><strong>2 of 2</strong> Total</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="card-pf">
-            <div class="card-pf-heading">
-              <h2 class="card-pf-title">
-                Quotas
-              </h2>
-            </div>
-            <div class="card-pf-body">
-              <div class="progress-container progress-description-left">
-                <div class="progress-description">
-                  CPU
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;" data-toggle="tooltip" title="25% Used">
-                    <span class="sr-only">25% Used</span>
-                  </div>
-                  <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-toggle="tooltip" title="75% Available">
-                    <span class="sr-only">75% Available</span>
-                  </div>
-                </div>
-              </div>
-              <div class="progress-container progress-description-left">
-                <div class="progress-description">
-                  Memory
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" data-toggle="tooltip" title="8 GB Used">
-                    <span class="sr-only">50% Used</span>
-                  </div>
-                  <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" data-toggle="tooltip" title="8 GB Available">
-                    <span class="sr-only">50% Available</span>
-                  </div>
-                </div>
-              </div>
-              <div class="progress-container progress-description-left">
-                <div class="progress-description">
-                  Pods
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="62.5" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%;" data-toggle="tooltip" title="62.5% Used">
-                    <span class="sr-only">62.5% Used</span>
-                  </div>
-                  <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="37.5" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%;" data-toggle="tooltip" title="37.5% Available">
-                    <span class="sr-only">37.5% Available</span>
-                  </div>
-                </div>
-              </div>
-              <div class="progress-container progress-description-left">
-                <div class="progress-description">
-                  Services
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" data-toggle="tooltip" title="100% Used">
-                    <span class="sr-only">100% Used</span>
                   </div>
                 </div>
               </div>
@@ -891,14 +941,18 @@
 
 </div>
 <script>
-  $(function() {
+  $(document).ready(function() {
     // matchHeight the contents of each .card-pf and then the .card-pf itself
     $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
     $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
     $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
     $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+
     // initialize tooltips
     $('[data-toggle="tooltip"]').tooltip();
+
+    // Initialize the vertical navigation
+    $().setupVerticalNavigation(true);
   });
 </script>
 

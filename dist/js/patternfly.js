@@ -673,3 +673,308 @@
     reStripe(_this);
   };
 }(jQuery));
+
+// Util: PatternFly Collapsible Vertical Navigation
+// Must have navbar-toggle in navbar-pf-vertical for expand/collapse
+(function ($) {
+  'use strict';
+
+  $.fn.setupVerticalNavigation = function (handleItemSelections) {
+
+    var navElement = $('.nav-pf-vertical'),
+      bodyContentElement = $('.container-pf-nav-pf-vertical'),
+      toggleNavBarButton = $('.navbar-toggle'),
+      explicitCollapse = false,
+      subDesktop = false,
+      breakpoints = {
+        'tablet': 768,
+        'desktop': 1200
+      },
+
+      inMobileState = function () {
+        return bodyContentElement.hasClass('hidden-nav');
+      },
+
+      forceResize = function () {
+        setTimeout(function () {
+          if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+          }
+          // Special case for IE
+          if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+          }
+        }, 100);
+      },
+
+      showSecondaryMenu = function () {
+        if (inMobileState() || !subDesktop) {
+          navElement.addClass('secondary-visible-pf');
+          bodyContentElement.addClass('secondary-visible-pf');
+        }
+
+        // Dispatch a resize event when showing the secondary menu in non-subdesktop state to
+        // allow content to adjust to the secondary menu sizing
+        if (!subDesktop) {
+          forceResize();
+        }
+      },
+
+      hideSecondaryMenu = function () {
+        navElement.removeClass('secondary-visible-pf');
+        bodyContentElement.removeClass('secondary-visible-pf');
+        navElement.find('.mobile-nav-item-pf').each(function (index, item) {
+          $(item).removeClass('mobile-nav-item-pf');
+        });
+      },
+
+      showSecondaryMenuForItem = function (item) {
+        if (item.find('.nav-pf-persistent-secondary').length > 0) {
+          showSecondaryMenu();
+        } else {
+          hideSecondaryMenu();
+          navElement.removeClass('show-mobile-nav');
+        }
+      },
+
+      setActiveItem = function (item) {
+        // Make the clicked on item active
+        $(document).find('.nav-pf-vertical > .list-group > .list-group-item').each(function (index, element) {
+          if ($(element).hasClass('active')) {
+            $(element).removeClass('active');
+          }
+        });
+        if (!item.hasClass('active')) {
+          item.addClass('active');
+        }
+      },
+
+      setSecondaryActiveItem = function ($parent, item) {
+        var parentItem = $(document).find('[data-target="#' + $parent.attr('id') + '"]');
+
+        $parent.find('.list-group > .list-group-item').each(function (index, element) {
+          $(element).removeClass('active');
+        });
+        item.addClass('active');
+
+        setActiveItem($(parentItem));
+      },
+
+      updateSecondaryMenuDisplayAfterSelection = function () {
+        if (inMobileState()) {
+          navElement.removeClass('show-mobile-nav');
+          hideSecondaryMenu();
+          navElement.find('.mobile-nav-item-pf').each(function (index, item) {
+            $(item).removeClass('mobile-nav-item-pf');
+          });
+        }
+      },
+
+      checkNavState = function () {
+        var width = $(window).width(), makeSecondaryVisible;
+
+        // Check to see if we need to enter/exit the mobile state
+        if (width < breakpoints.tablet) {
+          if (!navElement.hasClass('hidden')) {
+            //Set the nav to being hidden
+            navElement.addClass('hidden');
+            navElement.removeClass('collapsed');
+
+            //Set the body class to the correct state
+            bodyContentElement.removeClass('collapsed-nav');
+            bodyContentElement.addClass('hidden-nav');
+
+            explicitCollapse = false;
+          }
+        } else if (navElement.hasClass('hidden')) {
+          // Always remove the hidden & peek class
+          navElement.removeClass('hidden show-mobile-nav');
+
+          // Set the body class back to the default
+          bodyContentElement.removeClass('hidden-nav');
+        }
+
+        // Check to see if we need to enter/exit the sub desktop state
+        if (width < breakpoints.desktop) {
+          if (!subDesktop) {
+            // Collapse the navigation bars when entering sub desktop mode
+            navElement.addClass('collapsed');
+            bodyContentElement.addClass('collapsed-nav');
+          }
+          if (width >= breakpoints.tablet) {
+            hideSecondaryMenu();
+          }
+          subDesktop = true;
+        } else {
+          makeSecondaryVisible = subDesktop && (navElement.find('.persistent-secondary.active').length > 0);
+          subDesktop = false;
+          if (makeSecondaryVisible) {
+            showSecondaryMenu();
+          }
+        }
+
+        if (explicitCollapse) {
+          navElement.addClass('collapsed');
+          bodyContentElement.addClass('collapsed-nav');
+        } else {
+          navElement.removeClass('collapsed');
+          bodyContentElement.removeClass('collapsed-nav');
+        }
+      },
+
+      collapseMenu = function () {
+        //Make sure this is expanded
+        navElement.addClass('collapsed');
+        //Set the body class to the correct state
+        bodyContentElement.addClass('collapsed-nav');
+
+        if (subDesktop) {
+          hideSecondaryMenu();
+        }
+
+        explicitCollapse = true;
+      },
+
+      enableTransitions = function () {
+        // enable transitions only when toggleNavBarButton is clicked or window is resized
+        $('html').addClass('transitions');
+      },
+
+      expandMenu = function () {
+        //Make sure this is expanded
+        navElement.removeClass('collapsed');
+        //Set the body class to the correct state
+        bodyContentElement.removeClass('collapsed-nav');
+
+        explicitCollapse = false;
+
+        // Dispatch a resize event when showing the expanding then menu to
+        // allow content to adjust to the menu sizing
+        if (!subDesktop) {
+          forceResize();
+        }
+      },
+
+      bindMenuBehavior = function () {
+        toggleNavBarButton.on('click', function (e) {
+          enableTransitions();
+
+          if (inMobileState()) {
+            // Toggle the mobile nav
+            if (navElement.hasClass('show-mobile-nav')) {
+              navElement.removeClass('show-mobile-nav');
+            } else {
+              // Always start at the primary menu
+              hideSecondaryMenu();
+              navElement.addClass('show-mobile-nav');
+            }
+          } else if (navElement.hasClass('collapsed')) {
+            expandMenu();
+          } else {
+            collapseMenu();
+          }
+        });
+      },
+
+      bindMenuItemsBehavior = function (handleSelection) {
+        // Set main nav active item on click, and show secondary nav if it has a secondary nav bar
+        $(document).on('click.pf.secondarynav.data-api', '.nav-pf-vertical > .list-group > .list-group-item', function (element) {
+          var $this = $(this);
+
+          showSecondaryMenuForItem($this);
+
+          if (inMobileState()) {
+            if ($this.find('.nav-pf-persistent-secondary').length > 0) {
+              $this.addClass('mobile-nav-item-pf');
+            } else if (handleSelection) {
+              setActiveItem($this);
+            }
+          } else if (handleSelection) {
+            setActiveItem($this);
+          }
+        });
+
+        // Set secondary menu click handlers
+        $(document).find('.nav-pf-persistent-secondary').each(function (index, element) {
+          var $e = $(element);
+
+          // Ignore clicks that are not handled
+          if (handleSelection) {
+            $e.on('click.pf.secondarynav.data-api', function (event) {
+              // Don't process the click on the parent item
+              event.stopImmediatePropagation();
+            });
+          }
+
+          // Set the active items on an item click
+          $e.on('click.pf.secondarynav.data-api', '.list-group > .list-group-item', function (event) {
+            var $this = $(this);
+            updateSecondaryMenuDisplayAfterSelection($this);
+
+            if (handleSelection) {
+              setSecondaryActiveItem($e, $(this));
+              // Don't process the click on the parent item
+              event.stopImmediatePropagation();
+            }
+          });
+
+          // Collapse the secondary nav bar when the toggle is clicked
+          $e.on('click.pf.secondarynav.data-api', '[data-toggle="collapse-secondary-nav"]', function (e) {
+            hideSecondaryMenu();
+            navElement.removeClass('hover-secondary-nav-pf');
+            navElement.addClass('force-hide-secondary-nav-pf');
+            setTimeout(function () {
+              navElement.removeClass('force-hide-secondary-nav-pf');
+            }, 500);
+            if (handleSelection) {
+              // Don't process the click on the parent item
+              e.stopImmediatePropagation();
+            }
+          });
+        });
+
+        // Show secondary nav bar on hover of nav items
+        $(document).on('mouseover.pf.secondarynav.data-api', '.persistent-secondary', function (e) {
+          if (!inMobileState()) {
+            navElement.addClass('hover-secondary-nav-pf');
+          }
+        });
+        $(document).on('mouseout.pf.secondarynav.data-api', '.persistent-secondary', function (e) {
+          navElement.removeClass('hover-secondary-nav-pf');
+        });
+      },
+
+      setTooltips = function () {
+        $('.nav-pf-vertical [data-toggle="tooltip"]').tooltip({'container': 'body', 'delay': { 'show': '500', 'hide': '200' }});
+
+        $(".nav-pf-vertical").on("show.bs.tooltip", function (e) {
+          if (!$(this).hasClass("collapsed")) {
+            return false;
+          }
+        });
+      },
+
+      init = function (handleItemSelections) {
+        //Set correct state on load
+        checkNavState();
+
+        // Bind Top level hamburger menu with menu behavior;
+        bindMenuBehavior();
+
+        // Bind menu items
+        bindMenuItemsBehavior(handleItemSelections);
+
+        //Set tooltips
+        setTooltips();
+      };
+
+    //Listen for the window resize event and collapse/hide as needed
+    $(window).on('resize', function () {
+      checkNavState();
+      enableTransitions();
+    });
+
+    init(handleItemSelections);
+  };
+}(jQuery));
+

@@ -116,7 +116,8 @@ module.exports = function (grunt) {
           unparam: true,
           // add predefined libraries
           predef: [
-            'jQuery'
+            'jQuery',
+            'Event'
           ],
           indent: 2
         }

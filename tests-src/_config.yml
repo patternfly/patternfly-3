@@ -2,6 +2,7 @@
 alert-message: ' and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.'
 category-list: [Widgets, Layouts, Alternate Layouts]
 company: PatternFly
+navbar-pf-navbar-brand-icon: true
 navbar-pf-alt-navbar-brand-icon: true
 title: PatternFly
 title-product: 'PatternFly Enterprise Application'
