@@ -44,7 +44,7 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
     For full install options see the [README](README.md)
 
-3. Add the follwing CSS includes to your HTML file(s), adjusting path where needed:
+3. Add the following CSS includes to your HTML file(s), adjusting path where needed:
 
         <!-- PatternFly Styles -->
         <!-- Note: No other CSS files are needed regardless of what other JS packages located in patternfly/components that you decide to pull in -->
