@@ -1,0 +1,139 @@
+---
+alert-message: ', <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://c3js.org/">http://c3js.org/</a>'
+categories: [Charts]
+layout: page
+title: Bar Charts
+resource: true
+url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js']
+---
+      <h2>Vertical Bar Chart</h2>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div id="verticalBarChart"></div>
+        </div>
+      </div>
+      <h2>Grouped Vertical Bar Chart</h2>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div id="groupedVerticalBarChart"></div>
+        </div>
+      </div>
+      <h2>Horizontal Bar Chart</h2>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div id="horizontalBarChart"></div>
+        </div>
+      </div>
+      <h2>Grouped Horizontal Bar Chart</h2>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div id="groupedHorizontalBarChart"></div>
+        </div>
+      </div>
+      <script>
+
+        var c3ChartDefaults = $().c3ChartDefaults();
+
+        var chartUrls = [
+          'https://www.gogole.com',
+          'https://www.yahoo.com',
+          'https://www.bing.com/',
+          'https://duckduckgo.com/'
+        ];
+        var categories = ['Q1', 'Q2', 'Q3', 'Q4'];
+        var columnsData = [
+          ['data1', 400, 360, 320, 175]
+        ];
+
+        var groupedcCategories = ['2013', '2014', '2015'];
+        var groupedColumnsData = [
+          ['Q1', 400, 250, 375],
+          ['Q2', 355, 305, 300],
+          ['Q3', 315, 340, 276],
+          ['Q4', 180, 390, 190]
+        ];
+        var groupedColors = {
+          pattern: [
+            $.pfPaletteColors.red,
+            $.pfPaletteColors.blue,
+            $.pfPaletteColors.orange,
+            $.pfPaletteColors.green
+          ]
+        };
+
+        var verticalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
+        verticalBarChartConfig.bindto = '#verticalBarChart';
+        verticalBarChartConfig.axis = {
+          x: {
+            categories: categories,
+            type: 'category'
+          }
+        };
+        verticalBarChartConfig.data = {
+          type: 'bar',
+          columns: columnsData,
+          // optional drilldown behavior
+          onclick: function (d, element) {
+            window.location = chartUrls[d.index];
+          }
+        };
+        var verticalBarChart = c3.generate(verticalBarChartConfig);
+
+        var groupedVerticalBarChartConfig = $().c3ChartDefaults().getDefaultGroupedBarConfig();
+        groupedVerticalBarChartConfig.bindto = '#groupedVerticalBarChart';
+        groupedVerticalBarChartConfig.axis = {
+          x: {
+            categories: groupedcCategories,
+            type: 'category'
+          }
+        };
+        groupedVerticalBarChartConfig.data = {
+          type: 'bar',
+          columns: groupedColumnsData,
+          // optional drilldown behavior
+          onclick: function (d, element) {
+            window.location = chartUrls[d.index];
+          }
+        };
+        groupedVerticalBarChartConfig.color = groupedColors;
+        var groupedVerticalBarChart = c3.generate(groupedVerticalBarChartConfig);
+
+        var horizontalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
+        horizontalBarChartConfig.bindto = '#horizontalBarChart';
+        horizontalBarChartConfig.axis = {
+          rotated: true,
+          x: {
+            categories: categories,
+            type: 'category'
+          }
+        };
+        horizontalBarChartConfig.data = {
+          type: 'bar',
+          columns: columnsData,
+          // optional drilldown behavior
+          onclick: function (d, element) {
+            window.location = chartUrls[d.index];
+          }
+        };
+        var horizontalBarChart = c3.generate(horizontalBarChartConfig);
+
+        var groupedHorizontalBarChartConfig = $().c3ChartDefaults().getDefaultGroupedBarConfig();
+        groupedHorizontalBarChartConfig.bindto = '#groupedHorizontalBarChart';
+        groupedHorizontalBarChartConfig.axis = {
+          rotated: true,
+          x: {
+            categories: groupedcCategories,
+            type: 'category'
+          }
+        };
+        groupedHorizontalBarChartConfig.data = {
+          type: 'bar',
+          columns: groupedColumnsData,
+          // optional drilldown behavior
+          onclick: function (d, element) {
+            window.location = chartUrls[d.index];
+          }
+        };
+        groupedHorizontalBarChartConfig.color = groupedColors;
+        var groupedHorizontalBarChart = c3.generate(groupedHorizontalBarChartConfig);
+      </script>
