@@ -2412,6 +2412,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   background: transparent;
   font-size: 12px;
   padding: 5px 10px 0;
+  border-bottom: solid 2px #030303;
 }
 .c3-tooltip tr {
   border: 0;
@@ -2442,6 +2443,12 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .donut-title-small-pf {
   font-size: 12px;
   font-weight: 400;
+}
+.line-chart-pf .c3-zoom-rect {
+  opacity: 1.0 !important;
+  fill: #fafafa;
+  stroke: #d1d1d1;
+  stroke-width: 1px;
 }
 .close {
   text-shadow: none;
