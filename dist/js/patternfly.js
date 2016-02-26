@@ -496,7 +496,7 @@
     return '<table class="c3-tooltip">' +
       '  <tr>' +
       '    <td><span style="background-color:' + color(d[0].id) + '"></span>' + '<strong>' + d[0].value + '</strong> ' + d[0].name + '</td>' +
-      '    <td>' + d[0].ratio + '%</td>' +
+      '    <td>' + (Math.round(d[0].ratio * 1000) / 10) + '%</td>' +
       '  </tr>' +
       '</table>';
   };
@@ -504,7 +504,7 @@
   $.fn.pGetUtilizationDonutTooltipContentsFn = function (units) {
     return function (d) {
       return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-        Math.round(d[0].ratio * 100) + '%' + ' ' + units + ' ' + d[0].name +
+        (Math.round(d[0].ratio * 1000) / 10) + '%' + ' ' + units + ' ' + d[0].name +
         '</span>';
     };
   };
@@ -519,6 +519,22 @@
         '  </tr>' +
         '</table>';
     };
+  };
+
+  $.fn.pfSingleLineChartTooltipContentsFn = function (categories) {
+    return function (d) {
+      var name = categories ? categories[d[0].index] : d[0].index;
+      return '<table class="c3-tooltip">' +
+        '  <tr>' +
+        '    <td><strong>' + name + ':</td>' +
+        '    <td>' + d[0].value + '</td>' +
+        '  </tr>' +
+        '</table>';
+    };
+  };
+
+  $.fn.pfPieTooltipContents = function (d, defaultTitleFormat, defaultValueFormat, color) {
+    return $().pfDonutTooltipContents(d, defaultTitleFormat, defaultValueFormat, color);
   };
 
   $.fn.c3ChartDefaults = function () {
@@ -621,6 +637,47 @@
           tooltip: this.getDefaultDonutTooltip()
         };
       },
+      getDefaultPie = function () {
+        return {
+          expand: true,
+          label: {
+            show: false
+          }
+        };
+      },
+      getDefaultPieSize = function () {
+        return {
+          height: 171, // produces a diameter of 150 and a centered chart when there is no legend
+          width: 171 // produces a diameter of 150 and a centered chart
+        };
+      },
+      getDefaultPieColors = function () {
+        return {
+          pattern: [
+            $.pfPaletteColors.blue,
+            $.pfPaletteColors.black300
+          ]
+        };
+      },
+      getDefaultPieTooltip = function () {
+        return {
+          contents: $().pfPieTooltipContents
+        };
+      },
+      getDefaultPieLegend = function () {
+        return {
+          show: false
+        };
+      },
+      getDefaultPieConfig = function () {
+        return {
+          pie: this.getDefaultPie(),
+          size: this.getDefaultPieSize(),
+          legend: this.getDefaultPieLegend(),
+          color: this.getDefaultPieColors(),
+          tooltip: this.getDefaultPieTooltip()
+        };
+      },
       getDefaultSparklineArea = function () {
         return {
           zerobased: true
@@ -675,6 +732,70 @@
           point: getDefaultSparklinePoint(),
           tooltip: getDefaultSparklineTooltip()
         };
+      },
+      getDefaultLineAxis = function () {
+        return {
+          x: {
+            show: true
+          },
+          y: {
+            show: true
+          }
+        };
+      },
+      getDefaultLineGrid = function () {
+        return {
+          x: {
+            show: false
+          },
+          y: {
+            show: true
+          }
+        };
+      },
+      getDefaultLineLegend = function () {
+        return {
+          show: true
+        };
+      },
+      getDefaultLinePoint = function () {
+        return {
+          r: 3,
+          focus: {
+            expand: {
+              r: 5
+            }
+          }
+        };
+      },
+      getDefaultLineConfig = function () {
+        return {
+          axis: getDefaultLineAxis(),
+          grid: getDefaultLineGrid(),
+          color: getDefaultColors(),
+          legend: getDefaultLineLegend(),
+          point: getDefaultLinePoint()
+        };
+      },
+      getDefaultSingleLineTooltip = function () {
+        return {
+          contents: $().pfGetBarChartTooltipContentsFn()
+        };
+      },
+      getDefaultSingleLineLegend = function () {
+        return {
+          show: false
+        };
+      },
+      getDefaultSingleLineConfig = function () {
+        return {
+          axis: getDefaultLineAxis(),
+          grid: getDefaultLineGrid(),
+          color: getDefaultColors(),
+          legend: getDefaultSingleLineLegend(),
+          point: getDefaultLinePoint(),
+          tooltip: getDefaultSingleLineTooltip()
+        };
       };
 
     return {
@@ -692,16 +813,28 @@
       getDefaultDonutTooltip: getDefaultDonutTooltip,
       getDefaultDonutLegend: getDefaultDonutLegend,
       getDefaultDonutConfig: getDefaultDonutConfig,
+      getDefaultPie: getDefaultPie,
+      getDefaultPieSize: getDefaultPieSize,
+      getDefaultPieColors: getDefaultPieColors,
+      getDefaultPieTooltip: getDefaultPieTooltip,
+      getDefaultPieLegend: getDefaultPieLegend,
+      getDefaultPieConfig: getDefaultPieConfig,
       getDefaultSparklineArea: getDefaultSparklineArea,
       getDefaultSparklineSize: getDefaultSparklineSize,
       getDefaultSparklineAxis: getDefaultSparklineAxis,
       getDefaultSparklineLegend: getDefaultSparklineLegend,
       getDefaultSparklinePoint: getDefaultSparklinePoint,
       getDefaultSparklineTooltip: getDefaultSparklineTooltip,
-      getDefaultSparklineConfig: getDefaultSparklineConfig
+      getDefaultSparklineConfig: getDefaultSparklineConfig,
+      getDefaultLineAxis: getDefaultLineAxis,
+      getDefaultLineGrid: getDefaultLineGrid,
+      getDefaultLineLegend: getDefaultLineLegend,
+      getDefaultLinePoint: getDefaultLinePoint,
+      getDefaultLineConfig: getDefaultLineConfig,
+      getDefaultSingleLineTooltip: getDefaultSingleLineTooltip,
+      getDefaultSingleLineConfig: getDefaultSingleLineConfig
     };
   };
-
 }(jQuery));
 
 // Util: PatternFly Collapse with fixed heights
