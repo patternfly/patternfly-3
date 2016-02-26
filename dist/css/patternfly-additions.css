@@ -5177,9 +5177,9 @@ table.datatable th:active {
   margin-bottom: 0;
 }
 .nav-pf-persistent-secondary > .list-group > .list-group-item {
-  padding: 0 0 5px 0;
   background-color: transparent;
   border: none;
+  padding: 0 0 5px 0;
 }
 .nav-pf-persistent-secondary > .list-group > .list-group-item > a {
   background-color: transparent;
@@ -5242,6 +5242,7 @@ table.datatable th:active {
 .nav-pf-persistent-secondary > .list-group > .list-group-item .list-group-item-value {
   display: inline-block;
   line-height: 20px;
+  max-width: none;
   opacity: 1;
   overflow: hidden;
   padding-left: 5px;
