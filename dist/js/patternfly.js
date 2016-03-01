@@ -796,8 +796,46 @@
           point: getDefaultLinePoint(),
           tooltip: getDefaultSingleLineTooltip()
         };
+      },
+      getDefaultAreaAxis = function () {
+        return getDefaultLineAxis();
+      },
+      getDefaultAreaGrid = function () {
+        return getDefaultLineGrid();
+      },
+      getDefaultAreaLegend = function () {
+        return getDefaultLineLegend();
+      },
+      getDefaultAreaPoint = function () {
+        return getDefaultLinePoint();
+      },
+      getDefaultAreaConfig = function () {
+        return {
+          axis: getDefaultAreaAxis(),
+          grid: getDefaultAreaGrid(),
+          color: getDefaultColors(),
+          legend: getDefaultAreaLegend(),
+          point: getDefaultAreaPoint()
+        };
+      },
+      getDefaultSingleAreaTooltip = function () {
+        return {
+          contents: $().pfGetBarChartTooltipContentsFn()
+        };
+      },
+      getDefaultSingleAreaLegend = function () {
+        return getDefaultSingleLineLegend();
+      },
+      getDefaultSingleAreaConfig = function () {
+        return {
+          axis: getDefaultAreaAxis(),
+          grid: getDefaultAreaGrid(),
+          color: getDefaultColors(),
+          legend: getDefaultSingleAreaLegend(),
+          point: getDefaultAreaPoint(),
+          tooltip: getDefaultSingleAreaTooltip()
+        };
       };
-
     return {
       getDefaultColors: getDefaultColors,
       getDefaultBarGrid: getDefaultBarGrid,
@@ -832,7 +870,14 @@
       getDefaultLinePoint: getDefaultLinePoint,
       getDefaultLineConfig: getDefaultLineConfig,
       getDefaultSingleLineTooltip: getDefaultSingleLineTooltip,
-      getDefaultSingleLineConfig: getDefaultSingleLineConfig
+      getDefaultSingleLineConfig: getDefaultSingleLineConfig,
+      getDefaultAreaAxis: getDefaultAreaAxis,
+      getDefaultAreaGrid: getDefaultAreaGrid,
+      getDefaultAreaLegend: getDefaultAreaLegend,
+      getDefaultAreaPoint: getDefaultAreaPoint,
+      getDefaultAreaConfig: getDefaultAreaConfig,
+      getDefaultSingleAreaTooltip: getDefaultSingleAreaTooltip,
+      getDefaultSingleAreaConfig: getDefaultSingleAreaConfig
     };
   };
 }(jQuery));

@@ -44,86 +44,48 @@
       </div>
       <hr>
       <h2>Area Chart</h2>
-      <div id="areaChart"></div>
-      <h2>Stacked Area Chart</h2>
-      <div id="stackedAreaChart"></div>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div id="areaChart" class="line-chart-pf"></div>
+        </div>
+      </div>
+      <h2>Single Area Chart</h2>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div id="singleAreaChart" class="line-chart-pf"></div>
+        </div>
+      </div>
       <script>
 
         var c3ChartDefaults = $().c3ChartDefaults();
 
+        var areaChartDataColumns = [
+          ['data1', 350, 400, 350, 0],
+          ['data2', 140, 100, 150, 205, 145, 50],
+          ['data3', 10, 60, 90, 10, 325, 400],
+          ['data4', 260, 10, 305, 100, 50, 150]
+        ];
+        var singleAreaChartDataColumns = [
+          ['data2', 140, 100, 150, 205, 145, 50]
+        ];
+
         // Area Chart
-        var areaChart = c3.generate({
-          axis: {
-            x: {
-              tick: {
-                outer: false
-              }
-            },
-            y: {
-              tick: {
-                outer: false
-              }
-            }
-          },
-          bindto: '#areaChart',
-          color: c3ChartDefaults.getDefaultColors(),
-          data: {
-            columns: [
-              ['data1', 300, 350, 300, 0, 0, 0],
-              ['data2', 130, 100, 140, 200, 150, 50]
-            ],
-            types: {
-              data1: 'area-spline',
-              data2: 'area-spline'
-            }
-          },
-          grid: {
-            y: {
-              show: true
-            }
-          },
-          point: {
-            r: 4
-          }
-        });
+        var areaChartConfig = c3ChartDefaults.getDefaultAreaConfig();
+        areaChartConfig.bindto = '#areaChart';
+        areaChartConfig.data = {
+          columns: areaChartDataColumns,
+          type: 'area-spline'
+        };
+        var areaChart = c3.generate(areaChartConfig);
 
-        // Stacked Area Chart
-        var stackedAreaChart = c3.generate({
-          axis: {
-            x: {
-              tick: {
-                outer: false
-              }
-            },
-            y: {
-              tick: {
-                outer: false
-              }
-            }
-          },
-          bindto: '#stackedAreaChart',
-          color: c3ChartDefaults.getDefaultColors(),
-          data: {
-            columns: [
-              ['data1', 300, 350, 300, 0, 0, 0],
-              ['data2', 130, 100, 140, 200, 150, 50]
-            ],
-            types: {
-              data1: 'area-spline',
-              data2: 'area-spline'
-            },
-            groups: [['data1', 'data2']]
-          },
-          grid: {
-            y: {
-              show: true
-            }
-          },
-          point: {
-            r: 4
-          }
-        });
-
+        // Single Area Chart
+        var singleAreaChartConfig = c3ChartDefaults.getDefaultSingleAreaConfig();
+        singleAreaChartConfig.bindto = '#singleAreaChart';
+        singleAreaChartConfig.data = {
+          columns: singleAreaChartDataColumns,
+          type: 'area-spline'
+        };
+        var singleAreaChart = c3.generate(singleAreaChartConfig);
       </script>
 
     </div><!-- /container -->
