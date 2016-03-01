@@ -31,6 +31,9 @@
             margin-left: 0;
           }
         }
+        &.collapsed-secondary-nav-pf, &.secondary-visible-pf.collapsed-secondary-nav-pf {
+          margin-left: @nav-pf-vertical-secondary-width;
+        }
         &.secondary-visible-pf {
           margin-left: @nav-pf-vertical-width;
           &.hidden-icons-pf {
@@ -52,6 +55,18 @@
             }
             &.hidden-nav {
               margin-left: 0; // remove space as left nav is hidden
+            }
+            &.collapsed-secondary-nav-pf {
+              margin-left: @nav-pf-vertical-secondary-width;
+            }
+            &.collapsed-nav {
+              margin-left: (@nav-pf-vertical-collapsed-width + @nav-pf-vertical-secondary-width);
+              &.collapsed-secondary-nav-pf {
+                margin-left: @nav-pf-vertical-secondary-width;
+              }
+              &.hidden-icons-pf {
+                margin-left: 0;
+              }
             }
           }
         }

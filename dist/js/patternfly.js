@@ -1118,6 +1118,28 @@
           navElement.find('.mobile-nav-item-pf').each(function (index, item) {
             $(item).removeClass('mobile-nav-item-pf');
           });
+        } else {
+          showSecondaryMenu();
+        }
+      },
+
+      updateSecondaryCollapsedState = function (setCollapsed, collapsedItem) {
+        if (setCollapsed) {
+          collapsedItem.addClass('collapsed');
+          navElement.addClass('collapsed-secondary-nav-pf');
+          bodyContentElement.addClass('collapsed-secondary-nav-pf');
+        } else {
+          if (collapsedItem) {
+            collapsedItem.removeClass('collapsed');
+          } else {
+            // Remove any collapsed secondary menus
+            navElement.find('[data-toggle="collapse-secondary-nav"]').each(function (index, element) {
+              var $e = $(element);
+              $e.removeClass('collapsed');
+            });
+          }
+          navElement.removeClass('collapsed-secondary-nav-pf');
+          bodyContentElement.removeClass('collapsed-secondary-nav-pf');
         }
       },
 
@@ -1134,6 +1156,9 @@
             //Set the body class to the correct state
             bodyContentElement.removeClass('collapsed-nav');
             bodyContentElement.addClass('hidden-nav');
+
+            // Reset the secondary collapsed state
+            updateSecondaryCollapsedState(false);
 
             explicitCollapse = false;
           }
@@ -1227,6 +1252,13 @@
         });
       },
 
+      forceHideSecondaryMenu = function () {
+        navElement.addClass('force-hide-secondary-nav-pf');
+        setTimeout(function () {
+          navElement.removeClass('force-hide-secondary-nav-pf');
+        }, 500);
+      },
+
       bindMenuItemsBehavior = function (handleSelection) {
         // Set main nav active item on click, and show secondary nav if it has a secondary nav bar
         $(document).on('click.pf.secondarynav.data-api', '.nav-pf-vertical > .list-group > .list-group-item', function (element) {
@@ -1259,8 +1291,7 @@
 
           // Set the active items on an item click
           $e.on('click.pf.secondarynav.data-api', '.list-group > .list-group-item', function (event) {
-            var $this = $(this);
-            updateSecondaryMenuDisplayAfterSelection($this);
+            updateSecondaryMenuDisplayAfterSelection();
 
             if (handleSelection) {
               setSecondaryActiveItem($e, $(this));
@@ -1271,12 +1302,25 @@
 
           // Collapse the secondary nav bar when the toggle is clicked
           $e.on('click.pf.secondarynav.data-api', '[data-toggle="collapse-secondary-nav"]', function (e) {
-            hideSecondaryMenu();
+            var $this = $(this);
+            if (inMobileState()) {
+              hideSecondaryMenu();
+              forceHideSecondaryMenu();
+            } else {
+              if ($this.hasClass('collapsed')) {
+                updateSecondaryCollapsedState(false, $this);
+                if ($(window).width() < breakpoints.desktop) {
+                  forceHideSecondaryMenu();
+                }
+              } else {
+                if ($this.parents('.persistent-secondary.active').length > 0) {
+                  updateSecondaryCollapsedState(true, $this);
+                } else {
+                  forceHideSecondaryMenu();
+                }
+              }
+            }
             navElement.removeClass('hover-secondary-nav-pf');
-            navElement.addClass('force-hide-secondary-nav-pf');
-            setTimeout(function () {
-              navElement.removeClass('force-hide-secondary-nav-pf');
-            }, 500);
             if (handleSelection) {
               // Don't process the click on the parent item
               e.stopImmediatePropagation();
