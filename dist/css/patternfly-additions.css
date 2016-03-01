@@ -2520,7 +2520,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   position: absolute;
 }
 .dataTables_header .dataTables_filter input {
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   height: 24px;
 }
 @media (max-width: 767px) {
