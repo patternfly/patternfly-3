@@ -5,17 +5,19 @@
 
 // PatternFly-specific
 // -------------------
+@import "color-variables.less";
+
 @bootstrap-switch-handle-default-bg-color:                          #fbfbfb;
-@btn-default-bg-img-start:                                          #fafafa;
+@btn-default-bg-img-start:                                          @color-pf-black-100;
 @btn-default-bg-img-stop:                                           #ededed;
 @btn-xs-font-weight:                                                400;
-@card-pf-accented-border-top-color:                                 #39a5dc;
+@card-pf-accented-border-top-color:                                 @color-pf-blue-300;
 @card-pf-aggregate-status-title-icon-color:                         #333;
 @card-pf-bg-color:                                                  #fff;
-@card-pf-border-color:                                              #d1d1d1;
+@card-pf-border-color:                                              @color-pf-black-300;
 @card-pf-border-top-color:                                          transparent;
 @card-pf-container-bg-color:                                        #f5f5f5;
-@card-pf-footer-bg-color:                                           #fafafa;
+@card-pf-footer-bg-color:                                           @color-pf-black-100;
 @donut-font-size-big:                                               30px;
 @dropdown-divider-margin:                                           4px 1px;
 @dropdown-link-active-border-color:                                 #0076b7;
@@ -24,12 +26,12 @@
 @flyout-transition-pf:                                              all .2s cubic-bezier(.35,0,.25,1);
 @font-family-monospace:                                             Menlo, Monaco, Consolas, monospace;
 @font-path:                                                         "../fonts";
-@footer-pf-bg-color:                                                #030303;
+@footer-pf-bg-color:                                                @color-pf-black;
 @footer-pf-padding-left:                                            25px;
 @footer-pf-padding-top:                                             10px;
 @footer-pf-height:                                                  37px;
 @gray-light-pf:                                                     #aaa;
-@gray-pf:                                                           #4d5258;
+@gray-pf:                                                           @color-pf-black-700;
 @icon-font-name-fa:                                                 "FontAwesome";
 @icon-font-name-pf:                                                 "PatternFlyIcons-webfont";
 @icon-prefix:                                                       pficon;
@@ -45,9 +47,9 @@
 @img-spinner-xs:                                                    "spinner-xs.gif";
 @input-border-disabled:                                             #d4d4d4;
 @input-border-hover:                                                #7BB2DD;
-@list-view-accented-border:                                          #39a5dc;
+@list-view-accented-border:                                          @color-pf-blue-300;
 @list-view-active-bg:                                               #def3ff;
-@list-view-divider:                                                 #d1d1d1;
+@list-view-divider:                                                 @color-pf-black-300;
 @list-view-hover-bg:                                                #ededed;
 @list-group-top-border:                                             #e9e8e8;
 @login-bg-color:                                                    #080808;
@@ -57,9 +59,9 @@
 @modal-title-padding-vertical:                                      10px;
 @navbar-pf-active-color:                                            #f1f1f1;
 @navbar-pf-alt-active-color:                                        #fff;
-@navbar-pf-alt-bg-color:                                            #030303;
+@navbar-pf-alt-bg-color:                                            @color-pf-black;
 @navbar-pf-alt-bg-img:                                              url("../img/bg-navbar-pf-alt.svg");
-@navbar-pf-bg-color:                                                #030303; //#393F45
+@navbar-pf-bg-color:                                                @color-pf-black;
 @navbar-pf-border-color:                                            #199dde;
 @navbar-pf-color:                                                   #cfcfcf;
 @navbar-pf-height:                                                  60px;
@@ -90,30 +92,30 @@
 @navbar-pf-vertical-nav-item-iconic-padding:                        21px 12px;
 @nav-pf-vertical-active-color:                                      #fff;
 @nav-pf-vertical-active-before-color:                               #199dde;
-@nav-pf-vertical-active-bg-color:                                   #393f44;
+@nav-pf-vertical-active-bg-color:                                   @color-pf-black-800;
 @nav-pf-vertical-active-border-color:                               #303030;
 @nav-pf-vertical-active-font-weight:                                600;
 @nav-pf-vertical-active-icon-color:                                 #199dde;
 @nav-pf-vertical-badge-color:                                       #fff;
-@nav-pf-vertical-bg-color:                                          #292e34;
+@nav-pf-vertical-bg-color:                                          @color-pf-black-900;
 @nav-pf-vertical-border-color:                                      #262626;
 @nav-pf-vertical-collapsed-width:                                   75px;
 @nav-pf-vertical-color:                                             #dbdada;
 @nav-pf-vertical-font-weight:                                       400;
-@nav-pf-vertical-icon-color:                                        #72767b;
+@nav-pf-vertical-icon-color:                                        @color-pf-black-600;
 @nav-pf-vertical-icon-width:                                        24px;
 @nav-pf-vertical-item-border-color:                                 #000000;
 @nav-pf-vertical-link-height:                                       63px;
 @nav-pf-vertical-link-padding:                                      17px 20px 17px 25px;
 @nav-pf-vertical-secondary-active-color:                            #fff;
-@nav-pf-vertical-secondary-active-bg-color:                         #4d5258;
+@nav-pf-vertical-secondary-active-bg-color:                         @color-pf-black-700;
 @nav-pf-vertical-secondary-active-icon-color:                       #199dde;
 @nav-pf-vertical-secondary-badge-color:                             #fff;
-@nav-pf-vertical-secondary-badge-bg-color:                          #292e34;
+@nav-pf-vertical-secondary-badge-bg-color:                          @color-pf-black-900;
 @nav-pf-vertical-secondary-border-color:                            #199dde;
 @nav-pf-vertical-secondary-color:                                   #fff;
 @nav-pf-vertical-secondary-header-margin:                           18px 20px 10px 20px;
-@nav-pf-vertical-secondary-indicator-color:                         #72767b;
+@nav-pf-vertical-secondary-indicator-color:                         @color-pf-black-600;
 @nav-pf-vertical-secondayr-indicator-padding:                       17px 0;
 @nav-pf-vertical-secondary-item-color:                              #dbdada;
 @nav-pf-vertical-secondary-item-padding:                            0 0 5px 0;
@@ -180,7 +182,7 @@
 @pficon-var-warning-triangle-o:                                     "\e61c";
 @pficon-var-zone:                                                   "\e911";
 @progress-description-label-width:                                  85px;
-@sidebar-pf-bg:                                                     #fafafa;
+@sidebar-pf-bg:                                                     @color-pf-black-100;
 @sidebar-pf-border-color:                                           #d0d0d0;
 @table-border-hover:                                                #a7cadf;
 @table-cell-padding-bottom:                                         3px;
@@ -235,7 +237,7 @@
 @footer-pf-alt-padding-top:                                         @footer-pf-padding-top;
 @footer-pf-alt-height:                                              @footer-pf-height;
 @img-path-alt:                                                      @img-path;
-@nav-pf-vertical-alt-active-color:                                  #39a5dc;
+@nav-pf-vertical-alt-active-color:                                  @color-pf-blue-300;
 @nav-pf-vertical-alt-bg-color:                                      #fff;
 @nav-pf-vertical-alt-badge-color:                                   #fff;
 @nav-pf-vertical-alt-border-color:                                  @sidebar-pf-border-color;
@@ -264,19 +266,19 @@
 
 // Bootstrap overrides
 // -------------------
-@alert-info-border:                                                 #8b8d8f;
+@alert-info-border:                                                 @color-pf-black-500;
 @alert-link-font-weight:                                            500;
 @alert-padding:                                                     11px;
 @body-bg:                                                           #ffffff;
 @border-radius-base:                                                1px;
-@brand-danger:                                                      #cc0000;
+@brand-danger:                                                      @color-pf-red;
 @brand-info:                                                        #006e9c;
 @brand-primary:                                                     #00a8e1;
-@brand-success:                                                     #3f9c35;
-@brand-warning:                                                     #ec7a08;
+@brand-success:                                                     @color-pf-green;
+@brand-warning:                                                     @color-pf-orange;
 @breadcrumb-bg:                                                     transparent;
 @breadcrumb-separator:                                              "\f105";
-@btn-danger-bg:                                                     #a30000;
+@btn-danger-bg:                                                     @color-pf-red-200;
 @btn-danger-border:                                                 #781919;
 @btn-default-border:                                                #b7b7b7;
 @btn-font-weight:                                                   600;
@@ -312,19 +314,19 @@
 @pager-border-radius:                                               0;
 @pager-disabled-color:                                              #969696;
 @pagination-bg:                                                     #f5f5f5;
-@pagination-border:                                                 #bbbbbb;
+@pagination-border:                                                 @color-pf-black-400;
 @pagination-hover-bg:                                               #ededed;
 @panel-inner-border:                                                #cecdcd;
 @popover-arrow-color:                                               #fff;
-@popover-arrow-outer-color:                                         #bbb;
-@popover-border-color:                                              #bbb;
+@popover-arrow-outer-color:                                         @color-pf-black-400;
+@popover-border-color:                                              @color-pf-black-400;
 @popover-max-width:                                                 220px;
 @popover-title-bg:                                                  #f5f5f5;
 @pre-bg:                                                            #fcfcfc;
 @progress-bg:                                                       #ededed;
 @table-bg-accent:                                                   #f5f5f5;
 @table-bg-hover:                                                    #d5ecf9;
-@table-border-color:                                                #d1d1d1;
+@table-border-color:                                                @color-pf-black-300;
 @table-cell-padding:                                                10px;
 @tooltip-arrow-width:                                               8px;
 @tooltip-bg:                                                        #434343;
