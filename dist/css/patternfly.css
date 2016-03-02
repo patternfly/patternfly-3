@@ -8915,6 +8915,9 @@ fieldset[disabled] .btn-primary.active {
   top: -1px;
   right: 0;
 }
+.dropup .caret:before {
+  content: "\f106";
+}
 .dropdown-menu .divider {
   background-color: #e5e5e5;
   height: 1px;
