@@ -98,7 +98,7 @@
           order: null
         };
         utilizationDonutChartConfig.tooltip = {
-          contents: $().pGetUtilizationDonutTooltipContentsFn('MHz')
+          contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
         };
         var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
         $().pfSetDonutChartTitle("#utilizationDonutChart", "60", "MHz Used");

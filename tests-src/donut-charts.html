@@ -61,7 +61,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
           order: null
         };
         utilizationDonutChartConfig.tooltip = {
-          contents: $().pGetUtilizationDonutTooltipContentsFn('MHz')
+          contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
         };
         var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
         $().pfSetDonutChartTitle("#utilizationDonutChart", "60", "MHz Used");

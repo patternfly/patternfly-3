@@ -501,7 +501,7 @@
       '</table>';
   };
 
-  $.fn.pGetUtilizationDonutTooltipContentsFn = function (units) {
+  $.fn.pfGetUtilizationDonutTooltipContentsFn = function (units) {
     return function (d) {
       return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
         (Math.round(d[0].ratio * 1000) / 10) + '%' + ' ' + units + ' ' + d[0].name +
