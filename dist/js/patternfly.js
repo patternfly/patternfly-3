@@ -1373,3 +1373,13 @@
   };
 }(jQuery));
 
+// Util: Retrieve Current PatternFly Version Number
+(function ($) {
+  'use strict';
+
+  $.fn.getPatternFlyVersion = function () {
+    $.getJSON("../../bower.json", function (data) {
+      $("#pfversion").text(data.version);
+    });
+  };
+}(jQuery));
