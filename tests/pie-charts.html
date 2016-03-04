@@ -66,13 +66,13 @@
             Dogs: $.pfPaletteColors.red,
             Cats: $.pfPaletteColors.blue,
             Fish: $.pfPaletteColors.orange,
-            Hampsters: $.pfPaletteColors.green
+            Hamsters: $.pfPaletteColors.green
           },
           columns: [
             ['Dogs', 3],
             ['Cats', 2],
             ['Fish', 10],
-            ['Hampsters', 2]
+            ['Hamsters', 2]
           ],
           onclick: function (d, i) { console.log("onclick", d, i); },
           onmouseover: function (d, i) { console.log("onmouseover", d, i); },
@@ -82,17 +82,12 @@
         // Pie Chart without Legend
         var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
         pieChartConfig.bindto = '#pie-chart-no-legend';
-        pieChartConfig.tooltip = {show: true};
         pieChartConfig.data = pieData;
-        pieChartConfig.tooltip = {
-          contents: $().pfPieTooltipContents
-        };
         var pieChartNoLegend = c3.generate(pieChartConfig);
 
         // Pie Chart Bottom Legend
         var pieChartBottomConfig = c3ChartDefaults.getDefaultPieConfig();
         pieChartBottomConfig.bindto = '#pie-chart-bottom-legend';
-        pieChartBottomConfig.tooltip = {show: true};
         pieChartBottomConfig.data = pieData;
         pieChartBottomConfig.legend = {
           show: true,
@@ -107,7 +102,6 @@
         // Right Legend
         var pieChartRightConfig = c3ChartDefaults.getDefaultPieConfig();
         pieChartRightConfig.bindto = '#pie-chart-right-legend';
-        pieChartRightConfig.tooltip = {show: true};
         pieChartRightConfig.data = pieData;
         pieChartRightConfig.legend = {
           show: true,
@@ -122,7 +116,6 @@
         // Small Pie Chart
         var pieChartSmallConfig = c3ChartDefaults.getDefaultPieConfig();
         pieChartSmallConfig.bindto = '#smallPieChart';
-        pieChartSmallConfig.tooltip = {show: true};
         pieChartSmallConfig.data = pieData;
         pieChartSmallConfig.legend = {
           show: true,
@@ -131,9 +124,6 @@
         pieChartSmallConfig.size = {
           width: 250,
           height: 115
-        };
-        pieChartSmallConfig.tooltip = {
-          contents: $().pfPieTooltipContents
         };
 
         var pieChartSmall = c3.generate(pieChartSmallConfig);
