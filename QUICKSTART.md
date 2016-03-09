@@ -100,7 +100,12 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <!-- Angular Application? You May Want to Consider Pulling Angular-PatternFly And Angular-UI Bootstrap instead of bootstrap.js -->
         <!-- See https://github.com/patternfly/angular-patternfly for more information -->
 
-5. NPM Install Only:  You can install patternfly using just NPM; no need for Bower (although Bower is recommened). Add the following script includes from 'node_modules' to your HTML file(s), adjusting where necessary to pull in only what you need: 
+5. NPM Install Only:  You can install patternfly using just NPM; no need for Bower (although Bower is recommened). Add the following style and script includes from 'node_modules' to your HTML file(s), adjusting where necessary to pull in only what you need: 
+
+        <!-- PatternFly Styles -->
+        <!-- Note: No other CSS files are needed regardless of what other JS packages located in patternfly/components that you decide to pull in -->
+        <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly.min.css" />
+        <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly-additions.min.css" />
 
         <!-- jQuery -->
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
