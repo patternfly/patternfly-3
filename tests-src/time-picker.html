@@ -1,0 +1,34 @@
+---
+alert-message: ', <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://eonasdan.github.io/bootstrap-datetimepicker/#custom-formats">http://eonasdan.github.io/bootstrap-datetimepicker/#custom-formats</a>.'
+categories: [Widgets]
+layout: page
+title: Time Picker
+resource: true
+url-js-extra: ['https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js',
+               'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js']
+---
+<h3>Component</h3>
+<div class="row">
+  <div class="col-lg-4 col-md-5 col-sm-6">
+    <div class="input-group time-picker-pf" id="datetimepicker3">
+      <input type="text" class="form-control">
+      <span class="input-group-addon btn btn-default">
+        <span class="fa fa-clock-o"></span>
+      </span>
+    </div>
+    <script>
+      $(function () {
+        $('#datetimepicker3').datetimepicker({
+          format: 'LT',
+          keyBinds: {
+            enter: function () {
+              $('#datetimepicker3').find('input').trigger('change');
+              this.hide();
+            }
+          }
+        });
+        $('#datetimepicker3').data('DateTimePicker').clear();
+      });
+    </script>
+  </div>
+</div>

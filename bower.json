@@ -35,6 +35,8 @@
     "font-awesome": "4.5.0",
     "google-code-prettify": "1.0.4",
     "jquery": "2.1.4",
-    "matchHeight": "0.6.0"
+    "matchHeight": "0.6.0",
+    "eonasdan-bootstrap-datetimepicker": "4.17.37",
+    "moment": "2.11.2"
   }
 }
