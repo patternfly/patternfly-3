@@ -3010,6 +3010,12 @@ table.datatable th:active {
 .pficon-resource-pool:before {
   content: "\e90c";
 }
+.pficon-resources-almost-full:before {
+  content: "\e912";
+}
+.pficon-resources-full:before {
+  content: "\e913";
+}
 .pficon-route:before {
   content: "\e625";
 }
