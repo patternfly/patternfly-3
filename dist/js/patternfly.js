@@ -998,6 +998,10 @@
 
       // Set up an event listener for the node
       node.children('.treegrid-node').on('click', function (e) {
+        if (typeof options.callback === 'function') {
+          options.callback(e);
+        }
+
         var icon = node.find('span.expand-icon');
         if (icon.hasClass('fa-angle-right')) {
           node.removeClass('collapsed');
