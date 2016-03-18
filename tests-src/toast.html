@@ -4,7 +4,6 @@ layout: page
 title: Toast Notifications
 resource: true
 ---
-      <div class="toast-pf-top-right"></div>
       <div class="toast-pf alert alert-success">
         <div class="pull-right toast-pf-action">
           <a href="#">Start Server</a>
@@ -76,37 +75,3 @@ resource: true
         <span class="pficon pficon-warning-triangle-o"></span>
         Max-width is set on this example.
       </div>
-      <hr>
-      <h2>Dynamic notifications</h2>
-      <p>
-        <button type="button" class="btn btn-default" id="dynamic-info">Info</button>
-        <button type="button" class="btn btn-success" id="dynamic-success">Success</button>
-        <button type="button" class="btn btn-warning" id="dynamic-warning">Warning</button>
-        <button type="button" class="btn btn-danger" id="dynamic-error">Error</button>
-      </p>
-      <script>
-        $('#dynamic-info').click(function() {
-          $().toastNotify({
-            level:   'info',
-            message: 'This is a dynamic notification!'
-          });
-        });
-        $('#dynamic-success').click(function() {
-          $().toastNotify({
-            level:   'success',
-            message: 'This is a dynamic notification!'
-          });
-        });
-        $('#dynamic-error').click(function() {
-          $().toastNotify({
-            level:   'error',
-            message: 'This is a dynamic notification!'
-          });
-        });
-        $('#dynamic-warning').click(function() {
-          $().toastNotify({
-            level:   'warning',
-            message: 'This is a dynamic notification!'
-          });
-        });
-      </script>

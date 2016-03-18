@@ -5049,15 +5049,6 @@ table.datatable th:active {
     left: auto;
   }
 }
-.toast-pf-area {
-  left: 66%;
-  position: fixed;
-  right: 20px;
-  top: 12px;
-  width: calc(34% - 20px);
-  word-wrap: break-word;
-  z-index: 1035;
-}
 .toolbar-pf {
   background: #fff;
   border-bottom: 1px solid #d0d0d0;
