@@ -20,7 +20,7 @@
   border: 1px solid @dropdown-fallback-border; // IE8 fallback
   border: 1px solid @dropdown-border;
   border-radius: @border-radius-base;
-  .box-shadow(0 6px 12px rgba(0,0,0,.175));
+  .box-shadow(0 6px 12px fade(@color-pf-black, 17.5%));
   background-clip: padding-box;
   list-style: none;
   margin: -1px 0 0 0;
@@ -36,7 +36,7 @@
 }
 
 .ColVis_collectionBackground {
-  background-color: #fff;
+  background-color: @color-pf-white;
   height: 100%;
   left: 0;
   position: fixed;
@@ -46,7 +46,7 @@
 }
 
 .dataTables_header {
-  background-color: #f6f6f6;
+  background-color: @color-pf-black-150;
   border: 1px solid @table-border-color;
   border-bottom: none;
   padding: 5px;
@@ -86,7 +86,7 @@
 }
 
 .dataTables_footer {
-  background-color: #fff;
+  background-color: @color-pf-white;
   border: 1px solid @table-border-color;
   border-top: none;
   overflow: hidden;
@@ -101,7 +101,7 @@
     margin: 0;
     > li {
       > span {
-        border-color: #ffffff #e1e1e1 #f4f4f4;
+        border-color: @color-pf-white @color-pf-black-300 @color-pf-black-150;
         border-width: 0 1px;
         font-size: (@font-size-base + 4);
         font-weight: normal;
@@ -117,9 +117,9 @@
         border-right: none;
       }
       &.disabled > span {
-        background: #f5f5f5;
-        border-left-color: #ececec;
-        border-right-color: #ececec;
+        background: @color-pf-black-150;
+        border-left-color: @color-pf-black-200;
+        border-right-color: @color-pf-black-200;
         .reset-filter();
       }
     }
@@ -131,8 +131,8 @@
     padding: 4px 15px 0;
     text-align: right;
     .paginate_input {
-      border: 1px solid #d3d3d3;
-      .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+      border: 1px solid @color-pf-black-300;
+      .box-shadow(inset 0 1px 1px fade(@color-pf-black, 7.5%));
       font-size: @font-size-base;
       font-weight: 600;
       height: 19px;
@@ -160,7 +160,7 @@
 }
 
 .DTCR_clonedTable {
-  background-color: rgba(255,255,255,0.7);
+  background-color: fade(@color-pf-white, 70%);
   z-index: 202;
 }
 

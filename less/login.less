@@ -37,10 +37,9 @@
     }
   }
   .container {
-    background-color: @login-container-bg-color;
     background-color: @login-container-bg-color-rgba;
     clear: right;
-    color: #fff;
+    color: @color-pf-white;
     padding-bottom: 40px;
     padding-top: 20px;
     width: auto;
@@ -52,11 +51,11 @@
     }
     [class^='alert'] {
       background: transparent;
-      color: #fff;
+      color: @color-pf-white;
     }
     .details {
       p:first-child {
-        border-top: 1px solid #474747;
+        border-top: 1px solid fade(@color-pf-white, 30%);
         padding-top: 25px;
         margin-top: 25px;
       }
@@ -66,7 +65,7 @@
           padding-top: 0;
           margin-top: 0;
         }
-        border-left: 1px solid #474747;
+        border-left: 1px solid fade(@color-pf-white, 30%);
         padding-left: 40px;
       }
       p {
@@ -87,7 +86,7 @@
       }
     }
     .help-block {
-      color: #fff;
+      color: @color-pf-white;
     }
     .login {
       @media (min-width: @screen-sm-min) {

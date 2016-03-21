@@ -15,11 +15,11 @@
 .spinner {
   -webkit-animation: rotation .6s infinite linear;
   animation: rotation .6s infinite linear;
-  border-bottom: 4px solid rgba(0,0,0,.25);
-  border-left: 4px solid rgba(0,0,0,.25);
-  border-right: 4px solid rgba(0,0,0,.25);
+  border-bottom: 4px solid fade(@color-pf-black, 25%);
+  border-left: 4px solid fade(@color-pf-black, 25%);
+  border-right: 4px solid fade(@color-pf-black, 25%);
   border-radius: 100%;
-  border-top: 4px solid rgba(0,0,0,.75);
+  border-top: 4px solid fade(@color-pf-black, 75%);
   height: (@font-size-base * 2);
   margin: 0 auto;
   position: relative;
@@ -44,10 +44,10 @@
     width: @font-size-base;
   }
   &.spinner-inverse {
-    border-bottom-color: rgba(255, 255, 255, 0.25);
-    border-left-color: rgba(255, 255, 255, 0.25);
-    border-right-color: rgba(255, 255, 255, 0.25);
-    border-top-color: rgba(255, 255, 255, 0.75);
+    border-bottom-color: fade(@color-pf-white, 25%);
+    border-left-color: fade(@color-pf-white, 25%);
+    border-right-color: fade(@color-pf-white, 25%);
+    border-top-color: fade(@color-pf-white, 75%);
   }
 }
 
