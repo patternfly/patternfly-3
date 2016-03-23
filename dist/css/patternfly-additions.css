@@ -4931,7 +4931,10 @@ table.datatable th:active {
   padding: 0;
   top: 23px!important;
   width: calc(100% - 25px);
-  z-index: 0;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu:before,
+.bootstrap-datetimepicker-widget.dropdown-menu:after {
+  content: none;
 }
 .bootstrap-datetimepicker-widget .timepicker-hour {
   width: 100%;
