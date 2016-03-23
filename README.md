@@ -120,7 +120,7 @@ This task will compile and minify the lesscss files into CSS files located at `d
 
 ### PatternFlyIcons Font
 
-PatternFlyIcons font is generated using [IcoMoon](http://icomoon.io/app).  [Load](http://icomoon.io/#docs/save-load) `PatternFlyIcons-webfont.json` as a new project in IcoMoon and update as necessary.  Please commit the updated `PatternFlyIcons-webfont.json` file in addition to the updated font files and supporting LESS/CSS changes.
+PatternFlyIcons font is generated using [IcoMoon](http://icomoon.io/app). Go to [manage projects](https://icomoon.io/app/#/projects) and import the project `PatternFlyIcons-webfont.json`. Load it and update as necessary. When finished, return to manage projects, and download the updated `PatternFlyIcons-webfont.json` file. Also generate the fonts. Please commit the updated `PatternFlyIcons-webfont.json` file, the updated font files and supporting LESS/CSS changes.
 
 ## Tests
 
