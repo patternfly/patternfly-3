@@ -18,7 +18,9 @@
     padding: 0;
     top: 23px!important;
     width: calc(~"100% - 25px");
-    z-index: 0;
+    &:before, &:after {
+      content: none;
+    }
   }
   .timepicker-hour {
     width: 100%;
