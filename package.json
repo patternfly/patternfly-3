@@ -1,12 +1,12 @@
 {
   "name": "patternfly",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "dependencies": {
     "bootstrap": "~3.3.5",
     "bootstrap-datepicker": "~1.4.0",
-    "bootstrap-select": "~1.7.3",
+    "bootstrap-select": "1.7.3",
     "bootstrap-switch": "~3.3.2",
     "bootstrap-touchspin": "~3.1.1",
     "bootstrap-treeview": "~1.2.0",
