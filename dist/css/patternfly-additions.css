@@ -1026,12 +1026,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 .bootstrap-select.btn-group > .disabled:focus {
   outline: none !important;
 }
-.bootstrap-select.btn-group.bs-container {
-  position: absolute;
-}
-.bootstrap-select.btn-group.bs-container .dropdown-menu {
-  z-index: 1060;
-}
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
   display: inline-block;
   overflow: hidden;
@@ -1050,6 +1044,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 }
 .bootstrap-select.btn-group .dropdown-menu {
   min-width: 100%;
+  z-index: 1035;
   box-sizing: border-box;
 }
 .bootstrap-select.btn-group .dropdown-menu.inner {
@@ -1072,10 +1067,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 }
 .bootstrap-select.btn-group .dropdown-menu li a {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 .bootstrap-select.btn-group .dropdown-menu li a.opt {
   position: relative;
@@ -1128,7 +1119,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   margin-right: 34px;
 }
 .bootstrap-select.show-menu-arrow.open > .dropdown-toggle {
-  z-index: 1061;
+  z-index: 1036;
 }
 .bootstrap-select.show-menu-arrow .dropdown-toggle:before {
   content: '';
@@ -1180,6 +1171,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   padding: 4px 8px;
 }
 .bs-actionsbox {
+  float: left;
   width: 100%;
   box-sizing: border-box;
 }
@@ -1200,7 +1192,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 .bs-searchbox .form-control {
   margin-bottom: 0;
   width: 100%;
-  float: none;
 }
 select.bs-select-hidden,
 select.selectpicker {
