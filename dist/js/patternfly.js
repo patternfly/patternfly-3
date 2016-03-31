@@ -998,7 +998,7 @@
 
       // Set up an event listener for the node
       node.children('.treegrid-node').on('click', function (e) {
-        if (typeof options.callback === 'function') {
+        if (options && typeof options.callback === 'function') {
           options.callback(e);
         }
 
