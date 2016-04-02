@@ -37,6 +37,6 @@
     "jquery": "~2.1.4",
     "matchHeight": "~0.7.0",
     "eonasdan-bootstrap-datetimepicker": "~4.17.37",
-    "moment": "~2.11.2"
+    "moment": "~2.11.0"
   }
 }
