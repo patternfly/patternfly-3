@@ -606,8 +606,8 @@
       },
       getDefaultDonutSize = function () {
         return {
-          height: 171, // produces a diameter of 150 and a centered chart when there is no legend
-          width: 171 // produces a diameter of 150 and a centered chart
+          height: 171 // produces a diameter of 150 and a centered chart when there is no legend
+          // Don't set a width here, the default is to center horizontally in the parent container
         };
       },
       getDefaultDonutColors = function () {
@@ -647,8 +647,8 @@
       },
       getDefaultPieSize = function () {
         return {
-          height: 171, // produces a diameter of 150 and a centered chart when there is no legend
-          width: 171 // produces a diameter of 150 and a centered chart
+          height: 171 // produces a diameter of 150 and a centered chart when there is no legend
+          // Don't set a width here, default is to center horizontally in the parent container
         };
       },
       getDefaultPieColors = function () {
