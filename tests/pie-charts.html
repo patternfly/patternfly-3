@@ -43,91 +43,120 @@
         These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a>, <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://c3js.org/">http://c3js.org/</a>
       </div>
       <hr>
-      <div style="width: 440px;">
-        <h2>Pie Chart - Relationship to a Whole</h2>
-        <div>
-          <div id="pie-chart-no-legend"></div>
-          <div id="pie-chart-right-legend"></div>
-          <div id="pie-chart-bottom-legend"></div>
-        </div>
-        <h2>Pie Chart - Small</h2>
-        <div>
-          <div id="smallPieChart" class="pie-chart-pf"></div>
-          <div style="text-align: center; width: 160px;">Animals</div>
-        </div>
-      </div>
-      <script>
+<div>
+  <h2>Donut Chart - Relationship to a Whole</h2>
+  <div style="width: 700px;">
+    <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <div id="donut-chart-no-legend"></div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <div id="donut-chart-right-legend"></div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <div id="donut-chart-bottom-legend"></div>
+  </div>
+</div>
+<script>
+  var c3ChartDefaults = $().c3ChartDefaults();
 
-        var c3ChartDefaults = $().c3ChartDefaults();
+  var pieData = {
+    type : 'pie',
+    colors: {
+      Dogs: $.pfPaletteColors.red,
+      Cats: $.pfPaletteColors.blue,
+      Fish: $.pfPaletteColors.orange,
+      Hamsters: $.pfPaletteColors.green
+    },
+    columns: [
+      ['Dogs', 3],
+      ['Cats', 2],
+      ['Fish', 10],
+      ['Hamsters', 2]
+    ],
+    onclick: function (d, i) { console.log("onclick", d, i); },
+    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+  };
 
-        var pieData = {
-          type : 'pie',
-          colors: {
-            Dogs: $.pfPaletteColors.red,
-            Cats: $.pfPaletteColors.blue,
-            Fish: $.pfPaletteColors.orange,
-            Hamsters: $.pfPaletteColors.green
-          },
-          columns: [
-            ['Dogs', 3],
-            ['Cats', 2],
-            ['Fish', 10],
-            ['Hamsters', 2]
-          ],
-          onclick: function (d, i) { console.log("onclick", d, i); },
-          onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-        };
+  // Pie Chart without Legend
+  var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
+  pieChartConfig.bindto = '#donut-chart-no-legend';
+  pieChartConfig.data = pieData;
+  var pieChartNoLegend = c3.generate(pieChartConfig);
 
-        // Pie Chart without Legend
-        var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
-        pieChartConfig.bindto = '#pie-chart-no-legend';
-        pieChartConfig.data = pieData;
-        var pieChartNoLegend = c3.generate(pieChartConfig);
+  // Right Legend
+  var pieChartRightConfig = c3ChartDefaults.getDefaultPieConfig();
+  pieChartRightConfig.bindto = '#donut-chart-right-legend';
+  pieChartRightConfig.data = pieData;
+  pieChartRightConfig.legend = {
+    show: true,
+    position: 'right'
+  };
+  pieChartRightConfig.size = {
+    width: 251,
+    height: 161
+  };
+  var pieChartRightLegend = c3.generate(pieChartRightConfig);
 
-        // Pie Chart Bottom Legend
-        var pieChartBottomConfig = c3ChartDefaults.getDefaultPieConfig();
-        pieChartBottomConfig.bindto = '#pie-chart-bottom-legend';
-        pieChartBottomConfig.data = pieData;
-        pieChartBottomConfig.legend = {
-          show: true,
-          position: 'bottom'
-        };
-        pieChartBottomConfig.size = {
-          width: 321,
-          height: 191
-        };
-        var pieChartBottomLegend = c3.generate(pieChartBottomConfig);
+  // Pie Chart Bottom Legend
+  var pieChartBottomConfig = c3ChartDefaults.getDefaultPieConfig();
+  pieChartBottomConfig.bindto = '#donut-chart-bottom-legend';
+  pieChartBottomConfig.data = pieData;
+  pieChartBottomConfig.legend = {
+    show: true,
+    position: 'bottom'
+  };
+  pieChartBottomConfig.size = {
+    width: 321,
+    height: 191
+  };
+  var pieChartBottomLegend = c3.generate(pieChartBottomConfig);
+</script>
 
-        // Right Legend
-        var pieChartRightConfig = c3ChartDefaults.getDefaultPieConfig();
-        pieChartRightConfig.bindto = '#pie-chart-right-legend';
-        pieChartRightConfig.data = pieData;
-        pieChartRightConfig.legend = {
-          show: true,
-          position: 'right'
-        };
-        pieChartRightConfig.size = {
-          width: 251,
-          height: 171
-        };
-        var pieChartRightLegend = c3.generate(pieChartRightConfig);
+  </div>
+  <h2>Pie Chart - Small</h2>
+  <div>
+    <div id="smallDonutChart" class="pie-chart-pf"></div>
+<div style="text-align: center; width: 160px;">Animals</div>
+<script>
+  var pieData = {
+    type : 'pie',
+    colors: {
+      Dogs: $.pfPaletteColors.red,
+      Cats: $.pfPaletteColors.blue,
+      Fish: $.pfPaletteColors.orange,
+      Hamsters: $.pfPaletteColors.green
+    },
+    columns: [
+      ['Dogs', 3],
+      ['Cats', 2],
+      ['Fish', 10],
+      ['Hamsters', 2]
+    ],
+    onclick: function (d, i) { console.log("onclick", d, i); },
+    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+  };
 
-        // Small Pie Chart
-        var pieChartSmallConfig = c3ChartDefaults.getDefaultPieConfig();
-        pieChartSmallConfig.bindto = '#smallPieChart';
-        pieChartSmallConfig.data = pieData;
-        pieChartSmallConfig.legend = {
-          show: true,
-          position: 'right'
-        };
-        pieChartSmallConfig.size = {
-          width: 250,
-          height: 115
-        };
+  var c3ChartDefaults = $().c3ChartDefaults();
+  var pieChartSmallConfig = c3ChartDefaults.getDefaultPieConfig();
+  pieChartSmallConfig.bindto = '#smallDonutChart';
+  pieChartSmallConfig.data = pieData;
+  pieChartSmallConfig.legend = {
+    show: true,
+    position: 'right'
+  };
+  pieChartSmallConfig.size = {
+    width: 250,
+    height: 115
+  };
 
-        var pieChartSmall = c3.generate(pieChartSmallConfig);
-      </script>
+  var pieChartSmall = c3.generate(pieChartSmallConfig);
+</script>
+
+  </div>
+</div>
 
     </div><!-- /container -->
   </body>

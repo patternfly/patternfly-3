@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <div id="{{ include.chart1 }}"></div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <div id="{{ include.chart2 }}"></div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <div id="{{ include.chart3 }}"></div>
+  </div>
+</div>
+<script>
+  var c3ChartDefaults = $().c3ChartDefaults();
+
+  var pieData = {
+    type : 'pie',
+    colors: {
+      Dogs: $.pfPaletteColors.red,
+      Cats: $.pfPaletteColors.blue,
+      Fish: $.pfPaletteColors.orange,
+      Hamsters: $.pfPaletteColors.green
+    },
+    columns: [
+      ['Dogs', 3],
+      ['Cats', 2],
+      ['Fish', 10],
+      ['Hamsters', 2]
+    ],
+    onclick: function (d, i) { console.log("onclick", d, i); },
+    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+  };
+
+  // Pie Chart without Legend
+  var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
+  pieChartConfig.bindto = '#{{ include.chart1 }}';
+  pieChartConfig.data = pieData;
+  var pieChartNoLegend = c3.generate(pieChartConfig);
+
+  // Right Legend
+  var pieChartRightConfig = c3ChartDefaults.getDefaultPieConfig();
+  pieChartRightConfig.bindto = '#{{ include.chart2 }}';
+  pieChartRightConfig.data = pieData;
+  pieChartRightConfig.legend = {
+    show: true,
+    position: 'right'
+  };
+  pieChartRightConfig.size = {
+    width: 251,
+    height: 161
+  };
+  var pieChartRightLegend = c3.generate(pieChartRightConfig);
+
+  // Pie Chart Bottom Legend
+  var pieChartBottomConfig = c3ChartDefaults.getDefaultPieConfig();
+  pieChartBottomConfig.bindto = '#{{ include.chart3 }}';
+  pieChartBottomConfig.data = pieData;
+  pieChartBottomConfig.legend = {
+    show: true,
+    position: 'bottom'
+  };
+  pieChartBottomConfig.size = {
+    width: 321,
+    height: 191
+  };
+  var pieChartBottomLegend = c3.generate(pieChartBottomConfig);
+</script>
