@@ -12,7 +12,7 @@
   ];
 
   var singleLineChartConfig = c3ChartDefaults.getDefaultSingleLineConfig();
-  singleLineChartConfig.bindto = '#singleLineChart';
+  singleLineChartConfig.bindto = '#{{ include.chart1 }}';
   singleLineChartConfig.data = {
     columns: singleLineChartDataColumns,
     type: 'line'
