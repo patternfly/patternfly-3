@@ -6,134 +6,17 @@ title: Donut Charts
 resource: true
 url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js']
 ---
-      <div style="width: 400px;">
-        <h2>Donut Chart - Utilization</h2>
-        <div>
-          <div id="utilizationDonutChart"></div>
-        </div>
-        <h2>Donut Chart - Relationship to a Whole</h2>
-        <div>
-          <div id="donut-chart-no-legend"></div>
-          <div id="donut-chart-right-legend"></div>
-          <div id="donut-chart-bottom-legend"></div>
-        </div>
-        <h2>Donut Chart - Small</h2>
-        <div>
-          <div id="smallDonutChart" class="donut-chart-pf"></div>
-          <div style="text-align: center; width: 160px;">Animals</div>
-        </div>
-      </div>
-      <script>
-
-        var c3ChartDefaults = $().c3ChartDefaults();
-
-        var donutData = {
-          type : 'donut',
-          colors: {
-            Cats: $.pfPaletteColors.blue,
-            Hamsters: $.pfPaletteColors.green,
-            Fish: $.pfPaletteColors.orange,
-            Dogs: $.pfPaletteColors.red
-          },
-          columns: [
-            ['Dogs', 2],
-            ['Cats', 2],
-            ['Fish', 3],
-            ['Hamsters', 1]
-          ],
-          onclick: function (d, i) { console.log("onclick", d, i); },
-          onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-        };
-
-        // Donut Chart - Utilization
-        var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
-        utilizationDonutChartConfig.bindto = '#utilizationDonutChart';
-        utilizationDonutChartConfig.data = {
-          type: "donut",
-          columns: [
-            ["Used", 60],
-            ["Available", 40]
-          ],
-          groups: [
-            ["used", "available"]
-          ],
-          order: null
-        };
-        utilizationDonutChartConfig.tooltip = {
-          contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
-        };
-        var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
-        $().pfSetDonutChartTitle("#utilizationDonutChart", "60", "MHz Used");
-
-        // Donut Chart without Legend
-        var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
-        donutChartConfig.bindto = '#donut-chart-no-legend';
-        donutChartConfig.tooltip = {show: true};
-        donutChartConfig.data = donutData;
-        donutChartConfig.tooltip = {
-          contents: $().pfDonutTooltipContents
-        };
-
-        var donutChartNoLegend = c3.generate(donutChartConfig);
-        $().pfSetDonutChartTitle("#donut-chart-no-legend", "8", "Animals");
-
-        // Donut Chart Bottom Legend
-        var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
-        donutChartBottomConfig.bindto = '#donut-chart-bottom-legend';
-        donutChartBottomConfig.tooltip = {show: true};
-        donutChartBottomConfig.data = donutData;
-        donutChartBottomConfig.legend = {
-          show: true,
-          position: 'bottom'
-        };
-        donutChartBottomConfig.size = {
-          width: 271,
-          height: 191
-        };
-        donutChartBottomConfig.tooltip = {
-          contents: $().pfDonutTooltipContents
-        };
-
-        var donutChartBottomLegend = c3.generate(donutChartBottomConfig);
-        $().pfSetDonutChartTitle("#donut-chart-bottom-legend", "8", "Animals");
-
-        // Right Legend
-        var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
-        donutChartRightConfig.bindto = '#donut-chart-right-legend';
-        donutChartRightConfig.tooltip = {show: true};
-        donutChartRightConfig.data = donutData;
-        donutChartRightConfig.legend = {
-          show: true,
-          position: 'right'
-        };
-        donutChartRightConfig.size = {
-          width: 251,
-          height: 171
-        };
-        donutChartRightConfig.tooltip = {
-          contents: $().pfDonutTooltipContents
-        };
-
-        var donutChartRightLegend = c3.generate(donutChartRightConfig);
-        $().pfSetDonutChartTitle("#donut-chart-right-legend", "8", "Animals");
-
-        // Small Donut Chart
-        var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
-        donutChartSmallConfig.bindto = '#smallDonutChart';
-        donutChartSmallConfig.tooltip = {show: true};
-        donutChartSmallConfig.data = donutData;
-        donutChartSmallConfig.legend = {
-          show: true,
-          position: 'right'
-        };
-        donutChartSmallConfig.size = {
-          width: 250,
-          height: 95
-        };
-        donutChartSmallConfig.tooltip = {
-          contents: $().pfDonutTooltipContents
-        };
-
-        var donutChartSmall = c3.generate(donutChartSmallConfig);
-      </script>
+<div>
+  <h2>Donut Chart - Utilization</h2>
+  <div style="width: 220px;">
+    {% include widgets/charts/donut-utilization.html chart1="utilizationDonutChart" %}
+  </div>
+  <h2>Donut Chart - Relationship to a Whole</h2>
+  <div style="width: 700px;">
+    {% include widgets/charts/donut-whole-relationship.html chart1="donut-chart-no-legend" chart2="donut-chart-right-legend" chart3="donut-chart-bottom-legend" %}
+  </div>
+  <h2>Donut Chart - Small</h2>
+  <div>
+    {% include widgets/charts/donut-mini.html chart1="smallDonutChart" %}
+  </div>
+</div>

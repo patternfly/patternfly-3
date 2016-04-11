@@ -1,0 +1,23 @@
+<div id="{{ include.chart1 }}"></div>
+<script>
+  var c3ChartDefaults = $().c3ChartDefaults();
+  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
+  utilizationDonutChartConfig.bindto = '#{{ include.chart1 }}';
+  utilizationDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 60],
+      ["Available", 40]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+
+  utilizationDonutChartConfig.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+  var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
+  $().pfSetDonutChartTitle("#{{ include.chart1 }}", "60", "MHz Used");
+</script>
