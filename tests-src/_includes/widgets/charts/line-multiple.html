@@ -13,7 +13,7 @@
 
   var c3ChartDefaults = $().c3ChartDefaults();
   var lineChartConfig = c3ChartDefaults.getDefaultLineConfig();
-  lineChartConfig.bindto = '#lineChart';
+  lineChartConfig.bindto = '#{{ include.chart1 }}';
   lineChartConfig.data = {
     columns: lineChartDataColumns,
     type: 'line'
