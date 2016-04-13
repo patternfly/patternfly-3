@@ -1,9 +1,9 @@
-<div id="{{ include.chart1 }}" class="chart-pf-sparkline"></div>
+<div id="{{include.id}}" class="chart-pf-sparkline"></div>
 <div>Less than one year remaining</div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
   var sparklineChartConfig = c3ChartDefaults.getDefaultSparklineConfig();
-  sparklineChartConfig.bindto = '#{{ include.chart1 }}';
+  sparklineChartConfig.bindto = '#{{include.id}}';
   sparklineChartConfig.data = {
     columns: [
       ['%', 10, 14, 12, 20, 31, 27, 44, 36, 52, 55, 62, 68, 69, 88, 74, 88, 91],
