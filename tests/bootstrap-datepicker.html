@@ -45,13 +45,40 @@
       <h2>Readonly Inputs</h2>
       <p><span class="text-success">Recommended.</span>  To prevent invalid dates, setting the inputs to readonly only allows a date to be input via the date picker widget.</p>
       <h3>Text Input</h3>
-      <input type="text" class="form-control bootstrap-datepicker" readonly>
+        <input id="datepicker1" type="text" class="form-control bootstrap-datepicker" readonly>
+<script>
+  $('#datepicker1').datepicker({
+    autoclose: true,
+    orientation: "top auto",
+    todayBtn: "linked",
+    todayHighlight: true
+  });
+</script>
+
       <h3>Component</h3>
-      <div class="input-group date">
-        <input type="text" class="form-control bootstrap-datepicker" readonly><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-      </div>
+        <div id="datepicker2" class="input-group date">
+  <input type="text" class="form-control bootstrap-datepicker" readonly><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+</div>
+<script>
+  $('#datepicker2').datepicker({
+    autoclose: true,
+    orientation: "top auto",
+    todayBtn: "linked",
+    todayHighlight: true
+  });
+</script>
+
       <h3>Inline</h3>
-      <div class="bootstrap-datepicker-inline"></div>
+        <div id="datepicker3" class="bootstrap-datepicker-inline"></div>
+<script>
+  $('#datepicker3').datepicker({
+    autoclose: true,
+    orientation: "top auto",
+    todayBtn: "linked",
+    todayHighlight: true
+  });
+</script>
+
       <h3>Range <small>Do not use.  PatternFly-approved design coming in a future update.</small></h3>
       <div class="input-daterange input-group">
         <input type="text" class="form-control bootstrap-datepicker" name="start" readonly>
@@ -115,6 +142,7 @@
           todayHighlight: true
         });
       </script>
+
     </div><!-- /container -->
   </body>
 </html>

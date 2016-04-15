@@ -46,28 +46,30 @@
 <h3>Component</h3>
 <div class="row">
   <div class="col-lg-4 col-md-5 col-sm-6">
-    <div class="input-group time-picker-pf" id="datetimepicker3">
-      <input type="text" class="form-control">
+    <div class="input-group time-picker-pf" id="timepicker1">
+  <input type="text" class="form-control">
       <span class="input-group-addon btn btn-default">
         <span class="fa fa-clock-o"></span>
       </span>
-    </div>
-    <script>
-      $(function () {
-        $('#datetimepicker3').datetimepicker({
-          format: 'LT',
-          keyBinds: {
-            enter: function () {
-              $('#datetimepicker3').find('input').trigger('change');
-              this.hide();
-            }
-          }
-        });
-        $('#datetimepicker3').data('DateTimePicker').clear();
-      });
-    </script>
+</div>
+<script>
+  $(function () {
+    $('#timepicker1').datetimepicker({
+      format: 'LT',
+      keyBinds: {
+        enter: function () {
+          $('#timepicker1').find('input').trigger('change');
+          this.hide();
+        }
+      }
+    });
+    $('#timepicker1').data('DateTimePicker').clear();
+  });
+</script>
+
   </div>
 </div>
+
     </div><!-- /container -->
   </body>
 </html>

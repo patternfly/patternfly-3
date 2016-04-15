@@ -1,4 +1,4 @@
-<div id="{{ include.chart1 }}" class="donut-chart-pf"></div>
+<div id="{{include.id}}" class="donut-chart-pf"></div>
 <div style="text-align: center; width: 160px;">Animals</div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
@@ -24,7 +24,7 @@
 
   // Small Donut Chart
   var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
-  donutChartSmallConfig.bindto = '#{{ include.chart1 }}';
+  donutChartSmallConfig.bindto = '#{{include.id}}';
   donutChartSmallConfig.tooltip = {show: true};
   donutChartSmallConfig.data = donutData;
   donutChartSmallConfig.legend = {

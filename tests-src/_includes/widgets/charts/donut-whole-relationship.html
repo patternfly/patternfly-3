@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="{{ include.chart1 }}"></div>
+    <div id="{{include.id1}}"></div>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="{{ include.chart2 }}"></div>
+    <div id="{{include.id2}}"></div>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="{{ include.chart3 }}"></div>
+    <div id="{{include.id3}}"></div>
   </div>
 </div>
 <script>
@@ -33,7 +33,7 @@
 
   // Donut Chart without Legend
   var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartConfig.bindto = '#{{ include.chart1 }}';
+  donutChartConfig.bindto = '#{{include.id1}}';
   donutChartConfig.tooltip = {show: true};
   donutChartConfig.data = donutData;
   donutChartConfig.tooltip = {
@@ -41,11 +41,11 @@
   };
 
   var donutChartNoLegend = c3.generate(donutChartConfig);
-  $().pfSetDonutChartTitle("#{{ include.chart1 }}", "8", "Animals");
+  $().pfSetDonutChartTitle("#{{include.id1}}", "8", "Animals");
 
   // Right Legend
   var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartRightConfig.bindto = '#{{ include.chart2 }}';
+  donutChartRightConfig.bindto = '#{{include.id2}}';
   donutChartRightConfig.tooltip = {show: true};
   donutChartRightConfig.data = donutData;
   donutChartRightConfig.legend = {
@@ -61,11 +61,11 @@
   };
 
   var donutChartRightLegend = c3.generate(donutChartRightConfig);
-  $().pfSetDonutChartTitle("#{{ include.chart2 }}", "8", "Animals");
+  $().pfSetDonutChartTitle("#{{include.id2}}", "8", "Animals");
 
   // Donut Chart Bottom Legend
   var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartBottomConfig.bindto = '#{{ include.chart3 }}';
+  donutChartBottomConfig.bindto = '#{{include.id3}}';
   donutChartBottomConfig.tooltip = {show: true};
   donutChartBottomConfig.data = donutData;
   donutChartBottomConfig.legend = {
@@ -81,5 +81,5 @@
   };
 
   var donutChartBottomLegend = c3.generate(donutChartBottomConfig);
-  $().pfSetDonutChartTitle("#{{ include.chart3 }}", "8", "Animals");
+  $().pfSetDonutChartTitle("#{{include.id3}}", "8", "Animals");
 </script>

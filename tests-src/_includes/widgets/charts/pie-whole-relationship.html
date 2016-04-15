@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="{{ include.chart1 }}"></div>
+    <div id="{{include.id1}}"></div>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="{{ include.chart2 }}"></div>
+    <div id="{{include.id2}}"></div>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="{{ include.chart3 }}"></div>
+    <div id="{{include.id3}}"></div>
   </div>
 </div>
 <script>
@@ -33,13 +33,13 @@
 
   // Pie Chart without Legend
   var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartConfig.bindto = '#{{ include.chart1 }}';
+  pieChartConfig.bindto = '#{{ include.id1 }}';
   pieChartConfig.data = pieData;
   var pieChartNoLegend = c3.generate(pieChartConfig);
 
   // Right Legend
   var pieChartRightConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartRightConfig.bindto = '#{{ include.chart2 }}';
+  pieChartRightConfig.bindto = '#{{include.id2}}';
   pieChartRightConfig.data = pieData;
   pieChartRightConfig.legend = {
     show: true,
@@ -53,7 +53,7 @@
 
   // Pie Chart Bottom Legend
   var pieChartBottomConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartBottomConfig.bindto = '#{{ include.chart3 }}';
+  pieChartBottomConfig.bindto = '#{{include.id3}}';
   pieChartBottomConfig.data = pieData;
   pieChartBottomConfig.legend = {
     show: true,

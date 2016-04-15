@@ -9,13 +9,11 @@ url-js-extra: '//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bo
       <h2>Readonly Inputs</h2>
       <p><span class="text-success">Recommended.</span>  To prevent invalid dates, setting the inputs to readonly only allows a date to be input via the date picker widget.</p>
       <h3>Text Input</h3>
-      <input type="text" class="form-control bootstrap-datepicker" readonly>
+        {% include widgets/forms/bootstrap-datepicker-text-input.html id="datepicker1" %}
       <h3>Component</h3>
-      <div class="input-group date">
-        <input type="text" class="form-control bootstrap-datepicker" readonly><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-      </div>
+        {% include widgets/forms/bootstrap-datepicker.html id="datepicker2" %}
       <h3>Inline</h3>
-      <div class="bootstrap-datepicker-inline"></div>
+        {% include widgets/forms/bootstrap-datepicker-inline.html id="datepicker3" %}
       <h3>Range <small>Do not use.  PatternFly-approved design coming in a future update.</small></h3>
       <div class="input-daterange input-group">
         <input type="text" class="form-control bootstrap-datepicker" name="start" readonly>

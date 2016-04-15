@@ -1,4 +1,4 @@
-<div id="{{ include.chart1 }}"></div>
+<div id="{{include.id}}"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -30,7 +30,7 @@
   };
 
   var groupedHorizontalBarChartConfig = $().c3ChartDefaults().getDefaultGroupedBarConfig();
-  groupedHorizontalBarChartConfig.bindto = '#{{ include.chart1 }}';
+  groupedHorizontalBarChartConfig.bindto = '#{{include.id}}';
   groupedHorizontalBarChartConfig.axis = {
     rotated: true,
     x: {

@@ -1,4 +1,4 @@
-<div id="{{ include.chart1 }}"></div>
+<div id="{{include.id}}"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -14,7 +14,7 @@
   ];
 
   var horizontalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
-  horizontalBarChartConfig.bindto = '#{{ include.chart1 }}';
+  horizontalBarChartConfig.bindto = '#{{include.id}}';
   horizontalBarChartConfig.axis = {
     rotated: true,
     x: {
