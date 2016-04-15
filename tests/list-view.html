@@ -146,16 +146,16 @@
         </div>
         <div class="list-view-pf-additional-info">
           <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
-              <span id="chart1"></span>
+              <span id="donut-chart-1"></span>
           </div>
           <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
-              <span id="chart2"></span>
+              <span id="donut-chart-2"></span>
           </div>
           <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
-              <span id="chart3"></span>
+              <span id="donut-chart-3"></span>
           </div>
           <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
-              <span id="chart4"></span>
+              <span id="donut-chart-4"></span>
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@
   var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('34%');
   customDonutChartConfig.size.height = 71;
   customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = '#chart1';
+  customDonutChartConfig.bindto = '#donut-chart-1';
   customDonutChartConfig.data = {
     type: "donut",
     columns: [
@@ -181,14 +181,14 @@
     order: null
   };
   c3.generate(customDonutChartConfig);
-  var donutChartTitle = d3.select("#chart1").select('text.c3-chart-arcs-title');
+  var donutChartTitle = d3.select("#donut-chart-1").select('text.c3-chart-arcs-title');
   donutChartTitle.text("");
   donutChartTitle.insert('tspan').text("34%").classed('list-view-donut-title', true);
 
   customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('21%');
   customDonutChartConfig.size.height = 71;
   customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = '#chart2';
+  customDonutChartConfig.bindto = '#donut-chart-2';
   customDonutChartConfig.data = {
     type: "donut",
     columns: [
@@ -201,14 +201,14 @@
     order: null
   };
   c3.generate(customDonutChartConfig);
-  donutChartTitle = d3.select("#chart2").select('text.c3-chart-arcs-title');
+  donutChartTitle = d3.select("#donut-chart-2").select('text.c3-chart-arcs-title');
   donutChartTitle.text("");
   donutChartTitle.insert('tspan').text("21%").classed('list-view-donut-title', true);
 
   customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('14%');
   customDonutChartConfig.size.height = 71;
   customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = '#chart3';
+  customDonutChartConfig.bindto = '#donut-chart-3';
   customDonutChartConfig.data = {
     type: "donut",
     columns: [
@@ -221,14 +221,14 @@
     order: null
   };
   c3.generate(customDonutChartConfig);
-  donutChartTitle = d3.select("#chart3").select('text.c3-chart-arcs-title');
+  donutChartTitle = d3.select("#donut-chart-3").select('text.c3-chart-arcs-title');
   donutChartTitle.text("");
   donutChartTitle.insert('tspan').text("14%").classed('list-view-donut-title', true);
 
   customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('25%');
   customDonutChartConfig.size.height = 71;
   customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = '#chart4';
+  customDonutChartConfig.bindto = '#donut-chart-4';
   customDonutChartConfig.data = {
     type: "donut",
     columns: [
@@ -241,7 +241,7 @@
     order: null
   };
   c3.generate(customDonutChartConfig);
-  donutChartTitle = d3.select("#chart4").select('text.c3-chart-arcs-title');
+  donutChartTitle = d3.select("#donut-chart-4").select('text.c3-chart-arcs-title');
   donutChartTitle.text("");
   donutChartTitle.insert('tspan').text("25%").classed('list-view-donut-title', true);
 </script>
