@@ -1,5 +1,13 @@
+<nav class="navbar navbar-pf-vertical">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
     <a href="/" class="navbar-brand">
-      {% if site.navbar-pf-alt-navbar-brand-icon %}<img class="navbar-brand-icon" src="../dist/img/logo-alt.svg" alt=""/>{% endif %}<img class="navbar-brand-name" src="../dist/img/brand-alt.svg" alt="{{ site.title-product }}" />
+      {% if site.navbar-pf-navbar-brand-icon %}<img class="navbar-brand-icon" src="{{site.navbar-brand-icon}}" alt=""/>{% endif %}<img class="navbar-brand-name" src="{{site.navbar-alt-brand-icon}}" alt="{{site.title-product}}" />
     </a>
   </div>
   <nav class="collapse navbar-collapse">
@@ -49,3 +57,4 @@
       </li>
     </ul>
   </nav>
+</nav> <!--/.navbar-->

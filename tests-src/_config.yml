@@ -4,6 +4,8 @@ category-list: [Widgets, Charts, Layouts, Alternate Layouts]
 company: PatternFly
 navbar-pf-navbar-brand-icon: true
 navbar-pf-alt-navbar-brand-icon: true
+navbar-brand-icon: '../dist/img/logo-alt.svg'
+navbar-alt-brand-icon: '../dist/img/brand-alt.svg'
 title: PatternFly
 title-product: 'PatternFly Enterprise Application'
 url-css-additions: '../dist/css/patternfly-additions.min.css'
