@@ -1,4 +1,4 @@
-{% include layouts-navbar-vertical.html %}
+{% include widgets/layouts/navbar-vertical.html %}
 {% if page.hide-icons %}
 <div class="nav-pf-vertical nav-pf-vertical-with-secondary-nav hidden-icons-pf">
 {% else %}
@@ -28,14 +28,14 @@
         <span class="pficon pficon-container-node"></span>
         <span class="list-group-item-value">Storage</span>
       </a>
-      {% include widgets/secondary-nav-storage.html %}
+{% include widgets/secondary-nav-storage.html %}
     </li>
     <li class="list-group-item persistent-secondary" data-target="#admin-secondary">
       <a href="#">
         <span class="fa fa-cog"></span>
         <span class="list-group-item-value">Admin</span>
       </a>
-      {% include widgets/secondary-nav-admin.html %}
+{% include widgets/secondary-nav-admin.html %}
     </li>
   </ul>
 </div>
