@@ -2825,9 +2825,7 @@ table.datatable thead .sorting_desc_disabled {
 }
 table.datatable thead .sorting_asc,
 table.datatable thead .sorting_desc {
-  border: 0;
   color: #0099d3 !important;
-  display: block;
   position: relative;
 }
 table.datatable thead .sorting_asc:after,
