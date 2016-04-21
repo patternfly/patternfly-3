@@ -36,42 +36,12 @@ resource: true
         This server is in the North West Datacenter.
       </div>
       <hr>
-      <div class="toast-pf alert alert-info">
-      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
-        <div class="pull-right toast-pf-action">
-          <a href="#">Reload Server</a>
-        </div>
-        <span class="pficon pficon-info"></span>
-        <strong>Great job!</strong> This is really working out.
-      </div>
+{% include widgets/communication/toast-info.html %}
       <br>
-      <div class="toast-pf alert alert-success alert-dismissable">
-        {% include widgets/toast.html %}
-      </div>
+{% include widgets/communication/toast-success.html %}
       <br>
-      <div class="toast-pf alert alert-warning alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-          <span class="pficon pficon-close"></span>
-        </button>
-        <div class="pull-right toast-pf-action">
-          <a href="#">Reload Server</a>
-        </div>
-        <span class="pficon pficon-warning-triangle-o"></span>
-        The server configuration changed.
-      </div>
+{% include widgets/communication/toast-warning.html %}
       <br>
-      <div class="toast-pf alert alert-danger">
-        <span class="pficon pficon-error-circle-o"></span>
-        Failed to add <strong>server_abc</strong>.
-      </div>
+{% include widgets/communication/toast-danger.html %}
       <hr>
-      <div class="toast-pf toast-pf-max-width alert alert-warning alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-          <span class="pficon pficon-close"></span>
-        </button>
-        <div class="pull-right toast-pf-action">
-          <a href="#">Reload Server</a>
-        </div>
-        <span class="pficon pficon-warning-triangle-o"></span>
-        Max-width is set on this example.
-      </div>
+{% include widgets/communication/toast-max-width.html %}
