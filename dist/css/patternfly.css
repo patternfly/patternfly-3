@@ -1391,11 +1391,11 @@ a.text-warning:focus {
   color: #bb6106;
 }
 .text-danger {
-  color: #a94442;
+  color: #cc0000;
 }
 a.text-danger:hover,
 a.text-danger:focus {
-  color: #843534;
+  color: #990000;
 }
 .bg-primary {
   color: #fff;
@@ -2922,25 +2922,25 @@ select[multiple].input-lg {
 .has-error.checkbox label,
 .has-error.radio-inline label,
 .has-error.checkbox-inline label {
-  color: #a94442;
+  color: #cc0000;
 }
 .has-error .form-control {
-  border-color: #a94442;
+  border-color: #cc0000;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-error .form-control:focus {
-  border-color: #843534;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  border-color: #990000;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff3333;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff3333;
 }
 .has-error .input-group-addon {
-  color: #a94442;
-  border-color: #a94442;
+  color: #cc0000;
+  border-color: #cc0000;
   background-color: #f2dede;
 }
 .has-error .form-control-feedback {
-  color: #a94442;
+  color: #cc0000;
 }
 .has-feedback label ~ .form-control-feedback {
   top: 25px;
@@ -5450,12 +5450,12 @@ button.list-group-item-warning.active:focus {
   border-color: #ec7a08;
 }
 .list-group-item-danger {
-  color: #a94442;
+  color: #cc0000;
   background-color: #f2dede;
 }
 a.list-group-item-danger,
 button.list-group-item-danger {
-  color: #a94442;
+  color: #cc0000;
 }
 a.list-group-item-danger .list-group-item-heading,
 button.list-group-item-danger .list-group-item-heading {
@@ -5465,7 +5465,7 @@ a.list-group-item-danger:hover,
 button.list-group-item-danger:hover,
 a.list-group-item-danger:focus,
 button.list-group-item-danger:focus {
-  color: #a94442;
+  color: #cc0000;
   background-color: #ebcccc;
 }
 a.list-group-item-danger.active,
@@ -5475,8 +5475,8 @@ button.list-group-item-danger.active:hover,
 a.list-group-item-danger.active:focus,
 button.list-group-item-danger.active:focus {
   color: #fff;
-  background-color: #a94442;
-  border-color: #a94442;
+  background-color: #cc0000;
+  border-color: #cc0000;
 }
 .list-group-item-heading {
   margin-top: 0;
@@ -9334,13 +9334,27 @@ fieldset[disabled] .form-control {
   border-color: #7BB2DD;
 }
 .has-error .form-control:hover {
-  border-color: #843534;
+  border-color: #990000;
 }
 .has-success .form-control:hover {
   border-color: #2b542c;
 }
 .has-warning .form-control:hover {
   border-color: #bb6106;
+}
+.has-error .checkbox,
+.has-error .checkbox-inline,
+.has-error .control-label,
+.has-error .radio,
+.has-error .radio-inline,
+.has-error.checkbox label,
+.has-error.checkbox-inline label,
+.has-error.radio label,
+.has-error.radio-inline label {
+  color: #333333;
+}
+.help-block {
+  margin-bottom: 0px;
 }
 .input-group .input-group-btn .btn {
   -webkit-box-shadow: none;

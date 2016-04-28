@@ -1,15 +1,13 @@
 /* PatternFly additions to Bootstrap */
-@media (min-width: 768px) {
-  .form-search .combobox-container,
-  .form-inline .combobox-container {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: top;
-  }
-  .form-search .combobox-container .input-group-addon,
-  .form-inline .combobox-container .input-group-addon {
-    width: auto;
-  }
+.form-search .combobox-container,
+.form-inline .combobox-container {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: top;
+}
+.form-search .combobox-container .input-group-addon,
+.form-inline .combobox-container .input-group-addon {
+  width: auto;
 }
 .combobox-selected .caret {
   display: none;
@@ -2092,9 +2090,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border-color: #66afe9 !important;
 }
 .has-error .bootstrap-datepicker.form-control[readonly]:focus {
-  border-color: #843534;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  border-color: #990000;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff3333;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff3333;
 }
 .has-success .bootstrap-datepicker.form-control[readonly]:focus {
   border-color: #2b542c;
@@ -2110,7 +2108,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border-color: #7BB2DD !important;
 }
 .has-error .bootstrap-datepicker.form-control[readonly]:hover {
-  border-color: #843534 !important;
+  border-color: #990000 !important;
 }
 .has-success .bootstrap-datepicker.form-control[readonly]:hover {
   border-color: #2b542c !important;
@@ -2119,7 +2117,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border-color: #bb6106 !important;
 }
 .has-error .bootstrap-datepicker.form-control[readonly] {
-  border-color: #a94442 !important;
+  border-color: #cc0000 !important;
 }
 .has-success .bootstrap-datepicker.form-control[readonly] {
   border-color: #3c763d !important;
@@ -2212,12 +2210,12 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .has-error .bootstrap-select.btn-group .btn {
-  border-color: #a94442;
+  border-color: #cc0000;
 }
 .has-error .bootstrap-select.btn-group .btn:focus {
-  border-color: #843534;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  border-color: #990000;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff3333;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff3333;
 }
 .has-success .bootstrap-select.btn-group .btn {
   border-color: #3c763d;
