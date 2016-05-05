@@ -1,13 +1,15 @@
 /* PatternFly additions to Bootstrap */
-.form-search .combobox-container,
-.form-inline .combobox-container {
-  display: inline-block;
-  margin-bottom: 0;
-  vertical-align: top;
-}
-.form-search .combobox-container .input-group-addon,
-.form-inline .combobox-container .input-group-addon {
-  width: auto;
+@media (min-width: 768px) {
+  .form-search .combobox-container,
+  .form-inline .combobox-container {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+  }
+  .form-search .combobox-container .input-group-addon,
+  .form-inline .combobox-container .input-group-addon {
+    width: auto;
+  }
 }
 .combobox-selected .caret {
   display: none;

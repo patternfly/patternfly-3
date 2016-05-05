@@ -1,14 +1,6 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="{{include.id1}}"></div>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="{{include.id2}}"></div>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="{{include.id3}}"></div>
-  </div>
-</div>
+<div id="{{include.id1}}" class="example-pie-chart"></div>
+<div id="{{include.id2}}" class="example-pie-chart-right-legend"></div>
+<div id="{{include.id3}}" class="example-pie-chart-bottom-legend"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -35,6 +27,10 @@
   var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
   pieChartConfig.bindto = '#{{ include.id1 }}';
   pieChartConfig.data = pieData;
+  pieChartConfig.size = {
+    width: 200,
+    height: 171
+  };
   var pieChartNoLegend = c3.generate(pieChartConfig);
 
   // Right Legend

@@ -43,10 +43,31 @@
         These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a>, <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://c3js.org/">http://c3js.org/</a>
       </div>
       <hr>
+<style>
+  .example-donut-chart, .example-donut-chart-right-legend, .example-donut-chart-bottom-legend {
+    width: 440px;
+  }
+  .example-donut-chart {
+    margin-left: 10px;
+  }
+  .example-donut-chart-right-legend {
+    margin-left: 28px;
+  }
+  .example-donut-chart-bottom-legend {
+    margin-left: -25px;
+  }
+  .example-donut-chart-mini {
+    margin-left: 28px;
+  }
+  .example-donut-chart-utilization {
+    width: 220px;
+    margin-left: 10px;
+  }
+</style>
 <div>
   <h2>Donut Chart - Utilization</h2>
-  <div style="width: 220px;">
-    <div id="utilizationDonutChart"></div>
+  <div>
+    <div id="utilizationDonutChart" class="example-donut-chart-utilization"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
   var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
@@ -62,6 +83,10 @@
     ],
     order: null
   };
+  utilizationDonutChartConfig.size = {
+    width: 200,
+    height: 171
+  };
 
   utilizationDonutChartConfig.tooltip = {
     contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
@@ -72,18 +97,10 @@
 
   </div>
   <h2>Donut Chart - Relationship to a Whole</h2>
-  <div style="width: 700px;">
-    <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="donut-chart-no-legend"></div>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="donut-chart-right-legend"></div>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="donut-chart-bottom-legend"></div>
-  </div>
-</div>
+  <div>
+    <div id="donut-chart-no-legend" class="example-donut-chart"></div>
+<div id="donut-chart-right-legend" class="example-donut-chart-right-legend"></div>
+<div id="donut-chart-bottom-legend" class="example-donut-chart-bottom-legend"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -111,6 +128,10 @@
   donutChartConfig.bindto = '#donut-chart-no-legend';
   donutChartConfig.tooltip = {show: true};
   donutChartConfig.data = donutData;
+  donutChartConfig.size = {
+    width: 200,
+    height: 171
+  };
   donutChartConfig.tooltip = {
     contents: $().pfDonutTooltipContents
   };
@@ -162,8 +183,8 @@
   </div>
   <h2>Donut Chart - Small</h2>
   <div>
-    <div id="smallDonutChart" class="donut-chart-pf"></div>
-<div style="text-align: center; width: 160px;">Animals</div>
+    <div id="smallDonutChart" class="donut-chart-pf example-donut-chart-mini"></div>
+<div style="text-align: center; width: 220px;">Animals</div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 

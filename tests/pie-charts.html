@@ -43,20 +43,33 @@
         These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a>, <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://c3js.org/">http://c3js.org/</a>
       </div>
       <hr>
+<style>
+  .example-pie-chart, .example-pie-chart-right-legend, .example-pie-chart-bottom-legend {
+    width: 440px;
+  }
+
+  .example-pie-chart {
+    margin-left: 10px;
+  }
+
+  .example-pie-chart-right-legend {
+    margin-left: 27px;
+  }
+
+  .example-pie-chart-bottom-legend {
+    margin-left: -50px;
+  }
+
+  .example-pie-chart-mini {
+    margin-left: 23px;
+  }
+</style>
 <div>
   <h2>Donut Chart - Relationship to a Whole</h2>
-  <div style="width: 700px;">
-    <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="donut-chart-no-legend"></div>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="donut-chart-right-legend"></div>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-4">
-    <div id="donut-chart-bottom-legend"></div>
-  </div>
-</div>
+  <div>
+    <div id="donut-chart-no-legend" class="example-pie-chart"></div>
+<div id="donut-chart-right-legend" class="example-pie-chart-right-legend"></div>
+<div id="donut-chart-bottom-legend" class="example-pie-chart-bottom-legend"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -83,6 +96,10 @@
   var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
   pieChartConfig.bindto = '#donut-chart-no-legend';
   pieChartConfig.data = pieData;
+  pieChartConfig.size = {
+    width: 200,
+    height: 171
+  };
   var pieChartNoLegend = c3.generate(pieChartConfig);
 
   // Right Legend
@@ -117,8 +134,8 @@
   </div>
   <h2>Pie Chart - Small</h2>
   <div>
-    <div id="smallDonutChart" class="pie-chart-pf"></div>
-<div style="text-align: center; width: 160px;">Animals</div>
+    <div id="smallDonutChart" class="pie-chart-pf example-pie-chart-mini"></div>
+<div style="text-align: center; width: 220px;">Animals</div>
 <script>
   var pieData = {
     type : 'pie',
