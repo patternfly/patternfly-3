@@ -1,4 +1,4 @@
-<div id="{{include.id}}"></div>
+<div id="{{include.id}}" class="example-donut-chart-utilization"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
   var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
@@ -13,6 +13,10 @@
       ["used", "available"]
     ],
     order: null
+  };
+  utilizationDonutChartConfig.size = {
+    width: 200,
+    height: 171
   };
 
   utilizationDonutChartConfig.tooltip = {
