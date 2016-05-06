@@ -55,7 +55,7 @@ resource: true
         $('#messageArea').on("underCharsMaxLimitEvent", function( event, taId) {
           $('#postBtn').prop("disabled",false);
         });
-      </script></br>
+      </script><br>
       <h2>Basic Example</h2>
       <form role="form">
         <div class="form-group">
@@ -421,3 +421,25 @@ resource: true
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
       </form>
+      <h2>Sample form for documentation</h2>
+      <h3>In page</h3>
+      {% include widgets/forms/input-validation-form.html id-default="exampleInput" id-disabled="exampleInputDisabled" id-error="exampleInputError" %}
+      <h3>Inside a modal</h3>
+      <!--
+        Styles and example-pf div makes modal visible and posistion relative. It's intended for docs page.
+        *Do not use in production*
+      -->
+      <style>
+        .example-pf .modal{
+          position: relative;
+          top: auto;
+          right: auto;
+          bottom: auto;
+          left: auto;
+          z-index: 1;
+          display: block;
+        }
+      </style>
+      <div class="example-pf">
+        {% include widgets/forms/input-validation-modal.html id-default="modalInput" id-disabled="modalInputDisabled" id-error="modalInputError" %}
+      </div>

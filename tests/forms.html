@@ -92,7 +92,7 @@
         $('#messageArea').on("underCharsMaxLimitEvent", function( event, taId) {
           $('#postBtn').prop("disabled",false);
         });
-      </script></br>
+      </script><br>
       <h2>Basic Example</h2>
       <form role="form">
         <div class="form-group">
@@ -458,6 +458,101 @@
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
       </form>
+      <h2>Sample form for documentation</h2>
+      <h3>In page</h3>
+      
+<div class="alert alert-danger">
+  <span class="pficon pficon-error-circle-o"></span>
+  <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should <a href="#" class="alert-link">know about it</a>.
+</div>
+
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="exampleInput">Default</label>
+    <div class="col-sm-10">
+      <input type="text" id="exampleInput" class="form-control"></div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="exampleInputDisabled">Disabled</label>
+    <div class="col-sm-10">
+      <input type="text" id="exampleInputDisabled" class="form-control" disabled></div>
+  </div>
+  <div class="form-group has-error">
+    <label class="col-sm-2 control-label" for="exampleInputError">With error</label>
+    <div class="col-sm-10">
+      <input type="text" id="exampleInputError" class="form-control">
+      <span class="help-block">Please correct the error</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Primary Action</button>
+      <button type="submit" class="btn btn-default">Secondary Action</button>
+    </div>
+  </div>
+</form>
+
+      <h3>Inside a modal</h3>
+      <!--
+        Styles and example-pf div makes modal visible and posistion relative. It's intended for docs page.
+        *Do not use in production*
+      -->
+      <style>
+        .example-pf .modal{
+          position: relative;
+          top: auto;
+          right: auto;
+          bottom: auto;
+          left: auto;
+          z-index: 1;
+          display: block;
+        }
+      </style>
+      <div class="example-pf">
+        
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger">
+  <span class="pficon pficon-error-circle-o"></span>
+  <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should <a href="#" class="alert-link">know about it</a>.
+</div>
+
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="modalInput">Default</label>
+            <div class="col-sm-10">
+              <input type="text" id="modalInput" class="form-control"></div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="modalInputDisabled">Disabled</label>
+            <div class="col-sm-10">
+              <input type="text" id="modalInputDisabled" class="form-control" disabled></div>
+          </div>
+          <div class="form-group has-error">
+            <label class="col-sm-2 control-label" for="modalInputError">With error</label>
+            <div class="col-sm-10">
+              <input type="text" id="modalInputError" class="form-control">
+              <span class="help-block">Please correct the error</span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+      </div>
 
     </div><!-- /container -->
   </body>
