@@ -2910,6 +2910,9 @@ table.datatable th:active {
 .pficon-builder-image:before {
   content: "\e800";
 }
+.pficon-blueprint:before {
+  content: "\e915";
+}
 .pficon-close:before {
   content: "\e60b";
 }
@@ -2988,6 +2991,9 @@ table.datatable th:active {
 .pficon-print:before {
   content: "\e612";
 }
+.pficon-private:before {
+  content: "\e914";
+}
 .pficon-project:before {
   content: "\e622";
 }
@@ -3039,6 +3045,9 @@ table.datatable th:active {
 }
 .pficon-storage-domain:before {
   content: "\e90e";
+}
+.pficon-tenant:before {
+  content: "\e916";
 }
 .pficon-thumb-tack-o:before {
   content: "\e609";
