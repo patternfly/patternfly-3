@@ -35,10 +35,13 @@
       font-weight: @btn-font-weight;
       &:before {
         content: "\f107";
+        display: inline-block;
         font-family: @icon-font-name-fa;
         font-size: 13px;
         margin-right: 5px;
+        text-align: center;
         vertical-align: 0;
+        width: 8px;
       }
       &:focus {
         outline: none;
@@ -49,8 +52,6 @@
       }
       &.collapsed:before {
         content: "\f105";
-        margin-left: 4px;
-        margin-right: 7px;
       }
     }
   }

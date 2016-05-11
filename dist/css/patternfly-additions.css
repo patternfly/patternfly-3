@@ -4602,6 +4602,119 @@ table.datatable th:active {
   margin-left: -20px;
   margin-right: -20px;
 }
+.drawer-pf {
+  background-color: #fafafa;
+  border: 1px solid #d1d1d1;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  width: 320px;
+}
+.drawer-pf .panel {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+.drawer-pf .panel-group .panel-heading + .panel-collapse .panel-body {
+  border-top: none;
+  padding: 0;
+}
+.drawer-pf .panel-counter {
+  display: block;
+  font-style: italic;
+  line-height: 1.2;
+  padding-left: 18px;
+  padding-top: 5px;
+}
+.drawer-pf .panel-heading {
+  border-bottom: 1px solid #d1d1d1;
+}
+.drawer-pf .panel-group {
+  bottom: 52px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 25px;
+  width: 100%;
+}
+.drawer-pf .panel-title a {
+  display: block;
+}
+.drawer-pf-action {
+  border-top: 1px solid #d1d1d1;
+  bottom: 21px;
+  background-image: -webkit-linear-gradient(top, #fafafa 0%, #ededed 100%);
+  background-image: -o-linear-gradient(top, #fafafa 0%, #ededed 100%);
+  background-image: linear-gradient(to bottom, #fafafa 0%, #ededed 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffededed', GradientType=0);
+  position: fixed;
+}
+.drawer-pf-action .btn {
+  padding: 15px 0;
+  width: 318px;
+}
+.drawer-pf-loading {
+  color: #4d5258;
+  font-size: 14px;
+  padding: 20px 15px;
+}
+.drawer-pf-notification {
+  border-bottom: 1px solid #d1d1d1;
+  padding: 15px;
+}
+.drawer-pf-notification .date {
+  border-right: 1px solid #aaa;
+  display: inline-block;
+  line-height: 1;
+  margin-right: 5px;
+  padding-right: 9px;
+}
+.drawer-pf-notification .pficon {
+  font-size: 14px;
+  margin-top: 3px;
+}
+.drawer-pf-notification:hover {
+  background-color: #def3ff;
+}
+.drawer-pf-notification.unread .drawer-pf-notification-message {
+  font-weight: bold;
+}
+.drawer-pf-notification-info,
+.drawer-pf-notification-message {
+  display: block;
+  padding-left: 27px;
+  padding-right: 19px;
+}
+.drawer-pf-notifications-non-clickable .drawer-pf-notification:hover {
+  background-color: #fff;
+}
+.drawer-pf-title {
+  background-color: #fafafa;
+  border-bottom: 1px solid #d1d1d1;
+  position: fixed;
+  width: 318px;
+}
+.drawer-pf-title h3 {
+  font-size: 12px;
+  margin: 0;
+  padding: 6px 15px;
+}
+/* Exclusive styles to work with Vertical Navigation */
+.navbar-pf-vertical .drawer-pf {
+  height: calc(100vh - 80px);
+  top: 58px;
+}
+.navbar-pf-vertical .nav .drawer-pf-trigger .drawer-pf-trigger-icon {
+  border-left: 1px solid #2b2b2b;
+  border-right: 1px solid #2b2b2b;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.navbar-pf-vertical .nav .drawer-pf-trigger.open .drawer-pf-trigger-icon {
+  background-color: #232323;
+}
 .search-pf.has-button {
   border-collapse: separate;
   display: table;
