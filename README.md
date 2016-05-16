@@ -19,6 +19,7 @@ Are you using [Wiredep](https://github.com/taptapship/wiredep)?  PatternFly's CS
 
 ```
 exclude: [
+  "bower_components/bootstrap-combobox/css/bootstrap-combobox.css",
   "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css",
   "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css",
   "bower_components/bootstrap-select/dist/css/bootstrap-select.css",
@@ -120,7 +121,7 @@ This task will compile and minify the lesscss files into CSS files located at `d
 
 ### PatternFlyIcons Font
 
-PatternFlyIcons font is generated using [IcoMoon](http://icomoon.io/app). Go to [manage projects](https://icomoon.io/app/#/projects) and import the project `PatternFlyIcons-webfont.json`. Load it and update as necessary. When finished, return to manage projects, and download the updated `PatternFlyIcons-webfont.json` file. Also generate the fonts. Please commit the updated `PatternFlyIcons-webfont.json` file, the updated font files and supporting LESS/CSS changes. 
+PatternFlyIcons font is generated using [IcoMoon](http://icomoon.io/app). Go to [manage projects](https://icomoon.io/app/#/projects) and import the project `PatternFlyIcons-webfont.json`. Load it and update as necessary. When finished, return to manage projects, and download the updated `PatternFlyIcons-webfont.json` file. Also generate the fonts. Please commit the updated `PatternFlyIcons-webfont.json` file, the updated font files and supporting LESS/CSS changes.
 For detailed instructions, please see our [PatternFly Icon Guide](PFICONS.md)
 
 ## Tests
