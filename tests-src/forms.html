@@ -423,7 +423,7 @@ resource: true
       </form>
       <h2>Sample form for documentation</h2>
       <h3>In page</h3>
-      {% include widgets/forms/input-validation-form.html id-default="exampleInput" id-disabled="exampleInputDisabled" id-error="exampleInputError" %}
+        {% include widgets/forms/input-validation-form.html id-default="exampleInput" id-disabled="exampleInputDisabled" id-error="exampleInputError" has-error=true %}
       <h3>Inside a modal</h3>
       <!--
         Styles and example-pf div makes modal visible and posistion relative. It's intended for docs page.
@@ -441,5 +441,5 @@ resource: true
         }
       </style>
       <div class="example-pf">
-        {% include widgets/forms/input-validation-modal.html id-default="modalInput" id-disabled="modalInputDisabled" id-error="modalInputError" %}
+        {% include widgets/forms/input-validation-modal.html id-default="modalInput" id-disabled="modalInputDisabled" id-error="modalInputError" has-error=true %}
       </div>
