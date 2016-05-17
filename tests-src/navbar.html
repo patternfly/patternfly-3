@@ -7,8 +7,6 @@ resource: true
 url-js-extra: '//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js'
 ---
       <h2>Primary Navigation Bar</h2>
-      {% include widgets/navigation/horizontal-primary-nav-bar.html %}
-      <hr>
       <nav class="navbar navbar-default navbar-pf" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
@@ -76,7 +74,7 @@ url-js-extra: '//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootst
             <li>
               <a href="#">First Link</a>
             </li>
-            <li class="active">
+            <li>
               <a href="#">Another Link</a>
             </li>
             <li>
@@ -94,6 +92,8 @@ url-js-extra: '//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootst
           </ul>
         </div>
       </nav>
+      <hr>
+      {% include widgets/navigation/horizontal-primary-nav-bar.html %}
       <hr>
       <h2>Context Selector</h2>
       <nav class="navbar navbar-default navbar-pf" role="navigation">
