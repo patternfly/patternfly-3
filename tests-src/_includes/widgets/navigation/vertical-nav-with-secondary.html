@@ -1,9 +1,5 @@
 {% include widgets/layouts/navbar-vertical.html %}
-{% if page.hide-icons %}
-<div class="nav-pf-vertical nav-pf-vertical-with-secondary-nav hidden-icons-pf">
-{% else %}
-  <div class="nav-pf-vertical nav-pf-vertical-with-secondary-nav">
-{% endif %}
+<div class="nav-pf-vertical nav-pf-vertical-with-secondary-nav {% if page.hide-icons %}hidden-icons-pf{% endif %}">
   <ul class="list-group">
     <li class="list-group-item active">
       <a href="#">
@@ -28,14 +24,32 @@
         <span class="pficon pficon-container-node"></span>
         <span class="list-group-item-value">Storage</span>
       </a>
-{% include widgets/secondary-nav-storage.html %}
+      {% include widgets/secondary-nav-storage.html %}
     </li>
     <li class="list-group-item persistent-secondary" data-target="#admin-secondary">
       <a href="#">
         <span class="fa fa-cog"></span>
         <span class="list-group-item-value">Admin</span>
       </a>
-{% include widgets/secondary-nav-admin.html %}
+      {% include widgets/secondary-nav-admin.html %}
     </li>
   </ul>
 </div>
+<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical container-pf-nav-pf-vertical-with-secondary {% if page.hide-icons == true %}hidden-icons-pf{% endif %}">
+  {% include widgets/layouts/cards-alt.html %}
+</div>
+<script>
+  $(document).ready(function() {
+    // matchHeight the contents of each .card-pf and then the .card-pf itself
+    $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+
+    // initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // Initialize the vertical navigation
+    $().setupVerticalNavigation(true);
+  });
+</script>
