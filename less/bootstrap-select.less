@@ -18,7 +18,7 @@
       border-color: @state-danger-text;
       &:focus {
         border-color: darken(@state-danger-text, 10%);
-        @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@state-danger-text, 20%);
+        @shadow: inset 0 1px 1px fade(@color-pf-black, 7.5%), 0 0 6px lighten(@state-danger-text, 20%);
         .box-shadow(@shadow);
       }
     }
@@ -26,7 +26,7 @@
       border-color: @state-success-text;
       &:focus {
         border-color: darken(@state-success-text, 10%);
-        @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@state-success-text, 20%);
+        @shadow: inset 0 1px 1px fade(@color-pf-black, 7.5%), 0 0 6px lighten(@state-success-text, 20%);
         .box-shadow(@shadow);
       }
     }
@@ -34,7 +34,7 @@
       border-color: @state-warning-text;
       &:focus {
         border-color: darken(@state-warning-text, 10%);
-        @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@state-warning-text, 20%);
+        @shadow: inset 0 1px 1px fade(@color-pf-black, 7.5%), 0 0 6px lighten(@state-warning-text, 20%);
         .box-shadow(@shadow);
       }
     }
@@ -58,10 +58,9 @@
     > .selected > a {
       background-color: @dropdown-link-active-bg !important;
       border-color: @dropdown-link-active-border-color !important;
-      color: #fff !important;
+      color: @color-pf-white !important;
       small {
-        color: #70c8e7 !important;
-        color:rgba(225,255,255,0.5) !important;
+        color: fade(@color-pf-white, 50%) !important;
       }
     }
     .divider {
@@ -69,7 +68,7 @@
       margin: @dropdown-divider-margin !important;
     }
     dt {
-      color: #969696;
+      color: @color-pf-black-500;
       font-weight:normal;
       padding: 1px 10px;
     }
@@ -79,8 +78,7 @@
       }
       & a {
         &:active small {
-          color: #70c8e7 !important;
-          color:rgba(225,255,255,0.5) !important;
+          color: fade(@color-pf-white, 50%) !important;
         }
         &:hover,
         &:focus {

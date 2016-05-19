@@ -54,20 +54,20 @@
   &:focus {
     border-color: @color;
     outline: 0 !important;
-    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}");
+    .box-shadow(~"inset 0 1px 1px rgba(3, 3, 3, 0.075), 0 0 8px @{color-rgba}");
   }
 }
 
 // Gradients
 #gradient {
-  .striped(@color: rgba(0,0,0,.15); @angle: -45deg) {
+  .striped(@color: fade(@color-pf-black, 15%); @angle: -45deg) {
     background-image: -webkit-linear-gradient(@angle, @color 25%, @color 26%, transparent 27%, transparent 49%, @color 50%, @color 51%, transparent 52%, transparent 74%, @color 75%, @color 76%, transparent 77%);
     background-image: linear-gradient(@angle, @color 25%, @color 26%, transparent 27%, transparent 49%, @color 50%, @color 51%, transparent 52%, transparent 74%, @color 75%, @color 76%, transparent 77%);
   }
 }
 
 // Horizontal dividers
-.nav-divider(@color: #e5e5e5, @margin: 4px 1px) {
+.nav-divider(@color: @color-pf-black-200, @margin: 4px 1px) {
   background-color: @color;
   height: 1px;
   margin: @margin;

@@ -3,9 +3,9 @@
 // --------------------------------------------------
 
 .toolbar-pf {
-  background: #fff;
+  background: @color-pf-white;
   border-bottom: 1px solid @sidebar-pf-border-color;
-  box-shadow: 0 1px 0px rgba(0,0,0,0.045);
+  box-shadow: 0 1px 0px fade(@color-pf-black, 4.5%);
   padding-top: (@grid-gutter-width/4);
   .form-group {
     margin-bottom: (@grid-gutter-width/4);
@@ -96,7 +96,7 @@
   .label {
     font-size: (@font-size-base - 1);
     a {
-      color: #fff;
+      color: @color-pf-white;
       display: inline-block;
       margin-left: 5px;
     }
