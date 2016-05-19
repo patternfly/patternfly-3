@@ -9344,14 +9344,32 @@ fieldset[disabled] .form-control {
   border-color: #bb6106;
 }
 .has-error .checkbox,
+.has-success .checkbox,
+.has-warning .checkbox,
 .has-error .checkbox-inline,
+.has-success .checkbox-inline,
+.has-warning .checkbox-inline,
 .has-error .control-label,
+.has-success .control-label,
+.has-warning .control-label,
 .has-error .radio,
+.has-success .radio,
+.has-warning .radio,
 .has-error .radio-inline,
+.has-success .radio-inline,
+.has-warning .radio-inline,
 .has-error.checkbox label,
+.has-success.checkbox label,
+.has-warning.checkbox label,
 .has-error.checkbox-inline label,
+.has-success.checkbox-inline label,
+.has-warning.checkbox-inline label,
 .has-error.radio label,
-.has-error.radio-inline label {
+.has-success.radio label,
+.has-warning.radio label,
+.has-error.radio-inline label,
+.has-success.radio-inline label,
+.has-warning.radio-inline label {
   color: #363636;
 }
 .help-block {
