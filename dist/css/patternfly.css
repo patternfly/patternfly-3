@@ -9762,10 +9762,13 @@ fieldset[disabled] .pagination > li > span.active {
 }
 .panel-group .panel-title > a:before {
   content: "\f107";
+  display: inline-block;
   font-family: "FontAwesome";
   font-size: 13px;
   margin-right: 5px;
+  text-align: center;
   vertical-align: 0;
+  width: 8px;
 }
 .panel-group .panel-title > a:focus {
   outline: none;
@@ -9776,8 +9779,6 @@ fieldset[disabled] .pagination > li > span.active {
 }
 .panel-group .panel-title > a.collapsed:before {
   content: "\f105";
-  margin-left: 4px;
-  margin-right: 7px;
 }
 .popover {
   -webkit-box-shadow: 0 2px 2px rgba(3, 3, 3, 0.08);

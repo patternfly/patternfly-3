@@ -1,0 +1,116 @@
+//
+// Notifications Drawer
+// --------------------------------------------------
+
+
+.drawer-pf {
+  background-color: @color-pf-black-100;
+  border: 1px solid @card-pf-border-color;
+  .box-shadow(0 6px 12px rgba(0,0,0,.175));
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  width: 320px;
+  .panel {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }
+.panel-group .panel-heading+.panel-collapse .panel-body {
+    border-top: none;
+    padding: 0;
+  }
+  .panel-counter {
+    display: block;
+    font-style: italic;
+    line-height: 1.2;
+    padding-left: 18px;
+    padding-top: 5px;
+  }
+  .panel-heading { border-bottom: 1px solid @card-pf-border-color; }
+  .panel-group {
+    bottom: 52px; // Height of Mark All Read box.
+    margin-bottom: 0;
+    position: absolute;
+    top: 25px; // Height of Notifications Drawer box.
+    width: 100%;
+  }
+  .panel-title a { display: block; }
+}
+
+.drawer-pf-action {
+  border-top: 1px solid @card-pf-border-color;
+  bottom: 21px;
+  #gradient > .vertical(@btn-default-bg-img-start, @btn-default-bg-img-stop);
+  position: fixed;
+  .btn {
+    padding: 15px 0;
+    width: 318px;
+  }
+}
+
+.drawer-pf-loading {
+  color: @gray-pf;
+  font-size: (@font-size-base + 2);
+  padding: 20px 15px;
+}
+
+.drawer-pf-notification {
+  border-bottom: 1px solid @card-pf-border-color;
+  padding: 15px;
+  .date {
+    border-right: 1px solid #aaa;
+    display: inline-block;
+    line-height: 1;
+    margin-right: 5px;
+    padding-right: 9px;
+  }
+  .pficon {
+    font-size: @font-size-large;
+    margin-top: 3px;
+  }
+  &:hover { background-color: @color-pf-blue-50; }
+  &.unread .drawer-pf-notification-message { font-weight: bold; }
+}
+
+.drawer-pf-notification-info,
+.drawer-pf-notification-message {
+  display: block;
+  padding-left: 27px;
+  padding-right: 19px;
+}
+
+.drawer-pf-notifications-non-clickable .drawer-pf-notification:hover {
+  background-color: @color-pf-white;
+}
+
+.drawer-pf-title {
+  background-color: @color-pf-black-100;
+  border-bottom: 1px solid @card-pf-border-color;
+  position: fixed;
+  width: 318px;
+  h3 {
+    font-size: @font-size-base;
+    margin: 0;
+    padding: 6px 15px;
+  }
+}
+
+/* Exclusive styles to work with Vertical Navigation */
+.navbar-pf-vertical {
+  .drawer-pf {
+    height: calc(~"100vh - 80px");//to create a 20px offset bottom
+    top: 58px; //menu height;
+  }
+  .nav .drawer-pf-trigger {
+    .drawer-pf-trigger-icon {
+      border-left: 1px solid @navbar-pf-navbar-utility-border-color;
+      border-right: 1px solid @navbar-pf-navbar-utility-border-color;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &.open .drawer-pf-trigger-icon {
+      background-color: @navbar-pf-navbar-utility-hover-bg-color;
+    }
+  }
+}
