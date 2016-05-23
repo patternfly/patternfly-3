@@ -1,4 +1,4 @@
-<div class="list-group list-view-pf">
+<div class="list-group list-view-pf list-view-pf-equalized-column">
   <div class="list-group-item">
     <div class="list-view-pf-main-info">
       <div class="list-view-pf-left">
@@ -16,7 +16,7 @@
         <div class="list-view-pf-additional-info">
           <div class="list-view-pf-additional-info-item">
             <span class="pficon pficon-screen"></span>
-            <strong>8</strong> Hosts
+            <strong>108</strong> Hosts
           </div>
           <div class="list-view-pf-additional-info-item">
             <span class="pficon pficon-cluster"></span>
@@ -70,7 +70,7 @@
         <div class="list-view-pf-additional-info">
           <div class="list-view-pf-additional-info-item">
             <span class="pficon pficon-screen"></span>
-            <strong>8</strong> Hosts
+            <strong>108</strong> Hosts
           </div>
           <div class="list-view-pf-additional-info-item">
             <span class="pficon pficon-cluster"></span>
@@ -108,3 +108,12 @@
     </div>
   </div>
 </div>
+<script>
+  // Equalize column width
+  $(document).ready(function () {
+  	var widest = 0;
+  	$('.list-view-pf-equalized-column .list-view-pf-additional-info-item').each( function() {
+  		widest = $(this).width() > widest ? $(this).width() : widest;
+  	}).width(widest);
+  });
+</script>
