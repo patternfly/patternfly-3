@@ -9989,7 +9989,7 @@ td > .progress:first-child:last-child {
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
   background-color: #def3ff;
-  border-bottom-color: #def3ff;
+  border-bottom-color: #7dc3e8;
 }
 .table-treegrid span.indent {
   margin-left: 10px;
