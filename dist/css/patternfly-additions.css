@@ -2149,10 +2149,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .datepicker table tr th {
   border-radius: 1px;
 }
-.datepicker table tr td.active.active,
-.datepicker table tr td.active.active:hover,
-.datepicker table tr td.active.active.disabled,
-.datepicker table tr td.active.active.disabled:hover {
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover {
   background: #0088ce !important;
   color: #fff !important;
   text-shadow: none;
@@ -2170,10 +2170,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .datepicker table tr td span {
   border-radius: 1px;
 }
-.datepicker table tr td span.active.active,
-.datepicker table tr td span.active.active:hover,
-.datepicker table tr td span.active.active.disabled,
-.datepicker table tr td span.active.active.disabled:hover {
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover {
   background: #0088ce;
   text-shadow: none;
 }
@@ -4619,6 +4619,7 @@ table.datatable th:active {
 }
 .drawer-pf .panel-group .panel-heading + .panel-collapse .panel-body {
   border-top: none;
+  border-bottom: 1px solid #d1d1d1;
   padding: 0;
 }
 .drawer-pf .panel-counter {
@@ -4632,28 +4633,18 @@ table.datatable th:active {
   border-bottom: 1px solid #d1d1d1;
 }
 .drawer-pf .panel-group {
-  bottom: 52px;
+  bottom: 0;
   margin-bottom: 0;
   position: absolute;
   top: 25px;
   width: 100%;
 }
 .drawer-pf .panel-title a {
+  cursor: pointer;
   display: block;
 }
-.drawer-pf-action {
-  border-top: 1px solid #d1d1d1;
-  bottom: 21px;
-  background-image: -webkit-linear-gradient(top, #fafafa 0%, #ededed 100%);
-  background-image: -o-linear-gradient(top, #fafafa 0%, #ededed 100%);
-  background-image: linear-gradient(to bottom, #fafafa 0%, #ededed 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffededed', GradientType=0);
-  position: fixed;
-}
 .drawer-pf-action .btn {
-  padding: 15px 0;
-  width: 318px;
+  padding: 10px 0;
 }
 .drawer-pf-loading {
   color: #4d5258;
@@ -4674,6 +4665,9 @@ table.datatable th:active {
 .drawer-pf-notification .pficon {
   font-size: 14px;
   margin-top: 3px;
+}
+.drawer-pf-notification:last-of-type {
+  border-bottom: none;
 }
 .drawer-pf-notification:hover {
   background-color: #def3ff;

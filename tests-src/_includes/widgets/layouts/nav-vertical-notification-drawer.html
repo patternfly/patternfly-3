@@ -59,6 +59,9 @@
             <div class="panel-body">
               {% include widgets/notifications-drawer-notifications.html %}
             </div>
+            <div class="drawer-pf-action">
+              <button class="btn btn-link btn-block"">Mark All Read</button>
+            </div>
           </div>
         </div>
         <div class="panel panel-default">
@@ -79,6 +82,9 @@
                 <span class="spinner spinner-xs spinner-inline"></span> Loading More
               </div>
             </div>
+            <div class="drawer-pf-action">
+              <button class="btn btn-link btn-block"">Mark All Read</button>
+            </div>
           </div>
         </div>
         <div class="panel panel-default">
@@ -96,11 +102,11 @@
               {% include widgets/notifications-drawer-notifications.html %}
               {% include widgets/notifications-drawer-notifications.html %}
             </div>
+            <div class="drawer-pf-action">
+              <button class="btn btn-link btn-block"">Mark All Read</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="drawer-pf-action">
-        <button class="btn btn-link">Mark All Read</button>
       </div>
     </div>
   </nav>
@@ -114,16 +120,27 @@
       $(this).toggleClass('open');
       if ($drawer.hasClass('hide')) {
         $drawer.removeClass('hide');
-          $('#notification-drawer-accordion').initCollapseHeights();
+        setTimeout(function () {
+          if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+          }
+          // Special case for IE
+          if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+          }
+        }, 100);
       } else {
         $drawer.addClass('hide');
       }
     });
     // Mark All Read
-    $('.drawer-pf-action .btn').click(function() {
-      $('.drawer-pf').find('.unread').removeClass('unread');
+    $('.panel-collapse').each(function (index, panel) {
+      var $panel = $(panel);
+      $panel.on('click', '.drawer-pf-action .btn', function() {
+        $panel.find('.unread').removeClass('unread');
+      });
     });
 
-    $('#notification-drawer-accordion').initCollapseHeights();
+    $('#notification-drawer-accordion').initCollapseHeights('.panel-body');
   });
 </script>
