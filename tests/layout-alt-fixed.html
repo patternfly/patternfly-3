@@ -747,7 +747,7 @@
       var donutChartTitle = d3.select("#chart-pf-donut-4").select('text.c3-chart-arcs-title');
       donutChartTitle.text("");
       donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-      donutChartTitle.insert('tspan').text("Gpbs Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+      donutChartTitle.insert('tspan').text("Gbps Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
       var sparklineConfig = c3ChartDefaults.getDefaultSparklineConfig();
       sparklineConfig.bindto = '#chart-pf-sparkline-4';
