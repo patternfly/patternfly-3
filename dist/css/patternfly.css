@@ -9326,10 +9326,14 @@ fieldset[disabled] .btn-primary.active {
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
-  border-color: #d1d1d1 !important;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #8b8d8f;
+}
+.form-control[disabled]:hover,
+.form-control[readonly]:hover,
+fieldset[disabled] .form-control:hover {
+  border-color: #bbb;
 }
 .form-control:hover {
   border-color: #7dc3e8;
