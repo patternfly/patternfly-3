@@ -14,9 +14,11 @@
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
-    border-color: @input-border-disabled !important;
     .box-shadow(none);
     color: @color-pf-black-500;
+    &:hover {
+      border-color: @input-border;
+    }
   }
   &:hover {
     border-color: @input-border-hover;
