@@ -1370,10 +1370,10 @@ select.mobile-device {
   border-top-left-radius: 0px;
 }
 .bootstrap-switch.bootstrap-switch-focused {
-  border-color: #66afe9;
+  border-color: #0088ce;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 136, 206, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 136, 206, 0.6);
 }
 .bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label,
 .bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-off .bootstrap-switch-label {
@@ -2088,13 +2088,13 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   box-shadow: inset 0 1px 1px rgba(3, 3, 3, 0.075);
 }
 .bootstrap-datepicker.form-control[readonly]:focus {
-  border-color: #66afe9;
+  border-color: #0088ce;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 136, 206, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 136, 206, 0.6);
 }
 .bootstrap-datepicker.form-control[readonly]:focus {
-  border-color: #66afe9 !important;
+  border-color: #0088ce !important;
 }
 .has-error .bootstrap-datepicker.form-control[readonly]:focus {
   border-color: #990000;
@@ -2211,10 +2211,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   margin-top: -4px;
 }
 .bootstrap-select.btn-group .btn:focus {
-  border-color: #66afe9;
+  border-color: #0088ce;
   outline: 0 !important;
-  -webkit-box-shadow: inset 0 1px 1px rgba(3, 3, 3, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(3, 3, 3, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(3, 3, 3, 0.075), 0 0 8px rgba(0, 136, 206, 0.6);
+  box-shadow: inset 0 1px 1px rgba(3, 3, 3, 0.075), 0 0 8px rgba(0, 136, 206, 0.6);
 }
 .has-error .bootstrap-select.btn-group .btn {
   border-color: #cc0000;
@@ -3324,6 +3324,11 @@ table.datatable th:active {
 }
 .layout-pf-alt.layout-pf-alt-fixed-with-footer body {
   padding-bottom: 37px;
+}
+a.disabled {
+  color: #8b8d8f;
+  cursor: not-allowed;
+  text-decoration: none;
 }
 .list-view-pf .list-group-item {
   align-items: flex-start;
