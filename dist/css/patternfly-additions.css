@@ -3325,6 +3325,11 @@ table.datatable th:active {
 .layout-pf-alt.layout-pf-alt-fixed-with-footer body {
   padding-bottom: 37px;
 }
+a.disabled {
+  color: #8b8d8f;
+  cursor: not-allowed;
+  text-decoration: none;
+}
 .list-view-pf .list-group-item {
   align-items: flex-start;
   display: -ms-flexbox;
