@@ -89,14 +89,19 @@
         "sZeroRecords":
           "<p>Suggestions</p>" +
           "<ul>" +
-            "<li>Check the syntax of the search term.</li>" +
+            "<li>Check the javascript regular expression syntax of the search term.</li>" +
             "<li>Check that the correct menu option is chosen (token ID vs. user ID).</li>" +
-            "<li>Use wildcards (* to match zero or more characters or ? to match a single character).</li>" +
+            "<li>Use wildcards (* to match 0 or more characters, + to match 1 or more characters, ? to match 0 or 1 character).</li>" +
             "<li>Clear the search field, then click Search to return to the 20 most recent records.</li>" +
           "</ul>",
         "sSearch": ""
       },
-      "sPaginationType": "bootstrap_input"
+      "sPaginationType": "bootstrap_input",
+      "oSearch": {
+        "sSearch": "",
+        "bRegex": true,
+        "bSmart": false
+      }
     });
 
     /* Default class modification */
