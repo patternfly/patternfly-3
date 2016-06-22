@@ -4277,8 +4277,8 @@ a.disabled {
 .navbar-pf-alt .nav .nav-item-iconic:focus .fa,
 .navbar-pf-alt .nav .nav-item-iconic:hover .glyphicon,
 .navbar-pf-alt .nav .nav-item-iconic:focus .glyphicon,
-.navbar-pf-alt .nav .nav-item-iconic:hover .pf-icon,
-.navbar-pf-alt .nav .nav-item-iconic:focus .pf-icon {
+.navbar-pf-alt .nav .nav-item-iconic:hover .pficon,
+.navbar-pf-alt .nav .nav-item-iconic:focus .pficon {
   color: #fff;
 }
 .navbar-pf-alt .nav .nav-item-iconic .badge {
@@ -4294,7 +4294,7 @@ a.disabled {
 }
 .navbar-pf-alt .nav .nav-item-iconic .caret,
 .navbar-pf-alt .nav .nav-item-iconic .fa,
-.navbar-pf-alt .nav .nav-item-iconic .pf-icon {
+.navbar-pf-alt .nav .nav-item-iconic .pficon {
   color: #d1d1d1;
   font-size: 16px;
 }
@@ -4313,9 +4313,9 @@ a.disabled {
 .navbar-pf-alt .nav .open > .nav-item-iconic .fa,
 .navbar-pf-alt .nav .open > .nav-item-iconic:hover .fa,
 .navbar-pf-alt .nav .open > .nav-item-iconic:focus .fa,
-.navbar-pf-alt .nav .open > .nav-item-iconic .pf-icon,
-.navbar-pf-alt .nav .open > .nav-item-iconic:hover .pf-icon,
-.navbar-pf-alt .nav .open > .nav-item-iconic:focus .pf-icon {
+.navbar-pf-alt .nav .open > .nav-item-iconic .pficon,
+.navbar-pf-alt .nav .open > .nav-item-iconic:hover .pficon,
+.navbar-pf-alt .nav .open > .nav-item-iconic:focus .pficon {
   color: #fff;
 }
 .navbar-pf-alt .navbar-brand {
@@ -4394,8 +4394,8 @@ a.disabled {
 .navbar-pf-vertical .nav .nav-item-iconic:focus .fa,
 .navbar-pf-vertical .nav .nav-item-iconic:hover .glyphicon,
 .navbar-pf-vertical .nav .nav-item-iconic:focus .glyphicon,
-.navbar-pf-vertical .nav .nav-item-iconic:hover .pf-icon,
-.navbar-pf-vertical .nav .nav-item-iconic:focus .pf-icon {
+.navbar-pf-vertical .nav .nav-item-iconic:hover .pficon,
+.navbar-pf-vertical .nav .nav-item-iconic:focus .pficon {
   color: #fff;
 }
 .navbar-pf-vertical .nav .nav-item-iconic .badge {
@@ -4411,7 +4411,7 @@ a.disabled {
 }
 .navbar-pf-vertical .nav .nav-item-iconic .caret,
 .navbar-pf-vertical .nav .nav-item-iconic .fa,
-.navbar-pf-vertical .nav .nav-item-iconic .pf-icon {
+.navbar-pf-vertical .nav .nav-item-iconic .pficon {
   color: #d1d1d1;
   font-size: 16px;
 }
@@ -4430,9 +4430,9 @@ a.disabled {
 .navbar-pf-vertical .nav .open > .nav-item-iconic .fa,
 .navbar-pf-vertical .nav .open > .nav-item-iconic:hover .fa,
 .navbar-pf-vertical .nav .open > .nav-item-iconic:focus .fa,
-.navbar-pf-vertical .nav .open > .nav-item-iconic .pf-icon,
-.navbar-pf-vertical .nav .open > .nav-item-iconic:hover .pf-icon,
-.navbar-pf-vertical .nav .open > .nav-item-iconic:focus .pf-icon {
+.navbar-pf-vertical .nav .open > .nav-item-iconic .pficon,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:hover .pficon,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:focus .pficon {
   color: #fff;
 }
 .navbar-pf-vertical .navbar-brand {
