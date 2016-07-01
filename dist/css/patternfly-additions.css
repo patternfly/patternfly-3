@@ -4258,8 +4258,8 @@ a.disabled {
     left: auto;
     right: 100%;
   }
-  .navbar-pf .open .dropdown-menu {
-    border-top-width: 0 !important;
+  .navbar-pf .navbar-utility .open .dropdown-menu {
+    border-top-width: 0;
   }
   .navbar-pf .open.bootstrap-select .dropdown-menu,
   .navbar-pf .open .dropdown-submenu > .dropdown-menu {
@@ -4658,6 +4658,7 @@ a.disabled {
   position: absolute;
   right: 0;
   width: 320px;
+  z-index: 2;
 }
 .drawer-pf .panel {
   border-bottom: none;
@@ -4690,8 +4691,12 @@ a.disabled {
   cursor: pointer;
   display: block;
 }
-.drawer-pf-action .btn {
+.drawer-pf-action .btn-link {
+  color: #0088ce;
   padding: 10px 0;
+}
+.drawer-pf-action .btn-link:hover {
+  color: #00659c;
 }
 .drawer-pf-loading {
   color: #4d5258;
@@ -4734,7 +4739,7 @@ a.disabled {
 .drawer-pf-title {
   background-color: #fafafa;
   border-bottom: 1px solid #d1d1d1;
-  position: fixed;
+  position: absolute;
   width: 318px;
 }
 .drawer-pf-title h3 {
@@ -4755,6 +4760,14 @@ a.disabled {
 }
 .navbar-pf-vertical .nav .drawer-pf-trigger.open .drawer-pf-trigger-icon {
   background-color: #232323;
+}
+/* Exclusive styles to work with Horizontal Navigation */
+.navbar-pf .drawer-pf {
+  height: calc(100vh - 46px);
+  top: 26px;
+}
+.navbar-pf .drawer-pf-trigger-icon {
+  cursor: pointer;
 }
 .search-pf.has-button {
   border-collapse: separate;
