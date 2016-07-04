@@ -1969,6 +1969,46 @@ select.mobile-device {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+.about-modal-pf {
+  background-color: #292e34;
+  background-image: url("../img/bg-modal-about-pf.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 216px auto;
+}
+@media (min-width: 768px) {
+  .about-modal-pf {
+    background-size: auto;
+  }
+}
+.about-modal-pf .modal-body {
+  color: #fff;
+  padding-bottom: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media (min-width: 768px) {
+  .about-modal-pf .modal-body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+.about-modal-pf .modal-header {
+  background-color: transparent;
+}
+.about-modal-pf .pficon-close {
+  color: #fff;
+}
+.product-versions-pf {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.product-versions-pf li strong {
+  margin-right: 10px;
+}
+.trademark-pf {
+  font-size: 11px;
+}
 .blank-slate-pf {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
