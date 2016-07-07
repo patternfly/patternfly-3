@@ -1,4 +1,4 @@
-[![Dependency Status](https://gemnasium.com/badges/github.com/patternfly/patternfly.svg)](https://gemnasium.com/github.com/patternfly/patternfly)
+[![Dependency Status](https://gemnasium.com/badges/github.com/patternfly/patternfly.svg)](https://gemnasium.com/github.com/patternfly/patternfly) [![Code Climate](https://codeclimate.com/github/patternfly/patternfly/badges/gpa.svg)](https://codeclimate.com/github/patternfly/patternfly)
 
 # [PatternFly](https://www.patternfly.org) reference implementation
 
