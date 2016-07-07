@@ -25,10 +25,11 @@ module.exports = function(config) {
       {pattern: 'dist/css/*.map', watched: true, included: false, served: true},
       'dist/css/*.css',
       'dist/js/*.js',
-      {pattern: 'tests/**/*', watched: true, included: false, served: true},
+      {pattern: 'dist/tests/**/*', watched: true, included: false, served: true},
 
       //tests
-      'dist/js/tests/unit/*.spec.js'
+      'tests/unit/globals.js',
+      'tests/unit/*.spec.js'
     ],
 
 
