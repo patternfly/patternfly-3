@@ -1,3 +1,10 @@
+[![Dependency Status](https://gemnasium.com/badges/github.com/patternfly/patternfly.svg)](https://gemnasium.com/github.com/patternfly/patternfly)
+[![Code Climate](https://codeclimate.com/github/patternfly/patternfly/badges/gpa.svg)](https://codeclimate.com/github/patternfly/patternfly)
+[![npm version](https://badge.fury.io/js/patternfly.svg)](https://badge.fury.io/js/patternfly)
+
+[![Gitter](https://badges.gitter.im/patternfly/patternfly.svg)](https://gitter.im/patternfly/patternfly?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+
 # [PatternFly](https://www.patternfly.org) reference implementation
 
 This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations. For information on how to quickly get started using PatternFly, see the [Quick Start Guide](QUICKSTART.md).
