@@ -170,7 +170,7 @@ git push && git push --tags
 
 The Bower package manager determines available versions and installs based upon git tags, so the new version will now be automatically available via Bower.
 
-To publish a new version to npm, run:
+To publish a new version to npm, execute:
 
 ```
 npm publish
