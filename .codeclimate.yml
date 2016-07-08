@@ -27,9 +27,6 @@ ratings:
   - "**.py"
   - "**.rb"
 exclude_paths:
-- dist/css/
-- dist/fonts/
-- dist/img/
-- dist/js/patternfly.min.js
+- dist/
 - tests/
 - less/lib
