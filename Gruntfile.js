@@ -63,6 +63,12 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'components/c3/', src: ['c3.css'], dest: 'less/lib/c3/'},
         ],
       },
+      js: {
+        files: [
+          // copy js src file
+          {expand: true, cwd: 'src/js/', src: ['patternfly.js'], dest: 'dist/js/'}
+        ]
+      }
     },
     csscount: {
       production: {
@@ -101,7 +107,7 @@ module.exports = function (grunt) {
     jslint: {
       client: {
         src: [
-          'dist/js/patternfly.js'
+          'src/js/patternfly.js'
         ],
         directives: {
           // node environment
@@ -157,7 +163,7 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          'dist/js/patternfly.min.js': ['dist/js/patternfly.js']
+          'dist/js/patternfly.min.js': ['src/js/patternfly.js']
         }
       }
     },
@@ -180,7 +186,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['dist/js/*.js', '!dist/js/*.min.js'],
-        tasks: ['jslint', 'uglify']
+        tasks: ['jslint', 'uglify', 'copy:js']
       },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'tests/*.html', '!tests-src/*.html']
