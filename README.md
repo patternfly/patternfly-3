@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/patternfly/patternfly.svg?branch=master)](https://travis-ci.org/patternfly/patternfly)
 [![Dependency Status](https://gemnasium.com/badges/github.com/patternfly/patternfly.svg)](https://gemnasium.com/github.com/patternfly/patternfly)
 [![Code Climate](https://codeclimate.com/github/patternfly/patternfly/badges/gpa.svg)](https://codeclimate.com/github/patternfly/patternfly)
 [![npm version](https://badge.fury.io/js/patternfly.svg)](https://badge.fury.io/js/patternfly)
@@ -137,6 +138,12 @@ The `tests/` directory contains HTML pages with component and pattern examples i
 
 The HTML pages in `tests/` are generated using Jekyll.  Do *not* edit these files directly.  See `tests-src/` to change these files.
 
+### Unit Testing
+Unit tests are written for [Karma test server] (https://karma-runner.github.io/1.0/index.html) with [Jasmine](http://jasmine.github.io/)
+
+```
+npm test
+```
 ## Release
 
 PatternFly is released through the Bower and npm.

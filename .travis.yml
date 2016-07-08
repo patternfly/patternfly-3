@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - '0.10'
+
+before_install:
+  - 'npm install -g bower grunt-cli'
+
+script:
+  - 'npm install'
+  - 'bower install'
+  - 'gem install jekyll -v 2.5.3'
+  - 'grunt build'
+  - 'npm test'
