@@ -194,6 +194,11 @@ module.exports = function (grunt) {
       options: {
         livereload: true
       }
+    },
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js'
+      }
     }
   });
 
