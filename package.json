@@ -27,7 +27,8 @@
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.1",
-    "matchdep": "~0.3.0"
+    "matchdep": "~0.3.0",
+    "nsp": "^2.6.1"
   },
   "optionalDependencies": {
     "bootstrap-datepicker": "~1.4.0",
