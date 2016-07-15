@@ -101,9 +101,9 @@ Additionally you may need to install the grunt command line utility.  To do this
 
 Test pages are generated using [Jekyll](http://jekyllrb.com/).  After ensuring Ruby is installed and available, run:
 
-    gem install jekyll -v 2.5.3
+    gem install jekyll -v 3.1.6
 
-Note: You can use any version prior to 3.1.x, due to [#4433](https://github.com/jekyll/jekyll/issues/4433) and [#4442](https://github.com/jekyll/jekyll/issues/4442)
+Note: You can use any 3.1.x version with at least 3.1.4 (3.1.4 includes necessary fixes to [#4433](https://github.com/jekyll/jekyll/issues/4433) and [#4442](https://github.com/jekyll/jekyll/issues/4442))
 
 ### Live Reload Server
 
