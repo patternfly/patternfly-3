@@ -90,6 +90,8 @@
 @navbar-pf-vertical-navbar-toggle-margin:                           13px 15px;
 @navbar-pf-vertical-navbar-toggle-icon-bar-hover-bg:                @color-pf-white;
 @navbar-pf-vertical-nav-item-iconic-padding:                        21px 12px;
+@nav-pf-container-transition-period:                                0.25s;
+@nav-pf-menu-transition-period:                                     0.1s;
 @nav-pf-vertical-active-color:                                      @color-pf-white;
 @nav-pf-vertical-active-before-color:                               @color-pf-blue-300;
 @nav-pf-vertical-active-bg-color:                                   @color-pf-black-800;
@@ -103,6 +105,7 @@
 @nav-pf-vertical-color:                                             @color-pf-black-300;
 @nav-pf-vertical-font-weight:                                       400;
 @nav-pf-vertical-icon-color:                                        @color-pf-black-600;
+@nav-pf-vertical-icon-size:                                         (@font-size-base + 8);
 @nav-pf-vertical-icon-width:                                        24px;
 @nav-pf-vertical-item-border-color:                                 @color-pf-black;
 @nav-pf-vertical-link-height:                                       63px;
@@ -122,7 +125,18 @@
 @nav-pf-vertical-secondary-link-height:                             63px;
 @nav-pf-vertical-secondary-link-padding:                            0 15px 0 20px;
 @nav-pf-vertical-secondary-list-header-margin:                      30px 20px 10px 20px;
-@nav-pf-vertical-secondary-width:                                   250px;
+@nav-pf-vertical-tertiary-active-bg-color:                          @color-pf-black-800;
+@nav-pf-vertical-tertiary-indicator-padding:                        0;
+@nav-pf-vertical-tertiary-bg-color:                                 @color-pf-black-700;
+@nav-pf-vertical-tertiary-color:                                    #fff;
+@nav-pf-vertical-tertiary-header-margin:                            18px 20px 10px 20px;
+@nav-pf-vertical-tertiary-list-header-margin:                       30px 20px 10px 20px;
+@nav-pf-vertical-tertiary-item-padding:                             0 0 5px 0;
+@nav-pf-vertical-tertiary-item-color:                               #dbdada;
+@nav-pf-vertical-tertiary-link-margin:                              0 20px 0 20px;
+@nav-pf-vertical-tertiary-link-padding:                             4px 0 2px 0;
+@nav-pf-vertical-tertiary-badge-color:                              #fff;
+@nav-pf-vertical-tertiary-badge-bg-color:                           @color-pf-black-900;
 @nav-pf-vertical-width:                                             200px;
 @pagination-padding-small-vertical:                                 0;
 @panel-default-border-color:                                        @color-pf-black-400;
@@ -205,7 +219,6 @@
 @navbar-pf-navbar-utility-border-color:                             lighten(@navbar-pf-bg-color, 15.5%);
 @navbar-pf-navbar-utility-color:                                    @navbar-pf-color;
 @navbar-pf-navbar-utility-hover-bg-color:                           lighten(@navbar-pf-bg-color, 12.5%);
-@nav-pf-vertical-hidden-icons-width:                                (@nav-pf-vertical-width - @nav-pf-vertical-icon-width);
 @nav-pf-vertical-secondary-bg-color:                                @nav-pf-vertical-active-bg-color;
 @nav-tabs-color:                                                    @gray-pf;
 // Reference variables declared in block above

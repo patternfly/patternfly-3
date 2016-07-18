@@ -1,6 +1,6 @@
 # Site settings
 alert-message: ' and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.'
-category-list: [Widgets, Charts, Layouts, Alternate Layouts]
+category-list: [Widgets, Charts, Layouts, Navigation]
 company: PatternFly
 navbar-pf-navbar-brand-icon: true
 navbar-pf-alt-navbar-brand-icon: true
@@ -15,3 +15,4 @@ url-css-extra: 'tests.css'
 url-css-main: '../../dist/css/patternfly.min.css'
 url-img: 'img/'
 url-js: '../../dist/js/patternfly.min.js'
+nav-tertiary: false
