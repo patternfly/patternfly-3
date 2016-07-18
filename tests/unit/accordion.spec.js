@@ -1,7 +1,7 @@
 describe("accordion test suite", function () {
 
   beforeEach(function () {
-    loadFixtures(globals.fixturePath + 'accordions.html');
+    globals.readFixture(globals.fixturePath + 'accordions.html');
   });
 
   it('should add the "in" class after accordion collapsed', function (done) {

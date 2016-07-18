@@ -142,7 +142,7 @@ The HTML pages in `dist/tests` are generated using Jekyll.  Do *not* edit these 
 Unit tests are written for [Karma test server] (https://karma-runner.github.io/1.0/index.html) with [Jasmine](http://jasmine.github.io/)
 
 ```
-npm test
+grunt karma
 ```
 ## Release
 

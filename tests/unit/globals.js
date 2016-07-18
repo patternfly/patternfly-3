@@ -11,7 +11,19 @@ window.globals = {
   fixturePath: 'base/dist/tests/',
 
   //visual waits in between tests
-  wait: 2000
+  wait: 500,
+
+  //global helper for reading our test fixtures
+  readFixture: function(path){
+    var fixture = readFixtures(path);
+
+    //NOTE: we are reusing "test" page fixtures from standalone pages,
+    //so it is necessary to remove page scripts and ensure we do not redefine jquery,
+    //and instead use our karma loaded jquery/scripts
+    var strip = fixture.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, " ");
+
+    setFixtures(strip);
+  }
 };
 
 //set global jasmine variables

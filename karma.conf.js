@@ -17,6 +17,12 @@ module.exports = function(config) {
     files: [
       'components/jquery/dist/jquery.js',
       'components/bootstrap/dist/js/bootstrap.js',
+      'components/bootstrap-combobox/js/bootstrap-combobox.js',
+      'components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
+      'components/bootstrap-select/dist/js/bootstrap-select.js',
+      'components/datatables/media/js/jquery.dataTables.js',
+      'components/bootstrap-switch/dist/js/bootstrap-switch.js',
+      'components/bootstrap-treeview/src/js/bootstrap-treeview.js',
       'components/c3/c3.js',
       'components/d3/d3.js',
       'node_modules/jasmine-jquery/lib/jasmine-jquery.js',
@@ -105,6 +111,15 @@ var CustomMiddlewareFactory = function (config) {
       if(config.logLevel === config.LOG_DEBUG){
         console.log('Intercepted:' + request.url + ' Serving: ' + newPath);
       }
+
+      if(request.url.indexOf('.svg') > 0) {
+        response.writeHeader(200, {'Content-Type': 'image/svg+xml'});
+      } else if (request.url.indexOf('.js') > 0) {
+        response.writeHeader(200, {'Content-Type': 'application/javascript'});
+      } else if (request.url.indexOf('.css') > 0) {
+        response.writeHeader(200, {'Content-Type': 'text/css'});
+      }
+
       response.write(file);
     }
     return response.end();

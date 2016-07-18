@@ -1,7 +1,7 @@
 describe("alerts test suite", function () {
 
   beforeEach(function () {
-    loadFixtures(globals.fixturePath + 'alerts.html');
+    globals.readFixture(globals.fixturePath + 'alerts.html');
   });
 
   it('should not exist after dismiss', function (done) {
