@@ -5804,4 +5804,225 @@ a.disabled {
 .force-hide-secondary-nav-pf .persistent-secondary .nav-pf-persistent-secondary {
   display: none !important;
 }
+.wizard-pf-body {
+  padding: 0;
+}
+/* styles the sidebard containing the sub-steps */
+.wizard-pf-sidebar {
+  background: #fafafa;
+  border-right: 1px solid #d1d1d1;
+  bottom: 0;
+  display: table-cell;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  top: 0;
+  vertical-align: top;
+}
+.wizard-pf-sidebar .list-group {
+  border-top: 0;
+  margin-bottom: 0;
+}
+.wizard-pf-sidebar .list-group-item {
+  background-color: transparent;
+  border-color: #ededed;
+  padding: 0;
+}
+.wizard-pf-sidebar .list-group-item > a {
+  color: #030303;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  height: 50px;
+  outline: 0;
+  padding-top: 11px;
+  padding-left: 20px;
+  position: relative;
+  white-space: nowrap;
+  width: 18em;
+}
+.wizard-pf-sidebar .list-group-item > a:hover {
+  text-decoration: none;
+}
+.wizard-pf-sidebar .list-group-item.active {
+  background-color: #ededed;
+}
+.wizard-pf-sidebar .list-group-item.active:hover {
+  border-color: #ededed;
+}
+.wizard-pf-sidebar .list-group-item.active > a {
+  color: #39a5dc;
+  cursor: default;
+}
+.wizard-pf-sidebar .list-group-item.active > a:before {
+  background: #39a5dc;
+  content: " ";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3px;
+}
+.wizard-pf-sidebar .list-group-item.active > a:after {
+  color: #39a5dc;
+  content: "\f105";
+  display: block;
+  font-family: FontAwesome;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  padding-top: 10px;
+  position: absolute;
+  right: 23px;
+  top: 0;
+}
+.wizard-pf-substep-number {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 25px;
+}
+.wizard-pf-substep-title {
+  display: inline-block;
+  margin-right: 5px;
+  text-align: left;
+  vertical-align: middle;
+}
+/* styles the steps indicator across the top of the wizard */
+.wizard-pf-steps {
+  border-bottom: solid 1px #d1d1d1;
+  text-align: center;
+}
+.wizard-pf-steps-indicator {
+  font-size: 16px;
+  display: inline-block;
+  display: -ms-flexbox;
+  /* for IE 10 */
+  display: flex;
+  height: 120px;
+  justify-content: space-around;
+  list-style: none;
+  padding: 38px 0 0 0;
+  /* draw the step number in the circle */
+}
+.wizard-pf-steps-indicator li {
+  counter-increment: section;
+  float: left;
+  /* float for IE9 since it doesn't support flex. If items wrap, they overlap */
+  -ms-flex: 1;
+  /* for IE 10 */
+  flex-grow: 1;
+  flex-basis: 0;
+  line-height: 15px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  /* draw the line between the circles */
+  /* don't draw the line between the circles on the ends */
+}
+.wizard-pf-steps-indicator li:before {
+  background-color: #bbb;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+.wizard-pf-steps-indicator li:first-child:before {
+  left: 50%;
+  right: 0;
+}
+.wizard-pf-steps-indicator li:last-child:before {
+  left: 0;
+  right: 50%;
+}
+.wizard-pf-steps-indicator li:only-of-type:before {
+  background-color: transparent;
+}
+.wizard-pf-steps-indicator li a {
+  color: #030303;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 1em;
+  margin-right: 1em;
+  text-decoration: none;
+}
+.wizard-pf-steps-indicator li a:hover .wizard-pf-step-number {
+  background-color: #bbb;
+  border-color: #bbb;
+  color: #fff;
+}
+.wizard-pf-steps-indicator .wizard-pf-step-number {
+  background-color: #fff;
+  border-radius: 50%;
+  border: solid 2px #bbb;
+  color: #bbb;
+  font-size: 12px;
+  font-weight: 700;
+  height: 25px;
+  left: calc(50% - 13px);
+  line-height: 22px;
+  position: absolute;
+  top: 27px;
+  width: 25px;
+}
+.wizard-pf-steps-indicator .active .wizard-pf-step-number {
+  cursor: default;
+  background-color: #39a5dc;
+  border-color: #39a5dc;
+  color: #fff;
+}
+.wizard-pf-steps-indicator .viewed-pf .wizard-pf-step-number {
+  background-color: #fff;
+  border-color: #39a5dc;
+  color: #030303;
+}
+/* styles the main content portion of the wizard */
+.wizard-pf-main {
+  display: table-cell;
+  padding: 3em;
+  vertical-align: top;
+  width: 10000px;
+}
+.wizard-pf-main .blank-slate-pf {
+  background-color: transparent;
+  border: none;
+  left: 0;
+  right: 0;
+}
+/* styles the content of a review page */
+.wizard-pf-review-page .treeview .list-group-item {
+  color: #030303;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+  padding: .5em .5em;
+  text-decoration: none;
+}
+.wizard-pf-review-page .treeview .list-group-item a {
+  color: #030303;
+  text-decoration: none;
+}
+.wizard-pf-review-page .treeview span.icon {
+  font-size: 24px;
+  font-weight: 500;
+}
+.wizard-pf-success-icon {
+  color: #3f9c35;
+  font-size: 67.2px;
+  line-height: 67.2px;
+}
+/* styles the footer */
+.wizard-pf-footer {
+  border-top: 1px solid #d1d1d1;
+  margin-top: 0;
+  padding-bottom: 17px;
+}
+.wizard-pf-footer .btn-cancel {
+  margin-right: 25px;
+}
 /*# sourceMappingURL=patternfly-additions.css.map */
