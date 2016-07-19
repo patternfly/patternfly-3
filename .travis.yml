@@ -10,4 +10,5 @@ script:
   - 'bower install'
   - 'gem install jekyll -v 2.5.3'
   - 'grunt build'
+  - './node_modules/nsp/bin/nsp --shrinkwrap npm-shrinkwrap.json check --output summary'
   - 'npm test'
