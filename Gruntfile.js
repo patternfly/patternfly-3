@@ -185,7 +185,7 @@ module.exports = function (grunt) {
         tasks: ['cssmin', 'csscount']
       },
       js: {
-        files: ['dist/js/*.js', '!dist/js/*.min.js'],
+        files: ['src/js/*.js'],
         tasks: ['jslint', 'uglify', 'copy:js']
       },
       livereload: {
