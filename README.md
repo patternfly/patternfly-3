@@ -99,7 +99,7 @@ Additionally you may need to install the grunt command line utility.  To do this
 
     npm install -g grunt-cli
 
-Test pages are generated using [Jekyll](http://jekyllrb.com/).  After ensuring Ruby is installed and available, run:
+Test pages are generated using [Jekyll](http://jekyllrb.com/). Ensure Ruby is installed and available then run:
 
     gem install jekyll -v 3.1.6
 
