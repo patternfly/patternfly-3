@@ -3495,6 +3495,7 @@ a.disabled {
   display: table-cell;
   -ms-flex: 1;
   flex: 1;
+  min-width: 0;
   vertical-align: top;
   width: 100%;
 }
@@ -3600,6 +3601,7 @@ a.disabled {
   display: flex;
   -ms-flex: 1;
   flex: 1;
+  min-width: 0;
   padding-bottom: 20px;
   padding-top: 20px;
 }
