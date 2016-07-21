@@ -79,6 +79,9 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <!-- Bootstrap Date Picker -->
         <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
+        <!-- Moment - required by Bootstrap Date Time Picker -->
+        <script src="bower_components/moment/min/moment.min.js"></script>
+
         <!-- Bootstrap Date Time Picker - requires Moment -->
         <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 
@@ -99,9 +102,6 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
         <!-- MatchHeight - Used to make sure dashboard cards are the same height -->
         <script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
-
-        <!-- Moment - required by Bootstrap Date Time Picker -->
-        <script src="bower_components/moment/min/moment.min.js"></script>
 
         <!-- Angular Application? You May Want to Consider Pulling Angular-PatternFly And Angular-UI Bootstrap instead of bootstrap.js -->
         <!-- See https://github.com/patternfly/angular-patternfly for more information -->
