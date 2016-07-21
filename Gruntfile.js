@@ -1,9 +1,4 @@
 /*global module,require*/
-var lrSnippet = require('connect-livereload')();
-var mountFolder = function (connect, dir) {
-  return connect.static(require('path').resolve(dir));
-};
-
 module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -27,13 +22,11 @@ module.exports = function (grunt) {
       server: {
         options: {
           hostname: '0.0.0.0',
-          middleware: function (connect) {
-            return [
-              lrSnippet,
-              mountFolder(connect, projectConfig.src),
-              mountFolder(connect, projectConfig.dist + '/tests')
-            ];
-          },
+          livereload: true,
+          base: [
+            projectConfig.src,
+            projectConfig.dist + '/tests'
+          ],
           port: 9000
         }
       }
