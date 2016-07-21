@@ -8,7 +8,7 @@ default()
   SCRIPT=`basename $0`
   SCRIPT_DIR=`dirname $0`
   SCRIPT_DIR=`cd $SCRIPT_DIR; pwd`
-  TMP_DIR="/tmp/$SCRIPT.$$"
+  TMP_DIR="/tmp/patternfly-releases"
 
   BOWER_JSON=bower.json
   PACKAGE_JSON=package.json
@@ -16,7 +16,7 @@ default()
 
   PTNFLY_REPO=https://github.com/patternfly/patternfly.git
   PTNFLY_DIR="$TMP_DIR/patternfly"
-  VERIFY_DIR="$TMP_DIR/verify"
+  VERIFY_DIR="$TMP_DIR/patternfly-verify"
 }
 
 build()
@@ -68,6 +68,14 @@ clean()
 
   npm cache clean
   bower cache clean
+
+  # Remove for repo rebuild
+  if [ -d node_modules ]; then
+    rm -rf node_modules
+  fi
+  if [ -d components ]; then
+    rm -rf components
+  fi
 }
 
 # Install dependencies
@@ -120,6 +128,8 @@ push()
 # Setup local repo
 setup_repo() {
   echo "*** Setting up local repo $PTNFLY_DIR"
+  rm -rf $PTNFLY_DIR
+
   mkdir -p $TMP_DIR
   cd $TMP_DIR
 
@@ -154,7 +164,7 @@ cat <<- EEOOFF
 
     Note: After changes are pushed, a PR will need to be created via GitHub.
 
-    sh [-x] $SCRIPT [-h|p|f] -v <version>
+    sh [-x] $SCRIPT [-h|p|f|s] -v <version>
 
     Example: sh $SCRIPT -v 3.7.0 -f
 
@@ -162,21 +172,23 @@ cat <<- EEOOFF
     h       Display this message (default) 
     f       Force push to new repo branch (e.g., bump-v3.7.0)
     p       Publish to npm from latest repo clone
-    v       The version number (e.g., 3.7.0)
+    s       Skip repo setup (e.g., to rebuild previously created repo)
+    v       The version number (e.g., 3.7.0) -- not valid with -p
 
 EEOOFF
 }
 
 verify()
 {
-  echo "*** Verifying npm install"
+  echo "*** Verifying install"
+  rm -rf $VERIFY_DIR
+
   mkdir -p $VERIFY_DIR
   cd $VERIFY_DIR
 
   npm install $PTNFLY_DIR
   check $? "npm install failure"
 
-  echo "*** Verifying bower install"
   bower install $PTNFLY_DIR
   check $? "bower install failure"
 }
@@ -190,44 +202,47 @@ verify()
     exit 1
   fi
 
-  while getopts hfpv c; do
+  while getopts hfpsv c; do
     case $c in
       h) usage; exit 0;;
       f) PUSH=1;;
       p) PUBLISH=1
          BRANCH=master;;
+      s) SETUP=1;;
       v) VERSION=$2; shift
          BRANCH=bump-v$VERSION;;
       \?) usage; exit 1;;
     esac
   done
 
-  if [ -z "$VERSION" -a -z "$PUBLISH" ]; then
+  if [ -z "$VERSION" -a -z "$PUBLISH" -o -n "$VERSION" -a -n "$PUBLISH" ]; then
     usage
     exit 1
   fi
 
   prereqs
-  setup_repo
 
-  # Skip for npm publish
+  if [ -z "$SETUP" ]; then
+    setup_repo
+  fi
+
   if [ -z "$PUBLISH" ]; then
     bump_bower
     bump_package
-  fi
-
-  clean
-  install
-  shrinkwrap
-  build
-
-  # Skip for npm publish
-  if [ -n "$PUBLISH" ]; then
+    clean
+    install
+    build
+    shrinkwrap
+    verify
+  else
+    clean
+    install
+    build
     publish
+
+    # Skip remaining steps for npm publish
     exit 0
   fi
-
-  verify
 
   if [ -n "$PUSH" ]; then
     push
