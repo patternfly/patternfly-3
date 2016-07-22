@@ -11,12 +11,13 @@
   position: absolute;
   right: 0;
   width: 320px;
+  z-index: 2;
   .panel {
     border-bottom: none;
     border-left: none;
     border-right: none;
   }
-.panel-group .panel-heading+.panel-collapse .panel-body {
+  .panel-group .panel-heading+.panel-collapse .panel-body {
     border-top: none;
     border-bottom: 1px solid @card-pf-border-color;
     padding: 0;
@@ -43,8 +44,11 @@
 }
 
 .drawer-pf-action {
-  .btn {
+  .btn-link {
+    color: @link-color;
     padding: 10px 0;
+
+    &:hover { color: @link-hover-color; }
   }
 }
 
@@ -89,7 +93,7 @@
 .drawer-pf-title {
   background-color: @color-pf-black-100;
   border-bottom: 1px solid @card-pf-border-color;
-  position: fixed;
+  position: absolute;
   width: 318px;
   h3 {
     font-size: @font-size-base;
@@ -115,4 +119,13 @@
       background-color: @navbar-pf-navbar-utility-hover-bg-color;
     }
   }
+}
+
+/* Exclusive styles to work with Horizontal Navigation */
+.navbar-pf {
+  .drawer-pf {
+    height: calc(~"100vh - 46px");
+    top: 26px;
+  }
+  .drawer-pf-trigger-icon { cursor: pointer; }
 }
