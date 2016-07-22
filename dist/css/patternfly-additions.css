@@ -5926,21 +5926,103 @@ a.disabled {
   right: 0;
 }
 /* styles the content of a review page */
-.wizard-pf-review-page .treeview .list-group-item {
+.wizard-pf-review-steps {
+  list-style: none;
+}
+.wizard-pf-review-steps .list-group,
+.wizard-pf-review-steps .list-group-item {
+  border: none;
+  margin-bottom: 0;
+}
+.wizard-pf-review-steps > ul > li {
+  float: left;
+  line-height: 15px;
+  margin: 0;
+  padding-top: 0;
+  position: relative;
+  width: 100%;
+}
+.wizard-pf-review-steps > ul > li > a {
   color: #030303;
   cursor: pointer;
   font-size: 16px;
-  margin-left: 20px;
-  padding: .5em .5em;
+  padding-left: 30px;
+  padding-right: 5px;
   text-decoration: none;
+  transition: 0.25s;
 }
-.wizard-pf-review-page .treeview .list-group-item a {
-  color: #030303;
-  text-decoration: none;
-}
-.wizard-pf-review-page .treeview span.icon {
+.wizard-pf-review-steps > ul > li > a:before {
+  content: "\f107";
+  display: block;
+  font-family: FontAwesome;
   font-size: 24px;
   font-weight: 500;
+  left: 20px;
+  position: absolute;
+  top: 0;
+}
+.wizard-pf-review-steps > ul > li > a.collapsed:before {
+  content: "\f105";
+}
+.wizard-pf-review-substeps {
+  padding-left: 22px;
+}
+.wizard-pf-review-substeps > ul > li {
+  float: left;
+  line-height: 15px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+.wizard-pf-review-substeps > ul > li a {
+  color: #030303;
+  cursor: pointer;
+  font-size: 16px;
+  padding-left: 30px;
+  padding-right: 5px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.wizard-pf-review-substeps > ul > li a:before {
+  content: "\f107";
+  display: block;
+  font-family: FontAwesome;
+  font-size: 24px;
+  font-weight: 500;
+  left: 20px;
+  position: absolute;
+  top: 10px;
+}
+.wizard-pf-review-substeps > ul > li a.collapsed:before {
+  content: "\f105";
+}
+.wizard-pf-review-content {
+  padding-top: 10px;
+  padding-left: 40px;
+}
+.wizard-pf-review-content .wizard-pf-review-item {
+  padding: 5px 0;
+}
+.wizard-pf-review-content .wizard-pf-review-item.sub-item {
+  margin-left: 10px;
+}
+.wizard-pf-review-content .wizard-pf-review-item .wizard-pf-review-item-label {
+  font-weight: 700;
+  padding-right: 10px;
+}
+.wizard-pf-review-content .wizard-pf-review-item .wizard-pf-review-item-field {
+  font-weight: 700;
+  margin: 5px 0;
+  padding-right: 10px;
+}
+.wizard-pf-review-content .wizard-pf-review-item .wizard-pf-review-item-field:first-of-type {
+  margin-top: 0;
+}
+.wizard-pf-review-content .wizard-pf-review-item .wizard-pf-review-item-field:last-of-type {
+  margin-bottom: 0;
+}
+.wizard-pf-review-content .wizard-pf-review-item .wizard-pf-review-item-field.sub-field {
+  margin-left: 10px;
 }
 .wizard-pf-success-icon {
   color: #3f9c35;

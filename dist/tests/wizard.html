@@ -160,7 +160,7 @@
               <li class="list-group-item">
                 <a>
                   <span class="wizard-pf-substep-number">1B.</span>
-                  <span class="wizard-pf-substep-title">Progress</span>
+                  <span class="wizard-pf-substep-title">Settings</span>
                 </a>
               </li>
           </div><!-- /.wizard-pf-sidebar -->
@@ -232,13 +232,13 @@
 
           <div class="wizard-pf-sidebar">
             <ul class="list-group">
-              <li class="list-group-item">
+              <li class="list-group-item active">
                 <a>
                   <span class="wizard-pf-substep-number">3A.</span>
-                  <span class="wizard-pf-substep-title">Details</span>
+                  <span class="wizard-pf-substep-title">Summary</span>
                 </a>
               </li>
-              <li class="list-group-item active">
+              <li class="list-group-item">
                 <a>
                   <span class="wizard-pf-substep-number">3B.</span>
                   <span class="wizard-pf-substep-title">Progress</span>
@@ -248,46 +248,87 @@
           </div><!-- /.wizard-pf-sidebar -->
 
           <div class="wizard-pf-main">
-            <div>
-              <div class="wizard-pf-review-page">
-                <div id="treeview1"></div>
-                <script>
-                  $(function() {
-                    var defaultData = [
-                      {
-                        text: 'First Step',
-                        state: {
-                          expanded: false
-                        },
-                        nodes: [
-                          {
-                            text: '1A: Details listed here'
-                          },
-                          {
-                            text: '1B: Progress listed here'}
-                        ]
-                      },
-                      {
-                        text: 'Second Step',
-                        nodes: [
-                          {
-                            text: '2A: Details listed here'
-                          },
-                          {
-                            text: '2B: Progress listed here'}
-                        ]
-                      }
-                    ];
-                    $('#treeview1').treeview({
-                      collapseIcon: "fa fa-angle-down",
-                      data: defaultData,
-                      expandIcon: "fa fa-angle-right",
-                      showBorder: false
-                    });
-                  });
-                </script>
-
-              </div>
+            <div class="wizard-pf-review-steps">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep1').toggleClass('collapse');">First Step</a>
+                  <div id="reviewStep1" class="wizard-pf-review-substeps">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep1Substep1').toggleClass('collapse');">
+                          <span class="wizard-pf-substep-number">1A.</span>
+                          <span class="wizard-pf-substep-title">Details</span>
+                        </a>
+                        <div id="reviewStep1Substep1" class="wizard-pf-review-content">
+                          <form class="form">
+                            <div class="wizard-pf-review-item">
+                              <span class="wizard-pf-review-item-label">Name:</span>
+                              <span class="wizard-pf-review-item-value">First Last</span>
+                            </div>
+                            <div class="wizard-pf-review-item">
+                              <span class="wizard-pf-review-item-label">Description:</span>
+                              <span class="wizard-pf-review-item-value">This is the description</span>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep1Substep2').toggleClass('collapse');">
+                          <span class="wizard-pf-substep-number">1B.</span>
+                          <span class="wizard-pf-substep-title">Settings</span>
+                        </a>
+                        <div id="reviewStep1Substep2" class="wizard-pf-review-content">
+                          <form class="form">
+                            <div class="wizard-pf-review-item">
+                              <div class="wizard-pf-review-item-field">Setting A</div>
+                              <div class="wizard-pf-review-item-field">Setting B</div>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep2').toggleClass('collapse');">Second Step</a>
+                  <div id="reviewStep2" class="wizard-pf-review-substeps">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep2Substep1').toggleClass('collapse');">
+                          <span class="wizard-pf-substep-number">2A.</span>
+                          <span class="wizard-pf-substep-title">Details</span>
+                        </a>
+                        <div id="reviewStep2Substep1" class="wizard-pf-review-content">
+                          <form class="form">
+                            <div class="wizard-pf-review-item">
+                              <span class="wizard-pf-review-item-label">Name:</span>
+                              <span class="wizard-pf-review-item-value">First Last</span>
+                            </div>
+                            <div class="wizard-pf-review-item">
+                              <span class="wizard-pf-review-item-label">Description:</span>
+                              <span class="wizard-pf-review-item-value">This is the description</span>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep2Substep2').toggleClass('collapse');">
+                          <span class="wizard-pf-substep-number">2B.</span>
+                          <span class="wizard-pf-substep-title">Settings</span>
+                        </a>
+                        <div id="reviewStep2Substep2" class="wizard-pf-review-content">
+                          <form class="form">
+                            <div class="wizard-pf-review-item">
+                              <div class="wizard-pf-review-item-field">Setting A</div>
+                              <div class="wizard-pf-review-item-field">Setting B</div>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div><!-- /.wizard-pf-main -->
 
@@ -345,7 +386,7 @@
               <li class="list-group-item">
                 <a>
                   <span class="wizard-pf-substep-number">3A.</span>
-                  <span class="wizard-pf-substep-title">Details</span>
+                  <span class="wizard-pf-substep-title">Summary</span>
                 </a>
               </li>
               <li class="list-group-item active">
@@ -421,7 +462,7 @@
               <li class="list-group-item">
                 <a>
                   <span class="wizard-pf-substep-number">3A.</span>
-                  <span class="wizard-pf-substep-title">Details</span>
+                  <span class="wizard-pf-substep-title">Summary</span>
                 </a>
               </li>
               <li class="list-group-item active">

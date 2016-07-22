@@ -205,22 +205,113 @@
 }
 
 /* styles the content of a review page */
-.wizard-pf-review-page {
-  .treeview .list-group-item {
-    color: @color-pf-black;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 20px;
-    padding: .5em .5em;
-    text-decoration: none;
-    a {
-      color: @color-pf-black;
-      text-decoration: none;
+.wizard-pf-review-steps {
+  list-style: none;
+  .list-group, .list-group-item {
+    border: none;
+    margin-bottom: 0;
+  }
+  > ul {
+    > li {
+      float: left;
+      line-height: 15px;
+      margin: 0;
+      padding-top: 0;
+      position: relative;
+      width: 100%;
+      > a {
+        color: #030303;
+        cursor: pointer;
+        font-size: 16px;
+        padding-left: 30px;
+        padding-right: 5px;
+        text-decoration: none;
+        transition: 0.25s;
+        &:before {
+          content: "\f107";
+          display: block;
+          font-family: FontAwesome;
+          font-size: 24px;
+          font-weight: 500;
+          left: 20px;
+          position: absolute;
+          top: 0;
+        }
+        &.collapsed {
+          &:before {
+            content: "\f105";
+          }
+        }
+      }
     }
   }
-  .treeview span.icon {
-    font-size: 24px;
-    font-weight: 500;
+}
+
+.wizard-pf-review-substeps {
+  padding-left: 22px;
+  > ul {
+    > li {
+      float: left;
+      line-height: 15px;
+      margin: 0;
+      position: relative;
+      width: 100%;
+      a {
+        color: #030303;
+        cursor: pointer;
+        font-size: 16px;
+        padding-left: 30px;
+        padding-right: 5px;
+        text-decoration: none;
+        transition: 0.25s;
+        &:before {
+          content: "\f107";
+          display: block;
+          font-family: FontAwesome;
+          font-size: 24px;
+          font-weight: 500;
+          left: 20px;
+          position: absolute;
+          top: 10px;
+        }
+        &.collapsed {
+          &:before {
+            content: "\f105";
+          }
+        }
+      }
+    }
+  }
+}
+
+.wizard-pf-review-content {
+  padding-top: 10px;
+  padding-left: 40px;
+  .wizard-pf-review-item {
+    padding: 5px 0;
+    &.sub-item {
+      margin-left: 10px;
+    }
+    .wizard-pf-review-item-label {
+      font-weight: 700;
+      padding-right: 10px;
+    }
+    .wizard-pf-review-item-field {
+      font-weight: 700;
+      margin: 5px 0;
+      padding-right: 10px;
+      &:first-of-type {
+        margin-top: 0
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &.sub-field {
+        margin-left: 10px;
+      }
+    }
+    .wizard-pf-review-item-value {
+    }
   }
 }
 
