@@ -38,6 +38,8 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'components/bootstrap/dist/fonts/', src: ['*'], dest: 'dist/fonts/'},
           // copy Font Awesome font files
           {expand: true, cwd: 'components/font-awesome/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          // copy Patternfly font files
+          {expand: true, cwd: 'src/fonts/', src: ['*'], dest: 'dist/fonts/'},
           // copy Bootstrap less files
           {expand: true, cwd: 'components/bootstrap/less/', src: ['**'], dest: 'less/lib/bootstrap/'},
           // copy Font Awesome less files
@@ -54,6 +56,8 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'components/bootstrap-touchspin/dist/', src: ['jquery.bootstrap-touchspin.css'], dest: 'less/lib/bootstrap-touchspin/'},
           // copy C3 css file
           {expand: true, cwd: 'components/c3/', src: ['c3.css'], dest: 'less/lib/c3/'},
+          //copy images
+          {expand: true, cwd: 'src/img/', src: ['**'], dest: 'dist/img/'}
         ],
       },
       js: {
