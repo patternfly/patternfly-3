@@ -3501,6 +3501,11 @@ a.disabled {
   line-height: 30px;
   width: 30px;
 }
+.list-view-pf-left .pficon.list-view-pf-icon-sm:before,
+.list-view-pf-left .fa.list-view-pf-icon-sm:before {
+  display: block;
+  line-height: 26px;
+}
 .list-view-pf-left .pficon.list-view-pf-icon-success,
 .list-view-pf-left .fa.list-view-pf-icon-success {
   background-color: #e9f4e9;
@@ -3540,6 +3545,9 @@ a.disabled {
 .list-view-pf-stacked .list-group-item-text {
   float: none;
   width: auto;
+}
+.list-view-pf-view {
+  margin-top: 30px;
 }
 .login-pf {
   height: 100%;
