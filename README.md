@@ -8,7 +8,7 @@
 
 # [PatternFly](https://www.patternfly.org) reference implementation
 
-This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations. For information on how to quickly get started using PatternFly, see the [Quick Start Guide](QUICKSTART.md).
+This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations.  For information on how to quickly get started using PatternFly, see the [Quick Start Guide](QUICKSTART.md).  If you wish to contribute to PatternFly, please follow the instructions under "Contributing to PatternFly".
 
 
 # Installation
@@ -59,13 +59,17 @@ A [Sass port of PatternFly](https://github.com/patternfly/patternfly-sass) is av
 
 A set of [common AngularJS directives](https://github.com/patternfly/angular-patternfly) for use with PatternFly is available.
 
-## Dependencies
+# Contributing to PatternFly
 
-PatternFly includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".  And make sure you keep them updated (see "Keeping Bower Components Updated").
+The following sections provide information on how to get started as a developer or designer in the PatternFly codebase.  In order to set up your environment, two different types of dependencies will need to be set up.  Please follow the instructions under "Development - Build Dependencies" (Node.js/Ruby) and "Development - Code Dependencies" below.  If you wish to use PatternFly in your project, please follow the [Quick Start Guide](QUICKSTART.md) instead.
 
-## Development
+## Development - Build Dependencies
 
-Development setup requires nodejs and Ruby. If you do not already have nodejs, npm, and Ruby installed on your system, see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager and https://www.ruby-lang.org/en/downloads.
+Development setup requires Node.js and Ruby. If you do not already have Node.js, npm, and Ruby installed on your system, see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager and https://www.ruby-lang.org/en/downloads.
+
+## Development - Code Dependencies
+
+The PatternFly code includes a number of dependencies that are not committed to this repository.  To add them, follow the instructions below under "Install Bower Components".  Please make sure you keep them updated (see "Keeping Bower Components Updated").
 
 ### Install Bower Components
 
