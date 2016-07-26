@@ -20,7 +20,7 @@
     "patternfly.spec.in"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.6",
+    "bootstrap": "~3.3.7",
     "bootstrap-combobox": "~1.1.7",
     "bootstrap-datepicker": "~1.6.1",
     "bootstrap-select": "~1.10.0",
