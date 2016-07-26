@@ -132,12 +132,34 @@ resource: true
                 <button class="btn btn-default" type="button">Action</button>
                 {% include widgets/kebab.html dropmenuType="dropdown btn-group" dropmenuId="dropdownKebab" dropmenuVariation="dropdown-kebab-pf" %}
               </div>
-              <div class="form-group toolbar-pf-view-selector">
-                <ul class="list-inline">
-                  <li><a href="#"><i class="fa fa-th"></i></a></li>
-                  <li class="active"><a href="#"><i class="fa fa-th-large"></i></a></li>
-                  <li><a href="#"><i class="fa fa-th-list"></i></a></li>
-                </ul>
+              <div class="toolbar-pf-action-right">
+                <div class="form-group toolbar-pf-find">
+                  <button class="btn btn-link btn-find" type="button">
+                    <span class="fa fa-search"></span>
+                  </button>
+                  <div class="find-pf-dropdown-container">
+                    <input type="text" class="form-control" id="find" placeholder="Find By Keyword...">
+                    <div class="find-pf-buttons">
+                      <span class="find-pf-nums">1 of 3</span>
+                      <button class="btn btn-link" type="button">
+                        <span class="fa fa-angle-up"></span>
+                      </button>
+                      <button class="btn btn-link" type="button">
+                        <span class="fa fa-angle-down"></span>
+                      </button>
+                      <button class="btn btn-link btn-find-close" type="button">
+                        <span class="pficon pficon-close"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group toolbar-pf-view-selector">
+                  <ul class="list-inline">
+                    <li><a href="#"><i class="fa fa-th"></i></a></li>
+                    <li class="active"><a href="#"><i class="fa fa-th-large"></i></a></li>
+                    <li><a href="#"><i class="fa fa-th-list"></i></a></li>
+                  </ul>
+                </div>
               </div>
             </form>
             <div class="row toolbar-pf-results">
@@ -170,4 +192,19 @@ resource: true
           </div><!-- /col -->
         </div><!-- /row -->
       </div><!-- /container -->
+      <script>
+        (function($) {
+          $(document).ready(function() {
+            // Upon clicking the find button, show the find dropdown content
+            $(".btn-find").click(function () {
+              $(".find-pf-dropdown-container").toggle();
+            });
+            // Upon clicking the find close button, hide the find dropdown content
+            $(".btn-find-close").click(function () {
+              $(".find-pf-dropdown-container").hide();
+            });
+
+          });
+        })(jQuery);
+      </script>
 
