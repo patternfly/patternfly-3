@@ -3,6 +3,7 @@ node_js:
   - '0.10'
 
 before_install:
+  - 'git checkout -B master' # Reconcile detached HEAD
   - 'if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi'
   - 'npm install -g bower grunt-cli'
 
@@ -13,3 +14,6 @@ script:
   - 'grunt build'
   - './node_modules/nsp/bin/nsp --shrinkwrap npm-shrinkwrap.json check --output summary'
   - 'npm test'
+
+after_success:
+  - sh -x ./scripts/publish.sh
