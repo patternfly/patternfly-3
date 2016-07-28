@@ -26,7 +26,6 @@
     "bootstrap-select": "~1.10.0",
     "bootstrap-switch": "~3.3.2",
     "bootstrap-touchspin": "~3.1.1",
-    "bootstrap-treeview": "~1.2.0",
     "c3": "~0.4.11",
     "datatables": "~1.10.12",
     "datatables-colreorder": "~1.3.2",
@@ -36,6 +35,7 @@
     "jquery": "~2.1.4",
     "matchHeight": "~0.7.0",
     "eonasdan-bootstrap-datetimepicker": "~4.17.37",
-    "moment": "~2.14.1"
+    "moment": "~2.14.1",
+    "patternfly-bootstrap-treeview": "~1.0.0"
   }
 }
