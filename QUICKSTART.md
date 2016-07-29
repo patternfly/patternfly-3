@@ -95,7 +95,7 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <script src="bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
 
         <!-- Bootstrap Tree View -->
-        <script src="bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+        <script src="bower_components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
 
         <!-- Google Code Prettify - Syntax highlighting of code snippets -->
         <script src="bower_components/google-code-prettify/bin/prettify.min.js"></script>
@@ -153,7 +153,7 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <script src="node_modules/patternfly/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
 
         <!-- Bootstrap Tree View -->
-        <script src="node_modules/patternfly/node_modules/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+        <script src="node_modules/patternfly/node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
 
         <!-- Google Code Prettify - Syntax highlighting of code snippets -->
         <script src="node_modules/patternfly/node_modules/google-code-prettify/bin/prettify.min.js"></script>

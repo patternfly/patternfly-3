@@ -22,7 +22,7 @@ module.exports = function(config) {
       'components/bootstrap-select/dist/js/bootstrap-select.js',
       'components/datatables/media/js/jquery.dataTables.js',
       'components/bootstrap-switch/dist/js/bootstrap-switch.js',
-      'components/bootstrap-treeview/src/js/bootstrap-treeview.js',
+      'components/patternfly-bootstrap-treeview/src/js/bootstrap-treeview.js',
       'components/c3/c3.js',
       'components/d3/d3.js',
       'node_modules/jasmine-jquery/lib/jasmine-jquery.js',

@@ -32,7 +32,7 @@ exclude: [
   "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css",
   "bower_components/bootstrap-select/dist/css/bootstrap-select.css",
   "bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css",
-  "bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.css",
+  "bower_components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.css",
   "bower_components/c3/c3.css",
   "bower_components/datatables/media/css/jquery.dataTables.css",
   "bower_components/datatables-colreorder/css/dataTables.colReorder.css",
