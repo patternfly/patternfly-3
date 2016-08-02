@@ -9,69 +9,50 @@
   &.layout-pf-fixed {
     &.transitions .container-pf-nav-pf-vertical {
       transition: @flyout-transition-pf;
+      -webkit-transition: margin-left @nav-pf-container-transition-period;
+      -moz-transition: margin-left @nav-pf-container-transition-period;
+      -o-transition: margin-left @nav-pf-container-transition-period;
     }
     body {
       padding-top: @navbar-pf-height; // make space for the navbar
     }
     .container-pf-nav-pf-vertical {
       margin-left: @nav-pf-vertical-width;
-      &.hidden-icons-pf {
-        margin-left: @nav-pf-vertical-hidden-icons-width;
-      }
       &.collapsed-nav {
-        margin-left: 0; // adjust space for the collapsed left nav
+        margin-left: @nav-pf-vertical-collapsed-width;
+        &.hidden-icons-pf {
+          margin-left: 0;
+        }
       }
       &.hidden-nav {
         margin-left: 0; // remove space as left nav is hidden
       }
-      &.container-pf-nav-pf-vertical-with-secondary {
-        &.collapsed-nav {
-          margin-left: @nav-pf-vertical-collapsed-width;
-          &.hidden-icons-pf {
-            margin-left: 0;
-          }
+      &.container-pf-nav-pf-vertical-with-sub-menus {
+        &.hide-nav-pf {
+          margin-left: 0 !important;
         }
-        &.collapsed-secondary-nav-pf, &.secondary-visible-pf.collapsed-secondary-nav-pf {
-          margin-left: @nav-pf-vertical-secondary-width;
-        }
-        &.secondary-visible-pf {
+        &.collapsed-secondary-nav-pf, &.collapsed-tertiary-nav-pf {
           margin-left: @nav-pf-vertical-width;
-          &.hidden-icons-pf {
-            margin-left: @nav-pf-vertical-hidden-icons-width;
-          }
+        }
+      }
+      &.nav-pf-persistent-secondary.secondary-visible-pf {
+        @media (min-width: 1200px) {
+          margin-left: (@nav-pf-vertical-width + @nav-pf-vertical-width);
           &.hidden-nav {
             margin-left: 0; // remove space as left nav is hidden
           }
+          &.collapsed-secondary-nav-pf {
+            margin-left: @nav-pf-vertical-width;
+          }
           &.collapsed-nav {
-            margin-left: @nav-pf-vertical-collapsed-width;
+            margin-left: (@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+            &.collapsed-secondary-nav-pf {
+              margin-left: @nav-pf-vertical-width;
+            }
             &.hidden-icons-pf {
               margin-left: 0;
             }
           }
-          @media (min-width: 1200px) {
-            margin-left: (@nav-pf-vertical-width + @nav-pf-vertical-secondary-width);
-            &.hidden-icons-pf {
-              margin-left: (@nav-pf-vertical-hidden-icons-width + @nav-pf-vertical-secondary-width);
-            }
-            &.hidden-nav {
-              margin-left: 0; // remove space as left nav is hidden
-            }
-            &.collapsed-secondary-nav-pf {
-              margin-left: @nav-pf-vertical-secondary-width;
-            }
-            &.collapsed-nav {
-              margin-left: (@nav-pf-vertical-collapsed-width + @nav-pf-vertical-secondary-width);
-              &.collapsed-secondary-nav-pf {
-                margin-left: @nav-pf-vertical-secondary-width;
-              }
-              &.hidden-icons-pf {
-                margin-left: 0;
-              }
-            }
-          }
-        }
-        &.hidden-nav {
-          margin-left: 0; // remove space as left nav is hidden
         }
       }
     }

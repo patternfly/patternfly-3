@@ -218,6 +218,15 @@
   }
 }(jQuery));
 
+// Util: definition of breakpoint sizes for tablet and desktop modes
+(function ($) {
+  'use strict';
+  $.pfBreakpoints = {
+    'tablet': 768,
+    'desktop': 1200
+  };
+}(jQuery));
+
 // Util: PatternFly Collapsible Left Hand Navigation
 // Must have navbar-toggle in navbar-pf-alt for expand/collapse
 (function ($) {
@@ -230,10 +239,6 @@
       bodyContentElement = $('.container-pf-alt-nav-pf-vertical-alt'),
       toggleNavBarButton = $('.navbar-toggle'),
       explicitCollapse = false,
-      breakpoints = {
-        'tablet': 768,
-        'desktop': 1024
-      },
       checkNavState = function () {
         var width = $(window).width();
 
@@ -244,13 +249,13 @@
         bodyContentElement.removeClass('collapsed-nav hidden-nav');
 
         // Check to see if the nav needs to collapse
-        if (width < breakpoints.desktop || explicitCollapse) {
+        if (width < $.pfBreakpoints.desktop || explicitCollapse) {
           navElement.addClass('collapsed');
           bodyContentElement.addClass('collapsed-nav');
         }
 
         // Check to see if we need to move down to the mobile state
-        if (width < breakpoints.tablet) {
+        if (width < $.pfBreakpoints.tablet) {
           //Set the nav to being hidden
           navElement.addClass('hidden');
 
@@ -1053,7 +1058,7 @@
   };
 }(jQuery));
 
-// Util: PatternFly Collapsible Vertical Navigation
+// Util: PatternFly Vertical Navigation
 // Must have navbar-toggle in navbar-pf-vertical for expand/collapse
 (function ($) {
   'use strict';
@@ -1065,16 +1070,14 @@
       toggleNavBarButton = $('.navbar-toggle'),
       explicitCollapse = false,
       subDesktop = false,
-      breakpoints = {
-        'tablet': 768,
-        'desktop': 1200
-      },
+      hoverDelay = 500,
+      hideDelay = hoverDelay + 200,
 
       inMobileState = function () {
         return bodyContentElement.hasClass('hidden-nav');
       },
 
-      forceResize = function () {
+      forceResize = function (delay) {
         setTimeout(function () {
           if (window.dispatchEvent) {
             window.dispatchEvent(new Event('resize'));
@@ -1083,7 +1086,7 @@
           if ($(document).fireEvent) {
             $(document).fireEvent('onresize');
           }
-        }, 100);
+        }, delay);
       },
 
       showSecondaryMenu = function () {
@@ -1095,7 +1098,7 @@
         // Dispatch a resize event when showing the secondary menu in non-subdesktop state to
         // allow content to adjust to the secondary menu sizing
         if (!subDesktop) {
-          forceResize();
+          forceResize(100);
         }
       },
 
@@ -1107,36 +1110,30 @@
         });
       },
 
-      showSecondaryMenuForItem = function (item) {
-        if (item.find('.nav-pf-persistent-secondary').length > 0) {
-          showSecondaryMenu();
-        } else {
-          hideSecondaryMenu();
-          navElement.removeClass('show-mobile-nav');
-        }
-      },
-
-      setActiveItem = function (item) {
+      setPrimaryActiveItem = function (item) {
         // Make the clicked on item active
-        $(document).find('.nav-pf-vertical > .list-group > .list-group-item').each(function (index, element) {
-          if ($(element).hasClass('active')) {
-            $(element).removeClass('active');
-          }
+        $(document).find('.nav-pf-vertical > .list-group > .list-group-item.active').each(function (index, element) {
+          $(element).removeClass('active');
         });
-        if (!item.hasClass('active')) {
-          item.addClass('active');
-        }
+        item.addClass('active');
       },
 
-      setSecondaryActiveItem = function ($parent, item) {
-        var parentItem = $(document).find('[data-target="#' + $parent.attr('id') + '"]');
-
-        $parent.find('.list-group > .list-group-item').each(function (index, element) {
+      setSecondaryActiveItem = function (item, $primaryParent) {
+        $(document).find('.nav-pf-secondary-nav > .list-group > .list-group-item.active').each(function (index, element) {
           $(element).removeClass('active');
         });
         item.addClass('active');
 
-        setActiveItem($(parentItem));
+        setPrimaryActiveItem($primaryParent);
+      },
+
+      setTertiaryActiveItem = function (item, $secondaryParent, $primaryParent) {
+        $(document).find('.nav-pf-tertiary-nav > .list-group > .list-group-item.active').each(function (index, element) {
+          $(element).removeClass('active');
+        });
+        item.addClass('active');
+
+        setSecondaryActiveItem($secondaryParent, $primaryParent);
       },
 
       updateSecondaryMenuDisplayAfterSelection = function () {
@@ -1171,11 +1168,55 @@
         }
       },
 
+      updateTertiaryCollapsedState = function (setCollapsed, collapsedItem) {
+        if (setCollapsed) {
+          collapsedItem.addClass('collapsed');
+          navElement.addClass('collapsed-tertiary-nav-pf');
+          bodyContentElement.addClass('collapsed-tertiary-nav-pf');
+          updateSecondaryCollapsedState(false);
+        } else {
+          if (collapsedItem) {
+            collapsedItem.removeClass('collapsed');
+          } else {
+            // Remove any collapsed tertiary menus
+            navElement.find('[data-toggle="collapse-tertiary-nav"]').each(function (index, element) {
+              var $e = $(element);
+              $e.removeClass('collapsed');
+            });
+          }
+          navElement.removeClass('collapsed-tertiary-nav-pf');
+          bodyContentElement.removeClass('collapsed-tertiary-nav-pf');
+        }
+      },
+
+      updateMobileMenu = function (selected, secondaryItem) {
+        $(document).find('.list-group-item.mobile-nav-item-pf').each(function (index, item) {
+          $(item).removeClass('mobile-nav-item-pf');
+        });
+        $(document).find('.list-group-item.mobile-secondary-item-pf').each(function (index, item) {
+          $(item).removeClass('mobile-secondary-item-pf');
+        });
+        if (selected) {
+          selected.addClass('mobile-nav-item-pf');
+          if (secondaryItem) {
+            secondaryItem.addClass('mobile-secondary-item-pf');
+            navElement.removeClass('show-mobile-secondary');
+            navElement.addClass('show-mobile-tertiary');
+          } else {
+            navElement.addClass('show-mobile-secondary');
+            navElement.removeClass('show-mobile-tertiary');
+          }
+        } else {
+          navElement.removeClass('show-mobile-secondary');
+          navElement.removeClass('show-mobile-tertiary');
+        }
+      },
+
       checkNavState = function () {
         var width = $(window).width(), makeSecondaryVisible;
 
         // Check to see if we need to enter/exit the mobile state
-        if (width < breakpoints.tablet) {
+        if (width < $.pfBreakpoints.tablet) {
           if (!navElement.hasClass('hidden')) {
             //Set the nav to being hidden
             navElement.addClass('hidden');
@@ -1185,8 +1226,9 @@
             bodyContentElement.removeClass('collapsed-nav');
             bodyContentElement.addClass('hidden-nav');
 
-            // Reset the secondary collapsed state
+            // Reset the collapsed states
             updateSecondaryCollapsedState(false);
+            updateTertiaryCollapsedState(false);
 
             explicitCollapse = false;
           }
@@ -1199,20 +1241,21 @@
         }
 
         // Check to see if we need to enter/exit the sub desktop state
-        if (width < breakpoints.desktop) {
+        if (width < $.pfBreakpoints.desktop) {
           if (!subDesktop) {
             // Collapse the navigation bars when entering sub desktop mode
             navElement.addClass('collapsed');
             bodyContentElement.addClass('collapsed-nav');
           }
-          if (width >= breakpoints.tablet) {
+          if (width >= $.pfBreakpoints.tablet) {
             hideSecondaryMenu();
           }
           subDesktop = true;
         } else {
-          makeSecondaryVisible = subDesktop && (navElement.find('.persistent-secondary.active').length > 0);
+          makeSecondaryVisible = subDesktop && (navElement.find('.secondary-nav-item-pf.active').length > 0);
           subDesktop = false;
           if (makeSecondaryVisible) {
+
             showSecondaryMenu();
           }
         }
@@ -1255,7 +1298,7 @@
         // Dispatch a resize event when showing the expanding then menu to
         // allow content to adjust to the menu sizing
         if (!subDesktop) {
-          forceResize();
+          forceResize(100);
         }
       },
 
@@ -1269,12 +1312,14 @@
               navElement.removeClass('show-mobile-nav');
             } else {
               // Always start at the primary menu
-              hideSecondaryMenu();
+              updateMobileMenu();
               navElement.addClass('show-mobile-nav');
             }
           } else if (navElement.hasClass('collapsed')) {
+            window.localStorage.setItem('patternfly-navigation-primary', 'expanded');
             expandMenu();
           } else {
+            window.localStorage.setItem('patternfly-navigation-primary', 'collapsed');
             collapseMenu();
           }
         });
@@ -1288,64 +1333,101 @@
       },
 
       bindMenuItemsBehavior = function (handleSelection) {
-        // Set main nav active item on click, and show secondary nav if it has a secondary nav bar
-        $(document).on('click.pf.secondarynav.data-api', '.nav-pf-vertical > .list-group > .list-group-item', function (element) {
-          var $this = $(this);
+        $(document).find('.nav-pf-vertical > .list-group > .list-group-item').each(function (index, primaryItem) {
+          var $primaryItem = $(primaryItem);
 
-          showSecondaryMenuForItem($this);
+          // Set main nav active item on click or show secondary nav if it has a secondary nav bar and we are in the mobile state
+          $primaryItem.on('click.pf.secondarynav.data-api', function (event) {
+            var $this = $(this), $secondaryItem, tertiaryItem;
 
-          if (inMobileState()) {
-            if ($this.find('.nav-pf-persistent-secondary').length > 0) {
-              $this.addClass('mobile-nav-item-pf');
+            if (!$this.hasClass('secondary-nav-item-pf')) {
+              hideSecondaryMenu();
+              if (inMobileState()) {
+                updateMobileMenu();
+                navElement.removeClass('show-mobile-nav');
+              }
+              if (handleSelection) {
+                setPrimaryActiveItem($this);
+                // Don't process the click on the item
+                event.stopImmediatePropagation();
+              }
+            } else if (inMobileState()) {
+              updateMobileMenu($this);
             } else if (handleSelection) {
-              setActiveItem($this);
-            }
-          } else if (handleSelection) {
-            setActiveItem($this);
-          }
-        });
-
-        // Set secondary menu click handlers
-        $(document).find('.nav-pf-persistent-secondary').each(function (index, element) {
-          var $e = $(element);
-
-          // Ignore clicks that are not handled
-          if (handleSelection) {
-            $e.on('click.pf.secondarynav.data-api', function (event) {
-              // Don't process the click on the parent item
-              event.stopImmediatePropagation();
-            });
-          }
-
-          // Set the active items on an item click
-          $e.on('click.pf.secondarynav.data-api', '.list-group > .list-group-item', function (event) {
-            updateSecondaryMenuDisplayAfterSelection();
-
-            if (handleSelection) {
-              setSecondaryActiveItem($e, $(this));
-              // Don't process the click on the parent item
+              $secondaryItem = $($primaryItem.find('.nav-pf-secondary-nav > .list-group > .list-group-item')[0]);
+              if ($secondaryItem.hasClass('tertiary-nav-item-pf')) {
+                tertiaryItem = $secondaryItem.find('.nav-pf-tertiary-nav > .list-group > .list-group-item')[0];
+                setTertiaryActiveItem($(tertiaryItem), $secondaryItem, $primaryItem);
+              } else {
+                setSecondaryActiveItem($secondaryItem, $this);
+              }
               event.stopImmediatePropagation();
             }
           });
 
+          $primaryItem.find('.nav-pf-secondary-nav > .list-group > .list-group-item').each(function (index, secondaryItem) {
+            var $secondaryItem = $(secondaryItem);
+            // Set secondary nav active item on click or show tertiary nav if it has a tertiary nav bar and we are in the mobile state
+            $secondaryItem.on('click.pf.secondarynav.data-api', function (event) {
+              var $this = $(this), tertiaryItem;
+              if (!$this.hasClass('tertiary-nav-item-pf')) {
+                if (inMobileState()) {
+                  updateMobileMenu();
+                  navElement.removeClass('show-mobile-nav');
+                }
+                updateSecondaryMenuDisplayAfterSelection();
+                if (handleSelection) {
+                  setSecondaryActiveItem($secondaryItem, $primaryItem);
+                  // Don't process the click on the item
+                  event.stopImmediatePropagation();
+                }
+              } else if (inMobileState()) {
+                updateMobileMenu($this, $primaryItem);
+                event.stopImmediatePropagation();
+              } else if (handleSelection) {
+                tertiaryItem = $secondaryItem.find('.nav-pf-tertiary-nav > .list-group > .list-group-item')[0];
+                setTertiaryActiveItem($(tertiaryItem), $secondaryItem, $primaryItem);
+                event.stopImmediatePropagation();
+              }
+            });
+
+            $secondaryItem.find('.nav-pf-tertiary-nav > .list-group > .list-group-item').each(function (index, tertiaryItem) {
+              var $tertiaryItem = $(tertiaryItem);
+              // Set tertiary nav active item on click
+              $tertiaryItem.on('click.pf.secondarynav.data-api', function (event) {
+                if (inMobileState()) {
+                  updateMobileMenu();
+                  navElement.removeClass('show-mobile-nav');
+                }
+                updateSecondaryMenuDisplayAfterSelection();
+                if (handleSelection) {
+                  setTertiaryActiveItem($tertiaryItem, $secondaryItem, $primaryItem);
+                  // Don't process the click on the item
+                  event.stopImmediatePropagation();
+                }
+              });
+            });
+          });
+        });
+
+        $(document).find('.secondary-nav-item-pf').each(function (index, secondaryItem) {
+          var $secondaryItem = $(secondaryItem);
+
           // Collapse the secondary nav bar when the toggle is clicked
-          $e.on('click.pf.secondarynav.data-api', '[data-toggle="collapse-secondary-nav"]', function (e) {
+          $secondaryItem.on('click.pf.secondarynav.data-api', '[data-toggle="collapse-secondary-nav"]', function (e) {
             var $this = $(this);
             if (inMobileState()) {
-              hideSecondaryMenu();
-              forceHideSecondaryMenu();
+              updateMobileMenu();
+              e.stopImmediatePropagation();
             } else {
               if ($this.hasClass('collapsed')) {
+                window.localStorage.setItem('patternfly-navigation-secondary', 'expanded');
+                window.localStorage.setItem('patternfly-navigation-tertiary', 'expanded');
                 updateSecondaryCollapsedState(false, $this);
-                if ($(window).width() < breakpoints.desktop) {
-                  forceHideSecondaryMenu();
-                }
+                forceHideSecondaryMenu();
               } else {
-                if ($this.parents('.persistent-secondary.active').length > 0) {
-                  updateSecondaryCollapsedState(true, $this);
-                } else {
-                  forceHideSecondaryMenu();
-                }
+                window.localStorage.setItem('patternfly-navigation-secondary', 'collapsed');
+                updateSecondaryCollapsedState(true, $this);
               }
             }
             navElement.removeClass('hover-secondary-nav-pf');
@@ -1354,23 +1436,132 @@
               e.stopImmediatePropagation();
             }
           });
+
+          $secondaryItem.find('.tertiary-nav-item-pf').each(function (index, primaryItem) {
+            var $primaryItem = $(primaryItem);
+            // Collapse the tertiary nav bar when the toggle is clicked
+            $primaryItem.on('click.pf.tertiarynav.data-api', '[data-toggle="collapse-tertiary-nav"]', function (e) {
+              var $this = $(this);
+              if (inMobileState()) {
+                updateMobileMenu($secondaryItem);
+                e.stopImmediatePropagation();
+              } else {
+                if ($this.hasClass('collapsed')) {
+                  window.localStorage.setItem('patternfly-navigation-secondary', 'expanded');
+                  window.localStorage.setItem('patternfly-navigation-tertiary', 'expanded');
+                  updateTertiaryCollapsedState(false, $this);
+                  forceHideSecondaryMenu();
+                } else {
+                  window.localStorage.setItem('patternfly-navigation-tertiary', 'collapsed');
+                  updateTertiaryCollapsedState(true, $this);
+                }
+              }
+              navElement.removeClass('hover-secondary-nav-pf');
+              navElement.removeClass('hover-tertiary-nav-pf');
+              if (handleSelection) {
+                // Don't process the click on the parent item
+                e.stopImmediatePropagation();
+              }
+            });
+          });
         });
 
-        // Show secondary nav bar on hover of nav items
-        $(document).on('mouseover.pf.secondarynav.data-api', '.persistent-secondary', function (e) {
+        // Show secondary nav bar on hover of secondary nav items
+        $(document).on('mouseenter.pf.tertiarynav.data-api', '.secondary-nav-item-pf', function (e) {
           if (!inMobileState()) {
-            navElement.addClass('hover-secondary-nav-pf');
+            var $this = $(this);
+            if ($this[0].navUnHoverTimeout !== undefined) {
+              clearTimeout($this[0].navUnHoverTimeout);
+              $this[0].navUnHoverTimeout = undefined;
+            } else if ($this[0].navHoverTimeout === undefined) {
+              $this[0].navHoverTimeout = setTimeout(function () {
+                navElement.addClass('hover-secondary-nav-pf');
+                $this.addClass('is-hover');
+                $this[0].navHoverTimeout = undefined;
+              }, hoverDelay);
+            }
           }
         });
-        $(document).on('mouseout.pf.secondarynav.data-api', '.persistent-secondary', function (e) {
-          navElement.removeClass('hover-secondary-nav-pf');
+
+        $(document).on('mouseleave.pf.tertiarynav.data-api', '.secondary-nav-item-pf', function (e) {
+          var $this = $(this);
+          if ($this[0].navHoverTimeout !== undefined) {
+            clearTimeout($this[0].navHoverTimeout);
+            $this[0].navHoverTimeout = undefined;
+          } else if ($this[0].navUnHoverTimeout === undefined) {
+            $this[0].navUnHoverTimeout = setTimeout(function () {
+              if (navElement.find('.secondary-nav-item-pf.is-hover').length <= 1) {
+                navElement.removeClass('hover-secondary-nav-pf');
+              }
+              $this.removeClass('is-hover');
+              $this[0].navUnHoverTimeout = undefined;
+            }, hideDelay);
+          }
+        });
+
+        // Show tertiary nav bar on hover of secondary nav items
+        $(document).on('mouseover.pf.tertiarynav.data-api', '.tertiary-nav-item-pf', function (e) {
+          if (!inMobileState()) {
+            var $this = $(this);
+            if ($this[0].navUnHoverTimeout !== undefined) {
+              clearTimeout($this[0].navUnHoverTimeout);
+              $this[0].navUnHoverTimeout = undefined;
+            } else if ($this[0].navHoverTimeout === undefined) {
+              $this[0].navHoverTimeout = setTimeout(function () {
+                navElement.addClass('hover-tertiary-nav-pf');
+                $this.addClass('is-hover');
+                $this[0].navHoverTimeout = undefined;
+              }, hoverDelay);
+            }
+          }
+        });
+        $(document).on('mouseout.pf.tertiarynav.data-api', '.tertiary-nav-item-pf', function (e) {
+          var $this = $(this);
+          if ($this[0].navHoverTimeout !== undefined) {
+            clearTimeout($this[0].navHoverTimeout);
+            $this[0].navHoverTimeout = undefined;
+          } else if ($this[0].navUnHoverTimeout === undefined) {
+            $this[0].navUnHoverTimeout = setTimeout(function () {
+              if (navElement.find('.tertiary-nav-item-pf.is-hover').length <= 1) {
+                navElement.removeClass('hover-tertiary-nav-pf');
+              }
+              $this.removeClass('is-hover');
+              $this[0].navUnHoverTimeout = undefined;
+            }, hideDelay);
+          }
         });
       },
 
-      setTooltips = function () {
-        $('.nav-pf-vertical [data-toggle="tooltip"]').tooltip({'container': 'body', 'delay': { 'show': '500', 'hide': '200' }});
+      loadFromLocalStorage = function () {
+        if (inMobileState()) {
+          return;
+        }
 
-        $(".nav-pf-vertical").on("show.bs.tooltip", function (e) {
+        if (window.localStorage.getItem('patternfly-navigation-primary') === 'collapsed') {
+          collapseMenu();
+        }
+
+        if ($('.nav-pf-vertical.nav-pf-vertical-collapsible-menus').length > 0) {
+          if (window.localStorage.getItem('patternfly-navigation-secondary') === 'collapsed') {
+            updateSecondaryCollapsedState(true, $('.secondary-nav-item-pf.active [data-toggle=collapse-secondary-nav]'));
+          }
+
+          if (window.localStorage.getItem('patternfly-navigation-tertiary') === 'collapsed') {
+            updateTertiaryCollapsedState(true, $('.tertiary-nav-item-pf.active [data-toggle=collapse-tertiary-nav]'));
+          }
+        }
+      },
+
+      setTooltips = function () {
+        var tooltipOptions = {
+          container: 'body',
+          placement: 'bottom',
+          delay: { 'show': '500', 'hide': '200' },
+          template: '<div class="nav-pf-vertical-tooltip tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        };
+        $('.nav-pf-vertical [data-toggle="tooltip"]').tooltip(tooltipOptions);
+
+        $('.nav-pf-vertical').on("show.bs.tooltip", function (e) {
           if (!$(this).hasClass("collapsed")) {
             return false;
           }
@@ -1389,6 +1580,13 @@
 
         //Set tooltips
         setTooltips();
+
+        loadFromLocalStorage();
+
+        // Show the nav menus
+        navElement.removeClass('hide-nav-pf');
+        bodyContentElement.removeClass('hide-nav-pf');
+        forceResize(250);
       };
 
     //Listen for the window resize event and collapse/hide as needed
@@ -1400,3 +1598,4 @@
     init(handleItemSelections);
   };
 }(jQuery));
+
