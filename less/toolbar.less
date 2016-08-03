@@ -46,6 +46,7 @@
 }
 .toolbar-pf-actions {
   display: table;
+  margin-bottom: 10px;
   width: 100%;
   @media (min-width: @grid-float-breakpoint) {
     .toolbar-pf-filter {
@@ -53,28 +54,133 @@
       width: 25%;
     }
   }
-  .toolbar-pf-view-selector {
-    font-size: (@font-size-base + 4);
-    @media (min-width: @grid-float-breakpoint) {
-      border-right: 0;
-      float: right;
-      padding-right: 0;
-    }
-    .active a {
+}
+.toolbar-pf-view-selector {
+  font-size: (@font-size-base + 4);
+  @media (min-width: @grid-float-breakpoint) {
+    border-right: 0;
+    float: right;
+    padding-right: 0;
+  }
+  .active a {
+    color: @link-color;
+    cursor: default;
+  }
+  a {
+    color: @gray-darker;
+    &:hover{
       color: @link-color;
-      cursor: default;
     }
-    a {
-      color: @gray-darker;
-      &:hover{
-        color: @link-color;
-      }
-    }
-    .list-inline {
-      margin-bottom: 0;
+  }
+  .list-inline {
+    margin-bottom: 0;
+  }
+}
+.toolbar-pf-action-right{
+  float: right;
+  @media (max-width: @grid-float-breakpoint) {
+    float: none;
+  }
+  .toolbar-pf-view-selector {
+    @media (min-width: @grid-float-breakpoint) {
+      float: left;
     }
   }
 }
+.toolbar-pf-find {
+  font-size: (@font-size-base + 2);
+  position: relative;
+  .btn{
+    outline: none;
+  }
+}
+.find-pf-dropdown-container{
+  background: @color-pf-white;
+  border: solid 1px @color-pf-black-400;
+  display: none;
+  left: -200px;
+  padding: 5px;
+  position: absolute;
+  top: 35px;
+  width: 300px;
+  z-index: 10000;
+  @media (max-width: @grid-float-breakpoint) {
+    left: 30px;
+    top: -5px;
+    width: calc(100% - 30px);
+  }
+  &:before,
+  &:after{
+    content: "";
+    display:block;
+    height:0;
+    position: absolute;
+    width:0;
+  }
+  &:before{
+    border-bottom:11px solid @color-pf-black-400;
+    border-left:11px solid transparent;
+    border-right:11px solid transparent;
+    left: 215px;
+    top: -12px;
+    @media (max-width: @grid-float-breakpoint) {
+      border-bottom:11px solid transparent;
+      border-right:11px solid @color-pf-black-400;
+      border-top:11px solid transparent;
+      left: -22px;
+      top: 8px;
+    }
+  }
+  &:after{
+    border-bottom:10px solid @color-pf-white;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    left: 216px;
+    top: -10px;
+    @media (max-width: @grid-float-breakpoint) {
+      border-bottom:10px solid transparent;
+      border-right:10px solid @color-pf-white;
+      border-top:10px solid transparent;
+      left: -20px;
+      top: 9px;
+    }
+  }
+  input{
+    padding: 5px 95px 5px 5px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+  }
+  .find-pf-buttons{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    .btn{
+      margin-left: 2px;
+    }
+    span{
+      cursor: pointer;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    .find-pf-nums{
+      color: @color-pf-black-500;
+      font-size: (@font-size-base + 2);
+    }
+    .btn-link .fa-angle-up,
+    .btn-link .fa-angle-down{
+      font-weight: bold;
+      font-size: (@font-size-base + 6);
+    }
+    .btn-find-close{
+      font-size: (@font-size-base + 2);
+    }
+  }
+}
+
 .toolbar-pf-results {
   border-top: 1px solid @sidebar-pf-border-color;
   margin-top: (@grid-gutter-width/4);
