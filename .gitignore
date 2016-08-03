@@ -22,7 +22,6 @@ npm
 npm.cmd
 
 # Ignore generated files
-patternfly.spec
 build
 
 # Ignore Desktop Services Store
