@@ -27,6 +27,3 @@ patternfly.spec
 
 # Ignore Desktop Services Store
 .DS_Store
-
-#Ignore generated dist files
-/dist
