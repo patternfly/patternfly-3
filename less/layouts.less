@@ -106,3 +106,25 @@
     }
   }
 }
+// when nav is fixed, set padding-top to the main container
+.navbar-fixed-top + .container-fluid{
+  padding-top: 72px;
+  @media (max-width: @grid-float-breakpoint){
+    padding-top: 38px;
+  }
+}
+.navbar-fixed-top + .nav-pf-vertical + .container-fluid{
+  padding-top: @navbar-pf-height;
+  padding-left: ( @nav-pf-vertical-width + 20px );
+  @media (max-width: @grid-float-breakpoint){
+    padding-left: 20px;
+  }
+}
+
+// move the transitions out of layout-pf-fixed
+.transitions .container-pf-nav-pf-vertical {
+  transition: @flyout-transition-pf;
+  -webkit-transition: margin-left @nav-pf-container-transition-period;
+  -moz-transition: margin-left @nav-pf-container-transition-period;
+  -o-transition: margin-left @nav-pf-container-transition-period;
+}
