@@ -32,7 +32,7 @@
     "nsp": "^2.6.1"
   },
   "optionalDependencies": {
-    "bootstrap-datepicker": "~1.6.1",
+    "bootstrap-datepicker": "~1.6.4",
     "bootstrap-select": "~1.10.0",
     "bootstrap-switch": "~3.3.2",
     "bootstrap-touchspin": "~3.1.1",
