@@ -44,7 +44,7 @@
     "google-code-prettify": "~1.0.1",
     "jquery-match-height": "~0.7.0",
     "moment": "~2.14.1",
-    "patternfly-bootstrap-combobox": "~1.0.0",
+    "patternfly-bootstrap-combobox": "~1.1.7",
     "patternfly-bootstrap-treeview": "~1.0.0"
   },
   "scripts": {
