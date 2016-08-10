@@ -9,10 +9,26 @@
   }
 }
 .list-group-item {
+	border-top: 0;
   border-left: 0;
   border-right: 0;
+  margin-bottom: 0;
 }
 
 .list-group-item-heading {
   font-weight: 600;
+}
+
+.list-group-item {
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    border-top: solid 1px @list-group-active-border;
+    margin-top: -1px;
+    z-index: auto;
+  }
+  &.active:first-child{
+    border-top: 1px solid @list-group-active-border !important;
+    margin-top: -1px;
+  }
 }
