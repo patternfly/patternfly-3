@@ -8,9 +8,9 @@
       "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.7.tgz"
     },
     "bootstrap-datepicker": {
-      "version": "1.6.1",
-      "from": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.6.1.tgz",
-      "resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.6.1.tgz"
+      "version": "1.6.4",
+      "from": "bootstrap-datepicker@>=1.6.4 <1.7.0",
+      "resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.6.4.tgz"
     },
     "bootstrap-select": {
       "version": "1.10.0",
@@ -75,9 +75,9 @@
       "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.6.3.tgz"
     },
     "google-code-prettify": {
-      "version": "1.0.1",
-      "from": "https://registry.npmjs.org/google-code-prettify/-/google-code-prettify-1.0.1.tgz",
-      "resolved": "https://registry.npmjs.org/google-code-prettify/-/google-code-prettify-1.0.1.tgz"
+      "version": "1.0.5",
+      "from": "google-code-prettify@>=1.0.5 <1.1.0",
+      "resolved": "https://registry.npmjs.org/google-code-prettify/-/google-code-prettify-1.0.5.tgz"
     },
     "jquery": {
       "version": "2.1.4",
@@ -95,9 +95,8 @@
       "resolved": "https://registry.npmjs.org/moment/-/moment-2.14.1.tgz"
     },
     "patternfly-bootstrap-combobox": {
-      "version": "1.0.0",
-      "from": "https://registry.npmjs.org/patternfly-bootstrap-combobox/-/patternfly-bootstrap-combobox-1.0.0.tgz",
-      "resolved": "https://registry.npmjs.org/patternfly-bootstrap-combobox/-/patternfly-bootstrap-combobox-1.0.0.tgz"
+      "version": "1.1.7",
+      "from": "patternfly-bootstrap-combobox@>=1.1.7 <1.2.0"
     },
     "patternfly-bootstrap-treeview": {
       "version": "1.0.0",
