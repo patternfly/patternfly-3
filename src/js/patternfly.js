@@ -937,7 +937,7 @@
       setTimeout(function () {
         // Set the max-height for the collapse panels
         parentElement.find('[data-toggle="collapse"]').each($.proxy(function (i, element) {
-          var $element, selector, $target, scrollElement, innerHeight;
+          var $element, selector, $target, scrollElement, innerHeight = 0;
           $element = $(element);
 
           // Determine the selector to find the target
