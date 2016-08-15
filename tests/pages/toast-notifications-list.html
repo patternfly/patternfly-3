@@ -1,0 +1,65 @@
+---
+categories: [Widgets]
+layout: page
+title: Toast Notifications List
+resource: true
+---
+  <div class="toast-notifications-list-pf"></div>
+  <form role="form" id="inputValues">
+    <label class="radio-inline">
+      <input type="radio" name="optradio" value="success">OK
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" value="info">Info
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" value="warning">Warning
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio"value="danger">Danger
+    </label>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Show Close</label>
+    </div>
+  </form>
+  <div>
+    <button id="addToastButton">Add Toast Notification</button>
+  </div>
+
+  <script>
+    var toastCount = 0;
+    $('#addToastButton').click(function() {
+      var statusVal = $('#inputValues input:radio:checked').val() || 'info';
+      var statusIcon = 'pficon-info';
+      var showClose = $('#inputValues input:checkbox:checked').length > 0;
+      if (statusVal == 'success') {
+        statusIcon = 'pficon-ok';
+      } else if (statusVal == 'warning') {
+        statusIcon = 'pficon-warning-triangle-o';
+      } else if (statusVal == 'danger') {
+        statusIcon = 'pficon-error-circle-o';
+      }
+
+      var toastId = "toast-notification-" + toastCount++;
+      var toastHtml =
+        '<div id="' + toastId  + '">' +
+        '  <div class="toast-pf alert alert-' + statusVal + ' alert-dismissable">' +
+        '    <span class="pficon '+ statusIcon + '"></span>' +
+        '    <strong>Example</strong> This is an example toast notification';
+      if (showClose) {
+        toastHtml +=
+          '    <button id="closeButton" type="button" class="close" aria-hidden="true">' +
+          '      <span class="pficon pficon-close' + '">' +
+          '      </span>' +
+          '    </button>';
+      }
+      toastHtml +=
+        '  </div>' +
+        '</div>';
+      $('.toast-notifications-list-pf').append(toastHtml);
+      $('#' + toastId).find('#closeButton').click(function () {
+        $('#' + toastId).remove();
+      });
+
+    });
+  </script>
