@@ -65,7 +65,7 @@
 }
 
 .card-pf-body {
-  margin: (@grid-gutter-width / 2) 0;
+  margin: (@grid-gutter-width / 2) 0 0;
   padding: 0 0 (@grid-gutter-width / 2);
   .card-pf-aggregate-status & {
     margin-top: (@grid-gutter-width / 4);
@@ -224,6 +224,10 @@
 
 .cards-pf {
   background: @card-pf-container-bg-color;
+  .row-cards-pf {
+    padding: 0 20px;
+    &:first-child { padding-top: 20px; }
+  }
 }
 
 .container-cards-pf {
