@@ -41,6 +41,29 @@
     cursor: pointer;
     display: block;
   }
+  &.drawer-pf-expanded {
+    left: 270px;
+    width: inherit;
+    .drawer-pf-toggle-expand:before {
+      content: "\f101";
+    }
+  }
+}
+.drawer-pf-toggle-expand {
+  color: inherit;
+  cursor: pointer;
+  left: 0;
+  padding: 2px 5px;
+  position: absolute;
+  &:before {
+    content: "\f100";
+    font-family: "FontAwesome";
+  }
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .drawer-pf-action {
@@ -77,6 +100,12 @@
   }
   &:hover { background-color: @color-pf-blue-50; }
   &.unread .drawer-pf-notification-message { font-weight: bold; }
+  &.expanded-notification {
+    .date {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
 }
 
 .drawer-pf-notification-info,
@@ -84,6 +113,9 @@
   display: block;
   padding-left: 27px;
   padding-right: 19px;
+  .expanded-notification & {
+    display: inline-block;
+  }
 }
 
 .drawer-pf-notifications-non-clickable .drawer-pf-notification:hover {
