@@ -4721,6 +4721,29 @@ a.disabled {
   cursor: pointer;
   display: block;
 }
+.drawer-pf.drawer-pf-expanded {
+  left: 270px;
+  width: inherit;
+}
+.drawer-pf.drawer-pf-expanded .drawer-pf-toggle-expand:before {
+  content: "\f101";
+}
+.drawer-pf-toggle-expand {
+  color: inherit;
+  cursor: pointer;
+  left: 0;
+  padding: 2px 5px;
+  position: absolute;
+}
+.drawer-pf-toggle-expand:before {
+  content: "\f100";
+  font-family: "FontAwesome";
+}
+.drawer-pf-toggle-expand:hover,
+.drawer-pf-toggle-expand:focus {
+  color: inherit;
+  text-decoration: none;
+}
 .drawer-pf-action .btn-link {
   color: #0088ce;
   padding: 10px 0;
@@ -4757,11 +4780,19 @@ a.disabled {
 .drawer-pf-notification.unread .drawer-pf-notification-message {
   font-weight: bold;
 }
+.drawer-pf-notification.expanded-notification .date {
+  border-right: none;
+  padding-right: 0;
+}
 .drawer-pf-notification-info,
 .drawer-pf-notification-message {
   display: block;
   padding-left: 27px;
   padding-right: 19px;
+}
+.expanded-notification .drawer-pf-notification-info,
+.expanded-notification .drawer-pf-notification-message {
+  display: inline-block;
 }
 .drawer-pf-notifications-non-clickable .drawer-pf-notification:hover {
   background-color: #fff;

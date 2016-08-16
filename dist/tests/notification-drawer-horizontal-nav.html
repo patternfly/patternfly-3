@@ -111,6 +111,7 @@
     </ul>
     <div class="drawer-pf hide drawer-pf-notifications-non-clickable">
   <div class="drawer-pf-title">
+    <a class="drawer-pf-toggle-expand"></a>
     <h3 class="text-center">Notifications Drawer</h3>
   </div>
   <div class="panel-group" id="notification-drawer-accordion">
@@ -787,6 +788,19 @@
         $drawer.addClass('hide');
       }
     });
+    $('.drawer-pf-toggle-expand').click(function() {
+      var $drawer = $('.drawer-pf');
+      var $drawerNotifications = $drawer.find('.drawer-pf-notification');
+
+      if ($drawer.hasClass('drawer-pf-expanded')) {
+        $drawer.removeClass('drawer-pf-expanded');
+        $drawerNotifications.removeClass('expanded-notification');
+      } else {
+        $drawer.addClass('drawer-pf-expanded');
+        $drawerNotifications.addClass('expanded-notification');
+      }
+    });
+
     // Mark All Read
     $('.panel-collapse').each(function (index, panel) {
       var $panel = $(panel);
@@ -799,6 +813,7 @@
     $('#notification-drawer-accordion').initCollapseHeights('.panel-body');
   });
 </script>
+
     <ul class="nav navbar-nav navbar-primary">
       <li>
         <a href="#">First Link</a>
