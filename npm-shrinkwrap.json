@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.8.1",
+  "version": "3.9.0",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
@@ -9,7 +9,7 @@
     },
     "bootstrap-datepicker": {
       "version": "1.6.4",
-      "from": "bootstrap-datepicker@>=1.6.4 <1.7.0",
+      "from": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.6.4.tgz",
       "resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.6.4.tgz"
     },
     "bootstrap-select": {
@@ -76,7 +76,7 @@
     },
     "google-code-prettify": {
       "version": "1.0.5",
-      "from": "google-code-prettify@>=1.0.5 <1.1.0",
+      "from": "https://registry.npmjs.org/google-code-prettify/-/google-code-prettify-1.0.5.tgz",
       "resolved": "https://registry.npmjs.org/google-code-prettify/-/google-code-prettify-1.0.5.tgz"
     },
     "jquery": {
@@ -96,7 +96,8 @@
     },
     "patternfly-bootstrap-combobox": {
       "version": "1.1.7",
-      "from": "patternfly-bootstrap-combobox@>=1.1.7 <1.2.0"
+      "from": "patternfly-bootstrap-combobox@1.1.7",
+      "resolved": "https://registry.npmjs.org/patternfly-bootstrap-combobox/-/patternfly-bootstrap-combobox-1.1.7.tgz"
     },
     "patternfly-bootstrap-treeview": {
       "version": "1.0.0",
