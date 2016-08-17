@@ -3310,6 +3310,13 @@ table.datatable th:active {
 .layout-pf.layout-pf-fixed body {
   padding-top: 60px;
 }
+.layout-pf.layout-pf-fixed .navbar-pf {
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1030;
+}
 .layout-pf.layout-pf-fixed .container-pf-nav-pf-vertical {
   margin-left: 200px;
 }
