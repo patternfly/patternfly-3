@@ -3,9 +3,9 @@
 // --------------------------------------------------
 
 .toast-pf {
-  background-color: hsla(0, 0%, 100%, .94);
+  background-color: @color-pf-white;
   border-color: @color-pf-black-400;
-  box-shadow: 0 2px 6px hsla(0, 0%, 0%, .2);
+  box-shadow: 0 2px 6px fade(@color-pf-black, 20%);
   padding-left: 68px; //15px space between the icon and the text
   &.alert-danger > .pficon  { background-color: @alert-danger-border; }
   &.alert-info > .pficon    { background-color: @alert-info-border; }
@@ -21,7 +21,7 @@
     text-align: center;
     top: -1px;
     width: 53px;
-    &:before { color: hsla(0, 0%, 100%, .74); }
+    &:before { color: fade(@color-pf-white, 74%); }
   }
   .toast-pf-action {
     margin-left: 15px;
@@ -51,11 +51,19 @@
 }
 
 .toast-notifications-list-pf {
+  margin-left: (@grid-gutter-width / 2);
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: (@grid-gutter-width / 2);
+  top: (@grid-gutter-width / 2);
   z-index: 1050;
   .toast-pf {
+    clear: both;
     float: right;
+  }
+  @media (min-width: @screen-sm-min) {
+    max-width: calc(50%);
+  }
+  @media (min-width: @screen-md-min) {
+    max-width: calc(33.1% ); // sets the size to 4 cols;
   }
 }
