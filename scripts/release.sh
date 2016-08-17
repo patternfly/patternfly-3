@@ -172,7 +172,7 @@ cat <<- EEOOFF
     h       Display this message (default) 
     f       Force push to new repo branch (e.g., bump-v3.7.0)
     p       Publish to npm from latest repo clone
-    s       Skip repo setup (e.g., to rebuild previously created repo)
+    s       Skip new clone, clean, and install to rebuild previously created repo -- not valid with -p
     v       The version number (e.g., 3.7.0) -- not valid with -p
 
 EEOOFF
@@ -222,19 +222,25 @@ verify()
 
   prereqs
 
-  if [ -z "$SETUP" ]; then
-    setup_repo
-  fi
-
   if [ -z "$PUBLISH" ]; then
+    if [ -z "$SETUP" ]; then
+      setup_repo
+    fi
+
     bump_bower
     bump_package
-    clean
-    install
+
+    if [ -z "$SETUP" ]; then
+      clean
+      install
+    fi
+
     build
     shrinkwrap
     verify
   else
+    # Publish from the latest repo clone -- don't skip setup or clean.
+    setup_repo
     clean
     install
     build
