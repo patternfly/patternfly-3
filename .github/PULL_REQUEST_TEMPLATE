@@ -1,0 +1,19 @@
+## Description
+A few sentences describing the overall goals of the pull request's commits.
+Include related PRs or Issues
+
+## Todos
+- [ ] cross browser test
+- [ ] Are you sure it works on IE9?
+- [ ] Is it reponsive?
+
+## Steps to test or reproduce and link to rawgit
+Outline the steps to test or reproduce the PR here.
+
+```sh
+git pull --prune
+git checkout <feature_branch>
+bundle; script/server
+```
+
+Also, you may want to please any @mentions you'd like to review.
