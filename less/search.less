@@ -27,7 +27,6 @@
   }
   .has-clear {
     .clear {
-      background: transparent; // IE8
       background: fade(@color-pf-white, 0%); // to make the whole button clickable in IE9+
       border: 0;
       height: (@input-height-base - 1);
@@ -51,7 +50,7 @@
       height: (@input-height-large - 2);
       width: 28px;
     }
-    .input-sm  + .clear {
+    .input-sm + .clear {
       height: (@input-height-small - 2);
       width: 28px;
       span {

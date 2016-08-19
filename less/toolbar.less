@@ -9,9 +9,8 @@
   padding-top: (@grid-gutter-width/4);
   .form-group {
     margin-bottom: (@grid-gutter-width/4);
-    @media (min-width: @grid-float-breakpoint){
+    @media (min-width: @grid-float-breakpoint) {
       border-right: 1px solid @sidebar-pf-border-color;
-      display: table-cell;
       float: left;
       margin-bottom: 0;
       padding-left: (@grid-gutter-width/2);
@@ -70,7 +69,7 @@
   }
   a {
     color: @gray-darker;
-    &:hover{
+    &:hover {
       color: @link-color;
     }
   }
@@ -78,7 +77,7 @@
     margin-bottom: 0;
   }
 }
-.toolbar-pf-action-right{
+.toolbar-pf-action-right {
   float: right;
   @media (max-width: @grid-float-breakpoint) {
     float: none;
@@ -92,11 +91,11 @@
 .toolbar-pf-find {
   font-size: (@font-size-base + 2);
   position: relative;
-  .btn{
+  .btn {
     outline: none;
   }
 }
-.find-pf-dropdown-container{
+.find-pf-dropdown-container {
   background: @color-pf-white;
   border: solid 1px @color-pf-black-400;
   display: none;
@@ -112,14 +111,14 @@
     width: calc(100% - 30px);
   }
   &:before,
-  &:after{
+  &:after {
     content: "";
     display:block;
     height:0;
     position: absolute;
     width:0;
   }
-  &:before{
+  &:before {
     border-bottom:11px solid @color-pf-black-400;
     border-left:11px solid transparent;
     border-right:11px solid transparent;
@@ -133,7 +132,7 @@
       top: 8px;
     }
   }
-  &:after{
+  &:after {
     border-bottom:10px solid @color-pf-white;
     border-left:10px solid transparent;
     border-right:10px solid transparent;
@@ -147,20 +146,20 @@
       top: 9px;
     }
   }
-  input{
+  input {
     padding: 5px 95px 5px 5px;
     width: 100%;
     height: 30px;
     line-height: 30px;
   }
-  .find-pf-buttons{
+  .find-pf-buttons {
     position: absolute;
     right: 10px;
     top: 0;
-    .btn{
+    .btn {
       margin-left: 0 !important;
     }
-    span{
+    span {
       cursor: pointer;
       display: inline-block;
       height: 30px;
@@ -168,16 +167,16 @@
       margin-right: 5px;
       vertical-align: middle;
     }
-    .find-pf-nums{
+    .find-pf-nums {
       color: @color-pf-black-500;
       font-size: (@font-size-base + 2);
     }
     .btn-link .fa-angle-up,
-    .btn-link .fa-angle-down{
+    .btn-link .fa-angle-down {
       font-weight: bold;
       font-size: (@font-size-base + 6);
     }
-    .btn-find-close{
+    .btn-find-close {
       font-size: (@font-size-base + 2);
     }
   }
@@ -193,7 +192,7 @@
     line-height: (@grid-gutter-width/1.5);
     margin-bottom: 0;
     margin-top: 0;
-    @media (min-width: @screen-sm-min){
+    @media (min-width: @screen-sm-min) {
       line-height: @grid-gutter-width;
     }
   }

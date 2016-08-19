@@ -103,17 +103,17 @@
 }
 .wizard-pf-steps-indicator {
   font-size: ceil((@font-size-base * 1.3333));
-  display:inline-block;
-  display: -ms-flexbox; /* for IE 10 */
-  display:flex;
+  display: inline-block;
+  @supports(display: flex) {
+    display: flex;
+  }
   height: 120px;
   justify-content: space-around;
   list-style: none;
-  padding: 38px 0 0 0;
+  padding: 38px 0 0;
   li {
     counter-increment: section;
     float:left; /* float for IE9 since it doesn't support flex. If items wrap, they overlap */
-    -ms-flex: 1; /* for IE 10 */
     flex-grow: 1;
     flex-basis: 0;
     line-height: 15px;
@@ -124,7 +124,7 @@
     /* draw the line between the circles */
     &:before {
       background-color: @color-pf-black-400;
-      content: '';
+      content: "";
       height: 2px;
       left: 0;
       position: absolute;
@@ -226,7 +226,7 @@
         padding-left: 30px;
         padding-right: 5px;
         text-decoration: none;
-        transition: 0.25s;
+        transition: 250ms;
         &:before {
           content: "\f107";
           display: block;
@@ -263,7 +263,7 @@
         padding-left: 30px;
         padding-right: 5px;
         text-decoration: none;
-        transition: 0.25s;
+        transition: 250ms;
         &:before {
           content: "\f107";
           display: block;
@@ -301,7 +301,7 @@
       margin: 5px 0;
       padding-right: 10px;
       &:first-of-type {
-        margin-top: 0
+        margin-top: 0;
       }
       &:last-of-type {
         margin-bottom: 0;
@@ -309,8 +309,6 @@
       &.sub-field {
         margin-left: 10px;
       }
-    }
-    .wizard-pf-review-item-value {
     }
   }
 }

@@ -15,7 +15,7 @@
       </div>
       <div id="fixedCollapseOne" class="panel-collapse collapse in">
         <div class="panel-body">
-          {% include widgets/notification-drawer-notifications.html %}
+          {% include widgets/notification-drawer-notifications.html id="1" %}
         </div>
         <div class="drawer-pf-action">
           <button class="btn btn-link btn-block">Mark All Read</button>
@@ -33,9 +33,9 @@
       </div>
       <div id="fixedCollapseTwo" class="panel-collapse collapse">
         <div class="panel-body">
-          {% include widgets/notification-drawer-notifications.html %}
-          {% include widgets/notification-drawer-notifications.html %}
-          {% include widgets/notification-drawer-notifications.html %}
+          {% include widgets/notification-drawer-notifications.html id="2" %}
+          {% include widgets/notification-drawer-notifications.html id="3" %}
+          {% include widgets/notification-drawer-notifications.html id="4" %}
           <div class="drawer-pf-loading text-center">
             <span class="spinner spinner-xs spinner-inline"></span> Loading More
           </div>
@@ -56,9 +56,9 @@
       </div>
       <div id="fixedCollapseThree" class="panel-collapse collapse">
         <div class="panel-body">
-          {% include widgets/notification-drawer-notifications.html %}
-          {% include widgets/notification-drawer-notifications.html %}
-          {% include widgets/notification-drawer-notifications.html %}
+          {% include widgets/notification-drawer-notifications.html id="5" %}
+          {% include widgets/notification-drawer-notifications.html id="6" %}
+          {% include widgets/notification-drawer-notifications.html id="7" %}
         </div>
         <div class="drawer-pf-action">
           <button class="btn btn-link btn-block">Mark All Read</button>
