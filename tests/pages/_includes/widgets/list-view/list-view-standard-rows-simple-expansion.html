@@ -1,0 +1,574 @@
+<div class="list-group list-view-pf list-view-pf-view">
+  
+  <div class="list-group-item">
+    <div class="list-view-pf-expand">
+      <span class="fa fa-angle-right"></span>
+    </div>
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight1" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>6</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>10</strong> Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>8</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-expand-container container-fluid hidden">
+      <div class="list-view-pf-expand-close">
+        <span class="fa fa-times"></span>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-view-pf-expand-chart">
+          {% include widgets/charts/donut-utilization.html id="utilizationDonutChart1" %}
+          </div>
+        </div>
+        <div class="col-md-9">
+          <ul class="list-view-pf-expand-info">
+            <li>
+              <strong>Host Name</strong>
+              <span>Hostceph1</span>
+            </li>
+            <li>
+              <strong>Device Path</strong>
+              <span>/dev/disk/pci-0000.05:00-sas-0.2-part1</span>
+            </li>
+            <li>
+              <strong>Time</strong>
+              <span>January 15, 2016 10:45:11 AM</span>
+            </li>
+            <li>
+              <strong>Severity</strong>
+              <span>Warning</span>
+            </li>
+            <li>
+              <strong>Cluster</strong>
+              <span>Cluster 1</span>
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-expand">
+        <span class="fa fa-angle-right"></span>
+    </div>
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight2" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-magic list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event Two
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>4</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>2</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>11</strong> Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>6</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-expand-container container-fluid hidden">
+      <div class="list-view-pf-expand-close">
+        <span class="fa fa-times"></span>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-view-pf-expand-chart">
+          {% include widgets/charts/donut-utilization.html id="utilizationDonutChart2" %}
+          </div>
+        </div>
+        <div class="col-md-9">
+          <ul class="list-view-pf-expand-info">
+            <li>
+              <strong>Host Name</strong>
+              <span>Hostceph1</span>
+            </li>
+            <li>
+              <strong>Device Path</strong>
+              <span>/dev/disk/pci-0000.05:00-sas-0.2-part1</span>
+            </li>
+            <li>
+              <strong>Time</strong>
+              <span>January 15, 2016 10:45:11 AM</span>
+            </li>
+            <li>
+              <strong>Severity</strong>
+              <span>Warning</span>
+            </li>
+            <li>
+              <strong>Cluster</strong>
+              <span>Cluster 1</span>
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-expand">
+        <span class="fa fa-angle-right"></span>
+    </div>
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight3" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-gamepad list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event Three
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>4</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>2</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>10</strong> Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>6</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-expand-container container-fluid hidden">
+      <div class="list-view-pf-expand-close">
+        <span class="fa fa-times"></span>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-view-pf-expand-chart">
+          {% include widgets/charts/donut-utilization.html id="utilizationDonutChart3" %}
+          </div>
+        </div>
+        <div class="col-md-9">
+          <ul class="list-view-pf-expand-info">
+            <li>
+              <strong>Host Name</strong>
+              <span>Hostceph1</span>
+            </li>
+            <li>
+              <strong>Device Path</strong>
+              <span>/dev/disk/pci-0000.05:00-sas-0.2-part1</span>
+            </li>
+            <li>
+              <strong>Time</strong>
+              <span>January 15, 2016 10:45:11 AM</span>
+            </li>
+            <li>
+              <strong>Severity</strong>
+              <span>Warning</span>
+            </li>
+            <li>
+              <strong>Cluster</strong>
+              <span>Cluster 1</span>
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="list-group-item">
+    <div class="list-view-pf-expand">
+        <span class="fa fa-angle-right"></span>
+    </div>
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight4" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-linux list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event Four
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>4</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>2</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>10</strong> Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>6</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-expand-container container-fluid hidden">
+      <div class="list-view-pf-expand-close">
+        <span class="fa fa-times"></span>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-view-pf-expand-chart">
+          {% include widgets/charts/donut-utilization.html id="utilizationDonutChart4" %}
+          </div>
+        </div>
+        <div class="col-md-9">
+          <ul class="list-view-pf-expand-info">
+            <li>
+              <strong>Host Name</strong>
+              <span>Hostceph1</span>
+            </li>
+            <li>
+              <strong>Device Path</strong>
+              <span>/dev/disk/pci-0000.05:00-sas-0.2-part1</span>
+            </li>
+            <li>
+              <strong>Time</strong>
+              <span>January 15, 2016 10:45:11 AM</span>
+            </li>
+            <li>
+              <strong>Severity</strong>
+              <span>Warning</span>
+            </li>
+            <li>
+              <strong>Cluster</strong>
+              <span>Cluster 1</span>
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-expand">
+        <span class="fa fa-angle-right"></span>
+    </div>
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight5" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-briefcase list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event Five
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>4</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>2</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>10</strong> Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>6</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-expand-container container-fluid hidden">
+      <div class="list-view-pf-expand-close">
+        <span class="fa fa-times"></span>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-view-pf-expand-chart">
+          {% include widgets/charts/donut-utilization.html id="utilizationDonutChart5" %}
+          </div>
+        </div>
+        <div class="col-md-9">
+          <ul class="list-view-pf-expand-info">
+            <li>
+              <strong>Host Name</strong>
+              <span>Hostceph1</span>
+            </li>
+            <li>
+              <strong>Device Path</strong>
+              <span>/dev/disk/pci-0000.05:00-sas-0.2-part1</span>
+            </li>
+            <li>
+              <strong>Time</strong>
+              <span>January 15, 2016 10:45:11 AM</span>
+            </li>
+            <li>
+              <strong>Severity</strong>
+              <span>Warning</span>
+            </li>
+            <li>
+              <strong>Cluster</strong>
+              <span>Cluster 1</span>
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-expand">
+        <span class="fa fa-angle-right"></span>
+    </div>
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight6" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-coffee list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event Six
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>4</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>2</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>10</strong> Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>6</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-expand-container container-fluid hidden">
+      <div class="list-view-pf-expand-close">
+        <span class="fa fa-times"></span>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-view-pf-expand-chart">
+          {% include widgets/charts/donut-utilization.html id="utilizationDonutChart6" %}
+          </div>
+        </div>
+        <div class="col-md-9">
+          <ul class="list-view-pf-expand-info">
+            <li>
+              <strong>Host Name</strong>
+              <span>Hostceph1</span>
+            </li>
+            <li>
+              <strong>Device Path</strong>
+              <span>/dev/disk/pci-0000.05:00-sas-0.2-part1</span>
+            </li>
+            <li>
+              <strong>Time</strong>
+              <span>January 15, 2016 10:45:11 AM</span>
+            </li>
+            <li>
+              <strong>Severity</strong>
+              <span>Warning</span>
+            </li>
+            <li>
+              <strong>Cluster</strong>
+              <span>Cluster 1</span>
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).parents('.list-group-item').addClass("active");
+      } else {
+        $(this).parents('.list-group-item').removeClass("active");
+      }
+    });
+
+    // toggle dropdown menu
+    $('.list-view-pf-actions').on('show.bs.dropdown', function () {
+      var $this = $(this);
+      var $dropdown = $this.find('.dropdown');
+      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+      $dropdown.toggleClass('dropup', space < 10);
+    });
+
+    // click the list-view heading then expand a row
+    $(".list-group-item").click(function(event){
+      if(!$(event.target).is("button, a, input, .fa-ellipsis-v")){
+        $(this).find(".fa-angle-right").toggleClass("fa-angle-down")
+          .end().toggleClass("expand-active")
+            .find(".list-view-pf-expand-container").toggleClass("hidden");
+      } else {
+      }
+    })
+
+    // click the close button, hide the expand row and remove the active status
+    $(".list-view-pf-expand-close").on("click", function (){
+      $(this).parent().addClass("hidden")
+        .parent().removeClass("expand-active")
+          .find(".fa-angle-right").removeClass("fa-angle-down");
+    })
+  });
+</script>

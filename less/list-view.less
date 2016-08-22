@@ -8,12 +8,20 @@
     align-items: flex-start;
     .clearfix(); //IE9 fallback
     display: flex;
-    padding-bottom: 0;
-    padding-top: 0;
-    &.active {
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 0;
+    border-top: 0;
+    &.active,
+    &.expand-active {
       color: @list-group-link-color;
       background-color: @list-view-active-bg;
-      z-index:auto;
+      z-index: auto;
+      border-top: solid 1px @list-group-active-border;
+      margin-top: -1px;
+    }
+    &.expand-active {
+      border: solid 1px @list-group-active-border;
     }
     &:hover {
       background-color: @list-view-hover-bg;
@@ -53,9 +61,7 @@
 }
 .list-view-pf-actions {
   float: right; // IE9 fallback
-  margin-bottom: (@grid-gutter-width/2);
-  margin-left: (@grid-gutter-width/2);
-  margin-top: (@grid-gutter-width/2);
+  margin: (@grid-gutter-width/2) 15px;
   order: 2;
   button,
   > a {
@@ -122,12 +128,13 @@
 .list-view-pf-checkbox {
   border-right: 1px solid @list-view-divider;
   float: left; //IE9 fallback
-  margin-bottom: (@grid-gutter-width/2);
-  margin-right: 15px;
-  margin-top: (@grid-gutter-width/2);
+  margin: (@grid-gutter-width/2) 15px;
   padding: 3px (@grid-gutter-width/4) 3px 0;
   .list-view-pf-top-align & {
     align-self: flex-start;
+  }
+  .list-view-pf-expand + & {
+    margin-left: 5px;
   }
 }
 .list-view-pf-description {
@@ -231,4 +238,89 @@
 }
 .list-view-pf-view {
   margin-top: 30px;
+}
+.list-group-item-simple-expand, 
+.list-group-item-compound-expand {
+  &.active {
+    border: solid 1px @list-group-active-border;
+    box-shadow: 0 0 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+    margin-top: -1px;
+  }
+  &.active .list-group-item {
+    background-color: @list-view-active-bg;
+    border-top: 1px solid @list-group-active-border;
+    margin-top: -1px;
+  }
+  &.active .list-group-item .list-view-pf-icon-sm {
+    background-color: #fff;
+  }
+}
+.list-group-item-simple-expand {
+  .list-group-item {
+    cursor: pointer;
+  }
+}
+.list-view-pf-expand {
+  cursor: pointer;
+  float: left; //IE9 fallback
+  margin-right: 2px;
+  margin-left: 15px;
+  padding: 3px 0;
+  &.active, &:hover {
+    color: @link-color;
+  }
+  .list-view-pf-additional-info-item & {
+    margin: 0;
+    padding: 0;
+  }
+  .fa-angle-right {
+    cursor: pointer;
+    font-size: (@font-size-large+3);
+    margin-right: 5px;
+    margin-top: 2px;
+    width: 10px;
+  }
+}
+.list-view-pf-expand-container {
+  border-top: solid 1px @list-group-active-border;
+  margin-top: -1px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  order: 3;
+  background: #fff;
+}
+.list-view-pf-expand-close {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 999;
+  &:hover {
+    color: @link-color;
+  }
+  .fa {
+    cursor: pointer;
+    font-size: (@font-size-large+2);
+  }
+}
+.list-view-pf-expand-chart {
+  margin: 20px 0;
+}
+.list-view-pf-expand-info {
+  padding-left: 0;
+  li {
+    list-style: none;
+    padding: 5px 0;
+  }
+  strong {
+    display: inline-block;
+    width: 100px;
+  }
+}
+.list-view-pf-expand-left-list {
+  margin-top: 10px;
+  .active {
+    color: @link-color;
+  }
 }
