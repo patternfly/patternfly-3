@@ -1,9 +1,9 @@
 ## Description
-A few sentences describing the overall goals of the pull request's commits.
+Write a few sentences describing the overall goals of the pull request's commits.
 
-Include related PRs or Issues
+(optional) Include related PRs or Issues
 
-Include a list of changes:
+(optional) Include a list of changes:
 
 * Change 01
 * Change 02
@@ -11,8 +11,8 @@ Include a list of changes:
 
 ## Link to rawgit and/or image
 
-For example: Here is a [Link to Alerts](https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/alerts.html)
+For example: Here is a [link to Alerts on rawgit](https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/alerts.html)
 
 This is an image:
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image description](http://placehold.it/350x150)
