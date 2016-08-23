@@ -13,12 +13,20 @@ This reference implementation of PatternFly is based on [Bootstrap v3](http://ge
 
 # Installation
 
+### Install with NPM
+
+PatternFly can be installed and managed through [NPM](https://www.npmjs.com/). To do so, either add `patternfly` as a dependency in your `package.json` or run the following:
+
+```
+npm install patternfly --save
+```
+
 ### Install with Bower
 
 PatternFly can be installed and managed through [Bower](http://bower.io/). To do so, either add `patternfly` as a dependency in your `bower.json` or run the following:
 
 ```
-bower install patternfly
+bower install patternfly --save
 ```
 
 #### Using Wiredep?
@@ -27,28 +35,20 @@ Are you using [Wiredep](https://github.com/taptapship/wiredep)?  PatternFly's CS
 
 ```
 exclude: [
-  "bower_components/bootstrap-combobox/css/bootstrap-combobox.css",
-  "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css",
-  "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css",
-  "bower_components/bootstrap-select/dist/css/bootstrap-select.css",
-  "bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css",
-  "bower_components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.css",
-  "bower_components/c3/c3.css",
-  "bower_components/datatables/media/css/jquery.dataTables.css",
-  "bower_components/datatables-colreorder/css/dataTables.colReorder.css",
-  "bower_components/datatables-colvis/css/dataTables.colVis.css",
-  "bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css",
-  "bower_components/font-awesome/css/font-awesome.css",
-  "bower_components/google-code-prettify/bin/prettify.min.css"
+  "node_modules/patternfly-bootstrap-combobox/css/bootstrap-combobox.css",
+  "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css",
+  "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css",
+  "node_modules/bootstrap-select/dist/css/bootstrap-select.css",
+  "node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css",
+  "node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.css",
+  "node_modules/c3/c3.css",
+  "node_modules/datatables/media/css/jquery.dataTables.css",
+  "node_modules/datatables.net-colreorder-bs/css/colReorder.bootstrap.css",
+  "node_modules/drmonty-datatables-colvis/css/dataTables.colVis.css",
+  "node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css",
+  "node_modules/font-awesome/css/font-awesome.css",
+  "node_modules/google-code-prettify/bin/prettify.min.css"
 ],
-```
-
-### Install with npm
-
-PatternFly can be installed and managed through [npm](https://www.npmjs.com/).  To do so, run the following:
-
-```
-npm install patternfly
 ```
 
 ### Sass and/or Rails
@@ -69,29 +69,9 @@ Development setup requires Node.js and Ruby. If you do not already have Node.js,
 
 ## Development - Code Dependencies
 
-The PatternFly code includes a number of dependencies that are not committed to this repository.  To add them, follow the instructions below under "Install Bower Components".  Please make sure you keep them updated (see "Keeping Bower Components Updated").
+The PatternFly code includes a number of dependencies that are not committed to this repository.  To add them, follow the instructions below under "Install NPM Dependencies".  Please make sure you keep them updated (see "Keeping NPM Dependencies Updated").
 
-### Install Bower Components
-
-After ensuring nodejs and npm are available, install [Bower](http://bower.io/) globally:
-
-    npm install -g bower
-
-Now that Bower is available, we can install the required development components:
-
-    bower install
-
-At this point, you should now have a top level components/ folder with all dependencies listed in the bower.json file installed.  Unless you plan to contribute to PatternFly itself, you're done.  Celebrate by working on integrating PatternFly and its dependencies in your app!
-
-#### Keeping Bower Components Updated
-
-Anytime you pull a new version of PatternFly, make sure you also run
-
-    bower update
-
-so you get the latest version of the components specified in bower.json.
-
-### Install Development Dependencies
+### Install NPM Dependencies
 
 The development includes the use of a number of helpful tasks. In order to setup your development environment to allow running of these tasks, you need to install the local nodejs packages declared in `package.json`. To do this run:
 
@@ -108,6 +88,14 @@ Test pages are generated using [Jekyll](http://jekyllrb.com/). Ensure Ruby is in
     gem install jekyll -v 3.1.6
 
 Note: You can use any 3.1.x version with at least 3.1.4 (3.1.4 includes necessary fixes to [#4433](https://github.com/jekyll/jekyll/issues/4433) and [#4442](https://github.com/jekyll/jekyll/issues/4442))
+
+#### Keeping NPM Dependencies Updated
+
+Anytime you pull a new version of PatternFly, make sure you also run
+
+    npm update
+
+so you get the latest version of the dependencies specified in package.json.
 
 ### Live Reload Server
 
