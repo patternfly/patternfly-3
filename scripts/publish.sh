@@ -13,7 +13,7 @@ then
 fi
 
 # User info
-git config user.name "Admin"
+git config user.name "patternfly-build"
 git config user.email "patternfly-build@redhat.com"
 git config --global push.default simple
 
@@ -36,5 +36,3 @@ then
 else
   git push upstream $TRAVIS_BRANCH:$TRAVIS_BRANCH-dist --force -v
 fi
-
-exit $?
