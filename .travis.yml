@@ -17,7 +17,3 @@ script:
 
 after_success:
   - sh -x ./scripts/publish.sh
-
-notifications:
-  email:
-    - patternfly-build@redhat.com
