@@ -1,19 +1,27 @@
 {
   "metadata": {
     "name": "PatternFlyIcons-webfont",
-    "lastOpened": 1470232213787,
-    "created": 1470231507691
+    "lastOpened": 1472147134428,
+    "created": 1472146968633
   },
   "iconSets": [
     {
       "selection": [
+        {
+          "order": 86,
+          "id": 44,
+          "name": "Bundle",
+          "prevSize": 14,
+          "code": 59672,
+          "tempChar": ""
+        },
         {
           "order": 85,
           "id": 43,
           "name": "middleware",
           "prevSize": 14,
           "code": 59671,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 75,
@@ -21,7 +29,7 @@
           "prevSize": 14,
           "code": 59668,
           "name": "private",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 76,
@@ -29,7 +37,7 @@
           "prevSize": 14,
           "code": 59669,
           "name": "blueprint",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 77,
@@ -37,7 +45,7 @@
           "prevSize": 14,
           "code": 59670,
           "name": "tenant",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 72,
@@ -45,7 +53,7 @@
           "prevSize": 14,
           "code": 59666,
           "name": "resources-almost-full",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 71,
@@ -53,7 +61,7 @@
           "prevSize": 14,
           "code": 59667,
           "name": "resources-full",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 56,
@@ -61,7 +69,7 @@
           "prevSize": 14,
           "code": 59651,
           "name": "cloud-security",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 57,
@@ -69,7 +77,7 @@
           "prevSize": 14,
           "code": 59652,
           "name": "cloud-tenant",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 58,
@@ -77,7 +85,7 @@
           "prevSize": 14,
           "code": 59653,
           "name": "cpu",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 59,
@@ -85,7 +93,7 @@
           "prevSize": 14,
           "code": 59654,
           "name": "enterprise",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 60,
@@ -93,7 +101,7 @@
           "prevSize": 14,
           "code": 59655,
           "name": "flavor",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 61,
@@ -101,7 +109,7 @@
           "prevSize": 14,
           "code": 59656,
           "name": "memory",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 62,
@@ -109,7 +117,7 @@
           "prevSize": 14,
           "code": 59657,
           "name": "network",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 63,
@@ -117,7 +125,7 @@
           "prevSize": 14,
           "code": 59658,
           "name": "regions",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 64,
@@ -125,7 +133,7 @@
           "prevSize": 14,
           "code": 59659,
           "name": "repository",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 65,
@@ -133,7 +141,7 @@
           "prevSize": 14,
           "code": 59660,
           "name": "resource-pool",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 66,
@@ -141,7 +149,7 @@
           "prevSize": 14,
           "code": 59661,
           "name": "server",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 67,
@@ -149,7 +157,7 @@
           "prevSize": 14,
           "code": 59662,
           "name": "storage-domain",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 68,
@@ -157,7 +165,7 @@
           "prevSize": 14,
           "code": 59663,
           "name": "virtual-machine",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 69,
@@ -165,7 +173,7 @@
           "prevSize": 14,
           "code": 59664,
           "name": "volume",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 70,
@@ -173,7 +181,7 @@
           "prevSize": 14,
           "code": 59665,
           "name": "zone",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 54,
@@ -181,7 +189,7 @@
           "prevSize": 14,
           "code": 59650,
           "name": "build",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 52,
@@ -189,7 +197,7 @@
           "prevSize": 14,
           "code": 59648,
           "name": "trend-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 53,
@@ -197,7 +205,7 @@
           "prevSize": 14,
           "code": 59649,
           "name": "trend-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 55,
@@ -205,7 +213,7 @@
           "prevSize": 14,
           "code": 59392,
           "name": "builder-image",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 49,
@@ -213,7 +221,7 @@
           "prevSize": 14,
           "code": 58888,
           "name": "topology",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 50,
@@ -221,7 +229,7 @@
           "prevSize": 14,
           "code": 58889,
           "name": "thumb-tack-o",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 27,
@@ -229,7 +237,7 @@
           "prevSize": 14,
           "code": 58904,
           "name": "home",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -238,7 +246,7 @@
           "prevSize": 14,
           "code": 58903,
           "name": "history",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -247,7 +255,7 @@
           "prevSize": 14,
           "code": 58901,
           "name": "import",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -256,7 +264,7 @@
           "prevSize": 14,
           "code": 58902,
           "name": "export",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -265,7 +273,7 @@
           "prevSize": 14,
           "code": 58881,
           "name": "save",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -274,7 +282,7 @@
           "prevSize": 14,
           "code": 58882,
           "name": "ok",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -283,7 +291,7 @@
           "prevSize": 14,
           "code": 58883,
           "name": "messages",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -292,7 +300,7 @@
           "prevSize": 14,
           "code": 58884,
           "name": "info",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -301,7 +309,7 @@
           "prevSize": 14,
           "code": 58885,
           "name": "help",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -310,7 +318,7 @@
           "prevSize": 14,
           "code": 58886,
           "name": "folder-open",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -319,7 +327,7 @@
           "prevSize": 14,
           "code": 58887,
           "name": "folder-close",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -328,7 +336,7 @@
           "prevSize": 14,
           "code": 58890,
           "name": "edit",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -337,7 +345,7 @@
           "prevSize": 14,
           "code": 58891,
           "name": "close",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -346,7 +354,7 @@
           "prevSize": 14,
           "code": 58907,
           "name": "add-circle-o",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 30,
@@ -354,7 +362,7 @@
           "prevSize": 14,
           "code": 58908,
           "name": "warning-triangle-o",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 31,
@@ -362,7 +370,7 @@
           "prevSize": 14,
           "code": 58909,
           "name": "error-circle-o",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 33,
@@ -370,7 +378,7 @@
           "prevSize": 14,
           "code": 58910,
           "name": "service",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 37,
@@ -378,7 +386,7 @@
           "prevSize": 14,
           "code": 58911,
           "name": "image",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 35,
@@ -386,7 +394,7 @@
           "prevSize": 14,
           "code": 58912,
           "name": "cluster",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 38,
@@ -394,7 +402,7 @@
           "prevSize": 14,
           "code": 58913,
           "name": "container-node",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 40,
@@ -402,7 +410,7 @@
           "prevSize": 14,
           "code": 58914,
           "name": "project",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 41,
@@ -410,7 +418,7 @@
           "prevSize": 14,
           "code": 58915,
           "name": "registry",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 42,
@@ -418,7 +426,7 @@
           "prevSize": 14,
           "code": 58916,
           "name": "replicator",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 43,
@@ -426,7 +434,7 @@
           "prevSize": 14,
           "code": 58917,
           "name": "route",
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 6,
@@ -445,6 +453,33 @@
       "height": 1024,
       "prevSize": 14,
       "icons": [
+        {
+          "id": 64,
+          "paths": [
+            "M348.571 229.486l1.143 322.743 317.029 56.457 164.114-94.629 0.229-304.229-319.543-49.371z",
+            "M658.514 76.114l-228.343-27.2-158.171 43.657 240.686 33.371z",
+            "M1021.257 121.371v-0.229l-0.686 0.229-299.886-36.571-145.143 50.286 313.6 44.343-0.457 299.2 125.486-80.229 7.086-276.343 0.457-0.229z",
+            "M885.486 827.886l121.371-116.343 6.629-245.257-124.8 84.343z",
+            "M349.714 632.686l-1.371 296.914 314.057 94.4 167.771-155.657 0.457-281.829-163.886 107.886z",
+            "M450.971 148.343l-239.771-35.2-208.457 60.114 11.657 315.886 271.086 50.286-2.743-325.257z",
+            "M25.6 833.143l259.886 80.229v-293.943l-270.171-54.857z"
+          ],
+          "attrs": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 14,
+          "tags": [
+            "Bundle"
+          ]
+        },
         {
           "id": 63,
           "paths": [
@@ -7723,7 +7758,7 @@
           "prevSize": 14,
           "code": 58898,
           "name": "print",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7736,7 +7771,7 @@
           "prevSize": 14,
           "code": 58880,
           "name": "screen",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7861,7 +7896,7 @@
           "prevSize": 14,
           "code": 58894,
           "name": "user",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7870,7 +7905,7 @@
           "prevSize": 14,
           "code": 58895,
           "name": "users",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7911,7 +7946,7 @@
           "prevSize": 14,
           "code": 58900,
           "name": "spinner",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7928,7 +7963,7 @@
           "prevSize": 14,
           "code": 58899,
           "name": "spinner2",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7997,7 +8032,7 @@
           "prevSize": 14,
           "code": 58896,
           "name": "equalizer",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -8106,7 +8141,7 @@
           "prevSize": 14,
           "code": 58897,
           "name": "remove2",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
