@@ -6,7 +6,7 @@
   transition: @flyout-transition-pf;
 
   &.collapsed .list-group-item .list-group-item-value {
-    transition: opacity 0s .1s, opacity .1s linear;
+    transition: opacity 0ms 100ms, opacity 100ms linear;
   }
 
   .list-group-item {
@@ -15,8 +15,8 @@
     }
 
     .list-group-item-value {
-      transition: opacity .5s ease-out;
-      transition-delay: .15s;
+      transition: opacity 500ms ease-out;
+      transition-delay: 150ms;
     }
   }
 }

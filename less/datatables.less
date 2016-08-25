@@ -17,7 +17,6 @@
 
 .ColVis_collection {
   background-color: @dropdown-bg;
-  border: 1px solid @dropdown-fallback-border; // IE8 fallback
   border: 1px solid @dropdown-border;
   border-radius: @border-radius-base;
   .box-shadow(0 6px 12px fade(@color-pf-black, 17.5%));
@@ -180,7 +179,6 @@ table.datatable {
     .sorting_asc_disabled,
     .sorting_desc_disabled {
       cursor: pointer;
-      *cursor: hand;
     }
     .sorting_asc,
     .sorting_desc {
@@ -201,7 +199,7 @@ table.datatable {
       }
       &:before {
         background: @link-color;
-        content: '';
+        content: "";
         height: 2px;
         position: absolute;
         left: 0;
