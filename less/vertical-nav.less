@@ -162,6 +162,31 @@
       display: none;
     }
   }
+  .badge-container-pf {
+    background-color: @nav-pf-vertical-badge-bg-color;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    .badge {
+      background: @nav-pf-vertical-badge-bg-color;
+      color: @nav-pf-vertical-badge-color;
+      float: left;
+      font-size: @font-size-base;
+      font-weight: 700;
+      line-height: @line-height-base;
+      margin: 0;
+      padding: 0 7px;
+      text-align: center;
+      .pficon,
+      .fa {
+        font-size: (@font-size-base + 2);
+        height: 20px;
+        line-height: @line-height-base;
+        margin-right: 3px;
+        margin-top: -1px;
+      }
+    }
+  }
 }
 .nav-pf-vertical-tooltip.tooltip {
   margin-left: 15px;
@@ -341,31 +366,6 @@
           visibility: visible;
           opacity: 1;
         }
-      }
-    }
-  }
-  .badge-container-pf {
-    background-color: @nav-pf-vertical-badge-bg-color;
-    position: absolute;
-    right: 15px;
-    top: 5px;
-    .badge {
-      background: @nav-pf-vertical-badge-bg-color;
-      color: @nav-pf-vertical-badge-color;
-      float: left;
-      font-size: @font-size-base;
-      font-weight: 700;
-      line-height: @line-height-base;
-      margin: 0;
-      padding: 0 7px;
-      text-align: center;
-      .pficon,
-      .fa {
-        font-size: (@font-size-base + 2);
-        height: 20px;
-        line-height: @line-height-base;
-        margin-right: 3px;
-        margin-top: -1px;
       }
     }
   }
@@ -556,6 +556,7 @@
     }
     .badge-container-pf {
       background-color: @nav-pf-vertical-secondary-badge-bg-color;
+      top: 5px;
       .badge {
         background: @nav-pf-vertical-secondary-badge-bg-color;
         color: @nav-pf-vertical-badge-color;
@@ -667,6 +668,7 @@
     }
     .badge-container-pf {
       background-color: @nav-pf-vertical-tertiary-badge-bg-color;
+      top: 5px;
       .badge {
         background: @nav-pf-vertical-tertiary-badge-bg-color;
         color: @nav-pf-vertical-tertiary-badge-color;
