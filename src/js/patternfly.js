@@ -158,6 +158,7 @@
 
           nInput = $('input', nPaging);
           $(nInput).keyup(function (e) {
+            var iNewStart;
             if (e.which === 38 || e.which === 39) {
               this.value += 1;
             } else if ((e.which === 37 || e.which === 40) && this.value > 1) {
@@ -169,7 +170,7 @@
               return;
             }
 
-            var iNewStart = oSettings._iDisplayLength * (this.value - 1);
+            iNewStart = oSettings._iDisplayLength * (this.value - 1);
             if (iNewStart > oSettings.fnRecordsDisplay()) {
               /* Display overrun */
               oSettings._iDisplayStart = (Math.ceil((oSettings.fnRecordsDisplay() - 1) /
@@ -289,8 +290,8 @@
       },
       bindMenuBehavior = function () {
         toggleNavBarButton.on('click', function (e) {
-          enableTransitions();
           var inMobileState = bodyContentElement.hasClass('hidden-nav');
+          enableTransitions();
 
           if (inMobileState && navElement.hasClass('show-mobile-nav')) {
             //In mobile state just need to hide the nav
@@ -308,9 +309,7 @@
         $('.nav-pf-vertical-alt [data-toggle="tooltip"]').tooltip({'container': 'body', 'delay': { 'show': '500', 'hide': '200' }});
 
         $(".nav-pf-vertical-alt").on("show.bs.tooltip", function (e) {
-          if (!$(this).hasClass("collapsed")) {
-            return false;
-          }
+          return $(this).hasClass("collapsed");
         });
 
       },
@@ -351,11 +350,11 @@
   $.fn.countRemainingChars = function (options) {
 
     var settings = $.extend({
-      // These are the defaults.
-      charsMaxLimit: 100,
-      charsWarnRemaining: 5,
-      blockInputAtMaxLimit: false
-    }, options),
+        // These are the defaults.
+        charsMaxLimit: 100,
+        charsWarnRemaining: 5,
+        blockInputAtMaxLimit: false
+      }, options),
       $taFld = this,
       $countFld = $('#'  + settings.countFld).text(settings.charsMaxLimit),
       charsRemainingFn = function (charsLength) {
@@ -984,7 +983,7 @@
 (function ($) {
   'use strict';
 
-  function getParent(rows, node) {
+  function getParent (rows, node) {
     var parent = node.attr('data-parent');
 
     if (typeof parent === "string") {
@@ -995,9 +994,10 @@
       }
       return parent;
     }
+    return undefined;
   }
 
-  function renderItem(item, parent) {
+  function renderItem (item, parent) {
     if (parent) {
       parent.find('.treegrid-node > span.expand-icon')
         .toggleClass('fa-angle-right', parent.hasClass('collapsed'))
@@ -1009,7 +1009,7 @@
     }
   }
 
-  function reStripe(tree) {
+  function reStripe (tree) {
     tree.find('tbody > tr').removeClass('odd');
     tree.find('tbody > tr:not(.hidden):odd').addClass('odd');
   }
@@ -1027,11 +1027,12 @@
 
       // Set up an event listener for the node
       node.children('.treegrid-node').on('click', function (e) {
+        var icon = node.find('span.expand-icon');
+
         if (options && typeof options.callback === 'function') {
           options.callback(e);
         }
 
-        var icon = node.find('span.expand-icon');
         if (icon.hasClass('fa-angle-right')) {
           node.removeClass('collapsed');
         }
@@ -1468,8 +1469,8 @@
 
         // Show secondary nav bar on hover of secondary nav items
         $(document).on('mouseenter.pf.tertiarynav.data-api', '.secondary-nav-item-pf', function (e) {
+          var $this = $(this);
           if (!inMobileState()) {
-            var $this = $(this);
             if ($this[0].navUnHoverTimeout !== undefined) {
               clearTimeout($this[0].navUnHoverTimeout);
               $this[0].navUnHoverTimeout = undefined;
@@ -1501,8 +1502,8 @@
 
         // Show tertiary nav bar on hover of secondary nav items
         $(document).on('mouseover.pf.tertiarynav.data-api', '.tertiary-nav-item-pf', function (e) {
+          var $this = $(this);
           if (!inMobileState()) {
-            var $this = $(this);
             if ($this[0].navUnHoverTimeout !== undefined) {
               clearTimeout($this[0].navUnHoverTimeout);
               $this[0].navUnHoverTimeout = undefined;
@@ -1562,9 +1563,7 @@
         $('.nav-pf-vertical [data-toggle="tooltip"]').tooltip(tooltipOptions);
 
         $('.nav-pf-vertical').on("show.bs.tooltip", function (e) {
-          if (!$(this).hasClass("collapsed")) {
-            return false;
-          }
+          return $(this).hasClass("collapsed");
         });
       },
 

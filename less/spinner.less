@@ -2,19 +2,13 @@
 // Spinner
 // --------------------------------------------------
 
-@-webkit-keyframes rotation {
-  from {-webkit-transform: rotate(0deg);}
-  to {-webkit-transform: rotate(359deg);}
-}
-
 @keyframes rotation {
   from {transform: rotate(0deg);}
   to {transform: rotate(359deg);}
 }
 
 .spinner {
-  -webkit-animation: rotation .6s infinite linear;
-  animation: rotation .6s infinite linear;
+  animation: rotation 600ms infinite linear;
   border-bottom: 4px solid fade(@color-pf-black, 25%);
   border-left: 4px solid fade(@color-pf-black, 25%);
   border-right: 4px solid fade(@color-pf-black, 25%);
@@ -76,4 +70,3 @@
     background-image: url("@{img-path}/@{img-spinner-xs}");
   }
 }
-

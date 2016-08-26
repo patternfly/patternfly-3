@@ -4,12 +4,12 @@
 // Custom icons and selections from IcoMoon - Free (http://icomoon.io/#icons)
 
 @font-face {
-  font-family: '@{icon-font-name-pf}';
-  src:url('@{font-path}/@{icon-font-name-pf}.eot');
-  src:url('@{font-path}/@{icon-font-name-pf}.eot?#iefix') format('embedded-opentype'),
-    url('@{font-path}/@{icon-font-name-pf}.ttf') format('truetype'),
-    url('@{font-path}/@{icon-font-name-pf}.woff') format('woff'),
-    url('@{font-path}/@{icon-font-name-pf}.svg#@{icon-font-name-pf}') format('svg');
+  font-family: "@{icon-font-name-pf}";
+  src:url("@{font-path}/@{icon-font-name-pf}.eot");
+  src:url("@{font-path}/@{icon-font-name-pf}.eot?#iefix") format("embedded-opentype"),
+    url("@{font-path}/@{icon-font-name-pf}.ttf") format("truetype"),
+    url("@{font-path}/@{icon-font-name-pf}.woff") format("woff"),
+    url("@{font-path}/@{icon-font-name-pf}.svg#@{icon-font-name-pf}") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 [class^="@{icon-prefix}-"],
 [class*=" @{icon-prefix}-"] {
   display: inline-block;
-  font-family: '@{icon-font-name-pf}';
+  font-family: "@{icon-font-name-pf}";
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -39,6 +39,9 @@
 }
 .@{icon-prefix}-builder-image:before {
   content: @pficon-var-builder-image;
+}
+.@{icon-prefix}-bundle:before {
+  content: @pficon-var-bundle;
 }
 .@{icon-prefix}-blueprint:before {
   content: @pficon-var-blueprint;

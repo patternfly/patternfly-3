@@ -43,7 +43,7 @@
     &:active,
     &.active {
       background-color: @background;
-      border-color: @border
+      border-color: @border;
     }
   }
 }
@@ -61,7 +61,6 @@
 // Gradients
 #gradient {
   .striped(@color: fade(@color-pf-black, 15%); @angle: -45deg) {
-    background-image: -webkit-linear-gradient(@angle, @color 25%, @color 26%, transparent 27%, transparent 49%, @color 50%, @color 51%, transparent 52%, transparent 74%, @color 75%, @color 76%, transparent 77%);
     background-image: linear-gradient(@angle, @color 25%, @color 26%, transparent 27%, transparent 49%, @color 50%, @color 51%, transparent 52%, transparent 74%, @color 75%, @color 76%, transparent 77%);
   }
 }
@@ -76,10 +75,7 @@
 
 // Placeholder text
 .placeholder(@color: @input-color-placeholder) {
-  &:-moz-placeholder            { color: @color; font-style: italic; } // Firefox 4-18
-  &::-moz-placeholder           { color: @color; font-style: italic; opacity: 1; } // Firefox 19+
-  &:-ms-input-placeholder       { color: @color; font-style: italic; } // Internet Explorer 10+
-  &::-webkit-input-placeholder  { color: @color; font-style: italic; } // Safari and Chrome
+  &::placeholder            { color: @color; font-style: italic; }
 }
 
 // PatternFly-specific
@@ -89,7 +85,7 @@
   &:before {
     background: @background;
     bottom: -1px;
-    content: '';
+    content: "";
     display: block;
     height: 2px;
     left: @left;
