@@ -4,14 +4,11 @@
 .layout-pf {
   &,
   & body {
-    min-height: 100%
+    min-height: 100%;
   }
   &.layout-pf-fixed {
     &.transitions .container-pf-nav-pf-vertical {
       transition: @flyout-transition-pf;
-      -webkit-transition: margin-left @nav-pf-container-transition-period;
-      -moz-transition: margin-left @nav-pf-container-transition-period;
-      -o-transition: margin-left @nav-pf-container-transition-period;
     }
     body {
       padding-top: @navbar-pf-height; // make space for the navbar
@@ -25,6 +22,9 @@
     }
     .container-pf-nav-pf-vertical {
       margin-left: @nav-pf-vertical-width;
+      &.nav-pf-vertical-with-badges {
+        margin-left: @nav-pf-vertical-badges-width;
+      }
       &.collapsed-nav {
         margin-left: @nav-pf-vertical-collapsed-width;
         &.hidden-icons-pf {
@@ -34,27 +34,52 @@
       &.hidden-nav {
         margin-left: 0; // remove space as left nav is hidden
       }
-      &.container-pf-nav-pf-vertical-with-sub-menus {
-        &.hide-nav-pf {
-          margin-left: 0 !important;
-        }
-        &.collapsed-secondary-nav-pf, &.collapsed-tertiary-nav-pf {
-          margin-left: @nav-pf-vertical-width;
+      &.hide-nav-pf {
+        margin-left: 0 !important;
+      }
+      &.collapsed-secondary-nav-pf, &.collapsed-tertiary-nav-pf {
+        margin-left: @nav-pf-vertical-width;
+        &.nav-pf-vertical-with-badges {
+          margin-left: @nav-pf-vertical-badges-width;
         }
       }
       &.nav-pf-persistent-secondary.secondary-visible-pf {
         @media (min-width: 1200px) {
           margin-left: (@nav-pf-vertical-width + @nav-pf-vertical-width);
+          &.nav-pf-vertical-with-badges {
+            margin-left: (@nav-pf-vertical-badges-width + @nav-pf-vertical-badges-width);
+          }
           &.hidden-nav {
             margin-left: 0; // remove space as left nav is hidden
           }
           &.collapsed-secondary-nav-pf {
             margin-left: @nav-pf-vertical-width;
+            &.nav-pf-vertical-with-badges {
+              margin-left: @nav-pf-vertical-badges-width;
+            }
+          }
+          &.collapsed-tertiary-nav-pf {
+            margin-left: @nav-pf-vertical-width;
+            &.nav-pf-vertical-with-badges {
+              margin-left: @nav-pf-vertical-badges-width;
+            }
           }
           &.collapsed-nav {
             margin-left: (@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+            &.nav-pf-vertical-with-badges {
+              margin-left: (@nav-pf-vertical-collapsed-width + @nav-pf-vertical-badges-width);
+            }
             &.collapsed-secondary-nav-pf {
               margin-left: @nav-pf-vertical-width;
+              &.nav-pf-vertical-with-badges {
+                margin-left: @nav-pf-vertical-badges-width;
+              }
+            }
+            &.collapsed-tertiary-nav-pf {
+              margin-left: @nav-pf-vertical-width;
+              &.nav-pf-vertical-with-badges {
+                margin-left: @nav-pf-vertical-badges-width;
+              }
             }
             &.hidden-icons-pf {
               margin-left: 0;
@@ -73,7 +98,7 @@
 .layout-pf-alt {
   &,
   & body {
-    min-height: 100%
+    min-height: 100%;
   }
   &.layout-pf-alt-fixed {
     &.layout-pf-alt-fixed-inner-scroll {

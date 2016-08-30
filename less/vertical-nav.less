@@ -7,7 +7,7 @@
 // .navbar navbar-pf-vertical
 //   .navbar-header
 //   .collapse navbar-collapse   <-- necessary for collapsing vertical nav and mobile
-// .nav-pf-vertical [.nav-pf-vertical-with-sub-menus [.nav-pf-vertical-callapsible-menus] [.nav-pf-persistent-secondary]] [.hidden-icons-pf]
+// .nav-pf-vertical [.nav-pf-vertical-callapsible-menus] [.nav-pf-persistent-secondary] [.hidden-icons-pf]
 //   .list-group
 //     .list-group-item [.active] [.secondary-nav-item-pf]
 //       a
@@ -28,7 +28,7 @@
 //                  a
 //                    .list-group-item-value
 //
-// .container-pf-nav-pf-vertical [.container-pf-nav-pf-vertical-with-sub-menus [.nav-pf-persistent-secondary]] [.hidden-icons-pf]
+// .container-pf-nav-pf-vertical [.nav-pf-persistent-secondary] [.hidden-icons-pf]
 //
 
 .nav-pf-vertical {
@@ -120,283 +120,34 @@
         border-color: @nav-pf-vertical-item-border-color;
       }
     }
-    > .list-group-item-value {
+    .list-group-item-value {
       display: block;
-      line-height: 30px;
+      line-height: 25px;
       max-width: 120px;
       overflow: hidden;
       text-overflow: ellipsis;
-      width: 100%;
     }
-
   }
   .list-group-item-separator {
     border-top-color: @nav-pf-vertical-item-border-color;
     border-top-width: 2px;
   }
-  &.collapsed {
+  &.nav-pf-vertical-with-badges {
+    width: @nav-pf-vertical-badges-width;
+    .list-group-item > a {
+      width: @nav-pf-vertical-badges-width;
+    }
+  }
+  &.collapsed { // Collapsed Primary Menu state
     width: @nav-pf-vertical-collapsed-width;
-    > .list-group { // Only the primary menu is effected by .collapsed
-      > .list-group-item {
-        > a {
-          width: @nav-pf-vertical-collapsed-width;
-          > .list-group-item-value {
-            display: none;
-            width: 0;
-          }
-        }
-      }
-    }
-  }
-  &.hidden-icons-pf {
-    > .list-group > .list-group-item { // only the primary menu hides icons
-      > a {
-        .fa,
-        .glyphicon,
-        .pficon {
-          display: none;
-        }
-      }
-    }
-    &.collapsed {
-      display: none;
-    }
-  }
-}
-.nav-pf-vertical-tooltip.tooltip {
-  margin-left: 15px;
-  .tooltip-inner {
-    background-color: @color-pf-white;
-    color: @color-pf-black-900;
-  }
-  .tooltip-arrow {
-    border-bottom-color: @color-pf-white;
-    left: calc(50% - 15px) !important;
-  }
-}
-.nav-pf-vertical.nav-pf-vertical-with-sub-menus {
-  &.collapsed {
-    &.collapsed-secondary-nav-pf {  // collapsed state with secondary menu pinned
-      width: @nav-pf-vertical-width;
-    }
-    &.collapsed-tertiary-nav-pf { // collapsed state with tertiary menu pinned
-      width: @nav-pf-vertical-width;
-    }
-  }
-  &.hover-secondary-nav-pf {
-    width: (@nav-pf-vertical-width + @nav-pf-vertical-width);
-  }
-  &.hover-tertiary-nav-pf {
-    width: (@nav-pf-vertical-width + @nav-pf-vertical-width + @nav-pf-vertical-width);
-    .nav-pf-secondary-nav {
-      width: (@nav-pf-vertical-width + @nav-pf-vertical-width);
-      .collapsed-tertiary-nav-pf {
-        width: @nav-pf-vertical-width;
-      }
-    }
-    .nav-pf-tertiary-nav {
-      left: (@nav-pf-vertical-width + @nav-pf-vertical-width);
-    }
-  }
-
-  &.show-mobile-nav {
-    &.show-mobile-secondary {
-      width: @nav-pf-vertical-width;
-    }
-    &.show-mobile-tertiary {
-      width: @nav-pf-vertical-width;
-    }
-
-    .mobile-nav-item-pf,
-    .mobile-secondary-item-pf {
-      .nav-pf-secondary-nav {
-        left: 0;
-        opacity: 1;
-        visibility: visible;
-        z-index: (@zindex-navbar-fixed + 4);
-      }
-      > .nav-pf-tertiary-nav {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-    .nav-pf-secondary-nav {
-      left: 0;
-      .secondary-nav-item-pf:hover & {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-    .nav-pf-tertiary-nav {
-      left: 0;
-      z-index: (@zindex-navbar-fixed + 8);
-    }
-    .tertiary-nav-item-pf:hover {
-      .nav-pf-tertiary-nav {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-    .tertiary-nav-item-pf.mobile-nav-item-pf:hover {
-      .nav-pf-tertiary-nav {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-  .layout-pf-fixed-with-footer & {
-    bottom: @footer-pf-height;
-  }
-  .secondary-nav-item-pf {
-    > a {
-      cursor: default;
-      &:after {
-        color: @nav-pf-vertical-secondary-indicator-color;
-        content: @fa-var-angle-right;
-        display: block;
-        font-family: "FontAwesome";
-        font-size: (@font-size-base * 2);
-        line-height: 30px;
-        padding: @nav-pf-vertical-secondary-indicator-padding;
-        position: absolute;
-        right: 20px;
-        top: 0;
-      }
-    }
-    &.active,
-    &:hover {
-      > a {
-        width: (@nav-pf-vertical-width + 1);
-        z-index: (@zindex-navbar-fixed + 1);
-        &:after {
-          right: 21px;
-        }
-        .collapsed-secondary-nav-pf & {
-          z-index: @zindex-navbar-fixed;
-        }
-        .collapsed-tertiary-nav-pf & {
-          z-index: @zindex-navbar-fixed;
-        }
-      }
-    }
-  }
-  &.collapsed-secondary-nav-pf {
-    width: @nav-pf-vertical-width;
-    .secondary-nav-item-pf {  // Keep sub-menu indicators below collapsed menu
-      &.active,
-      &.hover {
-        > a {
-          z-index: @zindex-navbar-fixed;
-        }
-      }
-    }
-    &.hover-tertiary-nav-pf {
-      width: (@nav-pf-vertical-width + @nav-pf-vertical-width);
-    }
-    .nav-pf-secondary-nav {
-      left: 0;
-    }
-    .nav-pf-tertiary-nav {
-      left: @nav-pf-vertical-width;
-    }
-  }
-  &.collapsed-tertiary-nav-pf {
-    width: @nav-pf-vertical-width;
-    .nav-pf-secondary-nav {
-      width: @nav-pf-vertical-width;
-    }
-    .secondary-nav-item-pf,    // Keep sub-menu indicators below collapsed menu
-    .tertiary-nav-item-pf {
-      &.active,
-      &.hover {
-        > a {
-          z-index: @zindex-navbar-fixed;
-        }
-      }
-    }
-  }
-  &.nav-pf-persistent-secondary.secondary-visible-pf {  // Persistent secondary nav settings
-    @media (min-width: @screen-lg-min) { // secondary menu only persistent at lg screen
-      width: (@nav-pf-vertical-width + @nav-pf-vertical-width);
-      &.collapsed-secondary-nav-pf {
-        width: @nav-pf-vertical-width;
-      }
-      &.collapsed-tertiary-nav-pf {
-        width: @nav-pf-vertical-width;
-      }
-      &.collapsed {
-        width: (@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
-        &.collapsed-secondary-nav-pf {
-          width: @nav-pf-vertical-width;
-        }
-        &.collapsed-tertiary-nav-pf {
-          width: @nav-pf-vertical-width;
-        }
-      }
-      &.hover-tertiary-nav-pf {
-        width: (@nav-pf-vertical-width + @nav-pf-vertical-width + @nav-pf-vertical-width);
-      }
-      .secondary-nav-item-pf.active {
-        .nav-pf-secondary-nav {
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-    }
-  }
-  .badge-container-pf {
-    background-color: @nav-pf-vertical-badge-bg-color;
-    position: absolute;
-    right: 15px;
-    top: 5px;
-    .badge {
-      background: @nav-pf-vertical-badge-bg-color;
-      color: @nav-pf-vertical-badge-color;
-      float: left;
-      font-size: @font-size-base;
-      font-weight: 700;
-      line-height: @line-height-base;
-      margin: 0;
-      padding: 0 7px;
-      text-align: center;
-      .pficon,
-      .fa {
-        font-size: (@font-size-base + 2);
-        height: 20px;
-        line-height: @line-height-base;
-        margin-right: 3px;
-        margin-top: -1px;
-      }
-    }
-  }
-  .nav-item-pf-header {
-    color: @nav-pf-vertical-secondary-color;
-    font-size: (@font-size-base + 4);
-    margin: @nav-pf-vertical-secondary-header-margin;
-    > a {
-      cursor: pointer;
-      margin-right: 7px;
-      &:hover,
-      &:focus {
-        color: @link-color;
-        text-decoration: none;
-      }
-    }
-  }
-  h5 {
-    color: @nav-pf-vertical-secondary-color;
-    cursor: default;
-    font-size: (@font-size-base + 1);
-    font-weight: 600;
-    margin: @nav-pf-vertical-secondary-list-header-margin;
-  }
-  &.collapsed {  // Collapsed Primary Menu state
-    .list-group-item {  // Show only the icons
+    > .list-group-item { // Show only the icons
       > a {
         width: @nav-pf-vertical-collapsed-width;
         > .list-group-item-value {
           display: none;
-          width: 0;
+        }
+        > .badge-container-pf {
+          display: none;
         }
       }
       &.secondary-nav-item-pf { // Adjust widths
@@ -418,68 +169,361 @@
         }
       }
     }
-    .nav-pf-secondary-nav {  // Adjust left placement
-      left: @nav-pf-vertical-collapsed-width;
-      .list-group-item {
-        > a {
-          width: (@nav-pf-vertical-width - 20);
-          > .list-group-item-value { // Continue to show labels for secondary menu items
-            display: inline-block;
-            width: inherit;
-          }
+  }
+  h5 {
+    color: @nav-pf-vertical-secondary-color;
+    cursor: default;
+    font-size: (@font-size-base + 1);
+    font-weight: 600;
+    margin: @nav-pf-vertical-secondary-list-header-margin;
+  }
+  &.hidden-icons-pf {
+    > .list-group > .list-group-item { // only the primary menu hides icons
+      > a {
+        .fa,
+        .glyphicon,
+        .pficon {
+          display: none;
         }
       }
     }
-    .nav-pf-tertiary-nav { // Adjust left placement
-      left: (@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
-      .list-group-item {
-        > a {
-          width: (@nav-pf-vertical-width - 20);
-          > .list-group-item-value {  // Continue to show labels for tertiary menu items
-            display: inline-block;
-            width: inherit;
-          }
-        }
+    &.collapsed {
+      display: none;
+    }
+  }
+  .badge-container-pf {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    .badge {
+      background: @nav-pf-vertical-badge-bg-color;
+      color: @nav-pf-vertical-badge-color;
+      float: left;
+      font-size: @font-size-base;
+      font-weight: 700;
+      line-height: @line-height-base;
+      margin: 0;
+      padding: 0 7px;
+      text-align: center;
+      .pficon,
+      .fa {
+        font-size: (@font-size-base + 2);
+        height: 20px;
+        line-height: @line-height-base;
+        margin-right: 3px;
+        margin-top: -1px;
       }
     }
-    &.collapsed-secondary-nav-pf,
-    &.collapsed-tertiary-nav-pf {
+  }
+}
+.nav-pf-vertical-tooltip.tooltip {
+  margin-left: 15px;
+  .tooltip-inner {
+    background-color: @color-pf-white;
+    color: @color-pf-black-900;
+  }
+  .tooltip-arrow {
+    border-bottom-color: @color-pf-white;
+    left: calc(50% - 15px) !important;
+  }
+}
+.hover-secondary-nav-pf {
+  width: calc(@nav-pf-vertical-width * 2);
+  &.nav-pf-vertical-with-badges {
+    width: calc(@nav-pf-vertical-badges-width * 2);
+  }
+}
+.hover-tertiary-nav-pf {
+  width: calc(@nav-pf-vertical-width * 3);
+  &.nav-pf-vertical-with-badges {
+    width: calc(@nav-pf-vertical-badges-width * 3);
+  }
+  .nav-pf-secondary-nav {
+    width: calc(@nav-pf-vertical-width * 2);
+    .collapsed-tertiary-nav-pf {
       width: @nav-pf-vertical-width;
-      .secondary-nav-item-pf {
-        &:hover {
-          > a {
-            z-index: @zindex-navbar-fixed;
-          }
-        }
+    }
+  }
+  .nav-pf-tertiary-nav {
+    left: calc(@nav-pf-vertical-width * 2);
+  }
+  &.nav-pf-vertical-with-badges {
+    .nav-pf-secondary-nav {
+      width: calc(@nav-pf-vertical-badges-width * 2);
+      .collapsed-tertiary-nav-pf {
+        width: @nav-pf-vertical-badges-width;
       }
-      .nav-pf-secondary-nav {
-        left: 0;
+    }
+    .nav-pf-tertiary-nav {
+      left: calc(@nav-pf-vertical-badges-width * 2);
+    }
+  }
+}
+.collapsed {
+  width: @nav-pf-vertical-collapsed-width;
+  &.collapsed-secondary-nav-pf { // collapsed state with secondary menu pinned
+    width: @nav-pf-vertical-width;
+    &.nav-pf-vertical-with-badges {
+      width: @nav-pf-vertical-badges-width;
+    }
+  }
+  &.collapsed-tertiary-nav-pf { // collapsed state with tertiary menu pinned
+    width: @nav-pf-vertical-width;
+    &.nav-pf-vertical-with-badges {
+      width: @nav-pf-vertical-badges-width;
+    }
+  }
+  &.hover-secondary-nav-pf {
+    width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+    &.nav-pf-vertical-with-badges {
+      width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-badges-width);
+    }
+  }
+  &.hover-tertiary-nav-pf {
+    width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-badges-width * 2));
+    &.nav-pf-vertical-with-badges {
+      width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-badges-width * 2));
+    }
+  }
+}
+.show-mobile-nav {
+  &.show-mobile-secondary {
+    width: @nav-pf-vertical-width;
+    &.nav-pf-vertical-with-badges {
+      width: @nav-pf-vertical-badges-width;
+    }
+  }
+  &.show-mobile-tertiary {
+    width: @nav-pf-vertical-width;
+    &.nav-pf-vertical-with-badges {
+      width: @nav-pf-vertical-badges-width;
+    }
+  }
+  .mobile-nav-item-pf,
+  .mobile-secondary-item-pf {
+    .nav-pf-secondary-nav {
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+      z-index: (@zindex-navbar-fixed + 4);
+    }
+    > .nav-pf-tertiary-nav {
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+      z-index: (@zindex-navbar-fixed + 8);
+    }
+  }
+  .nav-pf-secondary-nav {
+    left: 0;
+    .secondary-nav-item-pf:hover & {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  .tertiary-nav-item-pf:hover {
+    .nav-pf-tertiary-nav {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  .tertiary-nav-item-pf.mobile-nav-item-pf:hover {
+    .nav-pf-tertiary-nav {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.secondary-nav-item-pf {
+  > a {
+    cursor: default;
+    &:after {
+      color: @nav-pf-vertical-secondary-indicator-color;
+      content: @fa-var-angle-right;
+      display: block;
+      font-family: "FontAwesome";
+      font-size: (@font-size-base * 2);
+      line-height: 30px;
+      padding: @nav-pf-vertical-secondary-indicator-padding;
+      position: absolute;
+      right: 20px;
+      top: 0;
+    }
+  }
+  &.active,
+  &:hover {
+    > a {
+      width: calc(@nav-pf-vertical-width + 1px);
+      z-index: (@zindex-navbar-fixed + 1);
+      &:after {
+        right: 21px;
       }
+      .collapsed-secondary-nav-pf & {
+        z-index: @zindex-navbar-fixed;
+      }
+      .collapsed-tertiary-nav-pf & {
+        z-index: @zindex-navbar-fixed;
+      }
+    }
+  }
+  .nav-pf-vertical-with-badges & {
+    &.active,
+    &:hover {
+      > a {
+        width: calc(@nav-pf-vertical-badges-width + 1px);
+      }
+    }
+  }
+}
+.nav-pf-vertical.collapsed-secondary-nav-pf {
+  width: @nav-pf-vertical-width;
+  &.nav-pf-vertical-with-badges {
+    width: @nav-pf-vertical-badges-width;
+  }
+  .secondary-nav-item-pf {  // Keep sub-menu indicators below collapsed menu
+    &.active,
+    &.hover {
+      > a {
+        z-index: @zindex-navbar-fixed;
+      }
+    }
+  }
+  &.hover-tertiary-nav-pf {
+    width: @nav-pf-vertical-width;
+    &.nav-pf-vertical-with-badges {
+      width: @nav-pf-vertical-badges-width;
+    }
+  }
+  .nav-pf-secondary-nav {
+    left: 0;
+  }
+  .nav-pf-tertiary-nav {
+    left: @nav-pf-vertical-width;
+  }
+  &.nav-pf-vertical-with-badges {
+    .nav-pf-tertiary-nav {
+      left: @nav-pf-vertical-badges-width;
+    }
+  }
+}
+.nav-pf-vertical.collapsed-tertiary-nav-pf {
+  width: @nav-pf-vertical-width;
+  &.nav-pf-vertical-with-badges {
+    width: @nav-pf-vertical-badges-width;
+  }
+  .nav-pf-secondary-nav {
+    width: @nav-pf-vertical-width;
+    &.nav-pf-vertical-with-badges {
+      width: @nav-pf-vertical-badges-width;
+    }
+  }
+  .secondary-nav-item-pf,    // Keep sub-menu indicators below collapsed menu
+  .tertiary-nav-item-pf {
+    &.active,
+    &.hover {
+      > a {
+        z-index: @zindex-navbar-fixed;
+      }
+    }
+  }
+}
+.nav-pf-vertical.nav-pf-persistent-secondary.secondary-visible-pf {  // Persistent secondary nav settings
+  @media (min-width: @screen-lg-min) { // secondary menu only persistent at lg screen
+    width: calc(@nav-pf-vertical-width * 2);
+    &.nav-pf-vertical-with-badges {
+      width: calc(@nav-pf-vertical-badges-width * 2);
     }
     &.collapsed-secondary-nav-pf {
-      .nav-pf-tertiary-nav {
-        left: @nav-pf-vertical-width;
+      width: @nav-pf-vertical-width;
+      &.nav-pf-vertical-with-badges {
+        width: @nav-pf-vertical-badges-width;
+      }
+      &.hover-tertiary-nav-pf {
+        width: calc(@nav-pf-vertical-width * 2);
+        &.nav-pf-vertical-with-badges {
+          width: calc(@nav-pf-vertical-badges-width * 2);
+        }
       }
     }
     &.collapsed-tertiary-nav-pf {
-      .nav-pf-tertiary-nav {
-        left: 0;
+      width: @nav-pf-vertical-width;
+      &.nav-pf-vertical-with-badges {
+        width: @nav-pf-vertical-badges-width;
       }
     }
-    &.hover-secondary-nav-pf {
-      width: (@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
-      &.collapsed-secondary-nav-pf,
+    &.collapsed {
+      width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+      &.collapsed-secondary-nav-pf {
+        width: @nav-pf-vertical-width;
+        &.nav-pf-vertical-with-badges {
+          width: @nav-pf-vertical-badges-width;
+        }
+      }
       &.collapsed-tertiary-nav-pf {
         width: @nav-pf-vertical-width;
+        &.nav-pf-vertical-with-badges {
+          width: @nav-pf-vertical-badges-width;
+        }
+      }
+      &.hover-tertiary-nav-pf {
+        width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-width * 2));
+        &.nav-pf-vertical-with-badges {
+          width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-badges-width * 2));
+        }
       }
     }
     &.hover-tertiary-nav-pf {
-      width: (@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width + @nav-pf-vertical-width);
-      &.collapsed-secondary-nav-pf {
-        width: (@nav-pf-vertical-width + @nav-pf-vertical-width);
+      width: calc(@nav-pf-vertical-width * 3);
+      &.nav-pf-vertical-with-badges {
+        width: calc(@nav-pf-vertical-badges-width * 3);
       }
-      &.collapsed-tertiary-nav-pf {
-        width: @nav-pf-vertical-width;
+    }
+    .secondary-nav-item-pf.active {
+      .nav-pf-secondary-nav {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+.nav-item-pf-header {
+  color: @nav-pf-vertical-secondary-color;
+  font-size: (@font-size-base + 4);
+  margin: @nav-pf-vertical-secondary-header-margin;
+  > a {
+    cursor: pointer;
+    margin-right: 7px;
+    &:hover,
+    &:focus {
+      color: @link-color;
+      text-decoration: none;
+    }
+  }
+}
+.nav-pf-vertical.collapsed { // Collapsed Primary Menu state
+  .list-group-item { // Show only the icons
+    > a {
+      width: @nav-pf-vertical-collapsed-width;
+      > .list-group-item-value {
+        display: none;
+      }
+    }
+    &.secondary-nav-item-pf { // Adjust widths
+      &.active > a,
+      > a {
+        width: @nav-pf-vertical-collapsed-width;
+        &:after {
+          right: 10px;
+        }
+      }
+      &.active,
+      &:hover {
+        > a {
+          width: (@nav-pf-vertical-collapsed-width + 2);
+          &:after {
+            right: 11px;
+          }
+        }
       }
     }
   }
@@ -537,7 +581,8 @@
       height: inherit;
       padding: @nav-pf-vertical-secondary-link-padding;
       margin-left: 20px;
-      width: (@nav-pf-vertical-width - 20);
+      width: calc(@nav-pf-vertical-width - 20px);
+
       &:hover {
         .list-group-item-value {
           text-decoration: underline;
@@ -555,16 +600,13 @@
       }
     }
     .badge-container-pf {
-      background-color: @nav-pf-vertical-secondary-badge-bg-color;
+      top: 5px;
       .badge {
         background: @nav-pf-vertical-secondary-badge-bg-color;
         color: @nav-pf-vertical-badge-color;
       }
     }
     .list-group-item-value {
-      display: inline-block;
-      line-height: 20px;
-      max-width: none;
       padding-left: 5px;
     }
     &.tertiary-nav-item-pf { // Secondary menu items with tertiary sub menus
@@ -586,10 +628,28 @@
       &.active,
       &:hover {
         > a {
-          width: (@nav-pf-vertical-width - 20 + 1);
+          width: calc(@nav-pf-vertical-width - 19px);
           z-index: (@zindex-navbar-fixed + 3);
           &:after {
             right: 21px;
+          }
+        }
+      }
+    }
+  }
+  .nav-pf-vertical-with-badges & {
+    left: @nav-pf-vertical-badges-width;
+    width: @nav-pf-vertical-badges-width;
+    .list-group-item {
+      width: @nav-pf-vertical-badges-width;
+      > a {
+        width: calc(@nav-pf-vertical-badges-width - 20px);
+      }
+      &.tertiary-nav-item-pf { // Secondary menu items with tertiary sub menus
+        &.active,
+        &:hover {
+          > a {
+            width: calc(@nav-pf-vertical-badges-width - 19px);
           }
         }
       }
@@ -603,7 +663,7 @@
   border-top: none;
   bottom: 0;
   display: block;
-  left: (@nav-pf-vertical-width + @nav-pf-vertical-width);
+  left: calc(@nav-pf-vertical-width * 2);
   opacity: 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -612,12 +672,19 @@
   visibility: hidden;
   width: @nav-pf-vertical-width;
   z-index: @zindex-navbar-fixed;
+  .nav-pf-vertical-with-badges & {
+    left: @nav-pf-vertical-badges-width;
+    width: @nav-pf-vertical-badges-width;
+    .show-mobile-nav {
+      left: 0;
+    }
+  }
   .tertiary-nav-item-pf.active & {  // Show tertiary menu if active and collapsed
     .collapsed-tertiary-nav-pf & {
       left: 0;
       opacity: 1;
       visibility: visible;
-      z-index: (@zindex-navbar-fixed + 2);
+      z-index: (@zindex-navbar-fixed + 3);
     }
   }
   .tertiary-nav-item-pf.is-hover & { // Show tertiary menu if hovering
@@ -666,17 +733,121 @@
       }
     }
     .badge-container-pf {
-      background-color: @nav-pf-vertical-tertiary-badge-bg-color;
+      top: 5px;
       .badge {
         background: @nav-pf-vertical-tertiary-badge-bg-color;
         color: @nav-pf-vertical-tertiary-badge-color;
       }
     }
     .list-group-item-value {
-      display: inline-block;
-      line-height: 20px;
-      max-width: none;
       padding-left: 5px;
+    }
+  }
+}
+.collapsed {
+  .nav-pf-secondary-nav { // Adjust left placement
+    left: @nav-pf-vertical-collapsed-width;
+    .list-group-item {
+      > a {
+        width: calc(@nav-pf-vertical-width - 20px);
+        > .list-group-item-value { // Continue to show labels for secondary menu items
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .nav-pf-tertiary-nav { // Adjust left placement
+    left: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+    .list-group-item {
+      > a {
+        width: calc(@nav-pf-vertical-width - 20px);
+        > .list-group-item-value { // Continue to show labels for tertiary menu items
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &.collapsed-secondary-nav-pf,
+  &.collapsed-tertiary-nav-pf {
+    width: @nav-pf-vertical-width;
+    .secondary-nav-item-pf {
+      &:hover {
+        > a {
+          z-index: @zindex-navbar-fixed;
+        }
+      }
+    }
+    .nav-pf-secondary-nav {
+      left: 0;
+    }
+  }
+  &.collapsed-secondary-nav-pf {
+    .nav-pf-tertiary-nav {
+      left: @nav-pf-vertical-width;
+    }
+  }
+  &.collapsed-tertiary-nav-pf {
+    .nav-pf-tertiary-nav {
+      left: 0;
+    }
+  }
+  &.hover-secondary-nav-pf {
+    width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+
+    &.collapsed-secondary-nav-pf,
+    &.collapsed-tertiary-nav-pf {
+      width: @nav-pf-vertical-width;
+    }
+  }
+  &.hover-tertiary-nav-pf {
+    width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-width * 2));
+    &.collapsed-secondary-nav-pf {
+      width: calc(@nav-pf-vertical-width * 2);
+    }
+    &.collapsed-tertiary-nav-pf {
+      width: @nav-pf-vertical-width;
+    }
+  }
+  &.nav-pf-vertical-with-badges {
+    .nav-pf-secondary-nav {
+      .list-group-item {
+        > a {
+          width: calc(@nav-pf-vertical-badges-width - 20px);
+        }
+      }
+    }
+    .nav-pf-tertiary-nav {
+      left: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-badges-width);
+      .list-group-item {
+        > a {
+          width: calc(@nav-pf-vertical-badges-width - 20px);
+        }
+      }
+    }
+    &.collapsed-secondary-nav-pf,
+    &.collapsed-tertiary-nav-pf {
+      width: @nav-pf-vertical-badges-width;
+    }
+    &.collapsed-secondary-nav-pf {
+      .nav-pf-tertiary-nav {
+        left: @nav-pf-vertical-badges-width;
+      }
+    }
+    &.hover-secondary-nav-pf {
+      width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-badges-width);
+      &.collapsed-secondary-nav-pf,
+      &.collapsed-tertiary-nav-pf {
+        width: @nav-pf-vertical-badges-width;
+      }
+    }
+    &.hover-tertiary-nav-pf {
+      width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-width * 2));
+      &.collapsed-secondary-nav-pf {
+        width: calc(@nav-pf-vertical-width * 2);
+      }
+      &.collapsed-tertiary-nav-pf {
+        width: @nav-pf-vertical-width;
+      }
     }
   }
 }
@@ -760,19 +931,10 @@
 }
 .nav-pf-vertical.transitions {
   transition: width @nav-pf-menu-transition-period;
-  -webkit-transition: width @nav-pf-menu-transition-period;
-  -moz-transition: width @nav-pf-menu-transition-period;
-  -o-transition: width @nav-pf-menu-transition-period;
   .nav-pf-secondary-nav {
-    -webkit-transition: visibility @nav-pf-menu-transition-period, opacity @nav-pf-menu-transition-period linear;
-    -moz-transition: visibility ease-in-out @nav-pf-menu-transition-period, opacity ease-in-out @nav-pf-menu-transition-period linear;
-    -o-transition: visibility @nav-pf-menu-transition-period, opacity @nav-pf-menu-transition-period linear;
     transition: visibility @nav-pf-menu-transition-period, opacity @nav-pf-menu-transition-period linear;
   }
   .nav-pf-tertiary-nav {
-    -webkit-transition: visibility @nav-pf-menu-transition-period, opacity @nav-pf-menu-transition-period linear;
-    -moz-transition: visibility @nav-pf-menu-transition-period, opacity @nav-pf-menu-transition-period linear;
-    -o-transition: visibility @nav-pf-menu-transition-period, opacity @nav-pf-menu-transition-period linear;
     transition: visibility @nav-pf-menu-transition-period, opacity @nav-pf-menu-transition-period linear;
   }
 }

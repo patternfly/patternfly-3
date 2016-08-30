@@ -7,13 +7,13 @@
   .list-group-item {
     align-items: flex-start;
     .clearfix(); //IE9 fallback
-    display: -ms-flexbox;// IE10 fallback
     display: flex;
     padding-bottom: 0;
     padding-top: 0;
     &.active {
       color: @list-group-link-color;
       background-color: @list-view-active-bg;
+      z-index:auto;
     }
     &:hover {
       background-color: @list-view-hover-bg;
@@ -26,30 +26,28 @@
     font-size: @font-size-h3;
     small {
       display: block;
-      font-size: (@font-size-base * 0.8);
+      font-size: (@font-size-base * .8);
       font-weight: 400;
     }
     @media (min-width: @screen-md-min) {
-      -ms-flex: 1 0 calc(~'25% - 20px'); // IE10 fallback
-      flex:     1 0 calc(~'25% - 20px');
+      flex:     1 0 calc(~"25% - 20px");
       float: left; // IE9 fallback
       font-size: @font-size-base;
       margin: 0 (@grid-gutter-width/2) 0 0;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      width: calc(~'25% - 20px'); // IE9 fallback
+      width: calc(~"25% - 20px"); // IE9 fallback
     }
   }
   .list-group-item-text {
     color: currentColor !important; // to overwrite color change when active.
     margin-bottom: 10px;
     @media (min-width: @screen-md-min) {
-      -ms-flex: 1 0 auto; // IE10 prefix
       flex:     1 0 auto; // it covers whats left from the title
       float: left; // IE9 fallback
       margin: 0 @grid-gutter-width 0 0;
-      width: calc(~'75% - 40px'); // IE9 fallback
+      width: calc(~"75% - 40px"); // IE9 fallback
     }
   }
 }
@@ -58,9 +56,9 @@
   margin-bottom: (@grid-gutter-width/2);
   margin-left: (@grid-gutter-width/2);
   margin-top: (@grid-gutter-width/2);
-  -ms-flex-order: 2;
-  order:          2;
-  button, > a {
+  order: 2;
+  button,
+  > a {
     margin-left: (@grid-gutter-width/4);
   }
   .list-view-pf-top-align & {
@@ -80,7 +78,9 @@
 .list-view-pf-additional-info-item {
   align-items: center;
   display: inline-block;
-  display: flex;
+  @supports (display: flex) {
+    display: flex;
+  }
   margin-right: (@grid-gutter-width/2);
   max-width:100%;
   text-align: center;
@@ -109,14 +109,12 @@
 .list-view-pf-body {
   align-items: center;
   display: table-cell; //IE9 fallback
-  -ms-flex: 1; // IE10 prefix
   flex:     1;
   min-width: 0;
   vertical-align: top; //IE9 fallback
   width: 100%; // IE9 fallback, it extends the cell to size of the container
   @media (min-width: @screen-md-min) {
     align-items: center;
-    display: -ms-flexbox;// IE10 fallback
     display: flex;
     flex-direction: row;
   }
@@ -133,7 +131,6 @@
   }
 }
 .list-view-pf-description {
-  -ms-flex: 1 0 50%; // IE10 prefix
   flex:     1 0 50%;
   .list-view-pf-stacked & {
     display: block;
@@ -206,9 +203,7 @@
 }
 .list-view-pf-main-info {
   align-items: flex-start;
-  display: -ms-flexbox; // IE10 fallback
   display: flex;
-  -ms-flex: 1; // IE10 prefix
   flex:     1;
   min-width: 0;
   padding-bottom: (@grid-gutter-width/2);

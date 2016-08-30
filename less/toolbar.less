@@ -9,9 +9,8 @@
   padding-top: (@grid-gutter-width/4);
   .form-group {
     margin-bottom: (@grid-gutter-width/4);
-    @media (min-width: @grid-float-breakpoint){
+    @media (min-width: @grid-float-breakpoint) {
       border-right: 1px solid @sidebar-pf-border-color;
-      display: table-cell;
       float: left;
       margin-bottom: 0;
       padding-left: (@grid-gutter-width/2);
@@ -25,13 +24,9 @@
     .btn,
     .btn-group {
       + .btn,
-      + .btn-group {
-        margin-left: 5px;
-      }
+      + .btn-group { margin-left: 5px; }
       + .btn-link,
-      + .dropdown {
-        margin-left: 10px;
-      }
+      + .dropdown { margin-left: 10px; }
     }
     .btn-link {
       color: @gray-darker;
@@ -40,15 +35,12 @@
       padding: 4px 0;
       &:active,
       &:focus,
-      &:hover {
-        color: @link-color;
-      }
+      &:hover { color: @link-color; }
     }
   }
 }
 .toolbar-pf-actions {
   display: table;
-  margin-bottom: 10px;
   width: 100%;
   @media (min-width: @grid-float-breakpoint) {
     .toolbar-pf-filter {
@@ -59,44 +51,22 @@
 }
 .toolbar-pf-view-selector {
   font-size: (@font-size-base + 4);
-  @media (min-width: @grid-float-breakpoint) {
-    border-right: 0;
-    float: right;
-    padding-right: 0;
-  }
-  .active a {
+  .btn-link.active {
     color: @link-color;
     cursor: default;
   }
-  a {
-    color: @gray-darker;
-    &:hover{
-      color: @link-color;
-    }
-  }
-  .list-inline {
-    margin-bottom: 0;
-  }
 }
-.toolbar-pf-action-right{
+.toolbar-pf-action-right {
   float: right;
   @media (max-width: @grid-float-breakpoint) {
     float: none;
-  }
-  .toolbar-pf-view-selector {
-    @media (min-width: @grid-float-breakpoint) {
-      float: left;
-    }
   }
 }
 .toolbar-pf-find {
   font-size: (@font-size-base + 2);
   position: relative;
-  .btn{
-    outline: none;
-  }
 }
-.find-pf-dropdown-container{
+.find-pf-dropdown-container {
   background: @color-pf-white;
   border: solid 1px @color-pf-black-400;
   display: none;
@@ -112,14 +82,11 @@
     width: calc(100% - 30px);
   }
   &:before,
-  &:after{
+  &:after {
     content: "";
-    display:block;
-    height:0;
     position: absolute;
-    width:0;
   }
-  &:before{
+  &:before {
     border-bottom:11px solid @color-pf-black-400;
     border-left:11px solid transparent;
     border-right:11px solid transparent;
@@ -133,7 +100,7 @@
       top: 8px;
     }
   }
-  &:after{
+  &:after {
     border-bottom:10px solid @color-pf-white;
     border-left:10px solid transparent;
     border-right:10px solid transparent;
@@ -147,38 +114,36 @@
       top: 9px;
     }
   }
-  input{
-    padding: 5px 95px 5px 5px;
-    width: 100%;
+  input {
     height: 30px;
-    line-height: 30px;
+    padding: 5px 117px 5px 5px; // 112px (components) + 5px (offset)
+    width: 100%;
   }
-  .find-pf-buttons{
+  .find-pf-buttons {
     position: absolute;
     right: 10px;
-    top: 0;
-    .btn{
-      margin-left: 0 !important;
-    }
-    span{
+    top: 5px;
+    .btn {
+      border: none;
       cursor: pointer;
-      display: inline-block;
+      margin-left: 0 !important;
+      padding: 0;
+      width: 18px;
+      .fa-angle-up,
+      .fa-angle-down {
+        font-weight: bold;
+        font-size: (@font-size-base + 6);
+      }
+      .pficon-close { font-size: (@font-size-base + 2); }
+    }
+    span {
       height: 30px;
       line-height: 30px;
-      margin-right: 5px;
       vertical-align: middle;
     }
-    .find-pf-nums{
+    .find-pf-nums {
       color: @color-pf-black-500;
-      font-size: (@font-size-base + 2);
-    }
-    .btn-link .fa-angle-up,
-    .btn-link .fa-angle-down{
-      font-weight: bold;
-      font-size: (@font-size-base + 6);
-    }
-    .btn-find-close{
-      font-size: (@font-size-base + 2);
+      margin-right: 3px;
     }
   }
 }
@@ -193,7 +158,7 @@
     line-height: (@grid-gutter-width/1.5);
     margin-bottom: 0;
     margin-top: 0;
-    @media (min-width: @screen-sm-min){
+    @media (min-width: @screen-sm-min) {
       line-height: @grid-gutter-width;
     }
   }
@@ -207,13 +172,6 @@
       color: @color-pf-white;
       display: inline-block;
       margin-left: 5px;
-    }
-  }
-  .list-inline {
-    margin: 0 10px 0 5px;
-    li {
-      padding-left: 0;
-      padding-right: 0;
     }
   }
 }
