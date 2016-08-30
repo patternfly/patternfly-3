@@ -7,7 +7,8 @@
      {% if page.submenus %}nav-pf-vertical-with-sub-menus hide-nav-pf{% endif %}
      {% if page.persistent-secondary %}nav-pf-persistent-secondary{% endif %}
      {% if page.collapsible-menus %}nav-pf-vertical-collapsible-menus{% endif %}
-     {% if page.hide-icons %}hidden-icons-pf{% endif %}">
+     {% if page.hide-icons %}hidden-icons-pf{% endif %}
+     {% if page.nav-badges %}nav-pf-vertical-with-badges{% endif %}">
   <ul class="list-group">
     <li class="list-group-item">
       <a>
@@ -19,6 +20,11 @@
       <a>
         <span class="fa fa-shield" data-toggle="tooltip" title="Dolor"></span>
         <span class="list-group-item-value">Dolor</span>
+        {% if page.nav-badges %}
+        <div class="badge-container-pf">
+          <span class="badge">1283</span>
+        </div>
+        {% endif %}
       </a>
     </li>
     <li class="list-group-item active {% if page.submenus %}secondary-nav-item-pf{% endif %}" data-target="#ipsum-secondary">
@@ -53,8 +59,12 @@
     </li>
   </ul>
 </div>
-<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical container-pf-nav-pf-vertical-with-sub-menus {% if page.persistent-secondary %}nav-pf-persistent-secondary{% endif %} {% if page.nav-badges %}nav-pf-vertical-with-badges{% endif %} {% if page.hide-icons == true %}hidden-icons-pf{% endif %}">
-  {% include widgets/layouts/cards-alt.html %}
+<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical
+     {% if page.persistent-secondary %}nav-pf-persistent-secondary{% endif %}
+     {% if page.nav-badges %}nav-pf-vertical-with-badges{% endif %}
+     {% if page.hide-icons == true %}hidden-icons-pf{% endif %}">
+
+{% include widgets/layouts/cards-alt.html %}
 </div>
 <script>
   $(document).ready(function() {
