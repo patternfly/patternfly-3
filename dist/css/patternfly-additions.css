@@ -2264,7 +2264,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border-bottom: 1px solid transparent !important;
   border-top: 1px solid transparent !important;
   margin-bottom: 0;
+  overflow: hidden;
   padding: 0 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .treeview .list-group-item:hover {
   background: #def3ff !important;
@@ -2275,6 +2278,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border-color: #0088ce !important;
   color: #fff !important;
 }
+.treeview .list-group-item.node-check-changed span.node-icon,
+.treeview .list-group-item.node-check-changed span.text {
+  color: #39a5dc;
+}
 .treeview span.icon {
   display: inline-block;
   font-size: 13px;
@@ -2284,8 +2291,18 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .treeview span.icon > [class*="fa-angle"] {
   font-size: 15px;
 }
+.treeview span.icon.check-icon {
+  margin-right: 10px;
+}
 .treeview span.indent {
   margin-right: 5px;
+}
+.treeview .node-disabled {
+  color: #d1d1d1;
+  cursor: not-allowed;
+}
+.treeview .node-hidden {
+  display: none;
 }
 .card-pf {
   background: #fff;
