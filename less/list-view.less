@@ -10,10 +10,14 @@
     display: flex;
     padding-bottom: 0;
     padding-top: 0;
+    margin-bottom: 0;
+    border-top: 0;
     &.active {
       color: @list-group-link-color;
       background-color: @list-view-active-bg;
       z-index:auto;
+      border-top: solid 1px @list-group-active-border;
+      margin-top: -1px;
     }
     &:hover {
       background-color: @list-view-hover-bg;
