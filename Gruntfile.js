@@ -109,7 +109,7 @@ module.exports = function (grunt) {
           'dist/css/patternfly.css': 'src/less/patternfly.less',
         },
         options: {
-          paths: ['less/'],
+          paths: ['src/less/'],
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
