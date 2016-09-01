@@ -5677,34 +5677,6 @@ a.disabled {
 .nav-pf-vertical.nav-pf-vertical-with-badges .list-group-item > a {
   width: 250px;
 }
-.nav-pf-vertical.collapsed {
-  width: 75px;
-}
-.nav-pf-vertical.collapsed > .list-group-item > a {
-  width: 75px;
-}
-.nav-pf-vertical.collapsed > .list-group-item > a > .list-group-item-value {
-  display: none;
-}
-.nav-pf-vertical.collapsed > .list-group-item > a > .badge-container-pf {
-  display: none;
-}
-.nav-pf-vertical.collapsed > .list-group-item.secondary-nav-item-pf.active > a,
-.nav-pf-vertical.collapsed > .list-group-item.secondary-nav-item-pf > a {
-  width: 75px;
-}
-.nav-pf-vertical.collapsed > .list-group-item.secondary-nav-item-pf.active > a:after,
-.nav-pf-vertical.collapsed > .list-group-item.secondary-nav-item-pf > a:after {
-  right: 10px;
-}
-.nav-pf-vertical.collapsed > .list-group-item.secondary-nav-item-pf.active > a,
-.nav-pf-vertical.collapsed > .list-group-item.secondary-nav-item-pf:hover > a {
-  width: 77px;
-}
-.nav-pf-vertical.collapsed > .list-group-item.secondary-nav-item-pf.active > a:after,
-.nav-pf-vertical.collapsed > .list-group-item.secondary-nav-item-pf:hover > a:after {
-  right: 11px;
-}
 .nav-pf-vertical h5 {
   color: #fff;
   cursor: default;
@@ -6003,10 +5975,16 @@ a.disabled {
   color: #0088ce;
   text-decoration: none;
 }
+.nav-pf-vertical.collapsed {
+  width: 75px;
+}
 .nav-pf-vertical.collapsed .list-group-item > a {
   width: 75px;
 }
 .nav-pf-vertical.collapsed .list-group-item > a > .list-group-item-value {
+  display: none;
+}
+.nav-pf-vertical.collapsed .list-group-item > a > .badge-container-pf {
   display: none;
 }
 .nav-pf-vertical.collapsed .list-group-item.secondary-nav-item-pf.active > a,
@@ -6228,6 +6206,9 @@ a.disabled {
 .collapsed .nav-pf-secondary-nav .list-group-item > a > .list-group-item-value {
   display: inline-block;
 }
+.collapsed .nav-pf-secondary-nav .list-group-item > a > .badge-container-pf {
+  display: inline-block;
+}
 .collapsed .nav-pf-tertiary-nav {
   left: calc(75px + 200px);
 }
@@ -6235,6 +6216,9 @@ a.disabled {
   width: calc(200px - 20px);
 }
 .collapsed .nav-pf-tertiary-nav .list-group-item > a > .list-group-item-value {
+  display: inline-block;
+}
+.collapsed .nav-pf-tertiary-nav .list-group-item > a > .badge-container-pf {
   display: inline-block;
 }
 .collapsed.collapsed-secondary-nav-pf,
