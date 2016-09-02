@@ -138,38 +138,6 @@
       width: @nav-pf-vertical-badges-width;
     }
   }
-  &.collapsed { // Collapsed Primary Menu state
-    width: @nav-pf-vertical-collapsed-width;
-    > .list-group-item { // Show only the icons
-      > a {
-        width: @nav-pf-vertical-collapsed-width;
-        > .list-group-item-value {
-          display: none;
-        }
-        > .badge-container-pf {
-          display: none;
-        }
-      }
-      &.secondary-nav-item-pf { // Adjust widths
-        &.active > a,
-        > a {
-          width: @nav-pf-vertical-collapsed-width;
-          &:after {
-            right: 10px;
-          }
-        }
-        &.active,
-        &:hover {
-          > a {
-            width: (@nav-pf-vertical-collapsed-width + 2);
-            &:after {
-              right: 11px;
-            }
-          }
-        }
-      }
-    }
-  }
   h5 {
     color: @nav-pf-vertical-secondary-color;
     cursor: default;
@@ -501,10 +469,14 @@
   }
 }
 .nav-pf-vertical.collapsed { // Collapsed Primary Menu state
+  width: @nav-pf-vertical-collapsed-width;
   .list-group-item { // Show only the icons
     > a {
       width: @nav-pf-vertical-collapsed-width;
       > .list-group-item-value {
+        display: none;
+      }
+      > .badge-container-pf {
         display: none;
       }
     }
@@ -753,6 +725,9 @@
         > .list-group-item-value { // Continue to show labels for secondary menu items
           display: inline-block;
         }
+        > .badge-container-pf {
+          display: inline-block;
+        }
       }
     }
   }
@@ -762,6 +737,9 @@
       > a {
         width: calc(@nav-pf-vertical-width - 20px);
         > .list-group-item-value { // Continue to show labels for tertiary menu items
+          display: inline-block;
+        }
+        > .badge-container-pf {
           display: inline-block;
         }
       }
