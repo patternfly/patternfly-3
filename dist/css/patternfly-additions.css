@@ -2294,6 +2294,16 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .treeview span.icon.check-icon {
   margin-right: 10px;
 }
+.treeview span.image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 1.19em;
+  line-height: 1em;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 12px;
+}
 .treeview span.indent {
   margin-right: 5px;
 }
