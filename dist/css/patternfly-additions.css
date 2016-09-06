@@ -5767,31 +5767,31 @@ a.disabled {
 .hover-tertiary-nav-pf.nav-pf-vertical-with-badges .nav-pf-tertiary-nav {
   left: calc(250px * 2);
 }
-.collapsed {
+.nav-pf-vertical.collapsed {
   width: 75px;
 }
-.collapsed.collapsed-secondary-nav-pf {
+.nav-pf-vertical.collapsed.collapsed-secondary-nav-pf {
   width: 200px;
 }
-.collapsed.collapsed-secondary-nav-pf.nav-pf-vertical-with-badges {
+.nav-pf-vertical.collapsed.collapsed-secondary-nav-pf.nav-pf-vertical-with-badges {
   width: 250px;
 }
-.collapsed.collapsed-tertiary-nav-pf {
+.nav-pf-vertical.collapsed.collapsed-tertiary-nav-pf {
   width: 200px;
 }
-.collapsed.collapsed-tertiary-nav-pf.nav-pf-vertical-with-badges {
+.nav-pf-vertical.collapsed.collapsed-tertiary-nav-pf.nav-pf-vertical-with-badges {
   width: 250px;
 }
-.collapsed.hover-secondary-nav-pf {
+.nav-pf-vertical.collapsed.hover-secondary-nav-pf {
   width: calc(75px + 200px);
 }
-.collapsed.hover-secondary-nav-pf.nav-pf-vertical-with-badges {
+.nav-pf-vertical.collapsed.hover-secondary-nav-pf.nav-pf-vertical-with-badges {
   width: calc(75px + 250px);
 }
-.collapsed.hover-tertiary-nav-pf {
-  width: calc(75px + (250px * 2));
+.nav-pf-vertical.collapsed.hover-tertiary-nav-pf {
+  width: calc(75px + (200px * 2));
 }
-.collapsed.hover-tertiary-nav-pf.nav-pf-vertical-with-badges {
+.nav-pf-vertical.collapsed.hover-tertiary-nav-pf.nav-pf-vertical-with-badges {
   width: calc(75px + (250px * 2));
 }
 .show-mobile-nav.show-mobile-secondary {
