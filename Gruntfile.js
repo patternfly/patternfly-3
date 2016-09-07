@@ -40,11 +40,13 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'node_modules/bootstrap/dist/fonts/', src: ['*'], dest: 'dist/fonts/'},
           // copy Font Awesome font files
           {expand: true, cwd: 'node_modules/font-awesome/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          // copy Patternfly less files
+          {expand: true, cwd: 'src/less/', src: ['*'], dest: 'dist/less/'},
           // copy Patternfly font files
           {expand: true, cwd: 'src/fonts/', src: ['*'], dest: 'dist/fonts/'},
           //copy images
           {expand: true, cwd: 'src/img/', src: ['**'], dest: 'dist/img/'}
-        ],
+        ]
       },
       js: {
         files: [
