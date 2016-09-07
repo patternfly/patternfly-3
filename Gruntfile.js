@@ -146,16 +146,7 @@ module.exports = function (grunt) {
         tasks: ['jekyll']
       },
       less: {
-        files: [
-          'src/less/*.less',
-          'node_modules/bootstrap/less/**/*',
-          'node_modules/font-awesome/less/**/*',
-          'node_modules/patternfly-bootstrap-combobox/less/**/*',
-          'node_modules/bootstrap-datepicker/less/**/*',
-          'node_modules/bootstrap-select/less/**/*',
-          'node_modules/bootstrap-touchspin/dist/**/*',
-          'node_modules/c3/**/*'
-        ],
+        files: ['src/less/*.less'],
         tasks: ['less']
       },
       css: {
