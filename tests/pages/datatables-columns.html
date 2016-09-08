@@ -6,7 +6,9 @@ title: Data Tables with column visibility, reordering
 resource: true
 url-js-extra: ['//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js', '//cdn.datatables.net/colvis/1.1.2/js/dataTables.colVis.min.js', '//cdn.datatables.net/colreorder/1.3.2/js/dataTables.colReorder.min.js']
 ---
-{% include widgets/datatable.html %}
+<div class="datatable-pf">
+  {% include widgets/datatables/tmpl/datatable-columns.html %}
+</div>
       <script>
         $(document).ready(function() {
           // Initialize Datatables

@@ -20,7 +20,13 @@
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/img/apple-touch-icon-precomposed-57.png">
     <link rel="stylesheet" href="{{site.url-css-main}}" >
     <link rel="stylesheet" href="{{site.url-css-additions}}" >
-    {% if page.css-extra %}<link href="{% if page.url-css-extra %}{{ page.url-css-extra }}{% else %}{{ site.url-css-extra }}{% endif %}" rel="stylesheet" media="screen, print">{% endif %}
+    {% if page.url-css-extra %}
+      {% for urlextracss in page.url-css-extra %}
+      <link href="{{ urlextracss }}" rel="stylesheet" media="screen, print">
+      {% endfor %}
+    {% else if site.url-css-extra %}
+      <link href="{{ site.url-css-extra }}" rel="stylesheet" media="screen, print">
+    {% endif %}
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {% if page.url-js-extra %}{% for urlextrajs in page.url-js-extra %}
