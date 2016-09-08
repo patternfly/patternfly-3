@@ -149,8 +149,13 @@
   }
 }
 
+.dataTables_empty {
+  background: @table-bg-accent;
+}
+
 .dataTables_wrapper {
-  margin: @line-height-computed 0;
+  //margin: @line-height-computed 0;
+  margin: 0;
   @media (max-width: @screen-xs-max) {
     .table-responsive {
       margin-bottom: 0;
@@ -169,50 +174,131 @@
   z-index: 201;
 }
 
-table.datatable {
-  margin-bottom: 0;
-  max-width: none !important;
-  thead {
-    .sorting,
-    .sorting_asc,
-    .sorting_desc,
-    .sorting_asc_disabled,
-    .sorting_desc_disabled {
-      cursor: pointer;
+.datatable-pf {
+  .blank-slate-pf {
+    background: @table-bg-accent;
+    border: 1px solid @table-border-color;
+    border-radius: 0;
+    margin-top: -1px;
+  }
+  .datatable-pf-actions {
+    background: @table-bg-accent;
+    > .btn {
+      border: none;
+      box-shadow: none;
+      width: 100%;
     }
-    .sorting_asc,
-    .sorting_desc {
-      color: @link-color !important;
-      position: relative;
-      &:after {
-        content: @fa-var-angle-down;
-        font-family: @icon-font-name-fa;
-        font-size: (@font-size-base - 2);
-        font-weight: normal;
-        height: (@font-size-base - 3);
-        left: 7px;
-        line-height: @font-size-base;
-        position: relative;
-        top: 2px;
-        vertical-align: baseline;
-        width: @font-size-base;
-      }
-      &:before {
-        background: @link-color;
-        content: "";
-        height: 2px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-      }
-    }
-    .sorting_asc:after {
-      content: @fa-var-angle-up;
-      top: -3px;
+    .dropdown-kebab-pf {
+      padding-left: @table-cell-padding;
     }
   }
-  th:active {
-    outline: none;
+  .datatable-pf-select {
+    width: 33px;
+  }
+  .datatable-pf-results-right {
+    text-align: right;
+  }
+  table {
+    margin-bottom: 0;
+    max-width: none !important;
+    > tbody {
+      > tr {
+        > td.datatable-pf-actions {
+          padding: 0;
+        }
+        &:hover {
+          > td.datatable-pf-actions {
+            background-color: @table-bg-accent;
+            border-bottom-color: @table-border-color;
+          }
+        }
+      }
+      > tr.selected {
+        color: @color-pf-white;
+        background-color: @color-pf-blue-400;
+        > td {
+          border-bottom-color: @color-pf-blue-500;
+        }
+        > td.datatable-pf-actions {
+          background-color: @table-bg-accent;
+          border-bottom-color: @table-border-color;
+        }
+        &:hover {
+          > td {
+            background-color: inherit;
+            border-bottom-color: @color-pf-blue-500;
+          }
+          > td.datatable-pf-actions {
+            background-color: @table-bg-accent;
+            border-bottom-color: @table-border-color;
+          }
+        }
+      }
+    }
+    thead {
+      .sorting,
+      .sorting_asc,
+      .sorting_desc,
+      .sorting_asc_disabled,
+      .sorting_desc_disabled {
+        cursor: pointer;
+      }
+      .sorting_asc,
+      .sorting_desc {
+        color: @link-color !important;
+        position: relative;
+        &:after {
+          content: @fa-var-angle-down;
+          font-family: @icon-font-name-fa;
+          font-size: (@font-size-base - 2);
+          font-weight: normal;
+          height: (@font-size-base - 3);
+          left: 7px;
+          line-height: @font-size-base;
+          position: relative;
+          top: 2px;
+          vertical-align: baseline;
+          width: @font-size-base;
+        }
+        &:before {
+          background: @link-color;
+          content: "";
+          height: 2px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+      }
+      .sorting_asc:after {
+        content: @fa-var-angle-up;
+        top: -3px;
+      }
+    }
+    th:active {
+      outline: none;
+    }
+  }
+  .toolbar-pf {
+    background: @table-bg-accent;
+    border: 1px solid @table-border-color;
+    border-bottom: none;
+    .form-group {
+      @media (min-width: @grid-float-breakpoint) {
+        border-right: none;
+      }
+    }
+    .toolbar-pf-actions {
+      @media (min-width: @grid-float-breakpoint) {
+        .toolbar-pf-filter {
+          width: 40%;
+        }
+      }
+    }
+    .toolbar-pf-results {
+      border-top: 1px solid @table-border-color;
+      height: 40px;
+      line-height: 40px;
+    }
   }
 }
