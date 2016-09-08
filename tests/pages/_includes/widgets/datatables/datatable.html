@@ -1,0 +1,79 @@
+<div class="datatable-pf">
+{% include widgets/datatables/tmpl/toolbar.html %}
+{% include widgets/datatables/tmpl/datatable.html %}
+{% include widgets/communication/blank-slate.html %}
+</div>
+{% include widgets/datatables/js/data.js.html %}
+{% include widgets/datatables/js/filter.js.html %}
+{% include widgets/datatables/js/select.js.html %}
+{% include widgets/datatables/js/empty.js.html %}
+<script>
+  $(document).ready(function() {
+    // Initialize data table
+    var table = $('#table').DataTable({
+        columns: [
+          { data: null,
+            className: "datatable-pf-select",
+            render: function (data, type, full, meta) {
+              // Select row checkbox renderer
+              return '<input type="checkbox" name="select" value="' + meta.row + '">';
+            },
+            sortable: false
+          },
+          { data: "engine" },
+          { data: "browser" },
+          { data: "platforms" },
+          { data: "version" },
+          { data: "grade" },
+          { data: null,
+            className: "datatable-pf-actions",
+            render: function (data, type, full, meta) {
+              // Inline action button renderer
+              return '<button class="btn btn-default" type="button">Actions</button>';
+            }
+          }, {
+            data: null,
+            className: "datatable-pf-actions",
+            render: function (data, type, full, meta) {
+              // Inline action kebab renderer
+              return '<div class="dropdown btn-group dropdown-kebab-pf">' +
+                '<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
+                '<span class="fa fa-ellipsis-v"></span></button>' +
+                '<ul class="dropdown-menu " aria-labelledby="dropdownKebab">' +
+                '<li><a href="#">Action</a></li>' +
+                '<li><a href="#">Another action</a></li>' +
+                '<li><a href="#">Something else here</a></li>' +
+                '<li role="separator" class="divider"></li>' +
+                '<li><a href="#">Separated link</a></li></ul></div>';
+            }
+          }
+        ],
+        data: dataSet,
+        dom: "t",
+        language: {
+          zeroRecords: "No records found"
+        },
+        order: [[ 1, 'asc' ]]
+    });
+
+    // Initialize filtering util
+    new dataTableFilter({
+      datatableId: ".datatable-pf"
+    });
+
+    // Initialize selection util
+    new dataTableSelect({
+      datatableId: ".datatable-pf",
+      deleteAllRowsId: "#deleteAllRows",
+      selectAllId: "#selectAllRows"
+    });
+
+    // Initialize empty data table util
+    new dataTableEmpty({
+      data: dataSet,
+      datatableId: ".datatable-pf",
+      deleteAllRowsId: "#deleteAllRows",
+      restoreRowsId: "#restoreRows"
+    });
+  });
+</script>
