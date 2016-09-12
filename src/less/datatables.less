@@ -282,6 +282,18 @@
         }
       }
     }
+    .toolbar-pf-action-right {
+      > .btn {
+        margin-left: 5px;
+      }
+      > .dropdown-kebab-pf {
+        margin-left: 10px;
+      }
+      float: right;
+      @media (max-width: @grid-float-breakpoint) {
+        float: right;
+      }
+    }
     .toolbar-pf-results {
       > div {
         padding-left: 10px;
@@ -302,7 +314,7 @@
     width: 100%;
   }
   .dropdown-kebab-pf {
-    padding-left: @table-cell-padding;
+    padding-right: @table-cell-padding;
   }
 }
 
