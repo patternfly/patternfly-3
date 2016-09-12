@@ -40,27 +40,13 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'node_modules/bootstrap/dist/fonts/', src: ['*'], dest: 'dist/fonts/'},
           // copy Font Awesome font files
           {expand: true, cwd: 'node_modules/font-awesome/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          // copy Patternfly less files
+          {expand: true, cwd: 'src/less/', src: ['*'], dest: 'dist/less/'},
           // copy Patternfly font files
           {expand: true, cwd: 'src/fonts/', src: ['*'], dest: 'dist/fonts/'},
-          // copy Bootstrap less files
-          {expand: true, cwd: 'node_modules/bootstrap/less/', src: ['**'], dest: 'less/lib/bootstrap/'},
-          // copy Font Awesome less files
-          {expand: true, cwd: 'node_modules/font-awesome/less/', src: ['**'], dest: 'less/lib/font-awesome/'},
-          // copy Bootstrap-Combobox less files
-          {expand: true, cwd: 'node_modules/patternfly-bootstrap-combobox/less/', src: ['**'], dest: 'less/lib/bootstrap-combobox/'},
-          // copy Bootstrap-Datepicker less files
-          {expand: true, cwd: 'node_modules/bootstrap-datepicker/less/', src: ['**'], dest: 'less/lib/bootstrap-datepicker/'},
-          // copy Bootstrap-Select less files
-          {expand: true, cwd: 'node_modules/bootstrap-select/less/', src: ['**'], dest: 'less/lib/bootstrap-select/'},
-          // Bootstrap Switch less files must be manually copied because of edits made to source less for strict-math purposes
-          // manually copy 'node_modules/bootstrap-switch/src/less/bootstrap3/' and make sure any math is wrapped with parentheses
-          // copy Bootstrap Touchspin css file
-          {expand: true, cwd: 'node_modules/bootstrap-touchspin/dist/', src: ['jquery.bootstrap-touchspin.css'], dest: 'less/lib/bootstrap-touchspin/'},
-          // copy C3 css file
-          {expand: true, cwd: 'node_modules/c3/', src: ['c3.css'], dest: 'less/lib/c3/'},
           //copy images
           {expand: true, cwd: 'src/img/', src: ['**'], dest: 'dist/img/'}
-        ],
+        ]
       },
       js: {
         files: [
@@ -106,10 +92,13 @@ module.exports = function (grunt) {
     less: {
       patternfly: {
         files: {
-          'dist/css/patternfly.css': 'less/patternfly.less',
+          'dist/css/patternfly.css': 'src/less/patternfly.less',
         },
         options: {
-          paths: ['less/'],
+          paths: [
+            'src/less/',
+            'node_modules/'
+          ],
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
@@ -119,10 +108,13 @@ module.exports = function (grunt) {
       },
       patternflyAdditions: {
         files: {
-          'dist/css/patternfly-additions.css': 'less/patternfly-additions.less'
+          'dist/css/patternfly-additions.css': 'src/less/patternfly-additions.less'
         },
         options: {
-          paths: ['less/'],
+          paths: [
+            'src/less/',
+            'node_modules/'
+          ],
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
@@ -146,13 +138,6 @@ module.exports = function (grunt) {
         files: [
           'node_modules/bootstrap/dist/fonts/**/*',
           'node_modules/font-awesome/fonts/**/*',
-          'node_modules/bootstrap/less/**/*',
-          'node_modules/font-awesome/less/**/*',
-          'node_modules/patternfly-bootstrap-combobox/less/**/*',
-          'node_modules/bootstrap-datepicker/less/**/*',
-          'node_modules/bootstrap-select/less/**/*',
-          'node_modules/bootstrap-touchspin/dist/**/*',
-          'node_modules/c3/**/*',
           'src/fonts/**/*',
           'src/img/**/*'
         ],
@@ -163,7 +148,7 @@ module.exports = function (grunt) {
         tasks: ['jekyll']
       },
       less: {
-        files: 'less/*.less',
+        files: ['src/less/*.less'],
         tasks: ['less']
       },
       css: {
@@ -204,7 +189,7 @@ module.exports = function (grunt) {
       ]
     },
     stylelint: {
-      src: ['less/*.less']
+      src: ['src/less/*.less']
     },
     postcss: {
       options: {
