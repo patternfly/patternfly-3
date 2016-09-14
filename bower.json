@@ -37,6 +37,6 @@
     "matchHeight": "~0.7.0",
     "eonasdan-bootstrap-datetimepicker": "~4.17.37",
     "moment": "~2.14.1",
-    "patternfly-bootstrap-treeview": "~2.0.0"
+    "patternfly-bootstrap-treeview": "~2.1.0"
   }
 }
