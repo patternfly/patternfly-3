@@ -5,12 +5,11 @@
 </div>
 {% include widgets/datatables/js/data.js.html %}
 {% include widgets/datatables/js/filter.js.html %}
-{% include widgets/datatables/js/select.js.html %}
 {% include widgets/datatables/js/empty.js.html %}
 <script>
   $(document).ready(function() {
     // Initialize data table
-    var table = $('#table').DataTable({
+    var dt = $('#table').DataTable({
         columns: [
           { data: null,
             className: "datatable-pf-select",
@@ -53,7 +52,11 @@
         language: {
           zeroRecords: "No records found"
         },
-        order: [[ 1, 'asc' ]]
+        order: [[ 1, 'asc' ]],
+        select: {
+            style: 'multi',
+            selector: 'td:first-child input[type="checkbox"]'
+        }
     });
 
     // Initialize filtering util
