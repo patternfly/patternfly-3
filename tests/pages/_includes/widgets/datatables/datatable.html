@@ -24,7 +24,7 @@
           { data: "browser" },
           { data: "platforms" },
           { data: "version" },
-          { data: "grade" },
+          { data: "grade"},
           { data: null,
             className: "datatable-pf-actions",
             render: function (data, type, full, meta) {
@@ -57,19 +57,19 @@
     });
 
     // Initialize filtering util
-    new dataTableFilter({
+    new dataTableFilterUtil({
       datatableId: ".datatable-pf"
     });
 
     // Initialize selection util
-    new dataTableSelect({
+    new dataTableSelectUtil({
       datatableId: ".datatable-pf",
       deleteAllRowsId: "#deleteAllRows",
       selectAllId: "#selectAllRows"
     });
 
     // Initialize empty data table util
-    new dataTableEmpty({
+    new dataTableEmptyUtil({
       data: dataSet,
       datatableId: ".datatable-pf",
       deleteAllRowsId: "#deleteAllRows",
