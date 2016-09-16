@@ -24,14 +24,11 @@
   background: @color-pf-black-100;
   border-right: 1px solid @color-pf-black-300;
   bottom: 0;
-  // display: table-cell;
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
   top: 0;
-  vertical-align: top;
-
   .list-group {
     border-top: 0;
     margin-bottom: 0;
@@ -357,10 +354,6 @@
 }
 
 // Scale up the modal
-@media (min-width: @screen-sm-min) {
-
-}
-// Scale up the modal
 @media (min-width: @screen-md-min) {
   // increasing space around modal for larger viewports
   .wizard-pf {
@@ -368,7 +361,7 @@
     width: 900px;
   }
   // increasing width of sidebar for larger viewports
-  .wizard-pf-sidebar .list-group-item>a {
+  .wizard-pf-sidebar .list-group-item > a {
     width: 18em;
   }
 }
