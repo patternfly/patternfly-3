@@ -1,23 +1,33 @@
 //
 // Wizard
 // --------------------------------------------------
+.wizard-pf {
+  height:100%;
+  margin: 0 auto;
+  max-height: 900px;
+  padding: 10px;
+  width: auto;
+  .modal-content {
+    height:100%;
+  }
+}
 
 // Wizard header
 // Top section of the wizard w/ title and dismiss
 
 .wizard-pf-body {
     padding: 0;
+    position: static;
 }
 /* styles the sidebard containing the sub-steps */
 .wizard-pf-sidebar {
   background: @color-pf-black-100;
   border-right: 1px solid @color-pf-black-300;
   bottom: 0;
-  display: table-cell;
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  position: relative;
+  position: absolute;
   top: 0;
   vertical-align: top;
 
@@ -41,7 +51,7 @@
         padding-left: 20px;
         position: relative;
         white-space: nowrap;
-        width: 18em;
+        width: 14em;
         &:hover {
           text-decoration: none;
         }
@@ -99,7 +109,7 @@
 /* styles the steps indicator across the top of the wizard */
 .wizard-pf-steps {
   border-bottom: solid 1px @color-pf-black-300;
-  text-align:center;
+  text-align: center;
 }
 .wizard-pf-steps-indicator {
   font-size: ceil((@font-size-base * 1.3333));
@@ -192,10 +202,11 @@
 
 /* styles the main content portion of the wizard */
 .wizard-pf-main {
-  display: table-cell;
+  height: 100%;
+  margin-left: 253px; /* this value is updated by js */
+  overflow: auto;
   padding: 3em;
   vertical-align: top;
-  width: 10000px;
   .blank-slate-pf {
     background-color: transparent;
     border: none;
@@ -322,10 +333,39 @@
 /* styles the footer */
 .wizard-pf-footer {
   border-top: 1px solid @color-pf-black-300;
+  bottom: 0;
+  left: 0;
   margin-top: 0;
   padding-bottom: 17px;
+  position: absolute;
+  right: 0;
 
   .btn-cancel {
     margin-right:25px;
+  }
+}
+
+.wizard-pf-row {
+  bottom: 58px; /* this value is updated by js */
+  position: absolute;
+  overflow: hidden;
+  top: 172px; /* this value is updated by js */
+  width:100%;
+}
+
+// Scale up the modal
+@media (min-width: @screen-sm-min) {
+
+}
+// Scale up the modal
+@media (min-width: @screen-md-min) {
+  // increasing space around modal for larger viewports
+  .wizard-pf {
+    padding: 30px 0;
+    width: 900px;
+  }
+  // increasing width of sidebar for larger viewports
+  .wizard-pf-sidebar .list-group-item>a {
+    width: 18em;
   }
 }
