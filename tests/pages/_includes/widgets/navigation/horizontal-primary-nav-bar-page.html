@@ -1,4 +1,8 @@
-{% include widgets/navigation/horizontal-primary-nav-bar.html %}
+{% if page.notification-drawer %}
+  {% include widgets/layouts/nav-horizontal-notification-drawer.html %}
+{% else %}
+  {% include widgets/navigation/horizontal-primary-nav-bar.html %}
+{% endif %}
 <div class="container-fluid container-cards-pf">
 {% include widgets/layouts/cards-alt.html %}
 </div>
