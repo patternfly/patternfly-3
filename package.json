@@ -34,7 +34,8 @@
     "karma-phantomjs-launcher": "^1.0.1",
     "matchdep": "~1.0.1",
     "nsp": "^2.6.1",
-    "pixrem": "^3.0.1"
+    "pixrem": "^3.0.1",
+    "table": "3.7.9"
   },
   "optionalDependencies": {
     "bootstrap-datepicker": "~1.6.4",
