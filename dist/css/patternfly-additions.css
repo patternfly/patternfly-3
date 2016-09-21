@@ -1143,7 +1143,6 @@ select.selectpicker {
   display: inline-block;
   top: 0;
   border-radius: 1px;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 .bootstrap-switch .bootstrap-switch-handle-on,
@@ -3424,10 +3423,8 @@ a.disabled {
   text-decoration: none;
 }
 .list-view-pf .list-group-item {
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  display: -webkit-flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 0;
@@ -3451,10 +3448,9 @@ a.disabled {
 }
 @media (min-width: 992px) {
   .list-view-pf .list-group-item {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-                -ms-grid-row-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
   }
 }
 .list-view-pf .list-group-item-heading {
@@ -3467,9 +3463,8 @@ a.disabled {
 }
 @media (min-width: 992px) {
   .list-view-pf .list-group-item-heading {
-    -webkit-flex: 1 0 calc(25% - 20px);
-        -ms-flex: 1 0 calc(25% - 20px);
-            flex: 1 0 calc(25% - 20px);
+    -ms-flex: 1 0 calc(25% - 20px);
+        flex: 1 0 calc(25% - 20px);
     float: left;
     font-size: 12px;
     margin: 0 20px 0 0;
@@ -3485,9 +3480,8 @@ a.disabled {
 }
 @media (min-width: 992px) {
   .list-view-pf .list-group-item-text {
-    -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
     float: left;
     margin: 0 40px 0 0;
     width: calc(75% - 40px);
@@ -3498,44 +3492,37 @@ a.disabled {
   margin-bottom: 20px;
   margin-left: 20px;
   margin-top: 20px;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2;
+  -ms-flex-order: 2;
+      order: 2;
 }
 .list-view-pf-actions button,
 .list-view-pf-actions > a {
   margin-left: 10px;
 }
 .list-view-pf-top-align .list-view-pf-actions {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .list-view-pf-additional-info {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-flex;
+  -ms-flex-align: center;
+      align-items: center;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media (min-width: 992px) {
   .list-view-pf-additional-info {
-    -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
     float: left;
     width: 50%;
   }
 }
 .list-view-pf-additional-info-item {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-              -ms-grid-row-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
   display: inline-block;
   margin-right: 20px;
   max-width: 100%;
@@ -3543,16 +3530,14 @@ a.disabled {
 }
 @supports (display: flex) {
   .list-view-pf-additional-info-item {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 }
 .list-view-pf-additional-info-item.list-view-pf-additional-info-item-stacked {
   text-align: center;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 .list-view-pf-additional-info-item.list-view-pf-additional-info-item-stacked strong {
   font-size: 13px;
@@ -3575,29 +3560,24 @@ a.disabled {
   width: 60px;
 }
 .list-view-pf-body {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-              -ms-grid-row-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
   display: table-cell;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+      flex: 1;
   min-width: 0;
   vertical-align: top;
   width: 100%;
 }
 @media (min-width: 992px) {
   .list-view-pf-body {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-flex;
+    -ms-flex-align: center;
+        align-items: center;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
   }
 }
 .list-view-pf-checkbox {
@@ -3609,24 +3589,20 @@ a.disabled {
   padding: 3px 10px 3px 0;
 }
 .list-view-pf-top-align .list-view-pf-checkbox {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .list-view-pf-description {
-  -webkit-flex: 1 0 50%;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
+  -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
 }
 .list-view-pf-stacked .list-view-pf-description {
   display: block;
 }
 @media (min-width: 992px) {
   .list-view-pf-description {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-flex;
+    -ms-flex-align: center;
+        align-items: center;
     display: -ms-flexbox;
     display: flex;
     float: left;
@@ -3701,31 +3677,26 @@ a.disabled {
   color: #ec7a08;
 }
 .list-view-pf-main-info {
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  display: -webkit-flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+      flex: 1;
   min-width: 0;
   padding-bottom: 20px;
   padding-top: 20px;
 }
 @media (min-width: 992px) {
   .list-view-pf-main-info {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-                -ms-grid-row-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
   }
   .list-view-pf-top-align .list-view-pf-main-info {
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+        -ms-grid-row-align: flex-start;
+        align-items: flex-start;
   }
 }
 .list-view-pf-stacked .list-group-item-heading {
@@ -5118,29 +5089,16 @@ a.disabled {
     margin-top: 5px;
   }
 }
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
 @keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 .spinner {
-  -webkit-animation: rotation 600ms infinite linear;
-          animation: rotation 600ms infinite linear;
+  animation: rotation 600ms infinite linear;
   border-bottom: 4px solid rgba(3, 3, 3, 0.25);
   border-left: 4px solid rgba(3, 3, 3, 0.25);
   border-right: 4px solid rgba(3, 3, 3, 0.25);
@@ -6371,21 +6329,30 @@ a.disabled {
 .nav-pf-vertical.transitions .nav-pf-tertiary-nav {
   transition: visibility 100ms, opacity 100ms linear;
 }
+.wizard-pf {
+  height: 100%;
+  margin: 0 auto;
+  max-height: 900px;
+  padding: 10px;
+  width: auto;
+}
+.wizard-pf .modal-content {
+  height: 100%;
+}
 .wizard-pf-body {
   padding: 0;
+  position: static;
 }
 /* styles the sidebard containing the sub-steps */
 .wizard-pf-sidebar {
   background: #fafafa;
   border-right: 1px solid #d1d1d1;
   bottom: 0;
-  display: table-cell;
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  position: relative;
+  position: absolute;
   top: 0;
-  vertical-align: top;
 }
 .wizard-pf-sidebar .list-group {
   border-top: 0;
@@ -6408,7 +6375,7 @@ a.disabled {
   padding-left: 20px;
   position: relative;
   white-space: nowrap;
-  width: 18em;
+  width: 14em;
 }
 .wizard-pf-sidebar .list-group-item > a:hover {
   text-decoration: none;
@@ -6466,16 +6433,14 @@ a.disabled {
   font-size: 16px;
   display: inline-block;
   height: 120px;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   list-style: none;
   padding: 38px 0 0;
   /* draw the step number in the circle */
 }
 @supports (display: flex) {
   .wizard-pf-steps-indicator {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
@@ -6484,12 +6449,10 @@ a.disabled {
   counter-increment: section;
   float: left;
   /* float for IE9 since it doesn't support flex. If items wrap, they overlap */
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-flex-basis: 0;
-      -ms-flex-preferred-size: 0;
-          flex-basis: 0;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
   line-height: 15px;
   margin: 0;
   padding: 0;
@@ -6558,10 +6521,12 @@ a.disabled {
 }
 /* styles the main content portion of the wizard */
 .wizard-pf-main {
-  display: table-cell;
+  height: 100%;
+  margin-left: 253px;
+  /* this value is updated by js */
+  overflow: auto;
   padding: 3em;
   vertical-align: top;
-  width: 10000px;
 }
 .wizard-pf-main .blank-slate-pf {
   background-color: transparent;
@@ -6676,9 +6641,31 @@ a.disabled {
 /* styles the footer */
 .wizard-pf-footer {
   border-top: 1px solid #d1d1d1;
+  bottom: 0;
+  left: 0;
   margin-top: 0;
   padding-bottom: 17px;
+  position: absolute;
+  right: 0;
 }
 .wizard-pf-footer .btn-cancel {
   margin-right: 25px;
+}
+.wizard-pf-row {
+  bottom: 58px;
+  /* this value is updated by js */
+  position: absolute;
+  overflow: hidden;
+  top: 172px;
+  /* this value is updated by js */
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .wizard-pf {
+    padding: 30px 0;
+    width: 900px;
+  }
+  .wizard-pf-sidebar .list-group-item > a {
+    width: 18em;
+  }
 }
