@@ -2262,6 +2262,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   background: transparent;
   border-bottom: 1px solid transparent !important;
   border-top: 1px solid transparent !important;
+  cursor: default !important;
   margin-bottom: 0;
   overflow: hidden;
   padding: 0 10px;
@@ -2269,13 +2270,12 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   white-space: nowrap;
 }
 .treeview .list-group-item:hover {
-  background: #def3ff !important;
-  border-color: #bee1f4 !important;
+  background: none !important;
 }
 .treeview .list-group-item.node-selected {
-  background: #0088ce !important;
-  border-color: #0088ce !important;
-  color: #fff !important;
+  background: none !important;
+  border-color: transparent !important;
+  color: inherit !important;
 }
 .treeview .list-group-item.node-check-changed span.node-icon,
 .treeview .list-group-item.node-check-changed span.text {
@@ -2292,6 +2292,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .treeview span.icon.check-icon {
   margin-right: 10px;
+}
+.treeview span.icon.expand-icon {
+  cursor: pointer !important;
 }
 .treeview span.image {
   background-repeat: no-repeat;
@@ -2310,8 +2313,26 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   color: #d1d1d1;
   cursor: not-allowed;
 }
+.treeview .node-disabled span.expand-icon {
+  cursor: default !important;
+}
 .treeview .node-hidden {
   display: none;
+}
+.treeview-pf-hover .list-group-item {
+  cursor: pointer !important;
+}
+.treeview-pf-hover .list-group-item:hover {
+  background-color: #def3ff !important;
+  border-color: #bee1f4 !important;
+}
+.treeview-pf-select .list-group-item {
+  cursor: pointer !important;
+}
+.treeview-pf-select .list-group-item.node-selected {
+  background: #0088ce !important;
+  border-color: #0088ce !important;
+  color: #fff !important;
 }
 .card-pf {
   background: #fff;

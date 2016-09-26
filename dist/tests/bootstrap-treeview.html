@@ -94,11 +94,15 @@
           <div id="treeview10"></div>
         </div><!--/col-->
         <div class="col-sm-4">
-          <h2>Prevent Unselection</h2>
-          <div id="treeview11"></div>
+          <h2>Hover and Select</h2>
+          <div id="treeview13" class="treeview-pf-hover treeview-pf-select"></div>
         </div><!--/col-->
       </div>
       <div class="row">
+        <div class="col-sm-4">
+          <h2>Prevent Unselection</h2>
+          <div id="treeview11" class="treeview-pf-select"></div>
+        </div><!--/col-->
         <div class="col-sm-4">
           <h2>Disabled Nodes</h2>
           <div id="treeview12"></div>
@@ -361,6 +365,15 @@
             showBorder: false
           });
           tree12.treeview('disableAll');
+
+          //Hover and Select
+          $('#treeview13').treeview({
+            collapseIcon: collapseIcon,
+            data: defaultData,
+            expandIcon: expandIcon,
+            nodeIcon: nodeIcon,
+            showBorder: false
+          });
 
         });
       </script>
