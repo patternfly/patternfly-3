@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.9.0",
+  "version": "3.11.0",
   "authors": "Red Hat",
   "license": "Apache-2.0",
   "homepage": "https://www.patternfly.org",
@@ -37,6 +37,6 @@
     "matchHeight": "~0.7.0",
     "eonasdan-bootstrap-datetimepicker": "~4.17.37",
     "moment": "~2.14.1",
-    "patternfly-bootstrap-treeview": "~1.0.0"
+    "patternfly-bootstrap-treeview": "~2.0.0"
   }
 }

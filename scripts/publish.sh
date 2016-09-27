@@ -12,8 +12,13 @@ then
   fi
 fi
 
+# Ensure dist branch is not redeployed.
+case $TRAVIS_BRANCH in
+  *-dist$* ) echo "This commit was made against the dist branch. Do not deploy!"; exit 1;;
+esac
+
 # User info
-git config user.name "Admin"
+git config user.name "patternfly-build"
 git config user.email "patternfly-build@redhat.com"
 git config --global push.default simple
 
@@ -36,5 +41,3 @@ then
 else
   git push upstream $TRAVIS_BRANCH:$TRAVIS_BRANCH-dist --force -v
 fi
-
-exit $?

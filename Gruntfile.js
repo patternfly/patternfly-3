@@ -1,7 +1,6 @@
 /*global module,require*/
 module.exports = function (grunt) {
-  // load all grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  'use strict';
 
   // configurable paths
   var projectConfig = {
@@ -9,8 +8,11 @@ module.exports = function (grunt) {
     src: ''
   };
 
+  // load all grunt tasks
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
   try {
-      projectConfig.src = require('./bower.json').appPath || projectConfig.src;
+    projectConfig.src = require('./bower.json').appPath || projectConfig.src;
   } catch (e) {}
 
   grunt.initConfig({
@@ -35,30 +37,16 @@ module.exports = function (grunt) {
       main: {
         files: [
           // copy Bootstrap font files
-          {expand: true, cwd: 'components/bootstrap/dist/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          {expand: true, cwd: 'node_modules/bootstrap/dist/fonts/', src: ['*'], dest: 'dist/fonts/'},
           // copy Font Awesome font files
-          {expand: true, cwd: 'components/font-awesome/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          {expand: true, cwd: 'node_modules/font-awesome/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          // copy Patternfly less files
+          {expand: true, cwd: 'src/less/', src: ['*'], dest: 'dist/less/'},
           // copy Patternfly font files
           {expand: true, cwd: 'src/fonts/', src: ['*'], dest: 'dist/fonts/'},
-          // copy Bootstrap less files
-          {expand: true, cwd: 'components/bootstrap/less/', src: ['**'], dest: 'less/lib/bootstrap/'},
-          // copy Font Awesome less files
-          {expand: true, cwd: 'components/font-awesome/less/', src: ['**'], dest: 'less/lib/font-awesome/'},
-          // copy Bootstrap-Combobox less files
-          {expand: true, cwd: 'components/bootstrap-combobox/less/', src: ['**'], dest: 'less/lib/bootstrap-combobox/'},
-          // copy Bootstrap-Datepicker less files
-          {expand: true, cwd: 'components/bootstrap-datepicker/less/', src: ['**'], dest: 'less/lib/bootstrap-datepicker/'},
-          // copy Bootstrap-Select less files
-          {expand: true, cwd: 'components/bootstrap-select/less/', src: ['**'], dest: 'less/lib/bootstrap-select/'},
-          // Bootstrap Switch less files must be manually copied because of edits made to source less for strict-math purposes
-          // manually copy 'components/bootstrap-switch/src/less/bootstrap3/' and make sure any math is wrapped with parentheses
-          // copy Bootstrap Touchspin css file
-          {expand: true, cwd: 'components/bootstrap-touchspin/dist/', src: ['jquery.bootstrap-touchspin.css'], dest: 'less/lib/bootstrap-touchspin/'},
-          // copy C3 css file
-          {expand: true, cwd: 'components/c3/', src: ['c3.css'], dest: 'less/lib/c3/'},
           //copy images
           {expand: true, cwd: 'src/img/', src: ['**'], dest: 'dist/img/'}
-        ],
+        ]
       },
       js: {
         files: [
@@ -77,6 +65,16 @@ module.exports = function (grunt) {
         }
       }
     },
+    jekyll: {
+      options: {
+        src: 'tests/pages'
+      },
+      tests: {
+        options: {
+          dest: 'dist/tests'
+        }
+      }
+    },
     cssmin: {
       production: {
         files: [{
@@ -91,48 +89,16 @@ module.exports = function (grunt) {
         }
       }
     },
-    jekyll: {
-      options: {
-        src: 'tests/pages'
-      },
-      tests: {
-        options: {
-          dest: 'dist/tests'
-        }
-      }
-    },
-    jslint: {
-      client: {
-        src: [
-          'src/js/patternfly.js'
-        ],
-        directives: {
-          // node environment
-          node: false,
-          // browser environment
-          browser: true,
-          // allow dangling underscores
-          nomen: true,
-          // allow todo statements
-          todo: true,
-          // allow unused parameters
-          unparam: true,
-          // add predefined libraries
-          predef: [
-            'jQuery',
-            'Event'
-          ],
-          indent: 2
-        }
-      }
-    },
     less: {
       patternfly: {
         files: {
-          'dist/css/patternfly.css': 'less/patternfly.less',
+          'dist/css/patternfly.css': 'src/less/patternfly.less',
         },
         options: {
-          paths: ['less/'],
+          paths: [
+            'src/less/',
+            'node_modules/'
+          ],
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
@@ -142,10 +108,13 @@ module.exports = function (grunt) {
       },
       patternflyAdditions: {
         files: {
-          'dist/css/patternfly-additions.css': 'less/patternfly-additions.less'
+          'dist/css/patternfly-additions.css': 'src/less/patternfly-additions.less'
         },
         options: {
-          paths: ['less/'],
+          paths: [
+            'src/less/',
+            'node_modules/'
+          ],
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
@@ -166,7 +135,12 @@ module.exports = function (grunt) {
     },
     watch: {
       copy: {
-        files: 'components/**/*',
+        files: [
+          'node_modules/bootstrap/dist/fonts/**/*',
+          'node_modules/font-awesome/fonts/**/*',
+          'src/fonts/**/*',
+          'src/img/**/*'
+        ],
         tasks: ['copy']
       },
       jekyll: {
@@ -174,16 +148,16 @@ module.exports = function (grunt) {
         tasks: ['jekyll']
       },
       less: {
-        files: 'less/*.less',
+        files: ['src/less/*.less'],
         tasks: ['less']
       },
       css: {
         files: ['dist/css/patternfly*.css', 'dist/css/!*.min.css'],
-        tasks: ['cssmin', 'csscount']
+        tasks: ['cssmin','csscount']
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['jslint', 'uglify', 'copy:js']
+        tasks: ['eslint', 'uglify', 'copy:js']
       },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'dist/tests/*.html', '!tests/pages/*.html']
@@ -196,6 +170,45 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js'
       }
+    },
+    htmlhint: {
+      html: {
+        src: ['dist/tests/**/*.html'],
+        options: {
+          htmlhintrc: '.htmlhintrc'
+        }
+      }
+    },
+    eslint: {
+      options: {
+        configFile: 'eslint.yaml'
+      },
+      target: [
+        'Gruntfile.js',
+        'src/js/**/*.js'
+      ]
+    },
+    stylelint: {
+      src: ['src/less/*.less']
+    },
+    postcss: {
+      options: {
+        processors: [
+          require('pixrem')(), // add fallbacks for rem units
+          require('autoprefixer')({browsers: ['last 3 versions', 'ie 9']}) // add vendor prefixes,
+        ]
+      },
+      dist: {
+        files: [
+          {
+            expand: true,     // Enable dynamic expansion.
+            cwd: 'dist/css/',      // Src matches are relative to this path.
+            src: ['*.css'], // Actual pattern(s) to match.
+            dest: 'dist/css'   // Destination path prefix.
+          }
+        ]
+      }
+
     }
   });
 
@@ -204,9 +217,12 @@ module.exports = function (grunt) {
     'jekyll',
     'less',
     'cssmin',
+    'postcss',
     'csscount',
-    'jslint',
-    'uglify'
+    'eslint',
+    'uglify',
+    'htmlhint',
+    'stylelint'
   ]);
 
   grunt.registerTask('server', [
