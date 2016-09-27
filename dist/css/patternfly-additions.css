@@ -3470,7 +3470,6 @@ a.disabled {
 @media (min-width: 992px) {
   .list-view-pf .list-group-item {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center;
   }
 }
@@ -3542,7 +3541,6 @@ a.disabled {
 }
 .list-view-pf-additional-info-item {
   -ms-flex-align: center;
-      -ms-grid-row-align: center;
       align-items: center;
   display: inline-block;
   margin-right: 20px;
@@ -3582,7 +3580,6 @@ a.disabled {
 }
 .list-view-pf-body {
   -ms-flex-align: center;
-      -ms-grid-row-align: center;
       align-items: center;
   display: table-cell;
   -ms-flex: 1;
@@ -3711,12 +3708,10 @@ a.disabled {
 @media (min-width: 992px) {
   .list-view-pf-main-info {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center;
   }
   .list-view-pf-top-align .list-view-pf-main-info {
     -ms-flex-align: start;
-        -ms-grid-row-align: flex-start;
         align-items: flex-start;
   }
 }
