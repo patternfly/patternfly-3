@@ -620,10 +620,13 @@
     // Back button clicked
     this.backBtnClicked = function() {
       $(self.modal + " .wizard-pf-back").click(function() {
-        // go back a page (i.e. -1)
-        self.wizardPaging(-1);
-        // show/hide/disable/enable buttons if needed
-        self.updateWizardFooterDisplay();
+        // if not the first page
+        if (self.currentTab != self.tabs[0]) {
+          // go back a page (i.e. -1)
+          self.wizardPaging(-1);
+          // show/hide/disable/enable buttons if needed
+          self.updateWizardFooterDisplay();
+        }
       });
     };
 
