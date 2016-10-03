@@ -5439,7 +5439,7 @@ a.disabled {
   background: #fff;
   border: solid 1px #bbb;
   display: none;
-  left: -200px;
+  right: -20px;
   padding: 5px;
   position: absolute;
   top: 35px;
@@ -5462,8 +5462,11 @@ a.disabled {
   border-bottom: 11px solid #bbb;
   border-left: 11px solid transparent;
   border-right: 11px solid transparent;
-  left: 215px;
+  right: 35px;
   top: -12px;
+}
+.toolbar-pf-find:last-child .find-pf-dropdown-container:before {
+  right: 15px;
 }
 @media (max-width: 768px) {
   .find-pf-dropdown-container:before {
@@ -5471,6 +5474,7 @@ a.disabled {
     border-right: 11px solid #bbb;
     border-top: 11px solid transparent;
     left: -22px;
+    right: initial;
     top: 8px;
   }
 }
@@ -5478,8 +5482,11 @@ a.disabled {
   border-bottom: 10px solid #fff;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  left: 216px;
+  right: 36px;
   top: -10px;
+}
+.toolbar-pf-find:last-child .find-pf-dropdown-container:after {
+  right: 16px;
 }
 @media (max-width: 768px) {
   .find-pf-dropdown-container:after {
@@ -5487,6 +5494,7 @@ a.disabled {
     border-right: 10px solid #fff;
     border-top: 10px solid transparent;
     left: -20px;
+    right: initial;
     top: 9px;
   }
 }

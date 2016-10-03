@@ -71,7 +71,7 @@
   background: @color-pf-white;
   border: solid 1px @color-pf-black-400;
   display: none;
-  left: -200px;
+  right: -20px;
   padding: 5px;
   position: absolute;
   top: 35px;
@@ -91,13 +91,17 @@
     border-bottom:11px solid @color-pf-black-400;
     border-left:11px solid transparent;
     border-right:11px solid transparent;
-    left: 215px;
+    right: 35px;
+    .toolbar-pf-find:last-child & {
+      right: 15px;
+    }
     top: -12px;
     @media (max-width: @grid-float-breakpoint) {
       border-bottom:11px solid transparent;
       border-right:11px solid @color-pf-black-400;
       border-top:11px solid transparent;
       left: -22px;
+      right: initial;
       top: 8px;
     }
   }
@@ -105,13 +109,17 @@
     border-bottom:10px solid @color-pf-white;
     border-left:10px solid transparent;
     border-right:10px solid transparent;
-    left: 216px;
+    right: 36px;
+    .toolbar-pf-find:last-child & {
+      right: 16px;
+    }
     top: -10px;
     @media (max-width: @grid-float-breakpoint) {
       border-bottom:10px solid transparent;
       border-right:10px solid @color-pf-white;
       border-top:10px solid transparent;
       left: -20px;
+      right: initial;
       top: 9px;
     }
   }
