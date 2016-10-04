@@ -10,20 +10,19 @@
     background: transparent;
     border-bottom: 1px solid transparent !important;
     border-top: 1px solid transparent !important;
+    cursor: default !important;
     margin-bottom: 0;
     overflow: hidden;
     padding: 0 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
-
     &:hover {
-      background: @dropdown-link-hover-bg !important;
-      border-color: @dropdown-link-hover-border-color !important;
+      background: none !important;
     }
     &.node-selected {
-      background: @dropdown-link-active-bg !important;
-      border-color: @dropdown-link-active-border-color !important;
-      color: @dropdown-link-active-color !important;
+      background: none !important;
+      border-color: transparent !important;
+      color: inherit !important;
     }
     &.node-check-changed {
       span.node-icon,
@@ -43,6 +42,9 @@
     &.check-icon {
       margin-right: 10px;
     }
+    &.expand-icon {
+      cursor: pointer !important;
+    }
   }
   span.image {
     background-repeat: no-repeat;
@@ -60,8 +62,28 @@
   .node-disabled {
     color: @color-pf-black-300;
     cursor: not-allowed;
+    span.expand-icon {
+      cursor: default !important;
+    }
   }
   .node-hidden {
     display:none;
+  }
+}
+
+.treeview-pf-hover .list-group-item {
+  cursor: pointer !important;
+  &:hover {
+    background-color: @dropdown-link-hover-bg !important;
+    border-color: @dropdown-link-hover-border-color !important;
+  }
+}
+
+.treeview-pf-select .list-group-item {
+  cursor: pointer !important;
+  &.node-selected {
+    background: @dropdown-link-active-bg !important;
+    border-color: @dropdown-link-active-border-color !important;
+    color: @dropdown-link-active-color !important;
   }
 }
