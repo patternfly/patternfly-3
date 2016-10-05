@@ -5,12 +5,11 @@
 </div>
 {% include widgets/datatables/js/data.js.html %}
 {% include widgets/datatables/js/filter.js.html %}
-{% include widgets/datatables/js/select.js.html %}
 {% include widgets/datatables/js/empty.js.html %}
 <script>
   $(document).ready(function() {
     // Initialize data table
-    var table = $('#table').DataTable({
+    var dt = $('#table').DataTable({
         columns: [
           { data: null,
             className: "datatable-pf-select",
@@ -24,7 +23,7 @@
           { data: "browser" },
           { data: "platforms" },
           { data: "version" },
-          { data: "grade" },
+          { data: "grade"},
           { data: null,
             className: "datatable-pf-actions",
             render: function (data, type, full, meta) {
@@ -36,15 +35,15 @@
             className: "datatable-pf-actions",
             render: function (data, type, full, meta) {
               // Inline action kebab renderer
-              return '<div class="dropdown pull-right dropdown-kebab-pf">' +
-                '<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
+              return '<div class="dropdown dropdown-kebab-pf">' +
+                '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
                 '<span class="fa fa-ellipsis-v"></span></button>' +
                 '<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">' +
                 '<li><a href="#">Action</a></li>' +
                 '<li><a href="#">Another action</a></li>' +
                 '<li><a href="#">Something else here</a></li>' +
                 '<li role="separator" class="divider"></li>' +
-                '<li><a href="#">Separated link</a></li></div>';
+                '<li><a href="#">Separated link</a></li></ul></div>';
             }
           }
         ],
@@ -53,23 +52,20 @@
         language: {
           zeroRecords: "No records found"
         },
-        order: [[ 1, 'asc' ]]
+        order: [[ 1, 'asc' ]],
+        select: {
+            style: 'multi',
+            selector: 'td:first-child input[type="checkbox"]'
+        }
     });
 
     // Initialize filtering util
-    new dataTableFilter({
+    new dataTableFilterUtil({
       datatableId: ".datatable-pf"
     });
 
-    // Initialize selection util
-    new dataTableSelect({
-      datatableId: ".datatable-pf",
-      deleteAllRowsId: "#deleteAllRows",
-      selectAllId: "#selectAllRows"
-    });
-
     // Initialize empty data table util
-    new dataTableEmpty({
+    new dataTableEmptyUtil({
       data: dataSet,
       datatableId: ".datatable-pf",
       deleteAllRowsId: "#deleteAllRows",
