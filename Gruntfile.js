@@ -51,7 +51,7 @@ module.exports = function (grunt) {
       js: {
         files: [
           // copy js src file
-          {expand: true, cwd: 'src/js/', src: ['patternfly.js'], dest: 'dist/js/'}
+          {expand: true, cwd: 'src/js/', src: ['*.js'], dest: 'dist/js/'}
         ]
       }
     },
@@ -129,7 +129,8 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          'dist/js/patternfly.min.js': ['src/js/patternfly.js']
+          'dist/js/patternfly.min.js': ['src/js/patternfly.js'],
+          'dist/js/patternfly.dataTables.pfSelect.min.js': ['src/js/patternfly.dataTables.pfSelect.js']
         }
       }
     },
