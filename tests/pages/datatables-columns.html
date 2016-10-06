@@ -23,22 +23,7 @@ url-js-extra: ['//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js',
                 extend: "colvis",
                 text: "<span class='fa fa-columns'></span>"
               }
-            ],
-            "colVis": {
-              "buttonText": "<i class='fa fa-columns'></i>",
-              "sAlign": "right"
-            }
-          });
-          // On click of ColVis_Button, add Bootstrap classes and...
-          $(".ColVis_Button").addClass("btn btn-default dropdown-toggle").click(function() {
-            // Add Bootstrap classes to ColVis_Button's parent
-            $(this).parent(".ColVis").addClass("btn-group open");
-            // Add Bootstrap classes to the checkboxes
-            $(".ColVis_collection label").addClass("checkbox");
-            // Remove class from ColVis when clicking outside ColVis_Collection
-            $(".ColVis_collectionBackground, .ColVis_catcher").click(function() {
-              $(".ColVis").removeClass("open");
-            });
+            ]
           });
         });
       </script>
