@@ -37,10 +37,25 @@
       "from": "d3@>=3.5.17 <3.6.0",
       "resolved": "https://registry.npmjs.org/d3/-/d3-3.5.17.tgz"
     },
-    "datatables": {
+    "datatables.net": {
       "version": "1.10.12",
-      "from": "datatables@>=1.10.12 <1.11.0",
-      "resolved": "https://registry.npmjs.org/datatables/-/datatables-1.10.12.tgz"
+      "from": "datatables.net@>=1.10.12 <1.11.0",
+      "resolved": "https://registry.npmjs.org/datatables.net/-/datatables.net-1.10.12.tgz"
+    },
+    "datatables.net-bs": {
+      "version": "1.10.12",
+      "from": "datatables.net-bs@>=1.10.12 <1.11.0",
+      "resolved": "https://registry.npmjs.org/datatables.net-bs/-/datatables.net-bs-1.10.12.tgz"
+    },
+    "datatables.net-buttons": {
+      "version": "1.2.2",
+      "from": "datatables.net-buttons@>=1.2.2 <1.3.0",
+      "resolved": "https://registry.npmjs.org/datatables.net-buttons/-/datatables.net-buttons-1.2.2.tgz"
+    },
+    "datatables.net-buttons-bs": {
+      "version": "1.2.2",
+      "from": "datatables.net-buttons-bs@>=1.2.2 <1.30",
+      "resolved": "https://registry.npmjs.org/datatables.net-buttons-bs/-/datatables.net-buttons-bs-1.2.2.tgz"
     },
     "datatables.net-colreorder": {
       "version": "1.3.2",
@@ -72,11 +87,6 @@
           }
         }
       }
-    },
-    "drmonty-datatables-colvis": {
-      "version": "1.1.2",
-      "from": "drmonty-datatables-colvis@>=1.1.2 <1.2.0",
-      "resolved": "https://registry.npmjs.org/drmonty-datatables-colvis/-/drmonty-datatables-colvis-1.1.2.tgz"
     },
     "eonasdan-bootstrap-datetimepicker": {
       "version": "4.15.35",
@@ -121,9 +131,9 @@
       "resolved": "https://registry.npmjs.org/patternfly-bootstrap-combobox/-/patternfly-bootstrap-combobox-1.1.7.tgz"
     },
     "patternfly-bootstrap-treeview": {
-      "version": "2.0.0",
-      "from": "patternfly-bootstrap-treeview@>=2.0.0 <2.1.0",
-      "resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.0.0.tgz"
+      "version": "2.1.0",
+      "from": "patternfly-bootstrap-treeview@2.1.0",
+      "resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.0.tgz"
     }
   }
 }

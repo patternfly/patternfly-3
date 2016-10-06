@@ -4,7 +4,11 @@ categories: [Widgets]
 layout: page
 title: Data Tables with column visibility, reordering
 resource: true
-url-js-extra: ['//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js', '//cdn.datatables.net/colvis/1.1.2/js/dataTables.colVis.min.js', '//cdn.datatables.net/colreorder/1.3.2/js/dataTables.colReorder.min.js']
+url-js-extra: ['//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js',
+  '//cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js',
+  '//cdn.datatables.net/buttons/1.2.2/js/buttons.bootstrap.min.js',
+  '//cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js',
+  '//cdn.datatables.net/colreorder/1.3.2/js/dataTables.colReorder.min.js']
 ---
 {% include widgets/datatable.html %}
       <script>
@@ -12,8 +16,14 @@ url-js-extra: ['//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js', '//cd
           // Initialize Datatables
           var table = $('.datatable').DataTable({
             // Customize the header and footer
-            "dom": 'R<"dataTables_header"fCi>t<"dataTables_footer"p>',
-            // Customize the ColVis button text so it's an icon and align the dropdown to the right side
+            "dom": 'R<"dataTables_header"f i B>t<"dataTables_footer"p>',
+            "buttons": [
+              // Customize the ColVis button text so it's an icon and align the dropdown to the right side
+              {
+                extend: "colvis",
+                text: "<span class='fa fa-columns'></span>"
+              }
+            ],
             "colVis": {
               "buttonText": "<i class='fa fa-columns'></i>",
               "sAlign": "right"

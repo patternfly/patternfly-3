@@ -2,46 +2,26 @@
 // Datatables
 // --------------------------------------------------
 
-.ColVis_Button {
-  &:active {
-    &:focus {
-      outline: none;
-    }
+.dt-button.buttons-columnVisibility a {
+  color: @color-pf-black;
+  &::before {
+    content:'\f096';
+    font-family:FontAwesome;
+    margin-right:0.25em;
   }
 }
 
-.ColVis_catcher {
-  position: absolute;
-  z-index: 999;
-}
-
-.ColVis_collection {
-  background-color: @dropdown-bg;
-  border: 1px solid @dropdown-border;
-  border-radius: @border-radius-base;
-  .box-shadow(0 6px 12px fade(@color-pf-black, 17.5%));
-  background-clip: padding-box;
-  list-style: none;
-  margin: -1px 0 0 0;
-  padding: 5px 10px;
-  width: 150px;
-  z-index: @zindex-dropdown;
-  label {
-    font-weight: normal;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding-left: 20px;
+.dt-button.buttons-columnVisibility.active a {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: @color-pf-black;
+  &::before {
+    content:'\f046';
   }
-}
-
-.ColVis_collectionBackground {
-  background-color: @color-pf-white;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 998;
+  &:hover {
+    background-color: @color-pf-blue-50 !important;
+    border-color: @color-pf-blue-100 !important;
+  }
 }
 
 .dataTables_header {
@@ -54,7 +34,7 @@
   .btn {
     .box-shadow(none);
   }
-  .ColVis {
+  .dt-buttons {
     position: absolute;
     right: 5px;
     text-align: left;

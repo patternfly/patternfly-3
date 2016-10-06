@@ -64,8 +64,10 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
         <!-- Datatables, jQuery Grid Component -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
-        <script src="node_modules/drmonty-datatables-colvis/js/dataTables.colVis.js"></script>
+        <script src="node_modules/datatables.net/js/jquery.dataTables.js"></script>
+        <script src="node_modules/datatables.net-buttons/js/dataTables.buttons.js"></script>
+        <script src="node_modules/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
+        <script src="node_modules/datatables.net-buttons/js/buttons.colVis.js"></script>
         <script src="node_modules/datatables.net-colreorder/js/dataTables.colReorder.js"></script>
 
         <!-- PatternFly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
@@ -124,9 +126,11 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
         <!-- Datatables, jQuery Grid Component -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-        <script src="bower_components/datatables-colvis/js/dataTables.colVis.js"></script>
-        <script src="bower_components/datatables-colreorder/js/dataTables.colReorder.js"></script>
+        <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="bower_components/datatables.net-buttons/js/dataTables.buttons.js"></script>
+        <script src="bower_components/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
+        <script src="bower_components/datatables.net-buttons/js/buttons.colVis.js"></script>
+        <script src="bower_components/datatables.net-colreorder/js/dataTables.colReorder.js"></script>
 
         <!-- PatternFly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
@@ -137,7 +141,7 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
         <!-- Bootstrap Date Time Picker - requires Moment -->
         <script src="bower_components/moment/min/moment.min.js"></script>
-        
+
         <!-- Bootstrap Date Picker -->
         <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
