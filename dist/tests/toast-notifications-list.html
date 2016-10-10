@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en-us" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+  <head>
+    <title>Toast Notifications List - PatternFly</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../dist/img/favicon.ico">
+    <!-- iPad retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../dist/img/apple-touch-icon-precomposed-152.png">
+    <!-- iPad retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../dist/img/apple-touch-icon-precomposed-144.png">
+    <!-- iPad non-retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../dist/img/apple-touch-icon-precomposed-76.png">
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../dist/img/apple-touch-icon-precomposed-72.png">
+    <!-- iPhone 6 Plus icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../dist/img/apple-touch-icon-precomposed-180.png">
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../dist/img/apple-touch-icon-precomposed-114.png">
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/img/apple-touch-icon-precomposed-57.png">
+    <link rel="stylesheet" href="../../dist/css/patternfly.min.css" >
+    <link rel="stylesheet" href="../../dist/css/patternfly-additions.min.css" >
+    <link href="tests.css" rel="stylesheet" media="screen, print">
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../dist/js/patternfly.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Toast Notifications List</h1>
+      </div>
+      <div class="alert alert-warning">
+        <span class="pficon pficon-warning-triangle-o"></span>
+        These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+      </div>
+      <hr>
+  <div class="toast-notifications-list-pf"></div>
+  <form role="form" id="inputValues">
+    <label class="radio-inline">
+      <input type="radio" name="optradio" value="success">OK
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" value="info">Info
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" value="warning">Warning
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio"value="danger">Danger
+    </label>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Show Close</label>
+    </div>
+  </form>
+  <div>
+    <button id="addToastButton">Add Toast Notification</button>
+  </div>
+
+  <script>
+    var toastCount = 0;
+    $('#addToastButton').click(function() {
+      var statusVal = $('#inputValues input:radio:checked').val() || 'info';
+      var statusIcon = 'pficon-info';
+      var showClose = $('#inputValues input:checkbox:checked').length > 0;
+      if (statusVal == 'success') {
+        statusIcon = 'pficon-ok';
+      } else if (statusVal == 'warning') {
+        statusIcon = 'pficon-warning-triangle-o';
+      } else if (statusVal == 'danger') {
+        statusIcon = 'pficon-error-circle-o';
+      }
+
+      var toastId = "toast-notification-" + toastCount++;
+      var toastHtml =
+        '<div id="' + toastId  + '">' +
+        '  <div class="toast-pf alert alert-' + statusVal + ' alert-dismissable">' +
+        '    <span class="pficon '+ statusIcon + '"></span>' +
+        '    <strong>Example</strong> This is an example toast notification';
+      if (showClose) {
+        toastHtml +=
+          '    <button id="closeButton" type="button" class="close" aria-hidden="true">' +
+          '      <span class="pficon pficon-close' + '">' +
+          '      </span>' +
+          '    </button>';
+      }
+      toastHtml +=
+        '  </div>' +
+        '</div>';
+      $('.toast-notifications-list-pf').append(toastHtml);
+      $('#' + toastId).find('#closeButton').click(function () {
+        $('#' + toastId).remove();
+      });
+
+    });
+  </script>
+
+    </div><!-- /container -->
+  </body>
+</html>
