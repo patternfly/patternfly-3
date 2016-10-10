@@ -6,17 +6,38 @@
 .list-view-pf {
   .list-group-item {
     align-items: flex-start;
+    background-clip: padding-box;
+    border-color: transparent #fff;
+    border-style: solid;
+    border-width: 1px;
     .clearfix(); //IE9 fallback
     display: flex;
+    flex-wrap: wrap;
     padding-bottom: 0;
     padding-top: 0;
+    &.expand-active {
+      background-color: @list-view-hover-bg;
+    }
     &.active {
       color: @list-group-link-color;
       background-color: @list-view-active-bg;
+      background-clip: border-box;
+      border-color: @color-pf-blue-300 transparent transparent;
       z-index:auto;
     }
     &:hover {
       background-color: @list-view-hover-bg;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+    &.expand-active {
+      border: solid 1px @list-group-active-border;
+      &:first-child {
+        border-top-color: @color-pf-blue-300;
+      }
+    }
+    &:first-child {
+      border-top: 1px solid transparent;
     }
     @media (min-width: @screen-md-min) {
       align-items: center;
@@ -230,5 +251,62 @@
   }
 }
 .list-view-pf-view {
+  background: @list-group-top-border;
+  border: none;
   margin-top: 30px;
 }
+.list-group-item-header {
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 0 -15px;
+  padding: 0 15px; //filling the width of the list item
+  width: 100%;
+}
+.list-view-pf-expand {
+  cursor: pointer;
+  float: left; //IE9 fallback
+  margin-bottom: (@grid-gutter-width/2);
+  margin-right: 2px;
+  margin-top: (@grid-gutter-width/2);
+  padding: 3px 0;
+  &.active,
+  &:hover {
+    color: @link-color;
+  }
+  .list-view-pf-additional-info-item & {
+    margin: 0;
+    padding: 0;
+  }
+  .fa-angle-right {
+    cursor: pointer;
+    font-size: (@font-size-large+3);
+    margin-right: 5px;
+    margin-top: 2px;
+    width: 10px;
+  }
+}
+.list-group-item-container {
+  background: #fff;
+  border-top: solid 1px @list-group-active-border;
+  box-sizing: content-box;
+  margin: -1px -15px 0;
+  order: 3;
+  padding: 10px 15px;
+  position: relative;
+  width: 100%;
+}
+.list-view-pf-expand-close {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 999;
+  &:hover {
+    color: @link-color;
+  }
+  .fa {
+    cursor: pointer;
+    font-size: (@font-size-large+2);
+  }
+}
+.list-view-pf-expand-chart { margin: 20px 0; }
