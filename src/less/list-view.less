@@ -8,12 +8,28 @@
     align-items: flex-start;
     .clearfix(); //IE9 fallback
     display: flex;
+    flex-wrap: wrap;
     padding-bottom: 0;
     padding-top: 0;
+    background-clip: padding-box;
+    border-width: 1px;
+    border-color: #f5f5f5 transparent;
+    border-style: solid;
+    &.list-view-pf-expand-active {
+      background-color: @list-view-hover-bg;
+      border-color: @list-group-active-border;
+      padding-left: 0;
+      padding-right: 0;
+      &:first-child {
+        border-top: solid 1px @list-group-active-border;
+      }
+    }
     &.active {
       color: @list-group-link-color;
       background-color: @list-view-active-bg;
       z-index:auto;
+      background-clip: border-box;
+      border-color: @list-group-active-border transparent;
     }
     &:hover {
       background-color: @list-view-hover-bg;
@@ -63,6 +79,9 @@
   }
   .list-view-pf-top-align & {
     align-self: flex-start;
+  }
+  .list-view-pf-expand-active & {
+    margin-right: 15px;
   }
 }
 .list-view-pf-additional-info {
@@ -128,6 +147,12 @@
   padding: 3px (@grid-gutter-width/4) 3px 0;
   .list-view-pf-top-align & {
     align-self: flex-start;
+  }
+  .list-view-pf-expand-active & {
+    margin-left: 15px;
+  }
+  .list-view-pf-expand-active .list-group-item-header & {
+    margin-left: 0;
   }
 }
 .list-view-pf-description {
@@ -231,4 +256,42 @@
 }
 .list-view-pf-view {
   margin-top: 30px;
+}
+.list-group-item-header {
+  cursor: pointer;
+  width: 100%;
+}
+.list-view-pf-expand {
+  cursor: pointer;
+  float: left; //IE9 fallback
+  margin-bottom: (@grid-gutter-width/2);
+  margin-right: 2px;
+  margin-top: (@grid-gutter-width/2);
+  padding: 3px 0;
+  &.active, 
+  &:hover {
+    color: @link-color;
+  }
+  .list-view-pf-expand-active & { margin-left: 15px; }
+  .list-view-pf-additional-info-item & {
+    margin: 0;
+    padding: 0;
+  }
+  .fa-angle-right {
+    cursor: pointer;
+    font-size: (@font-size-large+3);
+    margin-right: 5px;
+    margin-top: 2px;
+    width: 10px;
+  }
+}
+.list-group-item-container {
+  background: #fff;
+  border-bottom: solid 1px @list-group-active-border;
+  border-top: solid 1px @list-group-active-border;
+  margin-top: -1px;
+  order: 3;
+  padding: 10px;
+  position: relative;
+  width: 100%;
 }
