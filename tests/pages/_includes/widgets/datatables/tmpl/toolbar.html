@@ -1,41 +1,39 @@
-<div class="container-fluid">
-  <div class="row toolbar-pf">
-    <div class="col-sm-12">
-      <form class="toolbar-pf-actions">
-        <div class="form-group toolbar-pf-filter">
-          <label class="sr-only" for="filterMenu">Rendering engine</label>
-          <div class="input-group">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default dropdown-toggle" id="filterMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rendering engine <span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Rendering engine</a></li>
-                <li><a href="#">Browser</a></li>
-                <li><a href="#">Platform(s)</a></li>
-                <li><a href="#">Engine version</a></li>
-                <li><a href="#">CSS grade</a></li>
-              </ul>
-            </div>
-            <input type="text" class="form-control" placeholder="Filter By Rendering engine..." autocomplete="off">
+<div class="row toolbar-pf">
+  <div class="col-sm-12">
+    <form class="toolbar-pf-actions">
+      <div class="form-group toolbar-pf-filter">
+        <label class="sr-only" for="filterMenu">Rendering engine</label>
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" id="filterMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rendering engine <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Rendering engine</a></li>
+              <li><a href="#">Browser</a></li>
+              <li><a href="#">Platform(s)</a></li>
+              <li><a href="#">Engine version</a></li>
+              <li><a href="#">CSS grade</a></li>
+            </ul>
           </div>
+          <input type="text" class="form-control" placeholder="Filter By Rendering engine..." autocomplete="off">
         </div>
-        <div class="toolbar-pf-action-right">
-          <button class="btn btn-default" type="button" id="deleteAllRows">Delete All Rows</button>
-          <button class="btn btn-default" type="button" id="restoreRows">Restore Rows</button>
-          <button class="btn btn-default" type="button">Action</button>
-          {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="actionsKebab" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+      </div>
+      <div class="toolbar-pf-action-right">
+        <button class="btn btn-default" type="button" id="deleteAllRows">Delete All Rows</button>
+        <button class="btn btn-default" type="button" id="restoreRows">Restore Rows</button>
+        <button class="btn btn-default" type="button">Action</button>
+        {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="actionsKebab" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+      </div>
+    </form>
+    <div class="row toolbar-pf-results">
+      <div class="col-sm-10">
+        <div class="hidden">
+          <p>Active filters:</p>
+          <ul class="list-inline"></ul>
+          <p><a href="#">Clear All Filters</a></p>
         </div>
-      </form>
-      <div class="row toolbar-pf-results">
-        <div class="col-sm-10">
-          <div class="hidden">
-            <p>Active filters:</p>
-            <ul class="list-inline"></ul>
-            <p><a href="#">Clear All Filters</a></p>
-          </div>
-        </div>
-        <div class="col-sm-2 datatable-pf-results-right">
-          <strong>0</strong> of <strong>0</strong> selected
-        </div>
+      </div>
+      <div class="col-sm-2 datatable-pf-results-right">
+        <strong>0</strong> of <strong>0</strong> selected
       </div>
     </div>
   </div>

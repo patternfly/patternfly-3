@@ -10,7 +10,7 @@
    * @param {string} config.deleteAllRowsId - Identifier for the delete all rows control
    * @param {string} config.restoreRowsId - Identifier for the restore rows control
    */
-  var dataTableEmpty = function (config) {
+  var dataTableEmptyUtil = function (config) {
     var self = this;
     this.datatable = $(config.datatableId); // Data table container
     this.actions = this.datatable.find('.toolbar-pf-actions'); // Toolbar actions container

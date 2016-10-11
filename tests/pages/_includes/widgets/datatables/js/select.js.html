@@ -9,7 +9,7 @@
    * @param {string} config.deleteAllRowsId - Identifier for the delete all rows data control
    * @param {string} config.selectAllId - Identifier for the select all checkbox
    */
-  var dataTableSelect = function (config) {
+  var dataTableSelectUtil = function (config) {
     var self = this;
     this.datatable = $(config.datatableId); // Data table container
     this.deleteAllRows = $(config.deleteAllRowsId); // Delete all rows control
