@@ -153,15 +153,16 @@
   background: @table-bg-accent;
 }
 
+/** Note: This may be needed with pagination controls?
 .dataTables_wrapper {
-  //margin: @line-height-computed 0;
-  margin: 0;
+  margin: @line-height-computed 0;
   @media (max-width: @screen-xs-max) {
     .table-responsive {
       margin-bottom: 0;
     }
   }
 }
+*/
 
 .DTCR_clonedTable {
   background-color: fade(@color-pf-white, 70%);
@@ -175,21 +176,41 @@
 }
 
 .datatable-pf {
+  // Override blank slate styles
   .blank-slate-pf {
-    background: @table-bg-accent;
+    background-color: @table-bg-accent;
     border: 1px solid @table-border-color;
     border-radius: 0;
     margin-top: -1px;
   }
+  // Override table styles -- child selectors are due to specificity
   table {
     margin-bottom: 0;
     max-width: none !important;
     > tbody {
       > tr {
-        > td.datatable-pf-actions {
-          padding: 0;
+        > td {
+          // Styling for inline actions
+          &.datatable-pf-actions {
+            padding: 0;
+            vertical-align: middle;
+            & .btn-default {
+              &:hover,
+              &:focus,
+              &:active,
+              .open .dropdown-toggle {
+                background-color: transparent;
+              }
+            }
+          }
+          // Workaround for ie9 -- table cell loses border when gradient filter is applied
+          .ie9 &.datatable-pf-actions {
+            //position: relative;
+            //z-index: -1;
+          }
         }
         &:hover {
+          // Styling when hovering anywhere else on a row
           > td.datatable-pf-actions {
             background-color: @table-bg-accent;
             border-bottom-color: @table-border-color;
@@ -201,23 +222,24 @@
         background-color: @color-pf-blue-400;
         > td {
           border-bottom-color: @color-pf-blue-500;
-        }
-        > td.datatable-pf-actions {
-          background-color: @table-bg-accent;
-          border-bottom-color: @table-border-color;
+          &.datatable-pf-actions {
+            background-color: @table-bg-accent;
+            border-bottom-color: @table-border-color;
+          }
         }
         &:hover {
           > td {
             background-color: inherit;
             border-bottom-color: @color-pf-blue-500;
-          }
-          > td.datatable-pf-actions {
-            background-color: @table-bg-accent;
-            border-bottom-color: @table-border-color;
+            &.datatable-pf-actions {
+              background-color: @table-bg-accent;
+              border-bottom-color: @table-border-color;
+            }
           }
         }
       }
     }
+    // Override DataTable styles
     thead {
       .sorting,
       .sorting_asc,
@@ -234,14 +256,14 @@
           content: @fa-var-angle-down;
           font-family: @icon-font-name-fa;
           font-size: (@font-size-base - 2);
-          font-weight: normal;
-          height: (@font-size-base - 3);
+          /* font-weight: normal; */
+          /* height: (@font-size-base - 3); */
           left: 7px;
-          line-height: @font-size-base;
+          /* line-height: @font-size-base; */
           position: relative;
           top: 2px;
-          vertical-align: baseline;
-          width: @font-size-base;
+          /* vertical-align: baseline; */
+          /* width: @font-size-base; */
         }
         &:before {
           background: @link-color;
@@ -262,66 +284,74 @@
       outline: none;
     }
   }
+  // Override toolbar styles
   .toolbar-pf {
-    background: @table-bg-accent;
-    border: 1px solid @table-border-color;
+    background-color: @table-bg-accent;
     border-bottom: none;
+    border-left: 1px solid @table-border-color;
+    border-right: 1px solid @table-border-color;
+    border-top: 1px solid @table-border-color;
+    margin-left: 0px;
+    margin-right: 0px;
     .form-group {
       @media (min-width: @grid-float-breakpoint) {
         border-right: none;
       }
     }
     .toolbar-pf-actions {
-      > div {
-        margin-left: -10px;
-        margin-right: -10px;
-      }
       @media (min-width: @grid-float-breakpoint) {
         .toolbar-pf-filter {
           width: 40%;
         }
       }
+      > div {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
     }
     .toolbar-pf-action-right {
-      > .btn {
-        margin-left: 5px;
-      }
-      > .dropdown-kebab-pf {
-        margin-left: 10px;
-      }
-      float: right;
+      // Overriding "float: none" of toolbar-pf-action-right
       @media (max-width: @grid-float-breakpoint) {
         float: right;
       }
+      .btn {
+        margin-left: 5px;
+      }
+      .dropdown-kebab-pf {
+        margin-left: 10px;
+      }
     }
     .toolbar-pf-results {
+      border-top: 1px solid @table-border-color;
+      height: 40px;
+      line-height: 40px;
       > div {
         padding-left: 10px;
         padding-right: 10px;
       }
-      border-top: 1px solid @table-border-color;
-      height: 40px;
-      line-height: 40px;
     }
   }
 }
 
-.datatable-pf-actions {
-  background: @table-bg-accent;
-  > .btn {
+// Inline action button and kebab
+.datatable-pf-actions.btn-default {
+  .btn,
+  .open .dropdown-toggle {
+    background-color: transparent;
+    background-image: none;
     border: none;
     box-shadow: none;
+    height: 100%;
     width: 100%;
-  }
-  .dropdown-kebab-pf {
-    padding-right: @table-cell-padding;
   }
 }
 
+// Selection column
 .datatable-pf-select {
   width: 33px;
 }
 
+// Results area containing selected row text
 .datatable-pf-results-right {
   text-align: right;
 }

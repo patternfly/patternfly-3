@@ -8,7 +8,7 @@
    * @param {object} config - Identifiers associated with the data table
    * @param {string} config.datatableId - Identifier for the data table
    */
-  var dataTableFilter = function(config) {
+  var dataTableFilterUtil = function(config) {
     var self = this;
     this.datatable = $(config.datatableId); // Data table container
     this.activeControls = this.datatable.find('.list-inline'); // Active filter controls container
