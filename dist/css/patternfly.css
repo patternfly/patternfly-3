@@ -9313,6 +9313,10 @@ fieldset[disabled] .btn-primary.active {
 .chars-warn-remaining-pf {
   color: #cc0000;
 }
+.fields-status-pf {
+  color: #8b8d8f;
+  margin-bottom: 15px;
+}
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -9373,6 +9377,14 @@ fieldset[disabled] .form-control:hover {
 }
 label {
   font-weight: 600;
+}
+label.required-pf:after {
+  color: #cc0000;
+  content: "*";
+  margin-left: 3px;
+}
+span.required-pf {
+  color: #cc0000;
 }
 .label {
   border-radius: 0;

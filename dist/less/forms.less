@@ -10,6 +10,11 @@
   color: @brand-danger;
 }
 
+.fields-status-pf {
+  color: @color-pf-black-500;
+  margin-bottom: 15px;
+}
+
 .form-control {
   &[disabled],
   &[readonly],
@@ -58,4 +63,13 @@
 
 label {
   font-weight: 600;
+  &.required-pf:after {
+    color: @brand-danger;
+    content: "*";
+    margin-left: 3px;
+  }
+}
+
+span.required-pf {
+  color: @brand-danger;
 }
