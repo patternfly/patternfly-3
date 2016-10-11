@@ -21,6 +21,8 @@ PatternFly can be installed and managed through [NPM](https://www.npmjs.com/). T
 npm install patternfly --save
 ```
 
+Patternfly stays up to date with the Node LTS [Release Schedule](https://github.com/nodejs/LTS#lts_schedule). If you're using Patternfly downstream, we suggest the use of an actively supported version of Node/NPM, although prior versions of Node may work. 
+
 ### Install with Bower
 
 PatternFly can be installed and managed through [Bower](http://bower.io/). To do so, either add `patternfly` as a dependency in your `bower.json` or run the following:
