@@ -15,7 +15,7 @@
             className: "datatable-pf-select",
             render: function (data, type, full, meta) {
               // Select row checkbox renderer
-              return '<input type="checkbox" name="select" value="' + meta.row + '">';
+              return '<label class="sr-only">Select row ' + meta.row + '</label><input type="checkbox" name="select">';
             },
             sortable: false
           },
