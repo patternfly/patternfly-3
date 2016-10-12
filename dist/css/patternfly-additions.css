@@ -3446,8 +3446,14 @@ a.disabled {
 .list-view-pf .list-group-item {
   -ms-flex-align: start;
       align-items: flex-start;
+  background-clip: padding-box;
+  border-color: transparent #fff;
+  border-style: solid;
+  border-width: 1px;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -3459,13 +3465,29 @@ a.disabled {
 .list-view-pf .list-group-item:after {
   clear: both;
 }
+.list-view-pf .list-group-item.list-view-pf-expand-active {
+  background-color: #ededed;
+}
 .list-view-pf .list-group-item.active {
   color: #555;
   background-color: #def3ff;
+  background-clip: border-box;
+  border-color: #39a5dc transparent transparent;
   z-index: auto;
 }
 .list-view-pf .list-group-item:hover {
   background-color: #ededed;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.list-view-pf .list-group-item.list-view-pf-expand-active {
+  border: solid 1px #39a5dc;
+}
+.list-view-pf .list-group-item.list-view-pf-expand-active:first-child {
+  border-top-color: #39a5dc;
+}
+.list-view-pf .list-group-item:first-child {
+  border-top: 1px solid transparent;
 }
 @media (min-width: 992px) {
   .list-view-pf .list-group-item {
@@ -3728,7 +3750,50 @@ a.disabled {
   width: auto;
 }
 .list-view-pf-view {
+  background: #ededed;
+  border: none;
   margin-top: 30px;
+}
+.list-group-item-header {
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 0 -15px;
+  padding: 0 15px;
+  width: 100%;
+}
+.list-view-pf-expand {
+  cursor: pointer;
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 2px;
+  margin-top: 20px;
+  padding: 3px 0;
+}
+.list-view-pf-expand.active,
+.list-view-pf-expand:hover {
+  color: #0088ce;
+}
+.list-view-pf-additional-info-item .list-view-pf-expand {
+  margin: 0;
+  padding: 0;
+}
+.list-view-pf-expand .fa-angle-right {
+  cursor: pointer;
+  font-size: 17px;
+  margin-right: 5px;
+  margin-top: 2px;
+  width: 10px;
+}
+.list-group-item-container {
+  background: #fff;
+  border-top: solid 1px #39a5dc;
+  box-sizing: content-box;
+  margin: -1px -15px 0;
+  -ms-flex-order: 3;
+      order: 3;
+  padding: 10px 15px;
+  position: relative;
+  width: 100%;
 }
 .login-pf {
   height: 100%;
