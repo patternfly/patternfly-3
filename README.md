@@ -44,9 +44,9 @@ exclude: [
   "node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css",
   "node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.css",
   "node_modules/c3/c3.css",
-  "node_modules/datatables/media/css/jquery.dataTables.css",
+  "node_modules/datatables.net-bs/css/dataTables.bootstrap.css",
   "node_modules/datatables.net-colreorder-bs/css/colReorder.bootstrap.css",
-  "node_modules/drmonty-datatables-colvis/css/dataTables.colVis.css",
+  "node_modules/datatables.net-buttons-bs/css/buttons.bootstrap.css",
   "node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css",
   "node_modules/font-awesome/css/font-awesome.css",
   "node_modules/google-code-prettify/bin/prettify.min.css"
