@@ -78,6 +78,17 @@
     border-color: transparent;
   }
 }
+
+// Selected state
+.dropdown-menu > .selected > a {
+  background-color: @dropdown-link-active-bg;
+  border-color: @dropdown-link-active-border-color;
+  color: @color-pf-white;
+  small {
+    color: fade(@color-pf-white, 50%);
+  }
+}
+
 // Nuke hover/focus effects
 .dropdown-menu > .disabled > a {
   &:hover,

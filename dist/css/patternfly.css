@@ -9190,6 +9190,14 @@ fieldset[disabled] .btn-primary.active {
 .dropdown-menu > .disabled > a:focus {
   border-color: transparent;
 }
+.dropdown-menu > .selected > a {
+  background-color: #0088ce;
+  border-color: #0088ce;
+  color: #fff;
+}
+.dropdown-menu > .selected > a small {
+  color: rgba(255, 255, 255, 0.5);
+}
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
   border-color: transparent;
