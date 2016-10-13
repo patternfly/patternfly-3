@@ -1,19 +1,35 @@
 {
   "metadata": {
     "name": "PatternFlyIcons-webfont",
-    "lastOpened": 1472147134428,
-    "created": 1472146968633
+    "lastOpened": 1476285232388,
+    "created": 1476285220850
   },
   "iconSets": [
     {
       "selection": [
+        {
+          "order": 88,
+          "id": 46,
+          "name": "domain",
+          "prevSize": 14,
+          "code": 59673,
+          "tempChar": ""
+        },
+        {
+          "order": 87,
+          "id": 45,
+          "name": "server-group",
+          "prevSize": 14,
+          "code": 59674,
+          "tempChar": ""
+        },
         {
           "order": 86,
           "id": 44,
           "name": "Bundle",
           "prevSize": 14,
           "code": 59672,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 85,
@@ -21,7 +37,7 @@
           "name": "middleware",
           "prevSize": 14,
           "code": 59671,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 75,
@@ -29,7 +45,7 @@
           "prevSize": 14,
           "code": 59668,
           "name": "private",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 76,
@@ -37,7 +53,7 @@
           "prevSize": 14,
           "code": 59669,
           "name": "blueprint",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 77,
@@ -45,7 +61,7 @@
           "prevSize": 14,
           "code": 59670,
           "name": "tenant",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 72,
@@ -53,7 +69,7 @@
           "prevSize": 14,
           "code": 59666,
           "name": "resources-almost-full",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 71,
@@ -61,7 +77,7 @@
           "prevSize": 14,
           "code": 59667,
           "name": "resources-full",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 56,
@@ -69,7 +85,7 @@
           "prevSize": 14,
           "code": 59651,
           "name": "cloud-security",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 57,
@@ -77,7 +93,7 @@
           "prevSize": 14,
           "code": 59652,
           "name": "cloud-tenant",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 58,
@@ -85,7 +101,7 @@
           "prevSize": 14,
           "code": 59653,
           "name": "cpu",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 59,
@@ -93,7 +109,7 @@
           "prevSize": 14,
           "code": 59654,
           "name": "enterprise",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 60,
@@ -101,7 +117,7 @@
           "prevSize": 14,
           "code": 59655,
           "name": "flavor",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 61,
@@ -109,7 +125,7 @@
           "prevSize": 14,
           "code": 59656,
           "name": "memory",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 62,
@@ -117,7 +133,7 @@
           "prevSize": 14,
           "code": 59657,
           "name": "network",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 63,
@@ -125,7 +141,7 @@
           "prevSize": 14,
           "code": 59658,
           "name": "regions",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 64,
@@ -133,7 +149,7 @@
           "prevSize": 14,
           "code": 59659,
           "name": "repository",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 65,
@@ -141,7 +157,7 @@
           "prevSize": 14,
           "code": 59660,
           "name": "resource-pool",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 66,
@@ -149,7 +165,7 @@
           "prevSize": 14,
           "code": 59661,
           "name": "server",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 67,
@@ -157,7 +173,7 @@
           "prevSize": 14,
           "code": 59662,
           "name": "storage-domain",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 68,
@@ -165,7 +181,7 @@
           "prevSize": 14,
           "code": 59663,
           "name": "virtual-machine",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 69,
@@ -173,7 +189,7 @@
           "prevSize": 14,
           "code": 59664,
           "name": "volume",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 70,
@@ -181,7 +197,7 @@
           "prevSize": 14,
           "code": 59665,
           "name": "zone",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 54,
@@ -189,7 +205,7 @@
           "prevSize": 14,
           "code": 59650,
           "name": "build",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 52,
@@ -197,7 +213,7 @@
           "prevSize": 14,
           "code": 59648,
           "name": "trend-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 53,
@@ -205,7 +221,7 @@
           "prevSize": 14,
           "code": 59649,
           "name": "trend-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 55,
@@ -213,7 +229,7 @@
           "prevSize": 14,
           "code": 59392,
           "name": "builder-image",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 49,
@@ -221,7 +237,7 @@
           "prevSize": 14,
           "code": 58888,
           "name": "topology",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 50,
@@ -229,7 +245,7 @@
           "prevSize": 14,
           "code": 58889,
           "name": "thumb-tack-o",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 27,
@@ -237,7 +253,7 @@
           "prevSize": 14,
           "code": 58904,
           "name": "home",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -246,7 +262,7 @@
           "prevSize": 14,
           "code": 58903,
           "name": "history",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -255,7 +271,7 @@
           "prevSize": 14,
           "code": 58901,
           "name": "import",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -264,7 +280,7 @@
           "prevSize": 14,
           "code": 58902,
           "name": "export",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -273,7 +289,7 @@
           "prevSize": 14,
           "code": 58881,
           "name": "save",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -282,7 +298,7 @@
           "prevSize": 14,
           "code": 58882,
           "name": "ok",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -291,7 +307,7 @@
           "prevSize": 14,
           "code": 58883,
           "name": "messages",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -300,7 +316,7 @@
           "prevSize": 14,
           "code": 58884,
           "name": "info",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -309,7 +325,7 @@
           "prevSize": 14,
           "code": 58885,
           "name": "help",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -318,7 +334,7 @@
           "prevSize": 14,
           "code": 58886,
           "name": "folder-open",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -327,7 +343,7 @@
           "prevSize": 14,
           "code": 58887,
           "name": "folder-close",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -336,7 +352,7 @@
           "prevSize": 14,
           "code": 58890,
           "name": "edit",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -345,7 +361,7 @@
           "prevSize": 14,
           "code": 58891,
           "name": "close",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -354,7 +370,7 @@
           "prevSize": 14,
           "code": 58907,
           "name": "add-circle-o",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 30,
@@ -362,7 +378,7 @@
           "prevSize": 14,
           "code": 58908,
           "name": "warning-triangle-o",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 31,
@@ -370,7 +386,7 @@
           "prevSize": 14,
           "code": 58909,
           "name": "error-circle-o",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 33,
@@ -378,7 +394,7 @@
           "prevSize": 14,
           "code": 58910,
           "name": "service",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 37,
@@ -386,7 +402,7 @@
           "prevSize": 14,
           "code": 58911,
           "name": "image",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 35,
@@ -394,7 +410,7 @@
           "prevSize": 14,
           "code": 58912,
           "name": "cluster",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 38,
@@ -402,7 +418,7 @@
           "prevSize": 14,
           "code": 58913,
           "name": "container-node",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 40,
@@ -410,7 +426,7 @@
           "prevSize": 14,
           "code": 58914,
           "name": "project",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 41,
@@ -418,7 +434,7 @@
           "prevSize": 14,
           "code": 58915,
           "name": "registry",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 42,
@@ -426,7 +442,7 @@
           "prevSize": 14,
           "code": 58916,
           "name": "replicator",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 43,
@@ -434,7 +450,7 @@
           "prevSize": 14,
           "code": 58917,
           "name": "route",
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 6,
@@ -453,6 +469,56 @@
       "height": 1024,
       "prevSize": 14,
       "icons": [
+        {
+          "id": 66,
+          "paths": [
+            "M866.971 428.114c7.086-7.086 10.743-15.771 10.743-25.829v-365.486c0-9.829-3.657-18.286-10.971-26.057-7.086-7.086-15.771-10.743-25.829-10.743h-219.2c-9.829 0-18.286 3.657-25.829 10.971-7.086 7.086-10.743 15.771-10.743 25.829v365.486c0 9.829 3.429 18.286 10.743 25.829 7.086 7.086 15.771 10.743 25.829 10.743h219.429c9.829 0 18.514-3.429 25.829-10.743zM804.571 292.571h-146.286v-73.143h146.286v73.143zM804.571 146.286h-73.143v-73.143h73.143v73.143z",
+            "M548.343 512h-219.2c-9.829 0-18.286 3.657-25.829 10.971-7.086 7.086-10.743 15.771-10.743 25.6v439.314c0 9.829 3.429 18.286 10.743 25.6 7.086 7.086 15.771 10.743 25.829 10.743h219.429c9.829 0 18.286-3.429 25.829-10.743 7.086-7.086 10.743-15.771 10.743-25.6v-439.543c0-9.829-3.657-18.286-10.971-25.829-7.086-6.857-16-10.514-25.829-10.514zM512 804.571h-146.286v-73.143h146.286v73.143zM512 658.286h-73.143v-73.143h73.143v73.143zM512 950.857h-146.286v-73.143h146.286v73.143z",
+            "M292.571 36.8c0-9.829-3.657-18.514-10.971-26.057-7.086-7.086-15.771-10.743-25.6-10.743h-219.886c-9.829 0-18.286 3.657-25.6 10.971-6.857 7.314-10.514 16-10.514 25.829v292.343c0 9.829 3.429 18.514 10.743 25.829 7.086 7.086 15.771 10.743 25.6 10.743h220.114c9.829 0 18.286-3.429 25.6-10.743 7.086-7.086 10.743-15.771 10.743-25.829v-292.343zM219.429 292.571h-146.286v-73.143h146.286c0 0 0 73.143 0 73.143zM219.429 146.286h-73.143v-73.143h73.143c0 0 0 73.143 0 73.143z",
+            "M512 142.857v-66.743c-0.457 0-1.143 0-1.6 0-50.743 0-99.429 8.686-144.686 24.457v72c44.343-18.971 93.257-29.714 144.686-29.714 0.457 0 1.143 0 1.6 0z",
+            "M150.857 438.629h-71.314c-4.114 24.229-6.4 49.371-6.4 74.971 0 129.829 56.457 246.4 146.286 326.4v-107.429c-47.314-61.714-75.429-138.971-75.429-222.857 0-24.229 2.286-48 6.857-71.086z",
+            "M804.571 728.229v108.571c88-80 143.314-195.2 143.314-323.657 0-0.229 0-0.686 0-0.914h-70.857c-0.686 81.143-27.429 155.657-72.457 216z",
+            "M950.857 72h73.143v294.857h-73.143v-294.857z",
+            "M658.286 585.143h73.143v365.714h-73.143v-365.714z"
+          ],
+          "attrs": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 14,
+          "tags": [
+            "domain"
+          ]
+        },
+        {
+          "id": 65,
+          "paths": [
+            "M841.143 219.429h182.857v731.429h-182.857v-731.429z",
+            "M695.086 219.429h-658.514c-9.829 0-18.514 3.657-25.6 10.743-7.314 7.543-10.971 16-10.971 25.829v731.657c0 9.829 3.657 18.514 10.743 25.6 7.314 7.314 15.771 10.743 25.6 10.743h658.743c9.829 0 18.514-3.657 25.6-10.743 7.314-7.314 10.743-15.771 10.743-25.6v-731.657c0-9.829-3.657-18.514-10.743-25.6-7.314-7.314-15.771-10.971-25.6-10.971zM658.286 877.714h-438.857v-109.714h438.857v109.714zM658.286 658.286h-585.143v-109.714h585.143v109.714zM658.286 438.857h-219.429v-109.714h219.429v109.714z",
+            "M22.4 182.857h686.629c11.429 0 18.743-2.971 21.257-8.686 2.743-5.714-0.229-12.8-8.686-21.257 0 0-142.4-130.514-152.914-142.857s-24-9.829-24-9.829h-361.143c0 0-11.886-1.371-22.629 10.286-10.514 11.886-151.314 142.4-151.314 142.4-8.457 8.457-11.429 15.314-8.686 21.257s9.829 8.686 21.486 8.686z",
+            "M767.314-0.457h-121.143l194.743 182.171 183.086 1.6z"
+          ],
+          "attrs": [
+            {},
+            {},
+            {},
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 14,
+          "tags": [
+            "server group"
+          ]
+        },
         {
           "id": 64,
           "paths": [
@@ -7758,7 +7824,7 @@
           "prevSize": 14,
           "code": 58898,
           "name": "print",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7771,7 +7837,7 @@
           "prevSize": 14,
           "code": 58880,
           "name": "screen",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7896,7 +7962,7 @@
           "prevSize": 14,
           "code": 58894,
           "name": "user",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7905,7 +7971,7 @@
           "prevSize": 14,
           "code": 58895,
           "name": "users",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7946,7 +8012,7 @@
           "prevSize": 14,
           "code": 58900,
           "name": "spinner",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -7963,7 +8029,7 @@
           "prevSize": 14,
           "code": 58899,
           "name": "spinner2",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -8032,7 +8098,7 @@
           "prevSize": 14,
           "code": 58896,
           "name": "equalizer",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -8141,7 +8207,7 @@
           "prevSize": 14,
           "code": 58897,
           "name": "remove2",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {

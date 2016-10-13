@@ -3040,6 +3040,9 @@ table.datatable th:active {
 .pficon-delete:before {
   content: "\e611";
 }
+.pficon-domain:before {
+  content: "\e919";
+}
 .pficon-edit:before {
   content: "\e60a";
 }
@@ -3142,6 +3145,9 @@ table.datatable th:active {
 }
 .pficon-server:before {
   content: "\e90d";
+}
+.pficon-server-group:before {
+  content: "\e91a";
 }
 .pficon-service:before {
   content: "\e61e";
