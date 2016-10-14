@@ -16,7 +16,7 @@
  *
  * Example:
  *
- * <div class="datatable-pf">
+ * <div class="table-view-pf">
  *   <table class="table table-striped table-bordered table-hover" id="table2">
  *     <thead>
  *       <tr>
@@ -31,7 +31,7 @@
  *   var dt = $('#table2').DataTable({
  *     columns: [{
  *       data: null,
- *       className: "datatable-pf-select",
+ *       className: "table-view-pf-select",
  *       render: function (data, type, full, meta) {
  *         return '<input type="checkbox" name="select">';
  *       },
@@ -81,7 +81,7 @@
 }(function ($, window, document, undefined) {
   'use strict';
   var DataTable = $.fn.dataTable;
-  var RESULTS_SELECTOR = '.datatable-pf-results-right'; // Toolbar results area displaying selected rows text
+  var RESULTS_SELECTOR = '.table-view-pf-results-right'; // Toolbar results area displaying selected rows text
   var SELECT_ALL_SELECTOR = 'th:first-child input[type="checkbox"]'; // Default checkbox used to select all rows
   var SELECT_SELECTOR = 'td:first-child input[type="checkbox"]'; // Default checkboxes used for row selection
 
@@ -137,11 +137,32 @@
       syncSelectCheckboxes(dt);
     });
 
+    // Get results container
+    DataTable.pfSelect.results = getResultsContainer($(dt.table().container()).parent()[0]);
+
     // Initialize selected rows text
     updateSelectedRowsText(dt);
   };
 
   // Local functions
+
+  /**
+   * Get results container
+   *
+   * @param {Object} el Element
+   * @private
+   */
+  function getResultsContainer (el) {
+    var results;
+    if (el === undefined) {
+      return undefined;
+    }
+    results = $(el).find(RESULTS_SELECTOR);
+    if (results === undefined || results.length === 0) {
+      results = getResultsContainer($(el).parent()[0]);
+    }
+    return results;
+  }
 
   /**
    * Select all rows on current page
@@ -211,11 +232,11 @@
   function updateSelectedRowsText (dt) {
     var selectedRows = dt.rows({'selected': true}).flatten().length;
     var totalRows = dt.rows().flatten().length;
-    var results = $(dt.table().container()).parent('div').find(RESULTS_SELECTOR);
-    if (results === undefined) {
+    if (DataTable.pfSelect.results === undefined) {
       return;
     }
-    results.html("<strong>" + selectedRows + "</strong> of <strong>" + totalRows + "</strong> selected");
+    DataTable.pfSelect.results.html("<strong>" + selectedRows + "</strong> of <strong>" +
+      totalRows + "</strong> selected");
   }
 
   // DataTables API
