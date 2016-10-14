@@ -1,7 +1,7 @@
 describe("data tables test suite", function () {
 
   beforeEach(function () {
-    globals.readFixture(globals.fixturePath + 'datatables.html');
+    globals.readFixture(globals.fixturePath + 'table-view.html');
 
     //run the plugin before each test
     $('.datatable-pf table').dataTable();

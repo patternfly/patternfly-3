@@ -1,0 +1,66 @@
+<script>
+  $(document).ready(function() {
+    /**
+     * Utility to show empty data table.
+     *
+     * Note: This functionality currently expects the data table toolbar contains delete all and restore controls.
+     *
+     * @param {object} config - Config properties associated with the data table
+     * @param {object} config.data - Data set for the data table
+     * @param {string} config.deleteAllRowsId - Identifier for the delete all rows control
+     * @param {string} config.dtContainerId - Identifier for the data table container
+     * @param {string} config.restoreRowsId - Identifier for the restore rows control
+     */
+    var dataTableEmptyUtil = function (config) {
+      var self = this;
+      this.dtContainer = $(config.dtContainerId); // Data table container
+      this.actions = this.dtContainer.find('.toolbar-pf-actions'); // Toolbar actions container
+      this.activeFilters = this.dtContainer.find('.list-inline').closest('div'); // Active filters container
+      this.blankSlate = this.dtContainer.find('.blank-slate-pf'); // Blank slate container for empty table
+      this.deleteAllRows = $(config.deleteAllRowsId); // Delete all rows control
+      this.dt = this.dtContainer.find('table').DataTable(); // Data table
+      this.restoreRows = $(config.restoreRowsId); // Restore rows control
+      this.results = this.dtContainer.find('.toolbar-pf-results'); // Toolbar results container
+      this.tbody = this.dtContainer.find('tbody'); // Table body
+      this.thead = this.dtContainer.find('thead'); // Table head
+
+      // Handle click on delete all control
+      this.deleteAllRows.on('click', function() {
+        // Disable all buttons
+        self.actions.find('button').prop('disabled', true);
+        self.actions.find('input').prop('disabled', true);
+        self.blankSlate.removeClass('hidden'); // Show blank slate
+        self.restoreRows.get(0).disabled = false; // Enable restore rows control
+        self.results.children().addClass('hidden'); // Hide results container
+        self.tbody.addClass('hidden'); // Hide zero records message
+        self.thead.addClass('hidden'); // Hide column headers
+        self.dt.clear().draw();
+      });
+
+      // Handle click on restore rows control
+      this.restoreRows.on('click', function() {
+        // Enable all buttons
+        self.actions.find('button').prop('disabled', false);
+        self.actions.find('input').prop('disabled', false);
+        self.blankSlate.addClass('hidden'); // Hide blank slate
+        self.restoreRows.get(0).disabled = true; // Disable restore rows control
+        self.results.children().removeClass('hidden'); // Show results container
+        self.tbody.removeClass('hidden'); // Show table body
+        self.thead.removeClass('hidden'); // Show column headers
+        self.dt.rows.add(config.data).draw();
+      });
+
+      // Initialize blank slate and restore rows control.
+      this.blankSlate.addClass('hidden');
+      this.restoreRows.get(0).disabled = true;
+    };
+
+    // Initialize empty data table util
+    new dataTableEmptyUtil({
+      data: dataSet,
+      deleteAllRowsId: "#deleteAllRows",
+      dtContainerId: ".datatable-pf",
+      restoreRowsId: "#restoreRows"
+    });
+  });
+</script>
