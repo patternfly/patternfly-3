@@ -1,7 +1,8 @@
 //
-// Datatables
+// Table View
 // --------------------------------------------------
 
+// Deprecated
 .ColVis_Button {
   &:active {
     &:focus {
@@ -10,11 +11,13 @@
   }
 }
 
+// Deprecated
 .ColVis_catcher {
   position: absolute;
   z-index: 999;
 }
 
+// Deprecated
 .ColVis_collection {
   background-color: @dropdown-bg;
   border: 1px solid @dropdown-border;
@@ -34,6 +37,7 @@
   }
 }
 
+// Deprecated
 .ColVis_collectionBackground {
   background-color: @color-pf-white;
   height: 100%;
@@ -44,6 +48,7 @@
   z-index: 998;
 }
 
+// Note: We won't be using this class with the Patternfly toolbar
 .dataTables_header {
   background-color: @color-pf-black-150;
   border: 1px solid @table-border-color;
@@ -54,6 +59,7 @@
   .btn {
     .box-shadow(none);
   }
+  // Deprecated
   .ColVis {
     position: absolute;
     right: 5px;
@@ -84,6 +90,7 @@
   }
 }
 
+// Note: We won't be using this class with the table view
 .dataTables_footer {
   background-color: @color-pf-white;
   border: 1px solid @table-border-color;
@@ -91,6 +98,7 @@
   overflow: hidden;
 }
 
+// Not in use with latest example: May be used with pagination?
 .dataTables_paginate {
   background: @color-pf-black-100;
   float: right;
@@ -153,7 +161,7 @@
   background: @table-bg-accent;
 }
 
-/** Note: This may be needed with pagination controls?
+/*
 .dataTables_wrapper {
   margin: @line-height-computed 0;
   @media (max-width: @screen-xs-max) {
@@ -164,11 +172,13 @@
 }
 */
 
+// Not in use with latest example: May be used with column reordering?
 .DTCR_clonedTable {
   background-color: fade(@color-pf-white, 70%);
   z-index: 202;
 }
 
+// Not in use with latest example: May be used with column reordering?
 .DTCR_pointer {
   background-color: @link-color;
   width: 1px;
@@ -284,52 +294,23 @@
       outline: none;
     }
   }
-  // Override toolbar styles
+  // Full page and embedded toolbars
   .toolbar-pf {
-    background-color: @table-bg-accent;
     border-bottom: none;
+    .toolbar-pf-results {
+      border-top: 1px solid @table-border-color;
+      min-height: 40px;
+      line-height: 40px;
+    }
+  }
+  // Embedded toolbar only -- may want different background color?
+  > .toolbar-pf {
+    //background-color: @table-bg-accent;
     border-left: 1px solid @table-border-color;
     border-right: 1px solid @table-border-color;
     border-top: 1px solid @table-border-color;
     margin-left: 0px;
     margin-right: 0px;
-    .form-group {
-      @media (min-width: @grid-float-breakpoint) {
-        border-right: none;
-      }
-    }
-    .toolbar-pf-actions {
-      @media (min-width: @grid-float-breakpoint) {
-        .toolbar-pf-filter {
-          width: 40%;
-        }
-      }
-      > div {
-        margin-left: -10px;
-        margin-right: -10px;
-      }
-    }
-    .toolbar-pf-action-right {
-      // Overriding "float: none" of toolbar-pf-action-right
-      @media (max-width: @grid-float-breakpoint) {
-        float: right;
-      }
-      .btn {
-        margin-left: 5px;
-      }
-      .dropdown-kebab-pf {
-        margin-left: 10px;
-      }
-    }
-    .toolbar-pf-results {
-      border-top: 1px solid @table-border-color;
-      height: 40px;
-      line-height: 40px;
-      > div {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-    }
   }
 }
 
