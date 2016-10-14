@@ -1,15 +1,7 @@
-<div class="datatable-pf">
-{% include widgets/datatables/tmpl/toolbar.html %}
-{% include widgets/datatables/tmpl/datatable.html %}
-{% include widgets/communication/blank-slate.html %}
-</div>
-{% include widgets/datatables/js/data.js.html %}
-{% include widgets/datatables/js/filter.js.html %}
-{% include widgets/datatables/js/empty.js.html %}
 <script>
   $(document).ready(function() {
     // Initialize data table
-    var dt = $('#table').DataTable({
+    var dt = $('#myDataTable').DataTable({
         columns: [
           { data: null,
             className: "datatable-pf-select",
@@ -54,22 +46,10 @@
         },
         order: [[ 1, 'asc' ]],
         select: {
-            style: 'multi',
-            selector: 'td:first-child input[type="checkbox"]'
+            allSelector: 'th:first-child input[type="checkbox"]',
+            selector: 'td:first-child input[type="checkbox"]',
+            style: 'multi'
         }
-    });
-
-    // Initialize filtering util
-    new dataTableFilterUtil({
-      datatableId: ".datatable-pf"
-    });
-
-    // Initialize empty data table util
-    new dataTableEmptyUtil({
-      data: dataSet,
-      datatableId: ".datatable-pf",
-      deleteAllRowsId: "#deleteAllRows",
-      restoreRowsId: "#restoreRows"
     });
   });
 </script>

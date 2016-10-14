@@ -43,8 +43,9 @@
  *     dom: 't',
  *     order: [[ 1, 'asc' ]],
  *     select: {
- *       style: 'multi',
- *       selector: 'td:first-child input[type="checkbox"]'
+ *       allSelector: 'th:first-child input[type="checkbox"]',
+ *       selector: 'td:first-child input[type="checkbox"]',
+ *       style: 'multi'
  *     }
  *   });
  *   dt.table().pfSelect.selectAllRows(true); // Select all rows
@@ -81,8 +82,8 @@
   'use strict';
   var DataTable = $.fn.dataTable;
   var RESULTS_SELECTOR = '.datatable-pf-results-right'; // Toolbar results area displaying selected rows text
-  var SELECT_SELECTOR = 'td:first-child input[type="checkbox"]'; // Checkboxes used for row selection
-  var SELECT_ALL_SELECTOR = 'th:first-child input[type="checkbox"]'; // Checkbox used to select all rows
+  var SELECT_ALL_SELECTOR = 'th:first-child input[type="checkbox"]'; // Default checkbox used to select all rows
+  var SELECT_SELECTOR = 'td:first-child input[type="checkbox"]'; // Default checkboxes used for row selection
 
   DataTable.pfSelect = {};
 
@@ -93,15 +94,22 @@
    * @private
    */
   DataTable.pfSelect.init = function (dt) {
+    var ctx = dt.settings()[0];
+    var opts = ctx.oInit.select;
     var style = dt.select.style();
+
+    // Set select and select all controls
+    dt.pfSelect.allSelector = (opts && opts.allSelector !== undefined) ? opts.allSelector : SELECT_ALL_SELECTOR;
+    dt.pfSelect.selector = (opts && opts.selector !== undefined) ? opts.selector : SELECT_SELECTOR;
+
     if (style === 'api') {
       // Select all checkbox
-      $(dt.table().container()).on('click', SELECT_ALL_SELECTOR, function (evt) {
+      $(dt.table().container()).on('click', dt.pfSelect.allSelector, function (evt) {
         evt.preventDefault();
       });
 
       // Select checkboxes
-      $(dt.table().container()).on('click', SELECT_SELECTOR, function (evt) {
+      $(dt.table().container()).on('click', dt.pfSelect.selector, function (evt) {
         evt.preventDefault();
       });
 
@@ -110,12 +118,12 @@
       });
     } else {
       // Select all checkbox
-      $(dt.table().container()).on('click', SELECT_ALL_SELECTOR, function (evt) {
+      $(dt.table().container()).on('click', dt.pfSelect.allSelector, function (evt) {
         selectAllRows(dt, evt.target.checked);
       });
 
       // Select checkboxes
-      $(dt.table().container()).on('click', SELECT_SELECTOR, function (evt) {
+      $(dt.table().container()).on('click', dt.pfSelect.selector, function (evt) {
         if (style !== 'multi' || style !== 'multi+shift') {
           syncSelectCheckboxes(dt); // No need to sync checkbox selections when "multi" is used
         } else {
@@ -157,7 +165,7 @@
     } else {
       filteredRows.deselect();
     }
-    $(SELECT_SELECTOR, dt.table().container()).prop('checked', select); // De/select checkboxes in view
+    $(dt.pfSelect.selector, dt.table().container()).prop('checked', select); // De/select checkboxes in view
     syncSelectAllCheckbox(dt);
   }
 
@@ -173,7 +181,7 @@
     var selectedFilteredRows = dt.rows({'page': 'current', 'search': 'applied', 'selected': true}).flatten().length;
 
     // De/select the select all checkbox
-    var selectAll = $(dt.table().container()).find(SELECT_ALL_SELECTOR)[0];
+    var selectAll = $(dt.table().container()).find(dt.pfSelect.allSelector)[0];
     if (selectAll) {
       selectAll.checked = (filteredRows === selectedFilteredRows);
     }
@@ -187,15 +195,15 @@
    * @private
    */
   function syncSelectCheckboxes (dt) {
-    $(SELECT_SELECTOR, dt.table().container()).prop('checked', false); // Deselect all checkboxes
+    $(dt.pfSelect.selector, dt.table().container()).prop('checked', false); // Deselect all checkboxes
     dt.rows({'page': 'current', 'search': 'applied', 'selected': true}).every(function (index) {
-      $(SELECT_SELECTOR, dt.table().row(index).node()).prop('checked', true); // Select checkbox for selected row
+      $(dt.pfSelect.selector, dt.table().row(index).node()).prop('checked', true); // Select checkbox for selected row
     });
     syncSelectAllCheckbox(dt);
   }
 
   /**
-   * Update selection results
+   * Update selection results text
    *
    * @param {DataTable.Api} dt DataTable
    * @private
