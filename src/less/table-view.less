@@ -2,324 +2,140 @@
 // Table View
 // --------------------------------------------------
 
-// Deprecated
-.ColVis_Button {
-  &:active {
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
-// Deprecated
-.ColVis_catcher {
-  position: absolute;
-  z-index: 999;
-}
-
-// Deprecated
-.ColVis_collection {
-  background-color: @dropdown-bg;
-  border: 1px solid @dropdown-border;
-  border-radius: @border-radius-base;
-  .box-shadow(0 6px 12px fade(@color-pf-black, 17.5%));
-  background-clip: padding-box;
-  list-style: none;
-  margin: -1px 0 0 0;
-  padding: 5px 10px;
-  width: 150px;
-  z-index: @zindex-dropdown;
-  label {
-    font-weight: normal;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding-left: 20px;
-  }
-}
-
-// Deprecated
-.ColVis_collectionBackground {
-  background-color: @color-pf-white;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 998;
-}
-
-// Note: We won't be using this class with the Patternfly toolbar
-.dataTables_header {
-  background-color: @color-pf-black-150;
-  border: 1px solid @table-border-color;
-  border-bottom: none;
-  padding: 5px;
-  position: relative;
-  text-align: center;
-  .btn {
-    .box-shadow(none);
-  }
-  // Deprecated
-  .ColVis {
-    position: absolute;
-    right: 5px;
-    text-align: left;
-    top: 5px;
-    + .dataTables_info {
-      padding-right: 30px;
-    }
-  }
-  .dataTables_filter {
-    position: absolute;
-    input {
-      border: 1px solid @color-pf-black-400;
-      height: 24px;
-      @media (max-width: @screen-xs-max) {
-        width: 100px;
-      }
-    }
-  }
-  .dataTables_info {
-    padding: 2px 0;
-    @media (max-width: @screen-xs) {
-     text-align: right;
-    }
-    b {
-      font-weight: bold;
-    }
-  }
-}
-
-// Note: We won't be using this class with the table view
-.dataTables_footer {
-  background-color: @color-pf-white;
-  border: 1px solid @table-border-color;
-  border-top: none;
-  overflow: hidden;
-}
-
-// Not in use with latest example: May be used with pagination?
-.dataTables_paginate {
-  background: @color-pf-black-100;
-  float: right;
-  margin: 0;
-  .pagination {
-    float: left;
-    margin: 0;
-    > li {
-      > span {
-        border-color: @color-pf-white @color-pf-black-300 @color-pf-black-150;
-        border-width: 0 1px;
-        font-size: (@font-size-base + 4);
-        font-weight: normal;
-        padding: 0;
-        text-align: center;
-        width: 31px;
-        &:hover,
-        &:focus {
-          .reset-filter();
+// Keep dataTable class for legacy apps
+table.dataTable {
+  margin-bottom: 0;
+  max-width: none !important;
+  tbody {
+    > tr {
+      > td {
+        // Styling for inline actions
+        &.table-view-pf-actions {
+          padding: 0;
+          vertical-align: middle;
         }
       }
-      &.last > span {
-        border-right: none;
+      &:hover {
+        // Styling when hovering anywhere else on a row
+        > td.table-view-pf-actions {
+          background-color: @table-bg-accent;
+          border-bottom-color: @table-border-color;
+        }
       }
-      &.disabled > span {
-        background: @color-pf-black-150;
-        border-left-color: @color-pf-black-200;
-        border-right-color: @color-pf-black-200;
-        .reset-filter();
+    }
+    > tr.selected {
+      color: @color-pf-white;
+      background-color: @color-pf-blue-400;
+      > td {
+        border-bottom-color: @color-pf-blue-500;
+        &.table-view-pf-actions {
+          background-color: @table-bg-accent;
+          border-bottom-color: @table-border-color;
+        }
+      }
+      &:hover {
+        > td {
+          background-color: inherit;
+          border-bottom-color: @color-pf-blue-500;
+          &.table-view-pf-actions {
+            background-color: @table-bg-accent;
+            border-bottom-color: @table-border-color;
+          }
+        }
       }
     }
   }
-  .pagination-input {
-    float: left;
-    font-size: @font-size-base;
-    line-height: 1em;
-    padding: 4px 15px 0;
-    text-align: right;
-    .paginate_input {
-      border: 1px solid @color-pf-black-300;
-      .box-shadow(inset 0 1px 1px fade(@color-pf-black, 7.5%));
-      font-size: @font-size-base;
-      font-weight: 600;
-      height: 19px;
-      margin-right: 8px;
-      padding-right: 3px;
-      text-align: right;
-      width: 30px;
+  thead {
+    .sorting,
+    .sorting_asc,
+    .sorting_desc,
+    .sorting_asc_disabled,
+    .sorting_desc_disabled {
+      cursor: pointer;
     }
-    .paginate_of {
+    .sorting_asc,
+    .sorting_desc {
+      color: @link-color !important;
       position: relative;
-      b {
-        margin-left: 3px;
+      &:after {
+        content: @fa-var-angle-down;
+        font-family: @icon-font-name-fa;
+        font-size: (@font-size-base - 2);
+        font-weight: normal;
+        height: (@font-size-base - 3);
+        left: 7px;
+        line-height: @font-size-base;
+        position: relative;
+        top: 2px;
+        vertical-align: baseline;
+        width: @font-size-base;
+      }
+      &:before {
+        background: @link-color;
+        content: "";
+        height: 2px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
       }
     }
-  }
-}
-
-.dataTables_empty {
-  background: @table-bg-accent;
-}
-
-/*
-.dataTables_wrapper {
-  margin: @line-height-computed 0;
-  @media (max-width: @screen-xs-max) {
-    .table-responsive {
-      margin-bottom: 0;
+    .sorting_asc:after {
+      content: @fa-var-angle-up;
+      top: -3px;
     }
   }
-}
-*/
-
-// Not in use with latest example: May be used with column reordering?
-.DTCR_clonedTable {
-  background-color: fade(@color-pf-white, 70%);
-  z-index: 202;
+  th:active {
+    outline: none;
+  }
 }
 
-// Not in use with latest example: May be used with column reordering?
-.DTCR_pointer {
-  background-color: @link-color;
-  width: 1px;
-  z-index: 201;
-}
-
-.datatable-pf {
-  // Override blank slate styles
-  .blank-slate-pf {
+// Empty table
+.table-view-pf-empty {
+  &.blank-slate-pf {
     background-color: @table-bg-accent;
     border: 1px solid @table-border-color;
     border-radius: 0;
     margin-top: -1px;
   }
-  // Override table styles -- child selectors are due to specificity
-  table {
-    margin-bottom: 0;
-    max-width: none !important;
-    > tbody {
-      > tr {
-        > td {
-          // Styling for inline actions
-          &.datatable-pf-actions {
-            padding: 0;
-            vertical-align: middle;
-            & .btn-default {
-              &:hover,
-              &:focus,
-              &:active,
-              .open .dropdown-toggle {
-                background-color: transparent;
-              }
-            }
-          }
-          // Workaround for ie9 -- table cell loses border when gradient filter is applied
-          .ie9 &.datatable-pf-actions {
-            //position: relative;
-            //z-index: -1;
-          }
-        }
-        &:hover {
-          // Styling when hovering anywhere else on a row
-          > td.datatable-pf-actions {
-            background-color: @table-bg-accent;
-            border-bottom-color: @table-border-color;
-          }
-        }
-      }
-      > tr.selected {
-        color: @color-pf-white;
-        background-color: @color-pf-blue-400;
-        > td {
-          border-bottom-color: @color-pf-blue-500;
-          &.datatable-pf-actions {
-            background-color: @table-bg-accent;
-            border-bottom-color: @table-border-color;
-          }
-        }
-        &:hover {
-          > td {
-            background-color: inherit;
-            border-bottom-color: @color-pf-blue-500;
-            &.datatable-pf-actions {
-              background-color: @table-bg-accent;
-              border-bottom-color: @table-border-color;
-            }
-          }
-        }
-      }
-    }
-    // Override DataTable styles
-    thead {
-      .sorting,
-      .sorting_asc,
-      .sorting_desc,
-      .sorting_asc_disabled,
-      .sorting_desc_disabled {
-        cursor: pointer;
-      }
-      .sorting_asc,
-      .sorting_desc {
-        color: @link-color !important;
-        position: relative;
-        &:after {
-          content: @fa-var-angle-down;
-          font-family: @icon-font-name-fa;
-          font-size: (@font-size-base - 2);
-          /* font-weight: normal; */
-          /* height: (@font-size-base - 3); */
-          left: 7px;
-          /* line-height: @font-size-base; */
-          position: relative;
-          top: 2px;
-          /* vertical-align: baseline; */
-          /* width: @font-size-base; */
-        }
-        &:before {
-          background: @link-color;
-          content: "";
-          height: 2px;
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-        }
-      }
-      .sorting_asc:after {
-        content: @fa-var-angle-up;
-        top: -3px;
-      }
-    }
-    th:active {
-      outline: none;
-    }
-  }
-  // Full page and embedded toolbars
-  .toolbar-pf {
+}
+
+// Embedded toolbar
+.table-view-pf-toolbar {
+  &.toolbar-pf {
+    background-color: @table-bg-accent;
     border-bottom: none;
+    border-left: 1px solid @table-border-color;
+    border-right: 1px solid @table-border-color;
+    border-top: 1px solid @table-border-color;
+    box-shadow: none;
+    margin-left: 0px;
+    margin-right: 0px;
     .toolbar-pf-results {
       border-top: 1px solid @table-border-color;
       min-height: 40px;
       line-height: 40px;
     }
   }
-  // Embedded toolbar only -- may want different background color?
-  > .toolbar-pf {
-    //background-color: @table-bg-accent;
-    border-left: 1px solid @table-border-color;
-    border-right: 1px solid @table-border-color;
-    border-top: 1px solid @table-border-color;
-    margin-left: 0px;
-    margin-right: 0px;
+}
+
+// External Toolbar
+.table-view-pf-toolbar-ext {
+  &.toolbar-pf {
+    border-bottom: none;
+    border-top: none;
+    box-shadow: none;
+    .toolbar-pf-results {
+      border-top: 1px solid @table-border-color;
+      min-height: 40px;
+      line-height: 40px;
+    }
   }
 }
 
 // Inline action button and kebab
-.datatable-pf-actions.btn-default {
-  .btn,
-  .open .dropdown-toggle {
-    background-color: transparent;
-    background-image: none;
+.table-view-pf-actions {
+  .btn-default {
     border: none;
     box-shadow: none;
     height: 100%;
@@ -328,11 +144,11 @@
 }
 
 // Selection column
-.datatable-pf-select {
+.table-view-pf-select {
   width: 33px;
 }
 
 // Results area containing selected row text
-.datatable-pf-results-right {
+.table-view-pf-results-right {
   text-align: right;
 }
