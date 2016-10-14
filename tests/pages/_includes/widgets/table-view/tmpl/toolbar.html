@@ -1,4 +1,4 @@
-<div class="row toolbar-pf">
+<div class="row toolbar-pf table-view-pf-toolbar">
   <div class="col-sm-12">
     <form class="toolbar-pf-actions">
       <div class="form-group toolbar-pf-filter">
@@ -54,23 +54,9 @@
           <p><a href="#">Clear All Filters</a></p>
         </div>
       </div>
-      <div class="col-sm-3 datatable-pf-results-right">
+      <div class="col-sm-3 table-view-pf-results-right">
         <strong>0</strong> of <strong>0</strong> selected
       </div>
     </div>
   </div>
 </div>
-<script>
-  (function($) {
-    $(document).ready(function() {
-      // Upon clicking the find button, show the find dropdown content
-      $(".btn-find").click(function () {
-        $(this).parent().find(".find-pf-dropdown-container").toggle();
-      });
-      // Upon clicking the find close button, hide the find dropdown content
-      $(".btn-find-close").click(function () {
-        $(".find-pf-dropdown-container").hide();
-      });
-    });
-  })(jQuery);
-</script>

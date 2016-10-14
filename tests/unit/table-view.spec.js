@@ -4,11 +4,11 @@ describe("data tables test suite", function () {
     globals.readFixture(globals.fixturePath + 'table-view.html');
 
     //run the plugin before each test
-    $('.datatable-pf table').dataTable();
+    $('table').dataTable();
   });
 
   it('should render a table with striped rows and borders', function (done) {
-    var table = $('.datatable-pf table');
+    var table = $('table');
 
     setTimeout(function () {
       expect(table).toHaveClass('table');

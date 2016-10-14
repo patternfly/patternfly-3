@@ -1,10 +1,18 @@
+<!-- Navbar -->
 {% include widgets/layouts/navbar-primary.html %}
-<div class="datatable-pf">
+<!-- Toolbar -->
 {% include widgets/table-view/tmpl/toolbar-all.html %}
-{% include widgets/table-view/tmpl/table-dom.html %}
-{% include widgets/communication/blank-slate.html %}
+<div class="col-sm-12">
+<!-- Table HTML -->
+{% include widgets/table-view/tmpl/table.html %}
+<!-- Blank Slate HTML -->
+{% include widgets/communication/blank-slate.html extraClass="table-view-pf-empty hidden" %}
 </div>
-{% include widgets/table-view/js/data.js.html %}
-{% include widgets/table-view/js/config.js.html %}
-{% include widgets/table-view/js/filter.js.html %}
-{% include widgets/table-view/js/empty.js.html %}
+{% include widgets/table-view/tmpl/begin.js.html %}
+{% include widgets/table-view/js/data.js %}
+{% include widgets/table-view/js/config.js %}
+{% include widgets/table-view/js/filter.js %}
+{% include widgets/table-view/js/empty.js %}
+{% include widgets/table-view/js/resize.js %}
+{% include widgets/table-view/js/find.js %}
+{% include widgets/table-view/tmpl/end.js.html %}
