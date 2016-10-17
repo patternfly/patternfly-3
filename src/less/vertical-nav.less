@@ -77,6 +77,10 @@
       position: relative;
       white-space: nowrap;
       width: @nav-pf-vertical-width;
+      @supports (display: flex) {
+        display: flex;
+        padding-right: 0;
+      }
       .fa,
       .glyphicon,
       .pficon {
@@ -124,6 +128,11 @@
       display: block;
       line-height: 25px;
       max-width: 120px;
+      @supports (display: flex) {
+        flex: 1;
+        max-width: none;
+        padding-right: 15px;
+      }
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -163,6 +172,14 @@
     position: absolute;
     right: 15px;
     top: 20px;
+    @supports (display: flex) {
+      padding-left: 0;
+      padding-right: 15px;
+      position: relative;
+      right: 0;
+      margin-top: -3px;
+      top: 5px;
+    }
     .badge {
       background: @nav-pf-vertical-badge-bg-color;
       color: @nav-pf-vertical-badge-color;
@@ -316,6 +333,11 @@
       position: absolute;
       right: 20px;
       top: 0;
+    }
+    .list-group-item-value {
+      @supports (display: flex) {
+        padding-right: 35px;
+      }
     }
   }
   &.active,
@@ -595,6 +617,11 @@
           position: absolute;
           right: 20px;
           top: 4px;
+        }
+        .list-group-item-value {
+          @supports (display: flex) {
+            padding-right: 35px;
+          }
         }
       }
       &.active,
