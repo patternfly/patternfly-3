@@ -1,0 +1,6 @@
+2014-07-07 - Version 1.0.4
+
+Greg Sheremeta <gshereme@redhat.com>
+
+ * Added styles*.css symlinks for drop-in compatibility
+   with downstream projects.
