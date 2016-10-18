@@ -77,6 +77,7 @@
       position: relative;
       white-space: nowrap;
       width: @nav-pf-vertical-width;
+      // When flexbox is supported nav item names take up all available space
       @supports (display: flex) {
         display: flex;
         padding-right: 0;
@@ -128,6 +129,7 @@
       display: block;
       line-height: 25px;
       max-width: 120px;
+      // If flexbox is supported, do not set max-width, take all space with just some right padding
       @supports (display: flex) {
         flex: 1;
         max-width: none;
@@ -172,6 +174,8 @@
     position: absolute;
     right: 15px;
     top: 20px;
+    // If flexbox is supported, use relative positioning to place to the right of the label
+    // and adjust the top position so that the secondary and tertiary nav items don't need to change
     @supports (display: flex) {
       padding-left: 0;
       padding-right: 15px;
@@ -335,6 +339,7 @@
       top: 0;
     }
     .list-group-item-value {
+      // If flex box is supported add some padding to account for the submenu indicator
       @supports (display: flex) {
         padding-right: 35px;
       }
@@ -618,6 +623,7 @@
           right: 20px;
           top: 4px;
         }
+        // If flex box is supported add some padding to account for the submenu indicator
         .list-group-item-value {
           @supports (display: flex) {
             padding-right: 35px;
