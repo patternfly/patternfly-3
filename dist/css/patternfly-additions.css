@@ -5683,6 +5683,13 @@ a.disabled {
   white-space: nowrap;
   width: 200px;
 }
+@supports (display: flex) {
+  .nav-pf-vertical .list-group-item > a {
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 0;
+  }
+}
 .nav-pf-vertical .list-group-item > a .fa,
 .nav-pf-vertical .list-group-item > a .glyphicon,
 .nav-pf-vertical .list-group-item > a .pficon {
@@ -5731,6 +5738,14 @@ a.disabled {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@supports (display: flex) {
+  .nav-pf-vertical .list-group-item .list-group-item-value {
+    -ms-flex: 1;
+        flex: 1;
+    max-width: none;
+    padding-right: 15px;
+  }
+}
 .nav-pf-vertical .list-group-item-separator {
   border-top-color: #030303;
   border-top-width: 2px;
@@ -5760,6 +5775,16 @@ a.disabled {
   position: absolute;
   right: 15px;
   top: 20px;
+}
+@supports (display: flex) {
+  .nav-pf-vertical .badge-container-pf {
+    padding-left: 0;
+    padding-right: 15px;
+    position: relative;
+    right: 0;
+    margin-top: -3px;
+    top: 5px;
+  }
 }
 .nav-pf-vertical .badge-container-pf .badge {
   background: #292e34;
@@ -5903,6 +5928,11 @@ a.disabled {
   position: absolute;
   right: 20px;
   top: 0;
+}
+@supports (display: flex) {
+  .secondary-nav-item-pf > a .list-group-item-value {
+    padding-right: 35px;
+  }
 }
 .secondary-nav-item-pf.active > a,
 .secondary-nav-item-pf:hover > a {
@@ -6155,6 +6185,11 @@ a.disabled {
   position: absolute;
   right: 20px;
   top: 4px;
+}
+@supports (display: flex) {
+  .nav-pf-secondary-nav .list-group-item.tertiary-nav-item-pf > a .list-group-item-value {
+    padding-right: 35px;
+  }
 }
 .nav-pf-secondary-nav .list-group-item.tertiary-nav-item-pf.active > a,
 .nav-pf-secondary-nav .list-group-item.tertiary-nav-item-pf:hover > a {
