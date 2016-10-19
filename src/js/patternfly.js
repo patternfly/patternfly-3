@@ -1568,6 +1568,10 @@
       },
 
       init = function (handleItemSelections) {
+        // Hide the nav menus during initialization
+        navElement.addClass('hide-nav-pf');
+        bodyContentElement.addClass('hide-nav-pf');
+
         //Set correct state on load
         checkNavState();
 
