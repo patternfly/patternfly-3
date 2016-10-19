@@ -5656,7 +5656,7 @@ a.disabled {
   box-shadow: 0 0 3px rgba(3, 3, 3, 0.15);
   display: block !important;
 }
-.nav-pf-vertical .hide-nav-pf {
+.nav-pf-vertical.hide-nav-pf {
   visibility: hidden !important;
 }
 .nav-pf-vertical .list-group {
