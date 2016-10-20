@@ -4,6 +4,7 @@
 
 // Keep dataTable class for legacy apps
 table.dataTable {
+  height: 100%;
   margin-bottom: 0;
   max-width: none !important;
   tbody {
@@ -134,12 +135,21 @@ table.dataTable {
 }
 
 // Inline action button and kebab
+// Sets button height to 100% of td height in firefox and chrome, but not in IE when wrapping occurs.
+// Button height must be set dynamically in IE to be equal to td height.
 .table-view-pf-actions {
-  .btn-default {
+  background-color: @btn-default-bg; // included just in case there are gaps between the edges of the buttons and the table cell
+  height: 100%;
+  .btn,
+  .dropdown-toggle {
     border: none;
     box-shadow: none;
     height: 100%;
     width: 100%;
+  }
+  .dropdown,
+  .table-view-pf-btn {
+    height: 100%;
   }
 }
 

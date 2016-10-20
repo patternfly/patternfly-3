@@ -18,7 +18,7 @@ var dt = $('table').DataTable({
       className: "table-view-pf-actions",
       render: function (data, type, full, meta) {
         // Inline action button renderer
-        return '<button class="btn btn-default" type="button">Actions</button>';
+        return '<div class="table-view-pf-btn"><button class="btn btn-default" type="button">Actions</button></div>';
       }
     }, {
       data: null,
