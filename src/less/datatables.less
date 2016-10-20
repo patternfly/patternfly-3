@@ -185,10 +185,12 @@
   }
   // Override table styles -- child selectors are due to specificity
   table {
+    height: 100%;
     margin-bottom: 0;
     max-width: none !important;
     > tbody {
       > tr {
+        height: 100%;
         > td {
           // Styling for inline actions
           &.datatable-pf-actions {
@@ -333,18 +335,24 @@
   }
 }
 
-// Inline action button and kebab
-.datatable-pf-actions.btn-default {
+//Inline action button and kebab
+// Sets button height to 100% of td height in firefox and chrome, but not in IE when wrapping occurs. 
+// Button height must be set dynamically in IE to be equal to td height.
+.datatable-pf-actions {
+  background-color: @btn-default-bg; // included just in case there are gaps between the edges of the buttons and the table cell
+  height: 100%;
   .btn,
-  .open .dropdown-toggle {
-    background-color: transparent;
-    background-image: none;
+  .dropdown-toggle {
     border: none;
     box-shadow: none;
     height: 100%;
     width: 100%;
   }
+  .dropdown, .table-btn-pf {
+    height: 100%;
+  }
 }
+
 
 // Selection column
 .datatable-pf-select {

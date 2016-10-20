@@ -25,14 +25,14 @@
           { data: "version" },
           { data: "grade"},
           { data: null,
-            className: "datatable-pf-actions btn-default",
+            className: "datatable-pf-actions",
             render: function (data, type, full, meta) {
               // Inline action button renderer
-              return '<button class="btn" type="button">Actions</button>';
+              return '<div class="table-btn-pf"><button class="btn btn-default" type="button">Actions</button></div>';
             }
           }, {
             data: null,
-            className: "datatable-pf-actions btn-default",
+            className: "datatable-pf-actions",
             render: function (data, type, full, meta) {
               // Inline action kebab renderer
               return '<div class="dropdown dropdown-kebab-pf">' +
