@@ -22,7 +22,7 @@ var dt = $('table').DataTable({
       }
     }, {
       data: null,
-      className: "table-view-pf-actions",
+      className: "table-view-pf-actions-right",
       render: function (data, type, full, meta) {
         // Inline action kebab renderer
         return '<div class="dropdown dropdown-kebab-pf">' +
