@@ -11,16 +11,14 @@ table.dataTable {
     > tr {
       > td {
         // Styling for inline actions
-        &.table-view-pf-actions,
-        &.table-view-pf-actions-right {
+        &.table-view-pf-actions {
           padding: 0;
           vertical-align: middle;
         }
       }
       &:hover {
         // Styling when hovering anywhere else on a row
-        > td.table-view-pf-actions,
-        > td.table-view-pf-actions-right {
+        > td.table-view-pf-actions {
           background-color: @table-bg-accent;
           border-bottom-color: @table-border-color;
         }
@@ -31,8 +29,7 @@ table.dataTable {
       background-color: @color-pf-blue-400;
       > td {
         border-bottom-color: @color-pf-blue-500;
-        &.table-view-pf-actions,
-        &.table-view-pf-actions-right {
+        &.table-view-pf-actions {
           background-color: @table-bg-accent;
           border-bottom-color: @table-border-color;
         }
@@ -41,8 +38,7 @@ table.dataTable {
         > td {
           background-color: inherit;
           border-bottom-color: @color-pf-blue-500;
-          &.table-view-pf-actions,
-          &.table-view-pf-actions-right {
+          &.table-view-pf-actions {
             background-color: @table-bg-accent;
             border-bottom-color: @table-border-color;
           }
@@ -141,8 +137,7 @@ table.dataTable {
 // Inline action button and kebab
 // Sets button height to 100% of td height in firefox and chrome, but not in IE when wrapping occurs.
 // Button height must be set dynamically in IE to be equal to td height.
-.table-view-pf-actions,
-.table-view-pf-actions-right {
+.table-view-pf-actions {
   background-color: @btn-default-bg; // included just in case there are gaps between the edges of the buttons and the table cell
   height: 100%;
   .btn,
@@ -159,10 +154,9 @@ table.dataTable {
   .dropdown-menu.dropdown-menu-right {
     right: -5px;
   }
-}
-
-.table-view-pf-actions-right {
-  width: 24px;
+  &:last-child {
+    width: 24px;
+  }
 }
 
 // Selection column

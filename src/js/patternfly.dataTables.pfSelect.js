@@ -1,10 +1,10 @@
 /**
  * @summary     pfSelect for DataTables
- * @description A collection of API methods providing individual row selection and select all functionality in a
- * DataTable using traditional HTML checkboxes. This ensures the DataTable meets the Patternfly design pattern while
- * maintaining accessibility. Selection checkboxes are expected to be located in the first column of the DataTable.
+ * @description A collection of API methods providing individual row selection and select all functionality in
+ * DataTables using traditional HTML checkboxes. This ensures the DataTables meets the Patternfly design pattern while
+ * maintaining accessibility. Selection checkboxes are expected to be located in the first column of DataTables.
  *
- * The following selection styles are supported for user interaction with the DataTable:
+ * The following selection styles are supported for user interaction with DataTables:
  *
  * api - Selection can only be performed via the API
  * multi - Multiple items can be selected
@@ -17,7 +17,7 @@
  * Example:
  *
  * <div class="table-view-pf">
- *   <table class="table table-striped table-bordered table-hover" id="table2">
+ *   <table class="table table-striped table-bordered table-hover">
  *     <thead>
  *       <tr>
  *         <th><input type="checkbox" name="selectAll"></th>
@@ -28,7 +28,7 @@
  * </div>
  * <script>
  * $(document).ready(function() {
- *   var dt = $('#table2').DataTable({
+ *   var dt = $('table').DataTable({
  *     columns: [{
  *       data: null,
  *       className: "table-view-pf-select",
