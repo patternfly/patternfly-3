@@ -1,4 +1,4 @@
-<div class="row toolbar-pf table-view-pf-toolbar">
+<div class="row toolbar-pf table-view-pf-toolbar" id="{{include.toolbarId}}">
   <div class="col-sm-12">
     <form class="toolbar-pf-actions">
       <div class="form-group toolbar-pf-filter">
@@ -7,19 +7,19 @@
           <div class="input-group-btn">
             <button type="button" class="btn btn-default dropdown-toggle" id="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rendering Engine <span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="#">Rendering Engine</a></li>
-              <li><a href="#">Browser</a></li>
-              <li><a href="#">Platform(s)</a></li>
-              <li><a href="#">Engine Version</a></li>
-              <li><a href="#">CSS Grade</a></li>
+              <li><a href="#" id="{{include.filterId1}}">Rendering Engine</a></li>
+              <li><a href="#" id="{{include.filterId2}}">Browser</a></li>
+              <li><a href="#" id="{{include.filterId3}}">Platform(s)</a></li>
+              <li><a href="#" id="{{include.filterId4}}">Engine Version</a></li>
+              <li><a href="#" id="{{include.filterId5}}">CSS Grade</a></li>
             </ul>
           </div>
-          <input type="text" class="form-control" placeholder="Filter By Rendering Engine..." autocomplete="off">
+          <input type="text" class="form-control" placeholder="Filter By Rendering Engine..." autocomplete="off" id="filterInput">
         </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-default" type="button" id="deleteAllRows">Delete Rows</button>
-        <button class="btn btn-default" type="button" id="restoreRows">Restore Rows</button>
+        <button class="btn btn-default" type="button" id="{{include.actionId1}}">Delete Rows</button>
+        <button class="btn btn-default" type="button" id="{{include.actionId2}}" disabled>Restore Rows</button>
         {% include widgets/kebab.html dropmenuType="dropdown btn-group" dropmenuId="dropdownKebab" dropmenuVariation="dropdown-kebab-pf" %}
       </div>
       <div class="toolbar-pf-action-right">
@@ -54,7 +54,7 @@
           <p><a href="#">Clear All Filters</a></p>
         </div>
       </div>
-      <div class="col-sm-3 table-view-pf-results-right">
+      <div class="col-sm-3 table-view-pf-select-results">
         <strong>0</strong> of <strong>0</strong> selected
       </div>
     </div>
