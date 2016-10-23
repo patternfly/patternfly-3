@@ -1,11 +1,13 @@
 // DataTable Config
-var dt = $('table').DataTable({
+$("#{{include.tableId}}").DataTable({
   columns: [
     { data: null,
       className: "table-view-pf-select",
       render: function (data, type, full, meta) {
         // Select row checkbox renderer
-        return '<label class="sr-only">Select row ' + meta.row + '</label><input type="checkbox" name="select">';
+        var id = "select" + meta.row;
+        return '<label class="sr-only" for="' + id + '">Select row ' + meta.row +
+          '</label><input type="checkbox" id="' + id + '" name="' + id + '">';
       },
       sortable: false
     },
@@ -43,9 +45,33 @@ var dt = $('table').DataTable({
     zeroRecords: "No records found"
   },
   order: [[ 1, 'asc' ]],
+  pfConfig: {
+    emptyStateSelector: "#{{include.emptyStateId}}",
+    filterCols: [
+      null,
+      {
+        default: true,
+        optionSelector: "#{{include.filterId1}}",
+        placeholder: "Filter By Rendering Engine..."
+      }, {
+        optionSelector: "#{{include.filterId2}}",
+        placeholder: "Filter By Browser..."
+      }, {
+        optionSelector: "#{{include.filterId3}}",
+        placeholder: "Filter By Platform(s)..."
+      }, {
+        optionSelector: "#{{include.filterId4}}",
+        placeholder: "Filter By Engine Version..."
+      }, {
+        optionSelector: "#{{include.filterId5}}",
+        placeholder: "Filter By CSS Grade..."
+      }
+    ],
+    toolbarSelector: "#{{include.toolbarId}}",
+    selectAllSelector: 'th:first-child input[type="checkbox"]'
+  },
   select: {
-    allSelector: 'th:first-child input[type="checkbox"]',
     selector: 'td:first-child input[type="checkbox"]',
     style: 'multi'
-  }
+  },
 });
