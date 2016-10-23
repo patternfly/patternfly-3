@@ -5,7 +5,12 @@ layout: layout
 title: Tab
 resource: true
 full-page: true
-url-js-extra: '//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'
+url-js-extra: [ '//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js',
+                '//cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js',
+                '../../dist/js/patternfly.dataTables.pfEmpty.js',
+                '../../dist/js/patternfly.dataTables.pfFilter.js',
+                '../../dist/js/patternfly.dataTables.pfResize.js',
+                '../../dist/js/patternfly.dataTables.pfSelect.js' ]
 weight: 5
 ---
 {% include widgets/layouts/navbar-primary.html %}
@@ -59,14 +64,11 @@ weight: 5
       </div><!-- /row -->
     </div><!-- /container -->
     <script>
-      // Initialize Datatables
-      $(document).ready( function() {
-        $('.datatable').dataTable({
-          "fnDrawCallback": function( oSettings ) {
-            // if .sidebar-pf exists, call sidebar() after the data table is drawn
-            if ($('.sidebar-pf').length > 0) {
-              $(document).sidebar();
-            }
+      $(document).ready(function () {
+        $("#table1").DataTable().on("draw.dt", function () {
+          // if .sidebar-pf exists, call sidebar() after the data table is drawn
+          if ($('.sidebar-pf').length > 0) {
+            $(document).sidebar();
           }
         });
       });
