@@ -2,6 +2,4 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
-gem 'rack'
-gem 'json'
 gem 'jekyll'

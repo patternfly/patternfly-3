@@ -20,7 +20,6 @@ GEM
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    json (2.0.2)
     kramdown (1.12.0)
     liquid (3.0.6)
     listen (3.0.8)
@@ -29,8 +28,7 @@ GEM
     mercenary (0.3.6)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
-    rack (2.0.1)
-    rb-fsevent (0.9.7)
+    rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     rouge (1.11.1)
@@ -42,8 +40,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
-  json
-  rack
 
 BUNDLED WITH
    1.13.3
