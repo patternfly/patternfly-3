@@ -33,6 +33,16 @@ module.exports = function (grunt) {
         }
       }
     },
+    run: {
+      options: {
+      },
+      bundleInstall: {
+        cmd: 'bundle',
+        args: [
+          'install'
+        ]
+      }
+    },
     copy: {
       main: {
         files: [
@@ -67,7 +77,8 @@ module.exports = function (grunt) {
     },
     jekyll: {
       options: {
-        src: 'tests/pages'
+        src: 'tests/pages',
+        bundleExec: 'true'
       },
       tests: {
         options: {
@@ -213,6 +224,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
+    'run:bundleInstall',
     'copy',
     'jekyll',
     'less',
