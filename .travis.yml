@@ -3,6 +3,7 @@ node_js:
   - '4'
 
 before_install:
+  - rvm install 2.3.1
   - 'git checkout -B $TRAVIS_BRANCH' # Reconcile detached HEAD
   - 'if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi'
   - 'npm install -g bower grunt-cli'
