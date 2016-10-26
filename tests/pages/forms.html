@@ -240,6 +240,32 @@ resource: true
         {% include widgets/forms/input-validation-modal.html id-default="modalInput" id-disabled="modalInputDisabled" id-error="modalInputError" has-error=true %}
       </div>
 
+      <h2>Expand-Collapse Section</h2>
+      <div class="example-pf">
+        {% include widgets/forms/expand-collapse-section.html id-blueprintname="AdvOptBlueprintName" id-catalog="AdvOptCatalog" id-number="AdvOptNumber" id-entry1="AdvOptEntry1" id-entry2="AdvOptEntry2" id-entry3="AdvOptEntry3" id-fieldsection="AdvOptSection" is-modal=false col-size-label="2" col-size-field="10" %}
+      </div>
+
+      <h2>Expand-Collapse Section inside a modal</h2>
+
+      <button class="btn btn-default" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <span class="pficon pficon-close"></span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Edit Blueprint Details</h4>
+            </div>
+            <div class="modal-body">
+              <div class="example-pf">
+                {% include widgets/forms/expand-collapse-section.html id-blueprintname="AdvOptBlueprintNameMod" id-catalog="AdvOptCatalogMod" id-number="AdvOptNumberMod" id-entry1="AdvOptEntry1Mod" id-entry2="AdvOptEntry2Mod" id-entry3="AdvOptEntry3Mod" id-fieldsection="AdvOptSectionMod" is-modal=true col-size-label="3" col-size-field="9" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h2>Controls</h2>
 
       <input type="text" class="form-control" placeholder="Text input">
