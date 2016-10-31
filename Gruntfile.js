@@ -43,6 +43,12 @@ module.exports = function (grunt) {
         ]
       }
     },
+    concat: {
+      js: {
+        src: ['src/js/patternfly-settings.js', 'src/js/patternfly-functions.js'],
+        dest: 'src/js/patternfly.js'
+      }
+    },
     copy: {
       main: {
         files: [
@@ -61,7 +67,7 @@ module.exports = function (grunt) {
       js: {
         files: [
           // copy js src file
-          {expand: true, cwd: 'src/js/', src: ['patternfly.js'], dest: 'dist/js/'}
+          {expand: true, cwd: 'src/js/', src: ['patternfly.js', 'patternfly-settings.js', 'patternfly-functions.js'], dest: 'dist/js/'}
         ]
       }
     },
@@ -140,7 +146,9 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          'dist/js/patternfly.min.js': ['src/js/patternfly.js']
+          'dist/js/patternfly.min.js': ['src/js/patternfly.js'],
+          'dist/js/patternfly-settings.min.js': ['src/js/patternfly-settings.js'],
+          'dist/js/patternfly-functions.min.js': ['src/js/patternfly-functions.js']
         }
       }
     },
@@ -168,7 +176,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['eslint', 'uglify', 'copy:js']
+        tasks: ['eslint', 'concat":js', 'uglify', 'copy:js']
       },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'dist/tests/*.html', '!tests/pages/*.html']
@@ -225,6 +233,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'run:bundleInstall',
+    'concat',
     'copy',
     'jekyll',
     'less',
