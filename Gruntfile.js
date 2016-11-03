@@ -46,7 +46,7 @@ module.exports = function (grunt) {
     concat: {
       js: {
         src: ['src/js/patternfly-settings.js', 'src/js/patternfly-functions.js'],
-        dest: 'src/js/patternfly.js'
+        dest: 'dist/js/patternfly.js'
       }
     },
     copy: {
@@ -146,9 +146,9 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          'dist/js/patternfly.min.js': ['src/js/patternfly.js'],
-          'dist/js/patternfly-settings.min.js': ['src/js/patternfly-settings.js'],
-          'dist/js/patternfly-functions.min.js': ['src/js/patternfly-functions.js']
+          'dist/js/patternfly.min.js':           ['dist/js/patternfly.js'],
+          'dist/js/patternfly-settings.min.js':  ['dist/js/patternfly-settings.js'],
+          'dist/js/patternfly-functions.min.js': ['dist/js/patternfly-functions.js']
         }
       }
     },
@@ -176,7 +176,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['eslint', 'concat":js', 'uglify', 'copy:js']
+        tasks: ['eslint', 'concat":js', 'copy:js', 'uglify']
       },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'dist/tests/*.html', '!tests/pages/*.html']
