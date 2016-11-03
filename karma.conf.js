@@ -30,7 +30,8 @@ module.exports = function(config) {
       {pattern: 'dist/fonts/**/*', watched: true, included: false, served: true},
       {pattern: 'dist/css/*.map', watched: true, included: false, served: true},
       'dist/css/*.css',
-      'dist/js/*.js',
+      'dist/js/patternfly.js',
+      'dist/js/patternfly.min.js',
       {pattern: 'dist/tests/**/*', watched: true, included: false, served: true},
 
       //tests
