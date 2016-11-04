@@ -2,15 +2,18 @@ language: node_js
 node_js:
   - '4'
 
+cache:
+  directories:
+    - node_modules
+
 before_install:
   - rvm install 2.3.1
   - 'git checkout -B $TRAVIS_BRANCH' # Reconcile detached HEAD
   - 'if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi'
   - 'npm install -g bower grunt-cli'
+  - 'bundle install'
 
 script:
-  - 'npm install'
-  - 'bundle install'
   - 'grunt build'
   - './node_modules/nsp/bin/nsp --shrinkwrap npm-shrinkwrap.json check --output summary'
   - 'npm test'
