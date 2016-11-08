@@ -146,14 +146,13 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-<<<<<<< 4f291caa1779cd39cea160b7b43f7b8de122cb76
           'dist/js/patternfly.min.js':           ['dist/js/patternfly.js'],
           'dist/js/patternfly-settings.min.js':  ['dist/js/patternfly-settings.js'],
-          'dist/js/patternfly-functions.min.js': ['dist/js/patternfly-functions.js']
-=======
-          'dist/js/patternfly.min.js': ['src/js/patternfly.js'],
+          'dist/js/patternfly-functions.min.js': ['dist/js/patternfly-functions.js'],
+          'dist/js/patternfly.dataTables.pfEmpty.min.js':  ['src/js/patternfly.dataTables.pfEmpty.js'],
+          'dist/js/patternfly.dataTables.pfFilter.min.js': ['src/js/patternfly.dataTables.pfFilter.js'],
+          'dist/js/patternfly.dataTables.pfResize.min.js': ['src/js/patternfly.dataTables.pfResize.js'],
           'dist/js/patternfly.dataTables.pfSelect.min.js': ['src/js/patternfly.dataTables.pfSelect.js']
->>>>>>> Created a DataTables extension for row selection and select all functionality.
         }
       }
     },
