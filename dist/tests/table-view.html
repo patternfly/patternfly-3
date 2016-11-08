@@ -4,7 +4,7 @@
 <html lang="en-us">
 <!--<![endif]-->
   <head>
-    <title>Tab - PatternFly</title>
+    <title>Table View - PatternFly</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,137 +36,17 @@
     <script src="../../dist/js/patternfly.dataTables.pfSelect.js"></script>
     <script src="../../dist/js/patternfly.min.js"></script>
   </head>
-  <div class="toast-notifications-list-pf">
-    <div class="toast-pf alert alert-warning alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-        <span class="pficon pficon-close"></span>
-      </button>
-      <span class="pficon pficon-warning-triangle-o"></span>
-      These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
-    </div>
-  </div>
 
   <body>
-    <nav class="navbar navbar-default navbar-pf" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">
-          <img src="../../dist/img/brand.svg" alt="PatternFly Enterprise Application" />
-        </a>
+    <div class="container">
+      <div class="page-header">
+        <h1>Table View</h1>
       </div>
-      <div class="collapse navbar-collapse navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-utility">
-          <li>
-            <a href="#">Status</a>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="pficon pficon-user"></span>
-              Brian Johnson <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider"></li>
-              <li class="dropdown-submenu">
-                <a tabindex="-1" href="#">More options</a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#">Link</a>
-                  </li>
-                  <li>
-                    <a href="#">Another link</a>
-                  </li>
-                  <li>
-                    <a href="#">Something else here</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li>
-                    <a href="#">Separated link</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="#">One more separated link</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-primary">
-          <li>
-            <a href="basic.html">Basic</a>
-          </li>
-          <li>
-            <a href="bootstrap-treeview-2.html">Tree View</a>
-          </li>
-          <li>
-            <a href="dashboard.html">Dashboard</a>
-          </li>
-          <li>
-            <a href="form.html">Form</a>
-          </li>
-          <li class="active">
-            <a href="tab.html" class="active">Tab</a>
-          </li>
-          <li>
-            <a href="typography-2.html">Typography</a>
-          </li>
-          <li>
-            <a href="card-view-multi-select.html">Card View - Multi Select</a>
-          </li>
-          <li>
-            <a href="card-view-single-select.html">Card View - Single Select</a>
-          </li>
-          <li>
-            <a href="cards.html">Cards</a>
-          </li>
-        </ul>
+      <div class="alert alert-warning">
+        <span class="pficon pficon-warning-triangle-o"></span>
+        These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a>, <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://datatables.net" class="alert-link">http://datatables.net</a>.
       </div>
-    </nav>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-9 col-md-10 col-sm-push-3 col-md-push-2">
-          <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li>Tab</li>
-          </ol>
-          <h1>Tab</h1>
-           <!--Note: the markup semantics used to create "nested" tabs are sub-optimal in order to easily achieve a responsive layout.-->
-           <ul class="nav nav-tabs">
-            <li class="active"><a href="#">Tab One</a></li>
-            <li><a href="#">Tab Two</a></li>
-            <li><a href="#">Tab Three</a></li>
-            <li><a href="#">Tab Four</a></li>
-            <li><a href="#">Tab Five</a></li>
-            <li><a href="#">Tab Six</a></li>
-            <li><a href="#">Tab Seven</a></li>
-          </ul>
-          <ul class="nav nav-tabs nav-tabs-pf">
-            <li class="active"><a href="#">Secondary Tab One</a></li>
-            <li><a href="#">Secondary Tab Two</a></li>
-            <li><a href="#">Secondary Tab Three</a></li>
-            <li><a href="#">Secondary Tab Four</a></li>
-            <li><a href="#">Secondary Tab Five</a></li>
-          </ul>
+      <hr>
 <!-- Toolbar -->
 <div class="row toolbar-pf table-view-pf-toolbar" id="toolbar1">
   <div class="col-sm-12">
@@ -536,39 +416,7 @@ new findTableViewUtil();
 </script>
 
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget eros tincidunt, semper ante nec, dapibus ante.</p>
-        </div><!-- /col -->
-        <div class="col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-10 sidebar-pf sidebar-pf-left">
-          <div class="nav-category">
-            <h2>First Category</h2>
-            <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="#"><i class="fa fa-desktop"></i>System Information</a></li>
-              <li><a href="#"><i class="fa fa-cog"></i>System Services</a></li>
-              <li><a href="#"><i class="fa fa-file-text-o"></i>Journal</a></li>
-              <li><a href="#"><i class="fa fa-cloud"></i>Storage</a></li>
-            </ul>
-          </div>
-          <div class="nav-category">
-            <h2>Second Category</h2>
-            <ul class="nav nav-pills nav-stacked">
-              <li><a href="#">User Accounts</a></li>
-              <li><a href="#">Containers</a></li>
-              <li><a href="#">Shutdown and Reboot</a></li>
-            </ul>
-          </div>
-        </div><!-- /col -->
-      </div><!-- /row -->
-    </div><!-- /container -->
-    <script>
-      $(document).ready(function () {
-        $("#table1").DataTable().on("draw.dt", function () {
-          // if .sidebar-pf exists, call sidebar() after the data table is drawn
-          if ($('.sidebar-pf').length > 0) {
-            $(document).sidebar();
-          }
-        });
-      });
-    </script>
 
+    </div><!-- /container -->
   </body>
 </html>
