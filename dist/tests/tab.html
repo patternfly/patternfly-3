@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en-us" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+  <head>
+    <title>Tab - PatternFly</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../dist/img/favicon.ico">
+    <!-- iPad retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../dist/img/apple-touch-icon-precomposed-152.png">
+    <!-- iPad retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../dist/img/apple-touch-icon-precomposed-144.png">
+    <!-- iPad non-retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../dist/img/apple-touch-icon-precomposed-76.png">
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../dist/img/apple-touch-icon-precomposed-72.png">
+    <!-- iPhone 6 Plus icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../dist/img/apple-touch-icon-precomposed-180.png">
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../dist/img/apple-touch-icon-precomposed-114.png">
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/img/apple-touch-icon-precomposed-57.png">
+    <link rel="stylesheet" href="../../dist/css/patternfly.min.css" >
+    <link rel="stylesheet" href="../../dist/css/patternfly-additions.min.css" >
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="../../dist/js/patternfly.min.js"></script>
+  </head>
+  <div class="toast-notifications-list-pf">
+    <div class="toast-pf alert alert-warning alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+        <span class="pficon pficon-close"></span>
+      </button>
+      <span class="pficon pficon-warning-triangle-o"></span>
+      These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+    </div>
+  </div>
+
+  <body>
+    <nav class="navbar navbar-default navbar-pf" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="../../dist/img/brand.svg" alt="PatternFly Enterprise Application" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-utility">
+          <li>
+            <a href="#">Status</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="pficon pficon-user"></span>
+              Brian Johnson <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">More options</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li>
+                    <a href="#">Another link</a>
+                  </li>
+                  <li>
+                    <a href="#">Something else here</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li>
+                    <a href="#">Separated link</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#">One more separated link</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-primary">
+          <li>
+            <a href="basic.html">Basic</a>
+          </li>
+          <li>
+            <a href="bootstrap-treeview-2.html">Tree View</a>
+          </li>
+          <li>
+            <a href="dashboard.html">Dashboard</a>
+          </li>
+          <li>
+            <a href="form.html">Form</a>
+          </li>
+          <li class="active">
+            <a href="tab.html" class="active">Tab</a>
+          </li>
+          <li>
+            <a href="typography-2.html">Typography</a>
+          </li>
+          <li>
+            <a href="card-view-multi-select.html">Card View - Multi Select</a>
+          </li>
+          <li>
+            <a href="card-view-single-select.html">Card View - Single Select</a>
+          </li>
+          <li>
+            <a href="cards.html">Cards</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9 col-md-10 col-sm-push-3 col-md-push-2">
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li>Tab</li>
+          </ol>
+          <h1>Tab</h1>
+           <!--Note: the markup semantics used to create "nested" tabs are sub-optimal in order to easily achieve a responsive layout.-->
+           <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Tab One</a></li>
+            <li><a href="#">Tab Two</a></li>
+            <li><a href="#">Tab Three</a></li>
+            <li><a href="#">Tab Four</a></li>
+            <li><a href="#">Tab Five</a></li>
+            <li><a href="#">Tab Six</a></li>
+            <li><a href="#">Tab Seven</a></li>
+          </ul>
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li class="active"><a href="#">Secondary Tab One</a></li>
+            <li><a href="#">Secondary Tab Two</a></li>
+            <li><a href="#">Secondary Tab Three</a></li>
+            <li><a href="#">Secondary Tab Four</a></li>
+            <li><a href="#">Secondary Tab Five</a></li>
+          </ul>
+<table class="datatable table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Rendering engine</th>
+      <th>Browser</th>
+      <th>Platform(s)</th>
+      <th>Engine version</th>
+      <th>CSS grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Trident</td>
+      <td>
+        Internet
+         Explorer 
+        4.0
+        </td>
+      <td>Win 95+</td>
+      <td>4</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>Trident</td>
+      <td>Internet
+         Explorer 5.0</td>
+      <td>Win 95+</td>
+      <td>5</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Trident</td>
+      <td>Internet
+         Explorer 5.5</td>
+      <td>Win 95+</td>
+      <td>5.5</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Trident</td>
+      <td>Internet
+         Explorer 6</td>
+      <td>Win 98+</td>
+      <td>6</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Trident</td>
+      <td>Internet Explorer 7</td>
+      <td>Win XP SP2+</td>
+      <td>7</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Trident</td>
+      <td>AOL browser (AOL desktop)</td>
+      <td>Win XP</td>
+      <td>6</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Firefox 1.0</td>
+      <td>Win 98+ / OSX.2+</td>
+      <td>1.7</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Firefox 1.5</td>
+      <td>Win 98+ / OSX.2+</td>
+      <td>1.8</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Firefox 2.0</td>
+      <td>Win 98+ / OSX.2+</td>
+      <td>1.8</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Firefox 3.0</td>
+      <td>Win 2k+ / OSX.3+</td>
+      <td>1.9</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Camino 1.0</td>
+      <td>OSX.2+</td>
+      <td>1.8</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Camino 1.5</td>
+      <td>OSX.3+</td>
+      <td>1.8</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Netscape 7.2</td>
+      <td>Win 95+ / Mac OS 8.6-9.2</td>
+      <td>1.7</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Netscape Browser 8</td>
+      <td>Win 98SE+</td>
+      <td>1.7</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Netscape Navigator 9</td>
+      <td>Win 98+ / OSX.2+</td>
+      <td>1.8</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Mozilla 1.0</td>
+      <td>Win 95+ / OSX.1+</td>
+      <td>1</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Mozilla 1.1</td>
+      <td>Win 95+ / OSX.1+</td>
+      <td>1.1</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Mozilla 1.2</td>
+      <td>Win 95+ / OSX.1+</td>
+      <td>1.2</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Mozilla 1.3</td>
+      <td>Win 95+ / OSX.1+</td>
+      <td>1.3</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Mozilla 1.4</td>
+      <td>Win 95+ / OSX.1+</td>
+      <td>1.4</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Mozilla 1.5</td>
+      <td>Win 95+ / OSX.1+</td>
+      <td>1.5</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Mozilla 1.6</td>
+      <td>Win 95+ / OSX.1+</td>
+      <td>1.6</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Mozilla 1.7</td>
+      <td>Win 98+ / OSX.1+</td>
+      <td>1.7</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Mozilla 1.8</td>
+      <td>Win 98+ / OSX.1+</td>
+      <td>1.8</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Seamonkey 1.1</td>
+      <td>Win 98+ / OSX.2+</td>
+      <td>1.8</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Gecko</td>
+      <td>Epiphany 2.20</td>
+      <td>Gnome</td>
+      <td>1.8</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Webkit</td>
+      <td>Safari 1.2</td>
+      <td>OSX.3</td>
+      <td>125.5</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Webkit</td>
+      <td>Safari 1.3</td>
+      <td>OSX.3</td>
+      <td>312.8</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Webkit</td>
+      <td>Safari 2.0</td>
+      <td>OSX.4+</td>
+      <td>419.3</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Webkit</td>
+      <td>Safari 3.0</td>
+      <td>OSX.4+</td>
+      <td>522.1</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Webkit</td>
+      <td>OmniWeb 5.5</td>
+      <td>OSX.4+</td>
+      <td>420</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Webkit</td>
+      <td>iPod Touch / iPhone</td>
+      <td>iPod</td>
+      <td>420.1</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Webkit</td>
+      <td>S60</td>
+      <td>S60</td>
+      <td>413</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Opera 7.0</td>
+      <td>Win 95+ / OSX.1+</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Opera 7.5</td>
+      <td>Win 95+ / OSX.2+</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Opera 8.0</td>
+      <td>Win 95+ / OSX.2+</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Opera 8.5</td>
+      <td>Win 95+ / OSX.2+</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Opera 9.0</td>
+      <td>Win 95+ / OSX.3+</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Opera 9.2</td>
+      <td>Win 88+ / OSX.3+</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Opera 9.5</td>
+      <td>Win 88+ / OSX.3+</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Opera for Wii</td>
+      <td>Wii</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Nokia N800</td>
+      <td>N800</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Presto</td>
+      <td>Nintendo DS browser</td>
+      <td>Nintendo DS</td>
+      <td>8.5</td>
+      <td>C/A<sup>1</sup></td>
+    </tr>
+    <tr>
+      <td>KHTML</td>
+      <td>Konqureror 3.1</td>
+      <td>KDE 3.1</td>
+      <td>3.1</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>KHTML</td>
+      <td>Konqureror 3.3</td>
+      <td>KDE 3.3</td>
+      <td>3.3</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>KHTML</td>
+      <td>Konqureror 3.5</td>
+      <td>KDE 3.5</td>
+      <td>3.5</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Tasman</td>
+      <td>Internet Explorer 4.5</td>
+      <td>Mac OS 8-9</td>
+      <td>-</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>Tasman</td>
+      <td>Internet Explorer 5.1</td>
+      <td>Mac OS 7.6-9</td>
+      <td>1</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Tasman</td>
+      <td>Internet Explorer 5.2</td>
+      <td>Mac OS 8-X</td>
+      <td>1</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Misc</td>
+      <td>NetFront 3.1</td>
+      <td>Embedded devices</td>
+      <td>-</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Misc</td>
+      <td>NetFront 3.4</td>
+      <td>Embedded devices</td>
+      <td>-</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Misc</td>
+      <td>Dillo 0.8</td>
+      <td>Embedded devices</td>
+      <td>-</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>Misc</td>
+      <td>Links</td>
+      <td>Text only</td>
+      <td>-</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>Misc</td>
+      <td>Lynx</td>
+      <td>Text only</td>
+      <td>-</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>Misc</td>
+      <td>IE Mobile</td>
+      <td>Windows Mobile 6</td>
+      <td>-</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Misc</td>
+      <td>PSP browser</td>
+      <td>PSP</td>
+      <td>-</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Other browsers</td>
+      <td>All others</td>
+      <td>-</td>
+      <td>-</td>
+      <td>U</td>
+    </tr>
+  </tbody>
+</table>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget eros tincidunt, semper ante nec, dapibus ante.</p>
+        </div><!-- /col -->
+        <div class="col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-10 sidebar-pf sidebar-pf-left">
+          <div class="nav-category">
+            <h2>First Category</h2>
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#"><i class="fa fa-desktop"></i>System Information</a></li>
+              <li><a href="#"><i class="fa fa-cog"></i>System Services</a></li>
+              <li><a href="#"><i class="fa fa-file-text-o"></i>Journal</a></li>
+              <li><a href="#"><i class="fa fa-cloud"></i>Storage</a></li>
+            </ul>
+          </div>
+          <div class="nav-category">
+            <h2>Second Category</h2>
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="#">User Accounts</a></li>
+              <li><a href="#">Containers</a></li>
+              <li><a href="#">Shutdown and Reboot</a></li>
+            </ul>
+          </div>
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+    <script>
+      // Initialize Datatables
+      $(document).ready( function() {
+        $('.datatable').dataTable({
+          "fnDrawCallback": function( oSettings ) {
+            // if .sidebar-pf exists, call sidebar() after the data table is drawn
+            if ($('.sidebar-pf').length > 0) {
+              $(document).sidebar();
+            }
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>
