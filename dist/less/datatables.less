@@ -1,7 +1,8 @@
 //
-// Datatables
+// DataTables
 // --------------------------------------------------
 
+// Deprecated
 .ColVis_Button {
   &:active {
     &:focus {
@@ -10,11 +11,13 @@
   }
 }
 
+// Deprecated
 .ColVis_catcher {
   position: absolute;
   z-index: 999;
 }
 
+// Deprecated
 .ColVis_collection {
   background-color: @dropdown-bg;
   border: 1px solid @dropdown-border;
@@ -34,6 +37,7 @@
   }
 }
 
+// Deprecated
 .ColVis_collectionBackground {
   background-color: @color-pf-white;
   height: 100%;
@@ -44,6 +48,7 @@
   z-index: 998;
 }
 
+// Note: We won't be using this class with the Patternfly toolbar
 .dataTables_header {
   background-color: @color-pf-black-150;
   border: 1px solid @table-border-color;
@@ -54,6 +59,7 @@
   .btn {
     .box-shadow(none);
   }
+  // Deprecated
   .ColVis {
     position: absolute;
     right: 5px;
@@ -84,6 +90,7 @@
   }
 }
 
+// Note: We won't be using this class with the table view
 .dataTables_footer {
   background-color: @color-pf-white;
   border: 1px solid @table-border-color;
@@ -91,6 +98,7 @@
   overflow: hidden;
 }
 
+// Not in use with latest example: May be used with pagination?
 .dataTables_paginate {
   background: @color-pf-black-100;
   float: right;
@@ -149,6 +157,11 @@
   }
 }
 
+.dataTables_empty {
+  background: @table-bg-accent;
+}
+
+/* Might need this for pagination?
 .dataTables_wrapper {
   margin: @line-height-computed 0;
   @media (max-width: @screen-xs-max) {
@@ -157,62 +170,17 @@
     }
   }
 }
+*/
 
+// Not in use with latest example: May be used with column reordering?
 .DTCR_clonedTable {
   background-color: fade(@color-pf-white, 70%);
   z-index: 202;
 }
 
+// Not in use with latest example: May be used with column reordering?
 .DTCR_pointer {
   background-color: @link-color;
   width: 1px;
   z-index: 201;
-}
-
-table.datatable {
-  margin-bottom: 0;
-  max-width: none !important;
-  thead {
-    .sorting,
-    .sorting_asc,
-    .sorting_desc,
-    .sorting_asc_disabled,
-    .sorting_desc_disabled {
-      cursor: pointer;
-    }
-    .sorting_asc,
-    .sorting_desc {
-      color: @link-color !important;
-      position: relative;
-      &:after {
-        content: @fa-var-angle-down;
-        font-family: @icon-font-name-fa;
-        font-size: (@font-size-base - 2);
-        font-weight: normal;
-        height: (@font-size-base - 3);
-        left: 7px;
-        line-height: @font-size-base;
-        position: relative;
-        top: 2px;
-        vertical-align: baseline;
-        width: @font-size-base;
-      }
-      &:before {
-        background: @link-color;
-        content: "";
-        height: 2px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-      }
-    }
-    .sorting_asc:after {
-      content: @fa-var-angle-up;
-      top: -3px;
-    }
-  }
-  th:active {
-    outline: none;
-  }
 }
