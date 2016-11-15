@@ -5945,11 +5945,11 @@ a.disabled {
 }
 .collapsed-secondary-nav-pf .secondary-nav-item-pf.active > a,
 .collapsed-secondary-nav-pf .secondary-nav-item-pf:hover > a {
-  z-index: 1030;
+  z-index: 0;
 }
 .collapsed-tertiary-nav-pf .secondary-nav-item-pf.active > a,
 .collapsed-tertiary-nav-pf .secondary-nav-item-pf:hover > a {
-  z-index: 1030;
+  z-index: 0;
 }
 .nav-pf-vertical-with-badges .secondary-nav-item-pf.active > a,
 .nav-pf-vertical-with-badges .secondary-nav-item-pf:hover > a {
@@ -5996,7 +5996,7 @@ a.disabled {
 .nav-pf-vertical.collapsed-tertiary-nav-pf .tertiary-nav-item-pf.active > a,
 .nav-pf-vertical.collapsed-tertiary-nav-pf .secondary-nav-item-pf.hover > a,
 .nav-pf-vertical.collapsed-tertiary-nav-pf .tertiary-nav-item-pf.hover > a {
-  z-index: 1030;
+  z-index: 0;
 }
 @media (min-width: 1200px) {
   .nav-pf-vertical.nav-pf-persistent-secondary.secondary-visible-pf {
