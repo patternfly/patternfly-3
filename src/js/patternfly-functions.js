@@ -613,13 +613,7 @@
 
       forceResize = function (delay) {
         setTimeout(function () {
-          if (window.dispatchEvent) {
-            window.dispatchEvent(new Event('resize'));
-          }
-          // Special case for IE
-          if ($(document).fireEvent) {
-            $(document).fireEvent('onresize');
-          }
+          $(window).trigger('resize');
         }, delay);
       },
 

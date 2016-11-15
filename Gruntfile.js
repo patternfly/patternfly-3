@@ -180,7 +180,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['eslint', 'concat":js', 'copy:js', 'uglify']
+        tasks: ['eslint', 'concat:js', 'copy:js', 'uglify']
       },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'dist/tests/*.html', '!tests/pages/*.html']
