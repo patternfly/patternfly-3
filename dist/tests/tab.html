@@ -25,9 +25,15 @@
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/img/apple-touch-icon-precomposed-57.png">
     <link rel="stylesheet" href="../../dist/css/patternfly.min.css" >
     <link rel="stylesheet" href="../../dist/css/patternfly-additions.min.css" >
+      <link href="tests.css" rel="stylesheet" media="screen, print">
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
+    <script src="../../dist/js/patternfly.dataTables.pfEmpty.js"></script>
+    <script src="../../dist/js/patternfly.dataTables.pfFilter.js"></script>
+    <script src="../../dist/js/patternfly.dataTables.pfResize.js"></script>
+    <script src="../../dist/js/patternfly.dataTables.pfSelect.js"></script>
     <script src="../../dist/js/patternfly.min.js"></script>
   </head>
   <div class="toast-notifications-list-pf">
@@ -161,425 +167,375 @@
             <li><a href="#">Secondary Tab Four</a></li>
             <li><a href="#">Secondary Tab Five</a></li>
           </ul>
-<table class="datatable table table-striped table-bordered">
+<!-- Toolbar -->
+<div class="row toolbar-pf table-view-pf-toolbar" id="toolbar1">
+  <div class="col-sm-12">
+    <form class="toolbar-pf-actions">
+      <div class="form-group toolbar-pf-filter">
+        <label class="sr-only" for="filter">Rendering Engine</label>
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" id="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rendering Engine <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#" id="filter1">Rendering Engine</a></li>
+              <li><a href="#" id="filter2">Browser</a></li>
+              <li><a href="#" id="filter3">Platform(s)</a></li>
+              <li><a href="#" id="filter4">Engine Version</a></li>
+              <li><a href="#" id="filter5">CSS Grade</a></li>
+            </ul>
+          </div>
+          <input type="text" class="form-control" placeholder="Filter By Rendering Engine..." autocomplete="off" id="filterInput">
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-default" type="button" id="deleteRows1">Delete Rows</button>
+        <button class="btn btn-default" type="button" id="restoreRows1" disabled>Restore Rows</button>
+        <div class="dropdown btn-group  dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+      </div>
+      <div class="toolbar-pf-action-right">
+        <div class="form-group toolbar-pf-find">
+          <button class="btn btn-link btn-find" type="button">
+            <span class="fa fa-search"></span>
+          </button>
+          <div class="find-pf-dropdown-container">
+            <input type="text" class="form-control" id="find" placeholder="Find By Keyword...">
+            <div class="find-pf-buttons">
+              <span class="find-pf-nums">1 of 3</span>
+              <button class="btn btn-link" type="button">
+                <span class="fa fa-angle-up"></span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <span class="fa fa-angle-down"></span>
+              </button>
+              <button class="btn btn-link btn-find-close" type="button">
+                <span class="pficon pficon-close"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="row toolbar-pf-results">
+      <div class="col-sm-9">
+        <div class="hidden">
+          <h5>0 Results</h5>
+          <p>Active filters:</p>
+          <ul class="list-inline"></ul>
+          <p><a href="#">Clear All Filters</a></p>
+        </div>
+      </div>
+      <div class="col-sm-3 table-view-pf-select-results">
+        <strong>0</strong> of <strong>0</strong> selected
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Table HTML -->
+<table class="table table-striped table-bordered table-hover" id="table1">
   <thead>
     <tr>
-      <th>Rendering engine</th>
+      <th><label class="sr-only" for="selectAll">Select all rows</label><input type="checkbox" id="selectAll" name="selectAll"></th>
+      <th>Rendering Engine</th>
       <th>Browser</th>
       <th>Platform(s)</th>
-      <th>Engine version</th>
-      <th>CSS grade</th>
+      <th>Engine Version</th>
+      <th>CSS Grade</th>
+      <th colspan="2">Actions</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td>Trident</td>
-      <td>
-        Internet
-         Explorer 
-        4.0
-        </td>
-      <td>Win 95+</td>
-      <td>4</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Trident</td>
-      <td>Internet
-         Explorer 5.0</td>
-      <td>Win 95+</td>
-      <td>5</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td>Trident</td>
-      <td>Internet
-         Explorer 5.5</td>
-      <td>Win 95+</td>
-      <td>5.5</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Trident</td>
-      <td>Internet
-         Explorer 6</td>
-      <td>Win 98+</td>
-      <td>6</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Trident</td>
-      <td>Internet Explorer 7</td>
-      <td>Win XP SP2+</td>
-      <td>7</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Trident</td>
-      <td>AOL browser (AOL desktop)</td>
-      <td>Win XP</td>
-      <td>6</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Firefox 1.0</td>
-      <td>Win 98+ / OSX.2+</td>
-      <td>1.7</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Firefox 1.5</td>
-      <td>Win 98+ / OSX.2+</td>
-      <td>1.8</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Firefox 2.0</td>
-      <td>Win 98+ / OSX.2+</td>
-      <td>1.8</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Firefox 3.0</td>
-      <td>Win 2k+ / OSX.3+</td>
-      <td>1.9</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Camino 1.0</td>
-      <td>OSX.2+</td>
-      <td>1.8</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Camino 1.5</td>
-      <td>OSX.3+</td>
-      <td>1.8</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Netscape 7.2</td>
-      <td>Win 95+ / Mac OS 8.6-9.2</td>
-      <td>1.7</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Netscape Browser 8</td>
-      <td>Win 98SE+</td>
-      <td>1.7</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Netscape Navigator 9</td>
-      <td>Win 98+ / OSX.2+</td>
-      <td>1.8</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Mozilla 1.0</td>
-      <td>Win 95+ / OSX.1+</td>
-      <td>1</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Mozilla 1.1</td>
-      <td>Win 95+ / OSX.1+</td>
-      <td>1.1</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Mozilla 1.2</td>
-      <td>Win 95+ / OSX.1+</td>
-      <td>1.2</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Mozilla 1.3</td>
-      <td>Win 95+ / OSX.1+</td>
-      <td>1.3</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Mozilla 1.4</td>
-      <td>Win 95+ / OSX.1+</td>
-      <td>1.4</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Mozilla 1.5</td>
-      <td>Win 95+ / OSX.1+</td>
-      <td>1.5</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Mozilla 1.6</td>
-      <td>Win 95+ / OSX.1+</td>
-      <td>1.6</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Mozilla 1.7</td>
-      <td>Win 98+ / OSX.1+</td>
-      <td>1.7</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Mozilla 1.8</td>
-      <td>Win 98+ / OSX.1+</td>
-      <td>1.8</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Seamonkey 1.1</td>
-      <td>Win 98+ / OSX.2+</td>
-      <td>1.8</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Gecko</td>
-      <td>Epiphany 2.20</td>
-      <td>Gnome</td>
-      <td>1.8</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Webkit</td>
-      <td>Safari 1.2</td>
-      <td>OSX.3</td>
-      <td>125.5</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Webkit</td>
-      <td>Safari 1.3</td>
-      <td>OSX.3</td>
-      <td>312.8</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Webkit</td>
-      <td>Safari 2.0</td>
-      <td>OSX.4+</td>
-      <td>419.3</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Webkit</td>
-      <td>Safari 3.0</td>
-      <td>OSX.4+</td>
-      <td>522.1</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Webkit</td>
-      <td>OmniWeb 5.5</td>
-      <td>OSX.4+</td>
-      <td>420</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Webkit</td>
-      <td>iPod Touch / iPhone</td>
-      <td>iPod</td>
-      <td>420.1</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Webkit</td>
-      <td>S60</td>
-      <td>S60</td>
-      <td>413</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Opera 7.0</td>
-      <td>Win 95+ / OSX.1+</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Opera 7.5</td>
-      <td>Win 95+ / OSX.2+</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Opera 8.0</td>
-      <td>Win 95+ / OSX.2+</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Opera 8.5</td>
-      <td>Win 95+ / OSX.2+</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Opera 9.0</td>
-      <td>Win 95+ / OSX.3+</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Opera 9.2</td>
-      <td>Win 88+ / OSX.3+</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Opera 9.5</td>
-      <td>Win 88+ / OSX.3+</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Opera for Wii</td>
-      <td>Wii</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Nokia N800</td>
-      <td>N800</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Presto</td>
-      <td>Nintendo DS browser</td>
-      <td>Nintendo DS</td>
-      <td>8.5</td>
-      <td>C/A<sup>1</sup></td>
-    </tr>
-    <tr>
-      <td>KHTML</td>
-      <td>Konqureror 3.1</td>
-      <td>KDE 3.1</td>
-      <td>3.1</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td>KHTML</td>
-      <td>Konqureror 3.3</td>
-      <td>KDE 3.3</td>
-      <td>3.3</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>KHTML</td>
-      <td>Konqureror 3.5</td>
-      <td>KDE 3.5</td>
-      <td>3.5</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Tasman</td>
-      <td>Internet Explorer 4.5</td>
-      <td>Mac OS 8-9</td>
-      <td>-</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Tasman</td>
-      <td>Internet Explorer 5.1</td>
-      <td>Mac OS 7.6-9</td>
-      <td>1</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td>Tasman</td>
-      <td>Internet Explorer 5.2</td>
-      <td>Mac OS 8-X</td>
-      <td>1</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td>Misc</td>
-      <td>NetFront 3.1</td>
-      <td>Embedded devices</td>
-      <td>-</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td>Misc</td>
-      <td>NetFront 3.4</td>
-      <td>Embedded devices</td>
-      <td>-</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Misc</td>
-      <td>Dillo 0.8</td>
-      <td>Embedded devices</td>
-      <td>-</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Misc</td>
-      <td>Links</td>
-      <td>Text only</td>
-      <td>-</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Misc</td>
-      <td>Lynx</td>
-      <td>Text only</td>
-      <td>-</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Misc</td>
-      <td>IE Mobile</td>
-      <td>Windows Mobile 6</td>
-      <td>-</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td>Misc</td>
-      <td>PSP browser</td>
-      <td>PSP</td>
-      <td>-</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td>Other browsers</td>
-      <td>All others</td>
-      <td>-</td>
-      <td>-</td>
-      <td>U</td>
-    </tr>
-  </tbody>
 </table>
+
+<!-- Blank Slate HTML -->
+<div class="blank-slate-pf table-view-pf-empty hidden" id="emptyState1">
+  <div class="blank-slate-pf-icon">
+    <span class="pficon pficon pficon-add-circle-o"></span>
+  </div>
+  <h1>
+    Empty State Title
+  </h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <p>
+    Learn more about this <a href="#">on the documentation</a>.
+  </p>
+  <div class="blank-slate-pf-main-action">
+    <button class="btn btn-primary btn-lg"> Main Action </button>
+  </div>
+  <div class="blank-slate-pf-secondary-action">
+    <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+
+// JSON data for Table View
+var dataSet = [{
+  engine: "Trident",
+  browser: "Internet Explorer 4.0",
+  platforms: "Win 95+",
+  version: "4",
+  grade: "X"
+},{
+  engine: "Trident",
+  browser: "Internet Explorer 5.0",
+  platforms: "Win 95+",
+  version: "5",
+  grade: "C"
+}, {
+  engine: "Trident",
+  browser: "Internet Explorer 5.5",
+  platforms: "Win 95+",
+  version: "5.5",
+  grade: "A"
+}, {
+  engine: "Trident",
+  browser: "Internet Explorer 6",
+  platforms: "Win 98+",
+  version: "6",
+  grade: "A"
+}, {
+  engine: "Trident",
+  browser: "Internet Explorer 7",
+  platforms: "Win XP SP2+",
+  version: "7",
+  grade: "A"
+}, {
+  engine: "Trident",
+  browser: "AOL browser (AOL desktop)",
+  platforms: "Win XP",
+  version: "6",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Firefox 1.0",
+  platforms: "Win 98+ / OSX.2+",
+  version: "1.7",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Firefox 1.5",
+  platforms: "Win 98+ / OSX.2+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Firefox 2.0",
+  platforms: "Win 98+ / OSX.2+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Firefox 3.0",
+  platforms: "Win 2k+ / OSX.3+",
+  version: "1.9",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Camino 1.0",
+  platforms: "OSX.2+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Camino 1.5",
+  platforms: "OSX.3+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Netscape 7.2",
+  platforms: "Win 95+ / Mac OS 8.6-9.2",
+  version: "1.7",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Netscape Browser 8",
+  platforms: "Win 98SE+",
+  version: "1.7",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Netscape Navigator 9",
+  platforms: "Win 98+ / OSX.2+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.0",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.1",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1.1",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.2",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1.2",
+  grade: "A"
+}];
+
+// DataTable Config
+$("#table1").DataTable({
+  columns: [
+    { data: null,
+      className: "table-view-pf-select",
+      render: function (data, type, full, meta) {
+        // Select row checkbox renderer
+        var id = "select" + meta.row;
+        return '<label class="sr-only" for="' + id + '">Select row ' + meta.row +
+          '</label><input type="checkbox" id="' + id + '" name="' + id + '">';
+      },
+      sortable: false
+    },
+    { data: "engine" },
+    { data: "browser" },
+    { data: "platforms" },
+    { data: "version" },
+    { data: "grade"},
+    { data: null,
+      className: "table-view-pf-actions",
+      render: function (data, type, full, meta) {
+        // Inline action button renderer
+        return '<div class="table-view-pf-btn"><button class="btn btn-default" type="button">Actions</button></div>';
+      }
+    }, {
+      data: null,
+      className: "table-view-pf-actions",
+      render: function (data, type, full, meta) {
+        // Inline action kebab renderer
+        return '<div class="dropdown dropdown-kebab-pf">' +
+          '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
+          '<span class="fa fa-ellipsis-v"></span></button>' +
+          '<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">' +
+          '<li><a href="#">Action</a></li>' +
+          '<li><a href="#">Another action</a></li>' +
+          '<li><a href="#">Something else here</a></li>' +
+          '<li role="separator" class="divider"></li>' +
+          '<li><a href="#">Separated link</a></li></ul></div>';
+      }
+    }
+  ],
+  data: dataSet,
+  dom: "t",
+  language: {
+    zeroRecords: "No records found"
+  },
+  order: [[ 1, 'asc' ]],
+  pfConfig: {
+    emptyStateSelector: "#emptyState1",
+    filterCols: [
+      null,
+      {
+        default: true,
+        optionSelector: "#filter1",
+        placeholder: "Filter By Rendering Engine..."
+      }, {
+        optionSelector: "#filter2",
+        placeholder: "Filter By Browser..."
+      }, {
+        optionSelector: "#filter3",
+        placeholder: "Filter By Platform(s)..."
+      }, {
+        optionSelector: "#filter4",
+        placeholder: "Filter By Engine Version..."
+      }, {
+        optionSelector: "#filter5",
+        placeholder: "Filter By CSS Grade..."
+      }
+    ],
+    toolbarSelector: "#toolbar1",
+    selectAllSelector: 'th:first-child input[type="checkbox"]'
+  },
+  select: {
+    selector: 'td:first-child input[type="checkbox"]',
+    style: 'multi'
+  },
+});
+
+/**
+ * Utility to show empty Table View
+ *
+ * @param {object} config - Config properties associated with a Table View
+ * @param {object} config.data - Data set for DataTable
+ * @param {string} config.deleteRowsSelector - Selector for delete rows control
+ * @param {string} config.restoreRowsSelector - Selector for restore rows control
+ * @param {string} config.tableSelector - Selector for the HTML table
+ */
+var emptyTableViewUtil = function (config) {
+  var self = this;
+
+  this.dt = $(config.tableSelector).DataTable(); // DataTable
+  this.deleteRows = $(config.deleteRowsSelector); // Delete rows control
+  this.restoreRows = $(config.restoreRowsSelector); // Restore rows control
+
+  // Handle click on delete rows control
+  this.deleteRows.on('click', function() {
+    self.dt.clear().draw();
+    $(self.restoreRows).prop("disabled", false);
+  });
+
+  // Handle click on restore rows control
+  this.restoreRows.on('click', function() {
+    self.dt.rows.add(config.data).draw();
+    $(this).prop("disabled", true);
+  });
+
+  // Initialize restore rows
+  if (this.dt.data().length === 0) {
+    $(this.restoreRows).prop("disabled", false);
+  }
+};
+
+// Initialize empty Table View util
+new emptyTableViewUtil({
+  data: dataSet,
+  deleteRowsSelector: "#deleteRows1",
+  restoreRowsSelector: "#restoreRows1",
+  tableSelector: "#table1"
+});
+
+/**
+ * Utility to find items in Table View
+ */
+var findTableViewUtil = function (config) {
+  // Upon clicking the find button, show the find dropdown content
+  $(".btn-find").click(function () {
+    $(this).parent().find(".find-pf-dropdown-container").toggle();
+  });
+
+  // Upon clicking the find close button, hide the find dropdown content
+  $(".btn-find-close").click(function () {
+    $(".find-pf-dropdown-container").hide();
+  });
+};
+
+// Initialize find util
+new findTableViewUtil();
+
+});
+</script>
+
+
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget eros tincidunt, semper ante nec, dapibus ante.</p>
         </div><!-- /col -->
         <div class="col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-10 sidebar-pf sidebar-pf-left">
@@ -604,14 +560,11 @@
       </div><!-- /row -->
     </div><!-- /container -->
     <script>
-      // Initialize Datatables
-      $(document).ready( function() {
-        $('.datatable').dataTable({
-          "fnDrawCallback": function( oSettings ) {
-            // if .sidebar-pf exists, call sidebar() after the data table is drawn
-            if ($('.sidebar-pf').length > 0) {
-              $(document).sidebar();
-            }
+      $(document).ready(function () {
+        $("#table1").DataTable().on("draw.dt", function () {
+          // if .sidebar-pf exists, call sidebar() after the data table is drawn
+          if ($('.sidebar-pf').length > 0) {
+            $(document).sidebar();
           }
         });
       });

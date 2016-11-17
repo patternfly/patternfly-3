@@ -2897,14 +2897,19 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .dataTables_paginate .pagination-input .paginate_of b {
   margin-left: 3px;
 }
-.dataTables_wrapper {
-  margin: 20px 0;
+.dataTables_empty {
+  background: #f5f5f5;
 }
-@media (max-width: 767px) {
-  .dataTables_wrapper .table-responsive {
-    margin-bottom: 0;
+/* Might need this for pagination?
+.dataTables_wrapper {
+  margin: @line-height-computed 0;
+  @media (max-width: @screen-xs-max) {
+    .table-responsive {
+      margin-bottom: 0;
+    }
   }
 }
+*/
 .DTCR_clonedTable {
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 202;
@@ -2913,53 +2918,6 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   background-color: #0088ce;
   width: 1px;
   z-index: 201;
-}
-table.datatable {
-  margin-bottom: 0;
-  max-width: none !important;
-}
-table.datatable thead .sorting,
-table.datatable thead .sorting_asc,
-table.datatable thead .sorting_desc,
-table.datatable thead .sorting_asc_disabled,
-table.datatable thead .sorting_desc_disabled {
-  cursor: pointer;
-}
-table.datatable thead .sorting_asc,
-table.datatable thead .sorting_desc {
-  color: #0088ce !important;
-  position: relative;
-}
-table.datatable thead .sorting_asc:after,
-table.datatable thead .sorting_desc:after {
-  content: "\f107";
-  font-family: "FontAwesome";
-  font-size: 10px;
-  font-weight: normal;
-  height: 9px;
-  left: 7px;
-  line-height: 12px;
-  position: relative;
-  top: 2px;
-  vertical-align: baseline;
-  width: 12px;
-}
-table.datatable thead .sorting_asc:before,
-table.datatable thead .sorting_desc:before {
-  background: #0088ce;
-  content: "";
-  height: 2px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
-table.datatable thead .sorting_asc:after {
-  content: "\f106";
-  top: -3px;
-}
-table.datatable th:active {
-  outline: none;
 }
 .footer-pf-alt,
 .footer-pf {
@@ -5271,6 +5229,139 @@ a.disabled {
 }
 .prettyprint ol.linenums {
   margin-bottom: 0;
+}
+table.dataTable {
+  height: 100%;
+  margin-bottom: 0;
+  max-width: none !important;
+}
+table.dataTable tbody > tr > td.table-view-pf-actions {
+  padding: 0;
+  vertical-align: middle;
+}
+table.dataTable tbody > tr:hover > td.table-view-pf-actions {
+  background-color: #f5f5f5;
+  border-bottom-color: #d1d1d1;
+}
+table.dataTable tbody > tr.selected {
+  color: #fff;
+  background-color: #0088ce;
+}
+table.dataTable tbody > tr.selected > td {
+  border-bottom-color: #00659c;
+}
+table.dataTable tbody > tr.selected > td.table-view-pf-actions {
+  background-color: #f5f5f5;
+  border-bottom-color: #d1d1d1;
+}
+table.dataTable tbody > tr.selected:hover > td {
+  background-color: inherit;
+  border-bottom-color: #00659c;
+}
+table.dataTable tbody > tr.selected:hover > td.table-view-pf-actions {
+  background-color: #f5f5f5;
+  border-bottom-color: #d1d1d1;
+}
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+  cursor: pointer;
+}
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+  color: #0088ce !important;
+  position: relative;
+}
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  font-size: 10px;
+  font-weight: normal;
+  height: 9px;
+  left: 7px;
+  line-height: 12px;
+  position: relative;
+  top: 2px;
+  vertical-align: baseline;
+  width: 12px;
+}
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:before {
+  background: #0088ce;
+  content: "";
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+table.dataTable thead .sorting_asc:after {
+  content: "\f106";
+  top: -3px;
+}
+table.dataTable th:active {
+  outline: none;
+}
+.table-view-pf-empty.blank-slate-pf {
+  background-color: #f5f5f5;
+  border: 1px solid #d1d1d1;
+  border-radius: 0;
+  margin-top: -1px;
+}
+.table-view-pf-toolbar.toolbar-pf {
+  background-color: #f5f5f5;
+  border-bottom: none;
+  border-left: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+  border-top: 1px solid #d1d1d1;
+  box-shadow: none;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.table-view-pf-toolbar.toolbar-pf .toolbar-pf-results {
+  border-top: 1px solid #d1d1d1;
+  min-height: 40px;
+  line-height: 40px;
+}
+.table-view-pf-toolbar-external.toolbar-pf {
+  border-bottom: none;
+  border-top: none;
+  box-shadow: none;
+}
+.table-view-pf-toolbar-external.toolbar-pf .toolbar-pf-results {
+  border-top: 1px solid #d1d1d1;
+  min-height: 40px;
+  line-height: 40px;
+}
+.table-view-pf-actions {
+  background-color: #f1f1f1;
+  height: 100%;
+}
+.table-view-pf-actions .btn,
+.table-view-pf-actions .dropdown-toggle {
+  border: none;
+  box-shadow: none;
+  height: 100%;
+  width: 100%;
+}
+.table-view-pf-actions .dropdown,
+.table-view-pf-actions .table-view-pf-btn {
+  height: 100%;
+}
+.table-view-pf-actions .dropdown-menu.dropdown-menu-right {
+  right: -5px;
+}
+.table-view-pf-actions:last-child {
+  width: 24px;
+}
+.table-view-pf-select {
+  width: 33px;
+}
+.table-view-pf-select-results {
+  text-align: right;
 }
 .bootstrap-datetimepicker-widget a[data-action] {
   border: 0;
