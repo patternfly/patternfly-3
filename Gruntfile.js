@@ -67,7 +67,7 @@ module.exports = function (grunt) {
       js: {
         files: [
           // copy js src file
-          {expand: true, cwd: 'src/js/', src: ['patternfly.js', 'patternfly-settings.js', 'patternfly-functions.js'], dest: 'dist/js/'}
+          {expand: true, cwd: 'src/js/', src: ['*.js'], dest: 'dist/js/'}
         ]
       }
     },
@@ -148,7 +148,11 @@ module.exports = function (grunt) {
         files: {
           'dist/js/patternfly.min.js':           ['dist/js/patternfly.js'],
           'dist/js/patternfly-settings.min.js':  ['dist/js/patternfly-settings.js'],
-          'dist/js/patternfly-functions.min.js': ['dist/js/patternfly-functions.js']
+          'dist/js/patternfly-functions.min.js': ['dist/js/patternfly-functions.js'],
+          'dist/js/patternfly.dataTables.pfEmpty.min.js':  ['src/js/patternfly.dataTables.pfEmpty.js'],
+          'dist/js/patternfly.dataTables.pfFilter.min.js': ['src/js/patternfly.dataTables.pfFilter.js'],
+          'dist/js/patternfly.dataTables.pfResize.min.js': ['src/js/patternfly.dataTables.pfResize.js'],
+          'dist/js/patternfly.dataTables.pfSelect.min.js': ['src/js/patternfly.dataTables.pfSelect.js']
         }
       }
     },
