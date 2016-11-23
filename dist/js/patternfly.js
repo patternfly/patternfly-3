@@ -492,16 +492,7 @@
     'desktop': 1200
   };
 
-  if (typeof define === 'function' && define.amd) {
-    define("patternfly", function () {
-      return patternfly;
-    });
-  } else if ('undefined' !== typeof exports && 'undefined' !== typeof module) {
-    module.exports = patternfly;
-  } else {
-    window.patternfly = patternfly;
-  }
-
+  window.patternfly = patternfly;
 })(window);
 
 
