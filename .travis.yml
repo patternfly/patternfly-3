@@ -4,15 +4,13 @@ node_js:
 
 before_install:
   - rvm install 2.3.1
-  - 'git checkout -B $TRAVIS_BRANCH' # Reconcile detached HEAD
-  - 'if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi'
-  - 'npm install -g bower grunt-cli'
-  - 'bundle install'
+  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+  - npm install -g bower grunt-cli
+  - npm install patternfly-eng-release
+
+install: true
 
 script:
-  - 'grunt build'
-  - './node_modules/nsp/bin/nsp --shrinkwrap npm-shrinkwrap.json check --output summary'
-  - 'npm test'
+  - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
 
 after_success:
-  - sh -x ./scripts/publish.sh
