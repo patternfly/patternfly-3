@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.15.0",
+  "version": "3.15.3",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "dependencies": {
@@ -36,7 +36,7 @@
     "karma-phantomjs-launcher": "^1.0.1",
     "matchdep": "~1.0.1",
     "nsp": "^2.6.1",
-    "patternfly-eng-release": "~3.15.0",
+    "patternfly-eng-release": "~3.15.3",
     "pixrem": "^3.0.1",
     "table": "3.7.9"
   },
