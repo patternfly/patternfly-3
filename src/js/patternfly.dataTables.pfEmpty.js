@@ -34,7 +34,7 @@
  * </table>
  * <div class="blank-slate-pf table-view-pf-empty hidden" id="emptyState1">
  *   <div class="blank-slate-pf-icon">
- *     <span class="pficon pficon pficon-add-circle-o"></span>
+ *     <span class="pficon pficon-add-circle-o" aria-hidden="true"></span>
  *   </div>
  *   <h1>Empty State Title</h1>
  *   ...

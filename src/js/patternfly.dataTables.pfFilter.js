@@ -220,7 +220,7 @@
 
     // Append active filter control
     ctx._pfFilter.activeFilterControls.append('<li><span class="label label-info">' + filter.name + ': ' +
-      filter.value + '<a href="#"><span class="pficon pficon-close"/></a></span></li>');
+      filter.value + '<a href="#"><span class="pficon pficon-close" aria-hidden="true"/></a></span></li>');
 
     // Handle click to clear active filter
     $("a", ctx._pfFilter.activeFilterControls).last().on("click", function (e) {

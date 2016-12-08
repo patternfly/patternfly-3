@@ -43,7 +43,7 @@ Finally, update "tests-src/icons.html" to include the new icons.
 
     Ex:
       <li>
-         <span class="pficon pficon-blueprint"></span>
+         <span class="pficon pficon-blueprint" aria-hidden="true"></span>
          <span class="icon-class">pficon-blueprint</span>
       </li>
 
