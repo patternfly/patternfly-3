@@ -37,19 +37,19 @@ Are you using [Wiredep](https://github.com/taptapship/wiredep)?  PatternFly's CS
 
 ```
 exclude: [
-  "node_modules/patternfly-bootstrap-combobox/css/bootstrap-combobox.css",
-  "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css",
-  "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css",
-  "node_modules/bootstrap-select/dist/css/bootstrap-select.css",
-  "node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css",
-  "node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.css",
-  "node_modules/c3/c3.css",
-  "node_modules/datatables/media/css/jquery.dataTables.css",
-  "node_modules/datatables.net-colreorder-bs/css/colReorder.bootstrap.css",
-  "node_modules/drmonty-datatables-colvis/css/dataTables.colVis.css",
-  "node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css",
-  "node_modules/font-awesome/css/font-awesome.css",
-  "node_modules/google-code-prettify/bin/prettify.min.css"
+  "node_modules/patternfly/node_modules/patternfly-bootstrap-combobox/css/bootstrap-combobox.css",
+  "node_modules/patternfly/node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css",
+  "node_modules/patternfly/node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css",
+  "node_modules/patternfly/node_modules/bootstrap-select/dist/css/bootstrap-select.css",
+  "node_modules/patternfly/node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css",
+  "node_modules/patternfly/node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.css",
+  "node_modules/patternfly/node_modules/c3/c3.css",
+  "node_modules/patternfly/node_modules/datatables/media/css/jquery.dataTables.css",
+  "node_modules/patternfly/node_modules/datatables.net-colreorder-bs/css/colReorder.bootstrap.css",
+  "node_modules/patternfly/node_modules/drmonty-datatables-colvis/css/dataTables.colVis.css",
+  "node_modules/patternfly/node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css",
+  "node_modules/patternfly/node_modules/font-awesome/css/font-awesome.css",
+  "node_modules/patternfly/node_modules/google-code-prettify/bin/prettify.min.css"
 ],
 ```
 
@@ -79,7 +79,9 @@ The development includes the use of a number of helpful tasks. In order to setup
 
     npm install
 
-This will install all necessary development packages into `node_modules/`. At this point, the gruntjs tasks are available for use such as starting a local development server or building the master CSS file.
+Since Patternfly is shrink wrapped, npm 3 will install all necessary development packages into `node_modules/patternfly/node_modules`. At this point, the gruntjs tasks are available for use such as starting a local development server or building the master CSS file.
+
+If you prefer a flat dependency structure, you can define your own dependencies explicitly. That will flatten out the node_modules structure and place dependencies in the root node_modules directory.
 
 Additionally you may need to install the grunt command line utility.  To do this run:
 
