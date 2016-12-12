@@ -169,7 +169,9 @@
     color: @gray-darker;
     font-size: (@font-size-base + 4);
     line-height: 1;
-    padding: 4px 0;
+    padding: 4px (@grid-gutter-width/4);
+    margin-left: (@grid-gutter-width/(-4));
+    margin-right: (@grid-gutter-width/(-4));
     &:active,
     &:focus,
     &:hover {
