@@ -9260,7 +9260,9 @@ fieldset[disabled] .btn-primary.active {
   color: #252525;
   font-size: 16px;
   line-height: 1;
-  padding: 4px 0;
+  padding: 4px 10px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .dropdown-kebab-pf .btn-link:active,
 .dropdown-kebab-pf .btn-link:focus,

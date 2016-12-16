@@ -2557,7 +2557,6 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border: 2px solid transparent;
 }
 .card-pf-view .card-pf-heading-kebab .dropdown-kebab-pf {
-  margin-left: 10px;
   margin-top: -3px;
 }
 .card-pf-view .card-pf-heading-kebab + .progress-pf-legend p {
@@ -3502,7 +3501,8 @@ a.disabled {
       order: 2;
 }
 .list-view-pf-actions button,
-.list-view-pf-actions > a {
+.list-view-pf-actions > a,
+.list-view-pf-actions .dropdown-kebab-pf {
   margin-left: 10px;
 }
 .list-view-pf-top-align .list-view-pf-actions {
@@ -5566,6 +5566,11 @@ table.dataTable th:active {
 .toolbar-pf .form-group .btn-link:focus,
 .toolbar-pf .form-group .btn-link:hover {
   color: #0088ce;
+}
+.toolbar-pf .form-group .dropdown-kebab-pf .btn-link {
+  padding: 4px 10px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .toolbar-pf-actions {
   display: table;
