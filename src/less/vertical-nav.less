@@ -36,7 +36,6 @@
   border-right: 1px solid @nav-pf-vertical-border-color;
   bottom: 0;
   left: 0;
-  overflow-x: hidden;
   overflow-y: auto;
   position: fixed;
   top: @navbar-pf-height;
@@ -204,6 +203,14 @@
       }
     }
   }
+  .navbar-iconic {
+    @media (min-width: @screen-sm-min) {
+      margin-right: 20px;
+      position: fixed;
+      right: 0;
+      top: 2px;
+    }
+  }
 }
 .nav-pf-vertical-tooltip.tooltip {
   margin-left: 15px;
@@ -308,6 +315,19 @@
     .secondary-nav-item-pf:hover & {
       opacity: 0;
       visibility: hidden;
+    }
+  }
+  .list-group .list-group-item:first-child {
+    border-top-width: 1px;
+  }
+  .navbar-nav {
+    margin: 0;
+    .nav-item-iconic {
+      padding: 12px 25px 12px 28px;
+    }
+    .open .dropdown-menu {
+      background-color: lighten(@nav-pf-vertical-bg-color, 5%);
+      .dropdown-menu-nav-mobile;
     }
   }
   .tertiary-nav-item-pf:hover {

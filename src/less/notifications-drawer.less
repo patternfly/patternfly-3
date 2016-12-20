@@ -42,8 +42,10 @@
     display: block;
   }
   &.drawer-pf-expanded {
-    left: 270px;
-    width: inherit;
+    width: 100%;
+    @media (min-width: @screen-sm-min) {
+      width: calc(~"100% - 270px");
+    }
     .drawer-pf-toggle-expand:before {
       content: "\f101";
     }
@@ -135,17 +137,25 @@
 }
 
 /* Exclusive styles to work with Vertical Navigation */
-.navbar-pf-vertical {
+.nav-pf-vertical {
   .drawer-pf {
-    height: calc(~"100vh - 80px");//to create a 20px offset bottom
-    top: 58px; //menu height;
+    height: calc(~"100vh - 120px");
+    position: fixed;
+    top: 100px;
+    z-index: 1030;
+    @media (min-width: @screen-sm-min) {
+      top: 60px;
+      height: calc(~"100vh - 80px");
+    }
   }
   .nav .drawer-pf-trigger {
     .drawer-pf-trigger-icon {
       border-left: 1px solid @navbar-pf-navbar-utility-border-color;
       border-right: 1px solid @navbar-pf-navbar-utility-border-color;
-      padding-left: 15px;
-      padding-right: 15px;
+      @media (min-width: @screen-sm-min) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
     &.open .drawer-pf-trigger-icon {
       background-color: @navbar-pf-navbar-utility-hover-bg-color;
@@ -156,8 +166,13 @@
 /* Exclusive styles to work with Horizontal Navigation */
 .navbar-pf {
   .drawer-pf {
-    height: calc(~"100vh - 46px");
-    top: 26px;
+    height: calc(~"100vh - 90px");
+    top: 70px;
+
+    @media (min-width: @screen-sm-min) {
+      height: calc(~"100vh - 46px");
+      top: 26px;
+    }
   }
   .drawer-pf-trigger-icon { cursor: pointer; }
 }

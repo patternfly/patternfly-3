@@ -25,65 +25,6 @@
     &.navbar-nav > li > .dropdown-menu.infotip {
       margin-top: 0;
     }
-
-    .nav-item-iconic {
-      cursor: pointer;
-      line-height: 1;
-      max-height: (@navbar-pf-vertical-height - @navbar-pf-vertical-border-width); // to keep Firefox from oversizing icons
-      padding: @navbar-pf-vertical-nav-item-iconic-padding;
-      position: relative;
-
-      &:hover,
-      &:focus {
-        background-color: transparent;
-
-        .caret,
-        .fa,
-        .glyphicon,
-        .pficon {
-          color: @navbar-pf-vertical-active-color;
-        }
-      }
-
-      .badge {
-        background-color: @notification-badge-color;
-        border-radius: 20px;
-        color: @navbar-pf-vertical-active-color;
-        cursor: pointer;
-        font-size: (@font-size-base - 3);
-        font-weight: 700;
-        margin: 0 0 -11px -12px;
-        min-width: 0;
-        padding: 2px 4px;
-      }
-
-      .caret,
-      .fa,
-      .pficon {
-        color: @navbar-pf-vertical-color;
-        font-size: (@font-size-base + 4);
-      }
-
-      .caret {
-        font-size: @font-size-base;
-        width: auto;
-      }
-
-    }
-
-    .open > .nav-item-iconic {
-      &,
-      &:hover,
-      &:focus {
-        background: transparent;
-
-        .caret,
-        .fa,
-        .pficon {
-          color: @navbar-pf-vertical-active-color;
-        }
-      }
-    }
   }
 
   .navbar-brand {
@@ -108,8 +49,15 @@
     }
   }
 
+  .navbar-header {
+    float: left;
+  }
   .navbar-iconic {
     margin-right: 0;
+  }
+  .navbar-nav {
+    float: left;
+    margin: 0;
   }
 
   .navbar-toggle {
@@ -131,6 +79,60 @@
 
     .icon-bar {
       background: @navbar-pf-vertical-color;
+    }
+  }
+}
+.navbar-pf-vertical,
+.nav-pf-vertical {
+  .nav-item-iconic {
+    cursor: pointer;
+    line-height: 1;
+    max-height: (@navbar-pf-vertical-height - @navbar-pf-vertical-border-width); // to keep Firefox from oversizing icons
+    padding: @navbar-pf-vertical-nav-item-iconic-padding;
+    position: relative;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      .caret,
+      .fa,
+      .glyphicon,
+      .pficon {
+        color: @navbar-pf-vertical-active-color;
+      }
+    }
+    .badge {
+      background-color: @notification-badge-color;
+      border-radius: 20px;
+      color: @navbar-pf-vertical-active-color;
+      cursor: pointer;
+      font-size: (@font-size-base - 3);
+      font-weight: 700;
+      margin: 0 0 -11px -12px;
+      min-width: 0;
+      padding: 2px 4px;
+    }
+    .caret,
+    .fa,
+    .pficon {
+      color: @navbar-pf-vertical-color;
+      font-size: (@font-size-base + 4);
+    }
+    .caret {
+      font-size: @font-size-base;
+      width: auto;
+    }
+  }
+  .open > .nav-item-iconic {
+    &,
+    &:hover,
+    &:focus {
+      background: transparent;
+
+      .caret,
+      .fa,
+      .pficon {
+        color: @navbar-pf-vertical-active-color;
+      }
     }
   }
 }

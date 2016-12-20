@@ -61,27 +61,7 @@
       .open .dropdown-menu {
         background-color: @navbar-pf-navbar-nav-active-active-bg-color !important;
         margin-left: 0;
-        padding-bottom: 0;
-        padding-top: 0;
-        > .active > a,
-        .dropdown-submenu.open > a {
-          &,
-          &:hover,
-          &:focus {
-            background-color: @navbar-pf-navbar-nav-active-active-open-bg-color !important;
-            color: @navbar-pf-active-color;
-          }
-        }
-        > li > a {
-          background-color: transparent;
-          border: 0;
-          color: @navbar-pf-color;
-          outline: none;
-          padding-left: 30px;
-          &:hover {
-            color: @navbar-pf-active-color;
-          }
-        }
+        .dropdown-menu-nav-mobile;
         .divider {
           background-color: @navbar-pf-navbar-header-border-color;
           margin: 0 1px;
