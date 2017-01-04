@@ -62,3 +62,42 @@
     }
   }
 }
+
+.content-view-pf-pagination {
+  background-color: @table-bg-accent;
+  border-top: none;
+  border-left: 1px solid @table-border-color;
+  border-right: 1px solid @table-border-color;
+  border-bottom: 1px solid @table-border-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px;
+  .form-group {
+    align-items: baseline;
+    display: flex;
+    flex-grow: 1;
+    margin: 5px;
+    &:last-child { justify-content: flex-end; } /* if pagination controls wrap, pagination buttons stay on the right */
+  }
+  .form-group .pagination-pf-pagesize.bootstrap-select.btn-group {
+    display: flex;
+    margin-right: 5px;
+    width: auto;
+  }
+  .pagination-pf-page {
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 0 2px 2px;
+    text-align: right;
+    width: 2.5em;
+  }
+  .pagination {
+    display: flex;
+    margin: 0 0 0 10px;
+    a {
+      display: block;
+      float: none;
+    }
+  }
+}
