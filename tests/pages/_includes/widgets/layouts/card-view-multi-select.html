@@ -65,5 +65,20 @@
       else
       { $(this).parent().parent().addClass('active'); }
     });
+    // allow users to select multiple cards with shift key
+    $('.container-cards-pf').on('click', '.card-pf-view-checkbox>input', function(event) {
+      var $cardsContainer = $('.container-cards-pf');
+      var prevIndex = $cardsContainer.data('prevIndex');
+      var $cards = $cardsContainer.find('.card-pf');
+      var $currentCard = $(this).closest('.card-pf');
+      if(event.shiftKey && prevIndex > -1 && this.checked) {
+        var currentIndex = $cards.index($currentCard);
+        var $selectScope = currentIndex - prevIndex > 0
+          ? $currentCard.parent().prevAll().not($cards.eq(prevIndex).parent().prevAll().addBack())
+          : $cards.eq(prevIndex).parent().prevAll().not($currentCard.parent().prevAll().addBack());
+        $selectScope.children().addClass('active').find('.card-pf-view-checkbox').children('input').prop('checked', true);
+      }
+      $cardsContainer.data('prevIndex', this.checked ? $cards.index($currentCard) : -1);
+    });
   });
 </script>
