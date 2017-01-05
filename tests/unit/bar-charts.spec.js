@@ -85,6 +85,44 @@ describe("bar-charts test suite", function () {
     groupedVerticalBarChartConfig.color = groupedColors;
     var groupedVerticalBarChart = c3.generate(groupedVerticalBarChartConfig);
 
+    //stacked vertical bar
+    var stackedColumnsData = [
+      ['Q1', 400, 250, 375],
+      ['Q2', 355, 305, 300],
+      ['Q3', 315, 340, 276],
+      ['Q4', 180, 390, 190]
+    ];
+    var stackedGroups = [['Q1', 'Q2', 'Q3', 'Q4']];
+    var stackedCategories = ['2013', '2014', '2015'];
+    var stackedColors = {
+      pattern: [
+        $.pfPaletteColors.red,
+        $.pfPaletteColors.blue,
+        $.pfPaletteColors.orange,
+        $.pfPaletteColors.green
+      ]
+    };
+
+    var stackedVerticalBarChartConfig = $().c3ChartDefaults().getDefaultStackedBarConfig();
+    stackedVerticalBarChartConfig.bindto = '#stackedVerticalBarChart';
+    stackedVerticalBarChartConfig.axis = {
+      x: {
+        categories: stackedCategories,
+        type: 'category'
+      }
+    };
+    stackedVerticalBarChartConfig.data = {
+      type: 'bar',
+      columns: stackedColumnsData,
+      groups: stackedGroups,
+      // optional drilldown behavior
+      onclick: function (d, element) {
+        window.location = chartUrls[d.index];
+      }
+    };
+    stackedVerticalBarChartConfig.color = stackedColors;
+    var stackedVerticalBarChart = c3.generate(stackedVerticalBarChartConfig);
+
     //horizontal bar
     var horizontalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
     horizontalBarChartConfig.bindto = '#horizontalBarChart';
@@ -125,6 +163,28 @@ describe("bar-charts test suite", function () {
     };
     groupedHorizontalBarChartConfig.color = groupedColors;
     var groupedHorizontalBarChart = c3.generate(groupedHorizontalBarChartConfig);
-  }
 
+    //stacked horizontal bar
+    var stackedHorizontalBarChartConfig = $().c3ChartDefaults().getDefaultStackedBarConfig();
+    stackedHorizontalBarChartConfig.bindto = '#stackedHorizontalBarChart';
+    stackedHorizontalBarChartConfig.axis = {
+      rotated: true,
+      x: {
+        categories: stackedCategories,
+        type: 'category'
+      }
+    };
+    stackedHorizontalBarChartConfig.data = {
+      type: 'bar',
+      columns: stackedColumnsData,
+      groups: stackedGroups,
+      // optional drilldown behavior
+      onclick: function (d, element) {
+        window.location = chartUrls[d.index];
+      }
+    };
+    stackedHorizontalBarChartConfig.color = stackedColors;
+    var stackedHorizontalBarChart = c3.generate(stackedHorizontalBarChartConfig);
+  }
+  
 });
