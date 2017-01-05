@@ -1,4 +1,4 @@
-<form class="content-view-pf-pagination">
+<form class="content-view-pf-pagination clearfix">
   <div class="form-group">
     <select class="selectpicker pagination-pf-pagesize">
       <option value="6">6</option>
@@ -7,25 +7,19 @@
       <option value="25">25</option>
       <option value="50">50</option>
     </select>
-    <span>per page</span>
+    per page
   </div>
   <div class="form-group">
-    <span>1-15 of 75</span>
-    <ul class="pagination">
+    <span class="pagination-pf-items-current">1-15</span> of <span class="pagination-pf-items-total">75</span>
+    <ul class="pagination pagination-pf-back">
       <li class="disabled"><a href="#"><span class="i fa fa-angle-double-left"></span></a></li>
       <li class="disabled"><a href="#"><span class="i fa fa-angle-left"></span></a></li>
     </ul>
     <input class="pagination-pf-page" type="text" value="1" />
-    <span>of 5</span>
-    <ul class="pagination">
+    of <span class="pagination-pf-pages">5</span>
+    <ul class="pagination pagination-pf-forward">
       <li><a href="#"><span class="i fa fa-angle-right"></span></a></li>
       <li><a href="#"><span class="i fa fa-angle-double-right"></span></a></li>
     </ul>
   </div>
 </form>
-
-<script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-<script>
-  // Initialize Boostrap-select
-   $('.selectpicker').selectpicker();
-</script>
