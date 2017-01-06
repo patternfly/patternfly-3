@@ -173,7 +173,7 @@
             iNewStart = oSettings._iDisplayLength * (this.value - 1);
             if (iNewStart >= oSettings.fnRecordsDisplay()) {
               /* Display overrun */
-              oSettings._iDisplayStart = (Math.ceil((oSettings.fnRecordsDisplay() - 1) /
+              oSettings._iDisplayStart = (Math.ceil(oSettings.fnRecordsDisplay() /
                 oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength;
               fnDraw(oSettings);
               return;
