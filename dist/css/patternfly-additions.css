@@ -2750,6 +2750,8 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .close {
   text-shadow: none;
+  z-index: 1;
+  position: relative;
   opacity: 0.6;
   filter: alpha(opacity=60);
 }
