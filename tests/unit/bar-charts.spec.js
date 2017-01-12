@@ -16,6 +16,28 @@ describe("bar-charts test suite", function () {
     }, globals.wait);
   });
 
+  it('should render a stacked vertical bar chart with four bars', function (done) {
+    var verticalBarChart = $('#stackedVerticalBarChart');
+    var verticalBars = verticalBarChart.find('.c3-chart-bars .c3-chart-bar');
+
+    setTimeout(function () {
+      expect(verticalBarChart).toExist();
+      expect(verticalBars).toHaveLength(4);
+      done();
+    }, globals.wait);
+  });
+
+  it('should render a stacked horizontal bar chart with four bars', function (done) {
+    var horizontalBarChart = $('#stackedHorizontalBarChart');
+    var horizontalBars = horizontalBarChart.find('.c3-chart-bars .c3-chart-bar');
+
+    setTimeout(function () {
+      expect(horizontalBarChart).toExist();
+      expect(horizontalBars).toHaveLength(4);
+      done();
+    }, globals.wait);
+  });
+
   function renderBarCharts() {
     var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -118,7 +140,8 @@ describe("bar-charts test suite", function () {
       // optional drilldown behavior
       onclick: function (d, element) {
         window.location = chartUrls[d.index];
-      }
+      },
+      order: null
     };
     stackedVerticalBarChartConfig.color = stackedColors;
     var stackedVerticalBarChart = c3.generate(stackedVerticalBarChartConfig);
@@ -181,10 +204,11 @@ describe("bar-charts test suite", function () {
       // optional drilldown behavior
       onclick: function (d, element) {
         window.location = chartUrls[d.index];
-      }
+      },
+      order: null
     };
     stackedHorizontalBarChartConfig.color = stackedColors;
     var stackedHorizontalBarChart = c3.generate(stackedHorizontalBarChartConfig);
   }
-  
+
 });
