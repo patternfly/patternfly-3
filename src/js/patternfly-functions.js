@@ -638,30 +638,12 @@
         });
       },
 
-      setPrimaryActiveItem = function (item) {
-        // Make the clicked on item active
-        $(document).find('.nav-pf-vertical > .list-group > .list-group-item.active').each(function (index, element) {
-          $(element).removeClass('active');
-        });
-        item.addClass('active');
-      },
+      setActiveItem = function (item) {
+        // remove all .active
+        $('.nav-pf-vertical .list-group-item.active').removeClass('active');
 
-      setSecondaryActiveItem = function (item, $primaryParent) {
-        $(document).find('.nav-pf-secondary-nav > .list-group > .list-group-item.active').each(function (index, element) {
-          $(element).removeClass('active');
-        });
-        item.addClass('active');
-
-        setPrimaryActiveItem($primaryParent);
-      },
-
-      setTertiaryActiveItem = function (item, $secondaryParent, $primaryParent) {
-        $(document).find('.nav-pf-tertiary-nav > .list-group > .list-group-item.active').each(function (index, element) {
-          $(element).removeClass('active');
-        });
-        item.addClass('active');
-
-        setSecondaryActiveItem($secondaryParent, $primaryParent);
+        // add .active to item and its parents
+        item.addClass('active').parents('.list-group-item').addClass('active');
       },
 
       updateSecondaryMenuDisplayAfterSelection = function () {
