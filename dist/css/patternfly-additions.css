@@ -3604,6 +3604,8 @@ a.disabled {
 }
 .list-view-pf-stacked .list-view-pf-description {
   display: block;
+  -ms-flex: none;
+      flex: none;
 }
 @media (min-width: 992px) {
   .list-view-pf-description {
