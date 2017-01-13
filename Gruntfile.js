@@ -1,4 +1,6 @@
 /*global module,require*/
+var pageBuilder = require('./tests/pages/_script/page-builder');
+
 module.exports = function (grunt) {
   'use strict';
 
@@ -193,7 +195,7 @@ module.exports = function (grunt) {
       },
       jekyll: {
         files: 'tests/pages/**/*',
-        tasks: ['jekyll']
+        tasks: ['pages']
       },
       less: {
         files: ['src/less/*.less'],
@@ -233,7 +235,8 @@ module.exports = function (grunt) {
       },
       target: [
         'Gruntfile.js',
-        'src/js/**/*.js'
+        'src/js/**/*.js',
+        'tests/pages/_script/**/*.js'
       ]
     },
     stylelint: {
@@ -260,11 +263,28 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('pages', 'Builds the PatternFly test pages.', function (_target) {
+    var target = _target || process.env.PF_PAGE_BUILDER || 'script';
+    var done;
+    if (target === 'jekyll') { // eg: grunt build:jekyll || PF_PAGE_BUILDER=jekyll build
+      grunt.log.writeln('Builidng test pages with ruby jekyll');
+      grunt.task.run('run:bundleInstall', 'jekyll');
+    } else if (target === 'script') {  // eg: grunt build:script
+      grunt.log.writeln('Builidng test pages with liquid.js');
+      done = this.async();
+      pageBuilder.build()
+      .then(function () {
+        done();
+      });
+    } else {
+      grunt.log.writeln('Invalid taget:', target);
+    }
+  });
+
   grunt.registerTask('build', [
-    'run:bundleInstall',
     'concat',
     'copy',
-    'jekyll',
+    'pages',
     'less',
     'cssmin',
     'postcss',
@@ -275,10 +295,15 @@ module.exports = function (grunt) {
     'stylelint'
   ]);
 
-  grunt.registerTask('server', [
+  grunt.registerTask('serve', [
     'connect:server',
     'watch'
   ]);
+
+  grunt.registerTask('server', function () {
+    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+    grunt.task.run(['serve']);
+  });
 
   grunt.registerTask('default', ['build']);
 };

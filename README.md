@@ -21,7 +21,7 @@ PatternFly can be installed and managed through [NPM](https://www.npmjs.com/). T
 npm install patternfly --save
 ```
 
-Patternfly stays up to date with the Node LTS [Release Schedule](https://github.com/nodejs/LTS#lts_schedule). If you're using Patternfly downstream, we suggest the use of an actively supported version of Node/NPM, although prior versions of Node may work. 
+Patternfly stays up to date with the Node LTS [Release Schedule](https://github.com/nodejs/LTS#lts_schedule). If you're using Patternfly downstream, we suggest the use of an actively supported version of Node/NPM, although prior versions of Node may work.
 
 ### Install with Bower
 
@@ -87,11 +87,13 @@ Additionally you may need to install the grunt command line utility.  To do this
 
     npm install -g grunt-cli
 
-Test pages are generated using [Jekyll](http://jekyllrb.com/). Ensure Ruby is installed and available then run:
+Test pages are optionally generated using [Jekyll](http://jekyllrb.com/). To use jekyll to build the test pages, ensure Ruby is installed and available then run:
 
-    gem install jekyll -v 3.1.6
+    gem install bundle
+    bundle install
 
-Note: You can use any 3.1.x version with at least 3.1.4 (3.1.4 includes necessary fixes to [#4433](https://github.com/jekyll/jekyll/issues/4433) and [#4442](https://github.com/jekyll/jekyll/issues/4442))
+Then set the environment variable PF_PAGE_BUILDER=jekyll.  eg.:
+    PF_PAGE_BUILDER=jekyll grunt build
 
 #### Keeping NPM Dependencies Updated
 
@@ -130,9 +132,9 @@ For detailed instructions, please see our [PatternFly Icon Guide](PFICONS.md)
 
 ## Tests
 
-The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use PatternFly.  The latest PatternFly test directory examples can be seen at [https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/](https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/).  
+The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use PatternFly.  The latest PatternFly test directory examples can be seen at [https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/](https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/).
 
-If you are developing on PatternFly and would like to provide a link to a test directory from your fork, TravisCI can be configured to create a copy of your branch with the dist files generated for you.  No code changes are necessary to enable this, all that is needed is to login to [TravisCI](https://travis-ci.org/) and configure it to point at your PatternFly fork.  The first three steps at their [Getting Started page](https://docs.travis-ci.com/user/for-beginners) provide instructions on how to do this.  You will also need to add an AUTH_TOKEN variable to Travis generated in your GitHub account to allow Travis to connect to your fork.  
+If you are developing on PatternFly and would like to provide a link to a test directory from your fork, TravisCI can be configured to create a copy of your branch with the dist files generated for you.  No code changes are necessary to enable this, all that is needed is to login to [TravisCI](https://travis-ci.org/) and configure it to point at your PatternFly fork.  The first three steps at their [Getting Started page](https://docs.travis-ci.com/user/for-beginners) provide instructions on how to do this.  You will also need to add an AUTH_TOKEN variable to Travis generated in your GitHub account to allow Travis to connect to your fork.
 
 The HTML pages in `dist/tests` are generated using Jekyll.  Do *not* edit these files directly.  See `tests/pages` to change these files.
 
@@ -183,7 +185,7 @@ npm publish
 
 ## Documentation
 
-See [https://www.patternfly.org](https://www.patternfly.org) and [http://getbootstrap.com/](http://getbootstrap.com/).  
+See [https://www.patternfly.org](https://www.patternfly.org) and [http://getbootstrap.com/](http://getbootstrap.com/).
 
 ### Browser and Device Support
 
