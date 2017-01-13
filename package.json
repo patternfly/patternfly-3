@@ -36,7 +36,7 @@
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.1",
-    "liquid-node": "https://github.com/codepodu/liquid-node.git",
+    "liquid-node": "https://github.com/bleathem/liquid-node.git#v2.6.1-pf.1",
     "lodash": "^4.17.4",
     "matchdep": "~1.0.1",
     "mz": "^2.6.0",
