@@ -200,6 +200,26 @@
           legend: this.getDefaultGroupedBarLegend()
         };
       },
+      getDefaultStackedBarGrid = function () {
+        return {
+          y: {
+            show: true
+          }
+        };
+      },
+      getDefaultStackedBarLegend = function () {
+        return {
+          show: true,
+          position: 'bottom'
+        };
+      },
+      getDefaultStackedBarConfig = function () {
+        return {
+          color: this.getDefaultColors(),
+          grid: this.getDefaultStackedBarGrid(),
+          legend: this.getDefaultStackedBarLegend()
+        };
+      },
       getDefaultDonut = function (title) {
         return {
           title: title,
@@ -450,6 +470,9 @@
       getDefaultGroupedBarGrid: getDefaultGroupedBarGrid,
       getDefaultGroupedBarLegend: getDefaultGroupedBarLegend,
       getDefaultGroupedBarConfig: getDefaultGroupedBarConfig,
+      getDefaultStackedBarGrid: getDefaultStackedBarGrid,
+      getDefaultStackedBarLegend: getDefaultStackedBarLegend,
+      getDefaultStackedBarConfig: getDefaultStackedBarConfig,
       getDefaultDonut: getDefaultDonut,
       getDefaultDonutSize: getDefaultDonutSize,
       getDefaultDonutColors: getDefaultDonutColors,
