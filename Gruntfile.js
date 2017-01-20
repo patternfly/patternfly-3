@@ -76,7 +76,24 @@ module.exports = function (grunt) {
           // copy Patternfly font files
           {expand: true, cwd: 'src/fonts/', src: ['*'], dest: 'dist/fonts/'},
           //copy images
-          {expand: true, cwd: 'src/img/', src: ['**'], dest: 'dist/img/'}
+          {expand: true, cwd: 'src/img/', src: ['**'], dest: 'dist/img/'},
+          // Dependencies
+          // copy Bootstrap less files
+          {expand: true, cwd: 'node_modules/bootstrap/less/', src: ['**'], dest: 'dist/less/dependencies/bootstrap/'},
+          // copy Font Awesome less files
+          {expand: true, cwd: 'node_modules/font-awesome/less/', src: ['**'], dest: 'dist/less/dependencies/font-awesome/'},
+          // copy Bootstrap-Combobox less files
+          {expand: true, cwd: 'node_modules/patternfly-bootstrap-combobox/less/', src: ['**'], dest: 'dist/less/dependencies/bootstrap-combobox/'},
+          // copy Bootstrap-Datepicker less files
+          {expand: true, cwd: 'node_modules/bootstrap-datepicker/less/', src: ['**'], dest: 'dist/less/dependencies/bootstrap-datepicker/'},
+          // copy Bootstrap-Select less files
+          {expand: true, cwd: 'node_modules/bootstrap-select/less/', src: ['**'], dest: 'dist/less/dependencies/bootstrap-select/'},
+          // Bootstrap Switch less files must be manually copied because of edits made to source less for strict-math purposes
+          // manually copy 'node_modules/bootstrap-switch/src/less/bootstrap3/' and make sure any math is wrapped with parentheses
+          // copy Bootstrap Touchspin css file
+          {expand: true, cwd: 'node_modules/bootstrap-touchspin/dist/', src: ['jquery.bootstrap-touchspin.css'], dest: 'dist/less/dependencies/bootstrap-touchspin/'},
+          // copy C3 css file
+          {expand: true, cwd: 'node_modules/c3/', src: ['c3.css'], dest: 'dist/less/dependencies/c3/'}
         ]
       },
       js: {

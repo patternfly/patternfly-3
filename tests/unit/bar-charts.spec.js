@@ -16,6 +16,28 @@ describe("bar-charts test suite", function () {
     }, globals.wait);
   });
 
+  it('should render a stacked vertical bar chart with four bars', function (done) {
+    var verticalBarChart = $('#stackedVerticalBarChart');
+    var verticalBars = verticalBarChart.find('.c3-chart-bars .c3-chart-bar');
+
+    setTimeout(function () {
+      expect(verticalBarChart).toExist();
+      expect(verticalBars).toHaveLength(4);
+      done();
+    }, globals.wait);
+  });
+
+  it('should render a stacked horizontal bar chart with four bars', function (done) {
+    var horizontalBarChart = $('#stackedHorizontalBarChart');
+    var horizontalBars = horizontalBarChart.find('.c3-chart-bars .c3-chart-bar');
+
+    setTimeout(function () {
+      expect(horizontalBarChart).toExist();
+      expect(horizontalBars).toHaveLength(4);
+      done();
+    }, globals.wait);
+  });
+
   function renderBarCharts() {
     var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -85,6 +107,45 @@ describe("bar-charts test suite", function () {
     groupedVerticalBarChartConfig.color = groupedColors;
     var groupedVerticalBarChart = c3.generate(groupedVerticalBarChartConfig);
 
+    //stacked vertical bar
+    var stackedColumnsData = [
+      ['Q1', 400, 250, 375],
+      ['Q2', 355, 305, 300],
+      ['Q3', 315, 340, 276],
+      ['Q4', 180, 390, 190]
+    ];
+    var stackedGroups = [['Q1', 'Q2', 'Q3', 'Q4']];
+    var stackedCategories = ['2013', '2014', '2015'];
+    var stackedColors = {
+      pattern: [
+        $.pfPaletteColors.red,
+        $.pfPaletteColors.blue,
+        $.pfPaletteColors.orange,
+        $.pfPaletteColors.green
+      ]
+    };
+
+    var stackedVerticalBarChartConfig = $().c3ChartDefaults().getDefaultStackedBarConfig();
+    stackedVerticalBarChartConfig.bindto = '#stackedVerticalBarChart';
+    stackedVerticalBarChartConfig.axis = {
+      x: {
+        categories: stackedCategories,
+        type: 'category'
+      }
+    };
+    stackedVerticalBarChartConfig.data = {
+      type: 'bar',
+      columns: stackedColumnsData,
+      groups: stackedGroups,
+      // optional drilldown behavior
+      onclick: function (d, element) {
+        window.location = chartUrls[d.index];
+      },
+      order: null
+    };
+    stackedVerticalBarChartConfig.color = stackedColors;
+    var stackedVerticalBarChart = c3.generate(stackedVerticalBarChartConfig);
+
     //horizontal bar
     var horizontalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
     horizontalBarChartConfig.bindto = '#horizontalBarChart';
@@ -125,6 +186,29 @@ describe("bar-charts test suite", function () {
     };
     groupedHorizontalBarChartConfig.color = groupedColors;
     var groupedHorizontalBarChart = c3.generate(groupedHorizontalBarChartConfig);
+
+    //stacked horizontal bar
+    var stackedHorizontalBarChartConfig = $().c3ChartDefaults().getDefaultStackedBarConfig();
+    stackedHorizontalBarChartConfig.bindto = '#stackedHorizontalBarChart';
+    stackedHorizontalBarChartConfig.axis = {
+      rotated: true,
+      x: {
+        categories: stackedCategories,
+        type: 'category'
+      }
+    };
+    stackedHorizontalBarChartConfig.data = {
+      type: 'bar',
+      columns: stackedColumnsData,
+      groups: stackedGroups,
+      // optional drilldown behavior
+      onclick: function (d, element) {
+        window.location = chartUrls[d.index];
+      },
+      order: null
+    };
+    stackedHorizontalBarChartConfig.color = stackedColors;
+    var stackedHorizontalBarChart = c3.generate(stackedHorizontalBarChartConfig);
   }
 
 });
