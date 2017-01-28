@@ -67,7 +67,7 @@
  *     order: [[ 1, "asc" ]],
  *     pfConfig: {
  *       ...
- *       toolbarSelector: "#{{include.toolbarId}}",
+ *       toolbarSelector: "#toolbar1",
  *       selectAllSelector: 'th:first-child input[type="checkbox"]'
  *     }
  *     select: {
