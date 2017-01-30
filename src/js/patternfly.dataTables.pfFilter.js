@@ -71,18 +71,19 @@
  *     dom: "t",
  *     pfConfig: {
  *       ...
+ *       filterCaseInsensitive: true,
  *       filterCols: [
  *         null,
  *         {
  *           default: true,
- *           optionSelector: "#{{include.filterId1}}",
+ *           optionSelector: "#filter1",
  *           placeholder: "Filter By Rendering Engine..."
  *         }, {
- *           optionSelector: "#{{include.filterId2}}",
+ *           optionSelector: "#filter2",
  *           placeholder: "Filter By Browser..."
  *         }
  *       ],
- *       toolbarSelector: "#{{include.toolbarId}}"
+ *       toolbarSelector: "#toolbar1"
  *     }
  *   });
  *   // Optional API to clear filters
@@ -158,6 +159,7 @@
     ctx._pfFilter.activeFilters = ctx._pfFilter.activeFilterControls.closest("div"); // Active filters container
     ctx._pfFilter.clearFilters = $(CLEAR_FILTERS_SELECTOR, opts.toolbarSelector); // Clear filters control
     ctx._pfFilter.results = $(RESULTS_SELECTOR, opts.toolbarSelector); // Toolbar results row
+    ctx._pfFilter.filterCaseInsensitive = opts.filterCaseInsensitive; // Filter filter case insensitive
     ctx._pfFilter.filterResults = $(FILTER_RESULTS_SELECTOR, opts.toolbarSelector); // Toolbar filter results
 
     if (ctx._pfFilter.filterCols === undefined) {
@@ -193,8 +195,14 @@
       // Must match all filters
       if (ctx._pfFilter) {
         $.each(ctx._pfFilter.filters, function (index, filter) {
-          if (data[filter.column].indexOf(filter.value) === -1) {
-            showThisRow = false;
+          if (ctx._pfFilter.filterCaseInsensitive !== undefined && ctx._pfFilter.filterCaseInsensitive === true) {
+            if (data[filter.column].toLowerCase().indexOf(filter.value.toLowerCase()) === -1) {
+              showThisRow = false;
+            }
+          } else {
+            if (data[filter.column].indexOf(filter.value) === -1) {
+              showThisRow = false;
+            }
           }
         });
       }
