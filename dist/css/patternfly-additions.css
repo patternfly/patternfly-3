@@ -3763,6 +3763,42 @@ a.disabled {
   position: relative;
   width: 100%;
 }
+.list-view-pf-dnd .dndDragging.drag-original {
+  display: none;
+}
+.list-view-pf-dnd .dndDragging.drag-original .list-view-pf-dnd-original-items {
+  display: block;
+}
+.list-view-pf-dnd .dndDragging .list-view-pf-dnd-drag-items {
+  display: inline-block;
+}
+.list-view-pf-dnd .dndDragging .list-view-pf-dnd-original-items {
+  display: none;
+}
+.list-view-pf-dnd .dndPlaceholder {
+  background-color: #ededed;
+  padding: 20px 0;
+}
+.list-view-pf-dnd .list-group-item-header {
+  margin-left: -10px;
+}
+.list-view-pf-dnd .list-group-item-header:before {
+  background-image: linear-gradient(to bottom, #0088ce 60%, #fff 0%);
+  background-position: left;
+  background-repeat: repeat-y;
+  background-size: 2px 5px;
+  border: 4px solid #0088ce;
+  border-color: #00659c;
+  content: "";
+  height: 55px;
+  left: 4px;
+  position: absolute;
+  top: 5px;
+  width: 10px;
+}
+.list-view-pf-dnd-drag-items {
+  display: none;
+}
 .login-pf {
   height: 100%;
 }
