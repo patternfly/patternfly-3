@@ -218,7 +218,7 @@
     // De/select the select all checkbox
     var selectAll = $(ctx._pfSelect.selectAllSelector, dt.table().container())[0];
     if (selectAll) {
-      selectAll.checked = (filteredRows === selectedFilteredRows);
+      selectAll.checked = (filteredRows !== 0 && filteredRows === selectedFilteredRows);
     }
     updateSelectedRowsText(dt);
   }
