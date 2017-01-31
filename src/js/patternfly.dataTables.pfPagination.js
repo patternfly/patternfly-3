@@ -221,7 +221,7 @@
     if (ctx._pfPagination.nextPage === undefined || ctx._pfPagination.nextPage.length === 0) {
       return;
     }
-    $(ctx._pfPagination.nextPage).closest('li').on("click", function (e) {
+    $(ctx._pfPagination.nextPage).closest('a').on("click", function (e) {
       dt.table().page('next').draw('page');
     });
   }
@@ -254,7 +254,7 @@
     if (ctx._pfPagination.previousPage === undefined || ctx._pfPagination.previousPage.length === 0) {
       return;
     }
-    $(ctx._pfPagination.previousPage).closest('li').on("click", function (e) {
+    $(ctx._pfPagination.previousPage).closest('a').on("click", function (e) {
       dt.table().page('previous').draw('page');
     });
   }
