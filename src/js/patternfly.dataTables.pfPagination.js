@@ -56,6 +56,7 @@
  *     dom: "t",
  *     pfConfig: {
  *       ...
+ *       pageSize: 15,
  *       paginationSelector: "#pagination1",
  *     }
  *   });
@@ -126,6 +127,9 @@
     ctx._pfPagination.totalItems = $(TOTAL_ITEMS_SELECTOR, opts.paginationSelector); // Total items
     ctx._pfPagination.totalPages = $(TOTAL_PAGES_SELECTOR, opts.paginationSelector); // Total pages
 
+    // Set initial page size
+    ctx._pfPagination.currentPageSize = (opts.pageSize !== undefined) ? opts.pageSize : 15;
+
     // Handle page navigation
     handleCurrentPage(dt);
     handleFirstPage(dt);
@@ -145,6 +149,7 @@
     });
 
     // Initialize page info
+    dt.table().page.len(ctx._pfPagination.currentPageSize);
     dt.table().draw('page');
   };
 
@@ -238,8 +243,8 @@
       return;
     }
     ctx._pfPagination.pageSize.on("change", function (e) {
-      var size = parseInt(this.value);
-      dt.table().page.len(size).draw('page');
+      ctx._pfPagination.currentPageSize = parseInt(this.value);
+      dt.table().page.len(ctx._pfPagination.currentPageSize).draw('page');
     });
   }
 
