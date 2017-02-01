@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - '4'
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - rvm install 2.3.1
+  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+  - npm install -g bower grunt-cli
+  - npm install git+https://github.com/patternfly/patternfly-eng-release.git
+
+install: true
+
+script:
+  - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
+
+after_success:

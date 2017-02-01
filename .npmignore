@@ -1,0 +1,29 @@
+# Ignore Project files
+*.sublime-workspace
+*.sublime-project
+*.idea
+
+# Ignore vim files
+*.swp
+*.swn
+*.swo
+
+# Ignore local Bower packages
+components/
+bower_components/
+
+# Ignore local nodejs packages
+node_modules/
+npm-debug.log
+
+# Ignore node files
+*.man
+nodevars.bat
+npm
+npm.cmd
+
+# Ignore generated files
+patternfly.spec
+
+# Ignore Desktop Services Store
+.DS_Store

@@ -36,11 +36,10 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
             $ sudo npm install -g grunt-cli
 
-    - [Bower](http://bower.io/#installing-bower): a package manager for the web.
 
 2. Add PatternFly as a dependency for your project and you'll receive all the libraries you'll need:
 
-        $ bower install patternfly --save
+        $ npm install patternfly --save
 
     For full install options see the [README](README.md)
 
@@ -48,10 +47,70 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
 
         <!-- PatternFly Styles -->
         <!-- Note: No other CSS files are needed regardless of what other JS packages located in patternfly/components that you decide to pull in -->
-        <link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly.min.css" />
-        <link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly-additions.min.css" />
+        <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly.min.css">
+        <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly-additions.min.css">
 
 4. Add the following script includes to your HTML file(s), adjusting where necessary to pull in only what you need:
+
+        <!-- jQuery -->
+        <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+        <!-- Bootstrap JS -->
+        <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- C3, D3 - Charting Libraries -->
+        <script src="node_modules/patternfly/node_modules/c3/c3.min.js"></script>
+        <script src="node_modules/patternfly/node_modules/d3/d3.min.js"></script>
+
+        <!-- Datatables, jQuery Grid Component -->
+        <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
+        <script src="node_modules/patternfly/node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+        <script src="node_modules/patternfly/node_modules/drmonty-datatables-colvis/js/dataTables.colVis.js"></script>
+        <script src="node_modules/patternfly/node_modules/datatables.net-colreorder/js/dataTables.colReorder.js"></script>
+
+        <!-- PatternFly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
+        <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
+        <script src="node_modules/patternfly/node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+        <!-- Bootstrap Combobox -->
+        <script src="node_modules/patternfly/node_modules/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
+
+        <!-- Bootstrap Date Picker -->
+        <script src="node_modules/patternfly/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
+        <!-- Moment - required by Bootstrap Date Time Picker -->
+        <script src="node_modules/patternfly/node_modules/moment/min/moment.min.js"></script>
+
+        <!-- Bootstrap Date Time Picker - requires Moment -->
+        <script src="node_modules/patternfly/node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+        <!-- Bootstrap Select -->
+        <script src="node_modules/patternfly/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+        <!-- Bootstrap Switch -->
+        <script src="node_modules/patternfly/node_modules/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+
+        <!-- Bootstrap Touchspin -->
+        <script src="node_modules/patternfly/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+
+        <!-- Bootstrap Tree View -->
+        <script src="node_modules/patternfly/node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+
+        <!-- Google Code Prettify - Syntax highlighting of code snippets -->
+        <script src="node_modules/patternfly/node_modules/google-code-prettify/bin/prettify.min.js"></script>
+
+        <!-- MatchHeight - Used to make sure dashboard cards are the same height -->
+        <script src="node_modules/patternfly/node_modules/jquery-match-height/jquery.matchHeight-min.js"></script>
+
+        <!-- Angular Application? You May Want to Consider Pulling Angular-PatternFly And Angular-UI Bootstrap instead of bootstrap.js -->
+        <!-- See https://github.com/patternfly/angular-patternfly for more information -->
+
+5. Prefer to use Bower? You can install patternfly using Bower (although NPM is recommended). Add the following style and script includes from `bower_components` to your HTML file(s), adjusting where necessary to pull in only what you need:
+
+        <!-- PatternFly Styles -->
+        <!-- Note: No other CSS files are needed regardless of what other JS packages located in patternfly/components that you decide to pull in -->
+        <link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly.min.css">
+        <link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly-additions.min.css">
 
         <!-- jQuery -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -76,6 +135,9 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <!-- Bootstrap Combobox -->
         <script src="bower_components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
 
+        <!-- Bootstrap Date Time Picker - requires Moment -->
+        <script src="bower_components/moment/min/moment.min.js"></script>
+        
         <!-- Bootstrap Date Picker -->
         <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
@@ -89,63 +151,13 @@ We provide compiled CSS and JS (`patternfly.*`), as well as compiled and minifie
         <script src="bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
 
         <!-- Bootstrap Tree View -->
-        <script src="bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+        <script src="bower_components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
 
         <!-- Google Code Prettify - Syntax highlighting of code snippets -->
         <script src="bower_components/google-code-prettify/bin/prettify.min.js"></script>
 
         <!-- MatchHeight - Used to make sure dashboard cards are the same height -->
         <script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
-
-        <!-- Angular Application? You May Want to Consider Pulling Angular-PatternFly And Angular-UI Bootstrap instead of bootstrap.js -->
-        <!-- See https://github.com/patternfly/angular-patternfly for more information -->
-
-5. NPM Install Only:  You can install patternfly using just NPM; no need for Bower (although Bower is recommened). Add the following script includes from 'node_modules' to your HTML file(s), adjusting where necessary to pull in only what you need: 
-
-        <!-- jQuery -->
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-
-        <!-- Bootstrap JS -->
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <!-- C3, D3 - Charting Libraries -->
-        <script src="node_modules/c3/c3.min.js"></script>
-        <script src="node_modules/d3/d3.min.js"></script>
-
-        <!-- Datatables, jQuery Grid Component -->
-        <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
-        <script src="node_modules/drmonty-datatables-colvis/js/dataTables.colVis.js"></script>
-        <script src="node_modules/datatables.net-colreorder/js/dataTables.colReorder.js"></script>
-
-        <!-- PatternFly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
-        <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
-
-        <!-- Bootstrap Combobox -->
-        <script src="node_modules/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
-
-        <!-- Bootstrap Date Picker -->
-        <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
-        <!-- Bootstrap Select -->
-        <script src="node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-
-        <!-- Bootstrap Switch -->
-        <script src="node_modules/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
-        <script src="node_modules/patternfly/tests-src/bootstrap-switch.js"></script>
-
-        <!-- Bootstrap Touchspin -->
-        <script src="node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
-
-        <!-- Bootstrap Tree View -->
-        <script src="node_modules/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
-
-        <!-- Google Code Prettify - Syntax highlighting of code snippets -->
-        <script src="node_modules/google-code-prettify/bin/prettify.min.js"></script>
-
-        <!-- MatchHeight - Used to make sure dashboard cards are the same height -->
-        <script src="node_modules/jquery-match-height/jquery.matchHeight-min.js"></script>
 
         <!-- Angular Application? You May Want to Consider Pulling Angular-PatternFly And Angular-UI Bootstrap instead of bootstrap.js -->
         <!-- See https://github.com/patternfly/angular-patternfly for more information -->

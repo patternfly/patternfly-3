@@ -1,0 +1,26 @@
+<form class="content-view-pf-pagination table-view-pf-pagination clearfix" id="{{include.id}}">
+  <div class="form-group">
+    <select class="selectpicker pagination-pf-pagesize">
+      <option value="6">6</option>
+      <option value="10">10</option>
+      <option value="15" selected="selected">15</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+    <span>per page</span>
+  </div>
+  <div class="form-group">
+    <span><span class="pagination-pf-items-current">1-15</span> of <span class="pagination-pf-items-total">75</span></span>
+    <ul class="pagination pagination-pf-back">
+      <li><a href="#" onclick="return false;" title="First Page"><span class="i fa fa-angle-double-left"></span></a></li>
+      <li><a href="#" onclick="return false;" title="Previous Page"><span class="i fa fa-angle-left"></span></a></li>
+    </ul>
+    <label for="{{include.id}}-page" class="sr-only">Current Page</label>
+    <input class="pagination-pf-page" type="text" value="1" id="{{include.id}}-page"/>
+    <span>of <span class="pagination-pf-pages">5</span></span>
+    <ul class="pagination pagination-pf-forward">
+      <li><a href="#" onclick="return false;" title="Next Page"><span class="i fa fa-angle-right"></span></a></li>
+      <li><a href="#" onclick="return false;" title="Last Page"><span class="i fa fa-angle-double-right"></span></a></li>
+    </ul>
+  </div>
+</form>
