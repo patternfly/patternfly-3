@@ -5,8 +5,7 @@
 <div class="col-sm-12">
 <!-- Table HTML -->
 {% include widgets/table-view/tmpl/table.html id="table1" %}
-<!-- Pagination -->
-{% include widgets/table-view/tmpl/pagination.html id="pagination1" %}
+{% include widgets/pagination/pagination.html class1="table-view-pf-pagination" pagesize=15 id="pagination1" %}
 <!-- Blank Slate HTML -->
 {% include widgets/communication/blank-slate.html extraClass="table-view-pf-empty hidden" id="emptyState1" %}
 </div>

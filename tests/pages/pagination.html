@@ -3,6 +3,8 @@ categories: [Widgets]
 layout: page
 title: Pagination
 resource: true
+url-js-extra: [ '//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js']
+
 ---
       <h2>Pager - default size</h2>
       <ul class="pager">
@@ -241,3 +243,12 @@ resource: true
           </a>
         </li>
       </ul>
+      <hr>
+      <h2>Pagination row for card, list, and table views</h2>
+      <p>The following control can be seen in these examples:</p>
+      <ul>
+        <li><a href="pagination-card-view.html">Card View</a></li>
+        <li><a href="pagination-list-view.html">List View</a></li>
+        <li><a href="pagination-table-view.html">Table View</a></li>
+      </ul>
+      {% include widgets/pagination/pagination.html %}
