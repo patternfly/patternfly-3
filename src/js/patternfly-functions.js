@@ -1117,6 +1117,13 @@
         navElement.removeClass('hide-nav-pf');
         bodyContentElement.removeClass('hide-nav-pf');
         forceResize(250);
+      },
+      self = {
+        collapseMenu: collapseMenu,
+        expandMenu: expandMenu,
+        isCollapsed: function () {
+          return explicitCollapse;
+        }
       };
 
     //Listen for the window resize event and collapse/hide as needed
@@ -1126,6 +1133,7 @@
     });
 
     init(handleItemSelections);
+    return self;
   };
 }(jQuery));
 
