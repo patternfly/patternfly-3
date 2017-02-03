@@ -4,7 +4,7 @@
 <html lang="en-us">
 <!--<![endif]-->
   <head>
-    <title>Card View - Single Select - PatternFly</title>
+    <title>Pagination - Card View - PatternFly</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +29,7 @@
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
     <script src="../../dist/js/patternfly.min.js"></script>
   </head>
   <div class="toast-notifications-list-pf">
@@ -138,14 +139,14 @@
           <li>
             <a href="card-view-multi-select.html">Card View - Multi Select</a>
           </li>
-          <li class="active">
-            <a href="card-view-single-select.html" class="active">Card View - Single Select</a>
+          <li>
+            <a href="card-view-single-select.html">Card View - Single Select</a>
           </li>
           <li>
             <a href="cards.html">Cards</a>
           </li>
-          <li>
-            <a href="pagination-card-view.html">Pagination - Card View</a>
+          <li class="active">
+            <a href="pagination-card-view.html" class="active">Pagination - Card View</a>
           </li>
         </ul>
       </div>
@@ -260,8 +261,8 @@
 
 <div class="container-fluid container-cards-pf">
   <div class="row row-cards-pf">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-<div class="card-pf card-pf-view card-pf-view-select card-pf-view-single-select">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
   <div class="card-pf-body">
     <div class="card-pf-top-element">
       <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
@@ -285,8 +286,8 @@
   </div>
 </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-<div class="card-pf card-pf-view card-pf-view-select card-pf-view-single-select">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
   <div class="card-pf-body">
     <div class="card-pf-top-element">
       <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
@@ -310,8 +311,8 @@
   </div>
 </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-<div class="card-pf card-pf-view card-pf-view-select card-pf-view-single-select">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
   <div class="card-pf-body">
     <div class="card-pf-top-element">
       <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
@@ -335,8 +336,8 @@
   </div>
 </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-<div class="card-pf card-pf-view card-pf-view-select card-pf-view-single-select">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
   <div class="card-pf-body">
     <div class="card-pf-top-element">
       <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
@@ -360,8 +361,8 @@
   </div>
 </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-<div class="card-pf card-pf-view card-pf-view-select card-pf-view-single-select">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
   <div class="card-pf-body">
     <div class="card-pf-top-element">
       <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
@@ -385,8 +386,108 @@
   </div>
 </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-<div class="card-pf card-pf-view card-pf-view-select card-pf-view-single-select">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
+  <div class="card-pf-body">
+    <div class="card-pf-top-element">
+      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
+    </div>
+    <h2 class="card-pf-title text-center">
+      Cake Service
+    </h2>
+    <div class="card-pf-items text-center">
+      <div class="card-pf-item">
+        <span class="pficon pficon-screen"></span>
+        <span class="card-pf-item-text">8</span>
+      </div>
+      <div class="card-pf-item">
+        <span class="fa fa-check"></span>
+      </div>
+    </div>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br/> Never Expires</p>
+  </div>
+  <div class="card-pf-view-checkbox">
+    <input type="checkbox">
+  </div>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
+  <div class="card-pf-body">
+    <div class="card-pf-top-element">
+      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
+    </div>
+    <h2 class="card-pf-title text-center">
+      Cake Service
+    </h2>
+    <div class="card-pf-items text-center">
+      <div class="card-pf-item">
+        <span class="pficon pficon-screen"></span>
+        <span class="card-pf-item-text">8</span>
+      </div>
+      <div class="card-pf-item">
+        <span class="fa fa-check"></span>
+      </div>
+    </div>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br/> Never Expires</p>
+  </div>
+  <div class="card-pf-view-checkbox">
+    <input type="checkbox">
+  </div>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
+  <div class="card-pf-body">
+    <div class="card-pf-top-element">
+      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
+    </div>
+    <h2 class="card-pf-title text-center">
+      Cake Service
+    </h2>
+    <div class="card-pf-items text-center">
+      <div class="card-pf-item">
+        <span class="pficon pficon-screen"></span>
+        <span class="card-pf-item-text">8</span>
+      </div>
+      <div class="card-pf-item">
+        <span class="fa fa-check"></span>
+      </div>
+    </div>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br/> Never Expires</p>
+  </div>
+  <div class="card-pf-view-checkbox">
+    <input type="checkbox">
+  </div>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
+  <div class="card-pf-body">
+    <div class="card-pf-top-element">
+      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
+    </div>
+    <h2 class="card-pf-title text-center">
+      Cake Service
+    </h2>
+    <div class="card-pf-items text-center">
+      <div class="card-pf-item">
+        <span class="pficon pficon-screen"></span>
+        <span class="card-pf-item-text">8</span>
+      </div>
+      <div class="card-pf-item">
+        <span class="fa fa-check"></span>
+      </div>
+    </div>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br/> Never Expires</p>
+  </div>
+  <div class="card-pf-view-checkbox">
+    <input type="checkbox">
+  </div>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <div class="card-pf card-pf-view card-pf-view-select card-pf-view-multi-select">
   <div class="card-pf-body">
     <div class="card-pf-top-element">
       <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
@@ -411,6 +512,33 @@
 </div>
     </div>
   </div>
+  <form class="content-view-pf-pagination card-view-pf-pagination clearfix" id="">
+  <div class="form-group">
+    <select class="selectpicker pagination-pf-pagesize">
+      <option value="6">6</option>
+      <option value="10" selected="selected">10</option>
+      <option value="15" >15</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+    <span>per page</span>
+  </div>
+  <div class="form-group">
+    <span><span class="pagination-pf-items-current">1-15</span> of <span class="pagination-pf-items-total">75</span></span>
+    <ul class="pagination pagination-pf-back">
+      <li class="disabled"><a href="#" title="First Page"><span class="i fa fa-angle-double-left"></span></a></li>
+      <li class="disabled"><a href="#" title="Previous Page"><span class="i fa fa-angle-left"></span></a></li>
+    </ul>
+    <label for="-page" class="sr-only">Current Page</label>
+    <input class="pagination-pf-page" type="text" value="1" id="-page"/>
+    <span>of <span class="pagination-pf-pages">5</span></span>
+    <ul class="pagination pagination-pf-forward">
+      <li><a href="#" title="Next Page"><span class="i fa fa-angle-right"></span></a></li>
+      <li><a href="#" title="Last Page"><span class="i fa fa-angle-double-right"></span></a></li>
+    </ul>
+  </div>
+</form>
+
 </div>
 <script>
   $(function() {
@@ -418,12 +546,12 @@
     $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
   });
   $(document).ready(function() {
-    // Card Single Select
-    $('.card-pf-view-single-select').click(function() {
-      if ($(this).hasClass('active'))
-      { $(this).removeClass('active'); }
+    // Card Multi Select
+    $('input[type=checkbox]').click(function() {
+      if ($(this).parent().parent().hasClass('active'))
+      { $(this).parent().parent().removeClass('active'); }
       else
-      { $('.card-pf-view-single-select').removeClass('active'); $(this).addClass('active'); }
+      { $(this).parent().parent().addClass('active'); }
     });
   });
 </script>
