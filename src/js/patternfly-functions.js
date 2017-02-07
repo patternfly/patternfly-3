@@ -1114,3 +1114,31 @@
     init(handleItemSelections);
   };
 }(jQuery));
+
+// PatternFly pf-list
+(function ($) {
+  'use strict';
+
+  $.fn.pfList = function () {
+    this.find('.list-pf-container').each(function (index, element) {
+      var $element = $(element);
+      // if no element in the list-pf-container has the data-toggle=collpase attribute set
+      // then the entire container is the toggle element
+      var $toggles = $element.find('[data-toggle=collapse]');
+      if (!$toggles.length) {
+        $toggles = $element;
+      }
+      $toggles.on('click', function (e) {
+        var $listItem = $(this).closest('.list-pf-item, .list-pf-expansion');
+        var $collapse = $listItem.find('.collapse').first();
+        $collapse.each(function (index, element) {
+          this.classList.toggle('in');
+        });
+        event.stopPropagation();
+        e.preventDefault();
+      });
+    });
+
+    return this;
+  };
+}(jQuery));
