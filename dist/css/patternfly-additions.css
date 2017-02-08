@@ -2996,6 +2996,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-cpu:before {
   content: "\e905";
 }
+.pficon-degraded:before {
+  content: "\e91b";
+}
 .pficon-delete:before {
   content: "\e611";
 }
@@ -3064,6 +3067,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-project:before {
   content: "\e622";
+}
+.pficon-rebalance:before {
+  content: "\e91c";
 }
 .pficon-refresh:before,
 .pficon-restart:before {
