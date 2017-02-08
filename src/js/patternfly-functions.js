@@ -1129,11 +1129,18 @@
         $toggles = $element;
       }
       $toggles.on('click', function (e) {
-        var $listItem = $(this).closest('.list-pf-item, .list-pf-expansion');
-        var $collapse = $listItem.find('.collapse').first();
-        $collapse.each(function (index, element) {
-          this.classList.toggle('in');
-        });
+        var $toggle = $(this);
+        var $list = $toggle.closest('.list-pf');
+        var $active = $list.find('.active');
+        var $listItem = $toggle.closest('.list-pf-item');
+        var $container = $toggle.closest('.list-pf-item, .list-pf-expansion');
+        var $collapse = $container.find('.collapse').first();
+
+        if ($active && $listItem && $active !== $listItem) {
+          $active[0].classList.remove('active');
+          $listItem[0].classList.add('active');
+        }
+        $collapse[0].classList.toggle('in');
         event.stopPropagation();
         e.preventDefault();
       });
