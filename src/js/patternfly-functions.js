@@ -1122,25 +1122,27 @@
   $.fn.pfList = function () {
     this.find('.list-pf-container').each(function (index, element) {
       var $element = $(element);
-      // if no element in the list-pf-container has the data-toggle=collpase attribute set
-      // then the entire container is the toggle element
-      var $toggles = $element.find('[data-toggle=collapse]');
-      if (!$toggles.length) {
-        $toggles = $element;
-      }
+      // The toggle element is the element with the data-list=toggle attribute
+      // or the entire .list-pf-container as a fallback
+      var $toggles = $element.find('[data-list=toggle]');
+      $toggles.length || ($toggles = $element);
       $toggles.on('click', function (e) {
-        var $toggle = $(this);
-        var $list = $toggle.closest('.list-pf');
-        var $active = $list.find('.active');
-        var $listItem = $toggle.closest('.list-pf-item');
-        var $container = $toggle.closest('.list-pf-item, .list-pf-expansion');
-        var $collapse = $container.find('.collapse').first();
+        var $toggle, $listItem, $container;
+        $toggle = $(this);
 
-        if ($active && $listItem && $active !== $listItem) {
-          $active[0].classList.remove('active');
-          $listItem[0].classList.add('active');
+        // Find the parent container of the toggle, then toggle the "in" class of its  first .collapse child
+        $container = $toggle.parentsUntil('.list-pf', '[data-list=toggle]').first();
+        $container.length || ($container = $toggle.closest('.list-pf-item, .list-pf-expansion'));
+        $container.find('.collapse').first().toggleClass('in');
+
+        // Find the parent .list-pf-item of the toggle, and set its "active" class
+        $listItem = $toggle.closest('.list-pf-item');
+        if ($listItem.find('.collapse').first().hasClass('in')) {
+          $listItem.addClass('active');
+        } else {
+          $listItem.removeClass('active');
         }
-        $collapse[0].classList.toggle('in');
+
         event.stopPropagation();
         e.preventDefault();
       });
