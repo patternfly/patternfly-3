@@ -14,68 +14,32 @@
   .panel {
     color: @gray-pf;
     + .panel {
-      margin-top: -1px;
+      margin-top: 0px;
     }
   }
   .panel-default {
     border-color: @panel-default-border-color;
     border-top-color: @panel-default-border-color;
-  }
-  .panel-heading {
-    #gradient > .vertical(@btn-default-bg-img-start, @btn-default-bg-img-stop);
-    + .panel-collapse .panel-body {
-      border-top: 1px solid @panel-inner-border;
+    + .panel-default {
+      margin-top: -1px;
     }
-  }
-  .panel-primary {
     .panel-heading {
-      #gradient > .vertical(lighten(@brand-primary, 35%), lighten(@brand-primary, 25%));
+      #gradient > .vertical(@btn-default-bg-img-start, @btn-default-bg-img-stop);
       + .panel-collapse .panel-body {
-        border-top: 1px solid @panel-primary-border;
+        border-top: 1px solid @panel-inner-border;
       }
     }
-    + .panel {
-      border-top-color: @panel-primary-border;
-    }
-  }
-  .panel-success {
-    .panel-heading {
-      #gradient > .vertical(@alert-success-bg, darken(@alert-success-bg, 10%));
-      + .panel-collapse .panel-body {
-        border-top: 1px solid @panel-success-border;
+    .panel-title {
+      > a {
+        color: @gray-pf;
       }
-    }
-    + .panel {
-      border-top-color: @alert-success-border;
-    }
-  }
-  .panel-warning {
-    .panel-heading {
-      #gradient > .vertical(@alert-warning-bg, darken(@alert-warning-bg, 10%));
-      + .panel-collapse .panel-body {
-        border-top: 1px solid @panel-warning-border;
-      }
-    }
-    + .panel {
-      border-top-color: @alert-warning-border;
-    }
-  }
-  .panel-danger {
-    .panel-heading {
-      #gradient > .vertical(@alert-danger-bg, darken(@alert-danger-bg, 10%));
-      + .panel-collapse .panel-body {
-        border-top: 1px solid @panel-danger-border;
-      }
-    }
-    + .panel {
-      border-top-color: @alert-danger-border;
     }
   }
   .panel-title {
     font-weight: 500;
     line-height: 1;
     > a {
-      color: @gray-pf;
+      color: white;
       font-weight: @btn-font-weight;
       &:before {
         content: "\f107";
