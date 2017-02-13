@@ -14,24 +14,32 @@
   .panel {
     color: @gray-pf;
     + .panel {
-      margin-top: -1px;
+      margin-top: 0px;
     }
   }
   .panel-default {
     border-color: @panel-default-border-color;
     border-top-color: @panel-default-border-color;
-  }
-  .panel-heading {
-    #gradient > .vertical(@btn-default-bg-img-start, @btn-default-bg-img-stop);
-    + .panel-collapse .panel-body {
-      border-top: 1px solid @panel-inner-border;
+    + .panel-default {
+      margin-top: -1px;
+    }
+    .panel-heading {
+      #gradient > .vertical(@btn-default-bg-img-start, @btn-default-bg-img-stop);
+      + .panel-collapse .panel-body {
+        border-top: 1px solid @panel-inner-border;
+      }
+    }
+    .panel-title {
+      > a {
+        color: @gray-pf;
+      }
     }
   }
   .panel-title {
     font-weight: 500;
     line-height: 1;
     > a {
-      color: @gray-pf;
+      color: white;
       font-weight: @btn-font-weight;
       &:before {
         content: "\f107";
