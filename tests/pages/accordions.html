@@ -169,8 +169,71 @@ resource: true
     </div>
   </div><!--/col-->
 </div>
+<div class="row">
+  <div class="col-md-4 col-sm-6">
+    <h2>Contextual Alternatives</h2>
+    <div class="panel-group" id="alternatives-accordion" style="height: 350px;">
+      <div class="panel panel-primary">
+        <div class="panel-heading" data-component="collapse-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#alternatives-accordion" href="#primary-collapse">
+              Lorem ipsum
+            </a>
+          </h4>
+        </div>
+        <div id="primary-collapse" class="panel-collapse collapse in">
+          <div class="panel-body">
+            Praesent sagittis est et arcu fringilla placerat. Cras erat ante, dapibus non mauris ac, volutpat sollicitudin ligula. Morbi gravida nisl vel risus tempor, sit amet luctus erat tempus. Curabitur blandit sem non pretium bibendum. Donec eleifend non turpis vitae vestibulum. Vestibulum ut sem ac nunc posuere blandit sed porta lorem. Cras rutrum velit vel leo iaculis imperdiet.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-warning">
+        <div class="panel-heading" data-component="collapse-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#alternatives-accordion" href="#warning-collapse" class="collapsed">
+              Consectetur
+            </a>
+          </h4>
+        </div>
+        <div id="warning-collapse" class="panel-collapse collapse">
+          <div class="panel-body">
+            Curabitur nisl quam, interdum a venenatis a, consequat a ligula. Nunc nec lorem in erat rhoncus lacinia at ac orci. Sed nec augue congue, vehicula justo quis, venenatis turpis. Nunc quis consectetur purus. Nam vitae viverra lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu augue felis. Maecenas in dignissim purus, quis pulvinar lectus. Vivamus euismod ultrices diam, in mattis nibh.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-danger">
+        <div class="panel-heading" data-component="collapse-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#alternatives-accordion" href="#danger-collapse" class="collapsed">
+              Adipisicing elit
+            </a>
+          </h4>
+        </div>
+        <div id="danger-collapse" class="panel-collapse collapse">
+          <div class="panel-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.              </div>
+        </div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading" data-component="collapse-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#alternatives-accordion" href="#success-collapse" class="collapsed">
+              Suspendisse lectus tortor
+            </a>
+          </h4>
+        </div>
+        <div id="success-collapse" class="panel-collapse collapse">
+          <div class="panel-body">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--/col-->
+</div>
 <script>
   $(document).ready(function() {
     $('#fixed-accordion').initCollapseHeights();
+    $('#alternatives-accordion').initCollapseHeights();
   });
 </script>
