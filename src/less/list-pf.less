@@ -13,15 +13,15 @@
   border-style: solid;
   border-width: 1px;
   border-bottom: none;
+  &:hover {
+    background-color: @list-pf-hover-background-color;
+  }
   &.active {
     background-color: @list-pf-header-background-color;
     border-color: @list-pf-active-border-color;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     .box-shadow(0 1px 2px fade(@color-pf-black, 17.5%));
-  }
-  &:hover {
-    background-color: @list-pf-header-background-color;
   }
 }
 
@@ -30,8 +30,18 @@
 }
 
 .list-pf-container {
+  display: flex;
   padding: @list-pf-padding;
   .list-pf-expansion & {
     border-top: 1px solid @list-pf-active-border-color;
+  }
+}
+
+
+.list-pf-chevron {
+  padding-right: 5px;
+  .fa {
+    font-size: 17px;
+    width: 12px;
   }
 }
