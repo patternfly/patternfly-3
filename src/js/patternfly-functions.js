@@ -1127,13 +1127,22 @@
       var $toggles = $element.find('[data-list=toggle]');
       $toggles.length || ($toggles = $element);
       $toggles.on('click', function (e) {
-        var $toggle, $listItem, $container;
+        var $toggle, $listItem, $container, $collapse, $chevron;
         $toggle = $(this);
 
         // Find the parent container of the toggle, then toggle the "in" class of its  first .collapse child
         $container = $toggle.parentsUntil('.list-pf', '[data-list=toggle]').first();
         $container.length || ($container = $toggle.closest('.list-pf-item, .list-pf-expansion'));
-        $container.find('.collapse').first().toggleClass('in');
+        $collapse = $container.find('.collapse').first();
+        $collapse.toggleClass('in');
+        $chevron = $container.find('.list-pf-chevron .fa').first();
+        if ($collapse.hasClass('in')) {
+          $chevron.removeClass('fa-angle-right');
+          $chevron.addClass('fa-angle-down');
+        } else {
+          $chevron.addClass('fa-angle-right');
+          $chevron.removeClass('fa-angle-down');
+        }
 
         // Find the parent .list-pf-item of the toggle, and set its "active" class
         $listItem = $toggle.closest('.list-pf-item');
