@@ -93,3 +93,28 @@
     right: @right;
   }
 }
+
+// Dropdown menu for mobile navigation
+.dropdown-menu-nav-mobile {
+  padding-bottom: 0;
+  padding-top: 0;
+  > .active > a,
+  .dropdown-submenu.open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @navbar-pf-navbar-nav-active-active-open-bg-color !important;
+      color: @navbar-pf-active-color;
+    }
+  }
+  > li > a {
+    background-color: transparent;
+    border: 0;
+    color: @navbar-pf-color;
+    outline: none;
+    padding-left: 30px;
+    &:hover {
+      color: @navbar-pf-active-color;
+    }
+  }
+}

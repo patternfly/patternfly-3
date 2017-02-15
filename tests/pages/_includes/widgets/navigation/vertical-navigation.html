@@ -1,14 +1,63 @@
-{% if page.notification-drawer %}
-  {% include widgets/layouts/nav-vertical-notification-drawer.html %}
-{% else %}
-  {% include widgets/layouts/navbar-vertical.html %}
-{% endif %}
-<div class="nav-pf-vertical
+{% include widgets/layouts/navbar-vertical.html %}
+<nav class="nav-pf-vertical
      {% if page.submenus %}nav-pf-vertical-with-sub-menus{% endif %}
      {% if page.persistent-secondary %}nav-pf-persistent-secondary{% endif %}
      {% if page.collapsible-menus %}nav-pf-vertical-collapsible-menus{% endif %}
      {% if page.hide-icons %}hidden-icons-pf{% endif %}
      {% if page.nav-badges %}nav-pf-vertical-with-badges{% endif %}">
+
+  <ul class="nav navbar-nav navbar-right navbar-iconic">
+    {% if page.notification-drawer %}
+      <li class="drawer-pf-trigger dropdown">
+        <a class="nav-item-iconic drawer-pf-trigger-icon">
+          <span class="fa fa-bell" title="Notifications"></span><!-- In case of all notifications read, the icon should be fa-bell-o -->
+        </a>
+      </li>
+    {% endif %}
+    <li class="dropdown">
+      <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <span title="Notifications" class="fa pficon-flag"></span>
+        <span class="badge">2</span>
+      </a>
+      <div class="dropdown-menu infotip bottom-right">
+        <div class="arrow"></div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
+          </li>
+          <li class="list-group-item">
+            <span class="i pficon pficon-info"></span> Error: System Failure
+          </li>
+        </ul>
+        <div class="footer">
+          <a>Clear Messages</a>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <span title="Help" class="fa pficon-help"></span>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <span title="Username" class="fa pficon-user"></span>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><a href="#">Preferences</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+  {% if page.notification-drawer %}
+    {% include widgets/notification-drawer.html %}
+  {% endif %}
   <ul class="list-group">
     <li class="list-group-item">
       <a>
@@ -58,7 +107,7 @@
       </a>
     </li>
   </ul>
-</div>
+</nav>
 <div class="container-fluid container-cards-pf container-pf-nav-pf-vertical
      {% if page.persistent-secondary %}nav-pf-persistent-secondary{% endif %}
      {% if page.nav-badges %}nav-pf-vertical-with-badges{% endif %}
