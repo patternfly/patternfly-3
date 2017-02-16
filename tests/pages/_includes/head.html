@@ -32,7 +32,7 @@
     {% if page.url-js-extra %}{% for urlextrajs in page.url-js-extra %}
     <script src="{{ urlextrajs, site.url-components }}"></script>
     {% endfor %}{% endif %}
-    <script src="{{site.url-js}}"></script>
+    <script src="{{site.baseurl}}/{{site.url-js}}"></script>
   </head>{% if page.full-page %}
   <div class="toast-notifications-list-pf">
     <div class="toast-pf alert alert-warning alert-dismissable">
