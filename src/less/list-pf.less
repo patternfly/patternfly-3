@@ -13,9 +13,6 @@
   border-style: solid;
   border-width: 1px;
   border-bottom: none;
-  &:hover {
-    background-color: @list-pf-hover-background-color;
-  }
   &.active {
     background-color: @list-pf-header-background-color;
     border-color: @list-pf-active-border-color;
@@ -31,6 +28,9 @@
 .list-pf-container {
   display: flex;
   padding: @list-pf-padding;
+  &:hover {
+    background-color: @list-pf-hover-background-color;
+  }
   .list-pf-expansion & {
     border-top: 1px solid @list-pf-active-border-color;
   }
