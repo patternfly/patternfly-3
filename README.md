@@ -21,7 +21,7 @@ PatternFly can be installed and managed through [NPM](https://www.npmjs.com/). T
 npm install patternfly --save
 ```
 
-Patternfly stays up to date with the Node LTS [Release Schedule](https://github.com/nodejs/LTS#lts_schedule). If you're using Patternfly downstream, we suggest the use of an actively supported version of Node/NPM, although prior versions of Node may work. 
+Patternfly stays up to date with the Node LTS [Release Schedule](https://github.com/nodejs/LTS#lts_schedule). If you're using Patternfly downstream, we suggest the use of an actively supported version of Node/NPM, although prior versions of Node may work.
 
 ### Install with Bower
 
@@ -71,7 +71,7 @@ Development setup requires Node.js and Ruby. If you do not already have Node.js,
 
 ## Development - Code Dependencies
 
-The PatternFly code includes a number of dependencies that are not committed to this repository.  To add them, follow the instructions below under "Install NPM Dependencies".  Please make sure you keep them updated (see "Keeping NPM Dependencies Updated").
+The PatternFly code includes a number of dependencies that are not committed to this repository.  To add them, follow the instructions below under "Install NPM Dependencies".  Please make sure you keep them updated (see [Keeping NPM Dependencies Updated](#keeping-npm-dependencies-updated)).
 
 ### Install NPM Dependencies
 
@@ -107,7 +107,7 @@ A local development server can be quickly fired up by using the Gruntjs server t
 
     grunt server
 
-This local static asset server (i.e., [http://localhost:9000](http://localhost:9000)) has the advantage of having livereload integration. Thus, if you start the Gruntjs server, any changes you make to `.html` or `.less` files will be automatically reloaded into your browser and the changes reflected almost immediately. This has the obvious benefit of not having to refresh your browser and still be able to see the changes as you add or remove them from your development files.  Additionally, any changes made to Jekyll source files (`tests\pages/`) will trigger a Jekyll build.
+This local static asset server (i.e., [http://localhost:9000](http://localhost:9000)) has the advantage of having livereload integration. Thus, if you start the Gruntjs server, any changes you make to `.html` or `.less` files will be automatically reloaded into your browser and the changes reflected almost immediately. This has the obvious benefit of not having to refresh your browser and still be able to see the changes as you add or remove them from your development files.  Additionally, any changes made to Jekyll source files (`tests/pages/`) will trigger a Jekyll build.
 
 ### Coding Style
 
@@ -197,7 +197,7 @@ See [https://patternfly.atlassian.net/secure/RapidBoard.jspa?projectKey=PTNFLY&r
 
 ### Bug List
 
-Official tracking of bugs occurs in Jira.  See https://patternfly.atlassian.net/issues/?filter=10300
+Official tracking of bugs occurs in Jira.  See https://patternfly.atlassian.net/issues/?filter=10304
 
 ## License
 
