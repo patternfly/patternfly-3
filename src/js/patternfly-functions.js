@@ -1120,42 +1120,57 @@
   'use strict';
 
   $.fn.pfList = function () {
-    this.find('.list-pf-container').each(function (index, element) {
-      var $element = $(element);
-      // The toggle element is the element with the data-list=toggle attribute
-      // or the entire .list-pf-container as a fallback
-      var $toggles = $element.find('[data-list=toggle]');
-      $toggles.length || ($toggles = $element);
-      $toggles.on('click', function (e) {
-        var $toggle, $listItem, $container, $collapse, $chevron;
-        $toggle = $(this);
-
-        // Find the parent container of the toggle, then toggle the "in" class of its  first .collapse child
-        $container = $toggle.parentsUntil('.list-pf', '[data-list=toggle]').first();
-        $container.length || ($container = $toggle.closest('.list-pf-item, .list-pf-expansion'));
-        $collapse = $container.find('.collapse').first();
-        $collapse.toggleClass('in');
-        $chevron = $container.find('.list-pf-chevron .fa').first();
-        if ($collapse.hasClass('in')) {
-          $chevron.removeClass('fa-angle-right');
-          $chevron.addClass('fa-angle-down');
-        } else {
-          $chevron.addClass('fa-angle-right');
-          $chevron.removeClass('fa-angle-down');
-        }
-
-        // Find the parent .list-pf-item of the toggle, and set its "active" class
-        $listItem = $toggle.closest('.list-pf-item');
-        if ($listItem.find('.collapse').first().hasClass('in')) {
-          $listItem.addClass('active');
-        } else {
-          $listItem.removeClass('active');
-        }
-
-        event.stopPropagation();
-        e.preventDefault();
+    function init (list) {
+      list.find('.list-pf-container').each(function (index, element) {
+        var $element = $(element);
+        // The toggle element is the element with the data-list=toggle attribute
+        // or the entire .list-pf-container as a fallback
+        var $toggles = $element.find('[data-list=toggle]');
+        $toggles.length || ($toggles = $element);
+        $toggles.on('keydown', function (event) {
+          if (event.keyCode === 13 || event.keyCode === 32) {
+            toggleCollapse(this);
+            event.stopPropagation();
+            event.preventDefault();
+          }
+        });
+        $toggles.on('click', function (event) {
+          toggleCollapse(this);
+          event.stopPropagation();
+          event.preventDefault();
+        });
       });
-    });
+    }
+
+    function toggleCollapse (toggle) {
+      var $toggle, $container, $listItem, $collapse, $chevron;
+      $toggle = $(toggle);
+      // Find the parent container of the toggle
+      $container = $toggle.parentsUntil('.list-pf', '[data-list=toggle]').first();
+      $container.length || ($container = $toggle.closest('.list-pf-item, .list-pf-expansion'));
+
+      // toggle the "in" class of its  first .collapse child
+      $collapse = $container.find('.collapse').first();
+      $collapse.toggleClass('in');
+      $chevron = $container.find('.list-pf-chevron .fa').first();
+      if ($collapse.hasClass('in')) {
+        $chevron.removeClass('fa-angle-right');
+        $chevron.addClass('fa-angle-down');
+      } else {
+        $chevron.addClass('fa-angle-right');
+        $chevron.removeClass('fa-angle-down');
+      }
+
+      // Find the parent .list-pf-item of the toggle, and set its "active" class
+      $listItem = $toggle.closest('.list-pf-item');
+      if ($listItem.find('.collapse').first().hasClass('in')) {
+        $listItem.addClass('active');
+      } else {
+        $listItem.removeClass('active');
+      }
+    }
+
+    init(this);
 
     return this;
   };
