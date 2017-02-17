@@ -28,14 +28,18 @@
 .list-pf-container {
   display: flex;
   padding: @list-pf-padding;
-  &:hover {
-    background-color: @list-pf-hover-background-color;
-  }
   .list-pf-expansion & {
     border-top: 1px solid @list-pf-active-border-color;
   }
 }
 
+.list-pf-hover {
+  .list-pf-container {
+    &:not(:last-child):hover {
+      background-color: @list-pf-hover-background-color;
+    }
+  }
+}
 
 .list-pf-chevron {
   padding-right: 5px;
