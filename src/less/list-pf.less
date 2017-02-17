@@ -13,6 +13,9 @@
   border-style: solid;
   border-width: 1px;
   border-bottom: none;
+  &:hover {
+    background-color: @list-pf-hover-background-color;
+  }
   &.active {
     background-color: @list-pf-header-background-color;
     border-color: @list-pf-active-border-color;
@@ -30,14 +33,6 @@
   padding: @list-pf-padding;
   .list-pf-expansion & {
     border-top: 1px solid @list-pf-active-border-color;
-  }
-}
-
-.list-pf-hover {
-  .list-pf-container {
-    &:not(:last-child):hover {
-      background-color: @list-pf-hover-background-color;
-    }
   }
 }
 
