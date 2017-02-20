@@ -1121,6 +1121,16 @@
 
   $.fn.pfList = function () {
     function init (list) {
+      // Ensure the state of the expansion elements is consistent
+      list.find('[data-list=expansion], .list-pf-item, .list-pf-expansion').each(function (index, element) {
+        var $expansion = $(element),
+          $collapse = $expansion.find('.collapse').first(),
+          expanded = $collapse.hasClass('in');
+        updateChevron($expansion, expanded);
+        if ($expansion.hasClass('list-pf-item')) {
+          updateActive($expansion, expanded);
+        }
+      });
       list.find('.list-pf-container').each(function (index, element) {
         var $element = $(element);
         // The toggle element is the element with the data-list=toggle attribute
@@ -1143,30 +1153,39 @@
     }
 
     function toggleCollapse (toggle) {
-      var $toggle, $container, $listItem, $collapse, $chevron;
+      var $toggle, $expansion, $collapse, expanded, $listItem;
       $toggle = $(toggle);
-      // Find the parent container of the toggle
-      $container = $toggle.parentsUntil('.list-pf', '[data-list=toggle]').first();
-      $container.length || ($container = $toggle.closest('.list-pf-item, .list-pf-expansion'));
+      // Find the parent expansion of the toggle
+      $expansion = $toggle.parentsUntil('.list-pf', '[data-list=expansion]').first();
+      $expansion.length || ($expansion = $toggle.closest('.list-pf-item, .list-pf-expansion'));
 
       // toggle the "in" class of its  first .collapse child
-      $collapse = $container.find('.collapse').first();
+      $collapse = $expansion.find('.collapse').first();
       $collapse.toggleClass('in');
-      $chevron = $container.find('.list-pf-chevron .fa').first();
-      if ($collapse.hasClass('in')) {
+
+      // update the state of the expansion element
+      updateChevron($expansion, $collapse.hasClass('in'));
+      $listItem = $expansion.closest('.list-pf-item');
+      updateActive($listItem, $listItem.find('.collapse').first().hasClass('in'));
+    }
+
+    function updateActive ($listItem, expanded) {
+      // Find the closest .list-pf-item of the expansion, and set its "active" class
+      if (expanded) {
+        $listItem.addClass('active');
+      } else {
+        $listItem.removeClass('active');
+      }
+    }
+
+    function updateChevron ($expansion, expanded) {
+      var $chevron = $expansion.find('.list-pf-chevron .fa').first();
+      if (expanded) {
         $chevron.removeClass('fa-angle-right');
         $chevron.addClass('fa-angle-down');
       } else {
         $chevron.addClass('fa-angle-right');
         $chevron.removeClass('fa-angle-down');
-      }
-
-      // Find the parent .list-pf-item of the toggle, and set its "active" class
-      $listItem = $toggle.closest('.list-pf-item');
-      if ($listItem.find('.collapse').first().hasClass('in')) {
-        $listItem.addClass('active');
-      } else {
-        $listItem.removeClass('active');
       }
     }
 
