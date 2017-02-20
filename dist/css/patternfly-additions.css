@@ -3414,6 +3414,50 @@ a.disabled {
   cursor: not-allowed;
   text-decoration: none;
 }
+.list-pf {
+  border-bottom: 1px solid #ededed;
+}
+.list-pf-item {
+  border-color: #ededed;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom: none;
+}
+.list-pf-item:hover {
+  background-color: #fafafa;
+}
+.list-pf-item.active {
+  background-color: #ededed;
+  border-color: #bbb;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.list-pf-expansion {
+  background-color: #fff;
+}
+.list-pf-container {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+.list-pf-expansion .list-pf-container {
+  border-top: 1px solid #bbb;
+}
+.list-pf-chevron {
+  margin-right: 5px;
+}
+.list-pf-chevron + .list-pf-content {
+  border-left: 1px solid #bbb;
+  padding-left: 15px;
+}
+.list-pf-chevron .fa {
+  font-size: 22px;
+  width: 20px;
+}
 .list-view-pf .list-group-item {
   -ms-flex-align: start;
       align-items: flex-start;
