@@ -16,10 +16,15 @@
   &.dropdown-menu {
     left: 0!important;
     padding: 0;
-    top: 23px!important;
     width: calc(~"100% - 25px");
     &:before, &:after {
       content: none;
+    }
+    &.top {
+      margin-bottom: -1px;
+    }
+    &.bottom {
+      margin-top: -1px;
     }
   }
   .timepicker-hour {
