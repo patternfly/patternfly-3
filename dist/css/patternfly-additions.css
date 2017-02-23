@@ -2996,6 +2996,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-cpu:before {
   content: "\e905";
 }
+.pficon-degraded:before {
+  content: "\e91b";
+}
 .pficon-delete:before {
   content: "\e611";
 }
@@ -3064,6 +3067,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-project:before {
   content: "\e622";
+}
+.pficon-rebalance:before {
+  content: "\e91c";
 }
 .pficon-refresh:before,
 .pficon-restart:before {
@@ -3407,6 +3413,50 @@ a.disabled {
   color: #8b8d8f;
   cursor: not-allowed;
   text-decoration: none;
+}
+.list-pf {
+  border-bottom: 1px solid #ededed;
+}
+.list-pf-item {
+  border-color: #ededed;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom: none;
+}
+.list-pf-item:hover {
+  background-color: #fafafa;
+}
+.list-pf-item.active {
+  background-color: #ededed;
+  border-color: #bbb;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.list-pf-expansion {
+  background-color: #fff;
+}
+.list-pf-container {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+.list-pf-expansion .list-pf-container {
+  border-top: 1px solid #bbb;
+}
+.list-pf-chevron {
+  margin-right: 5px;
+}
+.list-pf-chevron + .list-pf-content {
+  border-left: 1px solid #bbb;
+  padding-left: 15px;
+}
+.list-pf-chevron .fa {
+  font-size: 22px;
+  width: 20px;
 }
 .list-view-pf .list-group-item {
   -ms-flex-align: start;
@@ -3762,6 +3812,42 @@ a.disabled {
   padding: 10px 15px;
   position: relative;
   width: 100%;
+}
+.list-view-pf-dnd .dndDragging.drag-original {
+  display: none;
+}
+.list-view-pf-dnd .dndDragging.drag-original .list-view-pf-dnd-original-items {
+  display: block;
+}
+.list-view-pf-dnd .dndDragging .list-view-pf-dnd-drag-items {
+  display: inline-block;
+}
+.list-view-pf-dnd .dndDragging .list-view-pf-dnd-original-items {
+  display: none;
+}
+.list-view-pf-dnd .dndPlaceholder {
+  background-color: #ededed;
+  padding: 20px 0;
+}
+.list-view-pf-dnd .list-group-item-header {
+  margin-left: -10px;
+}
+.list-view-pf-dnd .list-group-item-header:before {
+  background-image: linear-gradient(to bottom, #0088ce 60%, #fff 0%);
+  background-position: left;
+  background-repeat: repeat-y;
+  background-size: 2px 5px;
+  border: 4px solid #0088ce;
+  border-color: #00659c;
+  content: "";
+  height: 55px;
+  left: 4px;
+  position: absolute;
+  top: 5px;
+  width: 10px;
+}
+.list-view-pf-dnd-drag-items {
+  display: none;
 }
 .login-pf {
   height: 100%;
@@ -6763,6 +6849,9 @@ table.dataTable th:active {
   border: none;
   left: 0;
   right: 0;
+}
+.wizard-pf-contents textarea {
+  resize: vertical;
 }
 /* styles the content of a review page */
 .wizard-pf-review-steps {

@@ -66,10 +66,12 @@
 .content-view-pf-pagination {
   background-color: @table-bg-accent;
   border: 1px solid @table-border-color;
-  border-top: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  &.table-view-pf-pagination {
+    border-top: none;
+  }
   .form-group {
     align-items: baseline;
     display: flex;

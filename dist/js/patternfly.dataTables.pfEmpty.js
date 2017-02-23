@@ -51,9 +51,9 @@
  *     data: null,
  *     dom: "t",
  *     pfConfig: {
- *       emptyStateSelector: "#{{include.emptyStateId}}",
+ *       emptyStateSelector: "#emptyState1",
  *       ...
- *       toolbarSelector: "#{{include.toolbarId}}"
+ *       toolbarSelector: "#toolbar1"
  *     }
  *   });
  *   dt.table().pfEmpty.updateState(); // Optional API to force update
@@ -107,6 +107,7 @@
     ctx._pfEmpty = {};
     ctx._pfEmpty.emptyState = $(opts.emptyStateSelector); // Empty state (Blank slate)
     ctx._pfEmpty.isEmptyState = false; // Flag indicating DatTable entered an empty state
+    ctx._pfEmpty.pagination = $(opts.paginationSelector); // Pagination
     ctx._pfEmpty.tbody = $("tbody", dt.table().container()); // Table body
     ctx._pfEmpty.thead = $("thead", dt.table().container()); // Table head
     ctx._pfEmpty.toolbarActions = $(ACTIONS_SELECTOR, opts.toolbarSelector); // Toolbar actions
@@ -156,6 +157,10 @@
     if (ctx._pfEmpty.toolbarResults !== undefined && ctx._pfEmpty.toolbarResults.length !== 0) {
       ctx._pfEmpty.toolbarResults.children().addClass("hidden");
     }
+    // Hide pagination
+    if (ctx._pfEmpty.pagination !== undefined && ctx._pfEmpty.pagination.length !== 0) {
+      ctx._pfEmpty.pagination.addClass("hidden");
+    }
     // Enable on empty
     if (ctx._pfEmpty.enableOnEmpty !== undefined) {
       $(ctx._pfEmpty.enableOnEmpty).prop("disabled", false);
@@ -198,6 +203,10 @@
     // Show results container
     if (ctx._pfEmpty.toolbarResults !== undefined && ctx._pfEmpty.toolbarResults.length !== 0) {
       ctx._pfEmpty.toolbarResults.children().removeClass("hidden");
+    }
+    // Show pagination
+    if (ctx._pfEmpty.pagination !== undefined && ctx._pfEmpty.pagination.length !== 0) {
+      ctx._pfEmpty.pagination.removeClass("hidden");
     }
   }
 

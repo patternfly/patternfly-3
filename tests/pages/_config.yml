@@ -1,5 +1,6 @@
 # Site settings
 alert-message: ' and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.'
+baseurl: '.'
 category-list: [Widgets, Charts, Layouts, Navigation]
 company: PatternFly
 navbar-pf-navbar-brand-icon: true

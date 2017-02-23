@@ -35,7 +35,7 @@
     <script src="../../dist/js/patternfly.dataTables.pfFilter.js"></script>
     <script src="../../dist/js/patternfly.dataTables.pfResize.js"></script>
     <script src="../../dist/js/patternfly.dataTables.pfSelect.js"></script>
-    <script src="../../dist/js/patternfly.min.js"></script>
+    <script src="./../../dist/js/patternfly.min.js"></script>
   </head>
   <div class="toast-notifications-list-pf">
     <div class="toast-pf alert alert-warning alert-dismissable">
@@ -57,7 +57,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/">
-          <img src="../../dist/img/brand.svg" alt="PatternFly Enterprise Application" />
+          <img src="./../../dist/img/brand.svg" alt="PatternFly Enterprise Application" />
         </a>
       </div>
       <div class="collapse navbar-collapse navbar-collapse-1">
@@ -138,6 +138,9 @@
           </li>
           <li>
             <a href="cards.html">Cards</a>
+          </li>
+          <li>
+            <a href="pagination-card-view.html">Pagination - Card View</a>
           </li>
         </ul>
       </div>
@@ -242,11 +245,11 @@
   </thead>
 </table>
 
-<form class="content-view-pf-pagination table-view-pf-pagination clearfix">
+<form class="content-view-pf-pagination table-view-pf-pagination clearfix" id="pagination1">
   <div class="form-group">
     <select class="selectpicker pagination-pf-pagesize">
       <option value="6">6</option>
-      <option value="10">10</option>
+      <option value="10" >10</option>
       <option value="15" selected="selected">15</option>
       <option value="25">25</option>
       <option value="50">50</option>
@@ -256,14 +259,15 @@
   <div class="form-group">
     <span><span class="pagination-pf-items-current">1-15</span> of <span class="pagination-pf-items-total">75</span></span>
     <ul class="pagination pagination-pf-back">
-      <li class="disabled"><a href="#"><span class="i fa fa-angle-double-left"></span></a></li>
-      <li class="disabled"><a href="#"><span class="i fa fa-angle-left"></span></a></li>
+      <li class="disabled"><a href="#" title="First Page"><span class="i fa fa-angle-double-left"></span></a></li>
+      <li class="disabled"><a href="#" title="Previous Page"><span class="i fa fa-angle-left"></span></a></li>
     </ul>
-    <input class="pagination-pf-page" type="text" value="1" />
+    <label for="pagination1-page" class="sr-only">Current Page</label>
+    <input class="pagination-pf-page" type="text" value="1" id="pagination1-page"/>
     <span>of <span class="pagination-pf-pages">5</span></span>
     <ul class="pagination pagination-pf-forward">
-      <li><a href="#"><span class="i fa fa-angle-right"></span></a></li>
-      <li><a href="#"><span class="i fa fa-angle-double-right"></span></a></li>
+      <li><a href="#" title="Next Page"><span class="i fa fa-angle-right"></span></a></li>
+      <li><a href="#" title="Last Page"><span class="i fa fa-angle-double-right"></span></a></li>
     </ul>
   </div>
 </form>
@@ -402,6 +406,240 @@ var dataSet = [{
   platforms: "Win 95+ / OSX.1+",
   version: "1.2",
   grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.3",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1.3",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.4",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1.4",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.5",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1.5",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.6",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1.6",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.7",
+  platforms: "Win 98+ / OSX.1+",
+  version: "1.7",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.8",
+  platforms: "Win 98+ / OSX.1+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Seamonkey 1.1",
+  platforms: "Win 98+ / OSX.2+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Epiphany 2.20",
+  platforms: "Gnome",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Webkit",
+  browser: "Safari 1.2",
+  platforms: "OSX.3",
+  version: "125.5",
+  grade: "A"
+}, {
+  engine: "Webkit",
+  browser: "Safari 1.3",
+  platforms: "OSX.3",
+  version: "312.8",
+  grade: "A"
+}, {
+  engine: "Webkit",
+  browser: "Safari 2.0",
+  platforms: "OSX.4+",
+  version: "419.3",
+  grade: "A"
+}, {
+  engine: "Webkit",
+  browser: "Safari 3.0",
+  platforms: "OSX.4+",
+  version: "522.1",
+  grade: "A"
+}, {
+  engine: "Webkit",
+  browser: "OmniWeb 5.5",
+  platforms: "OSX.4+",
+  version: "420",
+  grade: "A"
+}, {
+  engine: "Webkit",
+  browser: "iPod Touch / iPhone",
+  platforms: "iPod",
+  version: "420.1",
+  grade: "A"
+}, {
+  engine: "Webkit",
+  browser: "S60",
+  platforms: "S60",
+  version: "413",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Opera 7.0",
+  platforms: "Win 95+ / OSX.1+",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Opera 7.5",
+  platforms: "Win 95+ / OSX.2+",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Opera 8.0",
+  platforms: "Win 95+ / OSX.2+",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Opera 8.5",
+  platforms: "Win 95+ / OSX.2+",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Opera 9.0",
+  platforms: "Win 95+ / OSX.3+",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Opera 9.2",
+  platforms: "Win 88+ / OSX.3+",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Opera 9.5",
+  platforms: "Win 88+ / OSX.3+",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Opera for Wii",
+  platforms: "Wii",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Nokia N800",
+  platforms: "N800",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Presto",
+  browser: "Nintendo DS browser",
+  platforms: "Nintendo DS",
+  version: "8.5",
+  grade: "C/A<sup>1</sup>"
+}, {
+  engine: "KHTML",
+  browser: "Konqureror 3.1",
+  platforms: "KDE 3.1",
+  version: "3.1",
+  grade: "C"
+}, {
+  engine: "KHTML",
+  browser: "Konqureror 3.3",
+  platforms: "KDE 3.3",
+  version: "3.3",
+  grade: "A"
+}, {
+  engine: "KHTML",
+  browser: "Konqureror 3.5",
+  platforms: "KDE 3.5",
+  version: "3.5",
+  grade: "A"
+}, {
+  engine: "Tasman",
+  browser: "Internet Explorer 4.5",
+  platforms: "Mac OS 8-9",
+  version: "-",
+  grade: "X"
+}, {
+  engine: "Tasman",
+  browser: "Internet Explorer 5.1",
+  platforms: "Mac OS 7.6-9",
+  version: "1",
+  grade: "C"
+}, {
+  engine: "Tasman",
+  browser: "Internet Explorer 5.2",
+  platforms: "Mac OS 8-X",
+  version: "1",
+  grade: "C"
+}, {
+  engine: "Misc",
+  browser: "NetFront 3.1",
+  platforms: "Embedded devices",
+  version: "-",
+  grade: "C"
+}, {
+  engine: "Misc",
+  browser: "NetFront 3.4",
+  platforms: "Embedded devices",
+  version: "-",
+  grade: "A"
+}, {
+  engine: "Misc",
+  browser: "Dillo 0.8",
+  platforms: "Embedded devices",
+  version: "-",
+  grade: "X"
+}, {
+  engine: "Misc",
+  browser: "Links",
+  platforms: "Text only",
+  version: "-",
+  grade: "X"
+}, {
+  engine: "Misc",
+  browser: "Lynx",
+  platforms: "Text only",
+  version: "-",
+  grade: "X"
+}, {
+  engine: "Misc",
+  browser: "IE Mobile",
+  platforms: "Windows Mobile 6",
+  version: "-",
+  grade: "C"
+}, {
+  engine: "Misc",
+  browser: "PSP browser",
+  platforms: "PSP",
+  version: "-",
+  grade: "C"
+}, {
+  engine: "Other browsers",
+  browser: "All others",
+  platforms: "-",
+  version: "-",
+  grade: "U"
 }];
 
 // DataTable Config
@@ -453,6 +691,7 @@ $("#table1").DataTable({
   order: [[ 1, 'asc' ]],
   pfConfig: {
     emptyStateSelector: "#emptyState1",
+    filterCaseInsensitive: true,
     filterCols: [
       null,
       {
@@ -473,6 +712,7 @@ $("#table1").DataTable({
         placeholder: "Filter By CSS Grade..."
       }
     ],
+    paginationSelector: "#pagination1",
     toolbarSelector: "#toolbar1",
     selectAllSelector: 'th:first-child input[type="checkbox"]'
   },
