@@ -3090,6 +3090,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-resource-pool:before {
   content: "\e90c";
 }
+.pficon-resources-almost-empty:before {
+  content: "\e91d";
+}
 .pficon-resources-almost-full:before {
   content: "\e912";
 }
