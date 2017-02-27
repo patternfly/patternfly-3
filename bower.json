@@ -38,5 +38,8 @@
     "moment": "~2.14.1",
     "patternfly-bootstrap-combobox": "~1.1.7",
     "patternfly-bootstrap-treeview": "~2.1.0"
+  },
+  "resolutions": {
+    "jquery": ">=1.8.3"
   }
 }
