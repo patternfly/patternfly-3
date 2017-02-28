@@ -2,36 +2,38 @@
 // List View
 // --------------------------------------------------
 
-.list-pf-item {
-  .list-group-item-heading {
-    font-size: @font-size-h3;
-    small {
-      display: block;
-      font-size: (@font-size-base * .8);
-      font-weight: 400;
-    }
-    @media (min-width: @screen-md-min) {
-      flex:     1 0 calc(~"25% - 20px");
-      float: left; // IE9 fallback
-      font-size: @font-size-base;
-      margin: 0 (@grid-gutter-width/2) 0 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: calc(~"25% - 20px"); // IE9 fallback
-    }
+.list-pf-item__heading {
+  font-size: @font-size-h3;
+  font-weight: 600;
+  small {
+    display: block;
+    font-size: (@font-size-base * .8);
+    font-weight: 400;
   }
-  .list-group-item-text {
-    color: currentColor !important; // to overwrite color change when active.
-    margin-bottom: 10px;
-    @media (min-width: @screen-md-min) {
-      flex:     1 0 auto; // it covers whats left from the title
-      float: left; // IE9 fallback
-      margin: 0 @grid-gutter-width 0 0;
-      width: calc(~"75% - 40px"); // IE9 fallback
-    }
+  @media (min-width: @screen-md-min) {
+    flex:     1 0 calc(~"25% - 20px");
+    float: left; // IE9 fallback
+    font-size: @font-size-base;
+    font-weight: 600;
+    margin: 0 (@grid-gutter-width/2) 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(~"25% - 20px"); // IE9 fallback
   }
 }
+.list-pf-item__text {
+  color: currentColor !important; // to overwrite color change when active.
+  margin-bottom: 10px;
+  @media (min-width: @screen-md-min) {
+    flex:     1 0 auto; // it covers whats left from the title
+    float: left; // IE9 fallback
+    margin: 0 @grid-gutter-width 0 0;
+    width: calc(~"75% - 40px"); // IE9 fallback
+  }
+}
+
+
 .list-view-pf-actions {
   float: right; // IE9 fallback
   margin-left: (@grid-gutter-width/2);
@@ -193,6 +195,109 @@
   }
 }
 .list-view-pf-stacked {
+  .list-pf-item__heading {
+    float: none; // IE9 fallback
+    font-size: @font-size-h3;
+    line-height: 1.2em;
+    margin-bottom: 5px;
+    margin-right: @grid-gutter-width;
+    width: auto; // IE9 fallback
+  }
+  .list-pf-item__text {
+    float: none;
+    width: auto;
+  }
+}
+.list-view-pf-view {
+  background: @list-group-top-border;
+  border: none;
+  margin-top: 30px;
+}
+
+
+// This section will not be needed once all examples are converted to list-pf
+.list-group.list-view-pf {
+  .list-group-item {
+    align-items: flex-start;
+    background-clip: padding-box;
+    border-color: transparent #fff;
+    border-style: solid;
+    border-width: 1px;
+    .clearfix(); //IE9 fallback
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+    padding-top: 0;
+    &.list-view-pf-expand-active {
+      background-color: @list-view-hover-bg;
+    }
+    &.active {
+      color: @list-group-link-color;
+      background-color: @list-view-active-bg;
+      background-clip: border-box;
+      border-color: @color-pf-blue-300 transparent transparent;
+      z-index:auto;
+    }
+    &:hover {
+      background-color: @list-view-hover-bg;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+    &.list-view-pf-expand-active {
+      border: solid 1px @list-group-active-border;
+      &:first-child {
+        border-top-color: @color-pf-blue-300;
+      }
+    }
+    &:first-child {
+      border-top: 1px solid transparent;
+    }
+    @media (min-width: @screen-md-min) {
+      align-items: center;
+    }
+  }
+  .list-group-item-heading {
+    font-size: @font-size-h3;
+    small {
+      display: block;
+      font-size: (@font-size-base * .8);
+      font-weight: 400;
+    }
+///// something is amiss here
+    @media (min-width: @screen-md-min) {
+      flex:     1 0 calc(~"25% - 20px");
+      float: left; // IE9 fallback
+      ////////font-size: @font-size-base;
+      margin: 0 (@grid-gutter-width/2) 0 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: calc(~"25% - 20px"); // IE9 fallback
+    }
+  }
+  .list-group-item-text {
+    color: currentColor !important; // to overwrite color change when active.
+    margin-bottom: 10px;
+    @media (min-width: @screen-md-min) {
+      flex:     1 0 auto; // it covers whats left from the title
+      float: left; // IE9 fallback
+      margin: 0 @grid-gutter-width 0 0;
+      width: calc(~"75% - 40px"); // IE9 fallback
+    }
+  }
+
+  .list-view-pf-actions,
+  .list-view-pf-checkbox,
+  .list-view-pf-main-info {
+    margin-top: (@grid-gutter-width/2);
+    margin-bottom: (@grid-gutter-width/2);
+  }
+
+}
+// end of section that will not be needed once all examples are converted to list-pf
+
+// should not be needed once all examples are converted to list-pf
+.list-view-pf-stacked {
   .list-group-item-heading {
     float: none; // IE9 fallback
     font-size: @font-size-h3;
@@ -211,6 +316,7 @@
   border: none;
   margin-top: 30px;
 }
+
 .list-group-item-header {
   box-sizing: content-box;
   cursor: pointer;
@@ -251,4 +357,5 @@
   position: relative;
   width: 100%;
 }
+// end of section that should not be needed once all examples are converted to list-pf
 
