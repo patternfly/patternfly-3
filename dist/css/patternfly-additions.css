@@ -5429,6 +5429,20 @@ table.dataTable th:active {
   min-height: 40px;
   line-height: 40px;
 }
+.table-view-pf-colvis-menu > li {
+  padding: 5px 10px;
+}
+.table-view-pf-colvis-menu > li:hover {
+  background-color: #def3ff;
+}
+.table-view-pf-colvis-menu > li > input {
+  margin-top: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.table-view-pf-colvis-menu > li > label {
+  margin-bottom: 0;
+}
 .table-view-pf-actions {
   background-color: #f1f1f1;
   height: 100%;
