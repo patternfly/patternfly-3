@@ -40,6 +40,6 @@
     "patternfly-bootstrap-treeview": "~2.1.0"
   },
   "resolutions": {
-    "jquery": ">=1.8.3"
+    "jquery": "~2.1.4"
   }
 }
