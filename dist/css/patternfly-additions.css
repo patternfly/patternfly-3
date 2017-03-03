@@ -2960,11 +2960,11 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-.pficon-middleware:before {
-  content: "\e917";
-}
 .pficon-add-circle-o:before {
   content: "\e61b";
+}
+.pficon-arrow:before {
+  content: "\e929";
 }
 .pficon-build:before {
   content: "\e902";
@@ -2977,6 +2977,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-blueprint:before {
   content: "\e915";
+}
+.pficon-chat:before {
+  content: "\e928";
 }
 .pficon-close:before {
   content: "\e60b";
@@ -2994,7 +2997,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   content: "\e621";
 }
 .pficon-cpu:before {
-  content: "\e905";
+  content: "\e927";
 }
 .pficon-degraded:before {
   content: "\e91b";
@@ -3011,9 +3014,12 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-enterprise:before {
   content: "\e906";
 }
+.pficon-equalizer:before {
+  content: "\e906";
+}
 .pficon-error-circle-o:before {
   color: #cc0000;
-  content: "\e61d";
+  content: "\e926";
 }
 .pficon-export:before {
   content: "\e616";
@@ -3047,10 +3053,22 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   content: "\e615";
 }
 .pficon-info:before {
-  content: "\e604";
+  content: "\e925";
+}
+.pficon-key:before {
+  content: "\e924";
+}
+.pficon-locked:before {
+  content: "\e923";
+}
+.pficon-unlocked:before {
+  content: "\e922";
 }
 .pficon-memory:before {
   content: "\e908";
+}
+.pficon-middleware:before {
+  content: "\e917";
 }
 .pficon-network:before {
   content: "\e909";
@@ -3066,20 +3084,23 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   content: "\e914";
 }
 .pficon-project:before {
-  content: "\e622";
+  content: "\e905";
 }
 .pficon-rebalance:before {
   content: "\e91c";
 }
 .pficon-refresh:before,
 .pficon-restart:before {
-  content: "\e613";
+  content: "\e617";
 }
 .pficon-regions:before {
   content: "\e90a";
 }
 .pficon-registry:before {
   content: "\e623";
+}
+.pficon-remove:before {
+  content: "\e611";
 }
 .pficon-replicator:before {
   content: "\e624";
@@ -3111,6 +3132,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-screen:before {
   content: "\e600";
 }
+.pficon-search:before {
+  content: "\e921";
+}
 .pficon-server:before {
   content: "\e90d";
 }
@@ -3123,6 +3147,12 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-settings:before {
   content: "\e610";
 }
+.pficon-spinner:before {
+  content: "\e614";
+}
+.pficon-spinner2:before {
+  content: "\e613";
+}
 .pficon-storage-domain:before {
   content: "\e90e";
 }
@@ -3130,7 +3160,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   content: "\e916";
 }
 .pficon-thumb-tack-o:before {
-  content: "\e609";
+  content: "\e920";
 }
 .pficon-topology:before {
   content: "\e608";
@@ -3142,10 +3172,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   content: "\e901";
 }
 .pficon-user:before {
-  content: "\e60e";
+  content: "\e91e";
 }
 .pficon-users:before {
-  content: "\e60f";
+  content: "\e91f";
 }
 .pficon-virtual-machine:before {
   content: "\e90f";
@@ -3155,7 +3185,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-warning-triangle-o:before {
   color: #ec7a08;
-  content: "\e61c";
+  content: "\e913";
 }
 .pficon-zone:before {
   content: "\e911";
