@@ -1,0 +1,50 @@
+//
+// PatternFly List
+// --------------------------------------------------
+
+.list-pf {
+  border-bottom: 1px solid @list-pf-border-color;
+}
+
+.list-pf-item {
+  border-color: @list-pf-border-color;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom: none;
+  &:hover {
+    background-color: @list-pf-hover-background-color;
+  }
+  &.active {
+    background-color: @list-pf-header-background-color;
+    border-color: @list-pf-active-border-color;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+}
+
+.list-pf-expansion {
+  background-color: #fff;
+}
+
+.list-pf-container {
+  align-items: center;
+  display: flex;
+  padding: @list-pf-padding;
+  .list-pf-expansion & {
+    border-top: 1px solid @list-pf-active-border-color;
+  }
+}
+
+.list-pf-chevron {
+  margin-right: 5px;
+  + .list-pf-content {
+    border-left: 1px solid @list-pf-active-border-color;
+    padding-left: 15px;
+  }
+  .fa {
+    font-size: 22px;
+    width: 20px;
+  }
+}
