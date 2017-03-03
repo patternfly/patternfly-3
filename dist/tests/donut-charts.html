@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en-us" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+  <head>
+    <title>Donut Charts - PatternFly</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../dist/img/favicon.ico">
+    <!-- iPad retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../dist/img/apple-touch-icon-precomposed-152.png">
+    <!-- iPad retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../dist/img/apple-touch-icon-precomposed-144.png">
+    <!-- iPad non-retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../dist/img/apple-touch-icon-precomposed-76.png">
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../dist/img/apple-touch-icon-precomposed-72.png">
+    <!-- iPhone 6 Plus icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../dist/img/apple-touch-icon-precomposed-180.png">
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../dist/img/apple-touch-icon-precomposed-114.png">
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/img/apple-touch-icon-precomposed-57.png">
+    <link rel="stylesheet" href="../../dist/css/patternfly.min.css" >
+    <link rel="stylesheet" href="../../dist/css/patternfly-additions.min.css" >
+      <link href="tests.css" rel="stylesheet" media="screen, print">
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="./../../dist/js/patternfly.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Donut Charts</h1>
+      </div>
+      <div class="alert alert-warning">
+        <span class="pficon pficon-warning-triangle-o"></span>
+        These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a>, <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://c3js.org/">http://c3js.org/</a>
+      </div>
+      <hr>
+<style>
+  .example-donut-chart, .example-donut-chart-right-legend, .example-donut-chart-bottom-legend {
+    width: 440px;
+  }
+  .example-donut-chart {
+    margin-left: 10px;
+  }
+  .example-donut-chart-right-legend {
+    margin-left: 28px;
+  }
+  .example-donut-chart-bottom-legend {
+    margin-left: -25px;
+  }
+  .example-donut-chart-mini {
+    margin-left: 28px;
+  }
+  .example-donut-chart-utilization {
+    width: 220px;
+    margin-left: 10px;
+  }
+</style>
+<div>
+  <h2>Donut Chart - Utilization</h2>
+  <div>
+    <div id="utilizationDonutChart" class="example-donut-chart-utilization"></div>
+<script>
+  var c3ChartDefaults = $().c3ChartDefaults();
+  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
+  utilizationDonutChartConfig.bindto = '#utilizationDonutChart';
+  utilizationDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 60],
+      ["Available", 40]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  utilizationDonutChartConfig.size = {
+    width: 200,
+    height: 171
+  };
+
+  utilizationDonutChartConfig.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+  var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
+  $().pfSetDonutChartTitle("#utilizationDonutChart", "60", "MHz Used");
+</script>
+
+  </div>
+  <h2>Donut Chart - Relationship to a Whole</h2>
+  <div>
+    <div id="donut-chart-no-legend" class="example-donut-chart"></div>
+<div id="donut-chart-right-legend" class="example-donut-chart-right-legend"></div>
+<div id="donut-chart-bottom-legend" class="example-donut-chart-bottom-legend"></div>
+<script>
+  var c3ChartDefaults = $().c3ChartDefaults();
+
+  var donutData = {
+    type : 'donut',
+    colors: {
+      Cats: $.pfPaletteColors.blue,
+      Hamsters: $.pfPaletteColors.green,
+      Fish: $.pfPaletteColors.orange,
+      Dogs: $.pfPaletteColors.red
+    },
+    columns: [
+      ['Dogs', 2],
+      ['Cats', 2],
+      ['Fish', 3],
+      ['Hamsters', 1]
+    ],
+    onclick: function (d, i) { console.log("onclick", d, i); },
+    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+  };
+
+  // Donut Chart without Legend
+  var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
+  donutChartConfig.bindto = '#donut-chart-no-legend';
+  donutChartConfig.tooltip = {show: true};
+  donutChartConfig.data = donutData;
+  donutChartConfig.size = {
+    width: 200,
+    height: 171
+  };
+  donutChartConfig.tooltip = {
+    contents: $().pfDonutTooltipContents
+  };
+
+  var donutChartNoLegend = c3.generate(donutChartConfig);
+  $().pfSetDonutChartTitle("#donut-chart-no-legend", "8", "Animals");
+
+  // Right Legend
+  var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
+  donutChartRightConfig.bindto = '#donut-chart-right-legend';
+  donutChartRightConfig.tooltip = {show: true};
+  donutChartRightConfig.data = donutData;
+  donutChartRightConfig.legend = {
+    show: true,
+    position: 'right'
+  };
+  donutChartRightConfig.size = {
+    width: 251,
+    height: 161
+  };
+  donutChartRightConfig.tooltip = {
+    contents: $().pfDonutTooltipContents
+  };
+
+  var donutChartRightLegend = c3.generate(donutChartRightConfig);
+  $().pfSetDonutChartTitle("#donut-chart-right-legend", "8", "Animals");
+
+  // Donut Chart Bottom Legend
+  var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
+  donutChartBottomConfig.bindto = '#donut-chart-bottom-legend';
+  donutChartBottomConfig.tooltip = {show: true};
+  donutChartBottomConfig.data = donutData;
+  donutChartBottomConfig.legend = {
+    show: true,
+    position: 'bottom'
+  };
+  donutChartBottomConfig.size = {
+    width: 271,
+    height: 191
+  };
+  donutChartBottomConfig.tooltip = {
+    contents: $().pfDonutTooltipContents
+  };
+
+  var donutChartBottomLegend = c3.generate(donutChartBottomConfig);
+  $().pfSetDonutChartTitle("#donut-chart-bottom-legend", "8", "Animals");
+</script>
+
+  </div>
+  <h2>Donut Chart - Small</h2>
+  <div>
+    <div id="smallDonutChart" class="donut-chart-pf example-donut-chart-mini"></div>
+<div style="text-align: center; width: 220px;">Animals</div>
+<script>
+  var c3ChartDefaults = $().c3ChartDefaults();
+
+  var donutData = {
+    type : 'donut',
+    colors: {
+      Cats: $.pfPaletteColors.blue,
+      Hamsters: $.pfPaletteColors.green,
+      Fish: $.pfPaletteColors.orange,
+      Dogs: $.pfPaletteColors.red
+    },
+    columns: [
+      ['Dogs', 2],
+      ['Cats', 2],
+      ['Fish', 3],
+      ['Hamsters', 1]
+    ],
+    onclick: function (d, i) { console.log("onclick", d, i); },
+    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+  };
+
+  // Small Donut Chart
+  var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
+  donutChartSmallConfig.bindto = '#smallDonutChart';
+  donutChartSmallConfig.tooltip = {show: true};
+  donutChartSmallConfig.data = donutData;
+  donutChartSmallConfig.legend = {
+    show: true,
+    position: 'right'
+  };
+  donutChartSmallConfig.size = {
+    width: 250,
+    height: 115
+  };
+  donutChartSmallConfig.tooltip = {
+    contents: $().pfDonutTooltipContents
+  };
+
+  var donutChartSmall = c3.generate(donutChartSmallConfig);
+</script>
+
+  </div>
+</div>
+
+    </div><!-- /container -->
+  </body>
+</html>
