@@ -5621,6 +5621,11 @@ table.dataTable th:active {
 .toast-pf .toast-pf-action {
   margin-left: 15px;
 }
+.toast-pf .dropdown-kebab-pf .btn-link {
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: text-bottom;
+}
 @media (min-width: 992px) {
   .toast-pf {
     display: inline-block;
