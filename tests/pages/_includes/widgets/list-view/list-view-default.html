@@ -1,7 +1,166 @@
-<div class="list-pf list-view-pf">
-  <div class="list-pf-item">
+<style>
+  .classbxr,
+  .classbxr * {
+    /*width: auto !important;*/
+    border: 1px solid cornflowerblue !important;
+    padding: .5em .25em .25em .25em !important;
+    margin: .5em .25em .25em .25em !important;
+    position: relative; }
+  .classbxr:before,
+  .classbxr *:before {
+    content: "." attr(class);
+    font-size: xx-small;
+    background-color: white;
+    color: cornflowerblue;
+    position: absolute;
+    top: -1.5ex;
+    white-space: nowrap;
+    font-family: sans-serif; }
+  .classbxr div,
+  .classbxr * div {
+    border-color: pink !important; }
+  .classbxr div div,
+  .classbxr * div div {
+    border-color: purple !important; }
+  .classbxr div div div,
+  .classbxr * div div div {
+    border-color: green !important; }
+  .classbxr div div div div,
+  .classbxr * div div div div {
+    border-color: orange !important; }
+  .classbxr div:before,
+  .classbxr * div:before {
+    content: "div." attr(class); }
+  .classbxr span:before,
+  .classbxr * span:before {
+    content: "span." attr(class); }
+  .classbxr ul:before,
+  .classbxr * ul:before {
+    content: "ul." attr(class); }
+  .classbxr ol:before,
+  .classbxr * ol:before {
+    content: "ol." attr(class); }
+  .classbxr li:before,
+  .classbxr * li:before {
+    content: "li." attr(class); }
+  .classbxr dl:before,
+  .classbxr * dl:before {
+    content: "dl." attr(class); }
+  .classbxr dd:before,
+  .classbxr * dd:before {
+    content: "dd." attr(class); }
+  .classbxr dt:before,
+  .classbxr * dt:before {
+    content: "dt." attr(class); }
+  .classbxr p:before,
+  .classbxr * p:before {
+    content: "p." attr(class); }
+  .classbxr h1:before,
+  .classbxr * h1:before {
+    content: "h1." attr(class); }
+  .classbxr h2:before,
+  .classbxr * h2:before {
+    content: "h2." attr(class); }
+  .classbxr h3:before,
+  .classbxr * h3:before {
+    content: "h3." attr(class); }
+  .classbxr h4:before,
+  .classbxr * h4:before {
+    content: "h4." attr(class); }
+  .classbxr h5:before,
+  .classbxr * h5:before {
+    content: "h5." attr(class); }
+  .classbxr h6:before,
+  .classbxr * h6:before {
+    content: "h6." attr(class); }
+
+</style>
+
+<div class="list-pf list-pf-stacked classbxrs">
+  <div class="list-pf-item ">
     <div class="list-pf-container">
-      Custom contents go here. See&nbsp;<a href="list-pf.html"> List </a>&nbsp;for more examples.
+      <div class="list-pf-chevron">
+        <span class="fa fa-angle-right"></span>
+      </div>
+      <div class="list-pf-select">
+        <input type="checkbox">
+      </div>
+      <div class="list-pf-content ">
+        <div class="list-pf-left">
+          <span class="fa fa-plane list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>
+        </div>
+        <div class="list-pf-content-wrapper">
+          <div class="list-pf-main-content list-pf-main-content-stacked">
+
+            <div class="list-pf-title">Event One - stacked display</div>
+            <div class="list-pf-description">The following snippet of text is <a href="">rendered as link text.</a></div>
+          </div>
+          <div class="list-pf-additional-content">
+            additional content
+          </div>
+        </div>
+        <div class="list-pf-actions">
+          <button class="btn btn-default">Action</button>
+          {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight1" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+        </div>
+      </div>
     </div>
+
+    <!-- expansion --->
+    <div class="list-pf-expansion collapse">
+      <div class="list-pf-container" tabindex="0">
+        <div class="list-pf-content">
+          This is a second level section
+        </div>
+      </div> <!-- /list-pf-container -->
+    </div> <!-- /list-pf-expansion level 3 -->
+
   </div>
+
 </div>
+
+
+
+
+
+<div class="list-pf classbxrs">
+
+  <div class="list-pf-item ">
+    <div class="list-pf-container">
+      <div class="list-pf-select">
+        <input type="checkbox">
+      </div>
+      <div class="list-pf-content">
+        <div class="list-pf-left">
+          <span class="fa fa-plane list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>
+        </div>
+        <div class="list-pf-content-wrapper">
+          <div class="list-pf-main-content ">
+
+            <div class="list-pf-title">Event One - not stacked at wide widthssssssssssssssssssssssssssssssssssswwwwwwwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div>
+            <div class="list-pf-description">The following snippet of text is <a href="">rendered as link text.</a></div>
+          </div>
+          <div class="list-pf-additional-content">
+            additional content
+          </div>
+        </div>
+        <div class="list-pf-actions">
+          <button class="btn btn-default">Action</button>
+          {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight200" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+        </div>
+      </div>
+    </div>
+
+    <!-- expansion --->
+    <div class="list-pf-expansion collapse">
+      <div class="list-pf-container" tabindex="0">
+        <div class="list-pf-content">
+          This is a second level section
+        </div>
+      </div> <!-- /list-pf-container -->
+    </div> <!-- /list-pf-expansion level 3 -->
+
+  </div>
+
+</div>
+

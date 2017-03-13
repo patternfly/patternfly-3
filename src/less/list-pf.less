@@ -8,8 +8,8 @@
 
 .list-pf-item {
   border-color: @list-pf-border-color;
-  border-left-color: #fff;
-  border-right-color: #fff;
+  border-left-color: @color-pf-white;
+  border-right-color: @color-pf-white;
   border-style: solid;
   border-width: 1px;
   border-bottom: none;
@@ -25,26 +25,139 @@
 }
 
 .list-pf-expansion {
-  background-color: #fff;
+  background-color: @color-pf-white;
 }
 
 .list-pf-container {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   padding: @list-pf-padding;
   .list-pf-expansion & {
     border-top: 1px solid @list-pf-active-border-color;
   }
+  @media (min-width: @screen-md-min) {
+    .list-pf:not(.list-pf-stacked) & {
+      align-items: center;
+    }
+  }
 }
 
-.list-pf-chevron {
-  margin-right: 5px;
+.list-pf-chevron,
+.list-pf-select {
+  margin-right: 10px;
   + .list-pf-content {
     border-left: 1px solid @list-pf-active-border-color;
-    padding-left: 15px;
+    padding-left: (@grid-gutter-width/2);
   }
   .fa {
     font-size: 22px;
-    width: 20px;
   }
+}
+///////////////////////////////////////////////////////////////
+
+.list-pf-content {
+  align-items: flex-start;
+  display:flex;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  @media (min-width: @screen-md-min) {
+    align-items: center;
+  }
+  .list-pf-stacked & {
+    align-items: flex-start;
+  }
+}
+
+.list-pf-left {
+  flex-grow: 0;
+  margin-left: 0;
+  margin-right: (@grid-gutter-width/2);
+}
+.list-pf-icon {
+  align-items: center;
+  display:flex;
+  justify-content: center;
+}
+.list-pf-icon-bordered {
+  border-radius: 50%;
+  border: 2px solid @list-view-accented-border;
+}
+.list-pf-icon-small {
+  font-size: 1.4em;
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+}
+
+
+.list-pf-content-wrapper {
+  display:flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  // when at larger breakpoints, don't stack the contents and add some space between the children
+  @media (min-width: @screen-md-min) {
+    flex-wrap: nowrap;
+    & > * + * {
+      margin-left: @grid-gutter-width;
+    }
+  }
+}
+
+.list-pf-main-content {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  > * {
+    width: 100%;
+  }
+}
+
+.list-pf:not(.list-pf-stacked) .list-pf-main-content {
+  @media (min-width: @screen-md-min) {
+    &:not(.list-pf-main-content-stacked) {
+      flex-wrap: nowrap;
+      width: auto;
+      & > * + * {
+        margin-left: @grid-gutter-width;
+      }
+    }
+  }
+}
+
+.list-pf-title {
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+.list-pf-description {
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.list-pf-additional-content {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.list-pf-actions {
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 0;
+  margin-left: @grid-gutter-width;
+  //by default, space contents
+  & > * + * {
+    margin-left: (@grid-gutter-width / 4);
+  }
+
 }
