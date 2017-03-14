@@ -2646,7 +2646,20 @@ output {
 .form-control::-webkit-input-placeholder {
   color: #999;
 }
-.form-control::placeholder {
+.form-control:-moz-placeholder {
+  color: #999;
+  font-style: italic;
+}
+.form-control::-moz-placeholder {
+  color: #999;
+  font-style: italic;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #999;
+  font-style: italic;
+}
+.form-control::-webkit-input-placeholder {
   color: #999;
   font-style: italic;
 }
