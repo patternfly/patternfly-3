@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en-us" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+  <head>
+    <title>Tabs - PatternFly</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../dist/img/favicon.ico">
+    <!-- iPad retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../dist/img/apple-touch-icon-precomposed-152.png">
+    <!-- iPad retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../dist/img/apple-touch-icon-precomposed-144.png">
+    <!-- iPad non-retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../dist/img/apple-touch-icon-precomposed-76.png">
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../dist/img/apple-touch-icon-precomposed-72.png">
+    <!-- iPhone 6 Plus icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../dist/img/apple-touch-icon-precomposed-180.png">
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../dist/img/apple-touch-icon-precomposed-114.png">
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/img/apple-touch-icon-precomposed-57.png">
+    <link rel="stylesheet" href="../../dist/css/patternfly.min.css" >
+    <link rel="stylesheet" href="../../dist/css/patternfly-additions.min.css" >
+      <link href="tests.css" rel="stylesheet" media="screen, print">
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./../../dist/js/patternfly.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Tabs</h1>
+      </div>
+      <div class="alert alert-warning">
+        <span class="pficon pficon-warning-triangle-o"></span>
+        These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+      </div>
+      <hr>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li class="active"><a href="#">Messages</a></li>
+      </ul>
+      <h3>Justified</h3>
+      <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs nav-justified">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs nav-justified">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li class="active"><a href="#">Messages</a></li>
+      </ul>
+      <h3>Tabs with dropdowns</h3>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Help</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">Help</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu pull-right" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Help</a></li>
+        <li class="active dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>PatternFly Examples</h2>
+      <ul class="nav nav-tabs nav-tabs-pf">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs nav-tabs-pf">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs nav-tabs-pf">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li class="active"><a href="#">Messages</a></li>
+      </ul>
+      <h3>Justified</h3>
+      <ul class="nav nav-tabs nav-tabs-pf nav-justified">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs nav-tabs-pf nav-justified">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs nav-tabs-pf nav-justified">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li class="active"><a href="#">Messages</a></li>
+      </ul>
+      <h3>Tabs with dropdowns</h3>
+      <ul class="nav nav-tabs nav-tabs-pf">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Help</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs nav-tabs-pf">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">Help</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu pull-right" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs nav-tabs-pf">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Help</a></li>
+        <li class="active dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h3>.nav-tabs + .nav-tabs-pf</h3>
+      <p class="text-info">
+        <strong>Note:</strong> the markup semantics used here are sub-optimal in order to easily achieve a responsive layout.
+      </p>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Tab One</a></li>
+        <li><a href="#">Tab Two</a></li>
+        <li><a href="#">Tab Three</a></li>
+        <li><a href="#">Tab Four</a></li>
+        <li><a href="#">Tab Five</a></li>
+        <li><a href="#">Tab Six</a></li>
+        <li><a href="#">Tab Seven</a></li>
+      </ul>
+      <ul class="nav nav-tabs nav-tabs-pf">
+        <li class="active"><a href="#">Secondary Tab One</a></li>
+        <li><a href="#">Secondary Tab Two</a></li>
+        <li><a href="#">Secondary Tab Three</a></li>
+        <li><a href="#">Secondary Tab Four</a></li>
+        <li><a href="#">Secondary Tab Five</a></li>
+        <li><a href="#">Secondary Tab Six</a></li>
+        <li><a href="#">Secondary Tab Seven</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Tab One</a></li>
+        <li><a href="#">Tab Two</a></li>
+        <li><a href="#">Tab Three</a></li>
+        <li><a href="#">Tab Four</a></li>
+        <li><a href="#">Tab Five</a></li>
+        <li><a href="#">Tab Six</a></li>
+        <li><a href="#">Tab Seven</a></li>
+      </ul>
+      <ul class="nav nav-tabs nav-tabs-pf">
+        <li><a href="#">Secondary Tab One</a></li>
+        <li class="active"><a href="#">Secondary Tab Two</a></li>
+        <li><a href="#">Secondary Tab Three</a></li>
+        <li><a href="#">Secondary Tab Four</a></li>
+        <li><a href="#">Secondary Tab Five</a></li>
+        <li><a href="#">Secondary Tab Six</a></li>
+        <li><a href="#">Secondary Tab Seven</a></li>
+      </ul>
+      <br />
+      <ul class="nav nav-tabs">
+        <li><a href="#">Tab One</a></li>
+        <li class="active"><a href="#">Tab Two</a></li>
+        <li><a href="#">Tab Three</a></li>
+        <li><a href="#">Tab Four</a></li>
+        <li><a href="#">Tab Five</a></li>
+        <li><a href="#">Tab Six</a></li>
+        <li><a href="#">Tab Seven</a></li>
+      </ul>
+      <ul class="nav nav-tabs nav-tabs-pf">
+        <li><a href="#">Secondary Tab One</a></li>
+        <li class="active"><a href="#">Secondary Tab Two</a></li>
+        <li><a href="#">Secondary Tab Three</a></li>
+        <li><a href="#">Secondary Tab Four</a></li>
+        <li><a href="#">Secondary Tab Five</a></li>
+        <li><a href="#">Secondary Tab Six</a></li>
+        <li><a href="#">Secondary Tab Seven</a></li>
+      </ul>
+    </div><!-- /container -->
+  </body>
+</html>
