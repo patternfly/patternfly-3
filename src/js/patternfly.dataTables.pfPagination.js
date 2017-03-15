@@ -96,7 +96,7 @@
   var FIRST_PAGE_SELECTOR = ".pagination-pf-back .fa-angle-double-left"; // First page button
   var FORWARD_ACTIONS_SELECTOR = ".pagination-pf-forward"; // Forward navigation actions
   var LAST_PAGE_SELECTOR = ".pagination-pf-forward .fa-angle-double-right"; // Last page button
-  var PAGE_SIZE_SELECTOR = ".pagination-pf-pagesize"; // Page size selection
+  var PAGE_SIZE_SELECTOR = ".bootstrap-select .pagination-pf-pagesize"; // Page size selection
   var TOTAL_ITEMS_SELECTOR = ".pagination-pf-items-total"; // Total items
   var TOTAL_PAGES_SELECTOR = ".pagination-pf-pages"; // Total pages text
   var PREVIOUS_PAGE_SELECTOR = ".pagination-pf-back .fa-angle-left"; // Previous page button
