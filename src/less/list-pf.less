@@ -35,6 +35,7 @@
   .list-pf-expansion & {
     border-top: 1px solid @list-pf-active-border-color;
   }
+  // when wide enough, if the list is not stacked, then center items vertically
   @media (min-width: @screen-md-min) {
     .list-pf:not(.list-pf-stacked) & {
       align-items: center;
@@ -45,6 +46,7 @@
 .list-pf-chevron,
 .list-pf-select {
   margin-right: 10px;
+  //add the divider line if there is a chevron or a select
   + .list-pf-content {
     border-left: 1px solid @list-pf-active-border-color;
     padding-left: (@grid-gutter-width/2);
@@ -53,7 +55,6 @@
     font-size: 22px;
   }
 }
-///////////////////////////////////////////////////////////////
 
 .list-pf-content {
   align-items: flex-start;
@@ -61,12 +62,12 @@
   flex-grow: 1;
   flex-wrap: nowrap;
   justify-content: space-between;
-
+  min-width: 0;
+  // when wide enough, if the list is not stacked, then center items vertically
   @media (min-width: @screen-md-min) {
-    align-items: center;
-  }
-  .list-pf-stacked & {
-    align-items: flex-start;
+    .list-pf:not(.list-pf-stacked) & {
+      align-items: center;
+    }
   }
 }
 
@@ -96,6 +97,7 @@
   display:flex;
   flex-grow: 1;
   flex-wrap: wrap;
+  min-width: 0;
   // when at larger breakpoints, don't stack the contents and add some space between the children
   @media (min-width: @screen-md-min) {
     flex-wrap: nowrap;
@@ -111,36 +113,41 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-wrap: wrap;
-  > * {
-    width: 100%;
-  }
+  min-width: 0;
 }
 
+// at larger breakpoints, if the list is not stacked, then don't wrap the main contents and add some space between them
 .list-pf:not(.list-pf-stacked) .list-pf-main-content {
   @media (min-width: @screen-md-min) {
-    &:not(.list-pf-main-content-stacked) {
       flex-wrap: nowrap;
       width: auto;
       & > * + * {
         margin-left: @grid-gutter-width;
       }
-    }
   }
 }
 
+// Title and description are break-word wrapped; add .list-pf-ellipse-text to truncate and ellipse instead
 .list-pf-title {
   flex-grow: 1;
   flex-shrink: 1;
+  flex-basis: 100%;
   font-weight: bold;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 .list-pf-description {
+  flex-grow: 1;
   flex-shrink: 1;
+  flex-basis: 100%;
   min-width: 0;
+  word-wrap: break-word;
+}
+.list-pf-ellipse-text{
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 
 .list-pf-additional-content {
@@ -155,7 +162,7 @@
   align-items: flex-start;
   flex-grow: 0;
   margin-left: @grid-gutter-width;
-  //by default, space contents
+  //by default, space contents apart
   & > * + * {
     margin-left: (@grid-gutter-width / 4);
   }
