@@ -2,6 +2,8 @@
 // PatternFly List
 // --------------------------------------------------
 
+@list-pf-main-content-width: 70%; // sets the proportional width of the main content vs the additional content
+
 .list-pf {
   border-bottom: 1px solid @list-pf-border-color;
 }
@@ -61,7 +63,7 @@
   display:flex;
   flex-grow: 1;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-width: 0;
   // when wide enough, if the list is not stacked, then center items vertically
   @media (min-width: @screen-md-min) {
@@ -110,6 +112,7 @@
 .list-pf-main-content {
   align-items: center;
   display: flex;
+  flex-basis: @list-pf-main-content-width;
   flex-grow: 1;
   flex-shrink: 1;
   flex-wrap: wrap;
@@ -143,7 +146,7 @@
   min-width: 0;
   word-wrap: break-word;
 }
-.list-pf-ellipse-text{
+.list-pf-ellipse-text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -152,6 +155,7 @@
 
 .list-pf-additional-content {
   display: flex;
+  flex-basis: ((100% - @list-pf-main-content-width) + 1%); // this adjusts the proportions but adding up to > 100% allows for proper wrapping
   flex-grow: 1;
   flex-shrink: 1;
   flex-wrap: wrap;

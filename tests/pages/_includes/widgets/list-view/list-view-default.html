@@ -1,88 +1,47 @@
-<div class="list-pf list-pf-stacked">
-  <div class="list-pf-item ">
+<div class="list-pf list-view-pf">
+  <div class="list-pf-item">
     <div class="list-pf-container">
-      <div class="list-pf-chevron">
-        <span class="fa fa-angle-right"></span>
-      </div>
-      <div class="list-pf-select">
+      <div class="list-view-pf-checkbox">
         <input type="checkbox">
       </div>
-      <div class="list-pf-content ">
-        <div class="list-pf-left">
-          <span class="fa fa-plane list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>
+      <div class="list-view-pf-actions">
+        <button class="btn btn-default">Action</button>
+        {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+      </div>
+      <div class="list-view-pf-main-info">
+        <div class="list-view-pf-left">
+          <span class="fa fa-plane list-view-pf-icon-sm"></span>
         </div>
-        <div class="list-pf-content-wrapper">
-          <div class="list-pf-main-content">
-
-            <div class="list-pf-title list-pf-ellipse-text">Event Oneaaaaaaaaaaaa123456789012345678901234567890123456789012345678901234567890stackeddisplay</div>
-            <div class="list-pf-description">Thefollowingzzzzzzzzzzzzzzzzzz123456789012345678901234567890123456789012345678901234567890<a href="">rendered as link text.</a></div>
+        <div class="list-view-pf-body">
+          <div class="list-view-pf-description">
+            <div class="list-pf-item__heading">
+              Event One
+            </div>
+            <div class="list-pf-item__text">
+              The following snippet of text is <a href="#">rendered as link text</a>.
+            </div>
           </div>
-          <div class="list-pf-additional-content">
-            additional content
+          <div class="list-view-pf-additional-info">
+            <div class="list-view-pf-additional-info-item">
+              <span class="pficon pficon-screen"></span>
+              <strong>8</strong> Hosts
+            </div>
+            <div class="list-view-pf-additional-info-item">
+              <span class="pficon pficon-cluster"></span>
+              <strong>8</strong> Clusters
+            </div>
+            <div class="list-view-pf-additional-info-item">
+              <span class="pficon pficon-container-node"></span>
+              <strong>18</strong> Nodes
+            </div>
+            <div class="list-view-pf-additional-info-item">
+              <span class="pficon pficon-image"></span>
+              <strong>4</strong> Images
+            </div>
           </div>
-        </div>
-        <div class="list-pf-actions">
-          <button class="btn btn-default">Action</button>
-          {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight1" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
         </div>
       </div>
     </div>
-
-    <!-- expansion --->
-    <div class="list-pf-expansion collapse">
-      <div class="list-pf-container" tabindex="0">
-        <div class="list-pf-content">
-          This is a second level section
-        </div>
-      </div> <!-- /list-pf-container -->
-    </div> <!-- /list-pf-expansion level 3 -->
-
   </div>
-
-</div>
-
-
-
-
-
-<div class="list-pf">
-
-  <div class="list-pf-item ">
-    <div class="list-pf-container">
-      <div class="list-pf-select">
-        <input type="checkbox">
-      </div>
-      <div class="list-pf-content">
-        <div class="list-pf-left">
-          <span class="fa fa-plane list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>
-        </div>
-        <div class="list-pf-content-wrapper">
-          <div class="list-pf-main-content ">
-
-            <div class="list-pf-title">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</div>
-            <div class="list-pf-description list-pf-ellipse-text">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz<a href="">rendered as link text.</a></div>
-          </div>
-          <div class="list-pf-additional-content">
-            additional content
-          </div>
-        </div>
-        <div class="list-pf-actions">
-          <button class="btn btn-default">Action</button>
-          {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropmenuId="dropdownKebabRight200" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
-        </div>
-      </div>
-    </div>
-
-    <!-- expansion --->
-    <div class="list-pf-expansion collapse">
-      <div class="list-pf-container" tabindex="0">
-        <div class="list-pf-content">
-          This is a second level section
-        </div>
-      </div> <!-- /list-pf-container -->
-    </div> <!-- /list-pf-expansion level 3 -->
-
-  </div>
-
 </div>
 
