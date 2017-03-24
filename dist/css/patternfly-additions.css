@@ -3015,7 +3015,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   content: "\e906";
 }
 .pficon-equalizer:before {
-  content: "\e906";
+  content: "\e610";
 }
 .pficon-error-circle-o:before {
   color: #cc0000;
@@ -3053,7 +3053,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   content: "\e615";
 }
 .pficon-info:before {
-  content: "\e925";
+  content: "\e92b";
 }
 .pficon-key:before {
   content: "\e924";
