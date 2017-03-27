@@ -96,6 +96,7 @@
 
 
 .list-pf-content-wrapper {
+  align-items: center;
   display:flex;
   flex-grow: 1;
   flex-wrap: wrap;
@@ -130,7 +131,7 @@
   }
 }
 
-// Title and description are break-word wrapped; add .list-pf-ellipse-text to truncate and ellipse instead
+// Title and description are break-word wrapped; add .text-overflow-pf to truncate and ellipse instead
 .list-pf-title {
   flex-grow: 1;
   flex-shrink: 1;
@@ -145,12 +146,6 @@
   flex-basis: 100%;
   min-width: 0;
   word-wrap: break-word;
-}
-.list-pf-ellipse-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
 }
 
 .list-pf-additional-content {
