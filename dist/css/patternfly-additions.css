@@ -1876,6 +1876,12 @@ select.selectpicker {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+.text-overflow-pf {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
 .about-modal-pf {
   background-color: #292e34;
   background-image: url("../img/bg-modal-about-pf.png");
@@ -3471,8 +3477,8 @@ a.disabled {
   background-color: #fff;
 }
 .list-pf-container {
-  -ms-flex-align: center;
-      align-items: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
   display: -ms-flexbox;
   display: flex;
   padding: 20px;
@@ -3480,16 +3486,163 @@ a.disabled {
 .list-pf-expansion .list-pf-container {
   border-top: 1px solid #bbb;
 }
-.list-pf-chevron {
-  margin-right: 5px;
+@media (min-width: 992px) {
+  .list-pf:not(.list-pf-stacked) .list-pf-container {
+    -ms-flex-align: center;
+        align-items: center;
+  }
 }
-.list-pf-chevron + .list-pf-content {
-  border-left: 1px solid #bbb;
-  padding-left: 15px;
+.list-pf-chevron,
+.list-pf-select {
+  margin-right: 10px;
 }
-.list-pf-chevron .fa {
+.list-pf-chevron + .list-pf-content,
+.list-pf-select + .list-pf-content {
+  border-left: 1px solid #d1d1d1;
+  padding-left: 20px;
+}
+.list-pf-chevron .fa,
+.list-pf-select .fa {
   font-size: 22px;
-  width: 20px;
+}
+.list-pf-content {
+  -ms-flex-align: start;
+      align-items: flex-start;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  min-width: 0;
+}
+@media (min-width: 992px) {
+  .list-pf:not(.list-pf-stacked) .list-pf-content {
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
+.list-pf-left {
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  margin-left: 0;
+  margin-right: 20px;
+}
+.list-pf-icon {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.list-pf-icon-bordered {
+  border-radius: 50%;
+  border: 2px solid #39a5dc;
+}
+.list-pf-icon-small {
+  font-size: 1.4em;
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+}
+.list-pf-content-wrapper {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 0;
+}
+@media (min-width: 992px) {
+  .list-pf-content-wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .list-pf-content-wrapper > * + * {
+    margin-left: 40px;
+  }
+}
+.list-pf-stacked .list-pf-content-wrapper {
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.list-pf-main-content {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 0;
+}
+@media (min-width: 992px) {
+  .list-pf:not(.list-pf-stacked) .list-pf-main-content {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: auto;
+  }
+  .list-pf:not(.list-pf-stacked) .list-pf-main-content > * + * {
+    margin-left: 40px;
+  }
+}
+.list-pf-title {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-weight: bold;
+  min-width: 0;
+  word-wrap: break-word;
+}
+.list-pf-description {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  min-width: 0;
+  word-wrap: break-word;
+}
+.list-pf-additional-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.list-pf-actions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  margin-left: 40px;
+}
+.list-pf-actions > * + * {
+  margin-left: 10px;
 }
 .list-view-pf .list-group-item {
   -ms-flex-align: start;
