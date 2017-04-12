@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.23.1",
+  "version": "3.23.2",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
