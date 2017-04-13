@@ -12,6 +12,7 @@
     "autoprefixer": "^6.4.0",
     "connect-livereload": "~0.5.4",
     "front-matter": "^2.1.1",
+    "grunt-cli": "~1.2.0",
     "grunt": "~1.0.1",
     "grunt-contrib-concat": "^1.0.0",
     "grunt-contrib-connect": "~1.0.2",
@@ -65,7 +66,11 @@
     "patternfly-bootstrap-treeview": "~2.1.0"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start"
+    "test": "grunt karma",
+    "build": "grunt build",
+    "jekyll": "ruby --version || echo \"Ruby required\"; gem install bundler || sudo gem install bundler; bundle install; set -e",
+    "start": "npm run build; grunt server & open http://localhost:9000",
+    "postinstall": "npm run jekyll"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
