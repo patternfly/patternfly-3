@@ -2,7 +2,7 @@
   'use strict';
 
   var patternfly = {
-    version: "4.0.0-alpha.3",
+    version: "4.0.0-rc.1",
   };
 
   // definition of breakpoint sizes for tablet and desktop modes
@@ -1190,7 +1190,7 @@
       if (parent) {
         // Calculate indentation depth
         i = parent.find('.treegrid-node > span.indent').length + 1;
-        for (i; i > 0; i -= 1) {
+        for (; i > 0; i -= 1) {
           node.children('.treegrid-node').prepend('<span class="indent"/>');
         }
         // Render expand/collapse icons

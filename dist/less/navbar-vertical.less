@@ -27,6 +27,7 @@
     }
 
     .nav-item-iconic {
+      color: @navbar-pf-vertical-color;
       cursor: pointer;
       line-height: 1;
       max-height: (@navbar-pf-vertical-height - @navbar-pf-vertical-border-width); // to keep Firefox from oversizing icons
@@ -35,6 +36,7 @@
 
       &:hover,
       &:focus {
+        color: @navbar-pf-vertical-active-color;
         background-color: transparent;
 
         .caret,

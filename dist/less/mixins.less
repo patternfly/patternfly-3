@@ -75,7 +75,10 @@
 
 // Placeholder text
 .placeholder(@color: @input-color-placeholder) {
-  &::placeholder            { color: @color; font-style: italic; }
+  &:-moz-placeholder            { color: @color; font-style: italic; } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; font-style: italic; opacity: 1; } // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; font-style: italic; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; font-style: italic; } // Safari and Chrome
 }
 
 // PatternFly-specific
@@ -93,3 +96,12 @@
     right: @right;
   }
 }
+
+// Ellipse overflow text
+.text-overflow-pf {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
