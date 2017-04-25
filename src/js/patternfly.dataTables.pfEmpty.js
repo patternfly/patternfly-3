@@ -238,7 +238,7 @@
    */
   DataTable.Api.register("pfEmpty.updateState()", function () {
     return this.iterator("table", function (ctx) {
-      update(new DataTable.Api(ctx));
+      updateState(new DataTable.Api(ctx));
     });
   });
 
