@@ -2,7 +2,7 @@
   'use strict';
 
   var patternfly = {
-    version: "3.23.2",
+    version: "3.23.3",
   };
 
   // Util: PatternFly Palette colors
