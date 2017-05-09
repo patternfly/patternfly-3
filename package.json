@@ -43,7 +43,7 @@
   "optionalDependencies": {
     "bootstrap-datepicker": "~1.6.4",
     "bootstrap-select": "~1.10.0",
-    "bootstrap-switch": "~3.3.2",
+    "bootstrap-switch": "~3.3.4",
     "bootstrap-touchspin": "~3.1.1",
     "c3": "~0.4.11",
     "d3": "~3.5.17",
