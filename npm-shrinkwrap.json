@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.23.3",
+  "version": "3.24.0",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
@@ -100,7 +100,7 @@
     },
     "font-awesome": {
       "version": "4.7.0",
-      "from": "font-awesome@>=4.7.0 <5.0.0",
+      "from": "font-awesome@4.7.0",
       "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz"
     },
     "google-code-prettify": {
