@@ -1,0 +1,193 @@
+//
+// Application Launcher
+// --------------------------------------------------
+
+.applauncher-pf {
+
+  display: inline-block;
+  overflow: visible;
+
+  .applauncher-pf-title {
+    .sr-only;
+  }
+
+  .dropdown-toggle {
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .dropdown-menu {
+    padding: @applauncher-pf-dropdown-menu-padding;
+    min-width: @applauncher-pf-dropdown-menu-width;
+  }
+
+  .applauncher-pf-link {
+    border-style: solid;
+    border-width: @applauncher-pf-menu-link-border-width;
+    border-color: transparent;
+    padding: @applauncher-pf-menu-link-padding;
+
+    &:hover {
+      background-color: @applauncher-pf-menu-link-background-color-hover;
+      border-color: @applauncher-pf-menu-link-border-color-hover;
+      color: @applauncher-pf-menu-link-color-hover;
+      text-decoration: none;
+
+      .box-shadow(0 0 2px 0 @applauncher-pf-menu-link-shadow);
+    }
+  }
+
+  .applauncher-pf-link-icon {
+    font-size: @applauncher-pf-menu-link-icon-font-size;
+  }
+
+  .applauncher-pf-link-icon,
+  .applauncher-pf-link-title {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  &.applauncher-pf-block-list {
+
+    .applauncher-pf-item {
+      display: inline-block;
+      min-width: 0;
+      text-align: center;
+      vertical-align: top;
+      width: calc(50% - (@applauncher-pf-menu-link-border-width * 2));
+    }
+
+    .applauncher-pf-link {
+      @media (min-width: @screen-sm-min) {
+        padding: @applauncher-pf-menu-link-padding-block-list;
+      }
+    }
+
+    .applauncher-pf-link-icon,
+    .applauncher-pf-link-title {
+      display: block;
+      padding: 0;
+    }
+
+    .applauncher-pf-link-title {
+      white-space: normal;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.navbar-pf,.navbar-pf-alt {
+
+  .navbar-utility .applauncher-pf,
+  .applauncher-pf {
+    display: block;
+    overflow: hidden;
+
+    > a:hover {
+      background-color: @navbar-pf-navbar-utility-hover-bg-color;
+    }
+
+    &.open > a,
+    &.open > a:focus {
+      background-color: @navbar-pf-navbar-nav-active-bg-color;
+      color: @navbar-pf-active-color;
+
+      @media (min-width: @screen-sm-min) {
+        background-color: @navbar-pf-navbar-utility-open-bg-color;
+        border-color: @navbar-pf-navbar-utility-border-color;
+        color: @navbar-pf-navbar-utility-color;
+      }
+    }
+
+    .dropdown-menu {
+      border-width: @applauncher-pf-menu-link-border-width !important;
+
+      @media (min-width: @screen-sm-min) {
+        margin-top: 11px;
+      }
+    }
+
+    &.dropdown > .dropdown-toggle,
+    .dropdown-toggle {
+      background-color: inherit;
+      color: @applauncher-pf-menu-link-color;
+      text-align: left;
+      text-decoration: none;
+      border-width: 0;
+      display: block;
+      padding-left: 20px;
+
+      &.disabled {
+        color: @applauncher-pf-menu-link-color-disabled !important;
+      }
+
+      @media (min-width: @screen-sm-min) {
+        border-left: 1px solid @navbar-pf-navbar-utility-border-color;
+        padding: @applauncher-pf-dropdown-toggle-padding;
+        line-height: 1;
+      }
+    }
+
+    .applauncher-pf-icon {
+      padding-right:@applauncher-pf-icon-padding-right;
+
+      @media (min-width: @screen-sm-min) {
+        padding: 0;
+      }
+    }
+
+    .applauncher-pf-title {
+      display: inline;
+      position: relative;
+    }
+
+    .applauncher-pf-item {
+      display: block;
+      min-width: inherit;
+      text-align: left;
+      width: auto;
+    }
+
+    .applauncher-pf-link {
+      overflow: hidden;
+      width: 100%;
+
+      &:hover {
+        background-color: transparent;
+        border-color: transparent;
+        .box-shadow(none);
+      }
+    }
+
+    .applauncher-pf-link-icon {
+      display: none;
+    }
+
+    .applauncher-pf-link-title {
+      overflow: hidden;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      //Apply mixin
+      .applauncher-pf;
+    }
+  }
+}
+
+.navbar-iconic {
+
+  .navbar-utility .applauncher-pf,
+  .applauncher-pf {
+
+    &.dropdown > .dropdown-toggle,
+    .dropdown-toggle {
+
+      @media (min-width: @screen-sm-min) {
+        padding: 15px;
+        line-height: inherit;
+      }
+    }
+  }
+}

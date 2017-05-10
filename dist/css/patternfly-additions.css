@@ -1150,8 +1150,8 @@ select.selectpicker {
 .bootstrap-switch .bootstrap-switch-label {
   box-sizing: border-box;
   cursor: pointer;
-  display: inline-block !important;
-  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
   padding: 2px 6px;
   font-size: 12px;
   line-height: 20px;
@@ -1199,6 +1199,9 @@ select.selectpicker {
   color: #4d5258;
   background: #f1f1f1;
 }
+.bootstrap-switch span::before {
+  content: "\200b";
+}
 .bootstrap-switch .bootstrap-switch-handle-on {
   border-bottom-left-radius: 1px - 1;
   border-top-left-radius: 1px - 1;
@@ -1212,13 +1215,11 @@ select.selectpicker {
   position: absolute !important;
   top: 0;
   left: 0;
+  margin: 0;
+  z-index: -1;
   opacity: 0;
   filter: alpha(opacity=0);
-  z-index: -1;
-}
-.bootstrap-switch input[type='radio'].form-control,
-.bootstrap-switch input[type='checkbox'].form-control {
-  height: auto;
+  visibility: hidden;
 }
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on,
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off,
@@ -1921,6 +1922,336 @@ select.selectpicker {
 }
 .trademark-pf {
   font-size: 11px;
+}
+.applauncher-pf {
+  display: inline-block;
+  overflow: visible;
+}
+.applauncher-pf .applauncher-pf-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.applauncher-pf .dropdown-toggle.disabled {
+  cursor: not-allowed;
+}
+.applauncher-pf .dropdown-menu {
+  padding: 9px;
+  min-width: 220px;
+}
+.applauncher-pf .applauncher-pf-link {
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  padding: 7px 10px;
+}
+.applauncher-pf .applauncher-pf-link:hover {
+  background-color: #f5f5f5;
+  border-color: #bbb;
+  color: #0088ce;
+  text-decoration: none;
+  box-shadow: 0 0 2px 0 #d1d1d1;
+}
+.applauncher-pf .applauncher-pf-link-icon {
+  font-size: 2em;
+}
+.applauncher-pf .applauncher-pf-link-icon,
+.applauncher-pf .applauncher-pf-link-title {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+.applauncher-pf.applauncher-pf-block-list .applauncher-pf-item {
+  display: inline-block;
+  min-width: 0;
+  text-align: center;
+  vertical-align: top;
+  width: calc(50% - (1px * 2));
+}
+@media (min-width: 768px) {
+  .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link {
+    padding: 15px 10px;
+  }
+}
+.applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
+.applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
+  display: block;
+  padding: 0;
+}
+.applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
+  white-space: normal;
+  word-wrap: break-word;
+}
+.navbar-pf .navbar-utility .applauncher-pf,
+.navbar-pf-alt .navbar-utility .applauncher-pf,
+.navbar-pf .applauncher-pf,
+.navbar-pf-alt .applauncher-pf {
+  display: block;
+  overflow: hidden;
+}
+.navbar-pf .navbar-utility .applauncher-pf > a:hover,
+.navbar-pf-alt .navbar-utility .applauncher-pf > a:hover,
+.navbar-pf .applauncher-pf > a:hover,
+.navbar-pf-alt .applauncher-pf > a:hover {
+  background-color: #232323;
+}
+.navbar-pf .navbar-utility .applauncher-pf.open > a,
+.navbar-pf-alt .navbar-utility .applauncher-pf.open > a,
+.navbar-pf .applauncher-pf.open > a,
+.navbar-pf-alt .applauncher-pf.open > a,
+.navbar-pf .navbar-utility .applauncher-pf.open > a:focus,
+.navbar-pf-alt .navbar-utility .applauncher-pf.open > a:focus,
+.navbar-pf .applauncher-pf.open > a:focus,
+.navbar-pf-alt .applauncher-pf.open > a:focus {
+  background-color: #232323;
+  color: #f5f5f5;
+}
+@media (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf.open > a,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.open > a,
+  .navbar-pf .applauncher-pf.open > a,
+  .navbar-pf-alt .applauncher-pf.open > a,
+  .navbar-pf .navbar-utility .applauncher-pf.open > a:focus,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.open > a:focus,
+  .navbar-pf .applauncher-pf.open > a:focus,
+  .navbar-pf-alt .applauncher-pf.open > a:focus {
+    background-color: #363636;
+    border-color: #2b2b2b;
+    color: #d1d1d1;
+  }
+}
+.navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
+.navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
+.navbar-pf .applauncher-pf .dropdown-menu,
+.navbar-pf-alt .applauncher-pf .dropdown-menu {
+  border-width: 1px !important;
+}
+@media (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
+  .navbar-pf .applauncher-pf .dropdown-menu,
+  .navbar-pf-alt .applauncher-pf .dropdown-menu {
+    margin-top: 11px;
+  }
+}
+.navbar-pf .navbar-utility .applauncher-pf.dropdown > .dropdown-toggle,
+.navbar-pf-alt .navbar-utility .applauncher-pf.dropdown > .dropdown-toggle,
+.navbar-pf .applauncher-pf.dropdown > .dropdown-toggle,
+.navbar-pf-alt .applauncher-pf.dropdown > .dropdown-toggle,
+.navbar-pf .navbar-utility .applauncher-pf .dropdown-toggle,
+.navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-toggle,
+.navbar-pf .applauncher-pf .dropdown-toggle,
+.navbar-pf-alt .applauncher-pf .dropdown-toggle {
+  background-color: inherit;
+  color: #d1d1d1;
+  text-align: left;
+  text-decoration: none;
+  border-width: 0;
+  display: block;
+  padding-left: 20px;
+}
+.navbar-pf .navbar-utility .applauncher-pf.dropdown > .dropdown-toggle.disabled,
+.navbar-pf-alt .navbar-utility .applauncher-pf.dropdown > .dropdown-toggle.disabled,
+.navbar-pf .applauncher-pf.dropdown > .dropdown-toggle.disabled,
+.navbar-pf-alt .applauncher-pf.dropdown > .dropdown-toggle.disabled,
+.navbar-pf .navbar-utility .applauncher-pf .dropdown-toggle.disabled,
+.navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-toggle.disabled,
+.navbar-pf .applauncher-pf .dropdown-toggle.disabled,
+.navbar-pf-alt .applauncher-pf .dropdown-toggle.disabled {
+  color: #8b8d8f !important;
+}
+@media (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf.dropdown > .dropdown-toggle,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.dropdown > .dropdown-toggle,
+  .navbar-pf .applauncher-pf.dropdown > .dropdown-toggle,
+  .navbar-pf-alt .applauncher-pf.dropdown > .dropdown-toggle,
+  .navbar-pf .navbar-utility .applauncher-pf .dropdown-toggle,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-toggle,
+  .navbar-pf .applauncher-pf .dropdown-toggle,
+  .navbar-pf-alt .applauncher-pf .dropdown-toggle {
+    border-left: 1px solid #2b2b2b;
+    padding: 7px 10px;
+    line-height: 1;
+  }
+}
+.navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-icon,
+.navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-icon,
+.navbar-pf .applauncher-pf .applauncher-pf-icon,
+.navbar-pf-alt .applauncher-pf .applauncher-pf-icon {
+  padding-right: 4px;
+}
+@media (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-icon,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-icon,
+  .navbar-pf .applauncher-pf .applauncher-pf-icon,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-icon {
+    padding: 0;
+  }
+}
+.navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-title,
+.navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-title,
+.navbar-pf .applauncher-pf .applauncher-pf-title,
+.navbar-pf-alt .applauncher-pf .applauncher-pf-title {
+  display: inline;
+  position: relative;
+}
+.navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-item,
+.navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-item,
+.navbar-pf .applauncher-pf .applauncher-pf-item,
+.navbar-pf-alt .applauncher-pf .applauncher-pf-item {
+  display: block;
+  min-width: inherit;
+  text-align: left;
+  width: auto;
+}
+.navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link,
+.navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link,
+.navbar-pf .applauncher-pf .applauncher-pf-link,
+.navbar-pf-alt .applauncher-pf .applauncher-pf-link {
+  overflow: hidden;
+  width: 100%;
+}
+.navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link:hover,
+.navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link:hover,
+.navbar-pf .applauncher-pf .applauncher-pf-link:hover,
+.navbar-pf-alt .applauncher-pf .applauncher-pf-link:hover {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+.navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
+.navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
+.navbar-pf .applauncher-pf .applauncher-pf-link-icon,
+.navbar-pf-alt .applauncher-pf .applauncher-pf-link-icon {
+  display: none;
+}
+.navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-title,
+.navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-title,
+.navbar-pf .applauncher-pf .applauncher-pf-link-title,
+.navbar-pf-alt .applauncher-pf .applauncher-pf-link-title {
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf,
+  .navbar-pf-alt .navbar-utility .applauncher-pf,
+  .navbar-pf .applauncher-pf,
+  .navbar-pf-alt .applauncher-pf {
+    display: inline-block;
+    overflow: visible;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-title,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-title,
+  .navbar-pf .applauncher-pf .applauncher-pf-title,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf .dropdown-toggle.disabled,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-toggle.disabled,
+  .navbar-pf .applauncher-pf .dropdown-toggle.disabled,
+  .navbar-pf-alt .applauncher-pf .dropdown-toggle.disabled {
+    cursor: not-allowed;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
+  .navbar-pf .applauncher-pf .dropdown-menu,
+  .navbar-pf-alt .applauncher-pf .dropdown-menu {
+    padding: 9px;
+    min-width: 220px;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link,
+  .navbar-pf .applauncher-pf .applauncher-pf-link,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-link {
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    padding: 7px 10px;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link:hover,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link:hover,
+  .navbar-pf .applauncher-pf .applauncher-pf-link:hover,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-link:hover {
+    background-color: #f5f5f5;
+    border-color: #bbb;
+    color: #0088ce;
+    text-decoration: none;
+    box-shadow: 0 0 2px 0 #d1d1d1;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-link-icon {
+    font-size: 2em;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-title,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-title,
+  .navbar-pf .applauncher-pf .applauncher-pf-link-title,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-link-title {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item,
+  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item,
+  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item {
+    display: inline-block;
+    min-width: 0;
+    text-align: center;
+    vertical-align: top;
+    width: calc(50% - (1px * 2));
+  }
+  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
+  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
+  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
+  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
+  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
+  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
+    display: block;
+    padding: 0;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
+  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
+  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link,
+  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link,
+  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link {
+    padding: 15px 10px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-iconic .navbar-utility .applauncher-pf.dropdown > .dropdown-toggle,
+  .navbar-iconic .applauncher-pf.dropdown > .dropdown-toggle,
+  .navbar-iconic .navbar-utility .applauncher-pf .dropdown-toggle,
+  .navbar-iconic .applauncher-pf .dropdown-toggle {
+    padding: 15px;
+    line-height: inherit;
+  }
 }
 .blank-slate-pf {
   background-color: #f5f5f5;
