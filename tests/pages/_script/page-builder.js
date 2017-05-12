@@ -40,6 +40,9 @@ function build () {
     // render and write the pages
     let promises = [];
     site.pages.forEach(page => {
+      if (page['url-js-extra'] && ! Array.isArray(page['url-js-extra'])) {
+        page['url-js-extra'] = [page['url-js-extra']];
+      }
       let context = {
         site: site,
         page: page

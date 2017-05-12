@@ -4,7 +4,7 @@ categories: [Widgets]
 layout: page
 title: Bootstrap Tree View
 resource: true
-url-js-extra: '//rawgit.com/patternfly/patternfly-bootstrap-treeview/v2.1.0/dist/bootstrap-treeview.min.js'
+url-js-extra: '//rawgit.com/patternfly/patternfly-bootstrap-treeview/v2.1.3/dist/bootstrap-treeview.min.js'
 ---
       <div class="row">
         <div class="col-sm-4">
@@ -326,9 +326,11 @@ url-js-extra: '//rawgit.com/patternfly/patternfly-bootstrap-treeview/v2.1.0/dist
             expandIcon: expandIcon,
             levels: 99,
             nodeIcon: nodeIcon,
-            showBorder: false
+            showBorder: false,
+            onInitialized: function() {
+              tree12.treeview('disableAll');
+            }
           });
-          tree12.treeview('disableAll');
 
           //Hover and Select
           $('#treeview13').treeview({
