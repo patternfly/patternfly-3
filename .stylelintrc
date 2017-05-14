@@ -27,7 +27,9 @@
     "value-no-vendor-prefix": true,
     "shorthand-property-no-redundant-values": true,
     "property-case": "lower",
-    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-duplicate-properties": [true, {
+      "ignore": ["consecutive-duplicates-with-different-values"]
+    }],
     "declaration-block-no-ignored-properties": true,
     "declaration-block-trailing-semicolon": "always",
     "declaration-block-semicolon-space-before": "never",
