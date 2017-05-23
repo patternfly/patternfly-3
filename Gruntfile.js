@@ -46,31 +46,32 @@ module.exports = function (grunt) {
       build: '<%= config.dist %>'
     },
     concat: {
-      settings: {
-        src: ['src/js/patternfly-settings-base.js',
-          'src/js/patternfly-settings-colors.js',
-          'src/js/patternfly-settings-charts.js'],
-        dest: 'dist/js/patternfly-settings.js'
-      },
-      functions: {
-        src: ['src/js/patternfly-functions-base.js',
-          'src/js/patternfly-functions-list.js',
-          'src/js/patternfly-functions-sidebar.js',
-          'src/js/patternfly-functions-popovers.js',
-          'src/js/patternfly-functions-data-tables.js',
-          'src/js/patternfly-functions-navigation.js',
-          'src/js/patternfly-functions-count-chars.js',
-          'src/js/patternfly-functions-colors.js',
-          'src/js/patternfly-functions-charts.js',
-          'src/js/patternfly-functions-fixed-heights.js',
-          'src/js/patternfly-functions-tree-grid.js',
-          'src/js/patternfly-functions-vertical-nav.js'],
-        dest: 'dist/js/patternfly-functions.js'
-      },
-      all: {
-        src: ['dist/js/patternfly-functions-base.js',
-          'dist/js/patternfly-functions-base.js'],
-        dest: 'dist/js/patternfly.js'
+      js: {
+        files: {
+          'dist/js/patternfly-settings.js': [
+            'src/js/patternfly-settings-base.js',
+            'src/js/patternfly-settings-colors.js',
+            'src/js/patternfly-settings-charts.js'
+          ],
+          'dist/js/patternfly-functions.js': [
+            'src/js/patternfly-functions-base.js',
+            'src/js/patternfly-functions-list.js',
+            'src/js/patternfly-functions-sidebar.js',
+            'src/js/patternfly-functions-popovers.js',
+            'src/js/patternfly-functions-data-tables.js',
+            'src/js/patternfly-functions-navigation.js',
+            'src/js/patternfly-functions-count-chars.js',
+            'src/js/patternfly-functions-colors.js',
+            'src/js/patternfly-functions-charts.js',
+            'src/js/patternfly-functions-fixed-heights.js',
+            'src/js/patternfly-functions-tree-grid.js',
+            'src/js/patternfly-functions-vertical-nav.js'
+          ],
+          'dist/js/patternfly.js': [
+            'dist/js/patternfly-settings.js',
+            'dist/js/patternfly-functions.js'
+          ]
+        }
       }
     },
     copy: {
