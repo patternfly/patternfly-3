@@ -18,9 +18,6 @@ module.exports = function (grunt) {
   } catch (e) {}
 
   grunt.initConfig({
-    clean: {
-      build: '<%= config.dist %>'
-    },
     config: projectConfig,
     connect: {
       server: {
@@ -45,12 +42,18 @@ module.exports = function (grunt) {
         ]
       }
     },
+    clean: {
+      build: '<%= config.dist %>'
+    },
     concat: {
-      js: {
-        src: ['src/js/patternfly-settings.js',
+      settings: {
+        src: ['src/js/patternfly-settings-base.js',
           'src/js/patternfly-settings-colors.js',
-          'src/js/patternfly-settings-charts.js',
-          'src/js/patternfly-functions.js',
+          'src/js/patternfly-settings-charts.js'],
+        dest: 'dist/js/patternfly-settings.js'
+      },
+      functions: {
+        src: ['src/js/patternfly-functions-base.js',
           'src/js/patternfly-functions-list.js',
           'src/js/patternfly-functions-sidebar.js',
           'src/js/patternfly-functions-popovers.js',
@@ -62,6 +65,11 @@ module.exports = function (grunt) {
           'src/js/patternfly-functions-fixed-heights.js',
           'src/js/patternfly-functions-tree-grid.js',
           'src/js/patternfly-functions-vertical-nav.js'],
+        dest: 'dist/js/patternfly-functions.js'
+      },
+      all: {
+        src: ['dist/js/patternfly-functions-base.js',
+          'dist/js/patternfly-functions-base.js'],
         dest: 'dist/js/patternfly.js'
       }
     },
@@ -181,20 +189,7 @@ module.exports = function (grunt) {
         files: {
           'dist/js/patternfly.min.js': ['dist/js/patternfly.js'],
           'dist/js/patternfly-settings.min.js': ['dist/js/patternfly-settings.js'],
-          'dist/js/patternfly-settings-charts.min.js': ['dist/js/patternfly-settings-charts.js'],
-          'dist/js/patternfly-settings-colors.min.js': ['dist/js/patternfly-settings-colors.js'],
           'dist/js/patternfly-functions.min.js': ['dist/js/patternfly-functions.js'],
-          'dist/js/patternfly-functions-list.min.js': ['src/js/patternfly-functions-list.js'],
-          'dist/js/patternfly-functions-sidebar.min.js': ['src/js/patternfly-functions-sidebar.js'],
-          'dist/js/patternfly-functions-popovers.min.js': ['src/js/patternfly-functions-popovers.js'],
-          'dist/js/patternfly-functions-data-tables.min.js': ['src/js/patternfly-functions-data-tables.js'],
-          'dist/js/patternfly-functions-navigation.min.js': ['src/js/patternfly-functions-navigation.js'],
-          'dist/js/patternfly-functions-count-chars.min.js': ['src/js/patternfly-functions-count-chars.js'],
-          'dist/js/patternfly-functions-colors.min.js': ['src/js/patternfly-functions-colors.js'],
-          'dist/js/patternfly-functions-charts.min.js': ['src/js/patternfly-functions-charts.js'],
-          'dist/js/patternfly-functions-fixed-heights.min.js': ['src/js/patternfly-functions-fixed-heights.js'],
-          'dist/js/patternfly-functions-tree-grid.min.js': ['src/js/patternfly-functions-tree-grid.js'],
-          'dist/js/patternfly-functions-vertical-nav.min.js': ['src/js/patternfly-functions-vertical-nav.js'],
           'dist/js/patternfly.dataTables.pfEmpty.min.js':  ['src/js/patternfly.dataTables.pfEmpty.js'],
           'dist/js/patternfly.dataTables.pfFilter.min.js': ['src/js/patternfly.dataTables.pfFilter.js'],
           'dist/js/patternfly.dataTables.pfPagination.min.js': ['src/js/patternfly.dataTables.pfPagination.js'],
@@ -227,7 +222,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['eslint', 'concat:js', 'copy:js', 'uglify']
+        tasks: ['eslint', 'concat', 'copy:js', 'uglify']
       },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'dist/tests/*.html', '!tests/pages/*.html']
@@ -302,6 +297,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
+    'clean',
     'concat',
     'copy',
     'pages',
