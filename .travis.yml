@@ -2,6 +2,10 @@ language: node_js
 node_js:
   - '4'
 
+env:
+  global:
+  - PF_PAGE_BUILDER: "jekyll"
+
 cache:
   directories:
     - node_modules

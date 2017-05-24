@@ -1,4 +1,6 @@
 /*global module,require*/
+var pageBuilder = require('./tests/pages/_script/page-builder');
+
 module.exports = function (grunt) {
   'use strict';
 
@@ -16,9 +18,6 @@ module.exports = function (grunt) {
   } catch (e) {}
 
   grunt.initConfig({
-    clean: {
-      build: '<%= config.dist %>'
-    },
     config: projectConfig,
     connect: {
       server: {
@@ -43,10 +42,36 @@ module.exports = function (grunt) {
         ]
       }
     },
+    clean: {
+      build: '<%= config.dist %>'
+    },
     concat: {
       js: {
-        src: ['src/js/patternfly-settings.js', 'src/js/patternfly-functions.js'],
-        dest: 'dist/js/patternfly.js'
+        files: {
+          'dist/js/patternfly-settings.js': [
+            'src/js/patternfly-settings-base.js',
+            'src/js/patternfly-settings-colors.js',
+            'src/js/patternfly-settings-charts.js'
+          ],
+          'dist/js/patternfly-functions.js': [
+            'src/js/patternfly-functions-base.js',
+            'src/js/patternfly-functions-list.js',
+            'src/js/patternfly-functions-sidebar.js',
+            'src/js/patternfly-functions-popovers.js',
+            'src/js/patternfly-functions-data-tables.js',
+            'src/js/patternfly-functions-navigation.js',
+            'src/js/patternfly-functions-count-chars.js',
+            'src/js/patternfly-functions-colors.js',
+            'src/js/patternfly-functions-charts.js',
+            'src/js/patternfly-functions-fixed-heights.js',
+            'src/js/patternfly-functions-tree-grid.js',
+            'src/js/patternfly-functions-vertical-nav.js'
+          ],
+          'dist/js/patternfly.js': [
+            'dist/js/patternfly-settings.js',
+            'dist/js/patternfly-functions.js'
+          ]
+        }
       }
     },
     copy: {
@@ -163,8 +188,8 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          'dist/js/patternfly.min.js':           ['dist/js/patternfly.js'],
-          'dist/js/patternfly-settings.min.js':  ['dist/js/patternfly-settings.js'],
+          'dist/js/patternfly.min.js': ['dist/js/patternfly.js'],
+          'dist/js/patternfly-settings.min.js': ['dist/js/patternfly-settings.js'],
           'dist/js/patternfly-functions.min.js': ['dist/js/patternfly-functions.js'],
           'dist/js/patternfly.dataTables.pfEmpty.min.js':  ['src/js/patternfly.dataTables.pfEmpty.js'],
           'dist/js/patternfly.dataTables.pfFilter.min.js': ['src/js/patternfly.dataTables.pfFilter.js'],
@@ -186,7 +211,7 @@ module.exports = function (grunt) {
       },
       jekyll: {
         files: 'tests/pages/**/*',
-        tasks: ['jekyll']
+        tasks: ['pages']
       },
       less: {
         files: ['src/less/*.less'],
@@ -198,7 +223,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['eslint', 'concat:js', 'copy:js', 'uglify']
+        tasks: ['eslint', 'concat', 'copy:js', 'uglify']
       },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'dist/tests/*.html', '!tests/pages/*.html']
@@ -226,7 +251,8 @@ module.exports = function (grunt) {
       },
       target: [
         'Gruntfile.js',
-        'src/js/**/*.js'
+        'src/js/**/*.js',
+        'tests/pages/_script/**/*.js'
       ]
     },
     stylelint: {
@@ -253,11 +279,29 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('pages', 'Builds the PatternFly test pages.', function (_target) {
+    var target = _target || process.env.PF_PAGE_BUILDER || 'script';
+    var done;
+    if (target === 'jekyll') { // eg: grunt build:jekyll || PF_PAGE_BUILDER=jekyll build
+      grunt.log.writeln('Builidng test pages with ruby jekyll');
+      grunt.task.run('run:bundleInstall', 'jekyll');
+    } else if (target === 'script') {  // eg: grunt build:script
+      grunt.log.writeln('Builidng test pages with liquid.js');
+      done = this.async();
+      pageBuilder.build()
+      .then(function () {
+        done();
+      });
+    } else {
+      grunt.log.writeln('Invalid taget:', target);
+    }
+  });
+
   grunt.registerTask('build', [
-    'run:bundleInstall',
+    'clean',
     'concat',
     'copy',
-    'jekyll',
+    'pages',
     'less',
     'cssmin',
     'postcss',
@@ -268,10 +312,15 @@ module.exports = function (grunt) {
     'stylelint'
   ]);
 
-  grunt.registerTask('server', [
+  grunt.registerTask('serve', [
     'connect:server',
     'watch'
   ]);
+
+  grunt.registerTask('server', function () {
+    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+    grunt.task.run(['serve']);
+  });
 
   grunt.registerTask('default', ['build']);
 };

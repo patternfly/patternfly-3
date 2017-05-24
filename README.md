@@ -21,7 +21,7 @@ PatternFly can be installed and managed through [NPM](https://www.npmjs.com/). T
 npm install patternfly --save
 ```
 
-Patternfly stays up to date with the Node LTS [Release Schedule](https://github.com/nodejs/LTS#lts_schedule). If you're using Patternfly downstream, we suggest the use of an actively supported version of Node/NPM, although prior versions of Node may work.
+PatternFly stays up to date with the Node LTS [Release Schedule](https://github.com/nodejs/LTS#lts_schedule). If you're using PatternFly downstream, we suggest the use of an actively supported version of Node/NPM, although prior versions of Node may work.
 
 ### Install with Bower
 
@@ -79,11 +79,23 @@ Patternfly uses [Autoprefixer](https://github.com/postcss/autoprefixer) to auto 
 
 ### Install NPM Dependencies
 
-The development includes the use of a number of helpful tasks. In order to setup your development environment to allow running of these tasks, you need to install the local nodejs packages declared in `package.json`. To do this run:
+The development includes the use of a number of helpful tasks. In order to setup your development environment to allow running of these tasks, you need to install the local nodejs packages declared in `package.json`.
 
-    npm install
+To do this clone, and change directories into PatternFly:
 
-Since Patternfly is shrink wrapped, npm 3 will install all necessary development packages into `node_modules/patternfly/node_modules`. At this point, the gruntjs tasks are available for use such as starting a local development server or building the master CSS file.
+```
+cd [PathToYourRepository]
+```
+
+then
+
+```
+npm install
+```
+
+This should take care of the majority of dependencies, including [Jekyll](http://jekyllrb.com/). During the install you may be asked for your password as part of the [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installation process.
+
+Since PatternFly is shrink wrapped, npm 3 will install all necessary development packages into `node_modules/patternfly/node_modules`. At this point, the gruntjs tasks are available for use such as starting a local development server or building the master CSS file.
 
 If you prefer a flat dependency structure, you can define your own dependencies explicitly. That will flatten out the node_modules structure and place dependencies in the root node_modules directory.
 
@@ -91,17 +103,29 @@ Additionally you may need to install the grunt command line utility.  To do this
 
     npm install -g grunt-cli
 
-Test pages are generated using [Jekyll](http://jekyllrb.com/). Ensure Ruby is installed and available then run:
+Test pages are optionally generated using [Jekyll](http://jekyllrb.com/). To use jekyll to build the test pages, ensure Ruby is installed and available then run:
 
-    gem install jekyll -v 3.1.6
+```
+npm run jekyll
+```
 
-Note: You can use any 3.1.x version with at least 3.1.4 (3.1.4 includes necessary fixes to [#4433](https://github.com/jekyll/jekyll/issues/4433) and [#4442](https://github.com/jekyll/jekyll/issues/4442))
+or
+
+```
+gem install bundle
+bundle install
+```
+
+Then set the environment variable PF_PAGE_BUILDER=jekyll.  eg.:
+    PF_PAGE_BUILDER=jekyll grunt build
 
 #### Keeping NPM Dependencies Updated
 
 Anytime you pull a new version of PatternFly, make sure you also run
 
-    npm update
+```
+npm update
+```
 
 so you get the latest version of the dependencies specified in package.json.
 
@@ -109,7 +133,15 @@ so you get the latest version of the dependencies specified in package.json.
 
 A local development server can be quickly fired up by using the Gruntjs server task:
 
-    grunt server
+```
+npm start
+```
+
+or
+
+```
+grunt server
+```
 
 This local static asset server (i.e., [http://localhost:9000](http://localhost:9000)) has the advantage of having livereload integration. Thus, if you start the Gruntjs server, any changes you make to `.html` or `.less` files will be automatically reloaded into your browser and the changes reflected almost immediately. This has the obvious benefit of not having to refresh your browser and still be able to see the changes as you add or remove them from your development files.  Additionally, any changes made to Jekyll source files (`tests/pages/`) will trigger a Jekyll build.
 
@@ -123,7 +155,15 @@ See [http://codeguide.patternfly.org/](http://codeguide.patternfly.org/).
 
 In development, styling is written and managed through multiple lesscss files. In order to generate a CSS file of all styling, run the build Gruntjs task:
 
-    grunt build
+```
+npm run build
+```
+
+or
+
+```
+grunt build
+```
 
 This task will compile and minify the lesscss files into CSS files located at `dist/css/patternfly.min.css` and `dist/css/patternfly-additional.min.css`.
 
@@ -134,14 +174,20 @@ For detailed instructions, please see our [PatternFly Icon Guide](PFICONS.md)
 
 ## Tests
 
-The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use PatternFly.  The latest PatternFly test directory examples can be seen at [https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/](https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/).  
+The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use PatternFly.  The latest PatternFly test directory examples can be seen at [https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/](https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/).
 
-If you are developing on PatternFly and would like to provide a link to a test directory from your fork, TravisCI can be configured to create a copy of your branch with the dist files generated for you.  No code changes are necessary to enable this, all that is needed is to login to [TravisCI](https://travis-ci.org/) and configure it to point at your PatternFly fork.  The first three steps at their [Getting Started page](https://docs.travis-ci.com/user/for-beginners) provide instructions on how to do this.  You will also need to add an AUTH_TOKEN variable to Travis generated in your GitHub account to allow Travis to connect to your fork.  
+If you are developing on PatternFly and would like to provide a link to a test directory from your fork, TravisCI can be configured to create a copy of your branch with the dist files generated for you.  No code changes are necessary to enable this, all that is needed is to login to [TravisCI](https://travis-ci.org/) and configure it to point at your PatternFly fork.  The first three steps at their [Getting Started page](https://docs.travis-ci.com/user/for-beginners) provide instructions on how to do this.  You will also need to add an AUTH_TOKEN variable to Travis generated in your GitHub account to allow Travis to connect to your fork.
 
 The HTML pages in `dist/tests` are generated using Jekyll.  Do *not* edit these files directly.  See `tests/pages` to change these files.
 
 ### Unit Testing
 Unit tests are written for [Karma test server] (https://karma-runner.github.io/1.0/index.html) with [Jasmine](http://jasmine.github.io/)
+
+```
+npm test
+```
+
+or
 
 ```
 grunt karma
@@ -187,7 +233,7 @@ npm publish
 
 ## Documentation
 
-See [https://www.patternfly.org](https://www.patternfly.org) and [http://getbootstrap.com/](http://getbootstrap.com/).  
+See [https://www.patternfly.org](https://www.patternfly.org) and [http://getbootstrap.com/](http://getbootstrap.com/).
 
 ### Browser and Device Support
 
