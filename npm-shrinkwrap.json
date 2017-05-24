@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "4.0.0-rc.1",
+  "version": "3.25.0",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
@@ -45,7 +45,7 @@
     },
     "datatables.net": {
       "version": "1.10.15",
-      "from": "datatables.net@>=1.10.15 <2.0.0",
+      "from": "datatables.net@>=1.10.9",
       "resolved": "https://registry.npmjs.org/datatables.net/-/datatables.net-1.10.15.tgz"
     },
     "datatables.net-bs": {
@@ -86,7 +86,7 @@
     },
     "font-awesome": {
       "version": "4.7.0",
-      "from": "font-awesome@>=4.7.0 <5.0.0",
+      "from": "font-awesome@4.7.0",
       "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz"
     },
     "google-code-prettify": {
@@ -102,7 +102,7 @@
     },
     "jquery-match-height": {
       "version": "0.7.2",
-      "from": "jquery-match-height@>=0.7.2 <0.8.0",
+      "from": "jquery-match-height@>=0.7.0 <0.8.0",
       "resolved": "https://registry.npmjs.org/jquery-match-height/-/jquery-match-height-0.7.2.tgz",
       "optional": true
     },
