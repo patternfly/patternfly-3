@@ -869,6 +869,12 @@ select.selectpicker {
   padding-right: 25px;
   z-index: 1;
 }
+.bootstrap-select > .dropdown-toggle.bs-placeholder,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active {
+  color: #999;
+}
 .bootstrap-select > select {
   position: absolute !important;
   bottom: 0;
@@ -913,6 +919,9 @@ select.selectpicker {
 .bootstrap-select.form-control.input-group-btn {
   z-index: auto;
 }
+.bootstrap-select.form-control.input-group-btn:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
 .bootstrap-select.btn-group:not(.input-group-btn),
 .bootstrap-select.btn-group[class*="col-"] {
   float: none;
@@ -933,6 +942,13 @@ select.selectpicker {
 .form-group-sm .bootstrap-select.btn-group.form-control {
   padding: 0;
 }
+.form-group-lg .bootstrap-select.btn-group.form-control .dropdown-toggle,
+.form-group-sm .bootstrap-select.btn-group.form-control .dropdown-toggle {
+  height: 100%;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: inherit;
+}
 .form-inline .bootstrap-select.btn-group .form-control {
   width: 100%;
 }
@@ -946,6 +962,8 @@ select.selectpicker {
 }
 .bootstrap-select.btn-group.bs-container {
   position: absolute;
+  height: 0 !important;
+  padding: 0 !important;
 }
 .bootstrap-select.btn-group.bs-container .dropdown-menu {
   z-index: 1060;
@@ -991,9 +1009,9 @@ select.selectpicker {
 .bootstrap-select.btn-group .dropdown-menu li a {
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .bootstrap-select.btn-group .dropdown-menu li a.opt {
   position: relative;
@@ -1502,13 +1520,14 @@ select.selectpicker {
 }
 /*!
  * Datetimepicker for Bootstrap 3
- * version : 4.15.35
+ * version : 4.17.47
  * https://github.com/Eonasdan/bootstrap-datetimepicker/
  */
 .bootstrap-datetimepicker-widget {
   list-style: none;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu {
+  display: block;
   margin: 2px 0;
   padding: 4px;
   width: 19em;
@@ -3836,7 +3855,7 @@ a.disabled {
 .list-pf-select .fa {
   font-size: 22px;
 }
-.list-pf-content {
+.list-pf-content-flex {
   -ms-flex-align: start;
       align-items: flex-start;
   display: -ms-flexbox;
@@ -3850,7 +3869,7 @@ a.disabled {
   min-width: 0;
 }
 @media (min-width: 992px) {
-  .list-pf:not(.list-pf-stacked) .list-pf-content {
+  .list-pf:not(.list-pf-stacked) .list-pf-content-flex {
     -ms-flex-align: center;
         align-items: center;
   }
@@ -4098,15 +4117,11 @@ a.disabled {
   -ms-flex-align: center;
       align-items: center;
   display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
   margin-right: 20px;
   max-width: 100%;
   text-align: center;
-}
-@supports (display: flex) {
-  .list-view-pf-additional-info-item {
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 .list-view-pf-additional-info-item.list-view-pf-additional-info-item-stacked {
   text-align: center;
@@ -7291,18 +7306,14 @@ table.dataTable th:active {
 .wizard-pf-steps-indicator {
   font-size: 16px;
   display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
   height: 120px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   list-style: none;
   padding: 38px 0 0;
   /* draw the step number in the circle */
-}
-@supports (display: flex) {
-  .wizard-pf-steps-indicator {
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 .wizard-pf-steps-indicator li {
   counter-increment: section;
