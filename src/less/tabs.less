@@ -31,7 +31,7 @@
     > li:first-child > a {
       padding-left: 15px;
       &:before {
-        left: 15px !important;
+        left: 15px;
       }
     }
   }
@@ -48,7 +48,7 @@
 .nav-tabs-pf {
   &.nav-justified {
     @media (min-width: @grid-float-breakpoint) {
-      border-bottom: 1px solid @nav-tabs-justified-link-border-color;
+      border-bottom: @nav-tabs-justified-link-border-color;
     }
     > li {
       &:first-child > a {
@@ -57,8 +57,8 @@
       > a {
         border-bottom: 0;
         &:before {
-          left: 0 !important;
-          right: 0 !important;
+          left: 0;
+          right: 0;
         }
       }
     }
@@ -83,7 +83,7 @@
       > a {
         padding-left: 0;
         &:before {
-          left: 0 !important;
+          left: 0;
         }
       }
     }
