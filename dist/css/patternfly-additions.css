@@ -1978,11 +1978,18 @@ select.selectpicker {
 }
 .applauncher-pf .applauncher-pf-link-icon {
   font-size: 2em;
+  text-align: center;
+  width: 1.28571429em;
+  min-height: 1.28571429em;
+}
+@media (min-width: 768px) {
+  .applauncher-pf .applauncher-pf-link-icon {
+    padding-right: 4px;
+  }
 }
 .applauncher-pf .applauncher-pf-link-icon,
 .applauncher-pf .applauncher-pf-link-title {
   display: inline-block;
-  width: auto;
   vertical-align: middle;
 }
 .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item {
@@ -2001,6 +2008,7 @@ select.selectpicker {
 .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
   display: block;
   padding: 0;
+  width: auto;
 }
 .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
   white-space: normal;
@@ -2213,6 +2221,9 @@ select.selectpicker {
   .navbar-pf .applauncher-pf .applauncher-pf-link-icon,
   .navbar-pf-alt .applauncher-pf .applauncher-pf-link-icon {
     font-size: 2em;
+    text-align: center;
+    width: 1.28571429em;
+    min-height: 1.28571429em;
   }
   .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
   .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
@@ -2223,7 +2234,6 @@ select.selectpicker {
   .navbar-pf .applauncher-pf .applauncher-pf-link-title,
   .navbar-pf-alt .applauncher-pf .applauncher-pf-link-title {
     display: inline-block;
-    width: auto;
     vertical-align: middle;
   }
   .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item,
@@ -2246,6 +2256,7 @@ select.selectpicker {
   .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
     display: block;
     padding: 0;
+    width: auto;
   }
   .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
   .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
@@ -2253,6 +2264,14 @@ select.selectpicker {
   .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
     white-space: normal;
     word-wrap: break-word;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf .applauncher-pf .applauncher-pf-link-icon,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-link-icon {
+    padding-right: 4px;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {

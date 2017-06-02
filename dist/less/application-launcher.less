@@ -40,12 +40,17 @@
 
   .applauncher-pf-link-icon {
     font-size: @applauncher-pf-menu-link-icon-font-size;
+    text-align: center;
+    width: @applauncher-pf-menu-link-icon-width;
+    min-height: @applauncher-pf-menu-link-icon-width;
+    @media (min-width: @screen-sm-min) {
+      padding-right: @applauncher-pf-icon-padding-right;
+    }
   }
 
   .applauncher-pf-link-icon,
   .applauncher-pf-link-title {
     display: inline-block;
-    width: auto;
     vertical-align: middle;
   }
 
@@ -69,6 +74,7 @@
     .applauncher-pf-link-title {
       display: block;
       padding: 0;
+      width: auto;
     }
 
     .applauncher-pf-link-title {
