@@ -70,9 +70,8 @@
   "scripts": {
     "test": "grunt karma",
     "build": "grunt build",
-    "jekyll": "ruby --version || echo \"Ruby required\"; gem install bundler; bundle install; set -e",
-    "start": "npm run build; grunt server & open http://localhost:9000",
-    "postinstall": "npm run jekyll"
+    "jekyll": "ruby --version || echo \"Ruby required\"; bundler -v || gem install bundler; bundle check || bundle install; set -e",
+    "start": "npm run build; grunt server & open http://localhost:9000"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
