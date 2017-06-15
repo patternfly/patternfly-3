@@ -10043,6 +10043,15 @@ fieldset[disabled] .pagination > li > span.active {
 .panel-group .panel-default .panel-heading + .panel-collapse .panel-body {
   border-top: 1px solid #d1d1d1;
 }
+.panel-group .panel-info {
+  border-color: #00659c;
+}
+.panel-group .panel-info .panel-heading {
+  background-color: #dae5f4;
+}
+.panel-group .panel-info + .panel-default {
+  border-top-color: #00659c;
+}
 .panel-group .panel-primary {
   border-color: #39a5dc;
 }
@@ -10052,6 +10061,9 @@ fieldset[disabled] .pagination > li > span.active {
 .panel-group .panel-primary + .panel-default {
   border-top-color: #39a5dc;
 }
+.panel-group .panel-primary + .panel-info {
+  border-top-color: #39a5dc;
+}
 .panel-group .panel-success {
   border-color: #3f9c35;
 }
@@ -10059,6 +10071,9 @@ fieldset[disabled] .pagination > li > span.active {
   background-color: #e9f4e9;
 }
 .panel-group .panel-success + .panel-default {
+  border-top-color: #3f9c35;
+}
+.panel-group .panel-success + .panel-info {
   border-top-color: #3f9c35;
 }
 .panel-group .panel-success + .panel-primary {
@@ -10071,6 +10086,9 @@ fieldset[disabled] .pagination > li > span.active {
   background-color: #fdf2e5;
 }
 .panel-group .panel-warning + .panel-default {
+  border-top-color: #ec7a08;
+}
+.panel-group .panel-warning + .panel-info {
   border-top-color: #ec7a08;
 }
 .panel-group .panel-warning + .panel-primary {
@@ -10086,6 +10104,9 @@ fieldset[disabled] .pagination > li > span.active {
   background-color: #ffe6e6;
 }
 .panel-group .panel-danger + .panel-default {
+  border-top-color: #cc0000;
+}
+.panel-group .panel-danger + .panel-info {
   border-top-color: #cc0000;
 }
 .panel-group .panel-danger + .panel-primary {
