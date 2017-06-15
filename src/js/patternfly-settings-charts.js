@@ -198,7 +198,7 @@
       },
       getDefaultPieTooltip = function () {
         return {
-          contents: $().pfPieTooltipContents
+          contents: patternfly.pfPieTooltipContents
         };
       },
       getDefaultPieLegend = function () {
@@ -316,7 +316,7 @@
       },
       getDefaultSingleLineTooltip = function () {
         return {
-          contents: $().pfGetBarChartTooltipContentsFn()
+          contents: patternfly.pfGetBarChartTooltipContentsFn()
         };
       },
       getDefaultSingleLineLegend = function () {
@@ -357,7 +357,7 @@
       },
       getDefaultSingleAreaTooltip = function () {
         return {
-          contents: $().pfGetBarChartTooltipContentsFn()
+          contents: patternfly.pfGetBarChartTooltipContentsFn()
         };
       },
       getDefaultSingleAreaLegend = function () {
@@ -421,4 +421,3 @@
     };
   };
 })(window);
-
