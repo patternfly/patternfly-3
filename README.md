@@ -93,7 +93,7 @@ then
 npm install
 ```
 
-This should take care of the majority of dependencies, including [Jekyll](http://jekyllrb.com/). During the install you may be asked for your password as part of the [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installation process.
+This should take care of the majority of dependencies.
 
 Since PatternFly is shrink wrapped, npm 3 will install all necessary development packages into `node_modules/patternfly/node_modules`. At this point, the gruntjs tasks are available for use such as starting a local development server or building the master CSS file.
 
@@ -116,7 +116,9 @@ gem install bundle
 bundle install
 ```
 
-Then set the environment variable PF_PAGE_BUILDER=jekyll.  eg.:
+During the install you may be asked for your password as part of the [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installation process.
+
+Next, set the environment variable PF_PAGE_BUILDER=jekyll.  eg.:
     PF_PAGE_BUILDER=jekyll grunt build
 
 #### Keeping NPM Dependencies Updated
