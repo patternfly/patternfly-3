@@ -5499,6 +5499,9 @@ a.disabled {
   margin-right: 5px;
   padding-right: 9px;
 }
+.drawer-pf-notification > .dropdown-kebab-pf {
+  margin-top: -3px;
+}
 .drawer-pf-notification .pficon {
   font-size: 14px;
   margin-top: 3px;
@@ -5539,6 +5542,14 @@ a.disabled {
   font-size: 12px;
   margin: 0;
   padding: 6px 15px;
+}
+.drawer-pf-notification.expanded-notification .drawer-pf-notification-content {
+  display: -ms-flexbox;
+  display: flex;
+}
+.drawer-pf-notification.expanded-notification .drawer-pf-notification-content .drawer-pf-notification-message {
+  -ms-flex: 1 1;
+      flex: 1 1;
 }
 /* Exclusive styles to work with Vertical Navigation */
 .navbar-pf-vertical .drawer-pf {
