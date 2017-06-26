@@ -1,0 +1,217 @@
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-md-2 control-label">Fullname</label>
+    <div class="col-md-4">
+      <span class="pf-inline-edit" id="fullname" data-type="text">Xuebin</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Group</label>
+    <div class="col-md-6">
+      <span class="pf-inline-edit" id="group" data-type="select">UXD</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Birth Date</label>
+    <div class="col-md-6">
+      <span class="pf-inline-edit" id="birthdate" data-type="datetime" data-value="1982-03-22" data-format="yyyy-mm-dd" data-viewformat="dd M yyyy"></span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Hiredate</label>
+    <div class="col-md-6">
+      <span class="pf-inline-edit" id="hiredate" data-type="combodate" data-value="2013-03-13" data-format="YYYY-MM-DD" data-viewformat="DD MMM YYYY" data-template="D / MMMM / YYYY" data-combodate="{minYear: '1995', maxYear: moment().format('YYYY')}"></span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Education</label>
+    <div class="col-md-6">
+      <span class="pf-inline-edit" id="education" data-type="radiolist"></span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Office Location</label>
+    <div class="col-md-6">
+      <span class="pf-inline-edit" id="location" data-type="address"></span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Knowledge Structure</label>
+    <div class="col-md-6">
+      <span class="pf-inline-edit" id="knowledge" data-type="checklist">HTML5<br>CSS3<br>JavaScript</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Favourites</label>
+    <div class="col-md-6">
+      <span class="pf-inline-edit" id="favourites" data-type="select2">sports, fishing</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">Self Introduction</label>
+    <div class="col-md-6">
+      <span class="pf-inline-edit" id="introduction" data-type="textarea" data-placeholder="Describe yourself in a few words">I'm a js programmer.</span>
+    </div>
+  </div>
+</form>
+<script type="text/javascript">
+  (function($) {
+    var Radiolist = function(options) {
+      this.init('radiolist', options, Radiolist.defaults);
+    };
+    $.fn.editableutils.inherit(Radiolist, $.fn.editabletypes.checklist);
+
+    $.extend(Radiolist.prototype, {
+      renderList : function() {
+        var $label;
+        this.$tpl.empty();
+        if (!$.isArray(this.sourceData)) {
+          return;
+        }
+
+        for (var i = 0; i < this.sourceData.length; i++) {
+          $label = $('<label>', {'class':this.options.inputclass}).append($('<input>', {
+            type : 'radio',
+            name : this.options.name,
+            value : this.sourceData[i].value
+          })).append($('<span>').text(this.sourceData[i].text));
+
+          // Add radio buttons to template
+          this.$tpl.append($label);
+        }
+
+        this.$input = this.$tpl.find('input[type="radio"]');
+      },
+      input2value : function() {
+        return this.$input.filter(':checked').val();
+      },
+      str2value: function(str) {
+        return str || null;
+      },
+        
+      value2input: function(value) {
+        this.$input.val([value]);
+      },
+      value2str: function(value) {
+        return value || '';
+      },
+    });
+
+    Radiolist.defaults = $.extend({}, $.fn.editabletypes.list.defaults, {
+      /**
+       @property tpl
+       @default <div></div>
+       **/
+      tpl : '<div class="editable-radiolist"></div>',
+
+      /**
+       @property inputclass, attached to the <label> wrapper instead of the input element
+       @type string
+       @default null
+       **/
+      inputclass : '',
+
+      name : 'defaultname'
+    });
+
+    $.fn.editabletypes.radiolist = Radiolist;
+  }(window.jQuery));
+</script>
+<script type="text/javascript">
+  $(function() {
+
+    $.fn.editable.defaults.mode = 'inline';
+    $.fn.editable.defaults.showbuttons = 'bottom';
+    $.fn.editable.defaults.unsavedclass = null;
+
+    $('#fullname').editable({
+      inputclass: ''
+    });
+
+    $('#group').editable({
+      inputclass: '',
+      value: 2,    
+      source: [
+        { value: 1, text: 'Pnt DevOps' },
+        { value: 2, text: 'UXD' },
+        { value: 3, text: 'OpenShift' }
+      ]
+    });
+
+    $('#birthdate').editable({
+      tpl: '<div class="input-group date form_datetime"><input type="text" class="form-control"><span class="input-group-addon"><span class="glyphicon-calendar glyphicon"></span></span></div>',   
+      datetimepicker: {
+        weekStart: 1,
+        pickerPosition: 'bottom-left',
+        minView: 2
+      }
+    });
+
+    $('#hiredate').editable();
+
+    $('#education').editable({
+      value: 2,
+      source: [
+        { value: 1, text: 'bachelor' },
+        { value: 2, text: 'master' },
+        { value: 3, text: 'doctor' }
+      ]
+    });
+
+    $('#location').on('shown', function(e, editable) {
+      editable.container.$element.siblings('.editable-inline').addClass('editable-inline-large');
+      editable.container.$form.find('.editable-address').wrapAll('<div class="inline-edit-wrapper"/>');
+    });
+
+    $('#location').editable({
+      value: {
+        city: 'Beijing 100190, China',
+        street: 'No.2 Kexueyuan Nanlu, Haidian District',
+        building: '9/F, North Tower C, Raycom Infortech Park'
+      },
+      validate: function(value) {
+        if (value.city === '') {
+          return 'city is required!';
+        }
+      },
+      display: function(value) {
+        if (!value) {
+          $(this).empty();
+          return; 
+        }
+
+        var html = value.building + '<br>' + value.street + '<br>' + value.city;
+        $(this).html(html); 
+      }         
+    });
+
+    $('#knowledge').editable({
+      value: [1, 2, 3],
+      source: [
+        {value: 1, text: 'HTML5'},
+        {value: 2, text: 'CSS3'},
+        {value: 3, text: 'JavaScript'},
+        {value: 4, text: 'Node.js'},
+        {value: 5, text: 'Python'},
+        {value: 6, text: 'Ruby'},
+        {value: 7, text: 'Perl'},
+        {value: 8, text: 'Java'},
+        {value: 9, text: 'Php'},
+        {value: 10, text: 'C & C++'}
+      ]
+    });
+
+    $('#favourites').editable({
+      select2: {
+        tags: ['sports', 'music', 'fishing', 'travel', 'reading', 'art', 'entertainment', 'good food', 'stocks'],
+        tokenSeparators: [",", " "]
+      }
+    });
+
+    $('#introduction').on('shown', function(e, editable) {
+      editable.container.$element.siblings('.editable-inline').addClass('editable-inline-large');
+    });
+    $('#introduction').editable();
+
+  });
+</script>
