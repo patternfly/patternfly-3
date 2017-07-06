@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.26.0",
+  "version": "0.0.0-semantically-released",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "dependencies": {
@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
+    "commitizen": "^2.9.6",
     "connect-livereload": "~0.5.4",
+    "cz-conventional-changelog": "^2.0.0",
     "front-matter": "^2.1.1",
     "grunt": "~1.0.1",
     "grunt-cli": "^1.2.0",
@@ -45,6 +47,7 @@
     "nsp": "^2.6.1",
     "patternfly-eng-release": "3.24.3",
     "pixrem": "^3.0.1",
+    "semantic-release": "^6.3.6",
     "table": "3.7.9"
   },
   "optionalDependencies": {
@@ -72,7 +75,12 @@
     "build": "grunt build",
     "jekyll": "ruby --version || echo \"Ruby required\"; bundler -v || gem install bundler; bundle check || bundle install; set -e",
     "start": "npm run build; grunt server & open http://localhost:9000",
-    "grunt": "grunt"
+    "grunt": "grunt",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
