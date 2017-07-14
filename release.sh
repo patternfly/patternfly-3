@@ -30,12 +30,11 @@ if [ "${TRAVIS_REPO_SLUG}" != "${TRIGGER_REPO_SLUG}" -o "${TRAVIS_BRANCH}" != "$
 fi
 
 getDeployKey
-cd .out
 git config --global user.email $COMMIT_AUTHOR_EMAIL
 git config --global user.name $COMMIT_AUTHOR_USERNAME
-git init
-git add .
-git commit -m "Deploy to GitHub Pages"
+npm run grunt build
+git add . -f
+git commit -m "Added dist folder"
 
 git remote add ssh-origin $SSH_REPO
-git push --force --quiet ssh-origin master:gh-pages
+git push --force --quiet ssh-origin master:master-dist
