@@ -1,0 +1,125 @@
+body {
+  font-size: 14px;
+}
+
+.layout-pf.layout-pf-fixed .navbar-pf {
+  position: relative;
+}
+
+.layout-pf-fixed .navbar-pf-vertical {
+  position: absolute;
+}
+
+.nav-pf-vertical {
+  position: absolute;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on,
+.bootstrap-switch .bootstrap-switch-label,
+.bootstrap-switch .bootstrap-switch-handle-off,
+.bootstrap-switch .bootstrap-switch-label {
+   height: inherit;
+}
+
+.navbar-brand {
+  padding: 8px 20px;
+}
+
+.doc-wrapper {
+  padding: 15px 0;
+}
+
+.doc-header {
+  margin-bottom: 30px;
+}
+
+.doc-header .doc-title {
+  color: #39a5dc;
+  font-size: 36px;
+}
+
+.doc-body {
+  position: relative;
+}
+
+.doc-content {
+  margin-left: 230px;
+}
+
+@media (max-width: 767px) {
+  .doc-content {
+    margin-left: 0px;
+  }
+}
+
+.doc-sidebar {
+  width: 200px;
+}
+
+.affix-top {
+  position: absolute;
+  top: 23px;
+}
+
+.doc-menu {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.doc-menu > li {
+  margin-bottom: 5px;
+}
+
+.section-block {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+pre {
+  font-size: 14.4px;
+  max-height: 200px;
+  overflow: auto;
+}
+pre code {
+  overflow: auto;
+  white-space: pre;
+}
+
+code .tag {
+  font-size: inherit;
+  padding: 0;
+  display: inherit;
+}
+
+.doc-section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.doc-example {
+  position: relative;
+  padding: 4em 1em 1em;
+  border: 1px solid #d8d8d8;
+  margin: 1.5rem 0 0;
+}
+
+.doc-example::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1em;
+  color: #aaa;
+  font-size: smaller;
+  font-weight: 500;
+  content: 'EXAMPLE';
+}
+
+.doc-example.char-count {
+  padding-bottom: 3em;
+}
+
+.content-view-pf-pagination .form-group:last-child {
+  align-items: center;
+}
+
