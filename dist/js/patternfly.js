@@ -1241,6 +1241,24 @@
       hideSecondaryMenu = function () {
         navElement.removeClass('secondary-visible-pf');
         bodyContentElement.removeClass('secondary-visible-pf');
+
+        if (navElement.find('.secondary-nav-item-pf.is-hover').length <= 1) {
+          navElement.removeClass('hover-secondary-nav-pf');
+        }
+
+        navElement.find('.mobile-nav-item-pf').each(function (index, item) {
+          $(item).removeClass('mobile-nav-item-pf');
+        });
+      },
+
+      hideTertiaryMenu = function () {
+        navElement.removeClass('tertiary-visible-pf');
+        bodyContentElement.removeClass('tertiary-visible-pf');
+
+        if (navElement.find('.tertiary-nav-item-pf.is-hover').length <= 1) {
+          navElement.removeClass('hover-tertiary-nav-pf');
+        }
+
         navElement.find('.mobile-nav-item-pf').each(function (index, item) {
           $(item).removeClass('mobile-nav-item-pf');
         });
@@ -1498,7 +1516,7 @@
                 updateSecondaryMenuDisplayAfterSelection();
                 if (handleSelection) {
                   setActiveItem($item);
-                  // Don't process the click on the item
+                  hideSecondaryMenu();
                   event.stopImmediatePropagation();
                 }
               } else if (inMobileState()) {
@@ -1522,7 +1540,8 @@
               updateSecondaryMenuDisplayAfterSelection();
               if (handleSelection) {
                 setActiveItem($item);
-                // Don't process the click on the item
+                hideTertiaryMenu();
+                hideSecondaryMenu();
                 event.stopImmediatePropagation();
               }
             };
