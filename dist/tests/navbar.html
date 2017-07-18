@@ -57,8 +57,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-1">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -130,90 +137,98 @@
       </nav>
       <hr>
       <nav class="navbar navbar-default navbar-pf" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">
-      <img src="./../../dist/img/brand.svg" alt="PatternFly Enterprise Application" />
-    </a>
-  </div>
-  <div class="collapse navbar-collapse navbar-collapse-1">
-    <ul class="nav navbar-nav navbar-utility">
-      <li>
-        <a href="#">Status</a>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <span class="pficon pficon-user"></span>
-          Brian Johnson <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Another link</a>
-          </li>
-          <li>
-            <a href="#">Something else here</a>
-          </li>
-          <li class="divider"></li>
-          <li class="dropdown-submenu">
-            <a tabindex="-1" href="#">More options</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
-            </ul>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">One more separated link</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-primary">
-      <li>
-        <a href="#">First Link</a>
-      </li>
-      <li class="active">
-        <a href="#">Another Link</a>
-      </li>
-      <li>
-        <a href="#">And Another</a>
-      </li>
-      <li>
-        <a href="#">As a General Rule</a>
-      </li>
-      <li>
-        <a href="#">Five to Seven Links</a>
-      </li>
-      <li>
-        <a href="#">Is Good</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <img src="./../../dist/img/brand.svg" alt="PatternFly Enterprise Application" />
+          </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-utility">
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="pficon pficon-user"></span>
+                Brian Johnson <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Another link</a>
+                </li>
+                <li>
+                  <a href="#">Something else here</a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                  <a tabindex="-1" href="#">More options</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Another link</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="#">One more separated link</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-primary">
+            <li>
+              <a href="#">First Link</a>
+            </li>
+            <li class="active">
+              <a href="#">Another Link</a>
+            </li>
+            <li>
+              <a href="#">And Another</a>
+            </li>
+            <li>
+              <a href="#">As a General Rule</a>
+            </li>
+            <li>
+              <a href="#">Five to Seven Links</a>
+            </li>
+            <li>
+              <a href="#">Is Good</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
       <hr>
       <h2>Context Selector</h2>
       <nav class="navbar navbar-default navbar-pf" role="navigation">
@@ -230,8 +245,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-3">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu5">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -331,8 +353,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-3">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu6">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -433,8 +462,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-5">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu7">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -671,8 +707,15 @@
   </div>
   <div class="collapse navbar-collapse navbar-collapse-5">
     <ul class="nav navbar-nav navbar-utility">
-      <li>
-        <a href="#">Status</a>
+      <li class="dropdown">
+        <a class="nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Help" class="fa pficon-help"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -894,6 +937,7 @@
     </ul>
   </div>
 </nav>
+
       <hr>
       <nav class="navbar navbar-default navbar-pf" role="navigation">
         <div class="navbar-header">
@@ -909,8 +953,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-5">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu8">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -1150,8 +1201,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-8">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu9">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -1402,8 +1460,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-8">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu10">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -1654,8 +1719,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-8">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu11">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -1909,8 +1981,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-11">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu12">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -2067,8 +2146,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-11">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu13" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu13">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -2225,8 +2311,15 @@
   </div>
   <div class="collapse navbar-collapse navbar-collapse-11">
     <ul class="nav navbar-nav navbar-utility">
-      <li>
-        <a href="#">Status</a>
+      <li class="dropdown">
+        <a class="nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Help" class="fa pficon-help"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -2368,6 +2461,7 @@
     </ul>
   </div>
 </nav>
+
       <hr>
       <nav class="navbar navbar-default navbar-pf" role="navigation">
         <div class="navbar-header">
@@ -2383,8 +2477,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-11">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu14" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu14">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -2541,8 +2642,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-11">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu15" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu15">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -2702,8 +2810,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-16">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu16" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu16">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -2874,8 +2989,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-16">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu17" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu17">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -3046,8 +3168,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-16">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu18" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu18">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -3218,8 +3347,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-16">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu19" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu19">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -3390,8 +3526,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-16">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu20" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu20">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -3565,8 +3708,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-21">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu21" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu21">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -3737,8 +3887,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-21">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu22" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu22">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -3975,8 +4132,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-21">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu23" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu23">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -4213,8 +4377,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-21">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu24" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMen24">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -4451,8 +4622,15 @@
         </div>
         <div class="collapse navbar-collapse navbar-collapse-21">
           <ul class="nav navbar-nav navbar-utility">
-            <li>
-              <a href="#">Status</a>
+            <li class="dropdown">
+              <a class="nav-item-iconic" id="dropdownMenu25" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu25">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
