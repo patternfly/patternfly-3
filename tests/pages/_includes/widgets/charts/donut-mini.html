@@ -1,15 +1,15 @@
 <div id="{{include.id}}" class="donut-chart-pf example-donut-chart-mini"></div>
 <div style="text-align: center; width: 220px;">Animals</div>
 <script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+  var c3ChartDefaults = patternfly.c3ChartDefaults();
 
   var donutData = {
     type : 'donut',
     colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
+      Cats: patternfly.pfPaletteColors.blue,
+      Hamsters: patternfly.pfPaletteColors.green,
+      Fish: patternfly.pfPaletteColors.orange,
+      Dogs: patternfly.pfPaletteColors.red
     },
     columns: [
       ['Dogs', 2],
@@ -36,7 +36,7 @@
     height: 115
   };
   donutChartSmallConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
+    contents: patternfly.pfDonutTooltipContents
   };
 
   var donutChartSmall = c3.generate(donutChartSmallConfig);

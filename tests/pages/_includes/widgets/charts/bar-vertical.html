@@ -1,6 +1,6 @@
 <div id="{{include.id}}"></div>
 <script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+  var c3ChartDefaults = patternfly.c3ChartDefaults();
 
   var chartUrls = [
     'https://www.gogole.com',
@@ -13,7 +13,7 @@
     ['data1', 400, 360, 320, 175]
   ];
 
-  var verticalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
+  var verticalBarChartConfig = patternfly.c3ChartDefaults().getDefaultBarConfig(categories);
   verticalBarChartConfig.bindto = '#{{include.id}}';
   verticalBarChartConfig.axis = {
     x: {

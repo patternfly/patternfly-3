@@ -4,10 +4,10 @@
   var pieData = {
     type : 'pie',
     colors: {
-      Dogs: $.pfPaletteColors.red,
-      Cats: $.pfPaletteColors.blue,
-      Fish: $.pfPaletteColors.orange,
-      Hamsters: $.pfPaletteColors.green
+      Dogs: patternfly.pfPaletteColors.red,
+      Cats: patternfly.pfPaletteColors.blue,
+      Fish: patternfly.pfPaletteColors.orange,
+      Hamsters: patternfly.pfPaletteColors.green
     },
     columns: [
       ['Dogs', 3],
@@ -20,7 +20,7 @@
     onmouseout: function (d, i) { console.log("onmouseout", d, i); }
   };
 
-  var c3ChartDefaults = $().c3ChartDefaults();
+  var c3ChartDefaults = patternfly.c3ChartDefaults();
   var pieChartSmallConfig = c3ChartDefaults.getDefaultPieConfig();
   pieChartSmallConfig.bindto = '#{{include.id}}';
   pieChartSmallConfig.data = pieData;

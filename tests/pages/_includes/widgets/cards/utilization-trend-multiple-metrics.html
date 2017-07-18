@@ -19,7 +19,7 @@
         <div id="{{include.id3}}"></div>
         <div class="chart-pf-sparkline" id="{{include.id4}}"></div>
         <script>
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          var donutConfig = patternfly.c3ChartDefaults().getDefaultDonutConfig('A');
           donutConfig.bindto = '#{{include.id3}}';
           donutConfig.color =  {
             pattern: ["#cc0000","#D1D1D1"]
@@ -49,7 +49,7 @@
           donutChartTitle.insert('tspan').text("950").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
           donutChartTitle.insert('tspan').text("MHz Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
-          var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
+          var sparklineConfig = patternfly.c3ChartDefaults().getDefaultSparklineConfig();
           sparklineConfig.bindto = '#{{include.id4}}';
           sparklineConfig.data = {
             columns: [
@@ -72,7 +72,7 @@
         <div id="{{include.id5}}"></div>
         <div class="chart-pf-sparkline" id="{{include.id6}}"></div>
         <script>
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          var donutConfig = patternfly.c3ChartDefaults().getDefaultDonutConfig('A');
           donutConfig.bindto = '#{{include.id5}}';
           donutConfig.color =  {
             pattern: ["#3f9c35","#D1D1D1"]
@@ -102,7 +102,7 @@
           donutChartTitle.insert('tspan').text("176").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
           donutChartTitle.insert('tspan').text("GB Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
-          var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
+          var sparklineConfig = patternfly.c3ChartDefaults().getDefaultSparklineConfig();
           sparklineConfig.bindto = '#{{include.id6}}';
           sparklineConfig.data = {
             columns: [
@@ -125,7 +125,7 @@
         <div id="{{include.id7}}"></div>
         <div class="chart-pf-sparkline" id="{{include.id8}}"></div>
         <script>
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          var donutConfig = patternfly.c3ChartDefaults().getDefaultDonutConfig('A');
           donutConfig.bindto = '#{{include.id7}}';
           donutConfig.color =  {
             pattern: ["#EC7A08","#D1D1D1"]
@@ -155,7 +155,7 @@
           donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
           donutChartTitle.insert('tspan').text("Gbps Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
-          var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
+          var sparklineConfig = patternfly.c3ChartDefaults().getDefaultSparklineConfig();
           sparklineConfig.bindto = '#{{include.id8}}';
           sparklineConfig.data = {
             columns: [

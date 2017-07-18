@@ -39,7 +39,7 @@ describe("bar-charts test suite", function () {
   });
 
   function renderBarCharts() {
-    var c3ChartDefaults = $().c3ChartDefaults();
+    var c3ChartDefaults = patternfly.c3ChartDefaults();
 
     var chartUrls = [
       'https://www.gogole.com',
@@ -53,7 +53,7 @@ describe("bar-charts test suite", function () {
     ];
 
     //vertical bar
-    var verticalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
+    var verticalBarChartConfig = patternfly.c3ChartDefaults().getDefaultBarConfig(categories);
     verticalBarChartConfig.bindto = '#verticalBarChart';
     verticalBarChartConfig.axis = {
       x: {
@@ -81,14 +81,14 @@ describe("bar-charts test suite", function () {
     ];
     var groupedColors = {
       pattern: [
-        $.pfPaletteColors.red,
-        $.pfPaletteColors.blue,
-        $.pfPaletteColors.orange,
-        $.pfPaletteColors.green
+        patternfly.pfPaletteColors.red,
+        patternfly.pfPaletteColors.blue,
+        patternfly.pfPaletteColors.orange,
+        patternfly.pfPaletteColors.green
       ]
     };
 
-    var groupedVerticalBarChartConfig = $().c3ChartDefaults().getDefaultGroupedBarConfig();
+    var groupedVerticalBarChartConfig = patternfly.c3ChartDefaults().getDefaultGroupedBarConfig();
     groupedVerticalBarChartConfig.bindto = '#groupedVerticalBarChart';
     groupedVerticalBarChartConfig.axis = {
       x: {
@@ -118,14 +118,14 @@ describe("bar-charts test suite", function () {
     var stackedCategories = ['2013', '2014', '2015'];
     var stackedColors = {
       pattern: [
-        $.pfPaletteColors.red,
-        $.pfPaletteColors.blue,
-        $.pfPaletteColors.orange,
-        $.pfPaletteColors.green
+        patternfly.pfPaletteColors.red,
+        patternfly.pfPaletteColors.blue,
+        patternfly.pfPaletteColors.orange,
+        patternfly.pfPaletteColors.green
       ]
     };
 
-    var stackedVerticalBarChartConfig = $().c3ChartDefaults().getDefaultStackedBarConfig();
+    var stackedVerticalBarChartConfig = patternfly.c3ChartDefaults().getDefaultStackedBarConfig();
     stackedVerticalBarChartConfig.bindto = '#stackedVerticalBarChart';
     stackedVerticalBarChartConfig.axis = {
       x: {
@@ -147,7 +147,7 @@ describe("bar-charts test suite", function () {
     var stackedVerticalBarChart = c3.generate(stackedVerticalBarChartConfig);
 
     //horizontal bar
-    var horizontalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
+    var horizontalBarChartConfig = patternfly.c3ChartDefaults().getDefaultBarConfig(categories);
     horizontalBarChartConfig.bindto = '#horizontalBarChart';
     horizontalBarChartConfig.axis = {
       rotated: true,
@@ -167,7 +167,7 @@ describe("bar-charts test suite", function () {
     var horizontalBarChart = c3.generate(horizontalBarChartConfig);
 
     //grouped horizontal bar
-    var groupedHorizontalBarChartConfig = $().c3ChartDefaults().getDefaultGroupedBarConfig();
+    var groupedHorizontalBarChartConfig = patternfly.c3ChartDefaults().getDefaultGroupedBarConfig();
     groupedHorizontalBarChartConfig.bindto = '#groupedHorizontalBarChart';
     groupedHorizontalBarChartConfig.axis = {
       rotated: true,
@@ -188,7 +188,7 @@ describe("bar-charts test suite", function () {
     var groupedHorizontalBarChart = c3.generate(groupedHorizontalBarChartConfig);
 
     //stacked horizontal bar
-    var stackedHorizontalBarChartConfig = $().c3ChartDefaults().getDefaultStackedBarConfig();
+    var stackedHorizontalBarChartConfig = patternfly.c3ChartDefaults().getDefaultStackedBarConfig();
     stackedHorizontalBarChartConfig.bindto = '#stackedHorizontalBarChart';
     stackedHorizontalBarChartConfig.axis = {
       rotated: true,

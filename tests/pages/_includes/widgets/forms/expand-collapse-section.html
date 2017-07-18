@@ -56,25 +56,3 @@
 
 </form>
 
-<script>
-  // Initialize form
-  $(document).ready(function() {
-    // set default state to collapsed for expandable field section
-    $('.fields-section-header-pf').attr('aria-expanded', 'false');
-    $('.fields-section-pf .form-group').addClass('hidden');
-    $('.fa.field-section-toggle-pf').removeClass('fa-angle-down');
-
-    // click the field section heading to expand the section
-    $("#{{include.id-fieldsection}} .field-section-toggle-pf").click(function(event){
-      $(this).parents(".fields-section-pf").find(".fa").toggleClass("fa-angle-down");
-      $(this).parents(".fields-section-pf").find(".form-group").toggleClass("hidden");
-      if ($(this).parent().attr('aria-expanded') == 'false') {
-        $(this).parent().attr('aria-expanded', 'true');
-      } else {
-        $(this).parent().attr('aria-expanded', 'false');
-      }
-    })
-
-  });
-
-</script>

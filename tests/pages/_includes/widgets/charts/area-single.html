@@ -10,7 +10,7 @@
     ['data2', 140, 100, 150, 205, 145, 50]
   ];
 
-  var c3ChartDefaults = $().c3ChartDefaults();
+  var c3ChartDefaults = patternfly.c3ChartDefaults();
   var singleAreaChartConfig = c3ChartDefaults.getDefaultSingleAreaConfig();
   singleAreaChartConfig.bindto = '#{{include.id}}';
   singleAreaChartConfig.data = {

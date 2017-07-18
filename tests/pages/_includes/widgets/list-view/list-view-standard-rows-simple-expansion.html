@@ -475,39 +475,73 @@
   </div>
 </div>
 <script>
-  $(document).ready(function () {
-    // Row Checkbox Selection
-    $("input[type='checkbox']").change(function (e) {
-      if ($(this).is(":checked")) {
-        $(this).closest('.list-group-item').addClass("active");
-      } else {
-        $(this).closest('.list-group-item').removeClass("active");
+  function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+  }
+
+  function addCheckboxClickHandler(input) {
+    var rowItem = input.parentNode;
+    while (rowItem && !hasClass(rowItem, 'list-group-item')) {
+      rowItem = rowItem.parentNode;
+    }
+
+    if (rowItem) {
+      input.addEventListener('click', function () {
+        if (hasClass(rowItem, 'active')) {
+          rowItem.classList.remove('active');
+        }
+        else {
+          rowItem.classList.add('active');
+        }
+      });
+    }
+  }
+
+  function handleExpansionEvents(header) {
+    var expandContainer = header.parentNode.getElementsByClassName("list-group-item-container")[0];
+    var expandButton = header.getElementsByClassName('fa-angle-right')[0];
+
+    if (expandContainer) {
+      header.addEventListener('click', function(event) {
+        if (event.target.tagName !== 'A' &&  event.target.tagName !== 'BUTTON' && event.target.tagName !== 'INPUT' && !hasClass(event.target, 'fa-ellipsis-v')) {
+          if (!hasClass(expandButton, "fa-angle-down")) {
+            expandButton.classList.add("fa-angle-down");
+            header.parentNode.classList.add("list-view-pf-expand-active");
+            expandContainer.classList.remove("hidden");
+          } else {
+            expandButton.classList.remove("fa-angle-down");
+            header.parentNode.classList.remove("list-view-pf-expand-active");
+            expandContainer.classList.add("hidden");
+          }
+        }
+      }, false);
+
+      var closeButton = expandContainer.getElementsByClassName("pficon-close")[0];
+      if (closeButton) {
+        closeButton.addEventListener('click', function(event) {
+          expandButton.classList.remove("fa-angle-down");
+          header.parentNode.classList.remove("list-view-pf-expand-active");
+          expandContainer.classList.add("hidden");
+        }, false);
+
       }
-    });
-    // toggle dropdown menu
-    $('.list-view-pf-actions').on('show.bs.dropdown', function () {
-      var $this = $(this);
-      var $dropdown = $this.find('.dropdown');
-      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
-      $dropdown.toggleClass('dropup', space < 10);
-    });
+    }
+  }
 
-    // click the list-view heading then expand a row
-    $(".list-group-item-header").click(function(event){
-      if(!$(event.target).is("button, a, input, .fa-ellipsis-v")){
-        $(this).find(".fa-angle-right").toggleClass("fa-angle-down")
-          .end().parent().toggleClass("list-view-pf-expand-active")
-            .find(".list-group-item-container").toggleClass("hidden");
-      } else {
+  var onLoad = function() {
+    var inputs = document.getElementsByTagName('input');
+
+    for(var i = 0; i < inputs.length; i++) {
+      if(inputs[i].type.toLowerCase() === 'checkbox') {
+        addCheckboxClickHandler(inputs[i]);
       }
-    })
+    }
 
-    // click the close button, hide the expand row and remove the active status
-    $(".list-group-item-container .close").on("click", function (){
-      $(this).parent().addClass("hidden")
-        .parent().removeClass("list-view-pf-expand-active")
-          .find(".fa-angle-right").removeClass("fa-angle-down");
-    })
+    var headers = document.getElementsByClassName('list-group-item-header');
+    for(i = 0; i < headers.length; i++) {
+      handleExpansionEvents(headers[i]);
+    }
+  };
 
-  });
+  window.addEventListener('load', onLoad, false);
 </script>

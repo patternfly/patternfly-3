@@ -24,7 +24,7 @@ describe("area-charts test suite", function () {
       ['data3', 10, 60, 90, 10, 325, 400],
       ['data4', 260, 10, 305, 100, 50, 150]
     ];
-    var c3ChartDefaults = $().c3ChartDefaults();
+    var c3ChartDefaults = patternfly.c3ChartDefaults();
     var areaChartConfig = c3ChartDefaults.getDefaultAreaConfig();
     areaChartConfig.bindto = '#areaChart';
     areaChartConfig.data = {

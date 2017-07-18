@@ -1,5 +1,4 @@
-<button class="btn btn-default wizard-pf-open wizard-pf-complete" data-target="#{{include.id}}">Launch wizard</button>
-<div class="modal" id="{{include.id}}" tabindex="-1" role="dialog">
+<div class="modal fade in" style="display:block; position:relative; height: 620px;" id="{{include.id}}" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg wizard-pf">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,7 +7,7 @@
         <dt class="modal-title">Wizard Title</dt>
       </div>
       <div class="modal-body wizard-pf-body clearfix">
-        <div class="wizard-pf-steps hidden">
+        <div class="wizard-pf-steps ">
           <ul class="wizard-pf-steps-indicator">
             <li class="wizard-pf-step active" data-tabgroup="1">
               <a><span class="wizard-pf-step-number">1</span><span class="wizard-pf-step-title">First Step</span></a>
@@ -23,7 +22,7 @@
         </div>
 
         <div class="wizard-pf-row">
-          <div class="wizard-pf-sidebar hidden">
+          <div class="wizard-pf-sidebar">
             <ul class="list-group">
               <li class="list-group-item active">
                 <a href="#">
@@ -67,31 +66,8 @@
               </li>
             </ul>
           </div> <!-- /.wizard-pf-sidebar -->
-          <div class="wizard-pf-main">
-            <div class="wizard-pf-loading blank-slate-pf">
-              <div class="spinner spinner-lg blank-slate-pf-icon"></div>
-              <h3 class="blank-slate-pf-main-action">Loading Wizard</h3>
-              <p class="blank-slate-pf-secondary-action">Lorem ipsum dolor sit amet, porta at suspendisse ac, ut wisi
-                vivamus, lorem sociosqu eget nunc amet. </p>
-            </div>
-            <div class="wizard-pf-contents hidden">
-              <form class="form-horizontal">
-                <!-- replacing id with data-id to pass build errors -->
-                <div class="form-group required">
-                  <label class="col-sm-2 control-label" for="textInput-markup">Name</label>
-                  <div class="col-sm-10">
-                    <input type="text" data-id="textInput-markup" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="descriptionInput-markup">Description (Optional)</label>
-                  <div class="col-sm-10">
-                    <textarea data-id="descriptionInput-markup" class="form-control" rows="2"></textarea>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="wizard-pf-contents hidden">
+          <div class="wizard-pf-main" style="margin-left: 253px;">
+            <div class="wizard-pf-contents">
               <form class="form-horizontal">
                 <div class="form-group required">
                   <label class="col-sm-2 control-label" for="lorem">Lorem ipsum</label>
@@ -268,6 +244,7 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!--
 <script>
 
   $(document).ready(function() {
@@ -553,3 +530,4 @@
   };
 
 </script>
+-->
