@@ -5475,28 +5475,71 @@ a.disabled {
 .drawer-pf.drawer-pf-expanded .drawer-pf-toggle-expand:before {
   content: "\f101";
 }
+.drawer-pf .blank-slate-pf {
+  border: 0;
+  margin-bottom: 0;
+  padding: 30px;
+}
+.drawer-pf .blank-slate-pf .blank-slate-pf-icon {
+  font-size: 3em;
+  line-height: 1em;
+}
+.drawer-pf .blank-slate-pf h1 {
+  font-size: 1em;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.drawer-pf-close,
 .drawer-pf-toggle-expand {
   color: inherit;
   cursor: pointer;
-  left: 0;
+  line-height: inherit;
   padding: 2px 5px;
   position: absolute;
 }
-.drawer-pf-toggle-expand:before {
-  content: "\f100";
-  font-family: "FontAwesome";
-}
+.drawer-pf-close:hover,
 .drawer-pf-toggle-expand:hover,
+.drawer-pf-close:focus,
 .drawer-pf-toggle-expand:focus {
   color: inherit;
   text-decoration: none;
+}
+.drawer-pf-toggle-expand {
+  left: 0;
+}
+.drawer-pf-toggle-expand:hover {
+  color: #0088ce;
+}
+.drawer-pf-close {
+  right: 0;
+}
+.drawer-pf-action {
+  display: -ms-flexbox;
+  display: flex;
 }
 .drawer-pf-action .btn-link {
   color: #0088ce;
   padding: 10px 0;
 }
+.drawer-pf-action .btn-link .pficon,
+.drawer-pf-action .btn-link .fa {
+  margin-right: 3px;
+}
 .drawer-pf-action .btn-link:hover {
   color: #00659c;
+}
+.drawer-pf-action-link {
+  border-left: solid 1px #d1d1d1;
+  -ms-flex: 1 1 0%;
+      flex: 1 1 0%;
+  margin: 10px 0;
+  text-align: center;
+}
+.drawer-pf-action-link:first-of-type {
+  border-left-width: 0;
+}
+.drawer-pf-action-link .btn-link {
+  padding: 0;
 }
 .drawer-pf-loading {
   color: #4d5258;
@@ -5534,6 +5577,9 @@ a.disabled {
   border-right: none;
   padding-right: 0;
 }
+.drawer-pf-notification-content {
+  cursor: default;
+}
 .drawer-pf-notification-info,
 .drawer-pf-notification-message {
   display: block;
@@ -5551,7 +5597,7 @@ a.disabled {
   background-color: #fafafa;
   border-bottom: 1px solid #d1d1d1;
   position: absolute;
-  width: 318px;
+  width: 100%;
 }
 .drawer-pf-title h3 {
   font-size: 12px;
