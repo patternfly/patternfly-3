@@ -68,6 +68,7 @@
 .drawer-pf-close, .drawer-pf-toggle-expand {
   color: inherit;
   cursor: pointer;
+  line-height: inherit;
   padding: 2px 5px;
   position: absolute;
   &:hover,
@@ -78,20 +79,12 @@
 }
 .drawer-pf-toggle-expand {
   left: 0;
-  &:before {
-    content: "\f100";
-    font-family: "FontAwesome";
-  }
   &:hover {
     color: @link-color;
   }
 }
 .drawer-pf-close {
   right: 0;
-  &:before {
-    content: "\e60b";
-    font-family: "PatternFlyIcons-webfont";
-  }
 }
 
 
