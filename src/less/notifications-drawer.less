@@ -48,30 +48,71 @@
       content: "\f101";
     }
   }
+  .blank-slate-pf {
+    border: 0;
+    margin-bottom: 0;
+    padding: 30px;
+
+    .blank-slate-pf-icon {
+      font-size: 3em;
+      line-height: 1em;
+    }
+
+    h1 {
+      font-size: 1em;
+      margin-bottom: 0;
+      margin-top: 15px;
+    }
+  }
 }
-.drawer-pf-toggle-expand {
+.drawer-pf-close, .drawer-pf-toggle-expand {
   color: inherit;
   cursor: pointer;
-  left: 0;
+  line-height: inherit;
   padding: 2px 5px;
   position: absolute;
-  &:before {
-    content: "\f100";
-    font-family: "FontAwesome";
-  }
   &:hover,
   &:focus {
     color: inherit;
     text-decoration: none;
   }
 }
+.drawer-pf-toggle-expand {
+  left: 0;
+  &:hover {
+    color: @link-color;
+  }
+}
+.drawer-pf-close {
+  right: 0;
+}
+
 
 .drawer-pf-action {
+  display: flex;
   .btn-link {
     color: @link-color;
     padding: 10px 0;
+    .pficon, .fa {
+      margin-right: 3px;
+    }
 
     &:hover { color: @link-hover-color; }
+  }
+}
+
+.drawer-pf-action-link {
+  border-left: solid 1px @color-pf-black-300;
+  flex: 1 1 0%;
+  margin: 10px 0;
+  text-align: center;
+
+  &:first-of-type {
+    border-left-width: 0;
+  }
+
+  .btn-link {
+    padding: 0;
   }
 }
 
@@ -112,6 +153,10 @@
   }
 }
 
+.drawer-pf-notification-content {
+  cursor: default;
+}
+
 .drawer-pf-notification-info,
 .drawer-pf-notification-message {
   display: block;
@@ -130,7 +175,7 @@
   background-color: @color-pf-black-100;
   border-bottom: 1px solid @card-pf-border-color;
   position: absolute;
-  width: 318px;
+  width: 100%;
   h3 {
     font-size: @font-size-base;
     margin: 0;
