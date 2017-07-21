@@ -4037,12 +4037,14 @@ a.disabled {
 }
 .list-view-pf .list-group-item.list-view-pf-expand-active {
   background-color: #ededed;
+  box-shadow: 0 2px 6px rgba(3, 3, 3, 0.2);
+  z-index: 1;
 }
 .list-view-pf .list-group-item.active {
   color: #555;
   background-color: #def3ff;
   background-clip: border-box;
-  border-color: #39a5dc transparent transparent;
+  border-color: #bbb transparent transparent;
   z-index: auto;
 }
 .list-view-pf .list-group-item:hover {
@@ -4051,10 +4053,10 @@ a.disabled {
   border-right-color: transparent;
 }
 .list-view-pf .list-group-item.list-view-pf-expand-active {
-  border: solid 1px #39a5dc;
+  border: solid 1px #bbb;
 }
 .list-view-pf .list-group-item.list-view-pf-expand-active:first-child {
-  border-top-color: #39a5dc;
+  border-top-color: #bbb;
 }
 .list-view-pf .list-group-item:first-child {
   border-top: 1px solid transparent;
@@ -4355,7 +4357,7 @@ a.disabled {
 }
 .list-group-item-container {
   background: #fff;
-  border-top: solid 1px #39a5dc;
+  border-top: solid 1px #bbb;
   box-sizing: content-box;
   margin: -1px -15px 0;
   -ms-flex-order: 3;
@@ -6231,7 +6233,7 @@ table.dataTable th:active {
   position: absolute;
   right: 20px;
   top: 12px;
-  z-index: 1035;
+  z-index: 1055;
   /* Medium devices (desktops, 992px and up) */
 }
 @media (min-width: 992px) {
@@ -6244,7 +6246,7 @@ table.dataTable th:active {
   position: fixed;
   right: 20px;
   top: 20px;
-  z-index: 1050;
+  z-index: 1055;
 }
 .toast-notifications-list-pf .toast-pf {
   clear: both;
