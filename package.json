@@ -10,7 +10,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
+<<<<<<< HEAD
     "commitizen": "^2.9.6",
+=======
+    "browser-sync": "^2.18.13",
+>>>>>>> Added browsersync for live reload of the jquery showcase.  Implemented handlebars templates for including html
     "connect-livereload": "~0.5.4",
 <<<<<<< HEAD
     "cz-conventional-changelog": "^2.0.0",
@@ -95,6 +99,7 @@
     "start": "npm run build; grunt server & open http://localhost:9000",
     "grunt": "grunt",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-release-post": "semantic-release post",
     "semantic-release-pre": "semantic-release pre",
@@ -104,6 +109,12 @@
     "build-jquery-showcase": "./tests/pages/jquery/build-jquery-showcase.js && copy 'tests/pages/jquery/src/**/*.js' dist/tests/jquery/src/",
 >>>>>>> Updated the jquery-showcase script to use the npm copy command, rather than the system cp command
     "watch-jquery-showcase": "watch 'npm run build-jquery-showcase' ./tests/pages/jquery/"
+=======
+    "build-jquery-showcase": "./tests/pages/jquery/build-jquery-showcase.js && copy 'tests/pages/jquery/src/**/*.*' dist/tests/jquery/src/",
+    "watch-jquery-showcase": "watch 'npm run build-jquery-showcase' ./tests/pages/jquery/",
+    "serve-jquery-showcase": "browser-sync start --server 'dist' --files 'dist/tests/jquery' --startPath 'tests/jquery'",
+    "jquery-dev": "npm run serve-jquery-showcase & npm run watch-jquery-showcase"
+>>>>>>> Added browsersync for live reload of the jquery showcase.  Implemented handlebars templates for including html
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
