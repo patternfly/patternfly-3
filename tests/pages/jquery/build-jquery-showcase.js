@@ -12,13 +12,46 @@ var Rx = require('rxjs/Rx'),
     mkdir = Rx.Observable.bindNodeCallback(fs.mkdir),
     exists = Rx.Observable.bindCallback(fs.exists);
 
+function escapeHtml (string) {
+  let entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '/': '&#x2F;',
+    '`': '&#x60;',
+    '=': '&#x3D;'
+  };
+
+  return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+    return entityMap[s];
+  });
+}
+
+// Register a custom helper
+handlebars.registerHelper('include', (filepath)  => {
+  let html = fs.readFileSync(filepath, 'utf8');
+  return html.trim();
+} );
+
+// Register a custom helper
+handlebars.registerHelper('template', (filepath)  => {
+  let html = '<pre class="prettyprint lang-html">';
+  html = html + escapeHtml(fs.readFileSync(filepath, 'utf8').trim());
+  html = html + "</pre>";
+  console.log(html)
+  return html;
+} );
+
 // Register a custom helper
 handlebars.registerHelper('code', (filepath, filetype)  => {
   let langClass = typeof filetype === 'string' ? ' lang-'+filetype : '';
-  let out = '<pre class="prettyprint'+ langClass +'">';
-  out = out + fs.readFileSync(filepath);
-  out = out + "</pre>";
-  return out;
+  let html = '<pre class="prettyprint'+ langClass +'">';
+  html = html + fs.readFileSync(filepath, 'utf8').trim();
+  html = html + "</pre>";
+  console.log(html)
+  return html;
 } );
 
 const showcasePath = 'tests/pages/jquery';

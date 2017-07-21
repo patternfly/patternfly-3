@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
+    "browser-sync": "^2.18.13",
     "connect-livereload": "~0.5.4",
     "copy": "^0.3.0",
     "front-matter": "^2.1.1",
@@ -78,8 +79,10 @@
     "jekyll": "ruby --version || echo \"Ruby required\"; bundler -v || gem install bundler; bundle check || bundle install; set -e",
     "start": "npm run build; grunt server & open http://localhost:9000",
     "grunt": "grunt",
-    "build-jquery-showcase": "./tests/pages/jquery/build-jquery-showcase.js && copy 'tests/pages/jquery/src/**/*.js' dist/tests/jquery/src/",
-    "watch-jquery-showcase": "watch 'npm run build-jquery-showcase' ./tests/pages/jquery/"
+    "build-jquery-showcase": "./tests/pages/jquery/build-jquery-showcase.js && copy 'tests/pages/jquery/src/**/*.*' dist/tests/jquery/src/",
+    "watch-jquery-showcase": "watch 'npm run build-jquery-showcase' ./tests/pages/jquery/",
+    "serve-jquery-showcase": "browser-sync start --server 'dist' --files 'dist/tests/jquery' --startPath 'tests/jquery'",
+    "jquery-dev": "npm run serve-jquery-showcase & npm run watch-jquery-showcase"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
