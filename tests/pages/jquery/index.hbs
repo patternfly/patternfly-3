@@ -1,0 +1,23 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly-additions.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+  <script defer>
+    console.log("Console: Hello console");
+    (function($) {
+      $(document).ready(function(){
+        prettyPrint();
+      });
+    })(jQuery);
+  </script>
+  <script defer src="./src/test.js"></script>
+</head>
+<body>
+  <p>HTML: {{message}}</p>
+  <div class="example"></div>
+  {{{code 'tests/pages/jquery/src/test.js'}}}
+</body>
+</html>
