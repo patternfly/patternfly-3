@@ -32,6 +32,8 @@
     "grunt-postcss": "^0.8.0",
     "grunt-run": "^0.6.0",
     "grunt-stylelint": "^0.7.0",
+    "handlebars": "^4.0.10",
+    "handlebars-helpers": "^0.9.4",
     "jasmine-core": "^2.4.1",
     "jasmine-jquery": "^2.1.1",
     "js-yaml": "^3.7.0",
@@ -48,7 +50,8 @@
     "patternfly-eng-release": "^3.26.35",
     "pixrem": "^3.0.1",
     "semantic-release": "^6.3.6",
-    "table": "3.7.9"
+    "table": "3.7.9",
+    "watch": "^1.0.2"
   },
   "optionalDependencies": {
     "bootstrap-datepicker": "~1.6.4",
@@ -86,7 +89,9 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-release-post": "semantic-release post",
     "semantic-release-pre": "semantic-release pre",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build-jquery-showcase": "./tests/pages/jquery/build-jquery-showcase.js && cp -ar ./tests/pages/jquery/src ./dist/tests/jquery/",
+    "watch-jquery-showcase": "watch 'npm run build-jquery-showcase' ./tests/pages/jquery/"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
