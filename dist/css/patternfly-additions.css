@@ -1959,6 +1959,57 @@ select.selectpicker {
 .applauncher-pf .dropdown-toggle.disabled {
   cursor: not-allowed;
 }
+.applauncher-pf.open > .dropdown-menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.applauncher-pf .applauncher-pf-item {
+  width: 100%;
+}
+.applauncher-pf .applauncher-pf-link {
+  display: -ms-flexbox;
+  display: flex;
+  white-space: initial;
+  -ms-flex-align: center;
+      align-items: center;
+}
+@media (min-width: 768px) {
+  .applauncher-pf-block-list .applauncher-pf-item {
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+  }
+}
+.applauncher-pf-block-list .applauncher-pf-link {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .applauncher-pf-block-list .applauncher-pf-link {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+  }
+}
+.applauncher-pf-block-list .applauncher-pf-link-icon {
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link {
+    padding: 9px;
+  }
+  .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon {
+    -ms-flex: 1 0 0px;
+        flex: 1 0 0;
+    text-align: left;
+  }
+  .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title {
+    -ms-flex: 3;
+        flex: 3;
+  }
+}
 .applauncher-pf .dropdown-menu {
   padding: 9px;
   min-width: 220px;
@@ -1967,7 +2018,6 @@ select.selectpicker {
   border-style: solid;
   border-width: 1px;
   border-color: transparent;
-  padding: 7px 10px;
 }
 .applauncher-pf .applauncher-pf-link:hover {
   background-color: #f5f5f5;
@@ -1977,55 +2027,28 @@ select.selectpicker {
   box-shadow: 0 0 2px 0 #d1d1d1;
 }
 .applauncher-pf .applauncher-pf-link-icon {
-  font-size: 2em;
+  font-size: 1.2em;
   text-align: center;
   width: 1.28571429em;
-  min-height: 1.28571429em;
 }
 @media (min-width: 768px) {
   .applauncher-pf .applauncher-pf-link-icon {
-    padding-right: 4px;
+    font-size: 2em;
   }
 }
-.applauncher-pf .applauncher-pf-link-icon,
-.applauncher-pf .applauncher-pf-link-title {
-  display: inline-block;
-  vertical-align: middle;
-}
-.applauncher-pf.applauncher-pf-block-list .applauncher-pf-item {
-  display: inline-block;
-  min-width: 0;
-  text-align: center;
-  vertical-align: top;
-  width: calc(50% - (1px * 2));
+.navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
+.navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
+.navbar-pf .applauncher-pf .dropdown-menu,
+.navbar-pf-alt .applauncher-pf .dropdown-menu {
+  border-width: 1px !important;
 }
 @media (min-width: 768px) {
-  .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link {
-    padding: 15px 10px;
+  .navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
+  .navbar-pf .applauncher-pf .dropdown-menu,
+  .navbar-pf-alt .applauncher-pf .dropdown-menu {
+    margin-top: 11px;
   }
-}
-.applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
-.applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
-  display: block;
-  padding: 0;
-  width: auto;
-}
-.applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
-  white-space: normal;
-  word-wrap: break-word;
-}
-.navbar-pf .navbar-utility .applauncher-pf,
-.navbar-pf-alt .navbar-utility .applauncher-pf,
-.navbar-pf .applauncher-pf,
-.navbar-pf-alt .applauncher-pf {
-  display: block;
-  overflow: hidden;
-}
-.navbar-pf .navbar-utility .applauncher-pf > a:hover,
-.navbar-pf-alt .navbar-utility .applauncher-pf > a:hover,
-.navbar-pf .applauncher-pf > a:hover,
-.navbar-pf-alt .applauncher-pf > a:hover {
-  background-color: #232323;
 }
 .navbar-pf .navbar-utility .applauncher-pf.open > a,
 .navbar-pf-alt .navbar-utility .applauncher-pf.open > a,
@@ -2052,18 +2075,18 @@ select.selectpicker {
     color: #d1d1d1;
   }
 }
-.navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
-.navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
-.navbar-pf .applauncher-pf .dropdown-menu,
-.navbar-pf-alt .applauncher-pf .dropdown-menu {
-  border-width: 1px !important;
-}
-@media (min-width: 768px) {
-  .navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
-  .navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
-  .navbar-pf .applauncher-pf .dropdown-menu,
-  .navbar-pf-alt .applauncher-pf .dropdown-menu {
-    margin-top: 11px;
+@media (max-width: 767px) {
+  .navbar-pf .navbar-utility .applauncher-pf.open .dropdown-menu > li > a,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.open .dropdown-menu > li > a,
+  .navbar-pf .applauncher-pf.open .dropdown-menu > li > a,
+  .navbar-pf-alt .applauncher-pf.open .dropdown-menu > li > a {
+    padding-left: 20px;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf.open .dropdown-menu > li > a .applauncher-pf-link-icon,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.open .dropdown-menu > li > a .applauncher-pf-link-icon,
+  .navbar-pf .applauncher-pf.open .dropdown-menu > li > a .applauncher-pf-link-icon,
+  .navbar-pf-alt .applauncher-pf.open .dropdown-menu > li > a .applauncher-pf-link-icon {
+    padding-right: 20px;
   }
 }
 .navbar-pf .navbar-utility .applauncher-pf.dropdown > .dropdown-toggle,
@@ -2127,15 +2150,6 @@ select.selectpicker {
   display: inline;
   position: relative;
 }
-.navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-item,
-.navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-item,
-.navbar-pf .applauncher-pf .applauncher-pf-item,
-.navbar-pf-alt .applauncher-pf .applauncher-pf-item {
-  display: block;
-  min-width: inherit;
-  text-align: left;
-  width: auto;
-}
 .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link,
 .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link,
 .navbar-pf .applauncher-pf .applauncher-pf-link,
@@ -2150,12 +2164,6 @@ select.selectpicker {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
-}
-.navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
-.navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
-.navbar-pf .applauncher-pf .applauncher-pf-link-icon,
-.navbar-pf-alt .applauncher-pf .applauncher-pf-link-icon {
-  display: none;
 }
 .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-title,
 .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-title,
@@ -2190,6 +2198,44 @@ select.selectpicker {
   .navbar-pf-alt .applauncher-pf .dropdown-toggle.disabled {
     cursor: not-allowed;
   }
+  .navbar-pf .navbar-utility .applauncher-pf.open > .dropdown-menu,
+  .navbar-pf-alt .navbar-utility .applauncher-pf.open > .dropdown-menu,
+  .navbar-pf .applauncher-pf.open > .dropdown-menu,
+  .navbar-pf-alt .applauncher-pf.open > .dropdown-menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-item,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-item,
+  .navbar-pf .applauncher-pf .applauncher-pf-item,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-item {
+    width: 100%;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link,
+  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link,
+  .navbar-pf .applauncher-pf .applauncher-pf-link,
+  .navbar-pf-alt .applauncher-pf .applauncher-pf-link {
+    display: -ms-flexbox;
+    display: flex;
+    white-space: initial;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf-block-list .applauncher-pf-link,
+  .navbar-pf-alt .navbar-utility .applauncher-pf-block-list .applauncher-pf-link,
+  .navbar-pf .applauncher-pf-block-list .applauncher-pf-link,
+  .navbar-pf-alt .applauncher-pf-block-list .applauncher-pf-link {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf-block-list .applauncher-pf-link-icon,
+  .navbar-pf-alt .navbar-utility .applauncher-pf-block-list .applauncher-pf-link-icon,
+  .navbar-pf .applauncher-pf-block-list .applauncher-pf-link-icon,
+  .navbar-pf-alt .applauncher-pf-block-list .applauncher-pf-link-icon {
+    padding: 0;
+  }
   .navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
   .navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
   .navbar-pf .applauncher-pf .dropdown-menu,
@@ -2204,7 +2250,6 @@ select.selectpicker {
     border-style: solid;
     border-width: 1px;
     border-color: transparent;
-    padding: 7px 10px;
   }
   .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link:hover,
   .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link:hover,
@@ -2220,50 +2265,52 @@ select.selectpicker {
   .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
   .navbar-pf .applauncher-pf .applauncher-pf-link-icon,
   .navbar-pf-alt .applauncher-pf .applauncher-pf-link-icon {
-    font-size: 2em;
+    font-size: 1.2em;
     text-align: center;
     width: 1.28571429em;
-    min-height: 1.28571429em;
   }
-  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
-  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
-  .navbar-pf .applauncher-pf .applauncher-pf-link-icon,
-  .navbar-pf-alt .applauncher-pf .applauncher-pf-link-icon,
-  .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-link-title,
-  .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-title,
-  .navbar-pf .applauncher-pf .applauncher-pf-link-title,
-  .navbar-pf-alt .applauncher-pf .applauncher-pf-link-title {
-    display: inline-block;
-    vertical-align: middle;
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf-block-list .applauncher-pf-item,
+  .navbar-pf-alt .navbar-utility .applauncher-pf-block-list .applauncher-pf-item,
+  .navbar-pf .applauncher-pf-block-list .applauncher-pf-item,
+  .navbar-pf-alt .applauncher-pf-block-list .applauncher-pf-item {
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
   }
-  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item,
-  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item,
-  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item,
-  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-item {
-    display: inline-block;
-    min-width: 0;
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf-block-list .applauncher-pf-link,
+  .navbar-pf-alt .navbar-utility .applauncher-pf-block-list .applauncher-pf-link,
+  .navbar-pf .applauncher-pf-block-list .applauncher-pf-link,
+  .navbar-pf-alt .applauncher-pf-block-list .applauncher-pf-link {
+    -ms-flex-direction: column;
+        flex-direction: column;
     text-align: center;
-    vertical-align: top;
-    width: calc(50% - (1px * 2));
+    padding: 15px 0;
   }
-  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
-  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
-  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
-  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-icon,
-  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
-  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
-  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
-  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
-    display: block;
-    padding: 0;
-    width: auto;
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .navbar-pf .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link,
+  .navbar-pf-alt .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link,
+  .navbar-pf .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link,
+  .navbar-pf-alt .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link {
+    padding: 9px;
   }
-  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
-  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
-  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title,
-  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link-title {
-    white-space: normal;
-    word-wrap: break-word;
+  .navbar-pf .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon,
+  .navbar-pf-alt .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon,
+  .navbar-pf .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon,
+  .navbar-pf-alt .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon {
+    -ms-flex: 1 0 0px;
+        flex: 1 0 0;
+    text-align: left;
+  }
+  .navbar-pf .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title,
+  .navbar-pf-alt .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title,
+  .navbar-pf .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title,
+  .navbar-pf-alt .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title {
+    -ms-flex: 3;
+        flex: 3;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -2271,15 +2318,7 @@ select.selectpicker {
   .navbar-pf-alt .navbar-utility .applauncher-pf .applauncher-pf-link-icon,
   .navbar-pf .applauncher-pf .applauncher-pf-link-icon,
   .navbar-pf-alt .applauncher-pf .applauncher-pf-link-icon {
-    padding-right: 4px;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .navbar-pf .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link,
-  .navbar-pf-alt .navbar-utility .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link,
-  .navbar-pf .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link,
-  .navbar-pf-alt .applauncher-pf.applauncher-pf-block-list .applauncher-pf-link {
-    padding: 15px 10px;
+    font-size: 2em;
   }
 }
 @media (min-width: 768px) {
