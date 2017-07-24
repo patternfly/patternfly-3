@@ -3380,6 +3380,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-arrow:before {
   content: "\e929";
 }
+.pficon-asleep:before {
+  content: "\e925";
+}
 .pficon-build:before {
   content: "\e902";
 }
@@ -3466,6 +3469,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-import:before {
   content: "\e615";
 }
+.pficon-in-progress:before {
+  content: "\e92c";
+}
 .pficon-info:before {
   content: "\e92b";
 }
@@ -3478,18 +3484,39 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-unlocked:before {
   content: "\e922";
 }
+.pficon-maintenance:before {
+  content: "\e92d";
+}
 .pficon-memory:before {
   content: "\e908";
 }
 .pficon-middleware:before {
   content: "\e917";
 }
+.pficon-migration:before {
+  content: "\e92e";
+}
 .pficon-network:before {
   content: "\e909";
+}
+.pficon-on:before {
+  content: "\e931";
+}
+.pficon-on-running:before {
+  content: "\e930";
+}
+.pficon-off:before {
+  content: "\e92f";
 }
 .pficon-ok:before {
   color: #3f9c35;
   content: "\e602";
+}
+.pficon-paused:before {
+  content: "\e932";
+}
+.pficon-pending:before {
+  content: "\e933";
 }
 .pficon-print:before {
   content: "\e612";
@@ -3502,6 +3529,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-rebalance:before {
   content: "\e91c";
+}
+.pficon-rebooting:before {
+  content: "\e934";
 }
 .pficon-refresh:before,
 .pficon-restart:before {
@@ -3584,6 +3614,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-trend-up:before {
   content: "\e901";
+}
+.pficon-unknown:before {
+  content: "\e935";
 }
 .pficon-user:before {
   content: "\e91e";
