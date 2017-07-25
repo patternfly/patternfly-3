@@ -14,9 +14,9 @@
       "optional": true
     },
     "bootstrap-select": {
-      "version": "1.12.2",
+      "version": "1.12.4",
       "from": "bootstrap-select@>=1.12.2 <2.0.0",
-      "resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.2.tgz",
+      "resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.4.tgz",
       "optional": true
     },
     "bootstrap-switch": {
@@ -32,9 +32,9 @@
       "optional": true
     },
     "c3": {
-      "version": "0.4.11",
+      "version": "0.4.15",
       "from": "c3@>=0.4.11 <0.5.0",
-      "resolved": "https://registry.npmjs.org/c3/-/c3-0.4.11.tgz",
+      "resolved": "https://registry.npmjs.org/c3/-/c3-0.4.15.tgz",
       "optional": true
     },
     "d3": {
@@ -45,7 +45,7 @@
     },
     "datatables.net": {
       "version": "1.10.15",
-      "from": "datatables.net@>=1.10.9",
+      "from": "datatables.net@>=1.10.15 <2.0.0",
       "resolved": "https://registry.npmjs.org/datatables.net/-/datatables.net-1.10.15.tgz"
     },
     "datatables.net-bs": {
@@ -86,7 +86,7 @@
     },
     "font-awesome": {
       "version": "4.7.0",
-      "from": "font-awesome@4.7.0",
+      "from": "font-awesome@>=4.7.0 <5.0.0",
       "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz"
     },
     "google-code-prettify": {
@@ -102,7 +102,7 @@
     },
     "jquery-match-height": {
       "version": "0.7.2",
-      "from": "jquery-match-height@>=0.7.0 <0.8.0",
+      "from": "jquery-match-height@>=0.7.2 <0.8.0",
       "resolved": "https://registry.npmjs.org/jquery-match-height/-/jquery-match-height-0.7.2.tgz",
       "optional": true
     },
@@ -124,9 +124,9 @@
       "optional": true
     },
     "patternfly-bootstrap-treeview": {
-      "version": "2.1.3",
+      "version": "2.1.5",
       "from": "patternfly-bootstrap-treeview@>=2.1.0 <2.2.0",
-      "resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.3.tgz",
+      "resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.5.tgz",
       "optional": true
     }
   }
