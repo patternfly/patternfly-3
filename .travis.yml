@@ -1,24 +1,20 @@
 language: node_js
 node_js:
-  - '4.8.3'
-
+- '4'
 env:
   global:
-  - PF_PAGE_BUILDER: "jekyll"
-
+  - PF_PAGE_BUILDER: jekyll
+  - secure: KFSt/cOAh8+v9Mz9AroDg+YYGwkuXyC96ZtOMbcWxVAQzplrrpCD9zI0ZuOtKYg/YHu5mscLWbnXOzBug2J162/V9MyicETmXCdFx5ovu/5rTtbxQ6maoRWQQfcKmQVWNdUDF5rJJ7PU9H/gyXWKvbEpkfNRk6Wr7Oc3D8mYtgI=
+  - secure: SBD8QHLUy1/kCZiLV2OYpqdFTQUWUfkWLx1bdtKFQhWt+aUYBTBdbbb/A7otm+LbBNe5NWWOX1lkciubEs9XlRUdQfS/WqId3c99+457NXeEPtIX6fC92/hrQITFb6vvv7T71ltUs3Q1X2CL82nCas+2LNYlB1/WxKgB8Tr7qPQ=
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - rvm install 2.3.1
-  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
-  - npm install -g bower grunt-cli
-  - npm install git+https://github.com/patternfly/patternfly-eng-release.git
-
+- rvm install 2.3.1
+- if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+- npm install -g bower grunt-cli
+- npm install git+https://github.com/patternfly/patternfly-eng-release.git
 install: true
-
 script:
-  - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
-
+- sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
 after_success:
