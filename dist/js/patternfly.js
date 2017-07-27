@@ -1210,6 +1210,7 @@
     var navElement = $('.nav-pf-vertical'),
       bodyContentElement = $('.container-pf-nav-pf-vertical'),
       toggleNavBarButton = $('.navbar-toggle'),
+      handleResize = true,
       explicitCollapse = false,
       subDesktop = false,
       hoverDelay = 500,
@@ -1348,32 +1349,42 @@
         }
       },
 
+      enterMobileState = function () {
+        if (!navElement.hasClass('hidden')) {
+          //Set the nav to being hidden
+          navElement.addClass('hidden');
+          navElement.removeClass('collapsed');
+
+          //Set the body class to the correct state
+          bodyContentElement.removeClass('collapsed-nav');
+          bodyContentElement.addClass('hidden-nav');
+
+          // Reset the collapsed states
+          updateSecondaryCollapsedState(false);
+          updateTertiaryCollapsedState(false);
+
+          explicitCollapse = false;
+        }
+      },
+
+      exitMobileState = function () {
+        // Always remove the hidden & peek class
+        navElement.removeClass('hidden show-mobile-nav');
+
+        // Set the body class back to the default
+        bodyContentElement.removeClass('hidden-nav');
+      },
+
       checkNavState = function () {
         var width = $(window).width(), makeSecondaryVisible;
-
+        if (!handleResize) {
+          return;
+        }
         // Check to see if we need to enter/exit the mobile state
-        if (width < $.pfBreakpoints.tablet) {
-          if (!navElement.hasClass('hidden')) {
-            //Set the nav to being hidden
-            navElement.addClass('hidden');
-            navElement.removeClass('collapsed');
-
-            //Set the body class to the correct state
-            bodyContentElement.removeClass('collapsed-nav');
-            bodyContentElement.addClass('hidden-nav');
-
-            // Reset the collapsed states
-            updateSecondaryCollapsedState(false);
-            updateTertiaryCollapsedState(false);
-
-            explicitCollapse = false;
-          }
+        if (width < $.pfBreakpoints.tablet && !explicitCollapse) {
+          enterMobileState();
         } else if (navElement.hasClass('hidden')) {
-          // Always remove the hidden & peek class
-          navElement.removeClass('hidden show-mobile-nav');
-
-          // Set the body class back to the default
-          bodyContentElement.removeClass('hidden-nav');
+          exitMobileState();
         }
 
         // Check to see if we need to enter/exit the sub desktop state
@@ -1730,14 +1741,32 @@
         navElement.removeClass('hide-nav-pf');
         bodyContentElement.removeClass('hide-nav-pf');
         forceResize(250);
+      },
+
+      self = {
+        hideMenu: function () {
+          handleResize = false;
+          enterMobileState();
+        },
+        showMenu: function () {
+          handleResize = true;
+          exitMobileState();
+        },
+        isVisible: function () {
+          return handleResize;
+        }
       };
 
-    //Listen for the window resize event and collapse/hide as needed
-    $(window).on('resize', function () {
-      checkNavState();
-      enableTransitions();
-    });
+    if (!$.fn.setupVerticalNavigation.self) {
+      $.fn.setupVerticalNavigation.self = self;
+      //Listen for the window resize event and collapse/hide as needed
+      $(window).on('resize', function () {
+        checkNavState();
+        enableTransitions();
+      });
 
-    init(handleItemSelections);
+      init(handleItemSelections);
+    }
+    return $.fn.setupVerticalNavigation.self;
   };
 }(jQuery));
