@@ -5588,6 +5588,10 @@ a.disabled {
 .drawer-pf-toggle-expand {
   left: 0;
 }
+.drawer-pf-toggle-expand:before {
+  content: "\f100";
+  font-family: "FontAwesome";
+}
 .drawer-pf-toggle-expand:hover {
   color: #0088ce;
 }
