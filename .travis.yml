@@ -12,6 +12,7 @@ cache:
 before_install:
 - rvm install 2.3.1
 - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+- if [[ -n ${NPM_TOKEN} ]]; then echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc; fi
 - npm install -g bower grunt-cli
 - npm install git+https://github.com/patternfly/patternfly-eng-release.git
 install: true
