@@ -1,4 +1,5 @@
 language: node_js
+sudo: required
 node_js:
 - '4'
 env:
@@ -6,15 +7,34 @@ env:
   - PF_PAGE_BUILDER: jekyll
   - secure: KFSt/cOAh8+v9Mz9AroDg+YYGwkuXyC96ZtOMbcWxVAQzplrrpCD9zI0ZuOtKYg/YHu5mscLWbnXOzBug2J162/V9MyicETmXCdFx5ovu/5rTtbxQ6maoRWQQfcKmQVWNdUDF5rJJ7PU9H/gyXWKvbEpkfNRk6Wr7Oc3D8mYtgI=
   - secure: SBD8QHLUy1/kCZiLV2OYpqdFTQUWUfkWLx1bdtKFQhWt+aUYBTBdbbb/A7otm+LbBNe5NWWOX1lkciubEs9XlRUdQfS/WqId3c99+457NXeEPtIX6fC92/hrQITFb6vvv7T71ltUs3Q1X2CL82nCas+2LNYlB1/WxKgB8Tr7qPQ=
+  - ENCRYPTION_LABEL: "86d4a29631fa"
+  - COMMIT_AUTHOR_EMAIL: "patternfly-build@redhat.com"
+  - COMMIT_AUTHOR_USERNAME: "patternfly-build"
+  - TRIGGER_REPO_SLUG: "patternfly/patternfly"
+  - TRIGGER_REPO_BRANCH: "master"
 cache:
   directories:
   - node_modules
+
+notifications:
+  email: false
+
 before_install:
-- rvm install 2.3.1
-- if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
-- npm install -g bower grunt-cli
-- npm install git+https://github.com/patternfly/patternfly-eng-release.git
+  - npm install -g bower grunt-cli
+  - npm install git+https://github.com/patternfly/patternfly-eng-release.git
+
 install: true
+
+before_script:
+  - npm prune
+
 script:
-- sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
+  - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -x
+
 after_success:
+  - npm run semantic-release
+  - npm run publish-travis
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
