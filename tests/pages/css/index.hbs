@@ -1,0 +1,133 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly-additions.css">
+  <link rel="stylesheet" type="text/css" href="src/css-showcase.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script defer src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="../../js/patternfly.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img class="navbar-brand-icon" alt="brand" src="src/img/logo-alt.svg"></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="https://github.com/patternfly/patternfly">Github</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Components<span class="sr-only">(current)</span></a></li>
+        </ul>
+      </div>
+      <!-- //navbar-collapse -->
+    </div>
+    <!-- //container-fluid -->
+  </nav>
+
+  <div class="doc-wrapper">
+    <div class="container">
+      <div id="doc-header" class="doc-header text-center">
+        <h1 class="doc-title">CSS Components</h1>
+      </div>
+      <!-- //doc-header -->
+      <div class="doc-body">
+        <div class="doc-content">
+          <div class="content-inner">
+            <!-- Overview -->
+            <section id ="overview" class="doc-section">
+              <h2 class="section-title">Overview</h2>
+              <div class="section-block">
+                <p>Patternfly CSS components require <code>patternfly.css</code> and <code>patternfly-additions.css</code>.
+                </p>
+                <pre class="prettyprint"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;../dist/css/patternfly.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../dist/css/patternfly-additions.min.css&quot;&gt;</code></pre>
+                <p>Components can be installed individually (using individual <code>*.js</code> files) or all at once
+                  (using <code>patternfly.js</code>).</p>
+                <pre class="prettyprint"><code>&lt;script src=&quot;../dist/js/patternfly.js&quot;&gt;&lt;/script&gt;</code></pre>
+              </div>
+              <!-- //section-block -->
+            </section>
+            <!-- //doc-section -->
+
+            <!-- Alerts -->
+            <section id="accordion" class="doc-section">
+              <h2 class="section-title">Alerts</h2>
+              <div class="section-block">
+                <p>See <a href="http://getbootstrap.com/components/#alerts">http://getbootstrap.com/components/#alerts</a> for complete alerts documentation.</p>
+                <div class="doc-example">
+                  {{{include 'tests/pages/css/src/alerts.html'}}}
+                </div>
+                <div class="doc-example-html">
+                  {{{template 'tests/pages/css/src/alerts.html'}}}
+                </div>
+              </div>
+              <!-- //section-block -->
+            </section>
+            <!-- //doc-section -->
+
+
+            <!-- Badges -->
+            <section id="badges" class="doc-section">
+              <h2 class="section-title">Badges</h2>
+              <div class="section-block">
+                <p>See <a href="http://getbootstrap.com/components/#badges">http://getbootstrap.com/components/#badges</a> for complete badges documentation.</p>
+                <div class="doc-example">
+                  {{{include 'tests/pages/css/src/badges.html'}}}
+                </div>
+                <div class="doc-example-html">
+                  {{{template 'tests/pages/css/src/badges.html'}}}
+                </div>
+              </div>
+              <!-- //section-block -->
+            </section>
+            <!-- //doc-section -->
+
+            <!-- Buttons -->
+            <section id="buttons" class="doc-section">
+              <h2 class="section-title">Buttons</h2>
+              <div class="section-block">
+                <p>See <a href="http://getbootstrap.com/css/#buttons">http://getbootstrap.com/css/#buttons</a> for complete buttons documentation.</p>
+                <div class="doc-example">
+                  {{{include 'tests/pages/css/src/buttons.html'}}}
+                </div>
+                <div class="doc-example-html">
+                  {{{template 'tests/pages/css/src/buttons.html'}}}
+                </div>
+              </div>
+              <!-- //section-block -->
+            </section>
+            <!-- //doc-section -->
+
+
+          </div>
+          <!-- //content-inner -->
+        </div>
+        <!-- //doc-content -->
+
+        <div class="doc-sidebar">
+          <nav id="doc-nav">
+            <ul id="doc-menu" class="nav doc-menu hidden-xs affix-top">
+              <li><a href="#alerts">Alerts</a></li>
+              <li><a href="#badges">Badges</a></li>
+              <li><a href="#buttons">Buttons</a></li>
+            </ul>
+            <!-- //doc-menu -->
+          </nav>
+        </div>
+        <!-- //doc-sidebar -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
