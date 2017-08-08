@@ -1,141 +1,9 @@
-body {
-  font-size: 14px;
-  background-color: fff;
+.text-overflow-pf {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
-
-#fixed-accordion {
-  width: 240px;
-  overflow-y: hidden;
-  height: 350px;
-}
-
-.panel-body {
-  height: 200px;
-  overflow: scroll;
-}
-
-.layout-pf.layout-pf-fixed .navbar-pf {
-  position: relative;
-  z-index: 1;
-}
-
-.layout-pf-fixed .navbar-pf-vertical {
-  position: absolute;
-  z-index: 1;
-}
-
-.nav-pf-vertical {
-  position: absolute;
-  z-index: 1;
-}
-
-.bootstrap-switch .bootstrap-switch-handle-on,
-.bootstrap-switch .bootstrap-switch-label,
-.bootstrap-switch .bootstrap-switch-handle-off,
-.bootstrap-switch .bootstrap-switch-label {
-   height: inherit;
-}
-
-.doc-wrapper {
-  padding: 74px 0;
-}
-
-.doc-header {
-  margin-bottom: 30px;
-}
-
-.doc-header .doc-title {
-  color: #39a5dc;
-  font-size: 36px;
-}
-
-.doc-body {
-  position: relative;
-}
-
-.doc-content {
-  margin-left: 230px;
-}
-
-@media (max-width: 767px) {
-  .doc-content {
-    margin-left: 0px;
-  }
-}
-
-.doc-sidebar {
-  width: 200px;
-}
-
-.affix-top {
-  position: absolute;
-  top: 23px;
-}
-
-.doc-menu {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 20px;
-}
-
-.doc-menu > li {
-  margin-bottom: 5px;
-}
-
-.section-block {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-pre {
-  font-size: 14.4px;
-  max-height: 200px;
-  overflow: auto;
-}
-pre code {
-  overflow: auto;
-  white-space: pre;
-}
-
-code .tag {
-  font-size: inherit;
-  padding: 0;
-  display: inherit;
-}
-
-.doc-section {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.doc-example {
-  position: relative;
-  padding: 4em 1em 1em;
-  border: 1px solid #d8d8d8;
-  margin: 1.5rem 0 0;
-}
-
-.doc-example::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 1em;
-  color: #aaa;
-  font-size: smaller;
-  font-weight: 500;
-  content: 'EXAMPLE';
-}
-
-.doc-example.char-count {
-  padding-bottom: 3em;
-}
-
-.content-view-pf-pagination .form-group:last-child {
-  align-items: center;
-}
-
-/* SHOWCASE STYLES */
-
 .showcase header + .container-fluid {
   padding-bottom: 50px;
   padding-top: 20px;
@@ -377,9 +245,6 @@ code .tag {
   -webkit-box-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
 }
-.showcase header .navbar-right .dropdown a i.fa{
-  line-height: inherit;
-}
 .showcase header .dropdown-menu > li > a {
   border-color: #ddd;
   border-style: solid;
@@ -390,7 +255,7 @@ code .tag {
   border-width: 0;
 }
 .showcase .navbar-sidebar {
-  background: #292e33 url() no-repeat 50% 100%;
+  background: #292e33 url(img/grid-sidebar.png) no-repeat 50% 100%;
   border: 0;
   border-radius: 0;
   bottom: 0;
@@ -687,4 +552,193 @@ code .tag {
     content: '\f18e';
   }
 }
-
+.showcase .banner {
+  background: #010101;
+  background: url(img/grid-right.svg) no-repeat right bottom, linear-gradient(to bottom, #2B2B2B 0, #010101 100%);
+  min-height: 350px;
+  color: #e4e4e4;
+  margin: 0;
+  padding: 90px 0 30px;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .showcase .banner {
+    background-position: right bottom;
+  }
+}
+@media (max-width: 992px) {
+  .showcase .banner .logos {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .showcase .banner .buttons-btn {
+    display: block;
+  }
+}
+.showcase .banner h1 {
+  color: #3bb1dc;
+}
+.showcase .banner h1 + p,
+.showcase .banner div + p {
+  font-size: 12px;
+  margin-top: 20px;
+}
+.showcase .banner .buttons {
+  margin: 40px 0;
+}
+.showcase .banner .buttons-btn {
+  text-align: center;
+  padding: 10px 20px;
+  margin: 10px 5px 0 0;
+  border: solid 1px #fff;
+  color: #fff;
+}
+.showcase .banner .buttons-btn i {
+  margin-right: 10px;
+  font-size: 19px;
+}
+.showcase .banner .buttons-active {
+  background: #fff;
+  color: #0088ce;
+}
+.showcase .banner .logos {
+  margin: 15% 0;
+  width: 100%;
+  text-align: center;
+}
+.showcase .banner .logos img {
+  width: 90%;
+}
+.showcase .banner-contribute {
+  background: url(img/contribute-bg.svg) no-repeat 80% bottom, linear-gradient(to bottom, #F2F2F2 0, #F2F2F2 100%);
+}
+.showcase .banner-contribute p {
+  color: #030303;
+}
+.showcase .showcase-content {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+.showcase .showcase-content h2 {
+  color: #030303;
+}
+.showcase .showcase-content ul,
+.showcase .showcase-content ol {
+  padding-left: 20px;
+}
+.showcase .showcase-content ul li,
+.showcase .showcase-content ol li {
+  margin: 7px 0;
+}
+.showcase .showcase-content .prettyprint {
+  margin-top: 7px;
+  text-align: left;
+  border: solid 1px #B7B7B7;
+  background: #FAFAFA;
+}
+.showcase .showcase-content .code-block {
+  margin: 15px 0;
+}
+.showcase .showcase-content .code-block .prettyprint {
+  margin: 3px 0;
+}
+.showcase .showcase-contribute {
+  padding-top: 82px;
+  font-size: 13px;
+}
+.showcase .showcase-contribute i.code {
+  color: #852009;
+}
+.showcase footer {
+  border-top: 1px solid #D5D5D5;
+  font-size: 10px;
+  line-height: 15px;
+  padding-bottom: 28px;
+  padding-top: 28px;
+}
+.has-sidebar .showcase footer {
+  left: 45px;
+  width: calc(100% - 25px - 40px);
+}
+@media (min-width: 992px) {
+  .has-sidebar .showcase footer {
+    left: 260px;
+    width: calc(100% - 240px - 40px);
+  }
+}
+.home .showcase footer {
+  border-top: 0;
+  margin-top: 0;
+}
+.showcase footer a,
+.showcase footer a:focus,
+.showcase footer a:hover {
+  color: #3bb1dc;
+}
+.showcase footer #logo-redhat {
+  background: url(img/redhat.svg) no-repeat;
+  display: none;
+  float: left;
+  height: 34px;
+  margin: -3px 30px 0 0;
+  text-indent: -9999px;
+  width: 106px;
+}
+@media (min-width: 1200px) {
+  .showcase footer #logo-redhat {
+    display: block;
+  }
+}
+.showcase footer p {
+  font-size: 11px !important;
+  margin-bottom: 0;
+}
+.showcase footer .social {
+  clear: left;
+  list-style: none;
+  margin: 15px 0 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .showcase footer .social {
+    margin-top: 3px;
+    text-align: right;
+  }
+}
+.showcase footer .social li {
+  display: inline-block;
+}
+.showcase footer .social li + li {
+  margin-left: 10px;
+}
+.showcase footer .social li a {
+  color: #363636;
+  font-size: 26px;
+}
+.showcase h1 {
+  font-weight: 300;
+  font-size: 24px;
+}
+.showcase h2 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.showcase h3 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.showcase h3.card-pf-subtitle {
+  font-weight: 500;
+  line-height: 1.1;
+}
+.showcase h4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.showcase h5,
+.showcase h6 {
+  font-weight: 600;
+}

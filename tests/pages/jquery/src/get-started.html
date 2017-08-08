@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PatternFly jQuery Showcase - Get Started</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly-additions.css">
+  <link rel="stylesheet" href="get-started.css" />
+</head>
+<body class="showcase">
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+          <a id="logo" title="PatternFly Showcase" href="#">PATTERNFLY-<span class="secondary-logo">JQUERY</span></a>
+        </div>
+      </div>
+      <div class="navbar-collapse navbar-collapse-pf-site collapse">
+        <ul id="menu-primary" class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="#">Get Started</a>
+          </li>
+          <li>
+            <a href="#">Components</a>
+          </li>
+          <li>
+            <a href="contribute.html">Contribute</a>
+          </li>
+          <li>
+            <a href="https://github.com/patternfly/patternfly-jquery">Github</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-th-large" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular 1</a>
+              </li>
+              <li>
+                <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">PatternFly-ng</a>
+              </li>
+              <li>
+                <a href="https://patternfly-webcomponents.github.io/components.html">PatternFly Web Component</a>
+              </li>
+              <li>
+                <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">PatternFly React</a>
+              </li>
+              <li>
+                <a href="http://www.patternfly.org/patternfly-css/">PatternFly CSS</a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-sidebar navbar-primary">
+    <ul>
+      <li class="primary-menu">
+        <a href="">Menu</a>
+        <ul>
+          <li class="active">
+            <a href="#">Get Started</a>
+          </li>
+          <li>
+            <a href="#">Components</a>
+          </li>
+          <li>
+            <a href="#">Contribute</a>
+          </li>
+          <li>
+            <a href="https://github.com/patternfly/patternfly-jquery">Github</a>
+          </li>
+          <li>
+            <a class="collapsed showcase-collapsed" role="button" data-toggle="collapse" href="#patternfly-showcases">PatternFly Showcases</a>
+            <ul class="collapse" id="patternfly-showcases">
+              <li>
+                <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular 1</a>
+              </li>
+              <li>
+                <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">PatternFly-ng</a>
+              </li>
+              <li>
+                <a href="https://patternfly-webcomponents.github.io/components.html">PatternFly Web Component</a>
+              </li>
+              <li>
+                <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">PatternFly React</a>
+              </li>
+              <li>
+                <a href="http://www.patternfly.org/patternfly-css/">PatternFly CSS</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <h1>Welcome to PatternFly-jQuery</h1>
+        <p>
+          This is a simple introduction about this showcase page.<br>
+          This PatternFly Showcase will provide a set of common jQuery components for use with the PatternFly reference implementation.</p>
+        <div class="buttons">
+          <a href="index.html" class="buttons-btn buttons-active">Components</a>
+          <a href="https://github.com/patternfly/patternfly-jquery" class="buttons-btn"><i class="fa fa-github" aria-hidden="true"></i>Code on Github</a>
+        </div>
+        <p>View the design guidelines, please visit <a href="https://www.patternfly.org/">PatternFly.org</a></p>
+      </div>
+      <div class="col-xs-6 col-md-4">
+        <div class="logos">
+          <!--<img src="dist/img/logos.svg" alt="">-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="showcase-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <h2>Get Started</h2>
+        <h3>Introduction</h3>
+        <p>
+          This project will provide a set of common jQuery components for use with the PatternFly reference implementation.
+        </p>
+
+        <h3>Installation</h3>
+        <p>You have to install required software before you're able to use grunt:</p>
+        <ul>
+          <li>
+            <strong>Install Node.js</strong> - Find more information on <a href="#">Node.js</a>
+            <br>
+            jQuery Patternfly stays up to date with the Node LTS <a href="#">Release Schedule</a>. If you're using jQuery Patternfly downstream, we suggest the use of an actively supported version of Node/NPM, although prior versions of Node may work.
+          </li>
+          <li>
+            <strong>Install npm</strong> - If npm is not already installed with Node.js, you have to install it manually. Find more information on <a href="#">NPM</a>
+          </li>
+          <li>
+            <strong>Install Grunt globally</strong> - Find more information on <a href="https://grunt.com">Grunt</a>
+            <pre class="prettyprint">$ npm install-g grunt-cli</pre>
+
+            <div class="code-block">Install npm dependencies with:
+              <pre class="prettyprint">$ npm install</pre>
+              You should have your environment ready now.
+            </div>
+
+            <div class="code-block">
+              jQuery-PatternFly can now be built with:
+              <pre class="prettyprint">$ npm run build</pre>
+            </div>
+
+            <div class="code-block">
+              To see all the grunt tasks that are available:
+              <pre class="prettyprint">$ npm run help</pre>
+            </div>
+          </li>
+        </ul>
+
+        <h3>Usage</h3>
+        <ol>
+          <li>Add jQuery and jQuery-PatternFly as dependencies for your project and you'll receive all the libraries you'll need:
+            <pre class="prettyprint">$ npm install jquery --save <br>$ npm install jquery-patternfly --save</pre>
+          </li>
+          <li>Add the core Patternfly CSS and script includes to your HTML file(s):
+            <br>Please see: <a href="#">https://github.com/patternfly/patternfly/blob/master/QUICKSTART.md</a>
+          </li>
+          <li>Add the following CSS include to your HTML file(s):
+            <pre class="prettyprint">&lt;!-- jQuery-PatternFly Styles --&gt;<br>&lt;link rel="stylesheet" href="node_modules/jquery-patternfly/dist/styles/jquery-patternfly.min.css" /&gt;</pre>
+          </li>
+          <li>Add the following script includes to your HTML file(s), adjusting where necessary to pull in only what you need:
+            <pre class="prettyprint">&lt;!-- jQuery --&gt;<br>&lt;script src="node_modules/jquery-patternfly/node_modules/jquery/jquery.min.js"&gt;&lt;/script&gt;
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <p>
+          <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+          PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+        </p>
+      </div>
+      <div class="col-md-3">
+        <ul class="social">
+          <li>
+            <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="../../js/patternfly.js"></script>-->
+<script type="text/javascript" >
+  $('.navbar-toggle').click(function(){
+    $('.navbar-sidebar').toggleClass("open");
+  })
+</script>
+</body>
+</html>
