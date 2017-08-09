@@ -98,17 +98,19 @@
 
 }//.applauncher-pf
 
+.navbar-utility .applauncher-pf {
+    .dropdown-menu {
+      border-width: @applauncher-pf-menu-link-border-width !important;
+      @media (min-width: @screen-sm-min) {
+              margin-top: 3px;
+              right:0;
+            }
+    }//.dropdown-menu
+}
 
 .navbar-pf, .navbar-pf-alt {
 
   .navbar-utility .applauncher-pf, .applauncher-pf {
-    .dropdown-menu {
-      border-width: @applauncher-pf-menu-link-border-width !important;
-      @media (min-width: @screen-sm-min) {
-              margin-top: 11px;
-            }
-
-    }//.dropdown-menu
 
     &.open > a,
         &.open > a:focus {
@@ -199,7 +201,7 @@
     .dropdown-toggle {
 
       @media (min-width: @screen-sm-min) {
-        padding: 15px;
+        padding: 22px 10px;
         line-height: inherit;
       }
     }
