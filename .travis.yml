@@ -30,10 +30,10 @@ after_success:
   - 'if [[ "$TRAVIS_SECURE_ENV_VARS" = "true" && "$TRAVIS_BRANCH" = "master-dist" ]]; then
        npm prune;
        npm run semantic-release-pre;
-       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -a;
+       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -p;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-npm.sh || travis_terminate 0;
        npm run semantic-release-post;
-       - sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -a;
+       - sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
      fi'
 
 branches:
