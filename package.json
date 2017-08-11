@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.26.1",
+  "version": "0.0.0-semantically-released",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "dependencies": {
@@ -43,7 +43,7 @@
     "matchdep": "~1.0.1",
     "mz": "^2.6.0",
     "nsp": "^2.6.1",
-    "patternfly-eng-release": "3.26.2",
+    "patternfly-eng-release": "^3.26.26",
     "pixrem": "^3.0.1",
     "table": "3.7.9"
   },
@@ -67,12 +67,22 @@
     "patternfly-bootstrap-combobox": "~1.1.7",
     "patternfly-bootstrap-treeview": "~2.1.0"
   },
+  "release": {
+    "branch": "master-dist",
+    "debug": false,
+    "verifyConditions": {
+      "path": "./node_modules/semantic-release/src/lib/plugin-noop.js"
+    }
+  },
   "scripts": {
     "test": "grunt karma",
     "build": "grunt build",
     "jekyll": "ruby --version || echo \"Ruby required\"; bundler -v || gem install bundler; bundle check || bundle install; set -e",
     "start": "npm run build; grunt server & open http://localhost:9000",
-    "grunt": "grunt"
+    "grunt": "grunt",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release-post": "semantic-release post",
+    "semantic-release-pre": "semantic-release pre"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
