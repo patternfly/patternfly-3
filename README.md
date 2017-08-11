@@ -194,43 +194,38 @@ or
 ```
 grunt karma
 ```
-## Release
 
-PatternFly is released through the Bower and npm.
+## Git Commit Guidelines
 
-To release a new version version of PatternFly, edit `bower.json` and `package.json` accordingly.
+PatternFly uses a semantic release process to automate npm and bower package publishing, based on the following commit message format.
 
-Update the version listed in `bower.json` by editing the file and changing the line:
-
-```
-"version": "<new_version>"
-```
-
-Update the version listed in `package.json` by editing the file and changing the line:
+Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
+format that includes a **type**, a **scope** and a **subject** ([full explanation](https://github.com/stevemao/conventional-changelog-angular/blob/master/convention.md)):
 
 ```
-"version": "<new_version>"
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
 ```
 
-Commit the version bump:
+##### Patch Release
 
 ```
-git commit -a -m "Version bump to <new_version>"
+fix(pencil): stop graphite breaking when too much pressure applied
 ```
 
-Tag and push upstream (assuming you have commit access):
+##### Feature Release
 
 ```
-git tag <new_version>
-git push && git push --tags
+feat(pencil): add 'graphiteWidth' option
 ```
 
-The Bower package manager determines available versions and installs based upon git tags, so the new version will now be automatically available via Bower.
-
-To publish a new version to npm, execute:
+##### Breaking Release
 
 ```
-npm publish
+perf(pencil): remove graphiteWidth option
 ```
 
 ## Documentation
