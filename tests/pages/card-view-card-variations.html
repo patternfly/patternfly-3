@@ -37,21 +37,3 @@ resource: true
     </div>
   </div>
 </div>
-<script>
-  $(document).ready(function() {
-    // Card Single Select
-    $('.card-pf-view-single-select').click(function() {
-      if ($(this).hasClass('active'))
-      { $(this).removeClass('active'); }
-      else
-      { $('.card-pf-view-single-select').removeClass('active'); $(this).addClass('active'); }
-    });
-    // Card Multi Select
-    $('input[type=checkbox]').click(function() {
-      if ($(this).parent().parent().hasClass('active'))
-      { $(this).parent().parent().removeClass('active'); }
-      else
-      { $(this).parent().parent().addClass('active'); }
-    });
-  });
-</script>

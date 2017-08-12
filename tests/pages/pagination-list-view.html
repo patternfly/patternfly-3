@@ -6,13 +6,10 @@ resource: true
 listview: true
 full-page: true
 title: Pagination - List View
-url-js-extra: [ '//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js']
-
 ---
 {% include widgets/layouts/navbar-primary.html %}
 {% include widgets/layouts/toolbar.html %}
 <div class="container-fluid">
-<!-- {% include widgets/list-view/list-view-standard-rows.html %} -->
 <div class="list-group list-view-pf list-view-pf-view">
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
@@ -437,23 +434,33 @@ url-js-extra: [ '//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/boo
   {% include widgets/pagination/pagination.html class1="list-view-pf-pagination" pagesize=10 %}
 </div>
 <script>
-  $(document).ready(function () {
-    // Row Checkbox Selection
-    $("input[type='checkbox']").change(function (e) {
-      if ($(this).is(":checked")) {
-        $(this).closest('.list-group-item').addClass("active");
-      } else {
-        $(this).closest('.list-group-item').removeClass("active");
+  function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+  }
+
+  function addCheckboxClickHandler(input) {
+    input.addEventListener('click', function () {
+      if (hasClass(input.parentNode.parentNode, 'active')) {
+
+        input.parentNode.parentNode.classList.remove('active');
+      }
+      else {
+        input.parentNode.parentNode.classList.add('active');
       }
     });
-    // toggle dropdown menu
-    $('.list-view-pf-actions').on('show.bs.dropdown', function () {
-      var $this = $(this);
-      var $dropdown = $this.find('.dropdown');
-      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
-      $dropdown.toggleClass('dropup', space < 10);
-    });
-  });
+  }
+
+  var onLoad = function() {
+    var inputs = document.getElementsByTagName('input');
+
+    for(var i = 0; i < inputs.length; i++) {
+      if(inputs[i].type.toLowerCase() === 'checkbox') {
+        addCheckboxClickHandler(inputs[i]);
+      }
+    }
+  };
+  window.addEventListener('load', onLoad, false);
+
 </script>
 
 </div>

@@ -1,0 +1,29 @@
+---
+css-extra: true
+layout: default
+---
+    <div class="container">
+      <div class="page-header">
+        <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+      </div>
+      <div id="example-warning" class="alert alert-warning">
+        <span class="pficon pficon-warning-triangle-o"></span>
+        These examples are included for development testing purposes.
+        <p></p>
+        <p></p>
+        JQuery dependent components, while styled by Patternfly, are available for view only with functionality reduced in the Patternfly repository.
+        To view the fully functional components, please visit <a href="https://rawgit.com/patternfly/patternfly-jquery/master-dist/dits/tests/index.html" class="alert-link">Patternfly JQuery Test Pages</a>
+        {% if page.test-page %}
+           or specifically <a href="https://rawgit.com/patternfly/patternfly-jquery/master-dist/dist/tests/{{ page.test-page }}" class="alert-link">{{ page.title }}</a>.
+        {% else %}
+        .
+        {% endif %}
+        <p></p>
+        <p>
+          For official documentation, see  <a href="https://patternfly.org" class="alert-link">https://patternfly.org</a>
+          and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
+        </p>
+      </div>
+      <hr>
+      {{ content }}
+    </div>

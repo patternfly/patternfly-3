@@ -5,7 +5,6 @@ layout: layout
 title: Form
 resource: true
 full-page: true
-url-js-extra: '//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js'
 weight: 4
 ---
 {% include widgets/layouts/navbar-primary.html %}
@@ -19,7 +18,7 @@ weight: 4
           <h1>{{ page.title }}</h1>
 {% include widgets/form.html %}
         </div><!-- /col -->
-        <div class="col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-10 sidebar-pf sidebar-pf-left">
+        <div class="col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-10 sidebar-pf sidebar-pf-left" style="position: fixed; left: 0; top: 72px; bottom: 0;">
           <div class="panel-group" id="accordion">
             <div class="panel panel-default">
               <div class="panel-heading">

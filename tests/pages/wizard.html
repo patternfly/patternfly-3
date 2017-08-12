@@ -1,17 +1,15 @@
 ---
 categories: [Widgets]
-layout: page
+layout: jquery-page
 title: Wizard
+test-page: wizard.html
 resource: true
 ---
-<h2>Complete Wizard</h2>
+<h2>Wizard Page</h2>
 {% include widgets/communication/wizard.html id="complete" %}
 
 <h2>Initializing</h2>
-<button class="btn btn-default" data-toggle="modal" data-target="#initializing">Launch wizard showing initialization
-  state
-</button>
-<div class="modal" id="initializing" tabindex="-1" role="dialog">
+<div class="modal" style="display:block; position:relative; height: 620px;" id="initializing" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg wizard-pf">
     <div class="modal-content">
       <div class="modal-header">
@@ -70,7 +68,6 @@ resource: true
 
       </div><!-- /.wizard-pf-body -->
 
-      <!-- TODO: disable buttons -->
       <div class="modal-footer wizard-pf-footer">
         <button type="button" class="btn btn-default btn-cancel" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-default disabled" data-dismiss="modal">
@@ -87,11 +84,8 @@ resource: true
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<h2>Last Step</h2>
-<button class="btn btn-default" data-toggle="modal" data-target="#done">Launch wizard showing finalizing
-state
-</button>
-<div class="modal" id="done" tabindex="-1" role="dialog">
+<h2>Progress Step</h2>
+<div class="modal" style="display:block; position:relative; height: 620px;" id="done" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg wizard-pf">
     <div class="modal-content">
       <div class="modal-header">
@@ -133,7 +127,7 @@ state
           </div><!-- /.wizard-pf-sidebar -->
 
           <div class="wizard-pf-main">
-            <div class="blank-slate-pf">
+            <div class="blank-slate-pf" style="padding-top: 48px; padding-bottom: 48px;">
               <div class="spinner spinner-lg blank-slate-pf-icon"></div>
               <h3 class="blank-slate-pf-main-action">Deployment in progress</h3>
               <p class="blank-slate-pf-secondary-action">Lorem ipsum dolor sit amet, porta at suspendisse ac, ut wisi
@@ -144,7 +138,6 @@ state
         </div>
       </div><!-- /.wizard-pf-body -->
 
-      <!-- TODO: disable buttons -->
       <div class="modal-footer wizard-pf-footer">
         <button type="button" class="btn btn-default btn-cancel" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-default disabled" data-dismiss="modal">

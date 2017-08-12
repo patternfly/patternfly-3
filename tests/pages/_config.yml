@@ -15,5 +15,5 @@ url-css-additions: '../../dist/css/patternfly-additions.min.css'
 url-css-extra: 'tests.css'
 url-css-main: '../../dist/css/patternfly.min.css'
 url-img: 'img/'
-url-js: '../../dist/js/patternfly.min.js'
+url-js: '../../dist/js/patternfly-settings.min.js'
 nav-tertiary: false

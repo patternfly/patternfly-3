@@ -1,6 +1,6 @@
 <div id="{{include.id}}"></div>
 <script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+  var c3ChartDefaults = patternfly.c3ChartDefaults();
 
   var chartUrls = [
     'https://www.gogole.com',
@@ -22,14 +22,14 @@
   ];
   var groupedColors = {
     pattern: [
-      $.pfPaletteColors.red,
-      $.pfPaletteColors.blue,
-      $.pfPaletteColors.orange,
-      $.pfPaletteColors.green
+      patternfly.pfPaletteColors.red,
+      patternfly.pfPaletteColors.blue,
+      patternfly.pfPaletteColors.orange,
+      patternfly.pfPaletteColors.green
     ]
   };
 
-  var groupedHorizontalBarChartConfig = $().c3ChartDefaults().getDefaultGroupedBarConfig();
+  var groupedHorizontalBarChartConfig = patternfly.c3ChartDefaults().getDefaultGroupedBarConfig();
   groupedHorizontalBarChartConfig.bindto = '#{{include.id}}';
   groupedHorizontalBarChartConfig.axis = {
     rotated: true,

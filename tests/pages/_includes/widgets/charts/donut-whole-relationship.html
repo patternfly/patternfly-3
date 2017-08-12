@@ -2,15 +2,15 @@
 <div id="{{include.id2}}" class="example-donut-chart-right-legend"></div>
 <div id="{{include.id3}}" class="example-donut-chart-bottom-legend"></div>
 <script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+  var c3ChartDefaults = patternfly.c3ChartDefaults();
 
   var donutData = {
     type : 'donut',
     colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
+      Cats: patternfly.pfPaletteColors.blue,
+      Hamsters: patternfly.pfPaletteColors.green,
+      Fish: patternfly.pfPaletteColors.orange,
+      Dogs: patternfly.pfPaletteColors.red
     },
     columns: [
       ['Dogs', 2],
@@ -33,11 +33,11 @@
     height: 171
   };
   donutChartConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
+    contents: patternfly.pfDonutTooltipContents
   };
 
   var donutChartNoLegend = c3.generate(donutChartConfig);
-  $().pfSetDonutChartTitle("#{{include.id1}}", "8", "Animals");
+  patternfly.pfSetDonutChartTitle("#{{include.id1}}", "8", "Animals");
 
   // Right Legend
   var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
@@ -53,11 +53,11 @@
     height: 161
   };
   donutChartRightConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
+    contents: patternfly.pfDonutTooltipContents
   };
 
   var donutChartRightLegend = c3.generate(donutChartRightConfig);
-  $().pfSetDonutChartTitle("#{{include.id2}}", "8", "Animals");
+  patternfly.pfSetDonutChartTitle("#{{include.id2}}", "8", "Animals");
 
   // Donut Chart Bottom Legend
   var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
@@ -73,9 +73,9 @@
     height: 191
   };
   donutChartBottomConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
+    contents: patternfly.pfDonutTooltipContents
   };
 
   var donutChartBottomLegend = c3.generate(donutChartBottomConfig);
-  $().pfSetDonutChartTitle("#{{include.id3}}", "8", "Animals");
+  patternfly.pfSetDonutChartTitle("#{{include.id3}}", "8", "Animals");
 </script>

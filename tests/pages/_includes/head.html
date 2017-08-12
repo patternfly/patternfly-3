@@ -27,15 +27,13 @@
     {% else if site.url-css-extra %}
       <link href="{{ site.url-css-extra }}" rel="stylesheet" media="screen, print">
     {% endif %}
-    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {% if page.url-js-extra %}{% for urlextrajs in page.url-js-extra %}
     <script src="{{ urlextrajs, site.url-components }}"></script>
     {% endfor %}{% endif %}
     <script src="{{site.baseurl}}/{{site.url-js}}"></script>
   </head>{% if page.full-page %}
   <div class="toast-notifications-list-pf">
-    <div class="toast-pf alert alert-warning alert-dismissable">
+    <div id="example-warning" class="toast-pf alert alert-warning alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
         <span class="pficon pficon-close"></span>
       </button>
@@ -43,3 +41,16 @@
       {% if page.alt-layout %}The alternate layouts are not officially supported by Patternfly.  {% endif %}These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
     </div>
   </div>{% endif  %}{% endstrip %}
+  <script>
+    window.addEventListener('load', function() {
+      var warningAlert = document.getElementById('example-warning');
+      if (warningAlert) {
+        var closeButton = warningAlert.getElementsByClassName('close');
+        if (closeButton[0]) {
+          closeButton[0].addEventListener('click', function () {
+            warningAlert.parentNode.removeChild(warningAlert);
+          });
+        }
+      }
+    }, false);
+  </script>

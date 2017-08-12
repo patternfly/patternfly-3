@@ -313,6 +313,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('serve', [
+    'build',
     'connect:server',
     'watch'
   ]);

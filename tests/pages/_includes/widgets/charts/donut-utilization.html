@@ -1,6 +1,6 @@
 <div id="{{include.id}}" class="example-donut-chart-utilization"></div>
 <script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+  var c3ChartDefaults = patternfly.c3ChartDefaults();
   var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
   utilizationDonutChartConfig.bindto = '#{{include.id}}';
   utilizationDonutChartConfig.data = {
@@ -20,8 +20,8 @@
   };
 
   utilizationDonutChartConfig.tooltip = {
-    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+    contents: patternfly.pfGetUtilizationDonutTooltipContentsFn('MHz')
   };
   var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
-  $().pfSetDonutChartTitle("#{{include.id}}", "60", "MHz Used");
+  patternfly.pfSetDonutChartTitle("#{{include.id}}", "60", "MHz Used");
 </script>

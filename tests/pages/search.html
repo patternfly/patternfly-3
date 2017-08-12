@@ -108,24 +108,60 @@ resource: true
         </div>
       </div>
       <script>
-        (function($) {
-          $(document).ready(function() {
-            // Hide the clear button if the search input is empty
-            $(".search-pf .has-clear .clear").each(function() {
-              if (!$(this).prev('.form-control').val()) {
-                $(this).hide();
-              }
-            });
-            // Show the clear button upon entering text in the search input
-            $(".search-pf .has-clear .form-control").keyup(function () {
-              var t = $(this);
-              t.next('button').toggle(Boolean(t.val()));
-            });
-            // Upon clicking the clear button, empty the entered text and hide the clear button
-            $(".search-pf .has-clear .clear").click(function () {
-              $(this).prev('.form-control').val('').focus();
-              $(this).hide();
-            });
+        function hideClearButton(clearButton) {
+          if (clearButton.classList.indexOf('pficon-close') !== -1) {
+            clearButton.classList.add("hidden");
+          }
+        }
+        function showClearButton(clearButton) {
+          if (clearButton.classList.indexOf('pficon-close') !== -1) {
+            clearButton.classList.remove("hidden");
+          }
+        }
+        function clearSearch(searchText) {
+          searchText.value = '';
+        }
+
+        function addClearListener(clearButton) {
+          clearButton.addEventListener('click', function() {
+            clearSearch(clearButton.previousElementSibling);
+            hideClearButton(clearButton);
           });
-        })(jQuery);
+        }
+
+        function watchSearchText(searchText) {
+          searchText.addEventListener('keyup', function() {
+            if (searchText.value) {
+              showClearButton(searchText.nextElementSibling);
+            } else {
+              hideClearButton(searchText.nextElementSibling);
+            }
+          });
+        }
+
+        function initSearch() {
+          var clearButtons = document.getElementsByClassName('clear');
+          console.dir(clearButtons);
+          for (var i = 0; i < clearButtons.length; i++) {
+            addClearListener(clearButtons[i]);
+            if (!clearButtons[i].previousElementSibling.value) {
+              hideClearButton(clearButtons[i])
+            }
+          }
+
+
+          var searchPFs = document.getElementsByClassName('search-pf');
+          for (i = 0; i < searchPFs.length; i++) {
+            var hasClears = searchPFs[i].getElementsByClassName('has-clear');
+            for (var j = 0; j < hasClears.length; j++) {
+              var searchTexts = hasClears[j].getElementsByClassName('form-control');
+              console.dir(searchTexts);
+              for (var k = 0; k < searchTexts.length; k++) {
+                watchSearchText(searchTexts[k]);
+              }
+            }
+          }
+        }
+
+        window.addEventListener('load', initSearch, false);
       </script>

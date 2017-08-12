@@ -1,4 +1,4 @@
-<div class="toast-pf toast-pf-max-width toast-pf-top-right alert alert-success alert-dismissable">
+<div id="example-toast-notification" class="toast-pf toast-pf-max-width toast-pf-top-right alert alert-success alert-dismissable">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
     <span class="pficon pficon-close"></span>
   </button>
@@ -8,3 +8,16 @@
   <span class="pficon pficon-ok"></span>
   <strong>server_abc</strong> has been added to main server group.
 </div>
+<script>
+  window.addEventListener('load', function() {
+    var warningAlert = document.getElementById('example-toast-notification');
+    if (warningAlert) {
+      var closeButton = warningAlert.getElementsByClassName('close');
+      if (closeButton[0]) {
+        closeButton[0].addEventListener('click', function () {
+          warningAlert.parentNode.removeChild(warningAlert);
+        });
+      }
+    }
+  }, false);
+</script>

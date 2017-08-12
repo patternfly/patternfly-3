@@ -13,7 +13,7 @@
     <div id="{{include.id1}}"></div>
     <div class="chart-pf-sparkline" id="{{include.id2}}"></div>
     <script>
-      var c3ChartDefaults = $().c3ChartDefaults();
+      var c3ChartDefaults = patternfly.c3ChartDefaults();
 
       var donutConfig = c3ChartDefaults.getDefaultDonutConfig('A');
       donutConfig.bindto = '#{{include.id1}}';

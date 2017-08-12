@@ -1,7 +1,7 @@
 <div id="{{include.id}}" class="chart-pf-sparkline"></div>
 <div>Less than one year remaining</div>
 <script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+  var c3ChartDefaults = patternfly.c3ChartDefaults();
   var sparklineChartConfig = c3ChartDefaults.getDefaultSparklineConfig();
   sparklineChartConfig.bindto = '#{{include.id}}';
   sparklineChartConfig.data = {
