@@ -56,7 +56,47 @@
         <span class="list-group-item-value">Lorem</span>
       </a>
     </li>
-
+    {% if page.applauncher %}
+    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" data-target="#amet-secondary">
+      <a>
+        <span class="fa fa-th applauncher-pf-icon" data-toggle="tooltip" title="" data-original-title="Amet"></span>
+        <span class="list-group-item-value">App Launcher</span>
+      </a>
+      <div id="applauncher-secondary" class="nav-pf-secondary-nav">
+        <div class="nav-item-pf-header">
+          <a class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+          <span>App Launcher</span>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a>
+              <span class="list-group-item-value">Recteque</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a>
+              <span class="list-group-item-value">Recteque</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a>
+              <span class="list-group-item-value">Suavitate</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a>
+              <span class="list-group-item-value">Lorem</span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a>
+              <span class="list-group-item-value">Home</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    {% endif %}
     <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" data-target="#amet-secondary">
       <a>
         <span class="pficon pficon-user" data-toggle="tooltip" title="" data-original-title="User"></span>
@@ -83,7 +123,6 @@
         </ul>
       </div>
     </li>
-
     <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" data-target="#amet-secondary">
       <a>
         <span class="pficon pficon-help" data-toggle="tooltip" title="" data-original-title="Amet"></span>

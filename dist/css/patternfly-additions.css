@@ -2043,18 +2043,13 @@ select.selectpicker {
     font-size: 2em;
   }
 }
-.navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
-.navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
-.navbar-pf .applauncher-pf .dropdown-menu,
-.navbar-pf-alt .applauncher-pf .dropdown-menu {
+.navbar-utility .applauncher-pf .dropdown-menu {
   border-width: 1px !important;
 }
 @media (min-width: 768px) {
-  .navbar-pf .navbar-utility .applauncher-pf .dropdown-menu,
-  .navbar-pf-alt .navbar-utility .applauncher-pf .dropdown-menu,
-  .navbar-pf .applauncher-pf .dropdown-menu,
-  .navbar-pf-alt .applauncher-pf .dropdown-menu {
-    margin-top: 11px;
+  .navbar-utility .applauncher-pf .dropdown-menu {
+    margin-top: 3px;
+    right: 0;
   }
 }
 .navbar-pf .navbar-utility .applauncher-pf.open > a,
@@ -2333,7 +2328,7 @@ select.selectpicker {
   .navbar-iconic .applauncher-pf.dropdown > .dropdown-toggle,
   .navbar-iconic .navbar-utility .applauncher-pf .dropdown-toggle,
   .navbar-iconic .applauncher-pf .dropdown-toggle {
-    padding: 15px;
+    padding: 22px 10px;
     line-height: inherit;
   }
 }
