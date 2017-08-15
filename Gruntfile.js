@@ -149,6 +149,23 @@ module.exports = function (grunt) {
       }
     },
     less: {
+      patternflyJquery: {
+        files: {
+          'dist/css/patternfly-jquery.css': 'tests/pages/jquery/src/jquery-showcase.less',
+        },
+        options: {
+          paths: [
+            'src/less/',
+            'tests/pages/jquery/src/',
+            'node_modules/'
+          ],
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapFilename: 'dist/css/patternfly-jquery.css.map',
+          sourceMapURL: 'patternfly-jquery.css.map'
+        }
+      },
       patternfly: {
         files: {
           'dist/css/patternfly.css': 'src/less/patternfly.less',
@@ -214,7 +231,7 @@ module.exports = function (grunt) {
         tasks: ['pages']
       },
       less: {
-        files: ['src/less/*.less'],
+        files: ['src/less/*.less', 'tests/pages/jquery/src/*.less'],
         tasks: ['less']
       },
       css: {
@@ -323,4 +340,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', ['build']);
+
+  grunt.registerTask('html:test', ['htmlhint']);
 };

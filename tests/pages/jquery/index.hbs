@@ -3,10 +3,10 @@
   <title>PatternFly JQuery Components</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly-additions.css">
-  <link rel="stylesheet" type="text/css" href="src/jquery-showcase.css">
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../../css/patternfly.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/patternfly-additions.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/patternfly-jquery.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-combobox/1.1.8/js/bootstrap-combobox.min.js"></script>
@@ -41,35 +41,47 @@
             </div>
           </div>
           <div class="navbar-collapse navbar-collapse-pf-site collapse">
-            <ul id="menu-primary" class="nav navbar-nav navbar-right">
-              <li>
-                <a href="#">Components</a>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right navbar-iconic navbar-utility">
+              <li class="active">
+                <a href="src/get-started.html">Get Started</a>
               </li>
               <li>
-                <a href="#">Contribute</a>
+                <a href="index.html">Components</a>
+              </li>
+              <li>
+                <a href="src/contribute.html">Contribute</a>
               </li>
               <li>
                 <a href="https://github.com/patternfly/patternfly-jquery">Github</a>
               </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-th-large" aria-hidden="true"></i>
+              <li class="applauncher-pf  dropdown dropdown-kebab-pf">
+                <a class="dropdown-toggle nav-item-iconic" data-toggle="dropdown" href="#" aria-expanded="true">
+                  <i class="fa fa-th applauncher-pf-icon" aria-hidden="true"></i>
+                  <span class="applauncher-pf-title">
+				            PatternFly jQuery Showcase List
+				            <span class="caret" aria-hidden="true"></span>
+				          </span>
                 </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular 1</a>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="http://www.patternfly.org/angular-patternfly/#/api/">
+                      <span class="applauncher-pf-link-title">PatternFly Angular</span>
+                    </a>
                   </li>
-                  <li>
-                    <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">PatternFly-ng</a>
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">
+                      <span class="applauncher-pf-link-title">PatternFly NG</span>
+                    </a>
                   </li>
-                  <li>
-                    <a href="https://patternfly-webcomponents.github.io/components.html">PatternFly Web Component</a>
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="https://patternfly-webcomponents.github.io/components.html">
+                      <span class="applauncher-pf-link-title">PatternFly Web Components</span>
+                    </a>
                   </li>
-                  <li>
-                    <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">PatternFly React</a>
-                  </li>
-                  <li>
-                    <a href="http://www.patternfly.org/patternfly-css/">PatternFly CSS</a>
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">
+                      <span class="applauncher-pf-link-title">PatternFly React</span>
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -83,10 +95,13 @@
             <a href="">Menu</a>
             <ul>
               <li>
-                <a href="#">Components</a>
+                <a href="src/get-started.html">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="index.html">Components</a>
               </li>
               <li>
-                <a href="#">Contribute</a>
+                <a href="src/contribute.html">Contribute</a>
               </li>
               <li>
                 <a href="https://github.com/patternfly/patternfly-jquery">Github</a>
@@ -118,7 +133,7 @@
     </header>
 
     <div class="doc-wrapper">
-      <div class="container">
+      <div class="container-fluid">
         <!-- //doc-header -->
         <div class="doc-body">
           <div class="doc-content">
@@ -292,7 +307,7 @@
                     {{{template 'tests/pages/jquery/src/bootstrap-touchspin.html'}}}
                   </div>
                   <div class="doc-example-path">
-                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js&quot;&gt;&lt;/script&gt;</code></pre></code></pre>
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js&quot;&gt;&lt;/script&gt;</code></pre>
                   </div>
                   <div class="doc-example-js">
                     {{{code 'tests/pages/jquery/src/bootstrap-touchspin.js'}}}
@@ -387,7 +402,7 @@
                     {{{template 'tests/pages/jquery/src/horizontal-nav.html'}}}
                   </div>
                   <div class="doc-example-path">
-                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;</code><br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
                   </div>
                   <div class="doc-example-js">
                     {{{code 'tests/pages/jquery/src/horizontal-nav.js'}}}
@@ -465,7 +480,7 @@
                     {{{template 'tests/pages/jquery/src/horizontal-drawer.html'}}}
                   </div>
                   <div class="doc-example-path">
-                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;</code><br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
                   </div>
                   <div class="doc-example-js">
                     {{{code 'tests/pages/jquery/src/horizontal-drawer.js'}}}
@@ -478,7 +493,7 @@
                     {{{template 'tests/pages/jquery/src/vertical-drawer.html'}}}
                   </div>
                   <div class="doc-example-path">
-                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;</code><br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
                   </div>
                   <div class="doc-example-js">
                     {{{code 'tests/pages/jquery/src/vertical-drawer.js'}}}
@@ -698,7 +713,7 @@
                     {{{template 'tests/pages/jquery/src/vertical-nav.html'}}}
                   </div>
                   <div class="doc-example-path">
-                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;</code><br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
                   </div>
                   <div class="doc-example-js">
                     {{{code 'tests/pages/jquery/src/vertical-nav.js'}}}
@@ -751,13 +766,11 @@
                 <li><a href="#list">List</a></li>
                 <li><a href="#listview">List View</a></li>
                 <li><a href="#listviewrows">List View Rows</a></li>
-                <li>
-                  <a href="#notification">Notification Drawer</a>
+                <li><a href="#notification">Notification Drawer</a></li>
                   <ul class="doc-sub-menu">
                     <li><a href="#horizontal">Horizontal Navigation</a></li>
                     <li><a href="#vertical">Vertical Navigation</a></li>
                   </ul>
-                </li>
                 <li><a href="#popover">Popover</a></li>
                 <li><a href="#progressbars">Progress Bars</a></li>
                 <li><a href="#search">Search</a></li>
@@ -767,7 +780,7 @@
                 <li><a href="#tooltip">Tooltip</a></li>
                 <li><a href="#treegridtable">TreeGrid Table</a></li>
                 <li><a href="#utilization">Utilization Bar Chart</a></li>
-                <li><a href="#vertical-nav">Vertical Navigation</a>
+                <li><a href="#vertical-nav">Vertical Navigation</a></li>
                 <li><a href="#wizard">Wizard</a></li>
               </ul>
               <!-- //doc-menu -->

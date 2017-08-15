@@ -21,22 +21,24 @@
           <span class="icon-bar"></span>
         </button>
         <div class="navbar-brand">
-          <a id="logo" title="PatternFly jQuery" href="#">PATTERNFLY-<span class="secondary-logo">JQUERY</span></a>
+          <a id="logo" title="PatternFly jQuery" href="#">
+            PATTERNFLY-<span class="secondary-logo">JQUERY</span>
+          </a>
         </div>
       </div>
       <div class="navbar-collapse navbar-collapse-pf-site collapse">
         <ul id="menu-primary" class="nav navbar-nav navbar-right navbar-iconic navbar-utility">
-          <li class="active">
+          <li>
             <a href="get-started.html">Get Started</a>
           </li>
           <li>
             <a href="../index.html">Components</a>
           </li>
-          <li>
+          <li class="active">
             <a href="contribute.html">Contribute</a>
           </li>
           <li>
-            <a href="https://github.com/patternfly/patternfly-jquery">Github</a>
+            <a href="https://github.com/patternfly/angular-patternfly">Github</a>
           </li>
           <li class="applauncher-pf  dropdown dropdown-kebab-pf">
             <a class="dropdown-toggle nav-item-iconic" data-toggle="dropdown" href="#" aria-expanded="true">
@@ -78,20 +80,20 @@
       <li class="primary-menu">
         <a href="">Menu</a>
         <ul>
-          <li class="active">
+          <li>
             <a href="get-started.html">Get Started</a>
           </li>
           <li>
             <a href="../index.html">Components</a>
           </li>
-          <li>
+          <li class="active">
             <a href="contribute.html">Contribute</a>
           </li>
           <li>
-            <a href="https://github.com/patternfly/patternfly-jquery">Github</a>
+            <a href="https://github.com/patternfly/angular-patternfly">Github</a>
           </li>
           <li>
-            <a class="collapsed showcase-collapsed" role="button" data-toggle="collapse" href="#patternfly-showcases">PatternFly Showcases</a>
+            <a class="collapsed" role="button" data-toggle="collapse" href="#patternfly-showcases">PatternFly Showcases</a>
             <ul class="collapse" id="patternfly-showcases">
               <li>
                 <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular 1</a>
@@ -115,85 +117,71 @@
     </ul>
   </nav>
 </header>
-<div class="banner">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <h1>Welcome to PatternFly-jQuery</h1>
-        <p>
-          This is a simple introduction about this showcase page.<br>
-          This PatternFly Showcase will provide a set of common jQuery components for use with the PatternFly reference implementation.</p>
-        <div class="buttons">
-          <a href="index.html" class="buttons-btn buttons-active">Components</a>
-          <a href="https://github.com/patternfly/patternfly-jquery" class="buttons-btn"><i class="fa fa-github" aria-hidden="true"></i>Code on Github</a>
-        </div>
-        <p>View the design guidelines, please visit <a href="https://www.patternfly.org/">PatternFly.org</a></p>
-      </div>
-      <div class="col-xs-6 col-md-4">
-        <div class="logos">
-          <!--<img src="dist/img/logos.svg" alt="">-->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="showcase-content">
+<div class="showcase-content showcase-contribute">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
-        <h2>Get Started</h2>
-        <h3>Introduction</h3>
+        <h1>How to contribute</h1>
+
         <p>
-          Patternfly-jQuery provides a set of common components that implement PatternFly design patterns using jQuery.
+          <br>If you're reading this, you're awesome! Thank you for helping us make this project great and being a part of the PatternFly community. Here are a few guidelines that will help you along the way.
         </p>
 
-        <h3>Installation</h3>
-        <p>You have to install required software before you're able to use grunt:</p>
+        <h2>Asking Questions</h2>
+        <p>For how-to questions and other non-issues, please use the following ways instead of Github issues. </p>
         <ul>
+          <li>IRC - <a href="http://webchat.freenode.net/?channels=#patternfly">freenode #patternfly-jquery</a></li>
+          <li>Slack - <a href="patternfly.slack.com">patternfly.slack.com</a> #general</li>
           <li>
-            <strong>Install Node.js</strong> - Find more information on <a href="#">Node.js</a>
-            <br>
-            jQuery Patternfly stays up to date with the Node LTS <a href="#">Release Schedule</a>. If you're using jQuery Patternfly downstream, we suggest the use of an actively supported version of Node/NPM, although prior versions of Node may work.
-          </li>
-          <li>
-            <strong>Install npm</strong> - If npm is not already installed with Node.js, you have to install it manually. Find more information on <a href="#">NPM</a>
-          </li>
-          <li>
-            <strong>Install Grunt globally</strong> - Find more information on <a href="https://grunt.com">Grunt</a>
-            <pre class="prettyprint">$ npm install-g grunt-cli</pre>
-
-            <div class="code-block">Install npm dependencies with:
-              <pre class="prettyprint">$ npm install</pre>
-              You should have your environment ready now.
-            </div>
-
-            <div class="code-block">
-              jQuery-PatternFly can now be built with:
-              <pre class="prettyprint">$ npm run build</pre>
-            </div>
-
-            <div class="code-block">
-              To see all the grunt tasks that are available:
-              <pre class="prettyprint">$ npm run help</pre>
-            </div>
+            Mailing List -
+            <a href="mailto:patternfly-jquery@redhat.com">Subscribe to our mailing list</a>
+            to participate or follow a variety of discussions on both technical and design topics.
+            Older threads are found in the <a href="https://www.redhat.com/archives/patternfly/">archive
+          </a>
           </li>
         </ul>
 
-        <h3>Usage</h3>
+        <h2>Opening an Issue</h2>
+        <p>If you think you have found a bug, or have a new feature idea, please start by making sure it hasn't already been
+          <a href="https://github.com/patternfly/patternfly/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aclosed">reported or fixed</a>.
+          You can search through existing issues and PRs to see if someone has reported one similar to yours.
+        </p>
+        <p>Next, create a new issue that briefly explains the problem, and provides a bit of background as to the circumstances that triggered it, and steps to reproduce it.</p>
+
+        <p>For code issue please include:</p>
+        <ul>
+          <li>Device Type</li>
+          <li>Browser Version</li>
+          <li>JS framework Version</li>
+          <li>A code example or link to a repo, or running site or a screenshot of the code.</li>
+        </ul>
+        <h3>Issue Guidelines</h3>
+        <p>Please begin the title with '[ComponentName]' where appropriate, and use a succinct description. "doesn't work" doesn't help others find similar issues.</p>
+        <p>Please don't group multiple topics into one issue, but instead each should be its own issue.</p>
+        <p>And please don't just '+1' an issue. It spams the maintainers and doesn't help move the issue forward.</p>
+
+        <h2>Submitting a Pull Request</h2>
+        <p>PatternFly is a community project, so pull requests are always welcome, but before working on a large change, it is best to open an issue first to discuss it with the maintainers.</p>
+        <p>When in doubt, keep your pull requests small. To give a PR the best chance of getting accepted, don't bundle more than one feature or bug fix per pull request. It's always best to create two smaller PRs than one big one.</p>
+
+        <h3>How to make a pull request</h3>
+        <p>Please create a new branch from an up to date master on your fork. </p>
         <ol>
-          <li>Add jQuery and jQuery-PatternFly as dependencies for your project and you'll receive all the libraries you'll need:
-            <pre class="prettyprint">$ npm install jquery --save <br>$ npm install jquery-patternfly --save</pre>
-          </li>
-          <li>Add the core Patternfly CSS and script includes to your HTML file(s):
-            <br>Please see: <a href="#">https://github.com/patternfly/patternfly/blob/master/QUICKSTART.md</a>
-          </li>
-          <li>Add the following CSS include to your HTML file(s):
-            <pre class="prettyprint">&lt;!-- jQuery-PatternFly Styles --&gt;<br>&lt;link rel="stylesheet" href="node_modules/jquery-patternfly/dist/styles/jquery-patternfly.min.css" /&gt;</pre>
-          </li>
-          <li>Add the following script includes to your HTML file(s), adjusting where necessary to pull in only what you need:
-            <pre class="prettyprint">&lt;!-- jQuery --&gt;<br>&lt;script src="node_modules/jquery-patternfly/node_modules/jquery/jquery.min.js"&gt;&lt;/script&gt;</pre>
-          </li>
+          <li>Fork the <a href="https://github.com/patternfly/patternfly-jquery">PatternFly-jQuery repository on Github</a></li>
+          <li>Clone your fork to you local machine: <i class="code">git clone git@github.com:&lt;yourname&gt;/patternfly-jquery.git</i></li>
+          <li>Create a branch: <i class="code">git checkout -b my-topic-branch</i></li>
+          <li>Make your changes, commit, then push to github with: <i class="code">git push origin my-topic-branch</i></li>
+          <li>Visit github and make your pull request.</li>
         </ol>
+
+        <h3>Coding style</h3>
+        <p>Please follow the coding style of the current code base.
+          See <a href="http://codeguide.patternfly.org/">http://codeguide.patternfly.org</a></p>
+
+        <h2>Roadmap</h2>
+        <p>To get a sense of where PatternFly is heading, or for ideas on where you could contribute, take a look at the <a href="https://blog.patternfly.org/the-patternfly-roadmap/">roadmap</a>.</p>
+
+
       </div>
     </div>
   </div>

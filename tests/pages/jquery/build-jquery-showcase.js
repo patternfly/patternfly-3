@@ -48,7 +48,7 @@ handlebars.registerHelper('template', (filepath)  => {
 handlebars.registerHelper('code', (filepath, filetype)  => {
   let langClass = typeof filetype === 'string' ? ' lang-'+filetype : '';
   let html = '<pre class="prettyprint'+ langClass +'">';
-  html = html + fs.readFileSync(filepath, 'utf8').trim();
+  html = html + escapeHtml(fs.readFileSync(filepath, 'utf8').trim());
   html = html + "</pre>";
   console.log(html)
   return html;
