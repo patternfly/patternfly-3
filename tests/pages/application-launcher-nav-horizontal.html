@@ -4,7 +4,13 @@ css-extra: false
 layout: page
 resource: true
 horizontal : true
+applauncher: true
 title: Application Launcher for Horizontal Navigation
 ---
 
-{% include widgets/navigation/application-launcher-page.html %}
+{% include widgets/navigation/horizontal-primary-nav-bar-page.html launcher-icons=true %}
+<script>
+  $(document).ready(function() {
+    $('.applauncher-pf .dropdown-toggle').eq(0).click();
+  });
+</script>
