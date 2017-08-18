@@ -1,7 +1,7 @@
 {% if page.notification-drawer %}
-  {% include widgets/layouts/nav-vertical-notification-drawer.html %}
+  {% include widgets/layouts/nav-vertical-notification-drawer.html launcher-icons=include.launcher-icons %}
 {% else %}
-  {% include widgets/layouts/navbar-vertical.html %}
+  {% include widgets/layouts/navbar-vertical.html notification-drawer=true launcher-icons=include.launcher-icons %}
 {% endif %}
 <div class="nav-pf-vertical nav-pf-vertical-with-sub-menus
      {% if page.persistent-secondary %}nav-pf-persistent-secondary{% endif %}
@@ -57,9 +57,9 @@
       </a>
     </li>
     {% if page.applauncher %}
-    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" data-target="#amet-secondary">
+    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block">
       <a>
-        <span class="fa fa-th applauncher-pf-icon" data-toggle="tooltip" title="" data-original-title="Amet"></span>
+        <span class="fa fa-th applauncher-pf-icon" data-toggle="tooltip" title="" data-original-title="App Launcher"></span>
         <span class="list-group-item-value">App Launcher</span>
       </a>
       <div id="applauncher-secondary" class="nav-pf-secondary-nav">
@@ -97,7 +97,7 @@
       </div>
     </li>
     {% endif %}
-    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" data-target="#amet-secondary">
+    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block">
       <a>
         <span class="pficon pficon-user" data-toggle="tooltip" title="" data-original-title="User"></span>
         <span class="list-group-item-value">User</span>
@@ -125,7 +125,7 @@
     </li>
     <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" data-target="#amet-secondary">
       <a>
-        <span class="pficon pficon-help" data-toggle="tooltip" title="" data-original-title="Amet"></span>
+        <span class="pficon pficon-help" data-toggle="tooltip" title="" data-original-title="Help"></span>
         <span class="list-group-item-value">Help</span>
       </a>
       <div id="help-secondary" class="nav-pf-secondary-nav">
