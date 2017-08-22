@@ -249,6 +249,8 @@
 
       bindMenuBehavior = function () {
         toggleNavBarButton.on('click', function (e) {
+          var $drawer;
+
           enableTransitions();
 
           if (inMobileState()) {
@@ -259,6 +261,13 @@
               // Always start at the primary menu
               updateMobileMenu();
               navElement.addClass('show-mobile-nav');
+
+              // If the notification drawer is shown, hide it
+              $drawer = $('.drawer-pf');
+              if ($drawer.length) {
+                $('.drawer-pf-trigger').removeClass('open');
+                $drawer.addClass('hide');
+              }
             }
           } else if (navElement.hasClass('collapsed')) {
             window.localStorage.setItem('patternfly-navigation-primary', 'expanded');
