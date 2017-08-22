@@ -9,6 +9,14 @@
     <a href="/" class="navbar-brand">
       {% if site.navbar-pf-navbar-brand-icon %}<img class="navbar-brand-icon" src="{{site.baseurl}}/{{site.navbar-logo-alt-icon}}" alt=""/>{% endif %}<img class="navbar-brand-name" src="{{site.baseurl}}/{{site.navbar-brand-alt-icon}}" alt="{{site.title-product}}" />
     </a>
+    <ul class="nav pull-right visible-xs-block navbar-iconic">
+      <li class="drawer-pf-trigger">
+        <a class="nav-item-iconic">
+          <span class="fa fa-bell" title="Notifications"></span>
+          <span class="badge"> </span><!-- in order to show the empty badge this requires a space, otherwise add a value -->
+        </a>
+      </li>
+    </ul>
   </div>
   <nav class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
@@ -42,6 +50,6 @@
         </ul>
       </li>
     </ul>
-    {% include widgets/notification-drawer.html %}
   </nav>
+  {% include widgets/notification-drawer.html %}
 </nav> <!--/.navbar-->

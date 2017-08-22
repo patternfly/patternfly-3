@@ -201,6 +201,12 @@
   .drawer-pf {
     height: calc(~"100vh - 80px");//to create a 20px offset bottom
     top: 58px; //menu height;
+
+      @media (max-width: @screen-xs-max) {
+        width:100%;
+        height: 100vh; // override to show use full height
+      }
+
   }
   .nav .drawer-pf-trigger {
     .drawer-pf-trigger-icon {
