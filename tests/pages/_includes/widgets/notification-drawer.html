@@ -134,6 +134,10 @@
       } else {
         $drawer.addClass('hide');
       }
+      // Special case, close navigation menu in mobile mode
+     if ($('.container-pf-nav-pf-vertical').hasClass('hidden-nav')) {
+       $('.nav-pf-vertical').removeClass('show-mobile-nav');
+     }
     });
     $('.drawer-pf-close').click(function() {
       var $drawer = $('.drawer-pf');
