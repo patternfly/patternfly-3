@@ -42,6 +42,10 @@
     display: block;
   }
   &.drawer-pf-expanded {
+    @media (max-width: @screen-xs-max) {
+      left:0;
+      width: 100%;
+    }
     @media (min-width: @screen-xs-max) {
       left: 270px;
     } // if the drawer is expanded and the screen is reduced this ensures it switches to full width on smaller screens.
@@ -211,7 +215,7 @@
         width:100%;
         height: calc(~"100vh - 58px");
       }
-      
+
   }
   .nav .drawer-pf-trigger {
     .drawer-pf-trigger-icon {
@@ -231,6 +235,11 @@
   .drawer-pf {
     height: calc(~"100vh - 46px");
     top: 26px;
+    @media (max-width: @screen-xs-max) {
+      width:100%;
+      height: calc(~"100vh - 58px");
+      top:68px; // this pushed the drawer below the notification icon in the menu
+    }
   }
   .drawer-pf-trigger-icon { cursor: pointer; }
 }
