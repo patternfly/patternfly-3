@@ -42,7 +42,9 @@
     display: block;
   }
   &.drawer-pf-expanded {
-    left: 270px;
+    @media (min-width: @screen-xs-max) {
+      left: 270px;
+    } // if the drawer is expanded and the screen is reduced this ensures it switches to full width on smaller screens.
     width: inherit;
     .drawer-pf-toggle-expand:before {
       content: "\f101";
@@ -190,6 +192,9 @@
 .drawer-pf-notification.expanded-notification {
   .drawer-pf-notification-content {
     display: flex;
+    @media (max-width: @screen-sm-max) {
+      flex-direction: column;
+    }
     .drawer-pf-notification-message {
       flex: 1 1;
     }
@@ -204,9 +209,9 @@
 
       @media (max-width: @screen-xs-max) {
         width:100%;
-        height: calc(~"100vh - 58px"); // override to show use full height
+        height: calc(~"100vh - 58px");
       }
-
+      
   }
   .nav .drawer-pf-trigger {
     .drawer-pf-trigger-icon {
