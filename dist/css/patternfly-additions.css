@@ -3164,6 +3164,32 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   stroke: #d1d1d1;
   stroke-width: 1px;
 }
+.pct-donut-chart-pf .pct-donut-chart-pf-label {
+  display: block;
+}
+.pct-donut-chart-pf.pct-donut-chart-pf-left,
+.pct-donut-chart-pf.pct-donut-chart-pf-right,
+.pct-donut-chart-pf .pct-donut-chart-pf-left,
+.pct-donut-chart-pf .pct-donut-chart-pf-right {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.pct-donut-chart-pf.pct-donut-chart-pf-left,
+.pct-donut-chart-pf.pct-donut-chart-pf-right {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.pct-donut-chart-pf.pct-donut-chart-pf-left,
+.pct-donut-chart-pf .pct-donut-chart-pf-left {
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+}
 .close {
   text-shadow: none;
   z-index: 1;

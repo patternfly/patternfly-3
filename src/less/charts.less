@@ -95,3 +95,31 @@
     stroke-width: 1px;
   }
 }
+
+.pct-donut-chart-pf {
+
+  .pct-donut-chart-pf-label {
+    display: block;
+  }
+
+  &.pct-donut-chart-pf-left,
+  &.pct-donut-chart-pf-right,
+  .pct-donut-chart-pf-left,
+  .pct-donut-chart-pf-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.pct-donut-chart-pf-left,
+  &.pct-donut-chart-pf-right {
+    display: inline-flex;
+  }
+
+  &.pct-donut-chart-pf-left,
+  .pct-donut-chart-pf-left {
+    flex-direction: row-reverse;
+  }
+}
+
