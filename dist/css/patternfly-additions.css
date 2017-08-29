@@ -3405,11 +3405,17 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-add-circle-o:before {
   content: "\e61b";
 }
+.pficon-applications:before {
+  content: "\e936";
+}
 .pficon-arrow:before {
   content: "\e929";
 }
 .pficon-asleep:before {
   content: "\e925";
+}
+.pficon-automation:before {
+  content: "\e937";
 }
 .pficon-build:before {
   content: "\e902";
@@ -3438,6 +3444,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-cluster:before {
   content: "\e620";
 }
+.pficon-connected:before {
+  content: "\e938";
+}
 .pficon-container-node:before {
   content: "\e621";
 }
@@ -3449,6 +3458,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-delete:before {
   content: "\e611";
+}
+.pficon-disconnected:before {
+  content: "\e939";
 }
 .pficon-domain:before {
   content: "\e919";
@@ -3503,14 +3515,14 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-info:before {
   content: "\e92b";
 }
+.pficon-infrastructure:before {
+  content: "\e93d";
+}
 .pficon-key:before {
   content: "\e924";
 }
 .pficon-locked:before {
   content: "\e923";
-}
-.pficon-unlocked:before {
-  content: "\e922";
 }
 .pficon-maintenance:before {
   content: "\e92d";
@@ -3533,6 +3545,12 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-on-running:before {
   content: "\e930";
 }
+.pficon-optimize:before {
+  content: "\e93e";
+}
+.pficon-orders:before {
+  content: "\e93f";
+}
 .pficon-off:before {
   content: "\e92f";
 }
@@ -3545,6 +3563,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-pending:before {
   content: "\e933";
+}
+.pficon-plugged:before {
+  content: "\e940";
 }
 .pficon-print:before {
   content: "\e612";
@@ -3616,6 +3637,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-service:before {
   content: "\e61e";
 }
+.pficon-service-catalog:before {
+  content: "\e941";
+}
 .pficon-settings:before {
   content: "\e610";
 }
@@ -3651,6 +3675,12 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-users:before {
   content: "\e91f";
+}
+.pficon-unlocked:before {
+  content: "\e922";
+}
+.pficon-unplugged:before {
+  content: "\e942";
 }
 .pficon-virtual-machine:before {
   content: "\e90f";
