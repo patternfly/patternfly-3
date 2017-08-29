@@ -1,0 +1,631 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>PatternFly CSS Showcase</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly-additions.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/patternfly-showcase.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="../../js/patternfly.js"></script>
+  </head>
+  <body class="showcase">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+              <a id="logo" title="PatternFly Showcase" href="src/get-started.html">PATTERNFLY-<span class="secondary-logo">CSS</span></a>
+            </div>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="src/get-started.html">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="index.html">Components</a>
+              </li>
+              <li>
+                <a href="src/contribute.html">Contribute</a>
+              </li>
+              <li>
+                <a href="https://github.com/patternfly/patternfly-css">Github</a>
+              </li>
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-th-large" aria-hidden="true"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular 1</a>
+                </li>
+                <li>
+                  <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">PatternFly-ng</a>
+                </li>
+                <li>
+                  <a href="https://patternfly-webcomponents.github.io/components.html">PatternFly Web Component</a>
+                </li>
+                <li>
+                  <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">PatternFly React</a>
+                </li>
+                <li>
+                  <a href="http://www.patternfly.org/patternfly-css/">PatternFly CSS</a>
+                </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar navbar-primary">
+        <ul>
+          <li class="primary-menu">
+            <a href="">Menu</a>
+            <ul>
+              <li>
+                <a href="src/get-started.html">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="index.html">Components</a>
+              </li>
+              <li>
+                <a href="src/contribute.html">Contribute</a>
+              </li>
+              <li>
+                <a href="https://github.com/patternfly/patternfly-css">Github</a>
+              </li>
+              <li>
+                <a class="collapsed showcase-collapsed" role="button" data-toggle="collapse" href="#patternfly-showcases">PatternFly Showcases</a>
+                <ul class="collapse" id="patternfly-showcases">
+                  <li>
+                    <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular 1</a>
+                  </li>
+                  <li>
+                    <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">PatternFly-ng</a>
+                  </li>
+                  <li>
+                    <a href="https://patternfly-webcomponents.github.io/components.html">PatternFly Web Component</a>
+                  </li>
+                  <li>
+                    <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">PatternFly React</a>
+                  </li>
+                  <li>
+                    <a href="http://www.patternfly.org/patternfly-css/">PatternFly CSS</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="doc-wrapper">
+      <div class="container-fluid">
+        <div class="doc-body">
+          <div class="doc-content">
+            <div class="content-inner">
+              <!-- About Modal -->
+              <section id ="aboutmodal" class="doc-section">
+                <h2 class="section-title">About Modal</h2>
+                <div class="section-block">
+                  <p>The About Modal stores the version number(s) of the application as well as any appropriate legal text.</p>
+                </div>
+                <div class="doc-example">
+                  {{{include 'tests/pages/css/src/about-modal.html'}}}
+                </div>
+                <div class="doc-example-html">
+                  {{{template 'tests/pages/css/src/about-modal.html'}}}
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Alerts -->
+              <section id="alerts" class="doc-section">
+                <h2 class="section-title">Alerts</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/components/#alerts">http://getbootstrap.com/components/#alerts</a> for complete alerts documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/alerts.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/alerts.html'}}}
+                  </div>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Badges -->
+              <section id="badges" class="doc-section">
+                <h2 class="section-title">Badges</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/components/#badges">http://getbootstrap.com/components/#badges</a> for complete badges documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/badges.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/badges.html'}}}
+                  </div>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Blank Slate -->
+              <section id="blankslate" class="doc-section">
+                <h2 class="section-title">Blank Slate</h2>
+                <div class="section-block">
+                  <p>The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions. This may occur because the application is newly installed and content has not yet been created or added. This state may also result when all objects are deleted from a collection.</p>
+                  <p>This pattern should NOT be used when:</p>
+                  <ul>
+                    <li>Selected filters cause an empty result.</li>
+                    <li>There is a connectivity issue and the data set cannot be obtained.</li>
+                  </ul>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/blank-slate.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/blank-slate.html'}}}
+                  </div>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Breadcrumbs -->
+              <section id="breadcrumbs" class="doc-section">
+                <h2 class="section-title">Breadcrumbs</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/components/#breadcrumbs">http://getbootstrap.com/components/#breadcrumbs</a> for complete breadcrumbs documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/breadcrumbs.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/breadcrumbs.html'}}}
+                  </div>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Buttons -->
+              <section id="buttons" class="doc-section">
+                <h2 class="section-title">Buttons</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/css/#buttons">http://getbootstrap.com/css/#buttons</a> for complete buttons documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/buttons.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/buttons.html'}}}
+                  </div>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Button Dropdowns -->
+              <section id="buttondropdowns" class="doc-section">
+                <h2 class="section-title">Button Dropdowns</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/components/#dropdowns">http://getbootstrap.com/components/#dropdowns</a> for complete dropdowns documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/button-dropdowns.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/button-dropdowns.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Button Groups -->
+              <section id="buttongroups" class="doc-section">
+                <h2 class="section-title">Button Groups</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/components/#btn-groups">http://getbootstrap.com/components/#btn-groups</a> for complete button groups documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/button-groups.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/button-groups.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Cards -->
+              <section id="cards" class="doc-section">
+                <h2 class="section-title">Cards</h2>
+                <div class="section-block">
+                  <p>
+                    Card View organizes content into a grid of cards. Card View is useful for displaying a small to moderate amount of content in a way that is not visually overwhelming. If the pieces of content to be displayed are best identified by a graphic or other visual representation, Card View enables a user to easily visualize and compare them. It is also useful when you want to present a large number of objects at once within the same summary page.
+                  </p>
+                  <p>The Card View should NOT be used if:</p>
+                  <ul>
+                    <li>Users need to quickly scan a large amount of text-based content. Consider using a Table View.</li>
+                    <li>You want to display more content about each object that can fit into a small tile. Consider using a List View.</li>
+                  </ul>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/cards.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/cards.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Code -->
+              <section id="code" class="doc-section">
+                <h2 class="section-title">Code</h2>
+                <div class="section-block">
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/code.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/code.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Dropdowns -->
+              <section id="dropdowns" class="doc-section">
+                <h2 class="section-title">Dropdowns</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/components/#dropdowns">http://getbootstrap.com/components/#dropdowns</a> for complete buttons documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/dropdowns.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/dropdowns.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Forms -->
+              <section id="forms" class="doc-section">
+                <h2 class="section-title">Forms</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/css/#forms">http://getbootstrap.com/css/#forms</a> for complete forms documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/forms.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/forms.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Icons -->
+              <section id="icons" class="doc-section">
+                <h2 class="section-title">Icons</h2>
+                <div class="section-block">
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/icons.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/icons.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Info Tip -->
+              <section id="infotip" class="doc-section">
+                <h2 class="section-title">Info Tip</h2>
+                <div class="section-block">
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/infotip.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/infotip.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Kebabs -->
+              <section id="kebabs" class="doc-section">
+                <h2 class="section-title">Kebabs</h2>
+                <div class="section-block">
+                <p>Kebabs are a restyled version of a dropdown and support the same feature set. See <a href="http://getbootstrap.com/components/#dropdowns">http://getbootstrap.com/components/#dropdowns</a> for complete dropdowns documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/kebabs.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/kebabs.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Labels -->
+              <section id="labels" class="doc-section">
+                <h2 class="section-title">Labels</h2>
+                <div class="section-block">
+                <p>See <a href="http://getbootstrap.com/components/#labels">http://getbootstrap.com/components/#labels</a> for complete labels documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/labels.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/labels.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- List Group -->
+              <section id="listgroup" class="doc-section">
+                <h2 class="section-title">List Group</h2>
+                <div class="section-block">
+                <p>See <a href="http://getbootstrap.com/components/#list-group">http://getbootstrap.com/components/#list-group</a> for complete list group documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/list-group.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/list-group.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Modals -->
+              <section id="modals" class="doc-section">
+                <h2 class="section-title">Modals</h2>
+                <div class="section-block">
+                <p>See <a href="http://getbootstrap.com/javascript/#modals">http://getbootstrap.com/javascript/#modals</a> for complete modal documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/modals.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/modals.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Navbar -->
+              <section id="navbar" class="doc-section">
+                <h2 class="section-title">Navbar</h2>
+                <div class="section-block">
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/navbar.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/navbar.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Pagination -->
+              <section id="pagination" class="doc-section">
+                <h2 class="section-title">Pagination</h2>
+                <div class="section-block">
+                <p>See <a href="http://getbootstrap.com/components/#pagination">http://getbootstrap.com/components/#pagination</a> for complete pagination documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/pagination.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/pagination.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Panels -->
+              <section id="panels" class="doc-section">
+                <h2 class="section-title">Panels</h2>
+                <div class="section-block">
+                <p>See <a href="http://getbootstrap.com/components/#panels">http://getbootstrap.com/components/#panels</a> for complete panels documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/panels.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/panels.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Progress Bars -->
+              <section id="progressbars" class="doc-section">
+                <h2 class="section-title">Progress Bars</h2>
+                <div class="section-block">
+                <p>See <a href="http://getbootstrap.com/components/#progress">http://getbootstrap.com/components/#progress</a> for complete progress bar documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/progressbar.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/progressbar.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Search -->
+              <section id="search" class="doc-section">
+                <h2 class="section-title">Search</h2>
+                <div class="section-block">
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/search.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/search.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Spinner -->
+              <section id="spinner" class="doc-section">
+                <h2 class="section-title">Spinner</h2>
+                <div class="section-block">
+                  <p><strong>Note:</strong>  IE9 requires a conditional class on &lt;html&gt; in order to display an animated gif fallback as it doesn't support CSS animation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/spinner.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/spinner.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Tables -->
+              <section id="tables" class="doc-section">
+                <h2 class="section-title">Tables</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/css/#tables">http://getbootstrap.com/css/#tables</a> for complete tables documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/tables.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/tables.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Tabs -->
+              <section id="tabs" class="doc-section">
+                <h2 class="section-title">Tabs</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/components/#nav-tabs">http://getbootstrap.com/components/#nav-tabs</a> for complete tabs documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/tabs.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/tabs.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Toast Notifications -->
+              <section id="toasts" class="doc-section">
+                <h2 class="section-title">Toast Notifications</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/components/#nav-tabs">http://getbootstrap.com/components/#nav-tabs</a> for complete tabs documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/toast-notifications.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/toast-notifications.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Toolbar -->
+              <section id="typography" class="doc-section">
+                <h2 class="section-title">Typography</h2>
+                <div class="section-block">
+                  <div class="doc-example">
+                    {{{include 'tests/pages/css/src/typography.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/css/src/typography.html'}}}
+                  </div>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+
+
+            </div>
+            <!-- //content-inner -->
+          </div>
+          <!-- //doc-content -->
+
+          <div class="doc-sidebar">
+            <nav id="doc-nav">
+              <ul id="doc-menu" class="nav doc-menu hidden-xs affix-top">
+                <li><a href="#aboutmodal">About Modal</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+                <li><a href="#badges">Badges</a></li>
+                <li><a href="#blankslate">Blank Slate</a></li>
+                <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#buttondropdowns">Button Dropdowns</a></li>
+                <li><a href="#buttongroups">Button Groups</a></li>
+                <li><a href="#cards">Card View</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#dropdowns">Dropdowns</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#icons">Icons</a></li>
+                <li><a href="#infotip">Info Tip</a></li>
+                <li><a href="#kebabs">Kebabs</a></li>
+                <li><a href="#labels">Labels</a></li>
+                <li><a href="#listgroup">List Group</a></li>
+                <li><a href="#modals">Modals</a></li>
+                <li><a href="#navbar">Navbar</a></li>
+                <li><a href="#pagination">Pagination</a></li>
+                <li><a href="#panels">Panels</a></li>
+                <li><a href="#progressbars">Progress Bars</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#spinner">Spinner</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#tabs">Tabs</a></li>
+                <li><a href="#toasts">Toast Notifications</a></li>
+                <li><a href="#typography">Typography</a></li>
+              </ul>
+              <!-- //doc-menu -->
+            </nav>
+          </div>
+          <!-- //doc-sidebar -->
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <p>
+              <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+              PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+            </p>
+          </div>
+          <div class="col-md-3">
+            <ul class="social">
+              <li>
+                <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" >
+      $('.navbar-toggle').click(function(){
+        $('.navbar-sidebar').toggleClass("open");
+      })
+    </script>
+  </body>
+</html>
