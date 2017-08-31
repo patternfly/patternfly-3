@@ -2,13 +2,18 @@
 // Wizard
 // --------------------------------------------------
 .wizard-pf {
-  height:100%;
+  @media (max-width: @screen-xs-min) {
+    min-height: 100vh;
+  }
+  @media (min-width: @screen-xs-min) {
+    height:100%;
+  }
   margin: 0 auto;
   max-height: 900px;
   padding: 10px;
   width: auto;
   .modal-content {
-    height:100%;
+    min-height:100%;
   }
 }
 
@@ -18,76 +23,82 @@
 .wizard-pf-body {
     padding: 0;
     position: static;
+    background:@color-pf-white;
 }
 /* styles the sidebard containing the sub-steps */
 .wizard-pf-sidebar {
-  background: @color-pf-black-100;
-  border-right: 1px solid @color-pf-black-300;
-  bottom: 0;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: absolute;
-  top: 0;
-  .list-group {
-    border-top: 0;
-    margin-bottom: 0;
+  @media (max-width: @screen-xs-min) {
+    display:none;
   }
-    .list-group-item {
-      background-color: transparent;
-      border-color: @color-pf-black-200;
-      padding: 0;
-      > a {
-        color: @color-pf-black;
-        cursor: pointer;
-        display: block;
-        font-size: 14px;
-        font-weight: 700;
-        height: 50px;
-        outline: 0;
-        padding-top: 11px;
-        padding-left: 20px;
-        position: relative;
-        white-space: nowrap;
-        width: 14em;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-      &.active {
-        background-color: @color-pf-black-200;
-
-        //override default behavior
-        &:hover {
-          border-color: @color-pf-black-200;
-        }
+  @media (min-width: @screen-xs-min) {
+    background: @color-pf-black-100;
+    border-right: 1px solid @color-pf-black-300;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    .list-group {
+      border-top: 0;
+      margin-bottom: 0;
+    }
+      .list-group-item {
+        background-color: transparent;
+        border-color: @color-pf-black-200;
+        padding: 0;
         > a {
-          color: @color-pf-blue-300;
-          cursor: default;
-        }
-        // line to left side showing active substep
-        > a:before {
-          background: @color-pf-blue-300;
-          content: " ";
-          height: 100%;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 3px;
-        }
-        // caret to right showing active substep
-        > a:after {
-          color: @color-pf-blue-300;
-          content: "\f105"; // right caret
+          color: @color-pf-black;
+          cursor: pointer;
           display: block;
-          font-family: FontAwesome;
-          font-size: 24px;
-          font-weight: 500;
-          line-height: 30px;
-          padding-top: 10px;
-          position: absolute;
-          right: 23px;
-          top: 0;
+          font-size: 14px;
+          font-weight: 700;
+          height: 50px;
+          outline: 0;
+          padding-top: 11px;
+          padding-left: 20px;
+          position: relative;
+          white-space: nowrap;
+          width: 14em;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        &.active {
+          background-color: @color-pf-black-200;
+
+          //override default behavior
+          &:hover {
+            border-color: @color-pf-black-200;
+          }
+          > a {
+            color: @color-pf-blue-300;
+            cursor: default;
+          }
+          // line to left side showing active substep
+          > a:before {
+            background: @color-pf-blue-300;
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 3px;
+          }
+          // caret to right showing active substep
+          > a:after {
+            color: @color-pf-blue-300;
+            content: "\f105"; // right caret
+            display: block;
+            font-family: FontAwesome;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 30px;
+            padding-top: 10px;
+            position: absolute;
+            right: 23px;
+            top: 0;
+          }
         }
       }
     }
@@ -107,16 +118,29 @@
 /* styles the steps indicator across the top of the wizard */
 .wizard-pf-steps {
   border-bottom: solid 1px @color-pf-black-300;
-  text-align: center;
+
+    @media (min-width: @screen-xs-min) {
+      text-align: center;
+    }
+
 }
+
 .wizard-pf-steps-indicator {
   font-size: ceil((@font-size-base * 1.3333));
   display: inline-block;
   display: flex;
-  height: 120px;
-  justify-content: space-around;
   list-style: none;
-  padding: 38px 0 0;
+    @media (min-width: @screen-xs-min) {
+      height: 120px;
+      padding: 38px 0 0;
+      justify-content: space-around;
+    }
+    @media (max-width: @screen-xs-min) {
+      padding: 15px 0;
+      margin-bottom: 0;
+      background: @color-pf-black-200;
+      border-top: 1px solid @color-pf-black-300;
+    }
   li {
     counter-increment: section;
     float:left; /* float for IE9 since it doesn't support flex. If items wrap, they overlap */
@@ -127,28 +151,65 @@
     padding: 0;
     position: relative;
     text-align: center;
+    &:not(.active) {
+      @media (min-width: @screen-xs-min) {
+              display: block;
+      }
+      @media (max-width: @screen-xs-min) {
+              display: none;
+      }
+    }
+    a {
+      @media (max-width: @screen-xs-min) {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+          .wizard-pf-step-title {
+            margin-left: 10px;
+
+            &-substep {
+              font-weight: normal;
+              margin-left: 10px;
+              text-transform: capitalize;
+              &:before {
+                content:"\00BB";
+                font-size: 20px;
+                margin-right: 10px;
+              }
+              &:not(.active) {
+                display: none;
+              }
+            }
+          }
+      }
+    }
     /* draw the line between the circles */
-    &:before {
-      background-color: @color-pf-black-400;
-      content: "";
-      height: 2px;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 40px; // needed for IE9/10 calculate 50% of just the li, others calc 50% of the entire thing including the a:before
-      //otherwise, use top: calc(50% - 1px);
-    }
-    /* don't draw the line between the circles on the ends */
-    &:first-child:before {
-      left: 50%;
-      right: 0;
-    }
-    &:last-child:before {
-      left: 0;
-      right: 50%;
-    }
-    &:only-of-type:before {
-      background-color: transparent;
+    @media (min-width: @screen-xs-min) {
+      .wizard-pf-step-title-substep {
+        display: none;
+      }
+      &:before {
+        background-color: @color-pf-black-400;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 40px; // needed for IE9/10 calculate 50% of just the li, others calc 50% of the entire thing including the a:before
+        //otherwise, use top: calc(50% - 1px);
+      }
+      /* don't draw the line between the circles on the ends */
+      &:first-child:before {
+        left: 50%;
+        right: 0;
+      }
+      &:last-child:before {
+        left: 0;
+        right: 50%;
+      }
+      &:only-of-type:before {
+        background-color: transparent;
+      }
     }
     a {
       color: @color-pf-black;
@@ -164,10 +225,10 @@
           color: @color-pf-white;
         }
       }
-
     }
-  }
+}
   /* draw the step number in the circle */
+
   .wizard-pf-step-number {
     background-color: @color-pf-white;
     border-radius: 50%;
@@ -176,10 +237,12 @@
     font-size: @font-size-base;
     font-weight: 700;
     height: 25px;
-    left: ~"calc(50% - 13px)";
     line-height: 22px;
-    position: absolute;
-    top: 27px;
+      @media (min-width: @screen-xs-min) {
+        position: absolute;
+        top: 27px;
+        left: ~"calc(50% - 13px)";
+      }
     width: 25px;
   }
   .active .wizard-pf-step-number {
@@ -194,16 +257,27 @@
       border-color: @color-pf-blue-300;
       color: @color-pf-black;
   }
+
 }
 
 /* styles the main content portion of the wizard */
 .wizard-pf-main {
   // display: table-cell;
   height: 100%;
-  margin-left: 253px; /* this value is updated by js */
   overflow: auto;
-  padding: 3em;
   vertical-align: top;
+
+  @media (min-width: @screen-xs-min) {
+    padding:3em;
+    margin-left: 253px; /* this value is updated by js */
+  }
+  @media (max-width: @screen-xs-min) {
+    padding:1em;
+    width:100%;
+    &[style] {
+      margin-left: 0!important; // this is to override any margin from JS
+    }
+  }
   // width: 10000px;
   .blank-slate-pf {
     background-color: transparent;
@@ -211,6 +285,7 @@
     left: 0;
     right: 0;
   }
+
 }
 
 .wizard-pf-contents textarea {
@@ -335,24 +410,31 @@
 /* styles the footer */
 .wizard-pf-footer {
   border-top: 1px solid @color-pf-black-300;
-  bottom: 0;
-  left: 0;
   margin-top: 0;
   padding-bottom: 17px;
-  position: absolute;
-  right: 0;
-
+  background:@color-pf-white;
+    @media (min-width: @screen-xs-min) {
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;//this is removed for mobile to allow for pages with longer content.
+    }
   .btn-cancel {
     margin-right:25px;
   }
 }
 
 .wizard-pf-row {
-  bottom: 58px; /* this value is updated by js */
-  position: absolute;
-  overflow: hidden;
-  top: 172px; /* this value is updated by js */
-  width:100%;
+
+    @media (min-width: @screen-xs-min) {
+      bottom: 58px; /* this value is updated by js */
+      position: absolute;
+      overflow: hidden;
+      top: 172px; /* this value is updated by js */
+      width:100%;
+
+    }
+
 }
 
 // Scale up the modal
