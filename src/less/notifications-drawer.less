@@ -42,7 +42,13 @@
     display: block;
   }
   &.drawer-pf-expanded {
-    left: 270px;
+    @media (max-width: @screen-xs-max) {
+      left:0;
+      width: 100%;
+    }
+    @media (min-width: @screen-xs-max) {
+      left: 270px;
+    } // if the drawer is expanded and the screen is reduced this ensures it switches to full width on smaller screens.
     width: inherit;
     .drawer-pf-toggle-expand:before {
       content: "\f101";
@@ -190,6 +196,9 @@
 .drawer-pf-notification.expanded-notification {
   .drawer-pf-notification-content {
     display: flex;
+    @media (max-width: @screen-sm-max) {
+      flex-direction: column;
+    }
     .drawer-pf-notification-message {
       flex: 1 1;
     }
@@ -201,6 +210,12 @@
   .drawer-pf {
     height: calc(~"100vh - 80px");//to create a 20px offset bottom
     top: 58px; //menu height;
+
+      @media (max-width: @screen-xs-max) {
+        width:100%;
+        height: calc(~"100vh - 58px");
+      }
+
   }
   .nav .drawer-pf-trigger {
     .drawer-pf-trigger-icon {
@@ -220,6 +235,11 @@
   .drawer-pf {
     height: calc(~"100vh - 46px");
     top: 26px;
+    @media (max-width: @screen-xs-max) {
+      width:100%;
+      height: calc(~"100vh - 58px");
+      top:34px;
+    }
   }
   .drawer-pf-trigger-icon { cursor: pointer; }
 }

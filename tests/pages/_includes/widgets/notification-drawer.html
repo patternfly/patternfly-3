@@ -1,6 +1,6 @@
 <div class="drawer-pf hide drawer-pf-notifications-non-clickable">
   <div class="drawer-pf-title">
-    <a class="drawer-pf-toggle-expand fa fa-angle-double-left"></a>
+    <a class="drawer-pf-toggle-expand fa fa-angle-double-left hidden-xs"></a>
     <a  class="drawer-pf-close pficon pficon-close"></a>
     <h3 class="text-center">Notifications Drawer</h3>
   </div>
@@ -134,6 +134,10 @@
       } else {
         $drawer.addClass('hide');
       }
+      // Special case, close navigation menu in mobile mode
+     if ($('.container-pf-nav-pf-vertical').hasClass('hidden-nav')) {
+       $('.nav-pf-vertical').removeClass('show-mobile-nav');
+     }
     });
     $('.drawer-pf-close').click(function() {
       var $drawer = $('.drawer-pf');
