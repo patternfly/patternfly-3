@@ -76,6 +76,7 @@
     }
   },
   "scripts": {
+    "nsp-check": "nsp check",
     "test": "grunt karma",
     "build": "grunt build",
     "jekyll": "ruby --version || echo \"Ruby required\"; bundler -v || gem install bundler; bundle check || bundle install; set -e",
