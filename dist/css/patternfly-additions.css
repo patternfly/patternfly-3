@@ -6677,7 +6677,6 @@ table.dataTable th:active {
   font-weight: 400;
   height: 63px;
   line-height: 26px;
-  outline: 0;
   padding: 17px 20px 17px 25px;
   position: relative;
   white-space: nowrap;
