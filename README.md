@@ -151,6 +151,18 @@ This local static asset server (i.e., [http://localhost:9000](http://localhost:9
 
 See [http://codeguide.patternfly.org/](http://codeguide.patternfly.org/).
 
+### Commiting changes
+
+PatternFly uses the [semantic-release tool](https://github.com/semantic-release/semantic-release) to provide a continuous release mechanism for PatternFly.  In order for this tool to correctly increment the project version, and include your changes in the generated release notes, you will have to format your commit messages according to a well-defined commit message format.
+
+We have configured the [commitizen tool](https://github.com/commitizen/cz-cli) to assist you in formatting your commit messages corrctly.  To use this tool run the following command instead of `git commit`:
+
+```
+npm run commit
+```
+
+The tool will prompt you with several questions that it will use to correctly format your commit message.  You can then proceed with your PR as you normally would.
+
 ## Build
 
 ### CSS
