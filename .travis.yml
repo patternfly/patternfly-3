@@ -21,7 +21,8 @@ before_install:
   - npm install -g bower grunt-cli
   - npm install patternfly-eng-release
 
-install: true
+install:
+  - npm install
 
 before_script:
  # If this command fails and you can't fix it, file an issue and add an exception to .nsprc
