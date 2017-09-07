@@ -161,6 +161,38 @@ We have configured the [commitizen tool](https://github.com/commitizen/cz-cli) t
 npm run commit
 ```
 
+#### Git Commit Guidelines
+
+Alternatively, if you are familiar with the commititzen message format you can format the message manually.  A summary of the commit message format is as follows:
+
+Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
+format that includes a **type**, a **scope** and a **subject** ([full explanation](https://github.com/stevemao/conventional-changelog-angular/blob/master/convention.md)):
+
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+##### Patch Release
+
+```
+fix(pencil): stop graphite breaking when too much pressure applied
+```
+
+##### Feature Release
+
+```
+feat(pencil): add 'graphiteWidth' option
+```
+
+##### Breaking Release
+
+```
+perf(pencil): remove graphiteWidth option
+```
 The tool will prompt you with several questions that it will use to correctly format your commit message.  You can then proceed with your PR as you normally would.
 
 ## Build
@@ -205,39 +237,6 @@ or
 
 ```
 grunt karma
-```
-
-## Git Commit Guidelines
-
-PatternFly uses a semantic release process to automate npm and bower package publishing, based on the following commit message format.
-
-Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
-format that includes a **type**, a **scope** and a **subject** ([full explanation](https://github.com/stevemao/conventional-changelog-angular/blob/master/convention.md)):
-
-```
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
-<BLANK LINE>
-<footer>
-```
-
-##### Patch Release
-
-```
-fix(pencil): stop graphite breaking when too much pressure applied
-```
-
-##### Feature Release
-
-```
-feat(pencil): add 'graphiteWidth' option
-```
-
-##### Breaking Release
-
-```
-perf(pencil): remove graphiteWidth option
 ```
 
 ## Documentation
