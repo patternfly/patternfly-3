@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
+    "commitizen": "^2.9.6",
     "connect-livereload": "~0.5.4",
+    "cz-conventional-changelog": "^2.0.0",
     "front-matter": "^2.1.1",
     "grunt": "~1.0.1",
     "grunt-cli": "^1.2.0",
@@ -45,8 +47,8 @@
     "nsp": "^2.6.1",
     "patternfly-eng-release": "^3.26.29",
     "pixrem": "^3.0.1",
-    "table": "3.7.9",
-    "semantic-release": "^6.3.6"
+    "semantic-release": "^6.3.6",
+    "table": "3.7.9"
   },
   "optionalDependencies": {
     "bootstrap-datepicker": "~1.6.4",
@@ -84,7 +86,8 @@
     "grunt": "grunt",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-release-post": "semantic-release post",
-    "semantic-release-pre": "semantic-release pre"
+    "semantic-release-pre": "semantic-release pre",
+    "commit": "git-cz"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
@@ -94,5 +97,10 @@
   "bugs": {
     "url": "https://github.com/patternfly/patternfly/issues"
   },
-  "homepage": "https://github.com/patternfly/patternfly"
+  "homepage": "https://github.com/patternfly/patternfly",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
