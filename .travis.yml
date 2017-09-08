@@ -23,10 +23,6 @@ before_install:
 
 install: true
 
-before_script:
- # If this command fails and you can't fix it, file an issue and add an exception to .nsprc
- - npm run nsp-check
-
 script:
   - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
 
