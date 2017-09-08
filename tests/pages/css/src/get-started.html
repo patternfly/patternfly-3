@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.21.0/css/patternfly-additions.css" />
+    <link rel="stylesheet" href="https://rawgit.com/patternfly/patternfly/master-dist/dist/css/patternfly.min.css" />
+    <link rel="stylesheet" href="https://rawgit.com/patternfly/patternfly/master-dist/dist/css/patternfly-additions.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../css/patternfly-showcase.css" />
   </head>
   <body class="showcase">
@@ -21,13 +21,13 @@
               <span class="icon-bar"></span>
             </button>
             <div class="navbar-brand">
-              <a id="logo" title="PatternFly Showcase" href="get-started.html">PATTERNFLY-<span class="secondary-logo">CSS</span></a>
+              <a id="logo" title="PatternFly CSS" href="#">PATTERNFLY-<span class="secondary-logo">CSS</span></a>
             </div>
           </div>
           <div class="navbar-collapse navbar-collapse-pf-site collapse">
-            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+            <ul id="menu-primary" class="nav navbar-nav navbar-right navbar-iconic navbar-utility">
               <li class="active">
-                <a href="get-started.html">Get Started</a>
+                <a href="#">Get Started</a>
               </li>
               <li>
                 <a href="../index.html">Components</a>
@@ -36,29 +36,37 @@
                 <a href="contribute.html">Contribute</a>
               </li>
               <li>
-                <a href="https://github.com/patternfly/patternfly-css">Github</a>
+                <a href="https://github.com/patternfly/angular-patternfly">Github</a>
               </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-th-large" aria-hidden="true"></i>
+              <li class="applauncher-pf dropdown dropdown-kebab-pf">
+                <a class="dropdown-toggle nav-item-iconic" data-toggle="dropdown" href="#" aria-expanded="false">
+                  <i class="fa fa-th applauncher-pf-icon" aria-hidden="true"></i>
+                  <span class="applauncher-pf-title">
+                    PatternFly Showcase List
+                    <span class="caret" aria-hidden="true"></span>
+                  </span>
                 </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular 1</a>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="http://www.patternfly.org/angular-patternfly/#/api/">
+                      <span class="applauncher-pf-link-title">PatternFly Angular</span>
+                    </a>
                   </li>
-                  <li>
-                    <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">PatternFly-ng</a>
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">
+                      <span class="applauncher-pf-link-title">PatternFly NG</span>
+                    </a>
                   </li>
-                  <li>
-                    <a href="https://patternfly-webcomponents.github.io/components.html">PatternFly Web Component</a>
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="https://patternfly-webcomponents.github.io/components.html">
+                      <span class="applauncher-pf-link-title">PatternFly Web Components</span>
+                    </a>
                   </li>
-                  <li>
-                    <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">PatternFly React</a>
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">
+                      <span class="applauncher-pf-link-title">PatternFly React</span>
+                    </a>
                   </li>
-                  <li>
-                    <a href="http://www.patternfly.org/patternfly-css/">PatternFly CSS</a>
-                  </li>
-
                 </ul>
               </li>
             </ul>
@@ -71,34 +79,31 @@
             <a href="">Menu</a>
             <ul>
               <li class="active">
-                <a href="get-started.html">Get Started</a>
+                <a href="index.html">Get Started</a>
               </li>
               <li>
-                <a href="../index.html">Components</a>
+                <a href="#">Components</a>
               </li>
               <li>
                 <a href="contribute.html">Contribute</a>
               </li>
               <li>
-                <a href="https://github.com/patternfly/patternfly-css">Github</a>
+                <a href="https://github.com/patternfly/angular-patternfly">Github</a>
               </li>
               <li>
                 <a class="collapsed showcase-collapsed" role="button" data-toggle="collapse" href="#patternfly-showcases">PatternFly Showcases</a>
                 <ul class="collapse" id="patternfly-showcases">
                   <li>
-                    <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular 1</a>
+                    <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular</a>
                   </li>
                   <li>
-                    <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">PatternFly-ng</a>
+                    <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">PatternFly NG</a>
                   </li>
                   <li>
-                    <a href="https://patternfly-webcomponents.github.io/components.html">PatternFly Web Component</a>
+                    <a href="https://patternfly-webcomponents.github.io/components.html">PatternFly Web Components</a>
                   </li>
                   <li>
                     <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">PatternFly React</a>
-                  </li>
-                  <li>
-                    <a href="http://www.patternfly.org/patternfly-css/">PatternFly CSS</a>
                   </li>
                 </ul>
               </li>
