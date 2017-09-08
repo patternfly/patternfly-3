@@ -7464,16 +7464,6 @@ table.dataTable th:active {
   padding: 10px;
   width: auto;
 }
-@media (max-width: 480px) {
-  .wizard-pf {
-    min-height: 100vh;
-  }
-}
-@media (min-width: 480px) {
-  .wizard-pf {
-    height: 100%;
-  }
-}
 .wizard-pf .modal-content {
   min-height: 100%;
 }
@@ -7492,12 +7482,10 @@ table.dataTable th:active {
   .wizard-pf-sidebar {
     background: #fafafa;
     border-right: 1px solid #d1d1d1;
-    bottom: 0;
-    left: 0;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     overflow-x: hidden;
     overflow-y: auto;
-    position: absolute;
-    top: 0;
   }
   .wizard-pf-sidebar .list-group {
     border-top: 0;
@@ -7732,17 +7720,14 @@ table.dataTable th:active {
 @media (min-width: 480px) {
   .wizard-pf-main {
     padding: 3em;
-    margin-left: 253px;
-    /* this value is updated by js */
+    -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
   }
 }
 @media (max-width: 480px) {
   .wizard-pf-main {
     padding: 1em;
     width: 100%;
-  }
-  .wizard-pf-main[style] {
-    margin-left: 0!important;
   }
 }
 .wizard-pf-main .blank-slate-pf {
@@ -7865,26 +7850,16 @@ table.dataTable th:active {
   padding-bottom: 17px;
   background: #fff;
 }
-@media (min-width: 480px) {
-  .wizard-pf-footer {
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
-}
 .wizard-pf-footer .btn-cancel {
   margin-right: 25px;
 }
 @media (min-width: 480px) {
   .wizard-pf-row {
-    bottom: 58px;
-    /* this value is updated by js */
-    position: absolute;
-    overflow: hidden;
-    top: 172px;
-    /* this value is updated by js */
     width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    height: 900px;
+    max-height: 65vh;
   }
 }
 @media (min-width: 992px) {

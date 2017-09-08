@@ -349,8 +349,7 @@
 
       // open modal
       $(self.modal).modal('show');
-      // adjust height of contents row (while steps and sidebar are hidden and loading message displays)
-      self.updateWizardLayout();
+
 
       // assign data attribute to all tabs
       $(self.modal + " .wizard-pf-sidebar .list-group-item").each(function() {
@@ -387,8 +386,7 @@
       $(self.modal + " .wizard-pf-sidebar .list-group-item.active").removeClass("active");
       // apply active class to new current tab and associated contents
       self.updateActiveTab();
-      // adjust height of contents row (while steps and sidebar and tab contents are visible)
-      self.updateWizardLayout();
+
       self.updateWizardFooterDisplay();
 
       //initialize click listeners
@@ -399,9 +397,7 @@
       self.finishBtnClick();
       self.cancelBtnClick();
 
-      $( window ).resize(function() {
-        self.updateWizardLayout();
-      });
+      
     };
 
     // update which tab group is active
@@ -455,15 +451,7 @@
       self.updateNextBtnDisplay();
     };
 
-    // adjust layout of panels in wizard
-    this.updateWizardLayout = function() {
-      var top = ($(self.modal + " .modal-header").outerHeight() + $(self.modal + " .wizard-pf-steps").outerHeight()) + "px",
-          bottom = $(self.modal + " .modal-footer").outerHeight() + "px",
-          sidebarwidth = $(self.modal + " .wizard-pf-sidebar").outerWidth() + "px";
-      $(self.modal + " .wizard-pf-row").css("top", top);
-      $(self.modal + " .wizard-pf-row").css("bottom", bottom);
-      $(self.modal + " .wizard-pf-main").css("margin-left", sidebarwidth);
-    };
+
 
     // when the user clicks a step, then the tab group for that step is displayed
     this.tabGroupSelect = function() {
