@@ -720,6 +720,10 @@
         navElement.find('.mobile-nav-item-pf').each(function (index, item) {
           $(item).removeClass('mobile-nav-item-pf');
         });
+
+        navElement.find('.is-hover').each(function (index, item) {
+          $(item).removeClass('is-hover');
+        });
       },
 
       hideTertiaryMenu = function () {
@@ -732,6 +736,10 @@
 
         navElement.find('.mobile-nav-item-pf').each(function (index, item) {
           $(item).removeClass('mobile-nav-item-pf');
+        });
+
+        navElement.find('.is-hover').each(function (index, item) {
+          $(item).removeClass('is-hover');
         });
       },
 
@@ -1121,7 +1129,8 @@
           if ($this[0].navHoverTimeout !== undefined) {
             clearTimeout($this[0].navHoverTimeout);
             $this[0].navHoverTimeout = undefined;
-          } else if ($this[0].navUnHoverTimeout === undefined) {
+          } else if ($this[0].navUnHoverTimeout === undefined &&
+              navElement.find('.secondary-nav-item-pf.is-hover').length > 0) {
             $this[0].navUnHoverTimeout = setTimeout(function () {
               if (navElement.find('.secondary-nav-item-pf.is-hover').length <= 1) {
                 navElement.removeClass('hover-secondary-nav-pf');
