@@ -319,6 +319,19 @@
           $(this).attr("data-tabgroup", ($(this).index() +1));
       });
 
+      // assign data attribute to all step indicator steps
+      $(self.modal + " .wizard-pf-steps-indicator  .wizard-pf-step").each(function() {
+        // set the value equal to the index of the tab group
+        $(this).attr("data-tabgroup", ($(this).index() +1));
+      });
+      // assign data attribute to all step indicator substeps
+      $(self.modal + " .wizard-pf-steps-indicator .wizard-pf-step-title-substep").each(function() {
+        // set the first digit (i.e. n.0) equal to the index of the parent tab group
+        // set the second digit (i.e. 0.n) equal to the index of the tab within the tab group
+        $(this).attr("data-tab", ($(this).parent().parent().index() + 1 + (($(this).index() - 2)/10 + .1)));
+      });
+
+
       // create array of all tabs, using the data attribute, and determine the last tab
       self.tabs = $(self.modal + " .wizard-pf-sidebar .list-group-item" ).map(function()
         {
@@ -353,7 +366,7 @@
       self.finishBtnClick();
       self.cancelBtnClick();
 
-      
+
     };
 
     // update which tab group is active
@@ -367,6 +380,11 @@
     // update which tab is active
     this.updateActiveTab = function() {
       $(self.modal + " .list-group-item[data-tab='" + self.currentTab + "']").addClass("active");
+
+      // Update steps indicator to handle mobile mode
+      $(self.modal + " .wizard-pf-steps-indicator .wizard-pf-step-title-substep").removeClass("active");
+      $(self.modal + " .wizard-pf-steps-indicator .wizard-pf-step-title-substep[data-tab='" + self.currentTab + "']").addClass("active");
+
       self.updateVisibleContents();
     };
 
@@ -402,7 +420,7 @@
 
     // update display state of buttons in the footer
     this.updateWizardFooterDisplay = function() {
-      $(self.modal + " .wizard-pf-footer .disabled").removeClass("disabled")
+      $(self.modal + " .wizard-pf-footer .disabled").removeClass("disabled");
       self.updateBackBtnDisplay();
       self.updateNextBtnDisplay();
     };
