@@ -1,0 +1,240 @@
+.canvas {
+  height: 756px;
+  width: 1396px;
+  background-image: url("../../dist/img/canvas-dot-grid.png");
+  background-repeat: repeat;
+  background-size: 24px 24px;
+}
+.read-only {
+  background-image: none;
+  background-repeat: unset;
+}
+.canvas-in-connection-mode {
+  background-image: none;
+  background-repeat: unset;
+  background-color: @color-pf-black-400;
+}
+.node-header {
+  display: table;
+  font-weight: 600;
+  p {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+.invalid-node-header {
+  fill: @color-pf-black-400;
+  color: @color-pf-black-400;
+}
+.node-center-icon {
+  font-size: 72px;
+}
+.node-rect {
+  fill: @color-pf-white;
+  stroke-width: 2;
+  stroke: @color-pf-black-400;
+}
+.invalid-node-rect {
+  fill: @color-pf-black-300;
+}
+.invalid-node-img {
+  opacity: .2;
+}
+.node-toolbar {
+  background-color: @color-pf-black-150;
+  border-bottom: solid 1px @color-pf-black-400;
+  border-left: solid 1px @color-pf-black-400;
+  border-radius: 5px;
+  border-right: solid 1px @color-pf-black-400;
+  height: 28px;
+  padding-left: 8px;
+}
+.node-toolbar-icons {
+  color: @color-pf-blue-400;
+  cursor: pointer;
+  font-size: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+}
+.svg-triangle {
+  polyline {
+    fill: @color-pf-black-150;
+    stroke-width: 2;
+    stroke: @color-pf-black-400;
+  }
+}
+.connecting-mode-rec {
+  fill: @color-pf-black-500;
+}
+.connecting-mode-label {
+  fill: @color-pf-white;
+  font-size: 16px;
+}
+.connecting-mode-label-warning {
+  fill: @color-pf-red-100;
+  font-size: 16px;
+}
+.connector-icons {
+  cursor: pointer;
+  fill: @color-pf-blue-400;
+  font-size: 16px;
+  &:hover {
+    fill: @color-pf-blue-600;
+  }
+}
+.mouseover-node-rect {
+  stroke-width: 3;
+  stroke: @color-pf-black-400;
+}
+.selected-node-rect {
+  stroke-width: 3;
+  stroke: @color-pf-blue-400;
+}
+.connector-tooltip {
+  fill: @color-pf-black-150;
+  stroke-width: 1;
+  stroke: @color-pf-black;
+}
+.connector-tooltip-text {
+  font-size: 10px;
+}
+.connector-circle {
+  fill: @color-pf-white;
+  stroke-width: 2;
+  stroke: @color-pf-black;
+}
+.mouseover-connector-circle {
+  fill: @color-pf-white;
+  stroke-width: 3;
+  stroke: @color-pf-black;
+}
+.unconnected-circle {
+  fill: @color-pf-green-500;
+  stroke-opacity: "0.8";
+  stroke-width: 2;
+  stroke: @color-pf-black;
+}
+.mouseover-unconnected-circle {
+  fill: @color-pf-green-500;
+  stroke-opacity: "0.8";
+  stroke-width: 3;
+  stroke: @color-pf-black;
+}
+.connection-line {
+  fill: transparent;
+  stroke-width: 4;
+  stroke: @color-pf-black-500;
+}
+.mouseover-connection-line {
+  fill: transparent;
+  stroke-width: 6;
+  stroke: @color-pf-black-500;
+}
+.selected-connection-line {
+  fill: transparent;
+  stroke-width: 4;
+  stroke: @color-pf-red-100;
+}
+.connection-endpoint {
+  fill: @color-pf-black-500;
+}
+.selected-connection-endpoint {
+  fill: @color-pf-red-100;
+}
+.mouseover-connection-endpoint {
+  fill: @color-pf-black-500;
+}
+.connection-name {
+  fill: @color-pf-black;
+}
+.selected-connection-name {
+  fill: @color-pf-red-100;
+}
+.mouseover-connection-name {
+  fill: @color-pf-black;
+}
+.dragging-connection {
+  pointer-events: none;
+}
+.dragging-connection-line {
+  fill: transparent;
+  stroke-width: 3;
+  stroke: @color-pf-black-500;
+}
+.dragging-connection-endpoint {
+  fill: @color-pf-black-500;
+}
+.draggable-container {
+  border: solid 1px @color-pf-black-300;
+}
+.drag-selection-rect {
+  fill: transparent;
+  stroke-width: 2;
+  stroke: @color-pf-blue-400;
+}
+.node-dialog-close {
+  font-size: 12px;
+  padding-top: 7px;
+}
+.nodetoolbar-dialog {
+  left: -19px;
+  margin-top: 4px;
+  padding: 8px;
+  position: fixed;
+  top: 19px;
+  width: 300px;
+  .tag-list-action {
+    color: @color-pf-white;
+    cursor: pointer;
+  }
+}
+.tag-dialog {
+  left: 30px;
+  width: 353px;
+}
+.node-tag-title {
+  font-weight: 600;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.edit-dialog {
+  left: 5px;
+}
+.arrow-box {
+  background: @color-pf-white;
+  border-radius: 5px;
+  border: 1px solid @color-pf-black-700;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  &:after {
+    border-bottom-color: @color-pf-white;
+    border-color: @color-pf-black-800;
+    border-width: 8px;
+    border: solid transparent;
+    bottom: 100%;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -41%;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+  }
+  &:before {
+    border-bottom-color: @color-pf-black-700;
+    border-color:rgba(81, 77, 82, 0);
+    border-width: 10px;
+    border: solid transparent;
+    bottom: 100%;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -41.5%;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+  }
+}

@@ -2,6 +2,7 @@
 *.sublime-workspace
 *.sublime-project
 *.idea
+*.vscode
 
 # Ignore vim files
 *.swp

@@ -1,0 +1,196 @@
+.canvas-editor-container {
+  background-color: @color-pf-white;
+  height: 100%;
+  width: 100%;
+  .canvas-editor-toolbar {
+    padding: 15px;
+    a {
+      color: @color-pf-black-600;
+      cursor: pointer;
+    }
+
+    a.disabled, a:hover.disabled {
+      color: @color-pf-black-400;
+      cursor: not-allowed;
+    }
+    a:hover {
+      color: @color-pf-black-800;
+    }
+    button {
+      margin-right: 6px;
+    }
+    .more-actions {
+      border-left: solid 2px @color-pf-black-300;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .pficon {
+      font-size: 20px;
+      margin-left: 15px;
+      margin-top: -4px;
+      vertical-align: middle;
+    }
+    .right-aligned-controls {
+      display: block;
+      float: right;
+      font-size: 12px;
+      font-weight: 600;
+      padding-right: 5px;
+      padding-top: 2px;
+    }
+    .show-hide-connectors-label {
+      vertical-align: 2px;
+    }
+  }
+  .canvas-editor-toolbox-container {
+    &::placeholder {
+      font-style: italic;
+      padding-left: 10px;
+    }
+    height: 100%;
+    position: relative;
+    width: 100%;
+    .canvas-editor-toolbox {
+      background-color:rgba(255, 255, 255, .94);
+      border: 1.5px solid @color-pf-black-300;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+      padding-bottom: 10px;
+      padding-left: 26px;
+      padding-right: 26px;
+      padding-top: 26px;
+      position: absolute;
+      top: -1px;
+      width: 100%;
+      .draggable-item-icon {
+        font-size: 28px;
+        padding-right: 14px;
+        padding-top: 6px;
+        vertical-align: middle;
+      }
+      .tab-pre-title {
+        font-size: 12px;
+        margin-bottom: -6px;
+      }
+      .tab-title {
+        font-size: 14px;
+      }
+      .tab-single-line {
+        padding-bottom: 8px;
+        padding-top: 8px;
+      }
+      .toolbox-items-list {
+        list-style: none;
+        max-height: 300px;
+        overflow-y: auto;
+        padding-bottom: 4px;
+        padding-left: 15px;
+      }
+      .toolbox-item {
+        background-color:rgba(255, 255, 255, .94);
+        border-radius: 1px;
+        border: 1px solid @color-pf-black-400;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+        cursor: pointer;
+        float: left;
+        height: 36px;
+        margin-right: 16px;
+        margin-top: 16px;
+        min-height: 52px;
+        min-width: 325px;
+        padding: 6px 28px;
+        position: relative;
+        vertical-align: middle;
+        .fa {
+          font-size: 26px;
+          margin-right: 8px;
+          margin-top: 2px;
+          vertical-align: middle;
+        }
+        span {
+          position: relative;
+          top: 4px;
+        }
+        img {
+          height: 100%;
+          margin-right: 8px;
+          object-fit: contain;
+        }
+        &:before {
+          background-image: linear-gradient(to bottom, @color-pf-blue-400 60%, @color-pf-white 0%);
+          background-position: left;
+          background-repeat: repeat-y;
+          background-size: 2px 5px;
+          border: 4px solid @color-pf-blue-400;
+          bottom: 4px;
+          content: "";
+          left: 4px;
+          position: absolute;
+          top: 3px;
+          width: 10px;
+        }
+      }
+      .not-draggable {
+        background-color: @color-pf-black-200;
+        cursor: auto;
+        opacity: .4;
+      }
+      .toolbox-filter {
+        margin-top: 10px;
+        .search-text {
+          border: 1px solid @color-pf-black-400;
+          float: right;
+          position: relative;
+          text-decoration: none;
+          width: 250px;
+          padding-left: 6px;
+        }
+        .clear-search-text {
+          bottom: -6px;
+          color: @color-pf-black-400;
+          cursor: pointer;
+          float: right;
+          position: relative;
+          right: -242px;
+          span {
+            font-size: 20px;
+            padding-right: 14px;
+            vertical-align: middle;
+          }
+        }
+      }
+      .close-toolbox {
+        font-size: 16px;
+        float: right;
+        position: relative;
+        top: -17px;
+        right: -12px;
+        color: @color-pf-black-600;
+        cursor: pointer;
+        :hover {
+          color: @color-pf-black-800;
+        }
+      }
+    }
+    .canvas-container {
+      height: 756px;
+      margin-left: 15px;
+      overflow: auto;
+      width: 98%;
+    }
+    a {
+      color: @color-pf-black;
+    }
+    &::placeholder {
+      font-style: italic;
+      padding-left: 10px;
+    }
+  }
+}
+.subtabs {
+  .nav-tabs-pf {
+    padding-left: 18px;
+    li {
+      font-size: 14px;
+    }
+  }
+}
