@@ -13,6 +13,7 @@
     "commitizen": "^2.9.6",
     "connect-livereload": "~0.5.4",
     "cz-conventional-changelog": "^2.0.0",
+    "copy": "^0.3.0",
     "front-matter": "^2.1.1",
     "grunt": "~1.0.1",
     "grunt-cli": "^1.2.0",
@@ -32,6 +33,8 @@
     "grunt-postcss": "^0.8.0",
     "grunt-run": "^0.6.0",
     "grunt-stylelint": "^0.7.0",
+    "handlebars": "^4.0.10",
+    "handlebars-helpers": "^0.9.4",
     "jasmine-core": "^2.4.1",
     "jasmine-jquery": "^2.1.1",
     "js-yaml": "^3.7.0",
@@ -48,7 +51,9 @@
     "patternfly-eng-release": "^3.26.35",
     "pixrem": "^3.0.1",
     "semantic-release": "^6.3.6",
-    "table": "3.7.9"
+    "rxjs": "^5.4.2",
+    "table": "3.7.9",
+    "watch": "^1.0.2"
   },
   "optionalDependencies": {
     "bootstrap-datepicker": "~1.6.4",
@@ -86,7 +91,16 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-release-post": "semantic-release post",
     "semantic-release-pre": "semantic-release pre",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build-jquery-showcase": "./tests/pages/jquery/build-jquery-showcase.js && copy 'tests/pages/jquery/src/**/*.*' dist/tests/jquery/src/",
+    "watch-jquery-showcase": "watch 'npm run build-jquery-showcase' ./tests/pages/jquery/",
+    "serve-jquery-showcase": "mkdir -p dist/tests/jquery/src; browser-sync start --server 'dist' --files 'dist/tests/jquery' --startPath 'tests/jquery'",
+    "jquery-dev": "npm run serve-jquery-showcase & npm run watch-jquery-showcase",
+    "grunt:html-test": "grunt html:test",
+    "build-css-showcase": "./tests/pages/css/build-css-showcase.js && copy 'tests/pages/css/src/**/*.*' dist/tests/css/src/",
+    "watch-css-showcase": "watch 'npm run build-css-showcase' ./tests/pages/css/",
+    "serve-css-showcase": "browser-sync start --server 'dist' --files 'dist/tests/css' --startPath 'tests/css'",
+    "css-dev": "npm run serve-css-showcase & npm run watch-css-showcase"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
