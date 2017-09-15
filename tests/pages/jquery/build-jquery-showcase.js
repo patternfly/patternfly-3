@@ -58,34 +58,34 @@ const showcasePath = 'tests/pages/jquery';
 const distPath = 'dist/tests/jquery';
 
 mkdir(distPath)
-.catch(error => error.code === 'EEXIST' ? Rx.Observable.of(true) : Rx.Observable.throw(error))
+  .catch(error => error.code === 'EEXIST' ? Rx.Observable.of(true) : Rx.Observable.throw(error))
 mkdir(distPath + '/src')
-.catch(error => error.code === 'EEXIST' ? Rx.Observable.of(true) : Rx.Observable.throw(error))
-.switchMap(() => readdir(showcasePath))
-.mergeMap(array => array)
-.filter(filename => path.extname(filename) === '.hbs')
-.mergeMap(filename => {
-  return readFile(showcasePath + '/' + filename, 'utf8')
-  .map(function(template) {
-    var hbs = handlebars.compile(template);
-    var data = {
-      message : 'Hello World!'
-    }
-    var html = hbs(data);
-    return html;
+  .catch(error => error.code === 'EEXIST' ? Rx.Observable.of(true) : Rx.Observable.throw(error))
+  .switchMap(() => readdir(showcasePath))
+  .mergeMap(array => array)
+  .filter(filename => path.extname(filename) === '.hbs')
+  .mergeMap(filename => {
+    return readFile(showcasePath + '/' + filename, 'utf8')
+      .map(function(template) {
+        var hbs = handlebars.compile(template);
+        var data = {
+          message : 'Hello World!'
+        }
+        var html = hbs(data);
+        return html;
+      })
+      .map(html => ({
+        html: html,
+        path: distPath,
+        filename: filename.replace(/\.hbs$/, '.html')
+      }))
   })
-  .map(html => ({
-    html: html,
-    path: distPath,
-    filename: filename.replace(/\.hbs$/, '.html')
-  }))
-})
-.flatMap(result => writeFile(`${result.path}/${result.filename}`, result.html)
-  .map(() => `${result.path}/${result.filename}`)
-)
-.subscribe(result => {
-  console.log(result);
-}, error => {
-  console.error(error);
-  throw error
-});
+  .flatMap(result => writeFile(`${result.path}/${result.filename}`, result.html)
+    .map(() => `${result.path}/${result.filename}`)
+  )
+  .subscribe(result => {
+    console.log(result);
+  }, error => {
+    console.error(error);
+    throw error
+  });

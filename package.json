@@ -96,7 +96,6 @@
     "watch-jquery-showcase": "watch 'npm run build-jquery-showcase' ./tests/pages/jquery/",
     "serve-jquery-showcase": "mkdir -p dist/tests/jquery/src; browser-sync start --server 'dist' --files 'dist/tests/jquery' --startPath 'tests/jquery'",
     "jquery-dev": "npm run serve-jquery-showcase & npm run watch-jquery-showcase",
-    "grunt:html-test": "grunt html:test",
     "build-css-showcase": "./tests/pages/css/build-css-showcase.js && copy 'tests/pages/css/src/**/*.*' dist/tests/css/src/",
     "watch-css-showcase": "watch 'npm run build-css-showcase' ./tests/pages/css/",
     "serve-css-showcase": "browser-sync start --server 'dist' --files 'dist/tests/css' --startPath 'tests/css'",

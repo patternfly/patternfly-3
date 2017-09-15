@@ -32,26 +32,26 @@ function escapeHtml (string) {
 // Register a custom helper
 handlebars.registerHelper('include', (filepath)  => {
   let html = fs.readFileSync(filepath, 'utf8');
-return html.trim();
+  return html.trim();
 } );
 
 // Register a custom helper
 handlebars.registerHelper('template', (filepath)  => {
   let html = '<pre class="prettyprint lang-html">';
-html = html + escapeHtml(fs.readFileSync(filepath, 'utf8').trim());
-html = html + "</pre>";
-console.log(html)
-return html;
+  html = html + escapeHtml(fs.readFileSync(filepath, 'utf8').trim());
+  html = html + "</pre>";
+  console.log(html)
+  return html;
 } );
 
 // Register a custom helper
 handlebars.registerHelper('code', (filepath, filetype)  => {
   let langClass = typeof filetype === 'string' ? ' lang-'+filetype : '';
-let html = '<pre class="prettyprint'+ langClass +'">';
-html = html + fs.readFileSync(filepath, 'utf8').trim();
-html = html + "</pre>";
-console.log(html)
-return html;
+  let html = '<pre class="prettyprint'+ langClass +'">';
+  html = html + fs.readFileSync(filepath, 'utf8').trim();
+  html = html + "</pre>";
+  console.log(html)
+  return html;
 } );
 
 const showcasePath = 'tests/pages/css';
@@ -61,31 +61,31 @@ mkdir(distPath)
   .catch(error => error.code === 'EEXIST' ? Rx.Observable.of(true) : Rx.Observable.throw(error))
 mkdir(distPath + '/src')
   .catch(error => error.code === 'EEXIST' ? Rx.Observable.of(true) : Rx.Observable.throw(error))
-.switchMap(() => readdir(showcasePath))
-.mergeMap(array => array)
-.filter(filename => path.extname(filename) === '.hbs')
-.mergeMap(filename => {
-  return readFile(showcasePath + '/' + filename, 'utf8')
-    .map(function(template) {
-      var hbs = handlebars.compile(template);
-      var data = {
-        message : 'Hello World!'
-      }
-      var html = hbs(data);
-      return html;
-    })
-    .map(html => ({
-    html: html,
-    path: distPath,
-    filename: filename.replace(/\.hbs$/, '.html')
-  }))
-})
-.flatMap(result => writeFile(`${result.path}/${result.filename}`, result.html)
-  .map(() => `${result.path}/${result.filename}`)
-)
-.subscribe(result => {
-  console.log(result);
-}, error => {
-  console.error(error);
-  throw error
-});
+  .switchMap(() => readdir(showcasePath))
+  .mergeMap(array => array)
+  .filter(filename => path.extname(filename) === '.hbs')
+  .mergeMap(filename => {
+    return readFile(showcasePath + '/' + filename, 'utf8')
+      .map(function(template) {
+        var hbs = handlebars.compile(template);
+        var data = {
+          message : 'Hello World!'
+        }
+        var html = hbs(data);
+        return html;
+      })
+      .map(html => ({
+        html: html,
+        path: distPath,
+        filename: filename.replace(/\.hbs$/, '.html')
+      }))
+  })
+  .flatMap(result => writeFile(`${result.path}/${result.filename}`, result.html)
+    .map(() => `${result.path}/${result.filename}`)
+  )
+  .subscribe(result => {
+    console.log(result);
+  }, error => {
+    console.error(error);
+    throw error
+  });
