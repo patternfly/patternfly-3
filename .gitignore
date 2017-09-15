@@ -2,6 +2,7 @@
 *.sublime-workspace
 *.sublime-project
 *.idea
+package-lock.json
 
 # Ignore vim files
 *.swp

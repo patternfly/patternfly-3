@@ -6408,7 +6408,7 @@ table.dataTable th:active {
   margin-left: 20px;
   position: fixed;
   right: 20px;
-  top: 20px;
+  top: 80px;
   z-index: 1055;
 }
 .toast-notifications-list-pf .toast-pf {
