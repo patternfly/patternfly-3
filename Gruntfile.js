@@ -74,6 +74,19 @@ module.exports = function (grunt) {
         }
       }
     },
+    sync: {
+      // '/src/**/*.*' /src/
+      showcase: {
+        files: [
+          {
+            expand: true,
+            cwd: 'tests/pages/jquery',
+            src: ['src/**'],
+            dest: 'dist/tests/jquery'
+          }
+        ]
+      },
+    },
     copy: {
       main: {
         files: [
@@ -242,6 +255,10 @@ module.exports = function (grunt) {
         files: ['src/js/*.js'],
         tasks: ['eslint', 'concat', 'copy:js', 'uglify']
       },
+      showcase: {
+        files: ['tests/pages/jquery/**.*'],
+        tasks: ['showcaseBuild', 'sync:showcase']
+      },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'dist/tests/*.html', '!tests/pages/*.html']
       },
@@ -292,8 +309,33 @@ module.exports = function (grunt) {
           }
         ]
       }
-
+      // browser-sync start --server 'dist' --files '' --
+    },
+    browserSync: {
+      bsFiles: {
+        src : 'dist/tests/jquery/**/*.*'
+      },
+      options: {
+        server: {
+          baseDir: "./dist"
+        },
+        startPath: 'tests/jquery'
+      }
     }
+  });
+
+  grunt.registerTask ('showcaseBuild', 'Builds the component showcase.', function (target) {
+    var showcaseBuilder = require('./scripts/showcase-builder');
+    var done = this.async();
+    grunt.log.writeln('Starting showcase build.');
+    showcaseBuilder.builder()
+      .subscribe(result => {
+        grunt.log.writeln('Showcase build complete.');
+        done();
+      }, error => {
+        grunt.log.error(error);
+        throw error;
+      });
   });
 
   grunt.registerTask('pages', 'Builds the PatternFly test pages.', function (_target) {
@@ -319,6 +361,8 @@ module.exports = function (grunt) {
     'concat',
     'copy',
     'pages',
+    'showcaseBuild',
+    'sync:showcase',
     'less',
     'cssmin',
     'postcss',
@@ -331,6 +375,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', [
     'connect:server',
+    'browserSync',
     'watch'
   ]);
 

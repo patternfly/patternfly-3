@@ -2,15 +2,14 @@
 'use strict';
 
 var Rx = require('rxjs/Rx'),
-    fs = require('fs'),
+    fs = require('fs-extra'),
     path = require('path'),
     handlebars = require('handlebars'),
     helpers = require('handlebars-helpers')(),
     readdir = Rx.Observable.bindNodeCallback(fs.readdir),
     readFile = Rx.Observable.bindNodeCallback(fs.readFile),
     writeFile = Rx.Observable.bindNodeCallback(fs.writeFile),
-    mkdir = Rx.Observable.bindNodeCallback(fs.mkdir),
-    exists = Rx.Observable.bindCallback(fs.exists);
+    ensureDir = Rx.Observable.bindNodeCallback(fs.ensureDir);
 
 function escapeHtml (string) {
   let entityMap = {
@@ -40,7 +39,7 @@ handlebars.registerHelper('template', (filepath)  => {
   let html = '<pre class="prettyprint lang-html">';
   html = html + escapeHtml(fs.readFileSync(filepath, 'utf8').trim());
   html = html + "</pre>";
-  console.log(html)
+  // console.log(html)
   return html;
 } );
 
@@ -50,22 +49,20 @@ handlebars.registerHelper('code', (filepath, filetype)  => {
   let html = '<pre class="prettyprint'+ langClass +'">';
   html = html + escapeHtml(fs.readFileSync(filepath, 'utf8').trim());
   html = html + "</pre>";
-  console.log(html)
+  // console.log(html)
   return html;
 } );
 
 const showcasePath = 'tests/pages/jquery';
 const distPath = 'dist/tests/jquery';
 
-mkdir(distPath)
-  .catch(error => error.code === 'EEXIST' ? Rx.Observable.of(true) : Rx.Observable.throw(error))
-mkdir(distPath + '/src')
-  .catch(error => error.code === 'EEXIST' ? Rx.Observable.of(true) : Rx.Observable.throw(error))
-  .switchMap(() => readdir(showcasePath))
-  .mergeMap(array => array)
-  .filter(filename => path.extname(filename) === '.hbs')
-  .mergeMap(filename => {
-    return readFile(showcasePath + '/' + filename, 'utf8')
+function builder() {
+  return ensureDir(distPath + '/src')
+    .switchMap(() => readdir(showcasePath))
+    .mergeMap(array => array)
+    .filter(filename => path.extname(filename) === '.hbs')
+    .mergeMap(filename => {
+      return readFile(showcasePath + '/' + filename, 'utf8')
       .map(function(template) {
         var hbs = handlebars.compile(template);
         var data = {
@@ -79,13 +76,12 @@ mkdir(distPath + '/src')
         path: distPath,
         filename: filename.replace(/\.hbs$/, '.html')
       }))
-  })
-  .flatMap(result => writeFile(`${result.path}/${result.filename}`, result.html)
-    .map(() => `${result.path}/${result.filename}`)
-  )
-  .subscribe(result => {
-    console.log(result);
-  }, error => {
-    console.error(error);
-    throw error
-  });
+    })
+    .flatMap(result => writeFile(`${result.path}/${result.filename}`, result.html)
+      .map(() => `${result.path}/${result.filename}`)
+    );
+}
+
+module.exports = {
+  builder: builder
+}
