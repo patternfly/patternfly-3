@@ -81,7 +81,7 @@
     "test": "grunt karma",
     "build": "grunt build",
     "jekyll": "ruby --version || echo \"Ruby required\"; bundler -v || gem install bundler; bundle check || bundle install; set -e",
-    "start": "npm run build; grunt server & open http://localhost:9000",
+    "start": "npm run build && grunt server & open http://localhost:9000",
     "grunt": "grunt",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-release-post": "semantic-release post",
