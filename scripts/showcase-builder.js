@@ -48,8 +48,8 @@ handlebars.registerHelper('code', (filepath, filetype)  => {
   let langClass = typeof filetype === 'string' ? ' lang-'+filetype : '';
   let html = '<pre class="prettyprint'+ langClass +'">';
   let code = fs.readFileSync(filepath, 'utf8').trim();
-  html = html + escapeCode ? escapeHtml(code) : code;
-  html = html + "</pre>";
+  html += escapeCode ? escapeHtml(code) : code;
+  html += "</pre>";
   // console.log(html)
   return html;
 } );
