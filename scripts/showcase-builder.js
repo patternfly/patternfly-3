@@ -47,22 +47,24 @@ handlebars.registerHelper('template', (filepath)  => {
 handlebars.registerHelper('code', (filepath, filetype)  => {
   let langClass = typeof filetype === 'string' ? ' lang-'+filetype : '';
   let html = '<pre class="prettyprint'+ langClass +'">';
-  html = html + escapeHtml(fs.readFileSync(filepath, 'utf8').trim());
+  let code = fs.readFileSync(filepath, 'utf8').trim();
+  html = html + escapeCode ? escapeHtml(code) : code;
   html = html + "</pre>";
   // console.log(html)
   return html;
 } );
 
-const showcasePath = 'tests/pages/jquery';
-const distPath = 'dist/tests/jquery';
+let escapeCode = true;
 
-function builder() {
+function builder(sourcePath, distPath, options) {
+  options = options || {};
+  escapeCode = options.escapeCode || escapeCode;
   return ensureDir(distPath + '/src')
-    .switchMap(() => readdir(showcasePath))
+    .switchMap(() => readdir(sourcePath))
     .mergeMap(array => array)
     .filter(filename => path.extname(filename) === '.hbs')
     .mergeMap(filename => {
-      return readFile(showcasePath + '/' + filename, 'utf8')
+      return readFile(sourcePath + '/' + filename, 'utf8')
       .map(function(template) {
         var hbs = handlebars.compile(template);
         var data = {

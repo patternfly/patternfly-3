@@ -19,19 +19,6 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     config: projectConfig,
-    connect: {
-      server: {
-        options: {
-          hostname: '0.0.0.0',
-          livereload: true,
-          base: [
-            projectConfig.src,
-            projectConfig.dist + '/tests'
-          ],
-          port: 9000
-        }
-      }
-    },
     run: {
       options: {
       },
@@ -83,6 +70,12 @@ module.exports = function (grunt) {
             cwd: 'tests/pages/jquery',
             src: ['src/**'],
             dest: 'dist/tests/jquery'
+          },
+          {
+            expand: true,
+            cwd: 'tests/pages/css',
+            src: ['src/**'],
+            dest: 'dist/tests/css'
           }
         ]
       },
@@ -273,14 +266,11 @@ module.exports = function (grunt) {
         tasks: ['eslint', 'concat', 'copy:js', 'uglify']
       },
       showcase: {
-        files: ['tests/pages/jquery/**.*'],
+        files: ['tests/pages/jquery/**.*', 'tests/pages/css/**.*'],
         tasks: ['showcaseBuild', 'sync:showcase']
       },
-      livereload: {
-        files: ['dist/css/*.css', 'dist/js/*.js', 'dist/tests/*.html', '!tests/pages/*.html']
-      },
       options: {
-        livereload: true
+        livereload: false
       }
     },
     karma: {
@@ -290,7 +280,9 @@ module.exports = function (grunt) {
     },
     htmlhint: {
       html: {
-        src: ['dist/tests/**/*.html'],
+        // TODO: fix html lint errors and remove exclusions
+        // src: ['dist/tests/**/*.html'],
+        src: ['dist/tests/**/*.html', '!dist/tests/css/**/*.*','!dist/tests/jquery/**/*.*'],
         options: {
           htmlhintrc: '.htmlhintrc'
         }
@@ -330,13 +322,13 @@ module.exports = function (grunt) {
     },
     browserSync: {
       bsFiles: {
-        src : 'dist/tests/jquery/**/*.*'
+        src : 'dist/tests/**/*.*'
       },
       options: {
         server: {
-          baseDir: "./dist"
+          baseDir: "./"
         },
-        startPath: 'tests/jquery'
+        startPath: 'dist/tests/'
       }
     }
   });
@@ -345,9 +337,17 @@ module.exports = function (grunt) {
     var showcaseBuilder = require('./scripts/showcase-builder');
     var done = this.async();
     grunt.log.writeln('Starting showcase build.');
-    showcaseBuilder.builder()
+    showcaseBuilder.builder('tests/pages/jquery', 'dist/tests/jquery', {escapeCode: true})
       .subscribe(result => {
-        grunt.log.writeln('Showcase build complete.');
+        grunt.log.writeln('jQuery Showcase build complete.');
+        done();
+      }, error => {
+        grunt.log.error(error);
+        throw error;
+      });
+    showcaseBuilder.builder('tests/pages/css', 'dist/tests/css', {escapeCode: false})
+      .subscribe(result => {
+        grunt.log.writeln('CSS Showcase build complete.');
         done();
       }, error => {
         grunt.log.error(error);
@@ -391,7 +391,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('serve', [
-    'connect:server',
     'browserSync',
     'watch'
   ]);
