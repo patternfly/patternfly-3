@@ -1,0 +1,799 @@
+<html>
+<head>
+  <title>PatternFly JQuery Components</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../../css/patternfly.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/patternfly-additions.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/patternfly-jquery.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-combobox/1.1.8/js/bootstrap-combobox.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/3.1.2/jquery.bootstrap-touchspin.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+  <script defer src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.2.2/js/dataTables.select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+  <script src="../../js/patternfly.min.js"></script>
+</head>
+<body class="showcase">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+              <a id="logo" title="PatternFly jQuery" href="#">PATTERNFLY-<span class="secondary-logo">JQUERY</span></a>
+            </div>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <ul id="menu-primary" class="nav navbar-nav navbar-right navbar-iconic navbar-utility">
+              <li class="active">
+                <a href="src/get-started.html">Get Started</a>
+              </li>
+              <li>
+                <a href="index.html">Components</a>
+              </li>
+              <li>
+                <a href="src/contribute.html">Contribute</a>
+              </li>
+              <li>
+                <a href="https://github.com/patternfly/patternfly-jquery">Github</a>
+              </li>
+              <li class="applauncher-pf  dropdown dropdown-kebab-pf">
+                <a class="dropdown-toggle nav-item-iconic" data-toggle="dropdown" href="#" aria-expanded="true">
+                  <i class="fa fa-th applauncher-pf-icon" aria-hidden="true"></i>
+                  <span class="applauncher-pf-title">
+                    PatternFly jQuery Showcase List
+                    <span class="caret" aria-hidden="true"></span>
+                  </span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="http://www.patternfly.org/angular-patternfly/#/api/">
+                      <span class="applauncher-pf-link-title">PatternFly Angular</span>
+                    </a>
+                  </li>
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">
+                      <span class="applauncher-pf-link-title">PatternFly NG</span>
+                    </a>
+                  </li>
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="https://patternfly-webcomponents.github.io/components.html">
+                      <span class="applauncher-pf-link-title">PatternFly Web Components</span>
+                    </a>
+                  </li>
+                  <li class="applauncher-pf-item" role="menuitem">
+                    <a class="applauncher-pf-link" href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">
+                      <span class="applauncher-pf-link-title">PatternFly React</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar navbar-primary">
+        <ul>
+          <li class="primary-menu">
+            <a href="">Menu</a>
+            <ul>
+              <li>
+                <a href="src/get-started.html">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="index.html">Components</a>
+              </li>
+              <li>
+                <a href="src/contribute.html">Contribute</a>
+              </li>
+              <li>
+                <a href="https://github.com/patternfly/patternfly-jquery">Github</a>
+              </li>
+              <li>
+                <a class="collapsed showcase-collapsed" role="button" data-toggle="collapse" href="#patternfly-showcases">PatternFly Showcases</a>
+                <ul class="collapse" id="patternfly-showcases">
+                  <li>
+                    <a href="http://www.patternfly.org/angular-patternfly/#/api/">PatternFly Angular 1</a>
+                  </li>
+                  <li>
+                    <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/">PatternFly-ng</a>
+                  </li>
+                  <li>
+                    <a href="https://patternfly-webcomponents.github.io/components.html">PatternFly Web Component</a>
+                  </li>
+                  <li>
+                    <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html">PatternFly React</a>
+                  </li>
+                  <li>
+                    <a href="http://www.patternfly.org/patternfly-css/">PatternFly CSS</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="doc-wrapper">
+      <div class="container-fluid">
+        <!-- //doc-header -->
+        <div class="doc-body">
+          <div class="doc-content">
+            <div class="content-inner">
+
+              <!-- Accordion -->
+              <section id="accordion" class="doc-section">
+                <h2 class="section-title">Accordion</h2>
+                <h3>Fixed Height</h3>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/javascript/#collapse">http://getbootstrap.com/javascript/#collapse</a> for complete accordion documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/accordion.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/accordion.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                  {{{code 'tests/pages/jquery/src/accordion.js'}}}
+                  </div>
+                </div>
+                <script defer src="src/accordion.js"></script>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Aggregate Status Card -->
+              <section id="aggregate" class="doc-section">
+                <h2 class="section-title">Aggregate Status Card</h2>
+                <div class="section-block">
+                  <p>The Aggregate Status Card shows a total number of objects and an aggregated status for those objects. The most common use case for this pattern is seen in a dashboard view to illustrate the total count and the status of objects in an environment. The mini card alternate can be used in the case when there is less space available for the status card as well as when there is less information to show in the card.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/aggregate-card.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/aggregate-card.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/aggregate-card.js'}}}
+                  </div>
+                  <script defer src="src/aggregate-card.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Application Launcher -->
+              <section id="launcher" class="doc-section">
+                <h2 class="section-title">Application Launcher</h2>
+                <div class="section-block">
+                  <p>The Launcher allows users to see all available interfaces from one area of an application. This pattern makes it easier for users to quickly navigate to different interfaces without logging out. The pattern consists of two parts, the Launcher Menu and the Launcher Home (optional). Both parts display all available interfaces, with the Home screen also acting as a landing page for additional resources and documentation.</p>
+                  <p>The Launcher Menu can be used without the Launcher Home, but the Launcher Home is recommended for any application that has between one and four interfaces available and has a need to provide additional context around functionality of those interface options.</p>
+                  <p>The Launcher pattern is NOT meant to be an alternative to displaying <a href="http://www.patternfly.org/pattern-library/navigation/vertical-navigation/">Vertical Navigation</a> or <a href="http://www.patternfly.org/pattern-library/navigation/horizontal-navigation/">Horizontal Navigation</a>.</p>
+                  <p>The Launcher Menu should be accessible from the <a href="http://www.patternfly.org/pattern-library/application-framework/masthead/">Masthead</a> using the Launcher icon detailed in the Design tab.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/application-launcher.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/application-launcher.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/application-launcher.js'}}}
+                  </div>
+                  <script defer src="src/application-launcher.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Bootstrap Combobox -->
+              <section id="combobox" class="doc-section">
+                <h2 class="section-title">Bootstrap Combobox</h2>
+                <div class="section-block">
+                  <p>See <a href="https://github.com/patternfly/patternfly-bootstrap-combobox">https://github.com/patternfly/patternfly-bootstrap-combobox</a> for complete Bootstrap Combobox documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/bootstrap-combobox.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/bootstrap-combobox.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/patternfly-bootstrap-combobox/js/bootstrap-combobox.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/bootstrap-combobox.js'}}}
+                  </div>
+                  <script defer src="src/bootstrap-combobox.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Bootstrap Datepicker -->
+              <section id="date-picker" class="doc-section">
+                <h2 class="section-title">Bootstrap Datepicker</h2>
+                <div class="section-block">
+                  <p>See <a href="http://bootstrap-datepicker.readthedocs.org/en/latest/">http://bootstrap-datepicker.readthedocs.org/en/latest/</a> for complete Bootstrap Datepicker documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/bootstrap-datepicker.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/bootstrap-datepicker.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/bootstrap-datepicker.js'}}}
+                  </div>
+                  <script defer src="src/bootstrap-datepicker.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Bootstrap Select -->
+              <section id="select" class="doc-section">
+                <h2 class="section-title">Bootstrap Select</h2>
+                <div class="section-block">
+                  <p>See <a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a> for complete Bootstrap Select documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/bootstrap-select.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/bootstrap-select.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/bootstrap-select/dist/js/bootstrap-select.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/bootstrap-select.js'}}}
+                  </div>
+                  <script defer src="src/bootstrap-select.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Bootstrap Switch-->
+              <section id="switch" class="doc-section">
+                <h2 class="section-title">Bootstrap Switch</h2>
+                <div class="section-block">
+                  <p>See <a href="http://www.bootstrap-switch.org/">http://www.bootstrap-switch.org/</a> for complete Bootstrap Switch documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/bootstrap-switch.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/bootstrap-switch.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/bootstrap-switch/dist/js/bootstrap-switch.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/bootstrap-switch.js'}}}
+                  </div>
+                  <script defer src="src/bootstrap-switch.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Bootstrap Touchspin -->
+              <section id="touchspin" class="doc-section">
+                <h2 class="section-title">Bootstrap Touchspin</h2>
+                <div class="section-block">
+                  <p>See <a href="http://www.virtuosoft.eu/code/bootstrap-touchspin/">http://www.virtuosoft.eu/code/bootstrap-touchspin/</a> for complete Bootstrap Touchspin documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/bootstrap-touchspin.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/bootstrap-touchspin.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/bootstrap-touchspin.js'}}}
+                  </div>
+                  <script defer src="src/bootstrap-touchspin.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Bootstrap Tree View-->
+              <section id="treeview" class="doc-section">
+                <h2 class="section-title">Bootstrap Tree View</h2>
+                <div class="section-block">
+                  <p>See <a href="https://github.com/patternfly/patternfly-bootstrap-treeview">https://github.com/patternfly/patternfly-bootstrap-treeview</a> for complete Bootstrap Tree View documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/bootstrap-treeview.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/bootstrap-treeview.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/bootstrap-treeview.js'}}}
+                  </div>
+                  <script defer src="src/bootstrap-treeview.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section-->
+
+              <!-- Card View -->
+              <section id="cardview" class="doc-section">
+                <h2 class="section-title">Card View</h2>
+                <div class="section-block">
+                  <p>Card View organizes content into a grid of cards. Card View is useful for displaying a small to moderate amount of content in a way that is not visually overwhelming. If the pieces of content to be displayed are best identified by a graphic or other visual representation, Card View enables a user to easily visualize and compare them. It is also useful when you want to present a large number of objects at once within the same summary page.</p>
+                  <p>The Card View should <b>NOT</b> be used if:</p>
+                  <ul>
+                    <li>Users need to quickly scan a large amount of text-based content. Consider using a <a href="http://www.patternfly.org/pattern-library/content-views/table-view/">Table View</a>.</li>
+                    <li>You want to display more content about each object that can fit into a small tile. Consider using a <a href="http://www.patternfly.org/pattern-library/content-views/list-view/">List View</a>.</li>
+                  </ul>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/cardview.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/cardview.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/></code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/cardview.js'}}}
+                  </div>
+                  <script defer src="src/cardview.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Count Remaining Characters -->
+              <section id="count" class="doc-section">
+                <h2 class="section-title">Count Remaining Characters</h2>
+                <div class="section-block">
+                  <p><b>Note:</b> By default <code>blockInputAtMaxLimit</code> is <b>false</b>, meaning that after reaching the maximum number of characters specified, the user can still enter additional characters; the remaining character count will turn negative. When <code>blockInputAtMaxLimit</code> is <b>true</b>, the user will be blocked from entering more characters after reaching the maximum character limit. The remaining character count will stop at 0. When <code>blockInputAtMaxLimit</code> is <b>true</b>, Right-Click 'paste' will only paste characters until the maximum character limit is reached.
+                  </p>
+                  <div class="doc-example char-count">
+                    {{{include 'tests/pages/jquery/src/count-remaining-char.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/count-remaining-char.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/count-remaining-char.js'}}}
+                  </div>
+                  <script defer src="src/count-remaining-char.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Horizontal Navigation -->
+              <section id="horizontalnav" class="doc-section">
+                <h2 class="section-title">Horizontal Navigation</h2>
+                <div class="section-block">
+                  <p>It is recommended to use horizontal navigation when you want to provide access to global navigation of an application at the top of every page. When using this pattern with the <a href="http://www.patternfly.org/pattern-library/communication/notification-drawer/">Notification Drawer</a>, it is recommended to use the sticky horizontal navigation so that the navigation and notification drawer stick to the top of the page on scroll. This horizontal navigation pattern will support up to three levels of navigation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/horizontal-nav.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/horizontal-nav.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/horizontal-nav.js'}}}
+                  </div>
+                  <script defer src="src/horizontal-nav.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- List -->
+              <section id="list" class="doc-section">
+                <h2 class="section-title">Basic List With Expansion</h2>
+                <div class="section-block">
+                  <p>For official documentation, see <a href="https://www.patternfly.org">https://www.patternfly.org</a> and <a href="http://getbootstrap.com">http://getbootstrap.com</a>.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/list.html'}}}
+                  </div>
+                  <script defer src="src/list.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- List View -->
+              <section id="listview" class="doc-section">
+                <h2 class="section-title">List View</h2>
+                <div class="section-block">
+                  <p>A List View displays data in rows. Each row displays the same set of attributes, although not necessarily displayed in columns, and the attributes may wrap. The List View omits column headers and other visual noise, making it a cleaner visualization than a data table.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/listview.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/listview.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/listview.js'}}}
+                  </div>
+                  <script defer src="src/listview.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- List View Rows -->
+              <section id="listviewrows">
+                <h2 class="section-title">List View Rows</h2>
+                <div class="section-block">
+                  <p>For official documentation, see <a href="https://www.patternfly.org">https://www.patternfly.org</a> and <a href="http://getbootstrap.com">http://getbootstrap.com</a>.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/listview-rows.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/listview-rows.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/listview-rows.js'}}}
+                  </div>
+                  <script defer src="src/listview-rows.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Notification Drawer -->
+              <section id="notification" class="doc-section">
+                <h2 class="section-title">Notification Drawer</h2>
+                <div class="section-block">
+                  <p>The Notification Drawer is a content delivery system such as events, tasks, and alerts. It is a self contained system that is viewable without having to navigate to another area of the application. Upon login it offers initial notifications for what has changed in the form of dismissible <a href="http://www.patternfly.org/pattern-library/communication/toast-notifications/">Toast Notifications</a> and a permanent interactive icon in the header bar. It is hidden or revealed at the user’s request.</p>
+                  <h3 id="horizontal">Horizontal Navigation</h3>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/horizontal-drawer.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/horizontal-drawer.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/horizontal-drawer.js'}}}
+                  </div>
+                  <h3 id="vertical">Vertical Navigation</h3>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/vertical-drawer.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/vertical-drawer.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/vertical-drawer.js'}}}
+                  </div>
+                  <script defer src="src/horizontal-drawer.js"></script>
+                  <script defer src="src/vertical-drawer.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Popover -->
+              <section id="popover" class="doc-section">
+                <h2 class="section-title">Popover</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/javascript/#popovers">http://getbootstrap.com/javascript/#popovers</a> for complete popover documentation.</p>
+                  <p><b>Note:</b> Displaying the close (X) icon in popovers requires patternfly.min.js, initialization via <code>popovers()</code> (note the "s"), and adding data attribute <b>data-close="true"</b> to the trigger element.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/popover.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/popover.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/popover.js'}}}
+                  </div>
+                  <script defer src="src/popover.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Progress Bars -->
+              <section id="progressbars" class="doc-section">
+                <h2 class="section-title">Progress Bars With Tooltip</h2>
+                <div class="section-block">
+                  <p>For official documentation, see <a href="https://www.patternfly.org">https://www.patternfly.org</a> and <a href="http://getbootstrap.com">http://getbootstrap.com</a>.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/progressbars.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/progressbars.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/progressbars.js'}}}
+                  </div>
+                  <script defer src="src/progressbars.js"></script>
+                </div>
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Search -->
+              <section id="search" class="doc-section">
+                <h2 class="section-title">Search</h2>
+                <div class="section-block">
+                  <p>For official documentation, see <a href="https://www.patternfly.org">https://www.patternfly.org</a> and <a href="http://getbootstrap.com">http://getbootstrap.com</a>.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/search.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/search.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/search.js'}}}
+                  </div>
+                  <script defer src="src/search.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Table View -->
+              <section id="tableview" class="doc-section">
+                <h2 class="section-title">Table View</h2>
+                <div class="section-block">
+                  <p>Table View organizes data into rows (of items) and columns (of item attributes). Tables make structured data easy to scan, compare, sort, and analyze. Tables can be embedded into other design patterns. Tables are familiar to users and often the correct choice for structured data, but be careful not to overuse tables. Here are some examples of when not to use a table:</p>
+                  <p>The table pattern should <b>NOT</b> be used if:</p>
+                  <ul>
+                    <li>Users need to find patterns within a data set. Consider a line chart or a bar chart.</li>
+                    <li>Users need to browse the data set without knowing exactly what to look for. Consider using a <a href="http://www.patternfly.org/pattern-library/content-views/list-view/">List View</a>.</li>
+                  </ul>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/tableview.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/tableview.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/datatables.net/js/jquery.dataTables.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/datatables.net-select/js/dataTables.select.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/tableview.js'}}}
+                  </div>
+                  <script defer src="src/tableview.js"></script>
+                </div>
+                 <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Timepicker -->
+              <section id="timepicker" class="doc-section">
+                <h2 class="section-title">Timepicker</h2>
+                <div class="section-block">
+                  <p>The timepicker allows a user to select a time. The most common use case is selecting a time for something to run or expire. The timepicker widget is based on the Bootstrap-datetimepicker. See the <a href="http://eonasdan.github.io/bootstrap-datetimepicker/#bootstrap-3-datepicker-v4-docs">Bootstrap 3 Datepicker v4 Docs</a> for complete documentation.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/timepicker.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/timepicker.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/timepicker.js'}}}
+                  </div>
+                  <script defer src="src/timepicker.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc section -->
+
+              <!-- Toolbar -->
+              <section id="toolbar" class="doc-section">
+                <h2 class="section-title">Toolbar</h2>
+                <div class="section-block">
+                  <p>The Toolbar pattern sits above a content view such as a <a href="http://www.patternfly.org/pattern-library/content-views/list-view/">List View</a>, <a href="http://www.patternfly.org/pattern-library/content-views/card-view/">Card View</a> or <a href="http://www.patternfly.org/pattern-library/content-views/table-view/">Table View</a>. The Toolbar provides a framework for a number of content control patterns including, but not limited to:</p>
+                  <ul>
+                    <li>Filter</li>
+                    <li>Sort</li>
+                    <li>Actions</li>
+                    <li><a href="http://www.patternfly.org/pattern-library/forms-and-controls/find/">Find</a></li>
+                    <li>Change View</li>
+                  </ul>
+                  <p>These controls may be used either together or individually, and may be substituted for other components. The Toolbar pattern should be used any time controls are needed for a content view.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/toolbar.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/toolbar.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/toolbar.js'}}}
+                  </div>
+                  <script defer src="src/toolbar.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Tooltip -->
+              <section id="tooltip" class="doc-section">
+                <h2 class="section-title">Tooltip</h2>
+                <div class="section-block">
+                  <p>See <a href="http://getbootstrap.com/javascript/#tooltips">http://getbootstrap.com/javascript/#tooltips</a> for complete tooltip documentation.</p>
+                  <div class="doc-example example-tooltips">
+                    {{{include 'tests/pages/jquery/src/tooltip.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/tooltip.html'}}}
+                  </div>
+                  <div class="doc-example-js"></div>
+                  {{{code 'tests/pages/jquery/src/tooltip.js'}}}
+                </div>
+                <script defer src="src/tooltip.js"></script>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- TreeGrid Table -->
+              <section id="treegridtable" class="doc-section">
+                <h2 class="section-title">TreeGrid Table</h2>
+                <div class="section-block">
+                  <p>For official documentation, see <a href="https://www.patternfly.org">https://www.patternfly.org</a> and <a href="http://getbootstrap.com">http://getbootstrap.com</a>.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/treegridtable.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/treegridtable.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/treegridtable.js'}}}
+                  </div>
+                  <script defer src="src/treegridtable.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Utilization Bar Chart -->
+              <section id="utilization" class="doc-section">
+                <h2 class="section-title">Utilization Bar Chart</h2>
+                <div class="section-block">
+                  <p>The Utilization Bar Chart depicts the percentage utilization ratio between used and available.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/utilization-barchart.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/utilization-barchart.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/utilization-barchart.js'}}}
+                  </div>
+                  <script defer src="src/utilization-barchart.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Vertical Navigation -->
+              <section id="vertical-nav">
+                <h2 class="section-title">Vertical Navigation</h2>
+                <div class="section-block">
+                  <p>It is recommended to use vertical navigation when your application requires global navigation that is displayed on the left. While vertical navigation menus generally consume more space than their horizontal counterparts, they have become more popular as desktop monitors move to wide-screen formats.</p>
+                  <p>The vertical navigation pattern supports up to three levels of navigation (Primary, Secondary and Tertiary).</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/vertical-nav.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/vertical-nav.html'}}}
+                  </div>
+                  <div class="doc-example-path">
+                    <pre class="prettyprint"><code>&lt;script src=&quot;../node_modules/jquery-match-height/dist/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/d3/d3.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script src=&quot;../node_modules/c3/c3.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/vertical-nav.js'}}}
+                  </div>
+                  <script defer src="src/vertical-nav.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+
+              <!-- Wizard -->
+              <section id="wizard" class="doc-section">
+                <h2 class="section-title">Wizard</h2>
+                <div class="section-block">
+                  <p>Wizards should be used when the user needs to go through a sequential set of steps to complete a task. A wizard is a good way to break a complex task into sub-tasks that can be more readily understood and completed. More complex wizards can have branching which takes the user to a different step depending on their settings/answers to previous questions.</p>
+                  <div class="doc-example">
+                    {{{include 'tests/pages/jquery/src/wizard.html'}}}
+                  </div>
+                  <div class="doc-example-html">
+                    {{{template 'tests/pages/jquery/src/wizard.html'}}}
+                  </div>
+                  <div class="doc-example-js">
+                    {{{code 'tests/pages/jquery/src/wizard.js'}}}
+                  </div>
+                  <script defer src="src/wizard.js"></script>
+                </div>
+                <!-- //section-block -->
+              </section>
+              <!-- //doc-section -->
+            </div>
+            <!-- //content-inner -->
+          </div>
+          <!-- //doc-content -->
+
+          <div class="doc-sidebar">
+            <nav id="doc-nav">
+              <ul id="doc-menu" class="nav doc-menu hidden-xs affix-top">
+                <li><a href="#accordion">Accordion</a></li>
+                <li><a href="#aggregate">Aggregate Status Card</a></li>
+                <li><a href="#launcher">Application Launcher</a></li>
+                <li><a href="#combobox">Bootstrap Combobox</a></li>
+                <li><a href="#datepicker">Bootstrap Datepicker</a></li>
+                <li><a href="#select">Bootstrap Select</a></li>
+                <li><a href="#switch">Bootstrap Switch</a></li>
+                <li><a href="#touchspin">Bootstrap Touchspin</a></li>
+                <li><a href="#treeview">Bootstrap Tree View</a></li>
+                <li><a href="#cardview">Card View</a></li>
+                <li><a href="#count">Count Remaining Characters</a></li>
+                <li><a href="#horizontalnav">Horizontal Navigation</a></li>
+                <li><a href="#list">List</a></li>
+                <li><a href="#listview">List View</a></li>
+                <li><a href="#listviewrows">List View Rows</a></li>
+                <li><a href="#notification">Notification Drawer</a></li>
+                  <ul class="doc-sub-menu">
+                    <li><a href="#horizontal">Horizontal Navigation</a></li>
+                    <li><a href="#vertical">Vertical Navigation</a></li>
+                  </ul>
+                <li><a href="#popover">Popover</a></li>
+                <li><a href="#progressbars">Progress Bars</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#tableview">Table View</a></li>
+                <li><a href="#timepicker">Timepicker</a></li>
+                <li><a href="#toolbar">Toolbar</a></li>
+                <li><a href="#tooltip">Tooltip</a></li>
+                <li><a href="#treegridtable">TreeGrid Table</a></li>
+                <li><a href="#utilization">Utilization Bar Chart</a></li>
+                <li><a href="#vertical-nav">Vertical Navigation</a></li>
+                <li><a href="#wizard">Wizard</a></li>
+              </ul>
+              <!-- //doc-menu -->
+            </nav>
+          </div>
+          <!-- //doc-sidebar -->
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $('.navbar-toggle').click(function(){
+        $('.navbar-sidebar').toggleClass("open");
+      })
+    </script>
+</body>
+</html>
