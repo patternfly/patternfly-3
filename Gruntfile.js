@@ -326,8 +326,9 @@ module.exports = function (grunt) {
       },
       options: {
         server: {
-          baseDir: "./"
+          baseDir: "./",
         },
+        port: 9000,
         startPath: 'dist/tests/'
       }
     }
