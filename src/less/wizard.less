@@ -2,9 +2,9 @@
 // Wizard
 // --------------------------------------------------
 .wizard-pf {
+  padding: 10px;
   margin: 0 auto;
   max-height: 900px;
-  padding: 10px;
   width: auto;
   .modal-content {
     min-height:100%;
@@ -15,18 +15,17 @@
 // Top section of the wizard w/ title and dismiss
 
 .wizard-pf-body {
+    background:@color-pf-white;
     padding: 0;
     position: static;
-    background:@color-pf-white;
 }
 /* styles the sidebard containing the sub-steps */
 .wizard-pf-sidebar {
-  @media (max-width: @screen-xs-min) {
-    display:none;
-  }
-  @media (min-width: @screen-xs-min) {
     background: @color-pf-black-100;
     border-right: 1px solid @color-pf-black-300;
+    display:none;
+  @media (min-width: @screen-sm-min) {
+    display:inherit;
     flex:0 0 auto;
     overflow-x: hidden;
     overflow-y: auto;
@@ -68,8 +67,8 @@
           }
           // line to left side showing active substep
           > a:before {
-            background: @color-pf-blue-300;
             content: " ";
+            background: @color-pf-blue-300;
             height: 100%;
             left: 0;
             position: absolute;
@@ -109,29 +108,27 @@
 /* styles the steps indicator across the top of the wizard */
 .wizard-pf-steps {
   border-bottom: solid 1px @color-pf-black-300;
-
-    @media (min-width: @screen-xs-min) {
+    @media (min-width: @screen-sm-min) {
       text-align: center;
     }
-
 }
 
 .wizard-pf-steps-indicator {
-  font-size: ceil((@font-size-base * 1.3333));
+  background: @color-pf-black-200;
+  border-top: 1px solid @color-pf-black-300;
   display: inline-block;
   display: flex;
+  font-size: ceil((@font-size-base * 1.3333));
   list-style: none;
-    @media (min-width: @screen-xs-min) {
+  margin-bottom: 0;
+  padding: 15px 0;
+    @media (min-width: @screen-sm-min) {
+      background: @color-pf-white;
       height: 120px;
       padding: 38px 0 0;
       justify-content: space-around;
     }
-    @media (max-width: @screen-xs-min) {
-      padding: 15px 0;
-      margin-bottom: 0;
-      background: @color-pf-black-200;
-      border-top: 1px solid @color-pf-black-300;
-    }
+
   li {
     counter-increment: section;
     float:left; /* float for IE9 since it doesn't support flex. If items wrap, they overlap */
@@ -143,18 +140,19 @@
     position: relative;
     text-align: center;
     &:not(.active) {
-      @media (min-width: @screen-xs-min) {
-              display: block;
-      }
-      @media (max-width: @screen-xs-min) {
-              display: none;
+      display: none;
+      @media (min-width: @screen-sm-min) {
+        display: block;
       }
     }
     a {
-      @media (max-width: @screen-xs-min) {
-        display: flex;
         align-items: center;
+        display: flex;
         font-weight: 700;
+        @media (min-width: @screen-sm-min) {
+          font-weight: normal;
+          justify-content: center;
+        }
           .wizard-pf-step-title {
             margin-left: 10px;
 
@@ -172,10 +170,9 @@
               }
             }
           }
-      }
     }
     /* draw the line between the circles */
-    @media (min-width: @screen-xs-min) {
+    @media (min-width: @screen-sm-min) {
       .wizard-pf-step-title-substep {
         display: none;
       }
@@ -204,8 +201,8 @@
     }
     a {
       color: @color-pf-black;
-      font-size: 16px;
       cursor: pointer;
+      font-size: 16px;
       margin-left:1em;
       margin-right:1em;
       text-decoration: none;
@@ -229,50 +226,45 @@
     font-weight: 700;
     height: 25px;
     line-height: 22px;
-      @media (min-width: @screen-xs-min) {
+      @media (min-width: @screen-sm-min) {
+        left: ~"calc(50% - 13px)";
         position: absolute;
         top: 27px;
-        left: ~"calc(50% - 13px)";
       }
     width: 25px;
   }
   .active .wizard-pf-step-number {
+    background-color: @color-pf-blue-300;
+    border-color: @color-pf-blue-300;
     cursor: default;
-      background-color: @color-pf-blue-300;
-      border-color: @color-pf-blue-300;
-      color: @color-pf-white;
+    color: @color-pf-white;
   }
 
   .viewed-pf .wizard-pf-step-number {
-      background-color: @color-pf-white;
-      border-color: @color-pf-blue-300;
-      color: @color-pf-black;
+    color: @color-pf-black;
+    background-color: @color-pf-white;
+    border-color: @color-pf-blue-300;
   }
 
 }
 
 /* styles the main content portion of the wizard */
 .wizard-pf-main {
-  // display: table-cell;
   height: 100%;
-  overflow: auto;
+  padding:1em;
   vertical-align: top;
-  @media (min-width: @screen-xs-min) {
+  width:100%;
+  @media (min-width: @screen-sm-min) {
+    overflow: auto;
     padding:3em;
     flex:1 1 auto;
   }
-  @media (max-width: @screen-xs-min) {
-    padding:1em;
-    width:100%;
-  }
-  // width: 10000px;
   .blank-slate-pf {
     background-color: transparent;
     border: none;
     left: 0;
     right: 0;
   }
-
 }
 
 .wizard-pf-contents textarea {
@@ -396,20 +388,19 @@
 
 /* styles the footer */
 .wizard-pf-footer {
+  background:@color-pf-white;
   border-top: 1px solid @color-pf-black-300;
   margin-top: 0;
   padding-bottom: 17px;
-  background:@color-pf-white;
   .btn-cancel {
     margin-right:25px;
   }
 }
 
 .wizard-pf-row {
-
-    @media (min-width: @screen-xs-min) {
-      width:100%;
+    @media (min-width: @screen-sm-min) {
       display: flex;
+      width:100%;
       height: 900px;
       max-height: 65vh;
     }
