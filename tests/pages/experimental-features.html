@@ -5,42 +5,7 @@ title: Experimental Features
 resource: true
 ---
 <h2>Experimental Features Entry Screen</h2>
-<div class="experimental-pf-page experimental-pf">
-  <div class="experimental-pf-bar">
-    <span id="experimentalBar" class="experimental-pf-text">
-      This feature is experimental.
-      <a id="acceptMessage" class="experimental-pf-text-link">Got it!</a>
-    </span>
-    <button class="experimental-pf-more-info">
-      More info <i class="fa fa-flask"></i>
-    </button>
-  </div>
-  <div class="experimental-pf-content">
-    <i class="fa fa-flask fa-5x"></i>
-    <h2>Experimental Features</h2>
-    <p>Legal lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <form class="form-horizontal">
-      <div class="form-group">
-        <input type="checkbox" name="accept" id="accept">
-        <label for="accept" class="control-label">
-          I agree to the terms of this feature, as written above.
-        </label>
-      </div>
-    </form>
-    <button class="btn btn-lg btn-experimental-pf" id="activateButton" disabled>Activate All Experimental Features</button>
-  </div>
-</div>
+{% include widgets/communication/experimental-features-page.html %}
 <hr>
 <h2>Experimental Feature Identifier on a Component</h2>
-{% include widgets/communication/experimental-features.html %}
-
-<script>
-  $(document).ready(function() {
-    $( "#acceptMessage" ).on("click", function () {
-      $( "#experimentalBar" ).addClass( "hide" );
-    });
-    $( "#accept" ).click(function () {
-      $( "#activateButton" ).prop( "disabled", !$(this).prop( "checked" ));
-    });
-  });
-</script>
+{% include widgets/communication/experimental-features-component.html %}
