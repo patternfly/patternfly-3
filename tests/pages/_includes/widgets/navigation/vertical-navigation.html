@@ -8,14 +8,14 @@
      {% if page.collapsible-menus %}nav-pf-vertical-collapsible-menus{% endif %}
      {% if page.hide-icons %}hidden-icons-pf{% endif %}
      {% if page.nav-badges %}nav-pf-vertical-with-badges{% endif %}">
-  <ul class="list-group">
-    <li class="list-group-item">
+  <ul class="list-group" role="list" aria-label="Primary Navigation Menu">
+    <li class="list-group-item" role="listitem">
       <a href="#0">
         <span class="fa fa-dashboard" data-toggle="tooltip" title="Dashboard"></span>
         <span class="list-group-item-value">Dashboard</span>
       </a>
     </li>
-    <li class="list-group-item">
+    <li class="list-group-item" role="listitem">
       <a href="#0">
         <span class="fa fa-shield" data-toggle="tooltip" title="Dolor"></span>
         <span class="list-group-item-value">Dolor</span>
@@ -26,17 +26,20 @@
         {% endif %}
       </a>
     </li>
-    <li class="list-group-item active {% if page.submenus %}secondary-nav-item-pf{% endif %}" data-target="#ipsum-secondary">
-      <a href="#0">
+    <li class="list-group-item active {% if page.submenus %}secondary-nav-item-pf{% endif %}" role="listitem" data-target="#ipsum-secondary">
+      <a href="#0"
+        {% if page.submenus %}aria-expanded="false"{% endif %}>
         <span class="fa fa-space-shuttle" data-toggle="tooltip" title="Ipsum"></span>
         <span class="list-group-item-value">Ipsum</span>
+        <span class="sr-only">(Active Menu Item)</span>
       </a>
       {% if page.submenus %}
       {% include widgets/navigation/secondary-nav-ipsum.html %}
       {% endif %}
     </li>
-    <li class="list-group-item {% if page.submenus %}secondary-nav-item-pf{% endif %}" data-target="#amet-secondary">
-      <a href="#0">
+    <li class="list-group-item {% if page.submenus %}secondary-nav-item-pf{% endif %}" role="listitem" data-target="#amet-secondary">
+      <a href="#0"
+        {% if page.submenus %}aria-expanded="false"{% endif %}>
         <span class="fa fa-paper-plane" data-toggle="tooltip" title="Amet"></span>
         <span class="list-group-item-value">Amet</span>
       </a>
@@ -44,51 +47,51 @@
       {% include widgets/navigation/secondary-nav-amet.html %}
       {% endif %}
     </li>
-    <li class="list-group-item">
+    <li class="list-group-item" role="listitem">
       <a href="#0">
         <span class="fa fa-graduation-cap" data-toggle="tooltip" title="Adipscing"></span>
         <span class="list-group-item-value">Adipscing</span>
       </a>
     </li>
-    <li class="list-group-item">
+    <li class="list-group-item" role="listitem">
       <a href="#0">
         <span class="fa fa-gamepad" data-toggle="tooltip" title="Lorem"></span>
         <span class="list-group-item-value">Lorem</span>
       </a>
     </li>
     {% if page.applauncher %}
-    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block">
-      <a href="#0">
+    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" role="listitem">
+      <a href="#0" aria-expanded="false">
         <span class="fa fa-th applauncher-pf-icon" data-toggle="tooltip" title="" data-original-title="App Launcher"></span>
         <span class="list-group-item-value">App Launcher</span>
       </a>
-      <div id="applauncher-secondary" class="nav-pf-secondary-nav">
+      <div id="applauncher-secondary" class="nav-pf-secondary-nav" aria-hidden="true">
         <div class="nav-item-pf-header">
           <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
           <span>App Launcher</span>
         </div>
-        <ul class="list-group">
-          <li class="list-group-item">
+        <ul class="list-group" role="list" aria-label="Secondary Navigation Menu">
+          <li class="list-group-item" role="listitem">
             <a href="#0">
               <span class="list-group-item-value">Recteque</span>
             </a>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item" role="listitem">
             <a href="#0">
               <span class="list-group-item-value">Recteque</span>
             </a>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item" role="listitem">
             <a href="#0">
               <span class="list-group-item-value">Suavitate</span>
             </a>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item" role="listitem">
             <a href="#0">
               <span class="list-group-item-value">Lorem</span>
             </a>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item" role="listitem">
             <a href="#0">
               <span class="list-group-item-value">Home</span>
             </a>
@@ -97,25 +100,25 @@
       </div>
     </li>
     {% endif %}
-    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block">
-      <a href="#0">
+    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" role="listitem">
+      <a href="#0" aria-expanded="false">
         <span class="pficon pficon-user" data-toggle="tooltip" title="" data-original-title="User"></span>
         <span class="list-group-item-value">User</span>
       </a>
-      <div id="user-secondary" class="nav-pf-secondary-nav">
+      <div id="user-secondary" class="nav-pf-secondary-nav" aria-hidden="true">
         <div class="nav-item-pf-header">
           <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
           <span>User</span>
         </div>
 
-        <ul class="list-group">
-          <li class="list-group-item">
+        <ul class="list-group" role="list" aria-label="Secondary Navigation Menu">
+          <li class="list-group-item" role="listitem">
             <a href="#0">
               <span class="list-group-item-value">Preferences</span>
             </a>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-group-item" role="listitem">
             <a href="#0">
               <span class="list-group-item-value">Logout</span>
             </a>
@@ -123,23 +126,23 @@
         </ul>
       </div>
     </li>
-    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block" data-target="#amet-secondary">
-      <a href="#0">
+    <li class="list-group-item secondary-nav-item-pf mobile-nav-item-pf visible-xs-block">
+      <a href="#0" aria-expanded="false">
         <span class="pficon pficon-help" data-toggle="tooltip" title="" data-original-title="Help"></span>
         <span class="list-group-item-value">Help</span>
       </a>
-      <div id="help-secondary" class="nav-pf-secondary-nav">
+      <div id="help-secondary" class="nav-pf-secondary-nav" aria-hidden="true">
         <div class="nav-item-pf-header">
           <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
           <span>Help</span>
         </div>
-        <ul class="list-group">
-          <li class="list-group-item">
+        <ul class="list-group" role="list" aria-label="Secondary Navigation Menu">
+          <li class="list-group-item" role="listitem">
             <a href="#0">
               <span class="list-group-item-value">Help</span>
             </a>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item" role="listitem">
             <a href="#0">
               <span class="list-group-item-value">About</span>
             </a>
@@ -159,14 +162,16 @@
 {% include widgets/layouts/cards-alt.html %}
 </div>
 <script>
-  $(document).ready(function() {
-    // matchHeight the contents of each .card-pf and then the .card-pf itself
-    $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+$(document).ready(function() {
+  // matchHeight the contents of each .card-pf and then the .card-pf itself
+  $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+  $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+  $(
+    ".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer"
+  ).matchHeight();
+  $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
 
-    // Initialize the vertical navigation
-    $().setupVerticalNavigation(true);
-  });
+  // Initialize the vertical navigation
+  $().setupVerticalNavigation(true);
+});
 </script>

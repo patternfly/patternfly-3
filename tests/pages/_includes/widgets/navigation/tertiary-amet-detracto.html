@@ -1,10 +1,14 @@
-<div id="amet-detracto-tertiary" class="nav-pf-tertiary-nav">
+<div id="amet-detracto-tertiary" class="nav-pf-tertiary-nav" aria-hidden="true">
   <div class="nav-item-pf-header">
-    <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
+    <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav">
+      <span class="sr-only toggle-label-expanded-pf">Pin Secondary Navigation Menu</span>
+      <span class="sr-only toggle-label-collapsed-pf" aria-hidden="true">Unpin Secondary Navigation Menu</span>
+      <span class="sr-only toggle-label-back-pf" aria-hidden="true">Back to Primary Navigation Menu</span>
+    </a>
     <span>Detracto</span>
   </div>
-  <ul class="list-group">
-    <li class="list-group-item">
+  <ul class="list-group" role="list" aria-label="Tertiary Navigation Menu">
+    <li class="list-group-item" role="listitem">
       <a href="#0">
         <span class="list-group-item-value">Delicatissimi</span>
         {% if page.nav-badges %}
@@ -14,7 +18,7 @@
         {% endif %}
       </a>
     </li>
-    <li class="list-group-item">
+    <li class="list-group-item" role="listitem">
       <a href="#0">
         <span class="list-group-item-value">Aliquam</span>
         {% if page.nav-badges %}
@@ -24,7 +28,7 @@
         {% endif %}
       </a>
     </li>
-    <li class="list-group-item">
+    <li class="list-group-item" role="listitem">
       <a href="#0">
         <span class="list-group-item-value">Principes</span>
         {% if page.nav-badges %}
