@@ -67,7 +67,7 @@
 <div>
   <h2>Donut Chart - Utilization</h2>
   <div class="text-center">
-    <div id="utilizationDonutChart" class="example-donut-chart-utilization"></div>
+    <div id="utilizationDonutChart1" class="example-donut-chart-utilization"></div>
 
 <div class="pct-donut-chart-pf example-donut-chart-utilization">
   <span class="pct-donut-chart-pf-chart">
@@ -106,7 +106,7 @@
   // Donut configuration 1
   var donutConfig1 = c3ChartDefaults.getDefaultDonutConfig('A');
 
-  donutConfig1.bindto = '#utilizationDonutChart';
+  donutConfig1.bindto = '#utilizationDonutChart1';
   donutConfig1.data = {
     type: "donut",
     columns: [
@@ -128,7 +128,7 @@
   };
 
   c3.generate(donutConfig1);
-  $().pfSetDonutChartTitle("#utilizationDonutChart", "60", "MHz Used");
+  $().pfSetDonutChartTitle("#utilizationDonutChart1", "60", "MHz Used");
 
   // Donut configuration 2
   var donutConfig2 = c3ChartDefaults.getDefaultDonutConfig('A');
@@ -215,9 +215,9 @@
   </div>
   <h2>Donut Chart - Relationship to a Whole</h2>
   <div>
-    <div id="donut-chart-no-legend" class="example-donut-chart"></div>
-<div id="donut-chart-right-legend" class="example-donut-chart-right-legend"></div>
-<div id="donut-chart-bottom-legend" class="example-donut-chart-bottom-legend"></div>
+    <div id="donut-chart-no-legend1" class="example-donut-chart"></div>
+<div id="donut-chart-no-legend2" class="example-donut-chart-right-legend"></div>
+<div id="donut-chart-no-legend3" class="example-donut-chart-bottom-legend"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -242,7 +242,7 @@
 
   // Donut Chart without Legend
   var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartConfig.bindto = '#donut-chart-no-legend';
+  donutChartConfig.bindto = '#donut-chart-no-legend1';
   donutChartConfig.tooltip = {show: true};
   donutChartConfig.data = donutData;
   donutChartConfig.size = {
@@ -254,11 +254,11 @@
   };
 
   var donutChartNoLegend = c3.generate(donutChartConfig);
-  $().pfSetDonutChartTitle("#donut-chart-no-legend", "8", "Animals");
+  $().pfSetDonutChartTitle("#donut-chart-no-legend1", "8", "Animals");
 
   // Right Legend
   var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartRightConfig.bindto = '#donut-chart-right-legend';
+  donutChartRightConfig.bindto = '#donut-chart-no-legend2';
   donutChartRightConfig.tooltip = {show: true};
   donutChartRightConfig.data = donutData;
   donutChartRightConfig.legend = {
@@ -274,11 +274,11 @@
   };
 
   var donutChartRightLegend = c3.generate(donutChartRightConfig);
-  $().pfSetDonutChartTitle("#donut-chart-right-legend", "8", "Animals");
+  $().pfSetDonutChartTitle("#donut-chart-no-legend2", "8", "Animals");
 
   // Donut Chart Bottom Legend
   var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartBottomConfig.bindto = '#donut-chart-bottom-legend';
+  donutChartBottomConfig.bindto = '#donut-chart-no-legend3';
   donutChartBottomConfig.tooltip = {show: true};
   donutChartBottomConfig.data = donutData;
   donutChartBottomConfig.legend = {
@@ -294,7 +294,7 @@
   };
 
   var donutChartBottomLegend = c3.generate(donutChartBottomConfig);
-  $().pfSetDonutChartTitle("#donut-chart-bottom-legend", "8", "Animals");
+  $().pfSetDonutChartTitle("#donut-chart-no-legend3", "8", "Animals");
 </script>
 
   </div>
