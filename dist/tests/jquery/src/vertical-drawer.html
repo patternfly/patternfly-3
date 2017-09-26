@@ -1184,6 +1184,7 @@
               <div id="chart-pf-donut-9"></div>
               <div class="chart-pf-sparkline" id="chart-pf-sparkline-9"></div>
               <script>
+              window.addEventListener('DOMContentLoaded', function() {
                 var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
                 donutConfig.bindto = '#chart-pf-donut-9';
                 donutConfig.color =  {
@@ -1223,6 +1224,7 @@
                   type: 'area'
                 };
                 var chart2 = c3.generate(sparklineConfig);
+              })
               </script>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
@@ -1237,6 +1239,7 @@
               <div id="chart-pf-donut-10"></div>
               <div class="chart-pf-sparkline" id="chart-pf-sparkline-10"></div>
               <script>
+              window.addEventListener('DOMContentLoaded', function() {
                 var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
                 donutConfig.bindto = '#chart-pf-donut-10';
                 donutConfig.color =  {
@@ -1276,6 +1279,7 @@
                   type: 'area'
                 };
                 var chart4 = c3.generate(sparklineConfig);
+              })
               </script>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
@@ -1290,6 +1294,7 @@
               <div id="chart-pf-donut-11"></div>
               <div class="chart-pf-sparkline" id="chart-pf-sparkline-11"></div>
               <script>
+              window.addEventListener('DOMContentLoaded', function() {
                 var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
                 donutConfig.bindto = '#chart-pf-donut-11';
                 donutConfig.color =  {
@@ -1329,7 +1334,7 @@
                   type: 'area'
                 };
                 var chart6 = c3.generate(sparklineConfig);
-              </script>
+              })</script>
             </div>
           </div>
         </div>
@@ -1354,6 +1359,7 @@
           <div id="chart-pf-donut-12"></div>
           <div class="chart-pf-sparkline" id="chart-pf-sparkline-12"></div>
           <script>
+          window.addEventListener('DOMContentLoaded', function() {
             var c3ChartDefaults = $().c3ChartDefaults();
 
             var donutConfig = c3ChartDefaults.getDefaultDonutConfig('A');
@@ -1396,7 +1402,7 @@
             };
 
             var chart2 = c3.generate(sparklineConfig);
-          </script>
+          })</script>
         </div>
       </div>
 

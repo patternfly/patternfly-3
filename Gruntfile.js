@@ -235,7 +235,8 @@ module.exports = function (grunt) {
           'dist/js/patternfly.dataTables.pfFilter.min.js': ['src/js/patternfly.dataTables.pfFilter.js'],
           'dist/js/patternfly.dataTables.pfPagination.min.js': ['src/js/patternfly.dataTables.pfPagination.js'],
           'dist/js/patternfly.dataTables.pfResize.min.js': ['src/js/patternfly.dataTables.pfResize.js'],
-          'dist/js/patternfly.dataTables.pfSelect.min.js': ['src/js/patternfly.dataTables.pfSelect.js']
+          'dist/js/patternfly.dataTables.pfSelect.min.js': ['src/js/patternfly.dataTables.pfSelect.js'],
+          'dist/tests/jquery/src/showcase.min.js': ['tests/pages/jquery/src/*.js']
         }
       }
     },
@@ -266,7 +267,7 @@ module.exports = function (grunt) {
         tasks: ['eslint', 'concat', 'copy:js', 'uglify']
       },
       showcase: {
-        files: ['tests/pages/jquery/**.*', 'tests/pages/css/**.*'],
+        files: ['tests/pages/jquery/**/*', 'tests/pages/css/**/*'],
         tasks: ['showcaseBuild', 'sync:showcase']
       },
       options: {
