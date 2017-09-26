@@ -1,5 +1,6 @@
 /*global module,require*/
-var pageBuilder = require('./tests/pages/_script/page-builder');
+var pageBuilder = require('./tests/pages/_script/page-builder'),
+  open = require('open');
 
 module.exports = function (grunt) {
   'use strict';
@@ -314,8 +315,13 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', [
     'connect:server',
+    'open',
     'watch'
   ]);
+
+  grunt.registerTask('open', function () {
+    open('http://localhost:9000');
+  });
 
   grunt.registerTask('server', function () {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
