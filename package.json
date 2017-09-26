@@ -50,7 +50,7 @@
     "matchdep": "~1.0.1",
     "mz": "^2.6.0",
     "nsp": "^2.6.1",
-    "patternfly-eng-release": "^3.26.37",
+    "patternfly-eng-release": "^3.26.38",
     "pixrem": "^3.0.1",
     "rxjs": "^5.4.2",
     "semantic-release": "^6.3.6",
