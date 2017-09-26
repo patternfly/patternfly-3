@@ -1,8 +1,8 @@
-<div id="{{include.id1}}" class="example-donut-chart-utilization"></div>
+<div id="{{include.id}}1" class="example-donut-chart-utilization"></div>
 
 <div class="pct-donut-chart-pf example-donut-chart-utilization">
   <span class="pct-donut-chart-pf-chart">
-    <span id="{{include.id2}}"></span>
+    <span id="{{include.id}}2"></span>
   </span>
   <span class="pct-donut-chart-pf-label">
     60 MHz of 100 MHz used
@@ -12,7 +12,7 @@
 <div class="example-donut-chart-utilization">
   <span class="pct-donut-chart-pf pct-donut-chart-pf-left">
     <span class="pct-donut-chart-pf-chart">
-      <span id="{{include.id3}}"></span>
+      <span id="{{include.id}}3"></span>
     </span>
     <span class="pct-donut-chart-pf-label text-right">
       60 MHz of 100 MHz used
@@ -23,7 +23,7 @@
 <div class="example-donut-chart-utilization">
   <span class="pct-donut-chart-pf pct-donut-chart-pf-right">
     <span class="pct-donut-chart-pf-chart">
-      <span id="{{include.id4}}"></span>
+      <span id="{{include.id}}4"></span>
     </span>
     <span class="pct-donut-chart-pf-label text-left">
       60 MHz of 100 MHz
@@ -37,7 +37,7 @@
   // Donut configuration 1
   var donutConfig1 = c3ChartDefaults.getDefaultDonutConfig('A');
 
-  donutConfig1.bindto = '#{{include.id1}}';
+  donutConfig1.bindto = '#{{include.id}}1';
   donutConfig1.data = {
     type: "donut",
     columns: [
@@ -59,12 +59,12 @@
   };
 
   c3.generate(donutConfig1);
-  $().pfSetDonutChartTitle("#{{include.id1}}", "60", "MHz Used");
+  $().pfSetDonutChartTitle("#{{include.id}}1", "60", "MHz Used");
 
   // Donut configuration 2
   var donutConfig2 = c3ChartDefaults.getDefaultDonutConfig('A');
 
-  donutConfig2.bindto = '#{{include.id2}}';
+  donutConfig2.bindto = '#{{include.id}}2';
   donutConfig2.data = {
     type: "donut",
     columns: [
@@ -86,12 +86,12 @@
   };
 
   c3.generate(donutConfig2);
-  $().pfSetDonutChartTitle("#{{include.id2}}", "60", "MHz Used");
+  $().pfSetDonutChartTitle("#{{include.id}}2", "60", "MHz Used");
 
   // Donut configuration 3
   var donutConfig3 = c3ChartDefaults.getDefaultDonutConfig('A');
 
-  donutConfig3.bindto = '#{{include.id3}}';
+  donutConfig3.bindto = '#{{include.id}}3';
   donutConfig3.data = {
     type: "donut",
     columns: [
@@ -113,12 +113,12 @@
   };
 
   c3.generate(donutConfig3);
-  $().pfSetDonutChartTitle("#{{include.id3}}", "60", "MHz Used");
+  $().pfSetDonutChartTitle("#{{include.id}}3", "60", "MHz Used");
 
   // Donut configuration 4
   var donutConfig4 = c3ChartDefaults.getDefaultDonutConfig('A');
 
-  donutConfig4.bindto = '#{{include.id4}}';
+  donutConfig4.bindto = '#{{include.id}}4';
   donutConfig4.data = {
     type: "donut",
     columns: [
@@ -140,5 +140,5 @@
   };
 
   c3.generate(donutConfig4);
-  $().pfSetDonutChartTitle("#{{include.id4}}", "60", "MHz Used");
+  $().pfSetDonutChartTitle("#{{include.id}}4", "60", "MHz Used");
 </script>

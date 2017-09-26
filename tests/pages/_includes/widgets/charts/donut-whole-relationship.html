@@ -1,6 +1,6 @@
-<div id="{{include.id1}}" class="example-donut-chart"></div>
-<div id="{{include.id2}}" class="example-donut-chart-right-legend"></div>
-<div id="{{include.id3}}" class="example-donut-chart-bottom-legend"></div>
+<div id="{{include.id}}1" class="example-donut-chart"></div>
+<div id="{{include.id}}2" class="example-donut-chart-right-legend"></div>
+<div id="{{include.id}}3" class="example-donut-chart-bottom-legend"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -25,7 +25,7 @@
 
   // Donut Chart without Legend
   var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartConfig.bindto = '#{{include.id1}}';
+  donutChartConfig.bindto = '#{{include.id}}1';
   donutChartConfig.tooltip = {show: true};
   donutChartConfig.data = donutData;
   donutChartConfig.size = {
@@ -37,11 +37,11 @@
   };
 
   var donutChartNoLegend = c3.generate(donutChartConfig);
-  $().pfSetDonutChartTitle("#{{include.id1}}", "8", "Animals");
+  $().pfSetDonutChartTitle("#{{include.id}}1", "8", "Animals");
 
   // Right Legend
   var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartRightConfig.bindto = '#{{include.id2}}';
+  donutChartRightConfig.bindto = '#{{include.id}}2';
   donutChartRightConfig.tooltip = {show: true};
   donutChartRightConfig.data = donutData;
   donutChartRightConfig.legend = {
@@ -57,11 +57,11 @@
   };
 
   var donutChartRightLegend = c3.generate(donutChartRightConfig);
-  $().pfSetDonutChartTitle("#{{include.id2}}", "8", "Animals");
+  $().pfSetDonutChartTitle("#{{include.id}}2", "8", "Animals");
 
   // Donut Chart Bottom Legend
   var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartBottomConfig.bindto = '#{{include.id3}}';
+  donutChartBottomConfig.bindto = '#{{include.id}}3';
   donutChartBottomConfig.tooltip = {show: true};
   donutChartBottomConfig.data = donutData;
   donutChartBottomConfig.legend = {
@@ -77,5 +77,5 @@
   };
 
   var donutChartBottomLegend = c3.generate(donutChartBottomConfig);
-  $().pfSetDonutChartTitle("#{{include.id3}}", "8", "Animals");
+  $().pfSetDonutChartTitle("#{{include.id}}3", "8", "Animals");
 </script>
