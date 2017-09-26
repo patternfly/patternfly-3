@@ -5636,7 +5636,7 @@ a.disabled {
   color: inherit;
   cursor: pointer;
   line-height: inherit;
-  padding: 2px 5px;
+  padding: 2px 10px;
   position: absolute;
 }
 .drawer-pf-close:hover,
