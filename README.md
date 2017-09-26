@@ -73,6 +73,10 @@ Development setup requires Node.js and Ruby. If you do not already have Node.js,
 
 The PatternFly code includes a number of dependencies that are not committed to this repository.  To add them, follow the instructions below under "Install NPM Dependencies".  Please make sure you keep them updated (see [Keeping NPM Dependencies Updated](#keeping-npm-dependencies-updated)).
 
+## Development - Updating Dependencies
+
+The npm-check-updates tool is available and configured to apply dependency updates to the project by running the command `npm run ncu`.  The package.json changes will have to be committed and a PR created.
+
 ## Autoprefixer
 
 Patternfly uses [Autoprefixer](https://github.com/postcss/autoprefixer) to auto add prefixes to its output CSS. Since Patternfly extends some of the core Bootstrap3 less which contains prefixes, we also explicitly add prefixes in these cases to ensure backwards compatibility with Bootstrap3. If consuming Patternfly LESS and compiling, you can define your own target prefixes using [browserlist](https://github.com/ai/browserslist).
