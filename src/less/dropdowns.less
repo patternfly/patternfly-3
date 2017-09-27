@@ -29,6 +29,11 @@
   }
 }
 
+// Bootstrap removes the focus ring on dropdowns; this replaces it for better accessibility
+.dropdown-toggle:focus {
+  .tab-focus();
+}
+
 // The dropdown menu (ul)
 .dropdown-menu {
   // Dividers (basically an hr) within the dropdown
