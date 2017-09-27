@@ -9,8 +9,10 @@
     "jquery": "~3.2.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^3.2.0",
     "autoprefixer": "^6.4.0",
     "commitizen": "^2.9.6",
+    "commitlint-config-cz": "^0.5.0",
     "connect-livereload": "~0.5.4",
     "cz-conventional-changelog": "^2.0.0",
     "front-matter": "^2.1.1",
@@ -32,6 +34,7 @@
     "grunt-postcss": "^0.8.0",
     "grunt-run": "^0.6.0",
     "grunt-stylelint": "^0.7.0",
+    "husky": "^0.14.3",
     "jasmine-core": "^2.4.1",
     "jasmine-jquery": "^2.1.1",
     "js-yaml": "^3.7.0",
@@ -89,6 +92,7 @@
     "semantic-release-post": "semantic-release post",
     "semantic-release-pre": "semantic-release pre",
     "commit": "git-cz",
+    "commitmsg": "commitlint -e",
     "ncu": "ncu --semverLevel minor -p"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
