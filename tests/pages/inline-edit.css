@@ -1,0 +1,157 @@
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+.pf-inline-edit:hover {
+    border: 1px solid #bababa;
+    border-radius: 1px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    min-height: 26px;
+    padding: 2px 6px;
+    margin-left: -7px;
+    margin-top: -1px;
+    margin-bottom: -3px;
+}
+.pf-inline-edit:hover::after {
+  content: "\f040";
+  font-family: FontAwesome;
+  margin-left: 10px;
+  transition:0.5s all;
+  -webkit-transition:0.5s all;
+  -moz-transition:0.5s all;
+  -o-transition:0.5s all;
+  -ms-transition:0.5s all;
+}
+.pf-inline-edit.editable-click:hover .fa-pencil {
+  display: inline-block;
+}
+.form-horizontal .editable {
+  padding-top: 2px;
+}
+.editable-click, a.editable-click, a.editable-click:hover {
+  border-bottom:none;
+}
+.editableform {
+  width: 100%;
+}
+.editable-clear-x{
+  margin-top: -7px;
+}
+.editable-buttons.editable-buttons-bottom {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #f0f0f0;
+  border-color: currentcolor #ccc #ccc;
+  border-image: none;
+  border-style: none solid solid;
+  border-width: medium 1px 1px;
+  border:none;
+  box-shadow: 0 3px 6px rgba(111, 111, 111, 0.2);
+  outline: medium none;
+  padding: 0px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+}
+.editable-buttons .editable-cancel {
+  margin-left: -1px;
+}
+.editable-container.editable-inline {
+  width: 100%;
+  position: relative;
+  max-width: 220px;
+  margin-left: -7px;
+  margin-bottom: -2px;
+}
+.editable-container.editable-inline.editable-inline-large {
+  max-width: 480px;
+}
+.form-inline.editableform button {
+  border-top:none;
+}
+.form-inline.editableform {
+  width: 100%;
+}
+.control-group.form-group {
+  width: 100%;
+}
+.editable-input{
+  width: 100%;
+}
+.editable-input .form-control {
+  border-radius: 0;
+}
+.editable-buttons.editable-buttons-bottom {
+  margin-top: 0;
+}
+.input-group.form_datetime {
+  width: 100%;
+  margin-bottom: 0px;
+}
+.editable-container .input-group-addon {
+  padding: 2px 2px;
+}
+/*radio*/
+.editable-radiolist {
+  border: 1px solid #bababa;
+  padding: 6px 10px;
+}
+.editable-radiolist input {
+  margin-right: 5px;
+}
+.editable-radiolist label {
+  margin-right: 15px;
+}
+.combodate {
+  border:1px solid #bababa;
+  padding: 2px 6px;
+  display: block;
+}
+.inline-edit-wrapper {
+  border:1px solid #bababa;
+  padding: 6px 10px;
+  display: block;
+}
+.editableform .editable-checklist {
+  border:1px solid #bababa;
+  padding: 6px 10px;
+  display: block;
+}
+.editable-input .editable-address input {
+  font-weight: normal;
+  width: 100%;
+}
+.editable-input .editable-address label {
+  width: 100%;
+}
+.editable-input textarea {
+  resize: vertical;
+}
+.editable-checklist label input{
+  margin-right: 5px;
+}
+.editable-checklist label input[type="checkbox"] {
+  margin-right: 5px;
+}
+.editableform .form-control {
+  width: 100%;
+}
+.select2-container {
+  width: 100%;
+}
+.combodate .day {
+  width: 40px!important;
+  padding: 2px;
+}
+.combodate .month {
+  width: 90px!important;
+  padding: 2px;
+}
+.combodate .year {
+  width: 54px!important;
+  padding: 2px;
+}
