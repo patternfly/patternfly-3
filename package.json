@@ -44,6 +44,7 @@
     "lodash": "^4.17.4",
     "matchdep": "~1.0.1",
     "mz": "^2.6.0",
+    "npm-check-updates": "^2.12.1",
     "nsp": "^2.6.1",
     "open": "0.0.5",
     "patternfly-eng-release": "^3.26.35",
@@ -87,7 +88,8 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-release-post": "semantic-release post",
     "semantic-release-pre": "semantic-release pre",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "ncu": "ncu --semverLevel minor -p"
   },
   "description": "This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a \"skinned\" version of Bootstrap with additional components and customizations.",
   "repository": {
