@@ -242,6 +242,23 @@ or
 ```
 grunt karma
 ```
+### Visual Regression Testing
+
+Visual regression tests provide a way to detect if unintended visual changes have
+occured as a result of changes in the code. They work by taking screenshots of
+what components or pages should look like in a browser (known as references), and then comparing the references to screenshots of those components or pages with your code changes applied. Once the tests are complete, you will be a shown the test results in a browser.
+
+You can run all of the test scenarios with `npm run regressions`.
+
+You can run specific test scenarios with `npm run regressions <scenario-name>`. This
+will probably be most useful while you are doing active development and only want
+to check a few scenarios without running the entire suite.
+(Ex. `npm run regressions alerts buttons`)
+
+To approve conflicts run: `npm run approve-conflicts`. This is the command you want to run
+when the tests find conflicts, but the conflicts are intended. This command
+will replace the base image, so if you run the regression tests again, the
+tests should pass.
 
 ## Documentation
 

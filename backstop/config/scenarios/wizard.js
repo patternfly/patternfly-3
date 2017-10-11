@@ -1,4 +1,5 @@
 module.exports = [{
+  removeSelectors: ['.page-header + .alert'],
   label: 'wizard',
-  url: 'http://localhost:9000/wizard.html'
+  url: 'http://localhost:4200/wizard.html'
 }]

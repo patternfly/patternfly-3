@@ -1,4 +1,5 @@
 module.exports = [{
+  removeSelectors: ['.page-header + .alert'],
   label: 'toolbar',
-  url: 'http://localhost:9000/toolbar.html'
+  url: 'http://localhost:4200/toolbar.html'
 }]

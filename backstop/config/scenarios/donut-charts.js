@@ -1,5 +1,6 @@
-// module.exports = [{
-//   label: 'donut-charts',
-//   url: 'http://localhost:9000/donut-charts.html'
-// }]
-module.exports = []
+module.exports = [{
+  removeSelectors: ['.page-header + .alert'],
+  label: 'donut-charts',
+  url: 'http://localhost:4200/donut-charts.html',
+  disabled: true
+}]

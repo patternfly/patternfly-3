@@ -34,5 +34,7 @@ patternfly.spec
 
 #Ignore backstop regression test images and reports
 /backstop_data/bitmaps_test
-/backstop_data/bitmaps_reference
 /backstop_data/html_report
+/backstop_data/pdf_report
+/backstop_data/ci_report
+regression-report.pdf

@@ -1,34 +1,27 @@
 const path = require('path');
 const backstop = require('backstopjs');
+const server = require('./lib/server');
+const helpers = require('./lib/helpers');
 const config = require('./config');
 
-try {
-  const cliArguments = process.argv.filter((current, index) => {
-    return index > 1;
-  });
+server.start().then((webServer) => {
+  // check if arguments passed at the command line, and only run those
+  helpers.filterScenarios(config);
 
-  // if arguments are passed only run the given scenarios
-  if (cliArguments.length) {
-    let scenarios = [];
-
-    cliArguments.forEach((currentScenario) => {
-      let scenarioPath = path.join(__dirname, 'config', 'scenarios', `${currentScenario}.js`);
-      let scenario = require(scenarioPath);
-
-      scenarios.push(...scenario);
-    });
-
-    config.scenarios = scenarios;
-  }
-
+  // execute backstop
   backstop('reference', { config })
     .then(() => {
-      console.log('tests completed')
+      console.log('references completed successfully');
     })
     .catch((err) => {
-      console.log(err);
+      throw err;
+    })
+    .finally(() => {
+      //after backstop is complete, close the webserver
+      webServer.close();
     });
-
-} catch (e) {
-  console.log('Error: ', e.message);
-}
+})
+.catch((err) => {
+  // there was an error launching the web server
+  throw err;
+})
