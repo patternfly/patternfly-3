@@ -4689,15 +4689,27 @@ a.disabled {
 .navbar-pf .navbar-nav .badge {
   background-color: #0088ce;
   border-radius: 20px;
-  border: 1px solid #030303;
   color: #fff;
   cursor: pointer;
   font-size: 9px;
   font-weight: 700;
+  left: 26px;
+  margin: 0;
   padding: 2px 4px;
-  margin-top: -12px;
-  margin-left: -9px;
+  position: absolute;
+  min-width: 10px;
   min-height: 10px;
+  top: 6px;
+}
+@media (min-width: 768px) {
+  .navbar-pf .navbar-nav .badge {
+    left: auto;
+    right: 6px;
+    top: 3px;
+  }
+}
+.navbar-pf .navbar-nav .badge.badge-pf-bordered {
+  border: 1px solid #030303;
 }
 @media (max-width: 767px) {
   .navbar-pf .navbar-nav .active .dropdown-menu,
@@ -5358,11 +5370,16 @@ a.disabled {
   cursor: pointer;
   font-size: 9px;
   font-weight: 700;
-  margin-top: -15px;
-  margin-left: -12px;
+  left: 20px;
+  margin: 0;
   padding: 2px 4px;
+  position: absolute;
   min-width: 10px;
   min-height: 10px;
+  top: 18px;
+}
+.navbar-pf-vertical .nav .nav-item-iconic .badge.badge-pf-bordered {
+  border: 1px solid #1d1d1d;
 }
 .navbar-pf-vertical .nav .nav-item-iconic .caret,
 .navbar-pf-vertical .nav .nav-item-iconic .fa,
