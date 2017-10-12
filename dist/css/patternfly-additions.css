@@ -3362,6 +3362,53 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   width: 1px;
   z-index: 201;
 }
+.experimental-pf > * {
+  border: 2px solid #92d400;
+}
+.experimental-pf-bar {
+  background-color: #92d400;
+  border: none;
+  text-align: center;
+  position: relative;
+}
+.experimental-pf-more-info {
+  background-color: #92d400;
+  border: 0;
+  color: #030303;
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: static;
+}
+@media (min-width: 992px) {
+  .experimental-pf-more-info {
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  .experimental-pf-text {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+.experimental-pf-text a {
+  color: #030303;
+  text-decoration: underline;
+}
+.experimental-pf-text a:hover {
+  color: #030303;
+  cursor: pointer;
+}
+.btn-experimental-pf {
+  background-color: #92d400;
+  background-image: linear-gradient(to bottom, #ace12e 0, #92d400 100%);
+  border-color: #92d400;
+}
 .footer-pf-alt,
 .footer-pf {
   background-color: #030303;
