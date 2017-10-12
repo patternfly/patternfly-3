@@ -58,15 +58,25 @@
  .badge {
     background-color: @notification-badge-color;
     border-radius: 20px;
-    border:1px solid @navbar-pf-bg-color; //improves visibilty at smaller size
     color: @navbar-pf-vertical-active-color;
     cursor: pointer;
     font-size: (@font-size-base - 3);
     font-weight: 700;
+    left: 26px;
+    margin: 0;
     padding: 2px 4px;
-    margin-top:-12px;
-    margin-left:-9px;
+    position: absolute;
+    min-width: 10px;
     min-height: 10px;
+    top: 6px;
+    @media(min-width: @screen-sm-min) {
+      left: auto;
+      right: 6px;
+      top: 3px;
+    }
+    &.badge-pf-bordered {
+      border: 1px solid @navbar-pf-bg-color;
+    }
 }
 
     @media (max-width: @grid-float-breakpoint-max) {

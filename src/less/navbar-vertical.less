@@ -54,11 +54,16 @@
         cursor: pointer;
         font-size: (@font-size-base - 3);
         font-weight: 700;
-        margin-top: -15px;
-        margin-left: -12px;
+        left: 20px;
+        margin: 0;
         padding: 2px 4px;
+        position: absolute;
         min-width: 10px;
         min-height: 10px;
+        top: 18px;
+        &.badge-pf-bordered {
+          border: 1px solid @navbar-pf-vertical-bg-color;
+        }
       }
 
       .caret,
