@@ -216,34 +216,34 @@
   }
 }
 .hover-secondary-nav-pf {
-  width: calc(@nav-pf-vertical-width * 2);
+  width: ~"calc(@{nav-pf-vertical-width} * 2)";
   &.nav-pf-vertical-with-badges {
-    width: calc(@nav-pf-vertical-badges-width * 2);
+    width: ~"calc(@{nav-pf-vertical-badges-width} * 2)";
   }
 }
 .hover-tertiary-nav-pf {
-  width: calc(@nav-pf-vertical-width * 3);
+  width: ~"calc(@{nav-pf-vertical-width} * 3)";
   &.nav-pf-vertical-with-badges {
-    width: calc(@nav-pf-vertical-badges-width * 3);
+    width: ~"calc(@{nav-pf-vertical-badges-width} * 3)";
   }
   .nav-pf-secondary-nav {
-    width: calc(@nav-pf-vertical-width * 2);
+    width: ~"calc(@{nav-pf-vertical-width} * 2)";
     .collapsed-tertiary-nav-pf {
       width: @nav-pf-vertical-width;
     }
   }
   .nav-pf-tertiary-nav {
-    left: calc(@nav-pf-vertical-width * 2);
+    left: ~"calc(@{nav-pf-vertical-width} * 2)";
   }
   &.nav-pf-vertical-with-badges {
     .nav-pf-secondary-nav {
-      width: calc(@nav-pf-vertical-badges-width * 2);
+      width: ~"calc(@{nav-pf-vertical-badges-width} * 2)";
       .collapsed-tertiary-nav-pf {
         width: @nav-pf-vertical-badges-width;
       }
     }
     .nav-pf-tertiary-nav {
-      left: calc(@nav-pf-vertical-badges-width * 2);
+      left: ~"calc(@{nav-pf-vertical-badges-width} * 2)";
     }
   }
 }
@@ -262,15 +262,15 @@
     }
   }
   &.hover-secondary-nav-pf {
-    width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+    width: ~"calc(@{nav-pf-vertical-collapsed-width} + @{nav-pf-vertical-width})";
     &.nav-pf-vertical-with-badges {
-      width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-badges-width);
+      width: ~"calc(@{nav-pf-vertical-collapsed-width} + @{nav-pf-vertical-badges-width})";
     }
   }
   &.hover-tertiary-nav-pf {
-    width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-width * 2));
+    width: ~"calc(@{nav-pf-vertical-collapsed-width} + (@{nav-pf-vertical-width} * 2))";
     &.nav-pf-vertical-with-badges {
-      width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-badges-width * 2));
+      width: ~"calc(@{nav-pf-vertical-collapsed-width} + (@{nav-pf-vertical-badges-width} * 2))";
     }
   }
 }
@@ -347,7 +347,7 @@
   &.active,
   &:hover {
     > a {
-      width: calc(@nav-pf-vertical-width + 1px);
+      width: ~"calc(@{nav-pf-vertical-width} + 1px)";
       z-index: (@zindex-navbar-fixed + 1);
       &:after {
         right: 21px;
@@ -364,7 +364,7 @@
     &.active,
     &:hover {
       > a {
-        width: calc(@nav-pf-vertical-badges-width + 1px);
+        width: ~"calc(@{nav-pf-vertical-badges-width} + 1px)";
       }
     }
   }
@@ -423,9 +423,9 @@
 }
 .nav-pf-vertical.nav-pf-persistent-secondary.secondary-visible-pf {  // Persistent secondary nav settings
   @media (min-width: @screen-lg-min) { // secondary menu only persistent at lg screen
-    width: calc(@nav-pf-vertical-width * 2);
+    width: ~"calc(@{nav-pf-vertical-width} * 2)";
     &.nav-pf-vertical-with-badges {
-      width: calc(@nav-pf-vertical-badges-width * 2);
+      width: ~"calc(@{nav-pf-vertical-badges-width} * 2)";
     }
     &.collapsed-secondary-nav-pf {
       width: @nav-pf-vertical-width;
@@ -433,9 +433,9 @@
         width: @nav-pf-vertical-badges-width;
       }
       &.hover-tertiary-nav-pf {
-        width: calc(@nav-pf-vertical-width * 2);
+        width: ~"calc(@{nav-pf-vertical-width} * 2)";
         &.nav-pf-vertical-with-badges {
-          width: calc(@nav-pf-vertical-badges-width * 2);
+          width: ~"calc(@{nav-pf-vertical-badges-width} * 2)";
         }
       }
     }
@@ -446,7 +446,7 @@
       }
     }
     &.collapsed {
-      width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+      width: ~"calc(@{nav-pf-vertical-collapsed-width} + @{nav-pf-vertical-width})";
       &.collapsed-secondary-nav-pf {
         width: @nav-pf-vertical-width;
         &.nav-pf-vertical-with-badges {
@@ -460,16 +460,16 @@
         }
       }
       &.hover-tertiary-nav-pf {
-        width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-width * 2));
+        width: ~"calc(@{nav-pf-vertical-collapsed-width} + (@{nav-pf-vertical-width} * 2))";
         &.nav-pf-vertical-with-badges {
-          width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-badges-width * 2));
+          width: ~"calc(@{nav-pf-vertical-collapsed-width} + (@{nav-pf-vertical-badges-width} * 2))";
         }
       }
     }
     &.hover-tertiary-nav-pf {
-      width: calc(@nav-pf-vertical-width * 3);
+      width: ~"calc(@{nav-pf-vertical-width} * 3)";
       &.nav-pf-vertical-with-badges {
-        width: calc(@nav-pf-vertical-badges-width * 3);
+        width: ~"calc(@{nav-pf-vertical-badges-width} * 3)";
       }
     }
     .secondary-nav-item-pf.active {
@@ -579,7 +579,7 @@
       height: inherit;
       padding: @nav-pf-vertical-secondary-link-padding;
       margin-left: 20px;
-      width: calc(@nav-pf-vertical-width - 20px);
+      width: ~"calc(@{nav-pf-vertical-width} - 20px)";
 
       &:hover {
         .list-group-item-value {
@@ -632,7 +632,7 @@
       &.active,
       &:hover {
         > a {
-          width: calc(@nav-pf-vertical-width - 19px);
+          width: ~"calc(@{nav-pf-vertical-width} - 19px)";
           z-index: (@zindex-navbar-fixed + 3);
           &:after {
             right: 21px;
@@ -647,13 +647,13 @@
     .list-group-item {
       width: @nav-pf-vertical-badges-width;
       > a {
-        width: calc(@nav-pf-vertical-badges-width - 20px);
+        width: ~"calc(@{nav-pf-vertical-badges-width} - 20px)";
       }
       &.tertiary-nav-item-pf { // Secondary menu items with tertiary sub menus
         &.active,
         &:hover {
           > a {
-            width: calc(@nav-pf-vertical-badges-width - 19px);
+            width: ~"calc(@{nav-pf-vertical-badges-width} - 19px)";
           }
         }
       }
@@ -667,7 +667,7 @@
   border-top: none;
   bottom: 0;
   display: block;
-  left: calc(@nav-pf-vertical-width * 2);
+  left: ~"calc(@{nav-pf-vertical-width} * 2)";
   opacity: 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -753,7 +753,7 @@
     left: @nav-pf-vertical-collapsed-width;
     .list-group-item {
       > a {
-        width: calc(@nav-pf-vertical-width - 20px);
+        width: ~"calc(@{nav-pf-vertical-width} - 20px)";
         > .list-group-item-value { // Continue to show labels for secondary menu items
           display: inline-block;
         }
@@ -764,10 +764,10 @@
     }
   }
   .nav-pf-tertiary-nav { // Adjust left placement
-    left: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+    left: ~"calc(@{nav-pf-vertical-collapsed-width} + @{nav-pf-vertical-width})";
     .list-group-item {
       > a {
-        width: calc(@nav-pf-vertical-width - 20px);
+        width: ~"calc(@{nav-pf-vertical-width} - 20px)";
         > .list-group-item-value { // Continue to show labels for tertiary menu items
           display: inline-block;
         }
@@ -802,7 +802,7 @@
     }
   }
   &.hover-secondary-nav-pf {
-    width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-width);
+    width: ~"calc(@{nav-pf-vertical-collapsed-width} + @{nav-pf-vertical-width})";
 
     &.collapsed-secondary-nav-pf,
     &.collapsed-tertiary-nav-pf {
@@ -810,9 +810,9 @@
     }
   }
   &.hover-tertiary-nav-pf {
-    width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-width * 2));
+    width: ~"calc(@{nav-pf-vertical-collapsed-width} + (@{nav-pf-vertical-width} * 2))";
     &.collapsed-secondary-nav-pf {
-      width: calc(@nav-pf-vertical-width * 2);
+      width: ~"calc(@{nav-pf-vertical-width} * 2)";
     }
     &.collapsed-tertiary-nav-pf {
       width: @nav-pf-vertical-width;
@@ -822,15 +822,15 @@
     .nav-pf-secondary-nav {
       .list-group-item {
         > a {
-          width: calc(@nav-pf-vertical-badges-width - 20px);
+          width: ~"calc(@{nav-pf-vertical-badges-width} - 20px)";
         }
       }
     }
     .nav-pf-tertiary-nav {
-      left: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-badges-width);
+      left: ~"calc(@{nav-pf-vertical-collapsed-width} + @{nav-pf-vertical-badges-width})";
       .list-group-item {
         > a {
-          width: calc(@nav-pf-vertical-badges-width - 20px);
+          width: ~"calc(@{nav-pf-vertical-badges-width} - 20px)";
         }
       }
     }
@@ -844,16 +844,16 @@
       }
     }
     &.hover-secondary-nav-pf {
-      width: calc(@nav-pf-vertical-collapsed-width + @nav-pf-vertical-badges-width);
+      width: ~"calc(@{nav-pf-vertical-collapsed-width} + @{nav-pf-vertical-badges-width})";
       &.collapsed-secondary-nav-pf,
       &.collapsed-tertiary-nav-pf {
         width: @nav-pf-vertical-badges-width;
       }
     }
     &.hover-tertiary-nav-pf {
-      width: calc(@nav-pf-vertical-collapsed-width + (@nav-pf-vertical-width * 2));
+      width: ~"calc(@{nav-pf-vertical-collapsed-width} + (@{nav-pf-vertical-width} * 2))";
       &.collapsed-secondary-nav-pf {
-        width: calc(@nav-pf-vertical-width * 2);
+        width: ~"calc(@{nav-pf-vertical-width} * 2)";
       }
       &.collapsed-tertiary-nav-pf {
         width: @nav-pf-vertical-width;
