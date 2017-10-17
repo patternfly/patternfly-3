@@ -9367,6 +9367,10 @@ fieldset[disabled] .btn-primary.active {
 .dropup .caret:before {
   content: "\f106";
 }
+.dropdown-toggle:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
 .dropdown-menu .divider {
   background-color: #ededed;
   height: 1px;
