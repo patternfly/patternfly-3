@@ -1,5 +1,6 @@
-// module.exports = [{
-//   label: 'line-charts',
-//   url: 'http://localhost:9000/line-charts.html'
-// }]
-module.exports = []
+module.exports = [{
+  removeSelectors: ['.page-header + .alert'],
+  label: 'line-charts',
+  url: 'http://localhost:4200/line-charts.html',
+  disabled: true
+}]
