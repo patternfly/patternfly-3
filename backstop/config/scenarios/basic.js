@@ -1,4 +1,5 @@
 module.exports = [{
+  removeSelectors: ['.page-header + .alert'],
   label: 'basic',
-  url: 'http://localhost:9000/basic.html'
+  url: 'http://localhost:4200/basic.html'
 }]

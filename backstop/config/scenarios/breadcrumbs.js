@@ -1,4 +1,5 @@
 module.exports = [{
+  removeSelectors: ['.page-header + .alert'],
   label: 'breadcrumbs',
-  url: 'http://localhost:9000/breadcrumbs.html'
+  url: 'http://localhost:4200/breadcrumbs.html'
 }]

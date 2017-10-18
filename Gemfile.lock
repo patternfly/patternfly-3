@@ -37,9 +37,10 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-16
 
 DEPENDENCIES
   jekyll
 
 BUNDLED WITH
-   1.13.3
+   1.15.4

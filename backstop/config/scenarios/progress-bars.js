@@ -1,5 +1,5 @@
-// module.exports = [{
+// module.exports = [{ removeSelectors: ['.page-header + .alert'],
 //   label: 'progress-bars',
-//   url: 'http://localhost:9000/progress-bars.html'
+//   url: 'http://localhost:4200/progress-bars.html'
 // }]
 module.exports = []
