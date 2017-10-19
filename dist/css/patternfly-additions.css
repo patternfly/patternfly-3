@@ -3507,7 +3507,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   content: "\e611";
 }
 .pficon-disconnected:before {
-  content: "\e939";
+  content: "\e93c";
 }
 .pficon-domain:before {
   content: "\e919";
@@ -3534,6 +3534,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-flavor:before {
   content: "\e907";
+}
+.pficon-filter:before {
+  content: "\e943";
 }
 .pficon-folder-close:before {
   content: "\e607";
@@ -3565,6 +3568,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-infrastructure:before {
   content: "\e93d";
 }
+.pficon-integration:before {
+  content: "\e948";
+}
 .pficon-key:before {
   content: "\e924";
 }
@@ -3582,6 +3588,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-migration:before {
   content: "\e92e";
+}
+.pficon-monitoring:before {
+  content: "\e944";
 }
 .pficon-network:before {
   content: "\e909";
@@ -3614,8 +3623,14 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-plugged:before {
   content: "\e940";
 }
+.pficon-port:before {
+  content: "\e945";
+}
 .pficon-print:before {
   content: "\e612";
+}
+.pficon-process-automation:before {
+  content: "\e949";
 }
 .pficon-private:before {
   content: "\e914";
@@ -3675,6 +3690,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-search:before {
   content: "\e921";
 }
+.pficon-security:before {
+  content: "\e946";
+}
 .pficon-server:before {
   content: "\e90d";
 }
@@ -3683,6 +3701,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-service:before {
   content: "\e61e";
+}
+.pficon-services:before {
+  content: "\e947";
 }
 .pficon-service-catalog:before {
   content: "\e941";
