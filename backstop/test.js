@@ -17,10 +17,6 @@ server.start().then((webServer) => {
       throw err;
     })
     .finally(() => {
-      if (process.env.NODE_ENV !== 'test') {
-        helpers.generatePdfReport()
-      }
-
       // close the express server
       webServer.close();
     });
