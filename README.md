@@ -260,32 +260,6 @@ when the tests find conflicts, but the conflicts are intended. This command
 will replace the base image, so if you run the regression tests again, the
 tests should pass.
 
-### Visual Regression Testing
-
-Visual regression tests provide a way to detect if unintended visual changes have
-occured as a result of changes in the code. They work by taking screenshots of
-what components or pages should look like in a browser (known as references), and then
-comparing the references to screenshots of those components or pages with your code
-changes applied.
-
-In order for these tests to work you must have references generated before you
-make any code changes. This is done by running `npm run regressions:reference`,
-while the development server is running.
-
-After you have generated the references, you can run the tests at any time. This
-is done by running `npm run regressions:test`, while the development server is
-running. Once the tests are complete, you will be a shown the results in your
-browser.
-
-The steps for the entire process would like like this:
-
-- clone the project if needed
-- install the dependencies with `npm install` if needed
-- start the development server with `npm start`
-- generate the references with `npm run regressions:reference`
-- make any code changes that you would like to make
-- run the tests with `npm run regressions:test`
-
 ## Documentation
 
 See [https://www.patternfly.org](https://www.patternfly.org) and [http://getbootstrap.com/](http://getbootstrap.com/).
