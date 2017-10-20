@@ -5721,7 +5721,7 @@ a.disabled {
 }
 .drawer-pf-close,
 .drawer-pf-toggle-expand {
-  color: inherit;
+  color: #252525;
   cursor: pointer;
   line-height: inherit;
   padding: 2px 10px;
@@ -5731,7 +5731,7 @@ a.disabled {
 .drawer-pf-toggle-expand:hover,
 .drawer-pf-close:focus,
 .drawer-pf-toggle-expand:focus {
-  color: inherit;
+  color: #0088ce;
   text-decoration: none;
 }
 .drawer-pf-toggle-expand {
