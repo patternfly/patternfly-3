@@ -1,5 +1,7 @@
 /*global module,require*/
 var pageBuilder = require('./tests/pages/_script/page-builder');
+// var child_process = require('child_process');
+var exec = require('child_process').exec;
 
 module.exports = function (grunt) {
   'use strict';
@@ -357,6 +359,17 @@ module.exports = function (grunt) {
       });
   });
 
+  grunt.registerTask('storybookBuild', function () {
+    var done = this.async();
+    exec('npm run build-storybook', function (error, stdout, stderr) {
+      if (error) {
+        grunt.log.writeln(error.stack);
+        grunt.log.writeln('Error code: ' + error.code);
+      }
+      done();
+    });
+  });
+
   grunt.registerTask('pages', 'Builds the PatternFly test pages.', function (_target) {
     var target = _target || process.env.PF_PAGE_BUILDER || 'script';
     var done;
@@ -389,7 +402,8 @@ module.exports = function (grunt) {
     'eslint',
     'uglify',
     'htmlhint',
-    'stylelint'
+    'stylelint',
+    'storybookBuild'
   ]);
 
   grunt.registerTask('serve', [
