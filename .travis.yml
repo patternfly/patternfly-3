@@ -19,11 +19,13 @@ before_install:
   - rvm install 2.3.1
   - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
   - npm install -g bower grunt-cli
+  - npm install
   - npm install patternfly-eng-release
 
 install: true
 
 script:
+  - npm run regressions
   - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
 
 after_success:
