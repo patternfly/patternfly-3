@@ -1,6 +1,6 @@
 module.exports = [{
   removeSelectors: ['.page-header + .alert'],
   label: 'form',
-  url: 'http://localhost:4200/form.html',
+  url: 'dist/tests/form.html',
   disabled: true
 }]
