@@ -4032,7 +4032,7 @@ a.disabled {
   border-bottom: none;
 }
 .list-pf-item:hover {
-  background-color: #fafafa;
+  background-color: #edf8ff;
 }
 .list-pf-item.active {
   background-color: #ededed;
@@ -4237,7 +4237,7 @@ a.disabled {
   clear: both;
 }
 .list-view-pf .list-group-item.list-view-pf-expand-active {
-  background-color: #ededed;
+  background-color: #edf8ff;
   box-shadow: 0 2px 6px rgba(3, 3, 3, 0.2);
   z-index: 1;
 }
@@ -4249,7 +4249,7 @@ a.disabled {
   z-index: auto;
 }
 .list-view-pf .list-group-item:hover {
-  background-color: #ededed;
+  background-color: #edf8ff;
   border-left-color: transparent;
   border-right-color: transparent;
 }
