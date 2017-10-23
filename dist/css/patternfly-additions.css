@@ -5750,6 +5750,7 @@ a.disabled {
 .drawer-pf-action {
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 1px solid #d1d1d1;
 }
 .drawer-pf-action .btn-link {
   color: #0088ce;
