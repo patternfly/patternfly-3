@@ -1,6 +1,6 @@
 module.exports = [{
   label: 'dashboard',
-  url: 'http://localhost:4200/dashboard.html',
+  url: 'dist/tests/dashboard.html',
   removeSelectors: [
     '.page-header + .alert',
     '.toast-notifications-list-pf'
