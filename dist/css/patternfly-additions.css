@@ -5760,6 +5760,10 @@ a.disabled {
 .drawer-pf-action .btn-link .fa {
   margin-right: 3px;
 }
+.drawer-pf-action .btn-link .pficon-close {
+  position: relative;
+  top: 1px;
+}
 .drawer-pf-action .btn-link:hover {
   color: #00659c;
 }
