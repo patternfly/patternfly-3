@@ -6107,6 +6107,16 @@ a.disabled {
     margin-top: 5px;
   }
 }
+.skiplink-pf {
+  position: absolute;
+  top: 12px;
+  left: 100%;
+  /* moves off screen */
+  z-index: 1050;
+}
+.skiplink-pf:focus {
+  left: 10px;
+}
 @keyframes rotation {
   from {
     transform: rotate(0deg);
