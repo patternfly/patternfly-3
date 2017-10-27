@@ -1,5 +1,6 @@
 module.exports = [{
   removeSelectors: ['.page-header + .alert'],
   label: 'labels',
-  url: 'http://localhost:4200/labels.html'
+  url: 'dist/tests/labels.html',
+  disabled: true
 }]

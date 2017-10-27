@@ -1,5 +1,6 @@
 module.exports = [{
   removeSelectors: ['.page-header + .alert'],
   label: 'icons',
-  url: 'http://localhost:4200/icons.html'
+  url: 'dist/tests/icons.html',
+  disabled: true
 }]

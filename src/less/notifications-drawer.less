@@ -72,14 +72,14 @@
   }
 }
 .drawer-pf-close, .drawer-pf-toggle-expand {
-  color: inherit;
+  color: @gray-darker;
   cursor: pointer;
   line-height: inherit;
   padding: 2px 10px;
   position: absolute;
   &:hover,
   &:focus {
-    color: inherit;
+    color: @color-pf-blue-400;
     text-decoration: none;
   }
 }
@@ -100,11 +100,17 @@
 
 .drawer-pf-action {
   display: flex;
+  border-bottom: 1px solid @card-pf-border-color;
+  
   .btn-link {
     color: @link-color;
     padding: 10px 0;
     .pficon, .fa {
       margin-right: 3px;
+    }
+    .pficon-close {
+      position: relative;
+      top: 1px;
     }
 
     &:hover { color: @link-hover-color; }

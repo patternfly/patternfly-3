@@ -1,5 +1,6 @@
 module.exports = [{
   removeSelectors: ['.page-header + .alert'],
   label: 'bootstrap-touchspin',
-  url: 'http://localhost:4200/bootstrap-touchspin.html'
+  url: 'dist/tests/bootstrap-touchspin.html',
+  disabled: true
 }]

@@ -1,5 +1,6 @@
 module.exports = [{
   removeSelectors: ['.page-header + .alert'],
   label: 'time-picker',
-  url: 'http://localhost:4200/time-picker.html'
+  url: 'dist/tests/time-picker.html',
+  disabled: true
 }]

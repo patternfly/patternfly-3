@@ -1,7 +1,8 @@
+{% assign launchericons = include.icons %}
 {% if page.notification-drawer %}
-  {% include widgets/layouts/nav-vertical-notification-drawer.html launcher-icons=include.launcher-icons %}
+  {% include widgets/layouts/nav-vertical-notification-drawer.html icons=launchericons %}
 {% else %}
-  {% include widgets/layouts/navbar-vertical.html notification-drawer=true launcher-icons=include.launcher-icons %}
+  {% include widgets/layouts/navbar-vertical.html notification-drawer=true icons=launchericons %}
 {% endif %}
 <div class="nav-pf-vertical nav-pf-vertical-with-sub-menus
      {% if page.persistent-secondary %}nav-pf-persistent-secondary{% endif %}
