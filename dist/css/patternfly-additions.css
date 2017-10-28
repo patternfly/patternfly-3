@@ -6110,7 +6110,7 @@ a.disabled {
 .skiplink-pf {
   position: absolute;
   top: 12px;
-  left: 100%;
+  left: -300%;
   /* moves off screen */
   z-index: 1050;
 }

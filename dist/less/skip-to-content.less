@@ -2,11 +2,11 @@
 // Skip to content
 // --------------------------------------------------
 .skiplink-pf {
-position: absolute;
-top: 12px;
-left: 100%; /* moves off screen */
-z-index: @zindex-modal;
+  position: absolute;
+  top: @skiplink-pf-top;
+  left: -300%; /* moves off screen */
+  z-index: @zindex-modal;
 }
 .skiplink-pf:focus {
-  left: 10px;
+  left: @skiplink-pf-left;
 }
