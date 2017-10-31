@@ -25,6 +25,7 @@ npm.cmd
 
 # Ignore generated files
 patternfly.spec
+*.tgz
 
 # Ignore Desktop Services Store
 .DS_Store
