@@ -4660,10 +4660,6 @@ a.disabled {
     width: 100%;
   }
 }
-.login-pf .container [class^="alert"] {
-  background: transparent;
-  color: #fff;
-}
 .login-pf .container .details p:first-child {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 25px;
