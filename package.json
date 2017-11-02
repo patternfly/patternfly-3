@@ -54,7 +54,7 @@
     "npm-check-updates": "^2.12.1",
     "nsp": "^2.6.1",
     "open": "0.0.5",
-    "patternfly-eng-release": "^3.26.43",
+    "patternfly-eng-release": "^3.26.46",
     "pixrem": "^3.0.1",
     "require-all": "^2.2.0",
     "semantic-release": "^6.3.6",
