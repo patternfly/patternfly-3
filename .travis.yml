@@ -19,13 +19,11 @@ before_install:
   - rvm install 2.3.1
   - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
   - npm install -g bower grunt-cli
-  - npm install
   - npm install patternfly-eng-release
 
 install: true
 
 script:
-  - npm run regressions
   - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
 
 after_success:
@@ -35,7 +33,9 @@ after_success:
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -p;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-npm.sh || travis_terminate 0;
        npm run semantic-release-post;
-       - sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
+       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
+       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -o;
+       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -r;
      fi'
 
 branches:
