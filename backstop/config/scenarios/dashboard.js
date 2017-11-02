@@ -5,5 +5,5 @@ module.exports = [{
     '.page-header + .alert',
     '.toast-notifications-list-pf'
   ],
-  disabled: true
+  disabled: false
 }]
