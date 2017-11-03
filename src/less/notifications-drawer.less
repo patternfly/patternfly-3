@@ -101,7 +101,7 @@
 .drawer-pf-action {
   display: flex;
   border-bottom: 1px solid @card-pf-border-color;
-  
+
   .btn-link {
     color: @link-color;
     padding: 10px 0;
@@ -214,12 +214,11 @@
 /* Exclusive styles to work with Vertical Navigation */
 .navbar-pf-vertical {
   .drawer-pf {
-    height: calc(~"100vh - 80px");//to create a 20px offset bottom
-    top: 58px; //menu height;
-
+    height: calc(~"100vh - @{drawer-pf-top-vertical} - 20px");//to create a 20px offset bottom
+    top: @drawer-pf-top-vertical; //menu height;
       @media (max-width: @screen-xs-max) {
         width:100%;
-        height: calc(~"100vh - 58px");
+        height: calc(~"100vh - @{drawer-pf-top-vertical}");
       }
 
   }
@@ -239,12 +238,12 @@
 /* Exclusive styles to work with Horizontal Navigation */
 .navbar-pf {
   .drawer-pf {
-    height: calc(~"100vh - 46px");
-    top: 26px;
+    height: calc(~"100vh - @{drawer-pf-top-horizontal} - 20px");
+    top: @drawer-pf-top-horizontal;
     @media (max-width: @screen-xs-max) {
       width:100%;
-      height: calc(~"100vh - 58px");
-      top:34px;
+      height: calc(~"100vh - @{drawer-pf-top-horizontal} - 32px");
+      top:calc(~"@{drawer-pf-top-horizontal} + 8px");
     }
   }
   .drawer-pf-trigger-icon { cursor: pointer; }
