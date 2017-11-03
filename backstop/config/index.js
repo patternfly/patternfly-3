@@ -55,8 +55,8 @@ try {
     "report": reportTypes,
     "engine": "chrome",
     "engineFlags": [],
-    "asyncCaptureLimit": 20,
-    "asyncCompareLimit": 100,
+    "asyncCaptureLimit": 40,
+    "asyncCompareLimit": 50,
     "debug": false,
     "debugWindow": false,
     "resembleOutputOptions": {

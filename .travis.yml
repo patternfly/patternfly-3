@@ -1,10 +1,15 @@
-language: node_js
-node_js:
-  - '6'
-
+language: ruby
+rvm:
+  - 2.3
+# language: node_js
+# node_js:
+#   - '6'
+addons:
+  chrome: beta
 cache:
   directories:
     - node_modules
+    - ~/.npm
 
 notifications:
   email: false
@@ -15,28 +20,37 @@ env:
   - secure: KFSt/cOAh8+v9Mz9AroDg+YYGwkuXyC96ZtOMbcWxVAQzplrrpCD9zI0ZuOtKYg/YHu5mscLWbnXOzBug2J162/V9MyicETmXCdFx5ovu/5rTtbxQ6maoRWQQfcKmQVWNdUDF5rJJ7PU9H/gyXWKvbEpkfNRk6Wr7Oc3D8mYtgI=
   - secure: SBD8QHLUy1/kCZiLV2OYpqdFTQUWUfkWLx1bdtKFQhWt+aUYBTBdbbb/A7otm+LbBNe5NWWOX1lkciubEs9XlRUdQfS/WqId3c99+457NXeEPtIX6fC92/hrQITFb6vvv7T71ltUs3Q1X2CL82nCas+2LNYlB1/WxKgB8Tr7qPQ=
 
-before_install:
-  - rvm install 2.3.1
-  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
-  - npm install -g bower grunt-cli
-  - npm install patternfly-eng-release
+# before_install:
+#   - rvm install 2.3.1
+#   - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+#   - npm install -g bower grunt-cli
+#   - npm install patternfly-eng-release
 
-install: true
+before_install:
+  - npm install -g bower grunt-cli
+
+# install: true
+install:
+  - npm install
 
 script:
-  - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
+  - grunt build
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - npm run regressions
+# script:
+#   - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
 
-after_success:
-  - 'if [[ "$TRAVIS_SECURE_ENV_VARS" = "true" && "$TRAVIS_BRANCH" = "master-dist" ]]; then
-       npm prune;
-       npm run semantic-release-pre;
-       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -p;
-       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-npm.sh || travis_terminate 0;
-       npm run semantic-release-post;
-       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
-       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -o;
-       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -r;
-     fi'
+# after_success:
+#   - 'if [[ "$TRAVIS_SECURE_ENV_VARS" = "true" && "$TRAVIS_BRANCH" = "master-dist" ]]; then
+#        npm prune;
+#        npm run semantic-release-pre;
+#        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -p;
+#        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-npm.sh || travis_terminate 0;
+#        npm run semantic-release-post;
+#        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
+#        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -o;
+#        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -r;
+#      fi'
 
 branches:
   except:
