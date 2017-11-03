@@ -214,7 +214,7 @@
 /* Exclusive styles to work with Vertical Navigation */
 .navbar-pf-vertical {
   .drawer-pf {
-    height: calc(~"100vh - @{drawer-pf-top-vertical} - 20px");//to create a 20px offset bottom
+    height: ~"calc(100vh - @{drawer-pf-top-vertical} - 20px)";//to create a 20px offset bottom
     top: @drawer-pf-top-vertical; //menu height;
       @media (max-width: @screen-xs-max) {
         width:100%;
@@ -238,7 +238,7 @@
 /* Exclusive styles to work with Horizontal Navigation */
 .navbar-pf {
   .drawer-pf {
-    height: calc(~"100vh - @{drawer-pf-top-horizontal} - 20px");
+    height: ~"calc(100vh - @{drawer-pf-top-horizontal} - 20px)";
     top: @drawer-pf-top-horizontal;
     @media (max-width: @screen-xs-max) {
       width:100%;

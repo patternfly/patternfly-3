@@ -55,7 +55,12 @@ exclude: [
 
 ### Sass and/or Rails
 
-A [Sass port of PatternFly](https://github.com/patternfly/patternfly-sass) is available, as is a [Sass-based Rails Gem](https://rubygems.org/gems/patternfly-sass).
+**Patternfly now supports Sass natively!**
+Sass is included in the `dist/sass` directory. Just import `dist\sass\patternfly.scss` and `dist\sass\patternfly-additions.scss` to get started!
+
+Please note that the packages listed below are no longer supported and will not include any features or fixes introduced after Patternfly 3.23.  
+- NPM package: [patternfly-sass 3.23.2](https://github.com/patternfly/patternfly-sass)
+- Ruby Gem: [patternfly-sass 3.23.2](https://rubygems.org/gems/patternfly-sass)
 
 ### AngularJS
 
@@ -203,7 +208,7 @@ The tool will prompt you with several questions that it will use to correctly fo
 
 ### CSS
 
-In development, styling is written and managed through multiple lesscss files. In order to generate a CSS file of all styling, run the build Gruntjs task:
+In development, styling is written and managed through multiple Less files. In order to generate a CSS file of all styling, run the build Gruntjs task:
 
 ```
 npm run build
@@ -215,7 +220,27 @@ or
 grunt build
 ```
 
-This task will compile and minify the lesscss files into CSS files located at `dist/css/patternfly.min.css` and `dist/css/patternfly-additional.min.css`.
+This task will compile and minify the Less files into CSS files located at `dist/css/patternfly.min.css` and `dist/css/patternfly-additions.min.css`.
+
+### Less to Sass Conversion
+Any time style changes are introduced, the Sass code will need to be updated to reflect those changes. This can be accomplished by adding a `--sass` flag to the tasks above:
+
+```
+npm start -- --sass
+```
+*Note the extra ` -- ` between `npm start` and the `--sass` flag. This syntax passes the flag on to the underlying grunt process instead of the npm command itself.*
+
+or
+
+```
+grunt build --sass
+```
+
+These tasks will run a Less to Sass conversion, then compile and minify the resulting Sass into CSS, creating the same files as described in the *CSS* section: `dist/css/patternfly.min.css` and `dist/css/patternfly-additions.min.css`. This makes it easy to switch between Less and Sass builds for testing purposes.
+
+This Less to Sass Conversion step will be accomplished and managed as a part of any Pull Request which includes Less file changes. Although contributors may want to build and test their style changes with Sass before submitting a Pull Request, this step should always be tested and validated by reviewers before a style change is merged and released. If a contributor is having issues with Sass conversion that they cannot resolve, Pull Request reviewers will need to ensure that the Sass conversion step is successfully accomplished and committed to the Pull Request before it is approved and merged.
+
+
 
 ### PatternFlyIcons Font
 
