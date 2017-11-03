@@ -7727,6 +7727,11 @@ table.dataTable th:active {
 .wizard-pf-steps-indicator li a .wizard-pf-step-title {
   margin-left: 10px;
 }
+@media (min-width: 768px) {
+  .wizard-pf-steps-indicator li a .wizard-pf-step-title {
+    margin-left: 0;
+  }
+}
 .wizard-pf-steps-indicator li a .wizard-pf-step-title-substep {
   font-weight: normal;
   margin-left: 10px;
