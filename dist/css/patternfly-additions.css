@@ -5855,7 +5855,7 @@ a.disabled {
 }
 /* Exclusive styles to work with Vertical Navigation */
 .navbar-pf-vertical .drawer-pf {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 58px - 20px);
   top: 58px;
 }
 @media (max-width: 767px) {
@@ -5875,14 +5875,14 @@ a.disabled {
 }
 /* Exclusive styles to work with Horizontal Navigation */
 .navbar-pf .drawer-pf {
-  height: calc(100vh - 46px);
+  height: calc(100vh - 26px - 20px);
   top: 26px;
 }
 @media (max-width: 767px) {
   .navbar-pf .drawer-pf {
     width: 100%;
-    height: calc(100vh - 58px);
-    top: 34px;
+    height: calc(100vh - 26px - 32px);
+    top: calc(26px + 8px);
   }
 }
 .navbar-pf .drawer-pf-trigger-icon {
