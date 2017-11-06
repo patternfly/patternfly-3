@@ -129,6 +129,8 @@
       line-height: 25px;
       max-width: 120px;
       // If flexbox is supported, do not set max-width, take all space with just some right padding
+      // This generates a known issue on IE11:
+      // https://github.com/patternfly/patternfly/pull/810
       @supports (display: flex) {
         flex: 1;
         max-width: none;
