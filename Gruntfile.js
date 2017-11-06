@@ -558,7 +558,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build:less', [
-    'clean',
+    'clean:build',
     'concat',
     'copy',
     'pages',
