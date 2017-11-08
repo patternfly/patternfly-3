@@ -1,4 +1,284 @@
 /* PatternFly additions to Bootstrap */
+/*! =========================================================
+ * bootstrap-slider.js
+ *
+ * Maintainers:
+ *		Kyle Kemp
+ *			- Twitter: @seiyria
+ *			- Github:  seiyria
+ *		Rohit Kalkur
+ *			- Twitter: @Rovolutionary
+ *			- Github:  rovolution
+ *
+ * =========================================================
+  *
+ * bootstrap-slider is released under the MIT License
+ * Copyright (c) 2017 Kyle Kemp, Rohit Kalkur, and contributors
+ * 
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ * 
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * ========================================================= */
+.slider {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.slider.slider-horizontal {
+  width: 100%;
+  height: 16px;
+}
+.slider.slider-horizontal .slider-track {
+  height: 8px;
+  width: 100%;
+  margin-top: -4px;
+  top: 50%;
+  left: 0;
+}
+.slider.slider-horizontal .slider-selection,
+.slider.slider-horizontal .slider-track-low,
+.slider.slider-horizontal .slider-track-high {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+.slider.slider-horizontal .slider-tick,
+.slider.slider-horizontal .slider-handle {
+  margin-left: -8px;
+}
+.slider.slider-horizontal .slider-tick.triangle,
+.slider.slider-horizontal .slider-handle.triangle {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  border-width: 0 8px 8px 8px;
+  width: 0;
+  height: 0;
+  border-bottom-color: #ededed;
+  margin-top: 0;
+}
+.slider.slider-horizontal .slider-tick-container {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.slider.slider-horizontal .slider-tick-label-container {
+  white-space: nowrap;
+  margin-top: 16px;
+}
+.slider.slider-horizontal .slider-tick-label-container .slider-tick-label {
+  padding-top: 16px * 0.2;
+  display: inline-block;
+  text-align: center;
+}
+.slider.slider-horizontal.slider-rtl .slider-track {
+  left: initial;
+  right: 0;
+}
+.slider.slider-horizontal.slider-rtl .slider-tick,
+.slider.slider-horizontal.slider-rtl .slider-handle {
+  margin-left: initial;
+  margin-right: -8px;
+}
+.slider.slider-horizontal.slider-rtl .slider-tick-container {
+  left: initial;
+  right: 0;
+}
+.slider.slider-vertical {
+  height: 210px;
+  width: 16px;
+}
+.slider.slider-vertical .slider-track {
+  width: 8px;
+  height: 100%;
+  left: 25%;
+  top: 0;
+}
+.slider.slider-vertical .slider-selection {
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.slider.slider-vertical .slider-track-low,
+.slider.slider-vertical .slider-track-high {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.slider.slider-vertical .slider-tick,
+.slider.slider-vertical .slider-handle {
+  margin-top: -8px;
+}
+.slider.slider-vertical .slider-tick.triangle,
+.slider.slider-vertical .slider-handle.triangle {
+  border-width: 8px 0 8px 8px;
+  width: 1px;
+  height: 1px;
+  border-left-color: #ededed;
+  border-right-color: #ededed;
+  margin-left: 0;
+  margin-right: 0;
+}
+.slider.slider-vertical .slider-tick-label-container {
+  white-space: nowrap;
+}
+.slider.slider-vertical .slider-tick-label-container .slider-tick-label {
+  padding-left: 16px * 0.2;
+}
+.slider.slider-vertical.slider-rtl .slider-track {
+  left: initial;
+  right: 25%;
+}
+.slider.slider-vertical.slider-rtl .slider-selection {
+  left: initial;
+  right: 0;
+}
+.slider.slider-vertical.slider-rtl .slider-tick.triangle,
+.slider.slider-vertical.slider-rtl .slider-handle.triangle {
+  border-width: 8px 8px 8px 0;
+}
+.slider.slider-vertical.slider-rtl .slider-tick-label-container .slider-tick-label {
+  padding-left: initial;
+  padding-right: 16px * 0.2;
+}
+.slider.slider-disabled .slider-handle {
+  background-image: linear-gradient(to bottom, #DFDFDF 0%, #BEBEBE 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdfdfdf', endColorstr='#ffbebebe', GradientType=0);
+}
+.slider.slider-disabled .slider-track {
+  background-image: linear-gradient(to bottom, #E5E5E5 0%, #E9E9E9 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe5e5e5', endColorstr='#ffe9e9e9', GradientType=0);
+  cursor: not-allowed;
+}
+.slider input {
+  display: none;
+}
+.slider .tooltip.top {
+  margin-top: -36px;
+}
+.slider .tooltip-inner {
+  white-space: nowrap;
+  max-width: none;
+}
+.slider .hide {
+  display: none;
+}
+.slider-track {
+  position: absolute;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #F5F5F5 0%, #F9F9F9 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 1px;
+}
+.slider-selection {
+  position: absolute;
+  background-image: linear-gradient(to bottom, #F9F9F9 0%, #F5F5F5 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#fff5f5f5', GradientType=0);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  border-radius: 1px;
+}
+.slider-selection.tick-slider-selection {
+  background-image: linear-gradient(to bottom, #0088ce 0%, #39a5dc 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088ce', endColorstr='#ff39a5dc', GradientType=0);
+}
+.slider-track-low,
+.slider-track-high {
+  position: absolute;
+  background: transparent;
+  box-sizing: border-box;
+  border-radius: 1px;
+}
+.slider-handle {
+  position: absolute;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #39a5dc;
+  background-image: linear-gradient(to bottom, #fafafa 0%, #ededed 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffededed', GradientType=0);
+  filter: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  border: 0px solid transparent;
+}
+.slider-handle.round {
+  border-radius: 50%;
+}
+.slider-handle.triangle {
+  background: transparent none;
+}
+.slider-handle.custom {
+  background: transparent none;
+}
+.slider-handle.custom::before {
+  line-height: 16px;
+  font-size: 20px;
+  content: '\2605';
+  color: #726204;
+}
+.slider-tick {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: linear-gradient(to bottom, #F9F9F9 0%, #F5F5F5 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#fff5f5f5', GradientType=0);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  filter: none;
+  opacity: 0.8;
+  border: 0px solid transparent;
+}
+.slider-tick.round {
+  border-radius: 50%;
+}
+.slider-tick.triangle {
+  background: transparent none;
+}
+.slider-tick.custom {
+  background: transparent none;
+}
+.slider-tick.custom::before {
+  line-height: 16px;
+  font-size: 20px;
+  content: '\2605';
+  color: #726204;
+}
+.slider-tick.in-selection {
+  background-image: linear-gradient(to bottom, #0088ce 0%, #39a5dc 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088ce', endColorstr='#ff39a5dc', GradientType=0);
+  opacity: 1;
+}
 @media (min-width: 768px) {
   .form-search .combobox-container,
   .form-inline .combobox-container {
@@ -2632,6 +2912,55 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .bootstrap-select.btn-group .dropdown-menu li:not(.disabled) a:hover small,
 .bootstrap-select.btn-group .dropdown-menu li:not(.disabled) a:focus small {
   color: #9c9c9c;
+}
+.slider-tick-label-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-left: 0!important;
+}
+.slider-tick-label {
+  width: auto !important;
+}
+.slider .tooltip {
+  top: -10px;
+}
+.slider-track {
+  background-color: #ededed;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1), 0 0px 2px #ededed;
+  border: 1px solid #bbb;
+}
+.slider-selection {
+  background-image: linear-gradient(to bottom, #0088ce 0%, #39a5dc 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088ce', endColorstr='#ff39a5dc', GradientType=0);
+}
+.slider-handle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #bbb;
+}
+.slider-tick {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 2px, transparent 2px) !important;
+  box-shadow: none;
+}
+.slider-pf {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.slider-pf * {
+  margin-right: 10px;
+}
+.slider-pf *:last-child {
+  margin: 0;
+}
+.slider-pf .slider {
+  width: auto;
+  -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default {
