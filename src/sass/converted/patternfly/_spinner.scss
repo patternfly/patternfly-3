@@ -46,27 +46,27 @@
 }
 
 .ie9 .spinner {
-  background: url("#{$img-path}/#{$img-spinner}") no-repeat;
+  background: url("#{$img-path}#{$img-spinner}") no-repeat;
   border: 0;
   &.spinner-inverse {
-    background-image: url("#{$img-path}/#{$img-spinner-inverse}");
+    background-image: url("#{$img-path}#{$img-spinner-inverse}");
   }
   &.spinner-inverse-lg {
-    background-image: url("#{$img-path}/#{$img-spinner-inverse-lg}");
+    background-image: url("#{$img-path}#{$img-spinner-inverse-lg}");
   }
   &.spinner-inverse-sm {
-    background-image: url("#{$img-path}/#{$img-spinner-inverse-sm}");
+    background-image: url("#{$img-path}#{$img-spinner-inverse-sm}");
   }
   &.spinner-inverse-xs {
-    background-image: url("#{$img-path}/#{$img-spinner-inverse-xs}");
+    background-image: url("#{$img-path}#{$img-spinner-inverse-xs}");
   }
   &.spinner-lg {
-    background-image: url("#{$img-path}/#{$img-spinner-lg}");
+    background-image: url("#{$img-path}#{$img-spinner-lg}");
   }
   &.spinner-sm {
-    background-image: url("#{$img-path}/#{$img-spinner-sm}");
+    background-image: url("#{$img-path}#{$img-spinner-sm}");
   }
   &.spinner-xs {
-    background-image: url("#{$img-path}/#{$img-spinner-xs}");
+    background-image: url("#{$img-path}#{$img-spinner-xs}");
   }
 }

@@ -4,7 +4,7 @@
 
 .about-modal-pf {
   background-color: $color-pf-black-900;
-  background-image: url("#{$img-path}/#{$modal-about-pf-bg-img}");
+  background-image: url("#{$img-path}#{$modal-about-pf-bg-img}");
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: 216px auto;

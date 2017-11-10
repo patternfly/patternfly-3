@@ -33,6 +33,9 @@ patternfly.spec
 #Ignore generated dist files
 /dist
 
+# Ignore less and sass test builds
+/tests/build
+
 #Ignore backstop regression test images and reports
 /backstop_data/bitmaps_test
 /backstop_data/html_report

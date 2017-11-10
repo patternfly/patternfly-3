@@ -14,7 +14,7 @@
   &:focus,
   &:active,
   &.active,
-  .open .dropdown-toggle.#{&} {
+  .open .dropdown-toggle#{&} {
     background-color: $background;
     background-image: none;
     border-color: $border;
@@ -22,7 +22,7 @@
   }
   &:active,
   &.active,
-  .open .dropdown-toggle.#{&} {
+  .open .dropdown-toggle#{&} {
     background-image: none;
     &:hover,
     &:focus,
