@@ -120,6 +120,8 @@
     }
   },
   "files": [
-    "dist/"
+    "dist/",
+    "tests/",
+    "npm-shrinkwrap.json"
   ]
 }
