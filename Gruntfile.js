@@ -369,8 +369,14 @@ module.exports = function (grunt) {
             },
             {
               //
-              pattern: /^\$(img|font)-path:(\s*)(".*")(.*);$/mgi,
-              replacement: '\$$$1-path:$2if($pf-sass-asset-helper, "", $3)$4;',
+              pattern: /^\$(img|font)-path:(\s*)"(.*)"(.*);(.*)$/mgi,
+              replacement: '\$$$1-path:$2if($pf-sass-asset-helper, "", "$3/")$4;$5',
+              order: 1
+            },
+            {
+              //
+              pattern: /^\$icon-font-path:(\s*)"(.*)"(.*);(.*)$/mgi,
+              replacement: '\$icon-font-path:$1if($pf-sass-asset-helper, "", "$2")$3;$4',
               order: 1
             },
             {
@@ -443,13 +449,13 @@ module.exports = function (grunt) {
             },
             {
               pattern: /url\(\"\#\{\$font-path\}\/(.+?)\"\)/gi,
-              replacement: 'url(if($bootstrap-sass-asset-helper, twbs-font-path("#{$font-path}/$1"), "#{$font-path}/$1"))',
-              order: 29
+              replacement: 'url(if($bootstrap-sass-asset-helper, twbs-font-path("#{$font-path}$1"), "#{$font-path}$1"))',
+              order: 30
             },
             {
               pattern: /url\(\"\#\{\$img-path\}\/(.+?)\"\)/gi,
-              replacement: 'url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$img-path}/$1"), "#{$img-path}/$1"))',
-              order: 30
+              replacement: 'url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$img-path}$1"), "#{$img-path}$1"))',
+              order: 31
             },
           ]
         }
