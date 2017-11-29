@@ -3,6 +3,10 @@
 // --------------------------------------------------
 // Bootstrap overrides and PatternFly-specific variables
 
+// Sass compass/sprockets asset helper flag
+// ----------------------
+@pf-sass-asset-helper:                                      false;
+
 // PatternFly-specific
 // -------------------
 @import "color-variables.less";
@@ -46,7 +50,7 @@
 @dropdown-link-focus-color:                                         @color-pf-white;
 @flyout-transition-pf:                                              all 200ms cubic-bezier(.35, 0, .25, 1);
 @font-family-monospace:                                             Menlo, Monaco, Consolas, monospace;
-@font-path:                                                         "../fonts";
+@font-path:                                                         "../fonts/";
 @footer-pf-bg-color:                                                @color-pf-black;
 @footer-pf-padding-left:                                            25px;
 @footer-pf-padding-top:                                             10px;
@@ -57,7 +61,7 @@
 @icon-font-name-pf:                                                 "PatternFlyIcons-webfont";
 @icon-prefix:                                                       pficon;
 @img-bg-login:                                                      "bg-login.jpg";
-@img-path:                                                          "../img";
+@img-path:                                                          "../img/";
 @img-spinner:                                                       "spinner.gif";
 @img-spinner-inverse:                                               "spinner-inverse.gif";
 @img-spinner-inverse-lg:                                            "spinner-inverse-lg.gif";
@@ -72,6 +76,7 @@
 @list-pf-active-border-color:                                       @color-pf-black-400;
 @list-pf-header-background-color:                                   @color-pf-black-200;
 @list-pf-hover-background-color:                                    @color-pf-blue-25;
+@list-pf-main-content-width:                                        70%; // sets the proportional width of the main content vs the additional content
 @list-pf-padding:                                                   20px;
 @list-view-accented-border:                                         @color-pf-blue-300;
 @list-view-active-bg:                                               @color-pf-blue-50;
@@ -372,6 +377,8 @@
 @brand-warning:                                                     @color-pf-orange;
 @breadcrumb-bg:                                                     transparent;
 @breadcrumb-separator:                                              "\f105";
+@bs-datetimepicker-timepicker-font-size:                            1em;
+@bs-datetimepicker-btn-hover-bg:                                    transparent;
 @btn-danger-bg:                                                     @color-pf-red-200;
 @btn-danger-border:                                                 @color-pf-red-300;
 @btn-default-border:                                                @color-pf-black-400;
@@ -391,7 +398,7 @@
 @gray-light:                                                        lighten(@color-pf-black, 60%);   // #999
 @gray-lighter:                                                      lighten(@color-pf-black, 93.5%); // #eee
 @grid-gutter-width:                                                 40px;
-@icon-font-path:                                                    "../fonts/";
+@icon-font-path:                                                    @font-path;
 @input-bg-disabled:                                                 @color-pf-black-150;
 @input-border:                                                      @color-pf-black-400;
 @line-height-base:                                                  1.66666667; // 20/12

@@ -49,7 +49,8 @@ module.exports = function (grunt) {
     },
     clean: {
       build: '<%= config.dist %>',
-      sass: 'src/sass/converted'
+      sass: 'src/sass/converted',
+      testBuild: 'tests/build'
     },
     concat: {
       js: {
@@ -81,7 +82,7 @@ module.exports = function (grunt) {
       }
     },
     copy: {
-      main: {
+      fonts: {
         files: [
           // copy Bootstrap font files
           {
@@ -95,32 +96,45 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'node_modules/font-awesome/fonts/',
             src: ['*'],
-            dest: 'dist/fonts/'},
-          // copy Patternfly less files
-          {
-            expand: true,
-            cwd: 'src/less/',
-            src: ['*'],
-            dest: 'dist/less/'},
+            dest: 'dist/fonts/'
+          },
           // copy Patternfly font files
           {
             expand: true,
             cwd: 'src/fonts/',
             src: ['*'],
-            dest: 'dist/fonts/'},
-          //copy images
+            dest: 'dist/fonts/'
+          }
+        ]
+      },
+      images: {
+        // copy images
+        files: [
           {
             expand: true,
             cwd: 'src/img/',
             src: ['**'],
-            dest: 'dist/img/'},
+            dest: 'dist/img/'
+          }
+        ]
+      },
+      less: {
+        files: [
+          // copy Patternfly less files
+          {
+            expand: true,
+            cwd: 'src/less/',
+            src: ['*'],
+            dest: 'dist/less/'
+          },
           // Dependencies
           // copy Bootstrap less files
           {
             expand: true,
             cwd: 'node_modules/bootstrap/less/',
             src: ['**'],
-            dest: 'dist/less/dependencies/bootstrap/'},
+            dest: 'dist/less/dependencies/bootstrap/'
+          },
           // copy Font Awesome less files
           {
             expand: true,
@@ -169,47 +183,32 @@ module.exports = function (grunt) {
       },
       sass: {
         files: [
-          // copy Bootstrap sass files
-          {
-            expand: true,
-            cwd: 'node_modules/bootstrap-sass/assets/stylesheets/',
-            src: ['**/*', '!_bootstrap-*.js'],
-            dest: 'dist/sass/dependencies/bootstrap'
-          },
-          // copy font-awesome sass files
-          {
-            expand: true,
-            cwd: 'node_modules/font-awesome/scss/',
-            src: ['*.scss'],
-            dest: 'dist/sass/dependencies/font-awesome'
-          },
+
           // copy bootstrap-select sass files
           {
             expand: true,
-            cwd: 'node_modules/bootstrap-select/sass/',
-            src: '*.scss',
-            dest: 'dist/sass/dependencies/bootstrap-select'
+            cwd: 'node_modules/bootstrap-select/sass',
+            src: '**/*.scss',
+            dest: 'dist/sass/patternfly/dependencies/bootstrap-select'
           },
-          // copy datetimepicker sass files
+          // copy bootstrap-touchspin css file and change extension to scss
+          {
+            expand: false,
+            src: 'node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css',
+            dest: 'dist/sass/patternfly/dependencies/bootstrap-touchspin/_jquery.bootstrap-touchspin.scss'
+          },
+          // copy c3 css file and change extension to scss
+          {
+            expand: false,
+            src: 'node_modules/c3/c3.css',
+            dest: 'dist/sass/patternfly/dependencies/c3/_c3.scss'
+          },
+          // copy converted sass files
           {
             expand: true,
-            cwd: 'node_modules/eonasdan-bootstrap-datetimepicker/src/sass/',
-            src: '*.scss',
-            dest: 'dist/sass/dependencies/bootstrap-datetimepicker'
-          },
-          //copy c3 css file to sass dependencies
-          {
-            expand: true,
-            src: 'node_modules/c3',
-            src: '*.css',
-            dest: 'dist/sass/dependencies/c3'
-          },
-          //copy bootstrap-touchspin css files to sass dependencies
-          {
-            expand: true,
-            src: 'node_modules/bootstrap-touchspin/dist/',
-            src: '*.css',
-            dest: 'dist/sass/dependencies/bootstrap-touchspin'
+            cwd: 'node_modules/eonasdan-bootstrap-datetimepicker/src/sass',
+            src: '**/*.scss',
+            dest: 'dist/sass/patternfly/dependencies/eonasdan-bootstrap-datetimepicker/'
           },
           // copy converted sass files
           {
@@ -232,6 +231,28 @@ module.exports = function (grunt) {
           // copy js src file
           {expand: true, cwd: 'src/js/', src: ['*.js'], dest: 'dist/js/'}
         ]
+      },
+      lessBuild: {
+        files: [
+          {
+            // copy css built from less into dist/css
+            expand: true,
+            cwd: 'tests/build/less',
+            src: ['**/*.css', '**/*.map'],
+            dest: 'dist/css/'
+          }
+        ]
+      },
+      sassBuild:{
+        files: [
+          {
+            // copy css built from less into dist/css
+            expand: true,
+            cwd: 'tests/build/sass',
+            src: ['**/*.css', '**/*.map'],
+            dest: 'dist/css/'
+          }
+        ]
       }
     },
     csscount: {
@@ -240,7 +261,7 @@ module.exports = function (grunt) {
           'dist/css/patternfly*.min.css'
         ],
         options: {
-          maxSelectors: 4096
+          maxSelectors: 4095
         }
       }
     },
@@ -259,9 +280,9 @@ module.exports = function (grunt) {
       production: {
         files: [{
           expand: true,
-          cwd: 'dist/css',
-          src: ['patternfly*.css', '!*.min.css'],
-          dest: 'dist/css',
+          cwd: 'tests/build',
+          src: ['**/patternfly*.css', '**/!*.min.css'],
+          dest: 'tests/build',
           ext: '.min.css',
         }],
         options: {
@@ -272,7 +293,7 @@ module.exports = function (grunt) {
     less: {
       patternfly: {
         files: {
-          'dist/css/patternfly.css': 'src/less/patternfly.less',
+          'tests/build/less/patternfly.css': 'src/less/patternfly.less',
         },
         options: {
           paths: [
@@ -282,13 +303,13 @@ module.exports = function (grunt) {
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapFilename: 'dist/css/patternfly.css.map',
+          sourceMapFilename: 'tests/build/less/patternfly.css.map',
           sourceMapURL: 'patternfly.css.map'
         }
       },
       patternflyAdditions: {
         files: {
-          'dist/css/patternfly-additions.css': 'src/less/patternfly-additions.less'
+          'tests/build/less/patternfly-additions.css': 'src/less/patternfly-additions.less'
         },
         options: {
           paths: [
@@ -298,7 +319,7 @@ module.exports = function (grunt) {
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapFilename: 'dist/css/patternfly-additions.css.map',
+          sourceMapFilename: 'tests/build/less/patternfly-additions.css.map',
           sourceMapURL: 'patternfly-additions.css.map'
         }
       }
@@ -309,8 +330,8 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'src/less',
-            src: ['*.less','!patternfly*.less', '!application-launcher.less'],
-            dest: 'src/sass/converted/partials/',
+            src: ['*.less','!patternfly.less', '!patternfly-additions.less', '!application-launcher.less'],
+            dest: 'src/sass/converted/patternfly/',
             rename: function(dest, src) {
               return dest + '_' + src.replace('.less', '.scss');
             }
@@ -320,21 +341,21 @@ module.exports = function (grunt) {
             cwd: 'node_modules/bootstrap-datepicker/less',
             src: ['*.less'],
             ext: '.scss',
-            dest: 'dist/sass/dependencies/bootstrap-datepicker'
+            dest: 'dist/sass/patternfly/dependencies/bootstrap-datepicker'
           },
           {
             expand: true,
             cwd: 'node_modules/bootstrap-switch/src/less/bootstrap3',
             src: ['**/*.less'],
             ext: '.scss',
-            dest: 'dist/sass/dependencies/bootstrap-switch'
+            dest: 'dist/sass/patternfly/dependencies/bootstrap-switch'
           },
           {
             expand: true,
             cwd: 'node_modules/patternfly-bootstrap-combobox/less',
             src: ['*.less'],
             ext: '.scss',
-            dest: 'dist/sass/dependencies/bootstrap-combobox'
+            dest: 'dist/sass/patternfly/dependencies/bootstrap-combobox'
           },
         ],
         options: {
@@ -347,10 +368,22 @@ module.exports = function (grunt) {
               order: 0
             },
             {
+              //
+              pattern: /^\$(img|font)-path:(\s*)(".*")(.*);$/mgi,
+              replacement: '\$$$1-path:$2if($pf-sass-asset-helper, "", $3)$4;',
+              order: 1
+            },
+            {
+              // Add !default flag to variable declarations without leading whitespace.
+              pattern: /^(\$.*?:.*?);(\s*\/\/.*)?$/mgi,
+              replacement: '$1 !default;$2',
+              order: 2
+            },
+            {
               // Include mixins with no arguments
               pattern: /(\s+)\.([\w\-]+)\(\)/gi,
               replacement: '$1@include $2()',
-              order: 2
+              order: 3
             },
             {
               // Interpolates second ampersand where double ampersands are used
@@ -362,7 +395,7 @@ module.exports = function (grunt) {
               // Interpolates ampersands that directly follow (are touching) a definition
               // e.g. somedef& becomes somedef#{&}
               pattern: /(\w+)\&/gi,
-              replacement: '$1.#{&}',
+              replacement: '$1#{&}',
               order: 23
             },
             {
@@ -407,7 +440,17 @@ module.exports = function (grunt) {
               pattern: /\&:extend\((.*)\)/gi,
               replacement: '@extend $1',
               order: 28
-            }
+            },
+            {
+              pattern: /url\(\"\#\{\$font-path\}\/(.+?)\"\)/gi,
+              replacement: 'url(if($bootstrap-sass-asset-helper, twbs-font-path("#{$font-path}/$1"), "#{$font-path}/$1"))',
+              order: 29
+            },
+            {
+              pattern: /url\(\"\#\{\$img-path\}\/(.+?)\"\)/gi,
+              replacement: 'url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$img-path}/$1"), "#{$img-path}/$1"))',
+              order: 30
+            },
           ]
         }
       }
@@ -415,28 +458,17 @@ module.exports = function (grunt) {
     sass: {
       patternfly: {
         files: {
-          'dist/css/patternfly.css': 'dist/sass/patternfly.scss',
+          'tests/build/sass/patternfly.css': 'src/sass/build.scss',
         },
         options: {
           outputStyle: 'expanded',
           includePaths: [
-            'node_modules/',
-            'dist/sass/dependencies',
+            'node_modules/bootstrap-sass/assets/stylesheets',
+            'node_modules/font-awesome-sass/assets/stylesheets',
+            'node_modules/'
           ],
         }
       },
-      patternflyAdditions: {
-        files: {
-          'dist/css/patternfly-additions.css': 'dist/sass/patternfly-additions.scss'
-        },
-        options: {
-          outputStyle: 'expanded',
-          includePaths: [
-            'node_modules/',
-            'dist/sass/dependencies',
-          ],
-        }
-      }
     },
     uglify: {
       options: {
@@ -471,11 +503,11 @@ module.exports = function (grunt) {
       },
       less: {
         files: ['src/less/*.less'],
-        tasks: ['less']
+        tasks: ['less', 'copy:lessBuild']
       },
       sass: {
         files: ['dist/sass/**/*.scss', 'src/sass/**/*.scss'],
-        tasks: ['copy:sass','sass']
+        tasks: ['copy:sass','sass', 'copy:sassBuild']
       },
       css: {
         files: ['dist/css/patternfly*.css', 'dist/css/!*.min.css'],
@@ -529,9 +561,9 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,     // Enable dynamic expansion.
-            cwd: 'dist/css/',      // Src matches are relative to this path.
-            src: ['*.css'], // Actual pattern(s) to match.
-            dest: 'dist/css'   // Destination path prefix.
+            cwd: 'tests/build/',      // Src matches are relative to this path.
+            src: ['**/*.css'], // Actual pattern(s) to match.
+            dest: 'tests/build'   // Destination path prefix.
           }
         ]
       }
@@ -557,42 +589,31 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build:less', [
-    'clean:build',
-    'concat',
-    'copy',
-    'pages',
-    'less',
-    'cssmin',
-    'postcss',
-    'csscount',
-    'eslint',
-    'uglify',
-    'htmlhint',
-    'stylelint'
-  ]);
-
-  grunt.registerTask('build:sass', [
-    'clean',
-    'concat',
-    'lessToSass',
-    'copy',
-    'pages',
-    'sass',
-    'cssmin',
-    'postcss',
-    'csscount',
-    'eslint',
-    'uglify',
-    'htmlhint',
-    'stylelint'
-  ]);
-
   grunt.registerTask('build', function(){
+    grunt.task.run([
+      'clean',
+      'concat',
+      'pages',
+      'lessToSass',
+      'copy:fonts',
+      'copy:images',
+      'copy:less',
+      'copy:sass',
+      'copy:js',
+      'sass',
+      'less',
+      'cssmin',
+      'postcss',
+      'eslint',
+      'uglify',
+      'htmlhint',
+      'stylelint'
+    ]);
+
     if(buildSass){
-      grunt.task.run('build:sass');
+      grunt.task.run('copy:sassBuild');
     } else {
-      grunt.task.run('build:less');
+      grunt.task.run(['copy:lessBuild','csscount']);
     }
   });
 

@@ -33,6 +33,7 @@
     "datatables-colvis": "~1.1.2",
     "eonasdan-bootstrap-datetimepicker": "~4.17.47",
     "font-awesome": "~4.7.0",
+    "font-awesome-sass": "~4.7.0",
     "google-code-prettify": "~1.0.5",
     "jquery": "~3.2.1",
     "matchHeight": "~0.7.2",

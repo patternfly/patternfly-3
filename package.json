@@ -76,6 +76,7 @@
     "datatables.net-select": "~1.2.0",
     "drmonty-datatables-colvis": "~1.1.2",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "font-awesome-sass": "^4.7.0",
     "google-code-prettify": "~1.0.5",
     "jquery-match-height": "^0.7.2",
     "moment": "~2.14.1",
