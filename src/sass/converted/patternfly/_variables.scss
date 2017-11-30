@@ -5,7 +5,7 @@
 
 // Sass compass/sprockets asset helper flag
 // ----------------------
-$pf-sass-asset-helper:                                      false !default;
+$pf-sass-asset-helper:                                              false !default;
 
 // PatternFly-specific
 // -------------------
@@ -157,7 +157,7 @@ $nav-pf-vertical-secondary-item-padding:                            0 0 5px 0 !d
 $nav-pf-vertical-secondary-link-height:                             63px !default;
 $nav-pf-vertical-secondary-link-padding:                            4px 0 2px 0 !default;
 $nav-pf-vertical-secondary-list-header-margin:                      30px 20px 10px 20px !default;
-$nav-pf-vertical-tertiary-active-color:                            $color-pf-white !default;
+$nav-pf-vertical-tertiary-active-color:                             $color-pf-white !default;
 $nav-pf-vertical-tertiary-active-bg-color:                          $color-pf-black-800 !default;
 $nav-pf-vertical-tertiary-indicator-padding:                        0 !default;
 $nav-pf-vertical-tertiary-bg-color:                                 $color-pf-black-700 !default;
@@ -398,7 +398,7 @@ $gray-darker:                                                       lighten($col
 $gray-light:                                                        lighten($color-pf-black, 60%) !default;   // #999
 $gray-lighter:                                                      lighten($color-pf-black, 93.5%) !default; // #eee
 $grid-gutter-width:                                                 40px !default;
-$icon-font-path:                                                    $font-path !default;
+$icon-font-path:                                                    if($pf-sass-asset-helper, "", "../fonts/") !default;
 $input-bg-disabled:                                                 $color-pf-black-150 !default;
 $input-border:                                                      $color-pf-black-400 !default;
 $line-height-base:                                                  1.66666667 !default; // 20/12
