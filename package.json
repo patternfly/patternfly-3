@@ -12,7 +12,6 @@
     "@commitlint/cli": "^3.2.0",
     "autoprefixer": "^6.4.0",
     "backstopjs": "^3.0.0",
-    "bootstrap-slider": "^9.9.0",
     "chromy": "^0.5.5",
     "commitizen": "^2.9.6",
     "commitlint-config-cz": "^0.5.0",
@@ -64,6 +63,7 @@
   "optionalDependencies": {
     "bootstrap-datepicker": "~1.6.4",
     "bootstrap-select": "^1.12.2",
+    "bootstrap-slider": "^9.9.0",
     "bootstrap-switch": "~3.3.4",
     "bootstrap-touchspin": "~3.1.1",
     "c3": "~0.4.11",
