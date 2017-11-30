@@ -3,6 +3,10 @@
 // --------------------------------------------------
 // Bootstrap overrides and PatternFly-specific variables
 
+// Sass compass/sprockets asset helper flag
+// ----------------------
+@pf-sass-asset-helper:                                              false;
+
 // PatternFly-specific
 // -------------------
 @import "color-variables.less";
@@ -72,6 +76,7 @@
 @list-pf-active-border-color:                                       @color-pf-black-400;
 @list-pf-header-background-color:                                   @color-pf-black-200;
 @list-pf-hover-background-color:                                    @color-pf-blue-25;
+@list-pf-main-content-width:                                        70%; // sets the proportional width of the main content vs the additional content
 @list-pf-padding:                                                   20px;
 @list-view-accented-border:                                         @color-pf-blue-300;
 @list-view-active-bg:                                               @color-pf-blue-50;
@@ -152,7 +157,7 @@
 @nav-pf-vertical-secondary-link-height:                             63px;
 @nav-pf-vertical-secondary-link-padding:                            4px 0 2px 0;
 @nav-pf-vertical-secondary-list-header-margin:                      30px 20px 10px 20px;
-@nav-pf-vertical-tertiary-active-color:                            @color-pf-white;
+@nav-pf-vertical-tertiary-active-color:                             @color-pf-white;
 @nav-pf-vertical-tertiary-active-bg-color:                          @color-pf-black-800;
 @nav-pf-vertical-tertiary-indicator-padding:                        0;
 @nav-pf-vertical-tertiary-bg-color:                                 @color-pf-black-700;
@@ -372,6 +377,8 @@
 @brand-warning:                                                     @color-pf-orange;
 @breadcrumb-bg:                                                     transparent;
 @breadcrumb-separator:                                              "\f105";
+@bs-datetimepicker-timepicker-font-size:                            1em;
+@bs-datetimepicker-btn-hover-bg:                                    transparent;
 @btn-danger-bg:                                                     @color-pf-red-200;
 @btn-danger-border:                                                 @color-pf-red-300;
 @btn-default-border:                                                @color-pf-black-400;
