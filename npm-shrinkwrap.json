@@ -19,6 +19,12 @@
       "resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.4.tgz",
       "optional": true
     },
+    "bootstrap-slider": {
+      "version": "9.10.0",
+      "from": "bootstrap-slider@>=9.9.0 <10.0.0",
+      "resolved": "https://registry.npmjs.org/bootstrap-slider/-/bootstrap-slider-9.10.0.tgz",
+      "optional": true
+    },
     "bootstrap-switch": {
       "version": "3.3.4",
       "from": "bootstrap-switch@>=3.3.4 <3.4.0",
