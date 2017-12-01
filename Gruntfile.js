@@ -99,6 +99,8 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'node_modules/bootstrap-datepicker/less/', src: ['**'], dest: 'dist/less/dependencies/bootstrap-datepicker/'},
           // copy Bootstrap-Select less files
           {expand: true, cwd: 'node_modules/bootstrap-select/less/', src: ['**'], dest: 'dist/less/dependencies/bootstrap-select/'},
+          // copy Bootstrap-Slider less files
+          {expand: true, cwd: 'node_modules/bootstrap-slider/src/less', src: ['**'], dest: 'dist/less/dependencies/bootstrap-slider/'},
           // Bootstrap Switch less files must be manually copied because of edits made to source less for strict-math purposes
           // manually copy 'node_modules/bootstrap-switch/src/less/bootstrap3/' and make sure any math is wrapped with parentheses
           // copy Bootstrap Touchspin css file
