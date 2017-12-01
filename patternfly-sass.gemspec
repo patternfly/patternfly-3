@@ -15,6 +15,16 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'bootstrap-sass', '~> 3.3.7'
   s.add_runtime_dependency 'font-awesome-sass', '~> 4.6.2'
 
-  s.files      = `git ls-files`.split("\n")
-  s.test_files = `git ls-files -- tests/*`.split("\n")
+  s.files = [
+    'patternfly-sass.gemspec',
+    'LICENSE.txt',
+    'README.md',
+    'CODE_OF_CONDUCT.md',
+    'QUICKSTART.md',
+    'OPEN_SOURCE_LICENCES.txt',
+    Dir.glob('dist/sass/**/*'),
+    Dir.glob('dist/js/**/*'),
+    Dir.glob('dist/fonts/**/*'),
+    Dir.glob('dist/img/**/*')
+  ].flatten
 end
