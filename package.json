@@ -66,6 +66,7 @@
     "bootstrap-datepicker": "~1.6.4",
     "bootstrap-sass": "^3.3.7",
     "bootstrap-select": "^1.12.2",
+    "bootstrap-slider": "^9.9.0",
     "bootstrap-switch": "~3.3.4",
     "bootstrap-touchspin": "~3.1.1",
     "c3": "~0.4.11",
@@ -123,6 +124,8 @@
     }
   },
   "files": [
-    "dist/"
+    "dist/",
+    "tests/",
+    "npm-shrinkwrap.json"
   ]
 }
