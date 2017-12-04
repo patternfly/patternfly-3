@@ -56,9 +56,9 @@ exclude: [
 ### Sass and/or Rails
 
 **Patternfly now supports Sass natively!**
-Sass is included in the `dist/sass` directory. Just import `dist\sass\patternfly.scss` and `dist\sass\patternfly-additions.scss` to get started!
+Sass is included in the `dist/sass` directory. Just add `node_modules` to your build tool's Sass include paths then `@import 'patternfly/dist/sass/patternfly';` in your Sass to get started!
 
-Please note that the packages listed below are no longer supported and will not include any features or fixes introduced after Patternfly 3.23.  
+Please note that the packages listed below are no longer supported and will not include any features or fixes introduced after Patternfly 3.23.2  
 - NPM package: [patternfly-sass 3.23.2](https://github.com/patternfly/patternfly-sass)
 - Ruby Gem: [patternfly-sass 3.23.2](https://rubygems.org/gems/patternfly-sass)
 
@@ -223,7 +223,7 @@ grunt build
 This task will compile and minify the Less files into CSS files located at `dist/css/patternfly.min.css` and `dist/css/patternfly-additions.min.css`.
 
 ### Less to Sass Conversion
-Any time style changes are introduced, the Sass code will need to be updated to reflect those changes. This can be accomplished by adding a `--sass` flag to the tasks above:
+Any time style changes are introduced, the Sass code will need to be updated to reflect those changes. The conversion is accomplished as part of the build, but in order to test the CSS you will need to build it from Sass:
 
 ```
 npm start -- --sass
@@ -236,11 +236,137 @@ or
 grunt build --sass
 ```
 
-These tasks will run a Less to Sass conversion, then compile and minify the resulting Sass into CSS, creating the same files as described in the *CSS* section: `dist/css/patternfly.min.css` and `dist/css/patternfly-additions.min.css`. This makes it easy to switch between Less and Sass builds for testing purposes.
+These tasks will run a Less to Sass conversion, then compile and minify the resulting Sass into CSS, creating a `dist/css/patternfly.css` file. Note that building from Sass does not create the `dist/css/patternfly-additions.css` file, which is the expected behavior.
 
-This Less to Sass Conversion step will be accomplished and managed as a part of any Pull Request which includes Less file changes. Although contributors may want to build and test their style changes with Sass before submitting a Pull Request, this step should always be tested and validated by reviewers before a style change is merged and released. If a contributor is having issues with Sass conversion that they cannot resolve, Pull Request reviewers will need to ensure that the Sass conversion step is successfully accomplished and committed to the Pull Request before it is approved and merged.
+The Less to Sass Conversion step will be accomplished and managed as a part of any Pull Request which includes Less file changes. Although contributors may want to build and test their style changes with Sass before submitting a Pull Request, this step should always be tested and validated by reviewers before a style change is merged and released. If a contributor is having issues with Sass conversion that they cannot resolve, Pull Request reviewers will need to ensure that the Sass conversion step is successfully accomplished, tested, and included in the Pull Request before it is approved and merged.
 
+### Scenarios to Avoid when Making Less Style Updates
 
+Sass and Less do not have perfect feature parity, which can sometimes throw a wrench into the conversion process described above. Furthermore, a failed conversion may be somewhat transparent since it may create Sass that will compile to unexpected, but valid CSS. The following are a few known scenarios that can be easily avoided to prevent failures in the Less to Sass conversion process.
+
+#### Non-parametric Mixins
+Sass does not support non-parametric mixins in the same way that Less does. Mixins must be explictly declared in Sass, whereas any class definition in Less can be used as a non-parametric mixin. Sass does not have a feature that perfectly parallels this behavior, so we have to use the closest thing which is the `@extend` statement. However, an edge case exists where `@extend` statements are not allowed within media queries in Sass. This creates a scenario where uncompilable Sass code can be generated from perfectly acceptable Less. For example:  
+**Less:**
+```
+  .applauncher-pf {
+    .applauncher-pf-title {
+        .sr-only();
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+   .applauncher-pf;
+  }
+```
+
+**Converts to Sass:**
+```
+  .applauncher-pf {
+    .applauncher-pf-title {
+      @extend .sr-only;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    @extend applauncher-pf; //Invalid Sass
+  }
+```
+
+This breaks for two reasons. We cannot use the `@extend` statement directly inside a media query, and even if we are able to work around that by making applauncher-pf into a mixin and using the `@include` directive, `.applauncher-pf .applauncher-pf-title` uses the `@extend` directive, which would still fall within the media query via the mixin invocation. To fix this, the Less would need to be adjusted like this:
+
+**Less**
+```
+  // Explicitly define a non-parametric sr-only mixin.
+  .sr-only() {
+    // sr-only rules;
+  }
+
+  // Explicitly define a non-parametric applauncher-pf mixin.
+  .applauncher-pf() {
+    .applauncher-pf-title {
+      // Explicitly invoke sr-only mixin.
+      .sr-only();
+    }
+  }
+
+  // Define the .applauncher-pf class and explicitly invoke the applauncher-pf
+  // mixin.
+  .applauncher-pf {
+    .applauncher-pf();
+  }
+
+  @media (min-width: @screen-sm-min) {
+    // Explicitly invoke applauncher-pf mixin inside of media query
+   .applauncher-pf();
+  }
+```
+
+**Converts to Sass:**
+```
+  @mixin sr-only() {
+    // sr-only rules
+  }
+
+  @mixin applauncher-pf() {
+    .applauncher-pf-title {
+      @include sr-only();
+    }
+  }
+
+  .applauncher-pf {
+    @include applauncher-pf();
+  }
+
+  @media (min-width: @screen-sm-min) {
+    @include applauncher-pf();
+  }
+```
+
+#### Tilde-Escaped Strings
+Strings that are escaped using the tilde in Less get converted to the Sass `unquote()` function. This causes Sass compilation issues when using escaped strings inside native CSS functions like `calc()`. Here is what happens:  
+Less:
+```
+height: calc(~"100vh - 20px");
+```
+Converts to Sass:
+```
+height: calc(unqoute("100vh - 20px")):
+```
+Which compiles directly to CSS and does not work as expected:
+```
+height: calc(unqoute("100vh - 20px")):
+```
+
+To fix this, move the tilde operator outside of the `calc()` statement:
+
+Less:
+```
+height: ~"calc(100vh - 20px)";
+```
+Converts to Sass:
+```
+height: unqoute("calc(100vh - 20px)");
+```
+Compiles to CSS:
+```
+height: calc(100vh - 20px);
+```
+
+#### Comma Separated CSS Rules
+Using complex, comma separated rules in things like box shadows or backgrounds will cause conversion problems if they are not properly escaped. These rules should be escaped, and mixins and variables should not be used inline. For example, this statement should not be used in Less:
+```
+box-shadow: inset 0 1px 1px fade(@color-pf-black, 7.5%), 0 0 6px lighten(@state-danger-text, 20%);
+```
+
+Instead, mixins should be assigned to variables, and variables should be interpolated in an escaped string like this:
+
+```
+@color1: fade(@color-pf-black, 7.5%);
+@color2: lighten(@state-danger-text, 20%);
+box-shadow: ~"inset 0 1px 1px @{color1}, 0 0 6px @{color2}";
+```
+
+This is especially important when passing a complex rule to a mixin.
 
 ### PatternFlyIcons Font
 
