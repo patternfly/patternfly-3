@@ -1,5 +1,4 @@
 const backstop = require('backstopjs');
-const browserSync = require('browser-sync').create();
 const path = require('path');
 const helpers = require('./lib/helpers');
 const config = require('./config');

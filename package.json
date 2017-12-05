@@ -12,7 +12,6 @@
     "@commitlint/cli": "^3.2.0",
     "autoprefixer": "^6.4.0",
     "backstopjs": "^3.0.0",
-    "browser-sync": "^2.18.13",
     "chromy": "^0.5.5",
     "commitizen": "^2.9.6",
     "commitlint-config-cz": "^0.5.0",
