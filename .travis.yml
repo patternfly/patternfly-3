@@ -23,9 +23,6 @@ before_install:
   - npm install -g bower grunt-cli
   - npm install patternfly-eng-release
 
-before_install:
-  - npm install -g bower grunt-cli
-
 install: true
 
 script:
