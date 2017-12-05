@@ -13,6 +13,6 @@ backstop('test', { config })
   })
   .catch((err) => {
     if (err) {
-      console.log(err)
+      throw err;
     }
   });
