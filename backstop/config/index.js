@@ -25,21 +25,6 @@ try {
         "label": "large-device",
         "width": 1280,
         "height": 720
-      },
-      {
-        "label": "medium-device",
-        "width": 1024,
-        "height": 768
-      },
-      {
-        "label": "small-device",
-        "width": 768,
-        "height": 1024
-      },
-      {
-        "label": "extra-small-device",
-        "width": 480,
-        "height": 320
       }
     ],
     "onBeforeScript": "chromy/onBefore.js",
@@ -55,8 +40,9 @@ try {
     "report": reportTypes,
     "engine": "chrome",
     "engineFlags": [],
-    "asyncCaptureLimit": 20,
-    "asyncCompareLimit": 100,
+    "engineOptions": {},
+    "asyncCaptureLimit": 1,
+    "asyncCompareLimit": 1,
     "debug": false,
     "debugWindow": false,
     "resembleOutputOptions": {
@@ -67,8 +53,10 @@ try {
       },
       "errorType": "movement",
       "transparency": 0.15
-    }
-  };
+    },
+    "misMatchThreshold": 7.0,
+    "requireSameDimensions": false
+  }
 }
 
 module.exports = config

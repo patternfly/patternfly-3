@@ -6,6 +6,9 @@ cache:
   directories:
     - node_modules
 
+addons:
+  chrome: stable
+
 notifications:
   email: false
 
