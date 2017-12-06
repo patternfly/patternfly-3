@@ -31,6 +31,7 @@ module.exports = function (grunt) {
           livereload: true,
           base: [
             projectConfig.src,
+            projectConfig.dist,
             projectConfig.dist + '/tests'
           ],
           port: 9000
