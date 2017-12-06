@@ -44,8 +44,5 @@
 }
 
 .btn-experimental-pf {
-  &:extend(.btn-default);
-  background-color: @color-pf-light-green-400;
-  background-image: linear-gradient(to bottom, @color-pf-light-green-300 0, @color-pf-light-green-400 100%);
-  border-color: @color-pf-light-green-400;
+  .button-variant(@btn-default-color; @color-pf-light-green-400; @color-pf-light-green-300; @color-pf-light-green-400; @color-pf-light-green-400);
 }

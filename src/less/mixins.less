@@ -1,12 +1,9 @@
 //
-// Mixins
+// Patternfly Mixins
 // --------------------------------------------------
-// Bootstrap overrides and PatternFly-specific mixins
+// PatternFly-specific mixins
 
-// Bootstrap overrides
-// -------------------
-
-// Button variants
+// Patternfly button variants.
 .button-variant(@color; @background; @background-image-start; @background-image-stop; @border) {
   background-color: @background;
   #gradient > .vertical(@background-image-start, @background-image-stop);
@@ -48,41 +45,19 @@
   }
 }
 
-// Form control outline
-.form-control-outline(@color: @input-border-focus) {
-  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
-  &:focus {
-    border-color: @color;
-    outline: 0 !important;
-    .box-shadow(~"inset 0 1px 1px rgba(3, 3, 3, 0.075), 0 0 8px @{color-rgba}");
-  }
-}
-
-// Gradients
-#gradient {
-  .striped(@color: fade(@color-pf-black, 15%); @angle: -45deg) {
-    background-image: linear-gradient(@angle, @color 25%, @color 26%, transparent 27%, transparent 49%, @color 50%, @color 51%, transparent 52%, transparent 74%, @color 75%, @color 76%, transparent 77%);
-  }
-}
-
-// Horizontal dividers
-.nav-divider(@color: @color-pf-black-200, @margin: 4px 1px) {
-  background-color: @color;
+// SASS CONVERSION FIX.
+// Allows inclusion of sr-only rules in nested media queries where @extends .sr-only
+// will not work.
+.sr-only-pf() {
+  position: absolute;
+  width: 1px;
   height: 1px;
-  margin: @margin;
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
-
-// Placeholder text
-.placeholder(@color: @input-color-placeholder) {
-  &:-moz-placeholder            { color: @color; font-style: italic; } // Firefox 4-18
-  &::-moz-placeholder           { color: @color; font-style: italic; opacity: 1; } // Firefox 19+
-  &:-ms-input-placeholder       { color: @color; font-style: italic; } // Internet Explorer 10+
-  &::-webkit-input-placeholder  { color: @color; font-style: italic; } // Safari and Chrome
-}
-
-// PatternFly-specific
-// -------------------
 
 .tab-indicator(@background: @gray-light-pf, @left: 15px, @right: 15px) {
   &:before {
@@ -104,4 +79,3 @@
   white-space: nowrap;
   word-wrap: normal;
 }
-
