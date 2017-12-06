@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.30.2",
+  "version": "0.0.0-semantically-released",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
@@ -11,6 +11,12 @@
       "version": "1.6.4",
       "from": "bootstrap-datepicker@>=1.6.4 <1.7.0",
       "resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.6.4.tgz",
+      "optional": true
+    },
+    "bootstrap-sass": {
+      "version": "3.3.7",
+      "from": "bootstrap-sass@>=3.3.7 <4.0.0",
+      "resolved": "https://registry.npmjs.org/bootstrap-sass/-/bootstrap-sass-3.3.7.tgz",
       "optional": true
     },
     "bootstrap-select": {
@@ -94,6 +100,12 @@
       "version": "4.7.0",
       "from": "font-awesome@>=4.7.0 <5.0.0",
       "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz"
+    },
+    "font-awesome-sass": {
+      "version": "4.7.0",
+      "from": "font-awesome-sass@>=4.7.0 <5.0.0",
+      "resolved": "https://registry.npmjs.org/font-awesome-sass/-/font-awesome-sass-4.7.0.tgz",
+      "optional": true
     },
     "google-code-prettify": {
       "version": "1.0.5",

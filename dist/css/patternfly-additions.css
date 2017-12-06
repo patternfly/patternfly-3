@@ -2690,8 +2690,8 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .bootstrap-datepicker.form-control[readonly]:focus {
   border-color: #0088ce;
-  outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 136, 206, 0.6);
+  outline: 0 !important;
+  box-shadow: inset 0 1px 1px rgba(3, 3, 3, 0.075), 0 0 8px rgba(0, 136, 206, 0.6);
 }
 .bootstrap-datepicker.form-control[readonly]:focus {
   border-color: #0088ce !important;
@@ -2904,6 +2904,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border: 1px solid #bbb;
 }
 .slider-tick {
+  background-color: transparent !important;
   background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 2px, transparent 2px) !important;
   box-shadow: none;
 }
@@ -3697,7 +3698,55 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .btn-experimental-pf {
   background-color: #92d400;
-  background-image: linear-gradient(to bottom, #ace12e 0, #92d400 100%);
+  background-image: linear-gradient(to bottom, #ace12e 0%, #92d400 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fface12e', endColorstr='#ff92d400', GradientType=0);
+  border-color: #92d400;
+  color: #4d5258;
+}
+.btn-experimental-pf:hover,
+.btn-experimental-pf:focus,
+.btn-experimental-pf:active,
+.btn-experimental-pf.active,
+.open .dropdown-toggle.btn-experimental-pf {
+  background-color: #92d400;
+  background-image: none;
+  border-color: #92d400;
+  color: #4d5258;
+}
+.btn-experimental-pf:active,
+.btn-experimental-pf.active,
+.open .dropdown-toggle.btn-experimental-pf {
+  background-image: none;
+}
+.btn-experimental-pf:active:hover,
+.btn-experimental-pf.active:hover,
+.open .dropdown-toggle.btn-experimental-pf:hover,
+.btn-experimental-pf:active:focus,
+.btn-experimental-pf.active:focus,
+.open .dropdown-toggle.btn-experimental-pf:focus,
+.btn-experimental-pf:active.focus,
+.btn-experimental-pf.active.focus,
+.open .dropdown-toggle.btn-experimental-pf.focus {
+  background-color: #80bb00;
+  border-color: #79b000;
+}
+.btn-experimental-pf.disabled,
+.btn-experimental-pf[disabled],
+fieldset[disabled] .btn-experimental-pf,
+.btn-experimental-pf.disabled:hover,
+.btn-experimental-pf[disabled]:hover,
+fieldset[disabled] .btn-experimental-pf:hover,
+.btn-experimental-pf.disabled:focus,
+.btn-experimental-pf[disabled]:focus,
+fieldset[disabled] .btn-experimental-pf:focus,
+.btn-experimental-pf.disabled:active,
+.btn-experimental-pf[disabled]:active,
+fieldset[disabled] .btn-experimental-pf:active,
+.btn-experimental-pf.disabled.active,
+.btn-experimental-pf[disabled].active,
+fieldset[disabled] .btn-experimental-pf.active {
+  background-color: #92d400;
   border-color: #92d400;
 }
 .footer-pf-alt,
