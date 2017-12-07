@@ -12,7 +12,6 @@ backstop('test', { config })
     console.log('tests completed without failures');
   })
   .catch((err) => {
-    if (err) {
-      throw err;
-    }
+    console.error(err);
+    process.exit(1);
   });
