@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
     'CODE_OF_CONDUCT.md',
     'QUICKSTART.md',
     'OPEN_SOURCE_LICENCES.txt',
+    Dir.glob('lib/**/*'),
     Dir.glob('dist/sass/**/*'),
     Dir.glob('dist/js/**/*'),
     Dir.glob('dist/fonts/**/*'),
