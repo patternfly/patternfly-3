@@ -8,7 +8,7 @@
   }
   .btn {
     // TODO Create global variable for validation state box shadows?
-    $input-validation-focus-box-shadow: fade($color-pf-black, 7.5%);
+    $input-validation-focus-box-shadow: rgba($color-pf-black, (7.5/100));
     &:hover {
       border-color: $input-border-hover;
     }
