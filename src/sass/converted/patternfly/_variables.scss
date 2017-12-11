@@ -85,7 +85,7 @@ $list-view-divider:                                                 $color-pf-bl
 $list-view-hover-bg:                                                $color-pf-blue-25 !default;
 $list-group-top-border:                                             $color-pf-black-200 !default;
 $login-bg-color:                                                    $color-pf-black !default;
-$login-container-bg-color-rgba:                                     fade($color-pf-white, 5.5%) !default;
+$login-container-bg-color-rgba:                                     rgba($color-pf-white, (5.5/100)) !default;
 $modal-about-pf-bg-img:                                             "bg-modal-about-pf.png" !default;
 $modal-title-padding-horizontal:                                    18px !default;
 $modal-title-padding-vertical:                                      10px !default;

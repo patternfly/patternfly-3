@@ -384,7 +384,7 @@ module.exports = function (grunt) {
           }
         ],
         options: {
-          excludes: ['variables', 'default'],
+          excludes: ['variables', 'default', 'rgba'],
           replacements: [
             {
               // Customize variable conversion to include newer css reserved words.
@@ -414,6 +414,12 @@ module.exports = function (grunt) {
               // Include mixins with no arguments
               pattern: /(\s+)\.([\w\-]+)\(\)/gi,
               replacement: '$1@include $2()',
+              order: 3
+            },
+            // Original fade -> rgba conversion did not account for decimal percentages
+            {
+              pattern: /fade\((.*),\s?([\d\.]+)\%\)/gmi,
+              replacement: 'rgba($1, ($2/100))',
               order: 3
             },
             {
