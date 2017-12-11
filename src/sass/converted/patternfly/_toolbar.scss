@@ -5,7 +5,7 @@
 .toolbar-pf {
   background: $color-pf-white;
   border-bottom: 1px solid $sidebar-pf-border-color;
-  box-shadow: 0 1px 0px fade($color-pf-black, 4.5%);
+  box-shadow: 0 1px 0px rgba($color-pf-black, (4.5/100));
   padding-top: ($grid-gutter-width/4);
   .form-group {
     margin-bottom: ($grid-gutter-width/4);
