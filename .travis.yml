@@ -36,6 +36,7 @@ after_success:
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -p;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-npm.sh || travis_terminate 0;
        npm run semantic-release-post;
+       sh -x ./scripts/gem_release.sh;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -o;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -r;
