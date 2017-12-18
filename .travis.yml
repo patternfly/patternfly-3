@@ -36,7 +36,6 @@ after_success:
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -p;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-npm.sh || travis_terminate 0;
        npm run semantic-release-post;
-       sh -x ./scripts/gem_release.sh;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -o;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -r;
@@ -45,3 +44,15 @@ after_success:
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
+
+# Automated RubyGems.org deployment
+before_deploy: "sh -x ./scripts/gem_release.sh"
+deploy:
+  skip_cleanup: true
+  provider: rubygems
+  api_key:
+    secure: RP2UsRAyz1+D5e/Mt4C8c3kfq9nzPunQ3QGSTFMkhCmH0dcyBNqGLaIWbrOtRPIeYXpcneoj4SfBvgdmixhi06NMkjw5Vcn213VUZAdafMthAkB3RaQexuzqyz8F8NVTdtXm15zBz/XDZtm42AkOlotoctNUeChFhyhzq3WG9uw=
+  gem: patternfly-sass
+  on:
+    branch: master-dist
+    repo: patternfly/patternfly
