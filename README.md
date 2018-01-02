@@ -58,9 +58,7 @@ exclude: [
 **Patternfly now supports Sass natively!**
 Sass is included in the `dist/sass` directory. Just add `node_modules` to your build tool's Sass include paths then `@import 'patternfly/dist/sass/patternfly';` in your Sass to get started!
 
-Please note that the packages listed below are no longer supported and will not include any features or fixes introduced after Patternfly 3.23.2  
-- NPM package: [patternfly-sass 3.23.2](https://github.com/patternfly/patternfly-sass)
-- Ruby Gem: [patternfly-sass 3.23.2](https://rubygems.org/gems/patternfly-sass)
+Please note that the [patternfly-sass](https://github.com/patternfly/patternfly-sass) is no longer supported and will not include any features or fixes introduced after Patternfly 3.23.2. However, the [patternfly-sass](https://rubygems.org/patternfly-sass) Rubygem is maintained further and built from this repository. 
 
 ### AngularJS
 
