@@ -3816,6 +3816,9 @@ fieldset[disabled] .btn-experimental-pf.active {
 .pficon-blueprint:before {
   content: "\e915";
 }
+.pficon-catalog:before {
+  content: "\e939";
+}
 .pficon-chat:before {
   content: "\e928";
 }
@@ -3854,6 +3857,9 @@ fieldset[disabled] .btn-experimental-pf.active {
 }
 .pficon-edit:before {
   content: "\e60a";
+}
+.pficon-enhancement:before {
+  content: "\e93a";
 }
 .pficon-enterprise:before {
   content: "\e906";
