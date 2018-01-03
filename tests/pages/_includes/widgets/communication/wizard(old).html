@@ -10,17 +10,17 @@
       </div>
       <div class="modal-body wizard-pf-body clearfix">
         <div class="wizard-pf-steps hidden">
-          <ul class="wizard-pf-steps-indicator wizard-pf-steps-alt-indicator active">
+          <ul class="wizard-pf-steps-indicator">
 
-            <li class="wizard-pf-step active">
-              <a href="#"><span class="wizard-pf-step-number">1</span><span class="wizard-pf-step-title">First Step</span>
+            <li class="wizard-pf-step active" data-tabgroup="1">
+              <a><span class="wizard-pf-step-number">1</span><span class="wizard-pf-step-title">First Step</span>
                 <span class="wizard-pf-step-title-substep active">details</span>
-                <span class="wizard-pf-step-title-substep">Settings</span>
+                <span class="wizard-pf-step-title-substep">settings</span>
               </a>
             </li>
 
-            <li class="wizard-pf-step">
-              <a href="#">
+            <li class="wizard-pf-step" data-tabgroup="2">
+              <a>
                 <span class="wizard-pf-step-number">2</span>
                 <span class="wizard-pf-step-title">Second Step</span>
                 <span class="wizard-pf-step-title-substep">details</span>
@@ -28,8 +28,8 @@
               </a>
             </li>
 
-            <li class="wizard-pf-step">
-              <a href="#">
+            <li class="wizard-pf-step" data-tabgroup="3">
+              <a>
                 <span class="wizard-pf-step-number">3</span>
                 <span class="wizard-pf-step-title">Review</span>
                 <span class="wizard-pf-step-title-substep">summary</span>
@@ -37,43 +37,6 @@
               </a>
             </li>
           </ul>
-
-          <ul class="wizard-pf-steps-alt">
-            <li class="wizard-pf-step-alt viewed">
-              <a href="#">
-                <span class="wizard-pf-step-alt-number">1</span>
-                <span class="wizard-pf-step-alt-title">First Step</span>
-              </a>
-                  <ul>
-                    <li class="wizard-pf-step-alt-substep active"><a href="">1A. Details</a></li>
-                    <li class="wizard-pf-step-alt-substep disabled"><a href="#">1B. Settings</a></li>
-                  </ul>
-            </li>
-
-            <li class="wizard-pf-step-alt">
-              <a href="#">
-                <span class="wizard-pf-step-alt-number">2</span>
-                <span class="wizard-pf-step-alt-title">Second Step</span>
-              </a>
-                  <ul class="hidden">
-                    <li class="wizard-pf-step-alt-substep disabled"><a href="#">2A. Details</a></li>
-                    <li class="wizard-pf-step-alt-substep disabled"><a href="#">2B. Settings</a></li>
-                  </ul>
-            </li>
-
-            <li class="wizard-pf-step-alt">
-              <a  href="#">
-                <span class="wizard-pf-step-alt-number">3</span>
-                <span class="wizard-pf-step-alt-title">Review</span>
-              </a>
-              <ul class="hidden">
-                <li class="wizard-pf-step-alt-substep disabled"><a href="#">3A. Summary</a></li>
-                <li class="wizard-pf-step-alt-substep disabled"><a href="#">3B. Progress</a></li>
-              </ul>
-            </li>
-
-          </ul>
-
         </div>
 
         <div class="wizard-pf-row">
@@ -132,9 +95,9 @@
               <form class="form-horizontal">
                 <!-- replacing id with data-id to pass build errors -->
                 <div class="form-group required">
-                  <label class="col-sm-2 control-label" for="textInput-markup" required>Name</label>
+                  <label class="col-sm-2 control-label" for="textInput-markup">Name</label>
                   <div class="col-sm-10">
-                    <input id="detailsName" type="text" data-id="textInput-markup" class="form-control">
+                    <input type="text" data-id="textInput-markup" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
@@ -341,10 +304,9 @@
       // get id of open modal
       self.modal = $(button).data("target");
 
-      self.resetToInitialState();
-
       // open modal
       $(self.modal).modal('show');
+
 
       // assign data attribute to all tabs
       $(self.modal + " .wizard-pf-sidebar .list-group-item").each(function() {
@@ -370,24 +332,6 @@
         $(this).attr("data-tab", ($(this).parent().parent().index() + 1 + (($(this).index() - 2)/10 + .1)));
       });
 
-      // assign data attribute to all alt step indicator steps
-      $(self.modal + " .wizard-pf-steps-alt .wizard-pf-step-alt").each(function() {
-        // set the value equal to the index of the tab group
-        var tabGroup = $(this).index() + 1;
-        $(this).attr("data-tabgroup", tabGroup);
-        $(this).find('.wizard-pf-step-alt-substep').each(function() {
-          $(this).attr("data-tab", (tabGroup + (($(this).index() + 1)/10)));
-        });
-      });
-
-      // assign active and hidden states to teh steps alt classes
-      $(self.modal + " .wizard-pf-steps-alt-indicator").removeClass('active');
-      $(self.modal + " .wizard-pf-steps-alt").addClass('hidden');
-      $(self.modal + " .wizard-pf-steps-alt-indicator").on('click', function() {
-        $(self.modal + ' .wizard-pf-steps-alt-indicator').toggleClass('active');
-        $(self.modal + ' .wizard-pf-steps-alt').toggleClass('hidden');
-      });
-      $(self.modal + " .wizard-pf-step-alt > ul").addClass("hidden");
 
       // create array of all tabs, using the data attribute, and determine the last tab
       self.tabs = $(self.modal + " .wizard-pf-sidebar .list-group-item" ).map(function()
@@ -402,31 +346,28 @@
       // if someone wants to target a specific tab, that could be handled here
       self.currentGroup = 1;
       self.currentTab = 1.1;
+      self.updateTabGroup();
+      // hide loading message
+      $(self.modal + " .wizard-pf-loading").addClass("hidden");
+      // show tabs and tab groups
+      $(self.modal + " .wizard-pf-steps").removeClass("hidden");
+      $(self.modal + " .wizard-pf-sidebar").removeClass("hidden");
+      // remove active class from all tabs
+      $(self.modal + " .wizard-pf-sidebar .list-group-item.active").removeClass("active");
+      // apply active class to new current tab and associated contents
+      self.updateActiveTab();
 
-      setTimeout(function() {
-        // hide loading message
-        $(self.modal + " .wizard-pf-loading").addClass("hidden");
-        // show tabs and tab groups
-        $(self.modal + " .wizard-pf-steps").removeClass("hidden");
-        $(self.modal + " .wizard-pf-sidebar").removeClass("hidden");
-        // remove active class from all tabs
-        $(self.modal + " .wizard-pf-sidebar .list-group-item.active").removeClass("active");
-
-        self.updateToCurrentPage();
-      }, 3000);
+      self.updateWizardFooterDisplay();
 
       //initialize click listeners
       self.tabGroupSelect();
       self.tabSelect();
-      self.altStepClick();
-      self.altSubStepClick();
       self.backBtnClicked();
       self.nextBtnClicked();
       self.finishBtnClick();
       self.cancelBtnClick();
 
-      // Listen for required value change
-      self.detailsNameChange();
+
     };
 
     // update which tab group is active
@@ -435,23 +376,15 @@
       $(self.modal + " .wizard-pf-step[data-tabgroup='" + self.currentGroup + "']").addClass("active");
       $(self.modal + " .wizard-pf-sidebar .list-group").addClass("hidden");
       $(self.modal + " .list-group[data-tabgroup='" + self.currentGroup + "']").removeClass("hidden");
-      $(self.modal + " .wizard-pf-step-alt[data-tabgroup='" + self.currentGroup + "']").addClass("viewed");
-      $(self.modal + " .wizard-pf-step-alt > ul").addClass("hidden");
-      $(self.modal + " .wizard-pf-step-alt[data-tabgroup='" + self.currentGroup + "'] > ul").removeClass("hidden");
     };
 
     // update which tab is active
     this.updateActiveTab = function() {
-      $(self.modal + " .list-group-item.active").removeClass("active");
       $(self.modal + " .list-group-item[data-tab='" + self.currentTab + "']").addClass("active");
 
       // Update steps indicator to handle mobile mode
       $(self.modal + " .wizard-pf-steps-indicator .wizard-pf-step-title-substep").removeClass("active");
       $(self.modal + " .wizard-pf-steps-indicator .wizard-pf-step-title-substep[data-tab='" + self.currentTab + "']").addClass("active");
-
-      // Update steps alt indicator to handle mobile mode
-      $(self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep").removeClass("active");
-      $(self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep[data-tab='" + self.currentTab + "']").addClass("active");
 
       self.updateVisibleContents();
     };
@@ -488,40 +421,34 @@
 
     // update display state of buttons in the footer
     this.updateWizardFooterDisplay = function() {
+      $(self.modal + " .wizard-pf-footer .disabled").removeClass("disabled");
       self.updateBackBtnDisplay();
       self.updateNextBtnDisplay();
     };
 
 
-    this.updateToCurrentPage = function() {
-      self.updateTabGroup();
-      self.updateActiveTab();
-
-      self.updateVisibleContents();
-
-      if (self.currentTab === self.tabLast) {
-        $(self.modal + " .wizard-pf-next").addClass("hidden");
-        $(self.modal + " .wizard-pf-finish").removeClass("hidden");
-        self.finish();
-      } else {
-        // show/hide/disable/enable buttons if needed
-        self.updateWizardFooterDisplay();
-      }
-    };
 
     // when the user clicks a step, then the tab group for that step is displayed
     this.tabGroupSelect = function() {
       $(self.modal + " .wizard-pf-step>a").click(function() {
+        // remove active class active tabgroup and add active class to the
+        // clicked tab group (but don't remove the active class from current tab)
         self.currentGroup = $(this).parent().data("tabgroup");
+        self.updateTabGroup();
         // update value for currentTab -- if a tab is already marked as active
         // for the new tab group, use that, otherwise set it to the first tab
         // in the tab group
         self.currentTab = $(self.modal + " .list-group[data-tabgroup='" + self.currentGroup + "'] .list-group-item.active").data("tab");
-        if (self.currentTab === undefined) {
-          self.currentTab = self.currentGroup + 0.1;
+        if (self.currentTab == undefined) {
+          self.currentTab = $(self.modal + " .list-group[data-tabgroup='" + self.currentGroup + "'] .list-group-item:first-child").data("tab");
+          // apply active class to new current tab and associated contents
+          self.updateActiveTab();
+        } else {
+          // use already active tab and just update contents
+          self.updateVisibleContents();
         }
-
-        self.updateToCurrentPage();
+        // show/hide/disable/enable buttons if needed
+        self.updateWizardFooterDisplay();
       });
     };
 
@@ -530,33 +457,23 @@
       $(self.modal + " .wizard-pf-sidebar .list-group-item>a").click(function() {
         // update value of currentTab to new active tab
         self.currentTab = $(this).parent().data("tab");
-        self.updateToCurrentPage();
+        // remove active class from active tab in current active tab group (i.e.
+        // don't remove the class from tabs in other groups)
+        $(self.modal + " .list-group[data-tabgroup='" + self.currentGroup + "'] .list-group-item.active").removeClass("active");
+        // add active class to the clicked tab and the associated contents
+        $(this).parent().addClass("active");
+        self.updateVisibleContents();
+        if (self.currentTab == self.tabLast) {
+          $(self.modal + " .wizard-pf-next").addClass("hidden");
+          $(self.modal + " .wizard-pf-finish").removeClass("hidden");
+          self.finish();
+        } else {
+          // show/hide/disable/enable buttons if needed
+          self.updateWizardFooterDisplay();
+        }
       });
     };
 
-    this.altStepClick = function() {
-      $(self.modal + " .wizard-pf-step-alt").each(function() {
-        var $this = $(this);
-        $this.find('> a').on('click', function() {
-          var subStepList = $this.find('> ul');
-          if (subStepList && (subStepList.length > 0)) {
-            $this.find('> ul').toggleClass('hidden');
-          } else {
-            self.currentGroup = $this.data("tabgroup");
-          }
-        });
-      });
-    };
-
-    this.altSubStepClick = function() {
-      $(self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep > a").on('click', function() {
-        // update value of currentTab to new active tab
-        self.currentTab = $(this).parent().data("tab");
-        self.currentGroup = $(this).parent().parent().parent().data("tabgroup");
-
-        self.updateToCurrentPage();
-      });
-    };
     // Back button clicked
     this.backBtnClicked = function() {
       $(self.modal + " .wizard-pf-back").click(function() {
@@ -589,52 +506,30 @@
       });
     };
 
-    this.detailsNameChange = function() {
-      $(self.modal + " #detailsName").on('change', function() {
-        if ($(self.modal + " #detailsName").val()) {
-          $(self.modal + " .wizard-pf-step-alt-substep").removeClass('disabled');
-          $(self.modal + " .wizard-pf-next").removeClass("disabled");
-        } else {
-          $(self.modal + " .wizard-pf-step-alt-substep").addClass('disabled');
-          $(self.modal + " .wizard-pf-step-alt-substep.active").removeClass('disabled');
-          $(self.modal + " .wizard-pf-next").addClass("disabled");
-        }
-      });
-    };
-
-    this.resetToInitialState = function() {
-      // drop click event listeners
-      $(self.modal + " .wizard-pf-step>a").off("click");
-      $(self.modal + " .wizard-pf-sidebar .list-group-item>a").off("click");
-      $(self.modal + " .wizard-pf-steps-alt-indicator").off('click');
-      $(self.modal + " .wizard-pf-step-alt > a").off('click');
-      $(self.modal + " .wizard-pf-back").off("click");
-      $(self.modal + " .wizard-pf-next").off("click");
-      $(self.modal + " .wizard-pf-finish").off("click");
-      $(self.modal + " .wizard-pf-dismiss").off("click");
-
-      $(self.modal + " #detailsName").off('change');
-
-      // reset final step
-      $(self.modal + " .wizard-pf-process").removeClass("hidden");
-      $(self.modal + " .wizard-pf-complete").addClass("hidden");
-      // reset loading message
-      $(self.modal + " .wizard-pf-contents").addClass("hidden");
-      $(self.modal + " .wizard-pf-loading").removeClass("hidden");
-      // remove tabs and tab groups
-      $(self.modal + " .wizard-pf-steps").addClass("hidden");
-      $(self.modal + " .wizard-pf-sidebar").addClass("hidden");
-      // reset buttons in final step
-      $(self.modal + " .wizard-pf-close").addClass("hidden");
-      $(self.modal + " .wizard-pf-cancel").removeClass("hidden");
-    };
-
     // Cancel/Close button clicked
     this.cancelBtnClick = function() {
       $(self.modal + " .wizard-pf-dismiss").click(function() {
         // close the modal
         $(self.modal).modal('hide');
-        self.resetToInitialState();
+        // drop click event listeners
+        $(self.modal + " .wizard-pf-step>a").off("click");
+        $(self.modal + " .wizard-pf-sidebar .list-group-item>a").off("click");
+        $(self.modal + " .wizard-pf-back").off("click");
+        $(self.modal + " .wizard-pf-next").off("click");
+        $(self.modal + " .wizard-pf-finish").off("click");
+        $(self.modal + " .wizard-pf-dismiss").off("click");
+        // reset final step
+        $(self.modal + " .wizard-pf-process").removeClass("hidden");
+        $(self.modal + " .wizard-pf-complete").addClass("hidden");
+        // reset loading message
+        $(self.modal + " .wizard-pf-contents").addClass("hidden");
+        $(self.modal + " .wizard-pf-loading").removeClass("hidden");
+        // remove tabs and tab groups
+        $(self.modal + " .wizard-pf-steps").addClass("hidden");
+        $(self.modal + " .wizard-pf-sidebar").addClass("hidden");
+        // reset buttons in final step
+        $(self.modal + " .wizard-pf-close").addClass("hidden");
+        $(self.modal + " .wizard-pf-cancel").removeClass("hidden");
       });
     };
 

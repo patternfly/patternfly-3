@@ -8061,6 +8061,8 @@ table.dataTable th:active {
       align-items: center;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-weight: 700;
 }
 @media (min-width: 768px) {
@@ -8316,4 +8318,133 @@ table.dataTable th:active {
   .wizard-pf-sidebar .list-group-item > a {
     width: 18em;
   }
+}
+.wizard-pf-steps-alt,
+.wizard-pf-steps-alt ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wizard-pf-steps-alt {
+  margin-left: 15px;
+  margin-top: 15px;
+  background-image: linear-gradient(to right, transparent 11px, #d1d1d1 11px, #d1d1d1 13px, transparent 13px);
+}
+@media (min-width: 768px) {
+  .wizard-pf-steps-alt {
+    display: none;
+  }
+}
+.wizard-pf-steps-alt-indicator {
+  position: relative;
+}
+.wizard-pf-steps-alt-indicator:after {
+  color: #4d5258;
+  content: "\f107";
+  display: block;
+  font-family: FontAwesome;
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .wizard-pf-steps-alt-indicator:after {
+    display: none;
+  }
+}
+.wizard-pf-steps-alt-indicator.active:after {
+  content: "\f106";
+}
+.wizard-pf-step-alt {
+  margin-bottom: 10px;
+}
+.wizard-pf-step-alt a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1;
+      flex: 1;
+}
+.wizard-pf-step-alt a:hover {
+  text-decoration: none;
+}
+.wizard-pf-step-alt a:hover .wizard-pf-step-alt-title {
+  color: #39a5dc;
+}
+.wizard-pf-step-alt ul {
+  margin-left: 11px;
+}
+.wizard-pf-step-alt .wizard-pf-step-alt-title {
+  margin-left: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.wizard-pf-step-alt .wizard-pf-step-alt-number {
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+}
+.wizard-pf-step-alt.active .wizard-pf-step-alt-number {
+  background-color: #39a5dc;
+  border-color: #39a5dc;
+  cursor: default;
+  color: #fff;
+}
+.wizard-pf-step-alt.active .wizard-pf-step-alt-title {
+  color: #39a5dc;
+}
+.wizard-pf-step-alt.active .wizard-pf-step-alt-substep:first-of-type {
+  margin-top: 2px;
+}
+.wizard-pf-step-alt.viewed .wizard-pf-step-alt-number {
+  color: #030303;
+  background-color: #fff;
+  border-color: #39a5dc;
+}
+.wizard-pf-step-alt-number {
+  background-color: #fff;
+  border-radius: 50%;
+  border: solid 2px #bbb;
+  color: #bbb;
+  font-size: 12px;
+  font-weight: 700;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  text-align: center;
+}
+.wizard-pf-step-alt-title {
+  color: #030303;
+  font-weight: 700;
+  text-transform: capitalize;
+  display: inline-block;
+}
+.wizard-pf-step-alt-substep {
+  display: -ms-flexbox;
+  display: flex;
+}
+.wizard-pf-step-alt-substep a {
+  padding: 5px 0 5px 18px;
+  color: #393f44;
+}
+.wizard-pf-step-alt-substep:not(.disabled).active,
+.wizard-pf-step-alt-substep:not(.disabled):hover {
+  background-color: #ededed;
+  background-image: linear-gradient(to right, #39a5dc 2px, transparent 2px);
+}
+.wizard-pf-step-alt-substep:not(.disabled).active a,
+.wizard-pf-step-alt-substep:not(.disabled):hover a {
+  color: #39a5dc;
+}
+.wizard-pf-step-alt-substep.active a {
+  font-weight: 700;
+}
+.wizard-pf-step-alt-substep.disabled {
+  cursor: not-allowed;
+}
+.wizard-pf-step-alt-substep.disabled a {
+  pointer-events: none;
 }

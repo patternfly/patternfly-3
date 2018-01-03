@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en-us" class="ie9 layout-pf layout-pf-fixed"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-us" class="layout-pf layout-pf-fixed">
+  <!--<![endif]-->
+    <head>
+    <title>Wizard embedded - PatternFly</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <!-- iPad retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../img/apple-touch-icon-precomposed-152.png">
+    <!-- iPad retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/apple-touch-icon-precomposed-144.png">
+    <!-- iPad non-retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../img/apple-touch-icon-precomposed-76.png">
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/apple-touch-icon-precomposed-72.png">
+    <!-- iPhone 6 Plus icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon-precomposed-180.png">
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/apple-touch-icon-precomposed-114.png">
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../img/apple-touch-icon-precomposed-57.png">
+    <link rel="stylesheet" href="../css/patternfly.min.css" >
+    <link rel="stylesheet" href="../css/patternfly-additions.min.css" >
+      <link href="tests.css" rel="stylesheet" media="screen, print">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/patternfly.min.js"></script>
+  </head>
+
+  <body class="cards-pf">
+    
+
+<nav class="navbar navbar-pf-vertical">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">
+      <img class="navbar-brand-icon" src="..//img/logo-alt.svg" alt=""/><img class="navbar-brand-name" src="..//img/brand-alt.svg" alt="PatternFly Enterprise Application" />
+    </a>
+  </div>
+  <nav class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right navbar-iconic navbar-utility">
+      
+      <li class="dropdown">
+        <a href="#0" class="dropdown-toggle nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Help" class="fa pficon-help"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#0">Help</a></li>
+          <li><a href="#0">About</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#0" class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Username" class="fa pficon-user"></span>
+          Brian Johnson <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#0">Preferences</a></li>
+          <li><a href="#0">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  
+</nav> <!--/.navbar-->
+
+<div class="wizard-pf-embedded">
+  <h2>Embedded Wizard</h2>
+        <div class="wizard-pf-body clearfix">
+          <div class="wizard-pf-steps">
+            <ul class="wizard-pf-steps-indicator">
+              <li class="viewed-pf">
+                <a><span class="wizard-pf-step-number">1</span><span class="wizard-pf-step-title">First Step</span></a>
+              </li>
+              <li class="viewed-pf">
+                <a><span class="wizard-pf-step-number">2</span><span class="wizard-pf-step-title">Second Step</span></a>
+              </li>
+              <li class="active">
+                <a><span class="wizard-pf-step-number">3</span><span class="wizard-pf-step-title">Review</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="wizard-pf-row">
+            <div class="wizard-pf-sidebar">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a>
+                    <span class="wizard-pf-substep-number">3A.</span>
+                    <span class="wizard-pf-substep-title">Summary</span>
+                  </a>
+                </li>
+                <li class="list-group-item active">
+                  <a>
+                    <span class="wizard-pf-substep-number">3B.</span>
+                    <span class="wizard-pf-substep-title">Progress</span>
+                  </a>
+                </li>
+              </ul>
+            </div><!-- /.wizard-pf-sidebar -->
+
+            <div class="wizard-pf-main">
+              <div class="blank-slate-pf">
+                <div class="spinner spinner-lg blank-slate-pf-icon"></div>
+                <h3 class="blank-slate-pf-main-action">Deployment in progress</h3>
+                <p class="blank-slate-pf-secondary-action">Lorem ipsum dolor sit amet, porta at suspendisse ac, ut wisi
+                  vivamus, lorem sociosqu eget nunc amet. </p>
+              </div>
+
+            </div>
+          </div>
+        </div><!-- /.wizard-pf-body -->
+
+        <!-- TODO: disable buttons -->
+        <div class="wizard-pf-footer">
+
+          <button type="button" class="btn btn-default disabled" data-dismiss="modal">
+            <span class="i fa fa-angle-left"></span>
+            Back
+          </button>
+          <button type="button" class="btn btn-primary disabled" data-dismiss="modal">
+            Deploy
+            <span class="i fa fa-angle-right"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-cancel" data-dismiss="modal">Cancel</button>
+        </div><!-- /.wizard-pf-footer -->
+</div><!-- wizard-pf-embedded -->
+
+  </body>
+</html>
