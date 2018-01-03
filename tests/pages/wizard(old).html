@@ -1,7 +1,7 @@
 ---
 categories: [Widgets]
 layout: page
-title: Wizard
+title: Wizard (old)
 resource: true
 ---
 <h2>Complete Wizard</h2>
@@ -40,7 +40,7 @@ resource: true
             <li class="list-group-item active">
               <a>
                 <span class="wizard-pf-substep-number">1A.</span>
-                <span class="wizard-pf-substep-title">First Step</span>
+                <span class="wizard-pf-substep-title">General</span>
               </a>
             </li>
             <li class="list-group-item">
@@ -88,7 +88,7 @@ resource: true
 </div><!-- /.modal -->
 
 <h2>Last Step</h2>
-<button id="doneButton" class="btn btn-default" data-toggle="modal" data-target="#done">Launch wizard showing finalizing
+<button class="btn btn-default" data-toggle="modal" data-target="#done">Launch wizard showing finalizing
 state
 </button>
 <div class="modal" id="done" tabindex="-1" role="dialog">
@@ -102,66 +102,15 @@ state
       </div>
       <div class="modal-body wizard-pf-body clearfix">
         <div class="wizard-pf-steps">
-          <ul class="wizard-pf-steps-indicator wizard-pf-steps-alt-indicator active">
-
-            <li class="wizard-pf-step" data-tabgroup="1">
-              <a><span class="wizard-pf-step-number">1</span><span class="wizard-pf-step-title">First Step</span>
-                <span class="wizard-pf-step-title-substep active">details</span>
-                <span class="wizard-pf-step-title-substep">Settings</span>
-              </a>
+          <ul class="wizard-pf-steps-indicator">
+            <li class="viewed-pf">
+              <a><span class="wizard-pf-step-number">1</span><span class="wizard-pf-step-title">First Step</span></a>
             </li>
-
-            <li class="wizard-pf-step viewed" data-tabgroup="2">
-              <a>
-                <span class="wizard-pf-step-number">2</span>
-                <span class="wizard-pf-step-title">Second Step</span>
-                <span class="wizard-pf-step-title-substep">details</span>
-                <span class="wizard-pf-step-title-substep">settings</span>
-              </a>
+            <li class="viewed-pf">
+              <a><span class="wizard-pf-step-number">2</span><span class="wizard-pf-step-title">Second Step</span></a>
             </li>
-
-            <li class="wizard-pf-step active" data-tabgroup="3">
-              <a>
-                <span class="wizard-pf-step-number">3</span>
-                <span class="wizard-pf-step-title">Review</span>
-                <span class="wizard-pf-step-title-substep">summary</span>
-                <span class="wizard-pf-step-title-substep active">progress</span>
-              </a>
-            </li>
-          </ul>
-
-          <ul class="wizard-pf-steps-alt">
-            <li class="wizard-pf-step-alt viewed">
-              <a href="javascript:void(0);" class="disabled">
-                <span class="wizard-pf-step-alt-number">1</span>
-                <span class="wizard-pf-step-alt-title">First Step</span>
-              </a>
-              <ul class="hidden">
-                <li class="wizard-pf-step-alt-substep"><a href="">1A. Details</a></li>
-                <li class="wizard-pf-step-alt-substep"><a class="disabled" href="#">1B. Settings</a></li>
-              </ul>
-            </li>
-
-            <li class="wizard-pf-step-alt viewed disabled">
-              <a href="javascript:void(0);" class="disabled">
-                <span class="wizard-pf-step-alt-number">2</span>
-                <span class="wizard-pf-step-alt-title">Second Step</span>
-              </a>
-              <ul class="hidden">
-                <li class="wizard-pf-step-alt-substep"><a class="disabled" href="#">2A. Details</a></li>
-                <li class="wizard-pf-step-alt-substep"><a class="disabled" href="#">2B. Settings</a></li>
-              </ul>
-            </li>
-
-            <li class="wizard-pf-step-alt active">
-              <a href="javascript:void(0);">
-                <span class="wizard-pf-step-alt-number">3</span>
-                <span class="wizard-pf-step-alt-title">Review</span>
-              </a>
-              <ul>
-                <li class="wizard-pf-step-alt-substep"><a class="disabled" href="#">3A. Summary</a></li>
-                <li class="wizard-pf-step-alt-substep active"><a class="disabled" href="#">3B. Progress</a></li>
-              </ul>
+            <li class="active">
+              <a><span class="wizard-pf-step-number">3</span><span class="wizard-pf-step-title">Review</span></a>
             </li>
           </ul>
         </div>
@@ -211,19 +160,3 @@ state
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-<script>
-
-  $(document).ready(function() {
-    var beenClicked = false;
-    $('#doneButton').click(function() {
-      if (!beenClicked) {
-        beenClicked = true;
-        $('#done .wizard-pf-steps-alt-indicator').on('click', function() {
-          $('#done .wizard-pf-steps-alt-indicator').toggleClass('active');
-          $('#done .wizard-pf-steps-alt').toggleClass('hidden');
-        });
-      }
-    });
-  });
-</script>

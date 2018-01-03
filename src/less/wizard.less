@@ -148,6 +148,7 @@
     a {
         align-items: center;
         display: flex;
+        flex-wrap:wrap;
         font-weight: 700;
         @media (min-width: @screen-sm-min) {
           font-weight: normal;
@@ -419,5 +420,149 @@
   // increasing width of sidebar for larger viewports
   .wizard-pf-sidebar .list-group-item > a {
     width: 18em;
+  }
+}
+
+//
+//
+// This is for the new wizard that is more robust on mobile.
+// --------------------------------------------------
+
+.wizard-pf-steps-alt, .wizard-pf-steps-alt ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wizard-pf-steps-alt {
+  margin-left: 15px;
+  margin-top: 15px;
+  background-image: linear-gradient(to right, transparent 11px, @color-pf-black-300 11px, @color-pf-black-300 13px, transparent 13px);
+  @media (min-width: @screen-sm-min) {
+    display:none;
+  }
+  &-indicator {
+    position: relative;
+    // caret to top showing active substep
+    &:after {
+      color: @color-pf-black-700;
+      content: "\f107"; // top caret
+      display: block;
+      font-family: FontAwesome;
+      font-size: 24px;
+      font-weight: 500;
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      transform:translateY(-50%);
+      @media (min-width: @screen-sm-min) {
+        display:none;
+      }
+    }
+    &.active {
+      &:after {
+        content: "\f106";
+      }
+    }
+  }//indicator
+}//.wizard-pf-steps-alt
+
+.wizard-pf-step-alt {
+  margin-bottom: 10px;
+  a {
+    display:flex;
+    flex:1;
+    &:hover {
+      text-decoration: none;
+      .wizard-pf-step-alt-title {
+        color: @color-pf-blue-300;
+      }
+    }
+  }
+  ul {
+    margin-left: 11px;
+  }
+  .wizard-pf-step-alt-title {
+    margin-left: 5px;
+    align-self:center;
+  }
+  .wizard-pf-step-alt-number {
+    flex:0 0 auto;
+  }
+
+  &.active {
+    .wizard-pf-step-alt-number {
+      background-color: @color-pf-blue-300;
+      border-color: @color-pf-blue-300;
+      cursor: default;
+      color: @color-pf-white;
+    }
+    .wizard-pf-step-alt-title {
+      color: @color-pf-blue-300;
+    }
+    .wizard-pf-step-alt-substep:first-of-type {
+      margin-top: 2px; // gives proper spacing below number in circle active state
+    }
+
+
+  }
+  &.viewed {
+    .wizard-pf-step-alt-number {
+      color: @color-pf-black;
+      background-color: @color-pf-white;
+      border-color: @color-pf-blue-300;
+    }
+  }
+
+}//.wizard-pf-step-alt
+
+.wizard-pf-step-alt-number {
+  background-color: @color-pf-white;
+  border-radius: 50%;
+  border: solid 2px @color-pf-black-400;
+  color: @color-pf-black-400;
+  font-size: @font-size-base;
+  font-weight: 700;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.wizard-pf-step-alt-title {
+  color: @color-pf-black;
+  font-weight: 700;
+  text-transform: capitalize;
+  display:inline-block;
+
+}//.wizard-pf-steps-alt-title
+
+.wizard-pf-step-alt-substep {
+    display:flex;
+  a {
+    padding:5px 0 5px 18px;
+    color: @color-pf-black-800;
+  }
+
+&:not(.disabled) {
+  &.active, &:hover {
+    background-color: @color-pf-black-200;
+    background-image: linear-gradient(to right, @color-pf-blue-300 2px, transparent 2px);
+    a {
+      color:@color-pf-blue-300;
+    }
+  }
+}
+  &.active {
+    a {
+      font-weight:700;
+    }
+  }
+  &.disabled {
+    cursor: not-allowed;
+    a {
+      pointer-events: none;
+    }
   }
 }
