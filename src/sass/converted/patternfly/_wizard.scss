@@ -566,3 +566,32 @@
     }
   }
 }
+//
+//
+// This is for the embedded wizard.
+// --------------------------------------------------
+.wizard-embedded-pf {
+  &-main {
+    overflow: scroll;
+    padding:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-body {
+    overflow: auto;
+    padding: 3em;
+  }
+  &-footer {
+    padding: 1em;
+    @media (min-width: $screen-sm-min) {
+      padding: 3em;
+    }
+
+    .btn-cancel {
+      margin-right:0;
+      margin-left:25px;
+    }
+
+  }
+}
