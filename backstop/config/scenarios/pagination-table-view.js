@@ -1,6 +1,8 @@
+// TODO: Threshold bumped, PTNFLY-2661
 module.exports = [{
   removeSelectors: ['.page-header + .alert'],
   label: 'pagination-table-view',
   url: 'dist/tests/pagination-table-view.html',
-  disabled: false
+  disabled: false,
+  misMatchThreshold: 7.80
 }]
