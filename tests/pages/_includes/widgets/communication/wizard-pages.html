@@ -1,0 +1,167 @@
+<div class="wizard-pf-contents hidden">
+  <form class="form-horizontal">
+    <!-- replacing id with data-id to pass build errors -->
+    <div class="form-group required">
+      <label class="col-sm-2 control-label" for="textInput-markup" required>Name</label>
+      <div class="col-sm-10">
+        <input id="detailsName" type="text" data-id="textInput-markup" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="descriptionInput-markup">Description (Optional)</label>
+      <div class="col-sm-10">
+        <textarea data-id="descriptionInput-markup" class="form-control" rows="2"></textarea>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="wizard-pf-contents hidden">
+  <form class="form-horizontal">
+    <div class="form-group required">
+      <label class="col-sm-2 control-label" for="lorem">Lorem ipsum</label>
+      <div class="col-sm-10">
+        <input type="text" id="lorem" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="dolor">Dolor (Optional)</label>
+      <div class="col-sm-10">
+        <textarea id="dolor" class="form-control" rows="2"></textarea>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="wizard-pf-contents hidden">
+  <form class="form-horizontal">
+    <div class="form-group required">
+      <label class="col-sm-2 control-label" for="aliquam">Aliquam</label>
+      <div class="col-sm-10">
+        <input type="text" id="aliquam" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="fermentum">Fermentum</label>
+      <div class="col-sm-10">
+        <textarea id="fermentum" class="form-control" rows="2"></textarea>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="wizard-pf-contents hidden">
+  <form class="form-horizontal">
+    <div class="form-group required">
+      <label class="col-sm-2 control-label" for="consectetur">Consectetur</label>
+      <div class="col-sm-10">
+        <input type="text" id="consectetur" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="adipiscing">Adipiscing</label>
+      <div class="col-sm-10">
+        <textarea id="adipiscing" class="form-control" rows="2"></textarea>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="wizard-pf-contents hidden">
+  <div class="wizard-pf-review-steps">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep1').toggleClass('collapse');">First Step</a>
+        <div id="reviewStep1" class="wizard-pf-review-substeps">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep1Substep1').toggleClass('collapse');">
+                <span class="wizard-pf-substep-number">1A.</span>
+                <span class="wizard-pf-substep-title">Details</span>
+              </a>
+              <div id="reviewStep1Substep1" class="wizard-pf-review-content">
+                <form class="form">
+                  <div class="wizard-pf-review-item">
+                    <span class="wizard-pf-review-item-label">Name:</span>
+                    <span class="wizard-pf-review-item-value">First Last</span>
+                  </div>
+                  <div class="wizard-pf-review-item">
+                    <span class="wizard-pf-review-item-label">Description:</span>
+                    <span class="wizard-pf-review-item-value">This is the description</span>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep1Substep2').toggleClass('collapse');">
+                <span class="wizard-pf-substep-number">1B.</span>
+                <span class="wizard-pf-substep-title">Settings</span>
+              </a>
+              <div id="reviewStep1Substep2" class="wizard-pf-review-content">
+                <form class="form">
+                  <div class="wizard-pf-review-item">
+                    <div class="wizard-pf-review-item-field">Setting A</div>
+                    <div class="wizard-pf-review-item-field">Setting B</div>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep2').toggleClass('collapse');">Second Step</a>
+        <div id="reviewStep2" class="wizard-pf-review-substeps">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep2Substep1').toggleClass('collapse');">
+                <span class="wizard-pf-substep-number">2A.</span>
+                <span class="wizard-pf-substep-title">Details</span>
+              </a>
+              <div id="reviewStep2Substep1" class="wizard-pf-review-content">
+                <form class="form">
+                  <div class="wizard-pf-review-item">
+                    <span class="wizard-pf-review-item-label">Name:</span>
+                    <span class="wizard-pf-review-item-value">First Last</span>
+                  </div>
+                  <div class="wizard-pf-review-item">
+                    <span class="wizard-pf-review-item-label">Description:</span>
+                    <span class="wizard-pf-review-item-value">This is the description</span>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <a onclick="$(this).toggleClass('collapsed'); $('#reviewStep2Substep2').toggleClass('collapse');">
+                <span class="wizard-pf-substep-number">2B.</span>
+                <span class="wizard-pf-substep-title">Settings</span>
+              </a>
+              <div id="reviewStep2Substep2" class="wizard-pf-review-content">
+                <form class="form">
+                  <div class="wizard-pf-review-item">
+                    <div class="wizard-pf-review-item-field">Setting A</div>
+                    <div class="wizard-pf-review-item-field">Setting B</div>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="wizard-pf-contents hidden">
+  <div class="wizard-pf-process blank-slate-pf">
+    <div class="spinner spinner-lg blank-slate-pf-icon"></div>
+    <h3 class="blank-slate-pf-main-action">Deployment in progress</h3>
+    <p class="blank-slate-pf-secondary-action">Lorem ipsum dolor sit amet, porta at suspendisse ac, ut wisi
+      vivamus, lorem sociosqu eget nunc amet. </p>
+  </div>
+  <div class="wizard-pf-complete blank-slate-pf hidden">
+    <div class="wizard-pf-success-icon"><span class="glyphicon glyphicon-ok-circle"></span></div>
+    <h3 class="blank-slate-pf-main-action">Deployment was successful</h3>
+    <p class="blank-slate-pf-secondary-action">Lorem ipsum dolor sit amet, porta at suspendisse ac, ut wisi
+      vivamus, lorem sociosqu eget nunc amet. </p>
+    <button type="button" class="btn btn-lg btn-primary">
+      View Deployment
+    </button>
+
+  </div>
+</div>
