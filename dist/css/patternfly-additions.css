@@ -2603,6 +2603,12 @@ select.selectpicker {
 .blank-slate-pf .blank-slate-pf-secondary-action {
   margin-top: 20px;
 }
+.blank-slate-pf button {
+  margin-right: 5px;
+}
+.blank-slate-pf button:last-of-type {
+  margin-right: 0;
+}
 .combobox-container.combobox-selected .glyphicon-remove {
   display: inline-block;
 }
