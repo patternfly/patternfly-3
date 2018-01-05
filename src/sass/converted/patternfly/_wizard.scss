@@ -580,7 +580,7 @@
   }
   &-body {
     overflow: auto;
-    padding: 3em;
+    padding: 2em;
   }
   &-footer {
     padding: 1em;
@@ -592,6 +592,10 @@
       margin-right:0;
       margin-left:25px;
     }
-
   }
+
+  .wizard-pf-steps-indicator {
+    border-top: none;
+  }
+
 }
