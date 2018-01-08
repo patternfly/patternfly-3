@@ -1,7 +1,4 @@
-<div class="login-pf-page">
-<div class="container-fluid">
-  <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+<div class="login-pf-page login-pf-page-accounts">
           <header class="login-pf-page-header">
             <img class="login-pf-brand" src="{{site.assets-base}}/{{site.brand-horizontal}}" alt="{{ site.company }} logo" />
           </header>
@@ -12,10 +9,9 @@
                   <option>French</option>
                   <option>Italian</option>
                 </select>
-                <h1>Log Into Your Account</h1>
+                <h1>Log In to Your Account</h1>
               </header>
-                    <section class="login-pf-social-section">
-                    <h5 class="login-pf-social-section-heading hidden-xs">Log in using your PatternFly account</h5>
+                    <section class="login-pf-social-section" role="contentinfo" aria-label="Log in to your patternfly account">
                     <form>
                       <div class="form-group">
                         <label class="sr-only" for="exampleInputEmail1">Email address</label>
@@ -35,21 +31,20 @@
                       <button type="submit" class="btn btn-primary btn-block btn-lg">Log In</button>
                     </form>
                 </section><!--login-pf-section-->
-                <section class="login-pf-social-section">
-                  <h5 class="login-pf-social-section-heading">Log in with</h5>
-                  <ul class="login-pf-social login-pf-social-all login-pf-social-double-col list-unstyled">
-                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/google-logo.svg" alt="Google logo">Google</a></li>
-                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/github-logo.svg" alt="github logo">Github</a></li>
-                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/facebook-logo.svg" alt="Facebook logo">Facebook</a></li>
-                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/twitter-logo.svg" alt="Twitter logo">Twitter</a></li>
-                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/linkedin-logo.svg" alt="LinkIn logo">LinkIn</a></li>
+                <section class="login-pf-social-section" role="contentinfo" aria-label="Log in with third party account">
+                  <ul class="login-pf-social login-pf-social-double-col list-unstyled">
+                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/google-logo.svg" alt="Google account login">Google</a></li>
+                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/github-logo.svg" alt="github account login">Github</a></li>
+                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/facebook-logo.svg" alt="Facebook account login">Facebook</a></li>
+                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/twitter-logo.svg" alt="Twitter account login">Twitter</a></li>
+                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/linkedin-logo.svg" alt="LinkIn account login">LinkIn</a></li>
                     <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/stack-exchange-logo.svg" alt="Stack Exchange logo">Stack Exchange</a></li>
-                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/open-id-logo.svg" alt="Open ID logo">Open ID</a></li>
-                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/instagram-logo.png" alt="Instagram logo">Instagram</a></li>
-                    <li class="login-pf-social-link login-pf-social-link-more"><a href="#"><img src="{{site.assets-base}}/img/linkedin-logo.svg" alt="LinkIn logo">LinkIn</a></li>
-                    <li class="login-pf-social-link login-pf-social-link-more"><a href="#"><img src="{{site.assets-base}}/img/stack-exchange-logo.svg" alt="Stack Exchange logo">Stack Exchange</a></li>
-                    <li class="login-pf-social-link login-pf-social-link-more"><a href="#"><img src="{{site.assets-base}}/img/open-id-logo.svg" alt="Open ID logo">Open ID</a></li>
-                    <li class="login-pf-social-link login-pf-social-link-more"><a href="#"><img src="{{site.assets-base}}/img/instagram-logo.png" alt="Instagram logo">Instagram</a></li>
+                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/open-id-logo.svg" alt="Open ID account login">Open ID</a></li>
+                    <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/instagram-logo.png" alt="Instagram account login">Instagram</a></li>
+                    <li class="login-pf-social-link login-pf-social-link-more"><a href="#"><img src="{{site.assets-base}}/img/linkedin-logo.svg" alt="LinkIn account login">LinkIn</a></li>
+                    <li class="login-pf-social-link login-pf-social-link-more"><a href="#"><img src="{{site.assets-base}}/img/stack-exchange-logo.svg" alt="Stack Exchange account login">Stack Exchange</a></li>
+                    <li class="login-pf-social-link login-pf-social-link-more"><a href="#"><img src="{{site.assets-base}}/img/open-id-logo.svg" alt="Open ID account login">Open ID</a></li>
+                    <li class="login-pf-social-link login-pf-social-link-more"><a href="#"><img src="{{site.assets-base}}/img/instagram-logo.png" alt="Instagram account logingit ">Instagram</a></li>
                   </ul>
                   <button type="button" id="socialAccountsToggle" class="btn btn-link login-pf-social-toggle">More<span class="caret"></span></button>
               </section><!--login-pf-section-->
@@ -67,21 +62,21 @@
           </div>
         </div>
 
-  </div><!-- col -->
 </div><!-- login-pf-page -->
-</div><!--row-->
-</div><!--container-->
 <script>
   $("#socialAccountsToggle").on("click", function(e) {
     var $toggle = $(e.target);
     var text = $toggle.contents().first()[0];
+    var socialContainer = $('.login-pf-social-section > .login-pf-social');
 
     if ($toggle.hasClass('login-pf-social-toggle-active')) {
       $toggle.removeClass('login-pf-social-toggle-active');
       text.textContent = 'More';
+      socialContainer.removeClass('login-pf-social-all');
     } else {
       $toggle.addClass('login-pf-social-toggle-active');
       text.textContent = 'Less';
+      socialContainer.addClass('login-pf-social-all');
     }
   });
 </script>

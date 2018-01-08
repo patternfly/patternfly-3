@@ -156,6 +156,12 @@
     h1, p {
       text-align: center;
     }
+    h1 {
+      font-size: $font-size-h3;
+      @media (min-width: $screen-sm-min) {
+        font-size: $font-size-h1;
+      }
+    }
     //this is ugly but neccessary to get the desired style :(
     .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
       width: auto;
@@ -229,6 +235,15 @@
       }
     }
   }//login-pf-footer
+
+
+  // The following styles are for the login page with different account options
+  // --------------------------------------------------------------------------
+
+  &.login-pf-page-accounts {
+    margin-left: $login-pf-page-accounts-margin;
+    margin-right: $login-pf-page-accounts-margin;
+  }
   .login-pf-accounts {
     display: flex;
     justify-content: space-between;
@@ -236,6 +251,9 @@
     .login-pf-header, .login-pf-signup {
       flex-basis: 100%;
     }
+    max-width: $login-pf-card-pf-max-width;
+    margin-left: auto;
+    margin-right: auto;
   }
   .login-pf-social-section {
     flex-basis: 100%;
@@ -244,28 +262,20 @@
     flex:0 1 50%;
     max-width:50%;// this is for IE10/11 that doesn't consider padding with box-sizing on flex-children.
     }
-    &-heading {
-      text-align: center;
-      margin-top: $login-pf-social-section-heading-margin-top;
-      margin-bottom: $login-pf-social-section-heading-margin-bottom;
-      @media (min-width: $screen-sm-min) {
-        margin: 0 0 $login-pf-social-section-heading-desktop-margin-bottom;
-        text-align: left;
-      }
-    }
     @media (min-width: $screen-sm-min) {
       &:first-of-type {
-        padding-right: $login-pf-social-section-heading-desktop-padding-right;
+        padding-right: $login-pf-accounts-section-heading-desktop-padding-right;
       }
       &:last-of-type {
-        padding-left: ceil(($login-pf-social-section-heading-desktop-padding-left - 1px));
+        padding-left: ceil(($login-pf-accounts-section-heading-desktop-padding-left - 1px));
         border-left: 1px solid $color-pf-black-300;
       }
     }
   }//social-section
   .login-pf-social {
-    margin: 0;
+    margin: $login-pf-social-margin;
     @media (min-width: $screen-sm-min) {
+      margin: 0;
       &-double-col {
         flex-wrap: wrap;
         display: flex;
@@ -275,22 +285,24 @@
         }
       }
     }
+
     &:not(.login-pf-social-all) {
       .login-pf-social-link-more {
         display: none;
       }
     }
+
     &-link {
-        margin-bottom: $login-pf-social-accounts-link-margin-bottom;
+        margin-bottom: $login-pf-accounts-link-margin-bottom;
       a {
         display: block;
-        padding: $login-pf-social-accounts-link-a-padding 0;
+        padding: $login-pf-accounts-link-a-padding 0;
         font-size: $font-size-large;
         background: $color-pf-black-150;
         text-align: center;
         color: $color-pf-black-600;
           img {
-            margin: 0 $login-pf-social-accounts-link-img-margin-right 0 0;
+            margin: 0 $login-pf-accounts-link-img-margin-right 0 0;
             width: 20px;
             height: 20px;
           }
@@ -304,7 +316,7 @@
       float: right;
       padding: 0;
       .caret {
-        margin-left: $login-pf-social-accounts-more-caret-margin-left;
+        margin-left: $login-pf-accounts-more-caret-margin-left;
       }
       &-active {
         .caret {
