@@ -37,7 +37,7 @@
                 </section><!--login-pf-section-->
                 <section class="login-pf-social-section">
                   <h5 class="login-pf-social-section-heading">Log in with</h5>
-                  <ul class="login-pf-social login-pf-social-all login-pf-social-double-col list-unstyled">
+                  <ul class="login-pf-social login-pf-social-double-col list-unstyled">
                     <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/google-logo.svg" alt="Google logo">Google</a></li>
                     <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/github-logo.svg" alt="github logo">Github</a></li>
                     <li class="login-pf-social-link"><a href="#"><img src="{{site.assets-base}}/img/facebook-logo.svg" alt="Facebook logo">Facebook</a></li>
@@ -75,13 +75,16 @@
   $("#socialAccountsToggle").on("click", function(e) {
     var $toggle = $(e.target);
     var text = $toggle.contents().first()[0];
+    var socialContainer = $('.login-pf-social-section > .login-pf-social');
 
     if ($toggle.hasClass('login-pf-social-toggle-active')) {
       $toggle.removeClass('login-pf-social-toggle-active');
       text.textContent = 'More';
+      socialContainer.removeClass('login-pf-social-all');
     } else {
       $toggle.addClass('login-pf-social-toggle-active');
       text.textContent = 'Less';
+      socialContainer.addClass('login-pf-social-all');
     }
   });
 </script>
