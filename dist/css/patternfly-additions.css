@@ -5096,6 +5096,262 @@ a.disabled {
 .login-pf .container .submit {
   text-align: right;
 }
+.login-pf-page .login-pf-brand {
+  margin-top: 20px;
+  max-width: 360px;
+  width: 70%;
+}
+@media (min-width: 768px) {
+  .login-pf-page .login-pf-brand {
+    margin-top: 62px;
+  }
+}
+.login-pf-page .login-pf-page-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .login-pf-page .login-pf-page-header {
+    margin-bottom: 40px;
+  }
+}
+.login-pf-page .login-pf-page-header p {
+  color: #fff;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.login-pf-page .card-pf {
+  padding: 10px 20px 30px 20px;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .login-pf-page .card-pf {
+    padding: 20px 40px 30px 40px;
+  }
+}
+.login-pf-page .card-pf p {
+  color: #72767b;
+}
+.login-pf-page .form-control {
+  height: 36px;
+}
+.login-pf-page .checkbox-label {
+  color: #72767b;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .login-pf-page .checkbox-label {
+    margin: 0;
+  }
+}
+.login-pf-page .btn-primary {
+  margin-top: 40px;
+}
+.login-pf-page .login-pf-header {
+  margin-bottom: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+@media (min-width: 768px) {
+  .login-pf-page .login-pf-header {
+    margin-bottom: 30px;
+  }
+}
+.login-pf-page .login-pf-header h1,
+.login-pf-page .login-pf-header p {
+  text-align: center;
+}
+.login-pf-page .login-pf-header h1 {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .login-pf-page .login-pf-header h1 {
+    font-size: 24px;
+  }
+}
+.login-pf-page .login-pf-header .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.login-pf-page .login-pf-header .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle {
+  color: #4d5258;
+  background: none;
+  padding: 0 15px 0 0;
+  font-weight: 300;
+}
+.login-pf-page .login-pf-header .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle:not(:focus) {
+  box-shadow: none;
+  border: 1px solid transparent;
+}
+.login-pf-page .login-pf-header .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle .caret {
+  right: 0;
+}
+.login-pf-page .login-pf-signup {
+  margin: 40px 0 0;
+  font-size: 15px;
+  text-align: center;
+}
+.login-pf-page .login-pf-signup a {
+  margin-left: 10px;
+}
+.login-pf-page .login-pf-settings {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.login-pf-page .login-pf-page-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.login-pf-page .login-pf-page-footer-links {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 60px 0 0 0;
+}
+.login-pf-page .login-pf-page-footer-links li:not(:last-of-type) {
+  position: relative;
+  margin: 0 20px 0 0;
+}
+.login-pf-page .login-pf-page-footer-links li:not(:last-of-type):after {
+  content: ".";
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  right: -10px;
+}
+.login-pf-page .login-pf-page-footer-link {
+  color: #fff;
+  font-size: 14px;
+}
+.login-pf-page .login-pf-page-footer-sso-services {
+  -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+  margin-top: 40px;
+  text-align: center;
+  color: #fff;
+}
+.login-pf-page .login-pf-page-footer-sso-services-logos {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.login-pf-page .login-pf-page-footer-sso-services-logos li {
+  margin: 0 5px 5px;
+}
+.login-pf-page.login-pf-page-accounts {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.login-pf-page .login-pf-accounts {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-pf-page .login-pf-accounts .login-pf-header,
+.login-pf-page .login-pf-accounts .login-pf-signup {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+.login-pf-page .login-pf-social-section {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .login-pf-page .login-pf-social-section {
+    -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
+    max-width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .login-pf-page .login-pf-social-section:first-of-type {
+    padding-right: 40px;
+  }
+  .login-pf-page .login-pf-social-section:last-of-type {
+    padding-left: 39px;
+    border-left: 1px solid #d1d1d1;
+  }
+}
+.login-pf-page .login-pf-social {
+  margin: 40px 0 0 0;
+}
+@media (min-width: 768px) {
+  .login-pf-page .login-pf-social {
+    margin: 0;
+  }
+  .login-pf-page .login-pf-social-double-col {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .login-pf-page .login-pf-social-double-col .login-pf-social-link {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+}
+.login-pf-page .login-pf-social:not(.login-pf-social-all) .login-pf-social-link-more {
+  display: none;
+}
+.login-pf-page .login-pf-social-link {
+  margin-bottom: 15px;
+}
+.login-pf-page .login-pf-social-link a {
+  display: block;
+  padding: 7px 0;
+  font-size: 14px;
+  background: #f5f5f5;
+  text-align: center;
+  color: #72767b;
+}
+.login-pf-page .login-pf-social-link a img {
+  margin: 0 10px 0 0;
+  width: 20px;
+  height: 20px;
+}
+.login-pf-page .login-pf-social-link a:hover {
+  text-decoration: none;
+  background: #ededed;
+}
+.login-pf-page .login-pf-social-toggle {
+  float: right;
+  padding: 0;
+}
+.login-pf-page .login-pf-social-toggle .caret {
+  margin-left: 5px;
+}
+.login-pf-page .login-pf-social-toggle-active .caret {
+  -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+}
 .navbar-pf {
   background: #030303;
   border: 0;
