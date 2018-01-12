@@ -88,10 +88,17 @@
         float: none;
       }
     }
-    .pagination-pf-pagesize.bootstrap-select.btn-group {
+    .pagination-pf-pagesize.bootstrap-select.btn-group, 
+    .pagination-pf-pagesize.btn-group {
       display: flex;
+      float: none;
+      margin-bottom: 0;
+      margin-left: 0;
       margin-right: 5px;
       width: auto;
+    }
+    .dropdown-menu {
+      min-width: auto;
     }
   }
   .pagination-pf-page {
