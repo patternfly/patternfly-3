@@ -8,9 +8,9 @@ Import the project `PatternFlyIcons-webfont.json` and Load it:
 
 ![image](https://cloud.githubusercontent.com/assets/12733153/15152997/83795582-16a5-11e6-9b64-370884453684.png)
 
-After the Load you should see the “PatternFlyIcons - webfont” set above the “IcoMoon - Free” set.  Note that all icons in PatternFlyIcons are selected AND several icons in the IcoMoon set are also selected -keep those selections!
+After the Load you should see the “PatternFlyIcons - webfont” set above the “IcoMoon - Free” set.  Note that all icons in PatternFlyIcons are selected AND several icons in the IcoMoon set are also selected - keep those selections!
 
-To add new icons to the PatternFlyIcons set, click on the right-hand kabob menu and select “Import To Set”.  Import the new icons/svgs/pngs:
+To add new icons to the PatternFlyIcons set, click on the right-hand kebab menu and select “Import To Set”.  Import the new icons/svgs/pngs:
 
 ![image](https://cloud.githubusercontent.com/assets/12733153/15153017/9411521e-16a5-11e6-9a70-e37e73c16734.png)
 
@@ -20,17 +20,17 @@ Generate the fonts by clicking on the “Generate Font” button at the bottom o
 
 ![image](https://cloud.githubusercontent.com/assets/12733153/15153037/a676306e-16a5-11e6-8759-03845f0793c3.png)
 
-At the bottom of the “Generate Font” page, click on the “Download” button.  This will download a zip file which you should expand.  Goto where you expanded the downloaded zip file and copy the 4 font files in the “font” directory (PatternFlyIcons-webfont.eot, .svg, .ttf, .woff) to the patternfly repo under “dist/fonts”.
+At the bottom of the “Generate Font” page, click on the “Download” button.  This will download a zip file which you should expand.  Go to where you expanded the downloaded zip file and copy the 4 font files in the “font” directory (PatternFlyIcons-webfont.eot, .svg, .ttf, .woff) to the patternfly repo under “dist/fonts”.
 
 When finished, return to Manage Projects, and download the updated PatternFlyIcons-webfont.json file to the root of patternfly repo.   
 
 Next update the PatternFly icon test page.
 
-To start this process update “less/variables.less”  add new variables with the “content” values for the new icons.
+To start this process, update “less/variables.less” and add new variables with the “content” values for the new icons.
 
-    Ex:  @pficon-var-blueprint:     "\e915";)  
+    Ex:  @pficon-var-blueprint:     "\e915";
 
-To see the content values for the PF icons click on the demo.html in the root dir of where you expanded the pf icon zip file.
+To see the content values for the PF icons, click on the demo.html in the root dir of where you expanded the pf icon zip file.
 
 Next, update "less/icons.less" and add new LESS to denote the new icons.
 
