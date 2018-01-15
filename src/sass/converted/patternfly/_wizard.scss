@@ -572,9 +572,9 @@
 // --------------------------------------------------
 .wizard-embedded-pf {
   &-main {
-    overflow: scroll;
-    padding:0;
-    display:flex;
+    overflow: auto;
+    padding: 0;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -589,8 +589,8 @@
     }
 
     .btn-cancel {
-      margin-right:0;
-      margin-left:25px;
+      margin-right: 0;
+      margin-left: 25px;
     }
   }
 
