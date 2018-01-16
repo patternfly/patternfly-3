@@ -10000,11 +10000,18 @@ fieldset[disabled] .pagination > li > span.active {
     float: none;
   }
 }
-.content-view-pf-pagination .form-group .pagination-pf-pagesize.bootstrap-select.btn-group {
+.content-view-pf-pagination .form-group .pagination-pf-pagesize.bootstrap-select.btn-group,
+.content-view-pf-pagination .form-group .pagination-pf-pagesize.btn-group {
   display: -ms-flexbox;
   display: flex;
+  float: none;
+  margin-bottom: 0;
+  margin-left: 0;
   margin-right: 5px;
   width: auto;
+}
+.content-view-pf-pagination .form-group .dropdown-menu {
+  min-width: auto;
 }
 .content-view-pf-pagination .pagination-pf-page {
   margin-left: 10px;
