@@ -5,12 +5,6 @@
 
   var donutData = {
     type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
     columns: [
       ['Dogs', 2],
       ['Cats', 2],
@@ -23,7 +17,7 @@
   };
 
   // Small Donut Chart
-  var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
+  var donutChartSmallConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig('8');
   donutChartSmallConfig.bindto = '#{{include.id}}';
   donutChartSmallConfig.tooltip = {show: true};
   donutChartSmallConfig.data = donutData;
