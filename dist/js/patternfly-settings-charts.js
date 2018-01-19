@@ -155,6 +155,18 @@
           ]
         };
       },
+      getDefaultRelationshipDonutColors = function () {
+        return {
+          pattern: [
+            patternfly.pfPaletteColors.blue,
+            patternfly.pfPaletteColors.red100,
+            patternfly.pfPaletteColors.orange400,
+            patternfly.pfPaletteColors.green400,
+            patternfly.pfPaletteColors.cyan500,
+            patternfly.pfPaletteColors.gold200,
+          ]
+        };
+      },
       getDefaultDonutTooltip = function () {
         return {
           show: false
@@ -171,6 +183,15 @@
           size: this.getDefaultDonutSize(),
           legend: this.getDefaultDonutLegend(),
           color: this.getDefaultDonutColors(),
+          tooltip: this.getDefaultDonutTooltip()
+        };
+      },
+      getDefaultRelationshipDonutConfig = function (title) {
+        return {
+          donut: this.getDefaultDonut(title),
+          size: this.getDefaultDonutSize(),
+          legend: this.getDefaultDonutLegend(),
+          color: this.getDefaultRelationshipDonutColors(),
           tooltip: this.getDefaultDonutTooltip()
         };
       },
@@ -391,9 +412,11 @@
       getDefaultDonutTooltip: getDefaultDonutTooltip,
       getDefaultDonutLegend: getDefaultDonutLegend,
       getDefaultDonutConfig: getDefaultDonutConfig,
+      getDefaultRelationshipDonutConfig: getDefaultRelationshipDonutConfig,
       getDefaultPie: getDefaultPie,
       getDefaultPieSize: getDefaultPieSize,
       getDefaultPieColors: getDefaultPieColors,
+      getDefaultRelationshipDonutColors: getDefaultRelationshipDonutColors,
       getDefaultPieTooltip: getDefaultPieTooltip,
       getDefaultPieLegend: getDefaultPieLegend,
       getDefaultPieConfig: getDefaultPieConfig,

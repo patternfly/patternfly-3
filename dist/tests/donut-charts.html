@@ -223,12 +223,6 @@
 
   var donutData = {
     type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
     columns: [
       ['Dogs', 2],
       ['Cats', 2],
@@ -241,7 +235,7 @@
   };
 
   // Donut Chart without Legend
-  var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartConfig.bindto = '#donut-chart-no-legend1';
   donutChartConfig.tooltip = {show: true};
   donutChartConfig.data = donutData;
@@ -257,7 +251,7 @@
   $().pfSetDonutChartTitle("#donut-chart-no-legend1", "8", "Animals");
 
   // Right Legend
-  var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartRightConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartRightConfig.bindto = '#donut-chart-no-legend2';
   donutChartRightConfig.tooltip = {show: true};
   donutChartRightConfig.data = donutData;
@@ -277,7 +271,7 @@
   $().pfSetDonutChartTitle("#donut-chart-no-legend2", "8", "Animals");
 
   // Donut Chart Bottom Legend
-  var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartBottomConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartBottomConfig.bindto = '#donut-chart-no-legend3';
   donutChartBottomConfig.tooltip = {show: true};
   donutChartBottomConfig.data = donutData;
@@ -307,12 +301,6 @@
 
   var donutData = {
     type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
     columns: [
       ['Dogs', 2],
       ['Cats', 2],
@@ -325,7 +313,7 @@
   };
 
   // Small Donut Chart
-  var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
+  var donutChartSmallConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig('8');
   donutChartSmallConfig.bindto = '#smallDonutChart';
   donutChartSmallConfig.tooltip = {show: true};
   donutChartSmallConfig.data = donutData;
