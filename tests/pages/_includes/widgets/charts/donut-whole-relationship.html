@@ -6,12 +6,6 @@
 
   var donutData = {
     type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
     columns: [
       ['Dogs', 2],
       ['Cats', 2],
@@ -24,7 +18,7 @@
   };
 
   // Donut Chart without Legend
-  var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartConfig.bindto = '#{{include.id}}1';
   donutChartConfig.tooltip = {show: true};
   donutChartConfig.data = donutData;
@@ -40,7 +34,7 @@
   $().pfSetDonutChartTitle("#{{include.id}}1", "8", "Animals");
 
   // Right Legend
-  var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartRightConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartRightConfig.bindto = '#{{include.id}}2';
   donutChartRightConfig.tooltip = {show: true};
   donutChartRightConfig.data = donutData;
@@ -60,7 +54,7 @@
   $().pfSetDonutChartTitle("#{{include.id}}2", "8", "Animals");
 
   // Donut Chart Bottom Legend
-  var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartBottomConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartBottomConfig.bindto = '#{{include.id}}3';
   donutChartBottomConfig.tooltip = {show: true};
   donutChartBottomConfig.data = donutData;
