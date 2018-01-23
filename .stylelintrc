@@ -30,7 +30,6 @@
     "declaration-block-no-duplicate-properties": [true, {
       "ignore": ["consecutive-duplicates-with-different-values"]
     }],
-    "declaration-block-no-ignored-properties": true,
     "declaration-block-trailing-semicolon": "always",
     "declaration-block-semicolon-space-before": "never",
     "declaration-block-semicolon-space-after": "always-single-line",
