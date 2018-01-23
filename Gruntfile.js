@@ -384,7 +384,7 @@ module.exports = function (grunt) {
           }
         ],
         options: {
-          excludes: ['variables', 'default', 'rgba'],
+          excludes: ['variables', 'default', 'rgba', 'important'],
           replacements: [
             {
               // Customize variable conversion to include newer css reserved words.
@@ -393,13 +393,13 @@ module.exports = function (grunt) {
               order: 0
             },
             {
-              //
+              // Asset paths are already relative to their respective folder when using compass/sprockets
               pattern: /^\$(img|font)-path:(\s*)"(.*)"(.*);(.*)$/mgi,
               replacement: '\$$$1-path:$2if($pf-sass-asset-helper, "", "$3/")$4;$5',
               order: 1
             },
             {
-              //
+              // Asset paths are already relative to their respective folder when using compass/sprockets
               pattern: /^\$icon-font-path:(\s*)"(.*)"(.*);(.*)$/mgi,
               replacement: '\$icon-font-path:$1if($pf-sass-asset-helper, "", "$2")$3;$4',
               order: 1
@@ -418,7 +418,7 @@ module.exports = function (grunt) {
             },
             // Original fade -> rgba conversion did not account for decimal percentages
             {
-              pattern: /fade\((.*),\s?([\d\.]+)\%\)/gmi,
+              pattern: /fade\((.*),\s?([\d\.]+)\%\)/mgi,
               replacement: 'rgba($1, ($2/100))',
               order: 3
             },
@@ -471,12 +471,6 @@ module.exports = function (grunt) {
                 return p1+p2+p3.replace(/;/g, ',')+p4;
               },
               order: 70
-            },
-            {
-              // Fix bug in grunt-less-to-sass that puts "!important" inside mixin and css function parens.
-              pattern: /^(\s*[\w\-]*:\s*[\w\-]*)\((.*?)\s*!important.*\)(.*);(.*)$/mgi,
-              replacement: '$1($2) !important$3;$4',
-              order: 80
             },
             {
               pattern: /\&:extend\((.*)\)/gi,
