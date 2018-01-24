@@ -170,6 +170,7 @@
 
 // Kebab dropmenu
 .dropdown-kebab-pf {
+  &.btn-group > .btn:first-child,
   .btn-link {
     color: @gray-darker;
     font-size: (@font-size-base + 4);
@@ -183,6 +184,7 @@
       color: @link-color;
     }
   }
+  &.btn-group { margin-left: (@grid-gutter-width/4); }
   .dropdown-menu {
     left: -15px;
     margin-top: 11px;
