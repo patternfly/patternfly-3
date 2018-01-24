@@ -9472,6 +9472,7 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-submenu.active > .dropdown-menu {
   display: block;
 }
+.dropdown-kebab-pf.btn-group > .btn:first-child,
 .dropdown-kebab-pf .btn-link {
   color: #252525;
   font-size: 16px;
@@ -9480,10 +9481,16 @@ fieldset[disabled] .btn-primary.active {
   margin-left: -10px;
   margin-right: -10px;
 }
+.dropdown-kebab-pf.btn-group > .btn:first-child:active,
 .dropdown-kebab-pf .btn-link:active,
+.dropdown-kebab-pf.btn-group > .btn:first-child:focus,
 .dropdown-kebab-pf .btn-link:focus,
+.dropdown-kebab-pf.btn-group > .btn:first-child:hover,
 .dropdown-kebab-pf .btn-link:hover {
   color: #0088ce;
+}
+.dropdown-kebab-pf.btn-group {
+  margin-left: 10px;
 }
 .dropdown-kebab-pf .dropdown-menu {
   left: -15px;
