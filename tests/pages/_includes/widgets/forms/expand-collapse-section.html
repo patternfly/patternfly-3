@@ -60,9 +60,9 @@
   // Initialize form
   $(document).ready(function() {
     // set default state to collapsed for expandable field section
-    $('.fields-section-header-pf').attr('aria-expanded', 'false');
-    $('.fields-section-pf .form-group').addClass('hidden');
-    $('.fa.field-section-toggle-pf').removeClass('fa-angle-down');
+    $('#{{include.id-fieldsection}} .fields-section-header-pf').attr('aria-expanded', 'false');
+    $('#{{include.id-fieldsection}} .fields-section-pf .form-group').addClass('hidden');
+    $('#{{include.id-fieldsection}} .fa.field-section-toggle-pf').removeClass('fa-angle-down');
 
     // click the field section heading to expand the section
     $("#{{include.id-fieldsection}} .field-section-toggle-pf").click(function(event){

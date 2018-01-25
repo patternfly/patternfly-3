@@ -1,4 +1,5 @@
-<div class="list-group list-view-pf">
+{% assign id = include.id | default: 'pf-list-var4' %}
+<div id="{{id}}" class="list-group list-view-pf">
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
       <input type="checkbox">
@@ -33,7 +34,7 @@
 <script>
   // Row Checkbox Selection
   $(document).ready(function () {
-    $("input[type='checkbox']").change(function (e) {
+    $("#{{id}} input[type='checkbox']").change(function (e) {
       if ($(this).is(":checked")) {
         $(this).closest('.list-group-item').addClass("active");
       } else {

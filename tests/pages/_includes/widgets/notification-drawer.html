@@ -1,4 +1,5 @@
-<div class="drawer-pf hide drawer-pf-notifications-non-clickable">
+{% assign id = include.id | default: 'pf-drawer' %}
+<div id="{{id}}" class="drawer-pf hide drawer-pf-notifications-non-clickable">
   <div class="drawer-pf-title">
     <a class="drawer-pf-toggle-expand fa fa-angle-double-left hidden-xs"></a>
     <a  class="drawer-pf-close pficon pficon-close"></a>
@@ -117,7 +118,7 @@
 
     // Show/Hide Notifications Drawer
     $('.drawer-pf-trigger').click(function() {
-      var $drawer = $('.drawer-pf');
+      var $drawer = $('#{{id}}.drawer-pf');
 
       $(this).toggleClass('open');
       if ($drawer.hasClass('hide')) {
@@ -139,13 +140,13 @@
        $('.nav-pf-vertical').removeClass('show-mobile-nav');
      }
     });
-    $('.drawer-pf-close').click(function() {
-      var $drawer = $('.drawer-pf');
+    $('#{{id}} .drawer-pf-close').click(function() {
+      var $drawer = $('#{{id}}.drawer-pf');
 
-      $('.drawer-pf-trigger').removeClass('open');
+      $('#{{id}} .drawer-pf-trigger').removeClass('open');
       $drawer.addClass('hide');
     });
-    $('.drawer-pf-toggle-expand').click(function() {
+    $('#{{id}} .drawer-pf-toggle-expand').click(function() {
       var $drawer = $('.drawer-pf');
       var $drawerNotifications = $drawer.find('.drawer-pf-notification');
 
@@ -159,7 +160,7 @@
     });
 
     // Mark All Read / Clear All
-    $('.panel-collapse').each(function (index, panel) {
+    $('#{{id}} .panel-collapse').each(function (index, panel) {
       var $panel = $(panel);
       var unreadCount = $panel.find('.drawer-pf-notification.unread').length;
       $(panel.parentElement).find('.panel-counter').text(unreadCount + ' New Event' + (unreadCount !== 1 ? 's' : ''));
