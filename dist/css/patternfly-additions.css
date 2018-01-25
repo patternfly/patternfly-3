@@ -6143,10 +6143,6 @@ a.disabled {
 .navbar-pf-vertical .navbar-brand .navbar-brand-icon {
   display: inline-block;
   margin: 0 15px 0 0;
-  max-height: 35px;
-}
-.navbar-pf-vertical .navbar-brand .navbar-brand-txt {
-  line-height: 34px;
 }
 .navbar-pf-vertical .navbar-iconic {
   margin-right: 0;
