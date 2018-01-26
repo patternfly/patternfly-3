@@ -8267,6 +8267,13 @@ table.dataTable th:active {
   }
   .wizard-pf-sidebar .list-group-item > a:hover {
     text-decoration: none;
+    background-color: #ededed;
+  }
+  .wizard-pf-sidebar .list-group-item > a:focus {
+    text-decoration: none;
+  }
+  .wizard-pf-sidebar .list-group-item > a:focus span {
+    text-decoration: underline;
   }
   .wizard-pf-sidebar .list-group-item.active {
     background-color: #ededed;
