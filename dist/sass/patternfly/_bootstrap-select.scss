@@ -68,7 +68,7 @@
       border-color: $dropdown-link-active-border-color !important;
       color: $color-pf-white !important;
       small {
-        color: fade($color-pf-white, 50%) !important;
+        color: rgba($color-pf-white, (50/100)) !important;
       }
     }
     .divider {
@@ -86,7 +86,7 @@
       }
       & a {
         &:active small {
-          color: fade($color-pf-white, 50%) !important;
+          color: rgba($color-pf-white, (50/100)) !important;
         }
         &:hover,
         &:focus {

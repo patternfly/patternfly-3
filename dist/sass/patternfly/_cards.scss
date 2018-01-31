@@ -90,7 +90,7 @@
 .card-pf-footer {
   background-color: $card-pf-footer-bg-color;
   border-top: 1px solid $card-pf-border-color;
-  margin: 0 (-($grid-gutter-width / 2) !important);
+  margin: 0 (-($grid-gutter-width / 2)) !important;
   padding: ($grid-gutter-width / 2) ($grid-gutter-width / 2) ($grid-gutter-width / 4);
   a > {
     .fa,
