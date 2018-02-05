@@ -38,7 +38,7 @@
     "grunt-postcss": "^0.8.0",
     "grunt-run": "^0.6.0",
     "grunt-sass": "^2.0.0",
-    "grunt-stylelint": "^0.7.0",
+    "grunt-stylelint": "^0.9.0",
     "html-pdf": "^2.2.0",
     "husky": "^0.14.3",
     "jasmine-core": "^2.4.1",
@@ -60,6 +60,7 @@
     "pixrem": "^3.0.1",
     "require-all": "^2.2.0",
     "semantic-release": "^6.3.6",
+    "stylelint": "^8.0.0",
     "table": "3.7.9"
   },
   "optionalDependencies": {
