@@ -1,0 +1,48 @@
+---
+categories: [Widgets]
+layout: layout
+title: Wizard embedded
+resource: true
+---
+{% include widgets/layouts/navbar-vertical.html %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Wizard Title</h2>
+    </div>
+  </div>
+</div>
+  <div class="wizard-embedded-pf">
+    <div class="wizard-pf-body clearfix">
+      {% include widgets/communication/wizard-steps.html %}
+      <div class="wizard-pf-row">
+        {% include widgets/communication/wizard-sidebar.html %}
+        <div class="wizard-pf-main wizard-embedded-pf-main">
+          <div class="wizard-embedded-pf-body">
+            {% include widgets/communication/wizard-loading.html %}
+            {% include widgets/communication/wizard-pages.html %}
+          </div>
+          <div class="wizard-pf-footer wizard-embedded-pf-footer">
+            <button id="wizard-pf-back" type="button" class="btn btn-default disabled">
+              <span class="i fa fa-angle-left"></span>
+              Back
+            </button>
+            <button id="wizard-pf-next" type="button" class="btn btn-primary disabled">
+              Next
+              <span class="i fa fa-angle-right"></span>
+            </button>
+            <button id="wizard-pf-finish" type="button" class="btn btn-primary hidden">
+              Deploy
+              <span class="i fa fa-angle-right"></span>
+            </button>
+            <button id="wizard-pf-close" type="button" class="btn btn-default btn-cancel">
+              Cancel
+            </button>
+          </div><!-- /.wizard-pf-footer -->
+        </div><!-- /.wizard-pf-main -->
+      </div>
+    </div><!-- /.wizard-pf-body -->
+
+  <!-- TODO: disable buttons -->
+  </div><!-- wizard-pf-embedded -->
+{% include widgets/communication/wizard-controller.html %}
