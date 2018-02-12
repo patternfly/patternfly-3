@@ -11,7 +11,12 @@
       documentHeight = $(document).height();
       navbarpfHeight = $('.navbar-pf').outerHeight();
       colHeight = documentHeight - navbarpfHeight;
+    } else if ($('.nav-pf-vertical').length  && !$('.nav-pf-vertical').is(':hidden')) {
+      documentHeight = $(document).height();
+      navbarpfHeight = $('.navbar.navbar-pf-vertical').outerHeight();
+      colHeight = documentHeight - navbarpfHeight;
     }
+
     $('.sidebar-pf').parent('.row').children('[class*="col-"]').css({"min-height" : colHeight});
   };
 
