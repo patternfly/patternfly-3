@@ -5,6 +5,7 @@ const config = require('./config');
 
 // check if arguments passed at the command line, and only run those
 helpers.filterScenarios(config);
+config.scenarios = helpers.appendQueryParam(config.scenarios);
 
 // execute backstop
 backstop('test', { config })
