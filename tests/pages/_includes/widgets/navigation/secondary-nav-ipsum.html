@@ -4,7 +4,10 @@
     <span>Ipsum</span>
   </div>
   <ul class="list-group">
-    <li class="list-group-item active {% if page.nav-tertiary %}tertiary-nav-item-pf{% endif %}" data-target="#ipsum-intellegam-tertiary">
+    <li class="list-group-item active
+      {% if include.show-tertiary %}is-hover{% endif %}
+      {% if page.nav-tertiary %}tertiary-nav-item-pf{% endif %}"
+      data-target="#ipsum-intellegam-tertiary">
       <a href="#0">
         <span class="list-group-item-value">Intellegam</span>
       </a>
