@@ -4,7 +4,7 @@
 <html lang="en-us" class="layout-pf layout-pf-fixed">
   <!--<![endif]-->
     <head>
-    <title>Vertical Navigation with Tertiary Navigation (no icons) - PatternFly</title>
+    <title>Context Selector for Vertical Navigation - PatternFly</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +48,7 @@
 
   
 
-<nav class="navbar navbar-pf-vertical">
+<nav class="navbar navbar-pf-vertical navbar-pf-contextselector">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle">
       <span class="sr-only">Toggle navigation</span>
@@ -56,9 +56,41 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a href="/" class="navbar-brand">
+    <a href="/" class="navbar-brand hidden-sm hidden-xs">
       <img class="navbar-brand-icon" src="..//img/logo-alt.svg" alt=""/><img class="navbar-brand-name" src="..//img/brand-alt.svg" alt="PatternFly Enterprise Application" />
     </a>
+    
+    <ul class="nav contextselector-pf">
+  <li class="dropdown">
+    <a href="#0" class="dropdown-toggle nav-item-iconic" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <span class="contextselector-pf-title">Really long server name server name</span>
+      <span class="caret"></span>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+    <div class="form-group">
+    <label class="sr-only" for="searchinput">search</label>
+    <input type="text" class="form-control" id="searchinput" placeholder="Search">
+  </div>
+    <ul class="contextselector-pf-list list-unstyled">
+      <li><a href="#0">A Different Context</a></li>
+      <li><a href="#0">A Second Context</a></li>
+      <li><a href="#0">Current</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+      <li><a href="#0">Dolor Sit Amet</a></li>
+    </ul>
+  </div>
+  </li>
+</ul>
+
     
   </div>
   <nav class="collapse navbar-collapse">
@@ -975,7 +1007,7 @@
 <div class="nav-pf-vertical nav-pf-vertical-with-sub-menus
      
      
-     hidden-icons-pf
+     
      ">
   <ul class="list-group">
     <li class="list-group-item">
@@ -1003,112 +1035,23 @@
     <span>Ipsum</span>
   </div>
   <ul class="list-group">
-    <li class="list-group-item active tertiary-nav-item-pf" data-target="#ipsum-intellegam-tertiary">
+    <li class="list-group-item active " data-target="#ipsum-intellegam-tertiary">
       <a href="#0">
         <span class="list-group-item-value">Intellegam</span>
       </a>
       
-      <div id="compute-containers-tertiary" class="nav-pf-tertiary-nav">
-  <div class="nav-item-pf-header">
-    <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
-    <span>Intellegam</span>
-  </div>
-  <ul class="list-group">
-    <li class="list-group-item active">
-      <a href="#0">
-        <span id="compute-containers-users-nav-item" class="list-group-item-value">Recteque</span>
-        
-      </a>
     </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span id="compute-containers-groups-nav-item" class="list-group-item-value">Suavitate</span>
-        
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span id="compute-containers-roles-nav-item" class="list-group-item-value">Vituperatoribus</span>
-        
-      </a>
-    </li>
-  </ul>
-</div>
-
-      
-    </li>
-    <li class="list-group-item tertiary-nav-item-pf" data-target="#ipsum-copiosae-tertiary">
+    <li class="list-group-item " data-target="#ipsum-copiosae-tertiary">
       <a href="#0">
         <span class="list-group-item-value">Copiosae</span>
       </a>
       
-      <div id="compute-infrastructure-tertiary" class="nav-pf-tertiary-nav">
-  <div class="nav-item-pf-header">
-    <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
-    <span>Copiosae</span>
-  </div>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Exerci</span>
-        
-      </a>
     </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Quaeque</span>
-        
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Utroque</span>
-        
-      </a>
-    </li>
-  </ul>
-</div>
-
-      
-    </li>
-    <li class="list-group-item tertiary-nav-item-pf" data-target="#ipsum-patrioque-tertiary">
+    <li class="list-group-item " data-target="#ipsum-patrioque-tertiary">
       <a href="#0" >
         <span class="list-group-item-value">Patrioque</span>
       </a>
       
-      <div id="compute-clouds-tertiary" class="nav-pf-tertiary-nav">
-  <div class="nav-item-pf-header">
-    <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
-    <span>Patrioque</span>
-  </div>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Novum</span>
-        
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Pericula</span>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Gubergren</span>
-      </a>
-    </li>
-  </ul>
-</div>
-
-      
-    </li>
-    
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Accumsan</span>
-        
-      </a>
     </li>
     
   </ul>
@@ -1128,117 +1071,32 @@
     <span>Amet</span>
   </div>
   <ul class="list-group">
-    <li class="list-group-item tertiary-nav-item-pf" data-target="#amet-detracto-tertiary">
+    <li class="list-group-item " data-target="#amet-detracto-tertiary">
       <a href="#0">
         <span class="list-group-item-value">Detracto Suscipiantur</span>
         
+        
+        
       </a>
       
-      <div id="amet-detracto-tertiary" class="nav-pf-tertiary-nav">
-  <div class="nav-item-pf-header">
-    <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
-    <span>Detracto</span>
-  </div>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Delicatissimi</span>
-        
-      </a>
     </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Aliquam</span>
-        
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Principes</span>
-        
-      </a>
-    </li>
-  </ul>
-</div>
-
-      
-    </li>
-    <li class="list-group-item tertiary-nav-item-pf" data-target="#amet-mediocrem-tertiary">
+    <li class="list-group-item " data-target="#amet-mediocrem-tertiary">
       <a href="#0">
         <span class="list-group-item-value">Mediocrem</span>
         
+        
+        
       </a>
       
-      <div id="amet-mediocrem-tertiary" class="nav-pf-tertiary-nav">
-  <div class="nav-item-pf-header">
-    <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
-    <span>Mediocrem</span>
-  </div>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Convenire</span>
-        
-      </a>
     </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Nonumy</span>
-        
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Deserunt</span>
-        
-      </a>
-    </li>
-  </ul>
-</div>
-
-      
-    </li>
-    <li class="list-group-item tertiary-nav-item-pf" data-target="#amet-corrumpit-tertiary">
+    <li class="list-group-item " data-target="#amet-corrumpit-tertiary">
       <a href="#0">
         <span class="list-group-item-value">Corrumpit Cupidatat Proident Deserunt</span>
         
+        
+        
       </a>
       
-      <div id="amet-corrumpit-tertiary" class="nav-pf-tertiary-nav">
-  <div class="nav-item-pf-header">
-    <a href="#0" class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
-    <span>Corrumpit</span>
-  </div>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Aeque</span>
-        
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Delenit</span>
-        
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Qualisque</span>
-        
-      </a>
-    </li>
-  </ul>
-</div>
-
-      
-    </li>
-    
-    <li class="list-group-item">
-      <a href="#0">
-        <span class="list-group-item-value">Urbanitas Habitant Morbi Tristique</span>
-        
-      </a>
     </li>
     
   </ul>
@@ -1316,7 +1174,7 @@
 <div class="container-fluid container-cards-pf container-pf-nav-pf-vertical
      
      
-     hidden-icons-pf">
+     ">
 
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
