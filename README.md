@@ -58,7 +58,7 @@ exclude: [
 **Patternfly now supports Sass natively!**
 Sass is included in the `dist/sass` directory. Just add `node_modules` to your build tool's Sass include paths then `@import 'patternfly/dist/sass/patternfly';` in your Sass to get started!
 
-Please note that the [patternfly-sass](https://github.com/patternfly/patternfly-sass) is no longer supported and will not include any features or fixes introduced after Patternfly 3.23.2. However, the [patternfly-sass](https://rubygems.org/patternfly-sass) Rubygem is maintained further and built from this repository. 
+Please note that the [patternfly-sass](https://github.com/patternfly/patternfly-sass) is no longer supported and will not include any features or fixes introduced after Patternfly 3.23.2. However, the [patternfly-sass](https://rubygems.org/patternfly-sass) Rubygem is maintained further and built from this repository.
 
 ### AngularJS
 
@@ -243,7 +243,7 @@ The Less to Sass Conversion step will be accomplished and managed as a part of a
 Sass and Less do not have perfect feature parity, which can sometimes throw a wrench into the conversion process described above. Furthermore, a failed conversion may be somewhat transparent since it may create Sass that will compile to unexpected, but valid CSS. The following are a few known scenarios that can be easily avoided to prevent failures in the Less to Sass conversion process.
 
 #### Non-parametric Mixins
-Sass does not support non-parametric mixins in the same way that Less does. Mixins must be explictly declared in Sass, whereas any class definition in Less can be used as a non-parametric mixin. Sass does not have a feature that perfectly parallels this behavior, so we have to use the closest thing which is the `@extend` statement. However, an edge case exists where `@extend` statements are not allowed within media queries in Sass. This creates a scenario where uncompilable Sass code can be generated from perfectly acceptable Less. For example:  
+Sass does not support non-parametric mixins in the same way that Less does. Mixins must be explictly declared in Sass, whereas any class definition in Less can be used as a non-parametric mixin. Sass does not have a feature that perfectly parallels this behavior, so we have to use the closest thing which is the `@extend` statement. However, an edge case exists where `@extend` statements are not allowed within media queries in Sass. This creates a scenario where uncompilable Sass code can be generated from perfectly acceptable Less. For example:
 **Less:**
 ```
   .applauncher-pf {
@@ -321,7 +321,7 @@ This breaks for two reasons. We cannot use the `@extend` statement directly insi
 ```
 
 #### Tilde-Escaped Strings
-Strings that are escaped using the tilde in Less get converted to the Sass `unquote()` function. This causes Sass compilation issues when using escaped strings inside native CSS functions like `calc()`. Here is what happens:  
+Strings that are escaped using the tilde in Less get converted to the Sass `unquote()` function. This causes Sass compilation issues when using escaped strings inside native CSS functions like `calc()`. Here is what happens:
 Less:
 ```
 height: calc(~"100vh - 20px");
@@ -392,6 +392,8 @@ or
 grunt karma
 ```
 ### Visual Regression Testing
+
+*Visual regression tests require Jekyll to be installed*
 
 Visual regression tests provide a way to detect if unintended visual changes have
 occured as a result of changes in the code. They work by taking screenshots of
