@@ -1773,6 +1773,17 @@
   });
 </script>
 
+<script>
+  const currentUrl = new URL(window.location.href);
+  const currentEnvironment = currentUrl.searchParams.get('environment');
+
+  if (currentEnvironment === 'regressions') {
+    let verticalNavEl = document.querySelector('div.nav-pf-vertical');
+    let ipsumEl = document.querySelector('[data-target="#ipsum-secondary"]');
+    ipsumEl.className = `${ipsumEl.className} is-hover`;
+    verticalNavEl.className = `${verticalNavEl.className} nav-pf-vertical-with-submenus hover-secondary-nav-pf`;
+  }
+</script>
 
   </body>
 </html>

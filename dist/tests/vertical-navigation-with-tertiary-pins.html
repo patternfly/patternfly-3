@@ -1947,6 +1947,19 @@
   });
 </script>
 
+<script>
+  const currentUrl = new URL(window.location.href);
+  const currentEnvironment = currentUrl.searchParams.get('environment');
+
+  if (currentEnvironment === 'regressions') {
+    let verticalNavEl = document.querySelector('div.nav-pf-vertical');
+    let ipsumEl = document.querySelector('[data-target="#ipsum-secondary"]');
+    let tertiaryNavItemEl = document.querySelector('.list-group-item.active.tertiary-nav-item-pf')
+    verticalNavEl.className = `${verticalNavEl.className} nav-pf-vertical-with-submenus hidden-icons-pf hover-secondary-nav-pf hover-tertiary-nav-pf`;
+    ipsumEl.className = `${ipsumEl.className} is-hover`;
+    tertiaryNavItemEl.className = `${tertiaryNavItemEl.className} is-hover`;
+  }
+</script>
 
   </body>
 </html>

@@ -24,6 +24,14 @@ module.exports = {
       config.scenarios = scenarios;
     }
   },
+  appendQueryParam (scenarios) {
+    return scenarios.map((scenarioConfig) => {
+      if (scenarioConfig.url) {
+        scenarioConfig.url = `${scenarioConfig.url}?environment=regressions`;
+      }
+      return scenarioConfig;
+    });
+  },
   generatePdfReport () {
     let htmlReportDir = path.join(__dirname, '../../backstop_data/html_report');
     let htmlReportPath = path.join(htmlReportDir, 'index.html');
