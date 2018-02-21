@@ -2,18 +2,58 @@
   "metadata": {
     "name": "PatternFlyIcons-webfont",
     "lastOpened": 0,
-    "created": 1514987444726
+    "created": 1519218632294
   },
   "iconSets": [
     {
       "selection": [
+        {
+          "order": 160,
+          "id": 103,
+          "name": "pficon-history",
+          "prevSize": 14,
+          "code": 59707,
+          "tempChar": ""
+        },
+        {
+          "order": 161,
+          "id": 102,
+          "name": "pficon-network-range",
+          "prevSize": 14,
+          "code": 59722,
+          "tempChar": ""
+        },
+        {
+          "order": 162,
+          "id": 101,
+          "name": "pficon-satellite",
+          "prevSize": 14,
+          "code": 59723,
+          "tempChar": ""
+        },
+        {
+          "order": 163,
+          "id": 100,
+          "name": "pficon-template",
+          "prevSize": 14,
+          "code": 59724,
+          "tempChar": ""
+        },
+        {
+          "order": 164,
+          "id": 99,
+          "name": "pficon-vcenter",
+          "prevSize": 14,
+          "code": 59725,
+          "tempChar": ""
+        },
         {
           "order": 158,
           "id": 98,
           "name": "catalog",
           "prevSize": 14,
           "code": 59705,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 159,
@@ -21,7 +61,7 @@
           "name": "enhancement",
           "prevSize": 14,
           "code": 59706,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 157,
@@ -29,7 +69,7 @@
           "name": "disconnected",
           "prevSize": 14,
           "code": 59708,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 150,
@@ -37,7 +77,7 @@
           "name": "integration",
           "prevSize": 14,
           "code": 59720,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 151,
@@ -45,7 +85,7 @@
           "name": "process-automation",
           "prevSize": 14,
           "code": 59721,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 152,
@@ -53,7 +93,7 @@
           "name": "filter",
           "prevSize": 14,
           "code": 59715,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 153,
@@ -61,7 +101,7 @@
           "name": "monitoring",
           "prevSize": 14,
           "code": 59716,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 154,
@@ -69,7 +109,7 @@
           "name": "port",
           "prevSize": 14,
           "code": 59717,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 155,
@@ -77,7 +117,7 @@
           "name": "security",
           "prevSize": 14,
           "code": 59718,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 156,
@@ -85,7 +125,7 @@
           "name": "services",
           "prevSize": 14,
           "code": 59719,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 135,
@@ -93,7 +133,7 @@
           "name": "applications",
           "prevSize": 14,
           "code": 59702,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 136,
@@ -101,7 +141,7 @@
           "name": "automation",
           "prevSize": 14,
           "code": 59703,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 137,
@@ -109,7 +149,7 @@
           "name": "connected",
           "prevSize": 14,
           "code": 59704,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -135,7 +175,7 @@
           "name": "infrastructure",
           "prevSize": 14,
           "code": 59709,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 140,
@@ -143,7 +183,7 @@
           "name": "optimize",
           "prevSize": 14,
           "code": 59710,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 141,
@@ -151,7 +191,7 @@
           "name": "orders",
           "prevSize": 14,
           "code": 59711,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 142,
@@ -159,7 +199,7 @@
           "name": "plugged",
           "prevSize": 14,
           "code": 59712,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 143,
@@ -167,7 +207,7 @@
           "name": "service-catalog",
           "prevSize": 14,
           "code": 59713,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 144,
@@ -175,7 +215,7 @@
           "name": "unplugged",
           "prevSize": 14,
           "code": 59714,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 124,
@@ -183,7 +223,7 @@
           "name": "asleep",
           "prevSize": 14,
           "code": 59685,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 125,
@@ -191,7 +231,7 @@
           "name": "in-progress",
           "prevSize": 14,
           "code": 59692,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 126,
@@ -199,7 +239,7 @@
           "name": "maintenance",
           "prevSize": 14,
           "code": 59693,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 127,
@@ -207,7 +247,7 @@
           "name": "migration",
           "prevSize": 14,
           "code": 59694,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 128,
@@ -215,7 +255,7 @@
           "name": "off",
           "prevSize": 14,
           "code": 59695,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 129,
@@ -223,7 +263,7 @@
           "name": "on-running",
           "prevSize": 14,
           "code": 59696,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 130,
@@ -231,7 +271,7 @@
           "name": "on",
           "prevSize": 14,
           "code": 59697,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 131,
@@ -239,7 +279,7 @@
           "name": "paused",
           "prevSize": 14,
           "code": 59698,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 132,
@@ -247,7 +287,7 @@
           "name": "pending",
           "prevSize": 14,
           "code": 59699,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 133,
@@ -255,7 +295,7 @@
           "name": "rebooting",
           "prevSize": 14,
           "code": 59700,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 134,
@@ -263,7 +303,7 @@
           "name": "unknown",
           "prevSize": 14,
           "code": 59701,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 123,
@@ -271,7 +311,7 @@
           "name": "memory",
           "prevSize": 14,
           "code": 59656,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 110,
@@ -279,7 +319,7 @@
           "name": "info",
           "prevSize": 14,
           "code": 59691,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 108,
@@ -287,7 +327,7 @@
           "name": "arrow",
           "prevSize": 14,
           "code": 59689,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 107,
@@ -295,7 +335,7 @@
           "name": "project",
           "prevSize": 14,
           "code": 59653,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 105,
@@ -303,7 +343,7 @@
           "name": "warning-triangle",
           "prevSize": 14,
           "code": 59667,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 104,
@@ -311,7 +351,7 @@
           "name": "user",
           "prevSize": 14,
           "code": 59678,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 103,
@@ -319,7 +359,7 @@
           "name": "users",
           "prevSize": 14,
           "code": 59679,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 102,
@@ -327,7 +367,7 @@
           "name": "thumb-tack",
           "prevSize": 14,
           "code": 59680,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 101,
@@ -335,7 +375,7 @@
           "name": "search",
           "prevSize": 14,
           "code": 59681,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 100,
@@ -343,7 +383,7 @@
           "name": "unlocked",
           "prevSize": 14,
           "code": 59682,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 99,
@@ -351,7 +391,7 @@
           "name": "locked",
           "prevSize": 14,
           "code": 59683,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 98,
@@ -359,7 +399,7 @@
           "name": "key",
           "prevSize": 14,
           "code": 59684,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -375,7 +415,7 @@
           "name": "error-circle-o",
           "prevSize": 14,
           "code": 59686,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 95,
@@ -383,7 +423,7 @@
           "name": "cpu",
           "prevSize": 14,
           "code": 59687,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 94,
@@ -391,7 +431,7 @@
           "name": "chat",
           "prevSize": 14,
           "code": 59688,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 92,
@@ -399,7 +439,7 @@
           "name": "resources-almost-empty",
           "prevSize": 14,
           "code": 59677,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 89,
@@ -407,7 +447,7 @@
           "name": "degraded",
           "prevSize": 14,
           "code": 59675,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 90,
@@ -415,7 +455,7 @@
           "name": "rebalance",
           "prevSize": 14,
           "code": 59676,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 88,
@@ -423,7 +463,7 @@
           "name": "domain",
           "prevSize": 14,
           "code": 59673,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 87,
@@ -431,7 +471,7 @@
           "name": "server-group",
           "prevSize": 14,
           "code": 59674,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 86,
@@ -439,7 +479,7 @@
           "name": "bundle",
           "prevSize": 14,
           "code": 59672,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 85,
@@ -447,7 +487,7 @@
           "name": "middleware",
           "prevSize": 14,
           "code": 59671,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 75,
@@ -455,7 +495,7 @@
           "prevSize": 14,
           "code": 59668,
           "name": "private",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 76,
@@ -463,7 +503,7 @@
           "prevSize": 14,
           "code": 59669,
           "name": "blueprint",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 77,
@@ -471,7 +511,7 @@
           "prevSize": 14,
           "code": 59670,
           "name": "tenant",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 72,
@@ -479,7 +519,7 @@
           "prevSize": 14,
           "code": 59666,
           "name": "resources-almost-full",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 109,
@@ -487,7 +527,7 @@
           "prevSize": 14,
           "code": 59690,
           "name": "resources-full",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 56,
@@ -495,7 +535,7 @@
           "prevSize": 14,
           "code": 59651,
           "name": "cloud-security",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 57,
@@ -503,7 +543,7 @@
           "prevSize": 14,
           "code": 59652,
           "name": "cloud-tenant",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -519,7 +559,7 @@
           "prevSize": 14,
           "code": 59654,
           "name": "enterprise",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 60,
@@ -527,7 +567,7 @@
           "prevSize": 14,
           "code": 59655,
           "name": "flavor",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -543,7 +583,7 @@
           "prevSize": 14,
           "code": 59657,
           "name": "network",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 63,
@@ -551,7 +591,7 @@
           "prevSize": 14,
           "code": 59658,
           "name": "regions",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 64,
@@ -559,7 +599,7 @@
           "prevSize": 14,
           "code": 59659,
           "name": "repository",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 65,
@@ -567,7 +607,7 @@
           "prevSize": 14,
           "code": 59660,
           "name": "resource-pool",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 66,
@@ -575,7 +615,7 @@
           "prevSize": 14,
           "code": 59661,
           "name": "server",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 67,
@@ -583,7 +623,7 @@
           "prevSize": 14,
           "code": 59662,
           "name": "storage-domain",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 68,
@@ -591,7 +631,7 @@
           "prevSize": 14,
           "code": 59663,
           "name": "virtual-machine",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 69,
@@ -599,7 +639,7 @@
           "prevSize": 14,
           "code": 59664,
           "name": "volume",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 70,
@@ -607,7 +647,7 @@
           "prevSize": 14,
           "code": 59665,
           "name": "zone",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 54,
@@ -615,7 +655,7 @@
           "prevSize": 14,
           "code": 59650,
           "name": "build",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 52,
@@ -623,7 +663,7 @@
           "prevSize": 14,
           "code": 59648,
           "name": "trend-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 53,
@@ -631,7 +671,7 @@
           "prevSize": 14,
           "code": 59649,
           "name": "trend-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 55,
@@ -639,7 +679,7 @@
           "prevSize": 14,
           "code": 59392,
           "name": "builder-image",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 49,
@@ -647,7 +687,7 @@
           "prevSize": 14,
           "code": 58888,
           "name": "topology",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -663,7 +703,7 @@
           "prevSize": 14,
           "code": 58904,
           "name": "home",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -672,7 +712,7 @@
           "prevSize": 14,
           "code": 58903,
           "name": "history",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -681,7 +721,7 @@
           "prevSize": 14,
           "code": 58901,
           "name": "import",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -690,7 +730,7 @@
           "prevSize": 14,
           "code": 58902,
           "name": "export",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -699,7 +739,7 @@
           "prevSize": 14,
           "code": 58881,
           "name": "save",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -708,7 +748,7 @@
           "prevSize": 14,
           "code": 58882,
           "name": "ok",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -717,7 +757,7 @@
           "prevSize": 14,
           "code": 58883,
           "name": "messages",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -735,7 +775,7 @@
           "prevSize": 14,
           "code": 58885,
           "name": "help",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -744,7 +784,7 @@
           "prevSize": 14,
           "code": 58886,
           "name": "folder-open",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -753,7 +793,7 @@
           "prevSize": 14,
           "code": 58887,
           "name": "folder-close",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -762,7 +802,7 @@
           "prevSize": 14,
           "code": 58890,
           "name": "edit",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -771,7 +811,7 @@
           "prevSize": 14,
           "code": 58891,
           "name": "close",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -780,7 +820,7 @@
           "prevSize": 14,
           "code": 58907,
           "name": "add-circle-o",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -804,7 +844,7 @@
           "prevSize": 14,
           "code": 58910,
           "name": "service",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 37,
@@ -812,7 +852,7 @@
           "prevSize": 14,
           "code": 58911,
           "name": "image",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 35,
@@ -820,7 +860,7 @@
           "prevSize": 14,
           "code": 58912,
           "name": "cluster",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 38,
@@ -828,7 +868,7 @@
           "prevSize": 14,
           "code": 58913,
           "name": "container-node",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -844,7 +884,7 @@
           "prevSize": 14,
           "code": 58915,
           "name": "registry",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 42,
@@ -852,7 +892,7 @@
           "prevSize": 14,
           "code": 58916,
           "name": "replicator",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 43,
@@ -860,7 +900,7 @@
           "prevSize": 14,
           "code": 58917,
           "name": "route",
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 6,
@@ -872,13 +912,126 @@
         "license": "Apache 2.0",
         "licenseURL": "http://www.apache.org/licenses/LICENSE-2.0.html",
         "importSize": {
-          "width": 480,
+          "width": 448,
           "height": 448
         }
       },
       "height": 1024,
       "prevSize": 14,
       "icons": [
+        {
+          "id": 123,
+          "paths": [
+            "M512 0c-136.731 0-260.937 53.623-352.754 140.96l-116.823-116.823c-23.337-23.337-42.423-15.429-42.423 17.577v264c0 50.994 8.343 60 60 60h264c33.006 0 40.914-19.086 17.577-42.423v0l-91.794-91.794c71.383-66.834 163.977-103.497 262.217-103.497 102.56 0 198.994 39.954 271.52 112.48s112.48 168.96 112.48 271.52c0 102.56-39.954 198.994-112.48 271.543-72.526 72.503-168.96 112.457-271.52 112.457s-198.994-39.954-271.52-112.48c-6.057-6.057-11.863-12.297-17.463-18.674l-96.32 84.297c93.851 107.177 231.657 174.857 385.303 174.857 282.766 0 512-229.234 512-512s-229.234-512-512-512z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 14,
+          "tags": [
+            "pficon-history"
+          ],
+          "colorPermutations": {
+            "116129331": [
+              {}
+            ]
+          }
+        },
+        {
+          "id": 122,
+          "paths": [
+            "M510.766 292.571h-73.417v145.714h73.417c40.183 0 72.869-32.686 72.869-72.869s-32.709-72.846-72.869-72.846z",
+            "M734.949 608.914c44.091-62.811 69.989-139.337 69.989-221.897 0.023-213.577-189.097-386.674-402.651-386.674s-402.674 173.097-402.674 386.651c0 82.583 25.897 159.086 69.989 221.897l0.389 0.549c0.709 1.006 1.44 2.034 2.171 3.040l283.634 375.474c23.566 40.503 47.154 35.52 47.154 35.52 26.24 0 47.040-35.726 47.040-35.726l282.4-375.223c0.869-1.189 1.714-2.4 2.56-3.611zM291.040 659.429h-72v-440h72v440zM519.909 511.429h-82.56v145.714h-72v-437.714h154.56c80.503 0 141.44 65.486 141.44 146.011s-60.937 145.989-141.44 145.989z",
+            "M955.977 411.040v0c0.617-110.469-37.28-198.331-92.754-264.366-10.629-12.663-21.44-24.754-32.526-36.96-9.851-10.857-18.171-18.126-25.143-22.857-4.869-5.92-12.229-9.691-20.48-9.691-14.629 0-26.491 11.863-26.491 26.491 0 6.811 2.583 12.983 6.811 17.691 1.646 2.606 3.589 5.097 5.623 7.429 3.154 3.634 6.56 6.88 9.669 9.577 0 0 24.96 27.931 41.371 50.446 36.48 57.966 56.023 125.211 56.023 198.194 0 82.583-13.92 141.623-58.011 204.434-0.846 1.211-1.691 2.4-2.56 3.611l-294.377 392.686c0 0-2.743 4.686-7.451 10.651 21.12 29.143 56.389 25.097 56.389 25.097 40.48 0.183 60.754-35.726 60.754-35.726l278.377-378.217c0.869-1.189 1.714-2.4 2.56-3.611 50.057-76.549 41.897-136.983 42.217-194.88z"
+          ],
+          "attrs": [
+            {},
+            {},
+            {}
+          ],
+          "width": 958,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 14,
+          "tags": [
+            "pficon-network-range"
+          ],
+          "colorPermutations": {
+            "116129331": [
+              {},
+              {},
+              {}
+            ]
+          }
+        },
+        {
+          "id": 121,
+          "paths": [
+            "M1019.726 813.371v0l-279.543-276.549c-2.88-2.903-6.697-4.343-10.491-4.343-3.771 0-7.52 1.417-10.377 4.297l-67.36 68.731-20.251-19.68 131.611-128.686c5.851-5.669 5.966-15.040 0.297-20.869l-10.72-11.017c2.606-0.594 5.029-1.874 6.971-3.771l39.383-38.674c5.851-5.669 5.966-15.040 0.297-20.869l-135.109-138.903c-5.669-5.851-15.040-5.989-20.869-0.297l-39.383 38.651c-1.943 1.897-3.291 4.274-3.977 6.857l-7.794-8c-5.669-5.851-15.040-5.989-20.869-0.297l-133.989 130.926-19.246-18.697 66.469-69.28c2.789-2.743 4.366-6.514 4.366-10.423 0.023-3.909-1.531-7.657-4.274-10.446l-279.429-277.691c-2.88-2.903-6.697-4.343-10.491-4.343-3.771 0-7.52 1.417-10.377 4.297l-180.206 183.84c-2.789 2.766-4.366 6.514-4.366 10.423-0.023 3.909 1.531 7.657 4.274 10.446l280.549 280.48c2.903 2.903 6.674 4.343 10.469 4.343 0.457 0 0.937-0.023 1.394-0.069 3.291-0.32 6.491-1.714 8.983-4.229l68.937-71.84 17.783 17.28-66.789 65.257c-2.811 2.743-6.811 8.069-6.857 11.977s0.686 9.257 3.406 12.069l171.52 175.703c2.72 2.811 6.469 4.411 10.377 4.457 0.526 0 1.051-0.023 1.577-0.069 3.337-0.32 6.469-1.76 8.914-4.091l70.743-69.143 21.257 20.64-67.429 68.8c-2.789 2.743-4.366 6.514-4.366 10.423-0.023 3.909 1.531 7.657 4.274 10.446l275.954 278.034c2.903 2.903 6.674 4.343 10.469 4.343 0.457 0 0.937-0.023 1.394-0.069 3.291-0.32 6.491-1.714 8.983-4.229l183.794-185.349c2.789-2.766 4.366-6.514 4.366-10.423 0.046-3.84-1.509-7.589-4.251-10.377zM294.286 382.583l-184.503-184.457 85.806-87.543 184.137 182.971-85.44 89.029zM825.44 913.234l-181.074-182.446 86.103-87.84 183.246 181.28-88.274 89.006z",
+            "M236.206 580.32c-66.949 0-126.491 31.634-164.526 80.777l123.749 123.749-94.4 93.943c-16 3.909-27.886 18.286-27.886 35.497 0 20.206 16.366 36.571 36.571 36.571 16.914 0 31.109-11.497 35.291-27.109l94.903-94.423 123.406 123.406c49.143-38.034 80.777-97.577 80.777-164.526-0-114.811-93.074-207.886-207.886-207.886z"
+          ],
+          "attrs": [
+            {},
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 14,
+          "tags": [
+            "pficon-satellite"
+          ],
+          "colorPermutations": {
+            "116129331": [
+              {},
+              {}
+            ]
+          }
+        },
+        {
+          "id": 120,
+          "paths": [
+            "M219.429 438.857h146.286v73.143h-146.286v-73.143zM438.857 438.857h146.286v73.143h-146.286v-73.143zM877.714 219.429v292.571h-219.429v-73.143h146.286v-146.286h-146.286v-73.143h219.429zM438.857 219.429h146.286v73.143h-146.286v-73.143zM365.714 292.571h-146.286v219.429h-73.143v-292.571h219.429v73.143zM948.571 75.429h-873.143v873.143h873.143v-873.143zM994.126 2.286c16.503 0 29.874 13.371 29.874 29.874v967.154c0 16.16-13.097 26.971-29.257 26.971h-964.411c-16.754 0-30.331-11.291-30.331-28.046v-966.789c0-16.114 13.051-29.166 29.166-29.166h964.96zM219.429 804.571h146.286v73.143h-146.286v-73.143zM438.857 804.571h146.286v73.143h-146.286v-73.143zM877.714 585.143v292.571h-219.429v-73.143h146.286v-146.286h-146.286v-73.143h219.429zM438.857 585.143h146.286v73.143h-146.286v-73.143zM365.714 658.286h-146.286v219.429h-73.143v-292.571h219.429v73.143z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 14,
+          "tags": [
+            "pficon-template"
+          ],
+          "colorPermutations": {
+            "116129331": [
+              {}
+            ]
+          }
+        },
+        {
+          "id": 119,
+          "paths": [
+            "M889.143 2.674h-461.714c-73.737 0-133.714 59.977-133.714 133.714v157.897h-157.897c-73.737 0-133.714 59.977-133.714 133.714v461.714c0 73.737 59.977 133.714 133.714 133.714h461.714c73.714 0 133.714-59.977 133.714-133.714v-160.183h157.897c73.737 0 133.714-59.977 133.714-133.714v-459.429c0-73.737-59.977-133.714-133.714-133.714zM878.857 585.509h-292.503l0.891 92.16v201.76h-441.143v-441.166h291.611v-291.611h441.143v438.857z",
+            "M219.429 555.429v205.714c0 23.886 19.543 43.429 43.429 43.429h205.714c23.886 0 43.429-19.543 43.429-43.429v-205.714c0 0 12.64-44.183 42.903-44.183h205.714c23.886 0 43.429-19.543 43.429-43.429v-205.714c0-23.886-19.543-43.429-43.429-43.429h-205.714c-23.886 0-43.429 19.543-43.429 43.429v205.714c0 0 1.303 44.183-42.903 44.183h-205.714c-23.886 0-43.429 19.543-43.429 43.429z"
+          ],
+          "attrs": [
+            {},
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 14,
+          "tags": [
+            "pficon-vcenter"
+          ],
+          "colorPermutations": {
+            "116129331": [
+              {},
+              {}
+            ]
+          }
+        },
         {
           "id": 118,
           "paths": [
@@ -9974,7 +10127,7 @@
           "prevSize": 14,
           "code": 58898,
           "name": "print",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -9987,7 +10140,7 @@
           "prevSize": 14,
           "code": 58880,
           "name": "screen",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -10162,7 +10315,7 @@
           "prevSize": 14,
           "code": 58900,
           "name": "spinner",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -10179,7 +10332,7 @@
           "prevSize": 14,
           "code": 58899,
           "name": "spinner2",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -10248,7 +10401,7 @@
           "prevSize": 14,
           "code": 58896,
           "name": "equalizer",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -10357,7 +10510,7 @@
           "prevSize": 14,
           "code": 58897,
           "name": "remove2",
-          "tempChar": "",
+          "tempChar": "",
           "ligatures": ""
         },
         {
@@ -11547,5 +11700,6 @@
     "showSVGs": true
   },
   "externalSets": [],
-  "uid": -1
+  "uid": -1,
+  "time": 1519218666155
 }
