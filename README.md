@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/patternfly/patternfly.svg?branch=master)](https://travis-ci.org/patternfly/patternfly)
 [![Dependency Status](https://gemnasium.com/badges/github.com/patternfly/patternfly.svg)](https://gemnasium.com/github.com/patternfly/patternfly)
 [![Code Climate](https://codeclimate.com/github/patternfly/patternfly/badges/gpa.svg)](https://codeclimate.com/github/patternfly/patternfly)
+[![NSP Status](https://nodesecurity.io/orgs/patternfly/projects/d8289b24-4ec5-4f7c-86c1-02aa2e6cf73d/badge)](https://nodesecurity.io/orgs/patternfly/projects/d8289b24-4ec5-4f7c-86c1-02aa2e6cf73d)
 [![npm version](https://badge.fury.io/js/patternfly.svg)](https://badge.fury.io/js/patternfly)
 
 [![Gitter](https://badges.gitter.im/patternfly/patternfly.svg)](https://gitter.im/patternfly/patternfly?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
