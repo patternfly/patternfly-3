@@ -25,11 +25,21 @@
   }
   .blank-slate-pf-secondary-action {
     margin-top: $line-height-computed;
+    a {
+      display: inline-block;
+      padding: $blank-slate-pf-secondary-link-padding-top $blank-slate-pf-secondary-link-padding-left;
+      & + a:before {
+        background-color: $color-pf-black-500;
+        content: "";
+        display: inline-block;
+        height: ceil(($font-size-base * .8));
+        left: unquote("calc(-#{$blank-slate-pf-secondary-link-padding-left} - 2px)");
+        position: relative;
+        width: 1px;
+      }
+    }
   }
   button {
-    margin-right: 5px;
-    &:last-of-type {
-      margin-right: 0;
-    }
+    margin-bottom: 5px;
   }
 }
