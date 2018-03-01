@@ -9147,7 +9147,7 @@ button.close {
 }
 .breadcrumb > li + li:before {
   color: #9c9c9c;
-  content: "\f101";
+  content: "\f105";
   font-family: "FontAwesome";
   font-size: 11px;
   padding: 0 9px 0 7px;
