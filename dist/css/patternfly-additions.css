@@ -6550,6 +6550,7 @@ a.disabled {
 }
 .drawer-pf-notification.unread .drawer-pf-notification-message {
   font-weight: bold;
+  cursor: pointer;
 }
 .drawer-pf-notification.expanded-notification .date {
   border-right: none;
@@ -6567,9 +6568,6 @@ a.disabled {
 .expanded-notification .drawer-pf-notification-info,
 .expanded-notification .drawer-pf-notification-message {
   display: inline-block;
-}
-.drawer-pf-notifications-non-clickable .drawer-pf-notification:hover {
-  background-color: #fff;
 }
 .drawer-pf-title {
   background-color: #fafafa;
