@@ -4785,6 +4785,11 @@ a.disabled {
     width: calc(75% - 40px);
   }
 }
+.list-view-pf .close {
+  float: none;
+  position: absolute;
+  right: 15px;
+}
 .list-view-pf-actions {
   float: right;
   margin-bottom: 20px;
@@ -5046,7 +5051,7 @@ a.disabled {
   margin: -1px -15px 0;
   -ms-flex-order: 3;
       order: 3;
-  padding: 10px 15px;
+  padding: 15px;
   position: relative;
   width: 100%;
 }
