@@ -38,7 +38,7 @@
       width: 100%;
     }
     .form-group {
-      padding:@contextselector-pf-form-group-padding;
+      margin: @contextselector-pf-form-group-margin;
     }
     .contextselector-pf-list {
       @media (min-width: @screen-sm-min) {
@@ -46,17 +46,21 @@
         overflow-y: scroll;
       }
       li {
-        padding-left: @contextselector-pf-list-li-padding-left;
+        padding: @contextselector-pf-list-li-padding;
+        border-width: @contextselector-pf-list-li-border-width;
+        border-style: solid;
+        border-color: transparent;
         &:hover {
-          background: @color-pf-blue-400;
+          background: @color-pf-blue-50;
+          border-color: @dropdown-link-hover-border-color;
           a {
-            color: @color-pf-white;
             text-decoration: none;
           }
         }
       }
       a {
         color: @color-pf-black-800;
+        display: block;
       }
     }
   }
