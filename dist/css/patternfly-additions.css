@@ -3560,7 +3560,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   width: 100%;
 }
 .contextselector-pf .form-group {
-  padding: 0 5px;
+  margin: 0 5px 5px 5px;
 }
 @media (min-width: 768px) {
   .contextselector-pf .contextselector-pf-list {
@@ -3569,17 +3569,21 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   }
 }
 .contextselector-pf .contextselector-pf-list li {
-  padding-left: 5px;
+  padding: 1px 10px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: transparent;
 }
 .contextselector-pf .contextselector-pf-list li:hover {
-  background: #0088ce;
+  background: #def3ff;
+  border-color: #bee1f4;
 }
 .contextselector-pf .contextselector-pf-list li:hover a {
-  color: #fff;
   text-decoration: none;
 }
 .contextselector-pf .contextselector-pf-list a {
   color: #393f44;
+  display: block;
 }
 .ColVis_Button:active:focus {
   outline: none;
