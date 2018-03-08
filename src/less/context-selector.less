@@ -36,6 +36,7 @@
     }
     .dropdown-menu {
       width: 100%;
+      margin-top:0;
     }
     .form-group {
       margin: @contextselector-pf-form-group-margin;
@@ -43,7 +44,7 @@
     .contextselector-pf-list {
       @media (min-width: @screen-sm-min) {
         max-height: @contextselector-pf-list-max-height;
-        overflow-y: scroll;
+        overflow-y: auto;
       }
       li {
         padding: @contextselector-pf-list-li-padding;

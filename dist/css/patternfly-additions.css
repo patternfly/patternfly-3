@@ -3558,6 +3558,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .contextselector-pf .dropdown-menu {
   width: 100%;
+  margin-top: 0;
 }
 .contextselector-pf .form-group {
   margin: 0 5px 5px 5px;
@@ -3565,7 +3566,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 @media (min-width: 768px) {
   .contextselector-pf .contextselector-pf-list {
     max-height: 200px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 .contextselector-pf .contextselector-pf-list li {
