@@ -41,10 +41,15 @@ $card-pf-border-top-color:                                          transparent 
 $card-pf-container-bg-color:                                        $color-pf-black-150 !default;
 $card-pf-footer-bg-color:                                           $color-pf-black-100 !default;
 $card-pf-selected-border-color:                                     $color-pf-blue-300 !default;
+$contextselector-title-width-desktop:                               210px !default;
+$contextselector-title-width-mobile:                                170px !default;
+$contextselector-pf-bootstrap-select-width-desktop:                 ($contextselector-title-width-desktop + 32) !default;
+$contextselector-pf-bootstrap-select-width-mobile:                  ($contextselector-title-width-mobile + 32) !default;
+$contextselector-pf-dropdown-toggle-padding-bottom:                 19px !default;
+$contextselector-pf-dropdown-toggle-padding-left:                   10px !default;
+$contextselector-pf-dropdown-toggle-padding-top:                    19px !default;
 $contextselector-pf-margin-left:                                    10px !default;
 $contextselector-pf-nav-item-iconic-padding:                        23px 20px 18px 10px !default;
-$contextselector-title-width-mobile:                                170px !default;
-$contextselector-title-width-desktop:                               210px !default;
 $contextselector-pf-form-group-margin:                              0 5px 5px 5px !default;
 $contextselector-pf-list-max-height:                                200px !default;
 $contextselector-pf-list-li-padding:                                1px 10px !default;
