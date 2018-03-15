@@ -30,3 +30,9 @@
     padding-right: 30px;
   }
 }
+.popover-pf-info {
+  color: $color-pf-black-700;
+    &:hover, &:focus {
+      color: $color-pf-black-900;
+    }
+}
