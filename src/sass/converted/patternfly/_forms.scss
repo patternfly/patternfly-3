@@ -15,20 +15,6 @@
       }
     }
   }
-
-}
-
-.form-horizontal {
-  &:not(.form-horizontal-pf-align-left) {
-    .control-label {
-      .pficon-info {
-        position: absolute;
-        top:50%;
-        right:$form-horizontal-pficon-info-right;
-        transform: translateY(-50%);
-      }
-    }
-  }
 }
 
 .chars-remaining-pf span {
