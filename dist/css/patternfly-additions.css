@@ -7484,6 +7484,86 @@ table.dataTable th:active {
   display: inline-block;
   margin-left: 5px;
 }
+.tree-list-view-pf {
+  background-color: #ededed;
+  border: none;
+  margin-top: 30px;
+  overflow-x: hidden;
+}
+.tree-list-view-pf > .list-group-item:first-child {
+  border-top: 1px solid transparent;
+}
+.tree-list-view-pf .list-group-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-color: #ededed;
+  padding: 0;
+  background-clip: padding-box;
+}
+.tree-list-view-pf .list-group-item.active {
+  background-color: #fff;
+  color: currentColor;
+  z-index: auto;
+}
+.tree-list-view-pf .list-group-item.active:hover {
+  border-color: #ededed;
+}
+.tree-list-view-pf .list-group-item.active > .list-group-item-header {
+  background-color: #def3ff;
+  color: #555;
+}
+.tree-list-view-pf .list-group-item.active > .list-group-item-header:before {
+  background-color: #def3ff;
+}
+.tree-list-view-pf .list-group-item.active > .list-group-item-header:hover {
+  background-color: #edf8ff;
+}
+.tree-list-view-pf .list-group-item.active > .list-group-item-header:hover:before {
+  background-color: #edf8ff;
+}
+.tree-list-view-pf .list-group-item.active > .list-group-item-header .list-group-item-text {
+  color: #555;
+}
+.tree-list-view-pf .list-group-item.active .list-group-item-text {
+  color: currentColor;
+}
+.tree-list-view-pf .list-group-item .list-group-item {
+  border-bottom: none;
+  padding-left: 45px;
+}
+.tree-list-view-pf .list-group-item .list-group-item .list-group-item-header:before {
+  border-bottom: solid 1px #ededed;
+  content: "";
+  height: calc(100% + 1px);
+  left: -100%;
+  position: absolute;
+  width: 100%;
+}
+.tree-list-view-pf .list-group-item-container {
+  border-top-color: #ededed;
+  margin: 0;
+  padding: 0;
+}
+.tree-list-view-pf .list-group-item-header {
+  box-sizing: border-box;
+  margin: 0;
+  position: inherit;
+}
+.tree-list-view-pf .list-group-item-header:hover {
+  background-color: #edf8ff;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.tree-list-view-pf .list-group-item-header:hover:before {
+  background-color: #edf8ff;
+}
+@media (min-width: 992px) {
+  .tree-list-view-pf .list-group-item-heading {
+    width: calc(25% - 20px);
+  }
+}
 .nav-pf-vertical {
   background: #292e34;
   border-right: 1px solid #292e34;

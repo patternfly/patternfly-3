@@ -1,3 +1,3 @@
-module.exports = function (engine, scenario, vp) {
-
+module.exports = function (chromy, scenario, vp) {
+  require('./clickAndHoverHelper')(chromy, scenario);
 };
