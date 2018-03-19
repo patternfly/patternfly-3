@@ -256,7 +256,8 @@
       </div><!-- /container -->
 
 <div class="container-fluid">
-<div class="list-group list-view-pf list-view-pf-view">
+
+<div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
   <div class="list-group-item">
     <div class="list-group-item-header">
       <div class="list-view-pf-expand">
@@ -1671,7 +1672,7 @@
 <script>
   $(document).ready(function () {
     // Row Checkbox Selection
-    $("input[type='checkbox']").change(function (e) {
+    $("#pf-list-simple-expansion input[type='checkbox']").change(function (e) {
       if ($(this).is(":checked")) {
         $(this).closest('.list-group-item').addClass("active");
       } else {
@@ -1679,7 +1680,7 @@
       }
     });
     // toggle dropdown menu
-    $('.list-view-pf-actions').on('show.bs.dropdown', function () {
+    $("#pf-list-simple-expansion .list-view-pf-actions").on('show.bs.dropdown', function () {
       var $this = $(this);
       var $dropdown = $this.find('.dropdown');
       var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
@@ -1687,7 +1688,7 @@
     });
 
     // click the list-view heading then expand a row
-    $(".list-group-item-header").click(function(event){
+    $("#pf-list-simple-expansion .list-group-item-header").click(function(event){
       if(!$(event.target).is("button, a, input, .fa-ellipsis-v")){
         $(this).find(".fa-angle-right").toggleClass("fa-angle-down")
           .end().parent().toggleClass("list-view-pf-expand-active")
@@ -1697,7 +1698,7 @@
     })
 
     // click the close button, hide the expand row and remove the active status
-    $(".list-group-item-container .close").on("click", function (){
+    $("#pf-list-simple-expansion .list-group-item-container .close").on("click", function (){
       $(this).parent().addClass("hidden")
         .parent().removeClass("list-view-pf-expand-active")
           .find(".fa-angle-right").removeClass("fa-angle-down");

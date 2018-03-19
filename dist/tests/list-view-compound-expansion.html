@@ -256,7 +256,8 @@
       </div><!-- /container -->
 
 <div class="container-fluid">
-<div class="list-group list-view-pf list-view-pf-view">
+
+<div id="pf-list-compound-expansion" class="list-group list-view-pf list-view-pf-view">
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
       <input type="checkbox">
@@ -1665,7 +1666,7 @@
 <script>
   $(document).ready(function () {
     // Row Checkbox Selection
-    $("input[type='checkbox']").change(function (e) {
+    $("#pf-list-compound-expansion input[type='checkbox']").change(function (e) {
       if ($(this).is(":checked")) {
         $(this).closest('.list-group-item').addClass("active");
       } else {
@@ -1673,14 +1674,14 @@
       }
     });
     // toggle dropdown menu
-    $(".list-view-pf-actions").on("show.bs.dropdown", function () {
+    $("#pf-list-compound-expansion .list-view-pf-actions").on("show.bs.dropdown", function () {
       var $this = $(this);
       var $dropdown = $this.find(".dropdown");
       var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find(".dropdown-menu").outerHeight(true);
       $dropdown.toggleClass("dropup", space < 10);
     });
     // compound expansion
-    $(".list-view-pf-expand").on("click", function () {
+    $("#pf-list-compound-expansion .list-view-pf-expand").on("click", function () {
       var $this = $(this);
       var $heading = $(this).parents(".list-group-item");
       //var $row = $heading.parent();
@@ -1708,7 +1709,7 @@
     });
 
     // click close button to close the panel
-    $(".list-group-item-container .close").on("click", function (){
+    $("#pf-list-compound-expansion .list-group-item-container .close").on("click", function (){
       var $this = $(this);
       var $panel = $this.parent();
 

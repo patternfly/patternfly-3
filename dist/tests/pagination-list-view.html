@@ -255,7 +255,8 @@
       </div><!-- /container -->
 
 <div class="container-fluid">
-<!-- <div class="list-group list-view-pf list-view-pf-view">
+<!-- 
+<div id="pf-list-standard" class="list-group list-view-pf list-view-pf-view">
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
       <input type="checkbox">
@@ -584,7 +585,7 @@
 <script>
   $(document).ready(function () {
     // Row Checkbox Selection
-    $("input[type='checkbox']").change(function (e) {
+    $("#pf-list-standard input[type='checkbox']").change(function (e) {
       if ($(this).is(":checked")) {
         $(this).closest('.list-group-item').addClass("active");
       } else {
@@ -592,14 +593,14 @@
       }
     });
     // toggle dropdown menu
-    $('.list-view-pf-actions').on('show.bs.dropdown', function () {
+    $('#pf-list-standard .list-view-pf-actions').on('show.bs.dropdown', function () {
       var $this = $(this);
       var $dropdown = $this.find('.dropdown');
       var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
       $dropdown.toggleClass('dropup', space < 10);
     });
     // allow users to select multiple list items with shift key
-    $('.list-group').on('click', '.list-view-pf-checkbox>input', function(event) {
+    $('#pf-list-standard .list-group').on('click', '.list-view-pf-checkbox>input', function(event) {
       var $list = $('.list-group');
       var prevIndex = $list.data('preIndex');
       var $listItems = $list.children('.list-group-item');
