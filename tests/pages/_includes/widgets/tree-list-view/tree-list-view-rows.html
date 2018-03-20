@@ -1,4 +1,4 @@
-{% if page.multiple-child %}
+{% if include.multipleChild %}
   {% assign isLeaf = false %}
 {% else %}
   {% assign isLeaf = true %}
@@ -14,7 +14,7 @@
           {% include widgets/tree-list-view/tree-list-view-child-element.html title="1" leaf=isLeaf %}
         </div>
         <div class="list-group-item-container container-fluid hidden">
-          {% if page.multiple-child %}
+          {% if include.multipleChild %}
             <div class="list-group-item">
               <div class="list-group-item-header">
                 {% include widgets/tree-list-view/tree-list-view-child-element.html title="1.1" %}
@@ -49,7 +49,7 @@
           {% include widgets/tree-list-view/tree-list-view-child-element.html title="2" leaf=isLeaf %}
         </div>
         <div class="list-group-item-container container-fluid hidden">
-          {% if page.multiple-child %}
+          {% if include.multipleChild %}
             <div class="list-group-item">
               <div class="list-group-item-header">
                 {% include widgets/tree-list-view/tree-list-view-child-element.html title="2.1" %}
@@ -84,7 +84,7 @@
           {% include widgets/tree-list-view/tree-list-view-child-element.html title="3" leaf=isLeaf %}
         </div>
         <div class="list-group-item-container container-fluid hidden">
-          {% if page.multiple-child %}
+          {% if include.multipleChild %}
             <div class="list-group-item">
               <div class="list-group-item-header">
                 {% include widgets/tree-list-view/tree-list-view-child-element.html title="3.1" %}
