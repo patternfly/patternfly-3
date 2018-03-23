@@ -40,6 +40,11 @@
                 <button class="btn btn-default" id="collapse-tree" type="button">Collapse All</button>
               </div>
               {% endif %}
+              {% if include.inlineEdit %}
+              <div class="form-group">
+                <button class="btn btn-primary" id="add-a-row" type="button">Create</button>
+              </div>
+              {% endif %}
               <div class="toolbar-pf-action-right">
                 <div class="form-group toolbar-pf-find">
                   <button class="btn btn-link btn-find" type="button">
