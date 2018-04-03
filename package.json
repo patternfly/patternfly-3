@@ -106,7 +106,7 @@
     "commitmsg": "commitlint -e",
     "ncu": "ncu --semverLevel minor -p",
     "regressions": "npm run regressions:build && npm run regressions:test",
-    "regressions:build": "export PF_PAGE_BUILDER=jekyll npm run build",
+    "regressions:build": "export PF_PAGE_BUILDER=jekyll && npm run build",
     "regressions:test": "node ./backstop/test",
     "approve-conflicts": "node ./backstop/approve",
     "regressions-init": "node ./backstop/reference",
