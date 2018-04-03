@@ -3518,50 +3518,79 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
+.contextselector-pf {
+  float: left;
+}
+.contextselector-pf .bootstrap-select {
+  width: 202px !important;
+}
+@media (min-width: 480px) {
+  .contextselector-pf .bootstrap-select {
+    width: 242px !important;
+  }
+}
+.contextselector-pf .bootstrap-select.open {
+  background: #303030;
+}
+.contextselector-pf .bootstrap-select.open > .dropdown-toggle {
+  color: #fff;
+}
+.contextselector-pf .bootstrap-select.open > .dropdown-toggle:focus {
+  outline: 0 !important;
+}
+.contextselector-pf .bootstrap-select > .dropdown-toggle {
+  background: none;
+  border: 0;
+  box-shadow: none !important;
+  color: #d1d1d1;
+  font-weight: normal;
+  padding-bottom: 19px;
+  padding-left: 10px;
+  padding-top: 19px;
+}
+.contextselector-pf .bootstrap-select > .dropdown-toggle:focus {
+  color: #fff;
+  outline: thin dotted !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px !important;
+}
+.contextselector-pf .bootstrap-select > .dropdown-toggle:hover {
+  background: #303030;
+  color: #fff;
+  outline: 0 !important;
+}
+.contextselector-pf .bootstrap-select > .dropdown-toggle .filter-option {
+  text-overflow: ellipsis;
+}
+.contextselector-pf .bootstrap-select .dropdown-menu li a span.text {
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
 .layout-pf-fixed .navbar-pf-vertical.navbar-pf-contextselector {
   z-index: 1040;
 }
-.navbar-pf-vertical .nav.contextselector-pf {
-  border-left: 1px solid #4d5258;
-}
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-pf-vertical .nav.contextselector-pf {
     margin-left: 10px;
   }
-}
-.navbar-pf-vertical .nav.contextselector-pf .nav-item-iconic {
-  padding: 23px 20px 18px 10px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
 }
 .contextselector-pf {
   float: left;
 }
 .contextselector-pf-title {
-  width: 170px;
-  white-space: nowrap;
   display: inline-block;
+  line-height: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: normal;
+  white-space: nowrap;
+  width: 170px;
 }
 @media (min-width: 480px) {
   .contextselector-pf-title {
     width: 210px;
   }
-}
-.contextselector-pf .dropdown.open,
-.contextselector-pf .dropdown:hover {
-  background-color: #303030;
-}
-.contextselector-pf .dropdown-menu {
-  width: 100%;
-  margin-top: 0;
-}
-.contextselector-pf .form-group {
-  margin: 0 5px 5px 5px;
 }
 @media (min-width: 768px) {
   .contextselector-pf .contextselector-pf-list {
@@ -3569,11 +3598,15 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
     overflow-y: auto;
   }
 }
+.contextselector-pf .contextselector-pf-list a {
+  color: #393f44;
+  display: block;
+}
 .contextselector-pf .contextselector-pf-list li {
-  padding: 1px 10px;
-  border-width: 1px 0;
-  border-style: solid;
   border-color: transparent;
+  border-style: solid;
+  border-width: 1px 0;
+  padding: 1px 10px;
 }
 .contextselector-pf .contextselector-pf-list li:hover {
   background: #def3ff;
@@ -3582,9 +3615,23 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .contextselector-pf .contextselector-pf-list li:hover a {
   text-decoration: none;
 }
-.contextselector-pf .contextselector-pf-list a {
-  color: #393f44;
-  display: block;
+.contextselector-pf .dropdown.open,
+.contextselector-pf .dropdown:hover {
+  background-color: #303030;
+}
+.contextselector-pf .dropdown-menu {
+  margin-top: 0;
+  width: 100%;
+}
+.contextselector-pf .form-group {
+  margin: 0 5px 5px 5px;
+}
+.navbar-pf-vertical .nav.contextselector-pf .nav-item-iconic {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 23px 20px 18px 10px;
 }
 .ColVis_Button:active:focus {
   outline: none;
