@@ -581,6 +581,9 @@ module.exports = function (grunt) {
       ]
     },
     stylelint: {
+      options: {
+        formatter: 'verbose'
+      },
       src: ['src/less/*.less']
     },
     postcss: {
