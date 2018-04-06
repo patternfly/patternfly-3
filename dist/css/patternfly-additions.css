@@ -4240,6 +4240,12 @@ fieldset[disabled] .btn-experimental-pf.active {
 .pficon-settings:before {
   content: "\e610";
 }
+.pficon-sort-common-asc:before {
+  content: "\e94e";
+}
+.pficon-sort-common-desc:before {
+  content: "\e94f";
+}
 .pficon-spinner:before {
   content: "\e614";
 }

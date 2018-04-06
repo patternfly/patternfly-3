@@ -302,6 +302,12 @@
 .#{$icon-prefix}-settings:before {
   content: $pficon-var-settings;
 }
+.#{$icon-prefix}-sort-common-asc:before {
+  content: $pficon-var-sort-common-asc;
+}
+.#{$icon-prefix}-sort-common-desc:before {
+  content: $pficon-var-sort-common-desc;
+}
 .#{$icon-prefix}-spinner:before {
   content: $pficon-var-spinner;
 }
