@@ -3,4 +3,54 @@ module.exports = [{
   label: 'bootstrap-datepicker',
   url: 'dist/tests/bootstrap-datepicker.html',
   disabled: false
+}, {
+  label: 'bootstrap-datepicker-readonly-text-input',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#datepicker1-wrapper']
+}, {
+  label: 'bootstrap-datepicker-readonly-component',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#datepicker2-wrapper']
+}, {
+  label: 'bootstrap-datepicker-readonly-validation-success',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#boostrap-datepicker-success-readonly-wrapper']
+}, {
+  label: 'bootstrap-datepicker-readonly-validation-warning',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#boostrap-datepicker-warning-readonly-wrapper']
+}, {
+  label: 'bootstrap-datepicker-readonly-validation-error',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#boostrap-datepicker-error-readonly-wrapper']
+}, {
+  label: 'bootstrap-datepicker-text-input',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#bdp-text-input-wrapper']
+}, {
+  label: 'bootstrap-datepicker-component',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#bdp-component-wrapper']
+}, {
+  label: 'bootstrap-datepicker-validation-success',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#boostrap-datepicker-success-wrapper']
+}, {
+  label: 'bootstrap-datepicker-validation-warning',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#boostrap-datepicker-warning-wrapper']
+}, {
+  label: 'bootstrap-datepicker-validation-error',
+  url: 'dist/tests/bootstrap-datepicker.html',
+  onReadyScript: 'chromy/bootstrap-datepicker.js',
+  selectors: ['#boostrap-datepicker-error-wrapper']
 }]
