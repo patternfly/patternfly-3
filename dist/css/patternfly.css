@@ -9646,6 +9646,84 @@ span.required-pf {
   font-size: 14px;
   width: 14px;
 }
+.form-control-pf-editable {
+  display: -ms-flexbox;
+  display: flex;
+}
+.form-control-pf-editable.form-control-pf-full-width {
+  display: block;
+}
+.form-control-pf-editable.form-control-pf-full-width > .form-control-pf-value {
+  text-align: left;
+}
+.form-control-pf-editable.form-control-pf-full-width .action-buttons {
+  float: right;
+}
+.form-control-pf-editable.form-control-pf-edit > .form-control-pf-value {
+  display: none;
+}
+.form-control-pf-editable.form-control-pf-edit > :not(.form-control-pf-value):not(.spinner),
+.form-control-pf-editable.form-control-pf-edit > .bootstrap-select.btn-group:not(.input-group-btn) {
+  display: inline-block;
+}
+.form-control-pf-editable.form-control-pf-updating > .spinner {
+  display: inline-block;
+}
+.form-control-pf-editable.form-control-pf-updating > :not(.spinner) {
+  display: none;
+}
+.form-control-pf-editable > .form-control-pf-value {
+  background: none;
+  border: 1px solid transparent;
+  display: inline-block;
+  padding: 2px 6px;
+}
+.form-control-pf-editable > .form-control-pf-value:focus {
+  border-color: #bbb;
+}
+.form-control-pf-editable > .form-control-pf-value:hover {
+  border-color: #bbb;
+  cursor: pointer;
+}
+.form-control-pf-editable > .form-control-pf-value + :not(textarea) {
+  -ms-flex: 1;
+      flex: 1;
+}
+.form-control-pf-editable > .form-control-pf-value i {
+  margin-left: 6px;
+}
+.form-control-pf-editable > :not(.form-control-pf-value) {
+  display: none;
+}
+.form-control-pf-editable > .form-control-pf-textbox {
+  position: relative;
+}
+.form-control-pf-editable > .form-control-pf-textbox input {
+  padding-right: 26px;
+}
+.form-control-pf-editable > .form-control-pf-textbox .form-control-pf-empty {
+  background: none;
+  border: none;
+  color: #bbb;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.form-control-pf-editable > .btn {
+  margin-left: 3px;
+}
+.form-control-pf-editable > .spinner {
+  margin: 4px 0;
+}
+.form-control-pf-editable > .bootstrap-select.btn-group:not(.input-group-btn) {
+  display: none;
+}
+.form-control-pf-editable > textarea {
+  display: block;
+  min-height: 84px;
+  resize: vertical;
+}
 .label {
   border-radius: 0;
   font-size: 100%;
