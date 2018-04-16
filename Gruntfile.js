@@ -729,7 +729,7 @@ module.exports = function (grunt) {
   grunt.registerTask('rcue-pages', 'Builds the RCUE test pages.', function (_target) {
     var target = _target || process.env.PF_PAGE_BUILDER || 'script';
     var done;
-    if (target === 'jekyll') { // eg: grunt build:jekyll || PF_PAGE_BUILDER=jekyll build
+    if (target === 'rcue') { // eg: grunt build:jekyll || PF_PAGE_BUILDER=jekyll build
       grunt.log.writeln('Building test pages with ruby jekyll');
       grunt.task.run('run:bundleInstall', 'rcue');
     } else if (target === 'script') {  // eg: grunt build:script
