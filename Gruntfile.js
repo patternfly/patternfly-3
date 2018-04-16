@@ -629,7 +629,11 @@ module.exports = function (grunt) {
       },
       jekyll: {
         files: 'tests/pages/**/*',
-        tasks: ['patternfly-pages', 'rcue-pages']
+        tasks: ['patternfly-pages']
+      },
+      rcue: {
+        files: 'tests/pages/**/*',
+        tasks: ['rcue-pages']
       },
       styles: {
         files: ['src/less/*.less', 'src/sass/**/*.scss'],
@@ -638,13 +642,13 @@ module.exports = function (grunt) {
                 'copy:less',
                 'copy:sass',
                 'copy:patternfly',
-                'copy:rcue',
+                // 'copy:rcue',
                 'sass:patternfly',
                 'less:patternfly',
                 'less:patternflyAdditions',
-                'sass:rcue',
-                'less:rcue',
-                'less:rcueAdditions',
+                // 'sass:rcue',
+                // 'less:rcue',
+                // 'less:rcueAdditions',
                 'shipcss']
       },
       js: {
@@ -757,6 +761,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean',
       'concat',
+      'patternfly-pages',
       'rcue-pages',
       'lessToSass',
       'copy:fonts',
