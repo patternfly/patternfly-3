@@ -1,6 +1,22 @@
 //
 // Forms
 // --------------------------------------------------
+.form-horizontal-pf-align-left {
+  .control-label {
+      text-align: left;
+   }
+  // In order to provide the proper support .pf-is-required is needed on left aligned labels to ensure accurate spacing when there is no required fields.
+  &.required-pf {
+    .control-label {
+      @media (min-width: $screen-sm-min) {
+        &:not(.required-pf) {
+          padding-left: $form-horizontal-pf-align-left-padding-left;
+        }
+      }
+    }
+  }
+}
+
 .chars-remaining-pf span {
   font-weight: 600;
   padding-right: 5px;
@@ -63,10 +79,10 @@
 
 label {
   font-weight: 600;
-  &.required-pf:after {
+  &.required-pf:before {
     color: $brand-danger;
     content: "*";
-    margin-left: 3px;
+    margin-right: 3px;
   }
 }
 

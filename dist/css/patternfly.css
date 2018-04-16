@@ -9539,6 +9539,14 @@ fieldset[disabled] .btn-primary.active {
   border-top-color: #fff;
   bottom: -10px;
 }
+.form-horizontal-pf-align-left .control-label {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .form-horizontal-pf-align-left.required-pf .control-label:not(.required-pf) {
+    padding-left: 30px;
+  }
+}
 .chars-remaining-pf span {
   font-weight: 600;
   padding-right: 5px;
@@ -9611,10 +9619,10 @@ fieldset[disabled] .form-control:hover {
 label {
   font-weight: 600;
 }
-label.required-pf:after {
+label.required-pf:before {
   color: #cc0000;
   content: "*";
-  margin-left: 3px;
+  margin-right: 3px;
 }
 span.required-pf {
   color: #cc0000;
@@ -10189,6 +10197,13 @@ fieldset[disabled] .pagination > li > span.active {
 }
 .popover-title.closable {
   padding-right: 30px;
+}
+.popover-pf-info {
+  color: #292e34;
+}
+.popover-pf-info:hover,
+.popover-pf-info:active {
+  color: #00659c;
 }
 @keyframes progress-bar-stripes {
   from {
