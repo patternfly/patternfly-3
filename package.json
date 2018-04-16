@@ -96,6 +96,7 @@
   "scripts": {
     "test": "grunt karma",
     "build": "grunt build",
+    "patternfly": "grunt build-patternfly",
     "rcue": "grunt build-rcue",
     "jekyll": "ruby --version || echo \"Ruby required\"; bundler -v || gem install bundler; bundle check || bundle install; set -e",
     "start": "grunt build serve",
@@ -108,7 +109,8 @@
     "commit": "git-cz",
     "commitmsg": "commitlint -e",
     "ncu": "ncu --semverLevel minor -p",
-    "regressions": "npm run regressions:build && npm run regressions:test",
+    "regressions-patternfly": "npm run regressions:build && npm run regressions:test",
+    "regressions-rcue": "npm run regressions:build-rcue && npm run regressions:test",
     "regressions:build": "export PF_PAGE_BUILDER=jekyll && npm run build",
     "regressions:build-rcue": "export PF_PAGE_BUILDER=rcue && npm run build-rcue",
     "regressions:test": "node ./backstop/test",
