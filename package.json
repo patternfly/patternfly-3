@@ -109,7 +109,7 @@
     "commit": "git-cz",
     "commitmsg": "commitlint -e",
     "ncu": "ncu --semverLevel minor -p",
-    "regressions": "npm run regressions:build-rcue && npm run regressions:build && npm run regressions:test",
+    "regressions": "npm run regressions:build && npm run regressions:test",
     "regressions:build": "export PF_PAGE_BUILDER=jekyll && export PF_RCUE_BUILDER=rcue && npm run build",
     "regressions-patternfly": "npm run regressions:build && npm run regressions:test",
     "regressions:build-patternfly": "export PF_PAGE_BUILDER=jekyll && npm run build",
