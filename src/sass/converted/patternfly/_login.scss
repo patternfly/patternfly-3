@@ -4,6 +4,11 @@
 
 .login-pf {
   height: 100%;
+  background: $login-bg-color url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$img-path}#{$img-bg-login}"), "#{$img-path}#{$img-bg-login}")) repeat-x 50% 0;
+  background-size: auto;
+  @media (min-width: $screen-sm-min) {
+    background-size: 100% auto;
+  }
   #brand {
     position: relative;
     top: -70px;
