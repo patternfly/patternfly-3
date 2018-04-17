@@ -629,11 +629,7 @@ module.exports = function (grunt) {
       },
       jekyll: {
         files: 'tests/pages/**/*',
-        tasks: ['patternfly-pages']
-      },
-      rcue: {
-        files: 'tests/pages/**/*',
-        tasks: ['rcue-pages']
+        tasks: ['patternfly-pages', 'rcue-pages']
       },
       styles: {
         files: ['src/less/*.less', 'src/sass/**/*.scss'],
@@ -712,14 +708,15 @@ module.exports = function (grunt) {
     }
   });
 
+  // use the PatternFly script to target the PatternFly configuration
   grunt.registerTask('patternfly-pages', 'Builds the PatternFly test pages.', function (_target) {
     var target = _target || process.env.PF_PAGE_BUILDER || 'script';
     var done;
     if (target === 'jekyll') { // eg: grunt build:jekyll || PF_PAGE_BUILDER=jekyll build
-      grunt.log.writeln('Building test pages with ruby jekyll');
+      grunt.log.writeln('Building patternfly test pages with ruby jekyll');
       grunt.task.run('run:bundleInstall', 'jekyll');
     } else if (target === 'script') {  // eg: grunt build:script
-      grunt.log.writeln('Building test pages with liquid.js');
+      grunt.log.writeln('Building patternfly test pages with liquid.js');
       done = this.async();
       pageBuilder.build()
         .then(function () {
@@ -730,14 +727,15 @@ module.exports = function (grunt) {
     }
   });
 
+  // use the RCUE script to target the RCUE configuration
   grunt.registerTask('rcue-pages', 'Builds the RCUE test pages.', function (_target) {
     var target = _target || process.env.PF_PAGE_BUILDER || 'script';
     var done;
-    if (target === 'rcue') { // eg: grunt build:jekyll || PF_PAGE_BUILDER=jekyll build
-      grunt.log.writeln('Building test pages with ruby jekyll');
+    if (target === 'rcue') { // eg: grunt build:rcue || PF_PAGE_BUILDER=rcue build
+      grunt.log.writeln('Building rcue test pages with ruby jekyll');
       grunt.task.run('run:bundleInstall', 'rcue');
     } else if (target === 'script') {  // eg: grunt build:script
-      grunt.log.writeln('Building test pages with liquid.js');
+      grunt.log.writeln('Building rcue test pages with liquid.js');
       done = this.async();
       rcueBuilder.build()
         .then(function () {
@@ -757,26 +755,27 @@ module.exports = function (grunt) {
     }
   });
 
+  // build PatternFly and RCUE together for distribution
   grunt.registerTask('build', function(){
     grunt.task.run([
       'clean',
       'concat',
-      'patternfly-pages',
       'rcue-pages',
+      'patternfly-pages',
       'lessToSass',
       'copy:fonts',
       'copy:images',
-      'copy:patternfly',
       'copy:rcue',
+      'copy:patternfly',
       'copy:less',
       'copy:sass',
       'copy:js',
-      'sass:patternfly',
-      'less:patternfly',
-      'less:patternflyAdditions',
       'sass:rcue',
       'less:rcue',
       'less:rcueAdditions',
+      'sass:patternfly',
+      'less:patternfly',
+      'less:patternflyAdditions',
       'shipcss',
       'eslint',
       'uglify',

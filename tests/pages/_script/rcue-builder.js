@@ -3,7 +3,7 @@
 'use strict';
 
 let fs = require('mz/fs'),
-  jekyll = require('./rcue');
+  rcue = require('./rcue');
 
 function build () {
   fs.mkdir('dist/tests/', function (err) {
@@ -15,11 +15,11 @@ function build () {
   });
 
   console.log('Starting build...');
-  return jekyll.readSiteConfig()
+  return rcue.readSiteConfig()
   .then(site => {
     // read and cache the pages
     console.log('Reading test pages...');
-    return jekyll.readTemplateFolder('tests/pages')
+    return rcue.readTemplateFolder('tests/pages')
     .then(pages => {
       site.pages = pages;
       return site;
@@ -27,7 +27,7 @@ function build () {
   })
   .then(site => {
     // read and cache the layouts
-    return jekyll.readTemplateFolder('tests/pages/_layouts')
+    return rcue.readTemplateFolder('tests/pages/_layouts')
     .then(layouts => {
       site._layouts = {};
       layouts.forEach(layout => {
@@ -48,7 +48,7 @@ function build () {
         page: page
       };
       promises.push(
-        jekyll.renderTemplate(page, context)
+        rcue.renderTemplate(page, context)
         .then(context => fs.writeFile(`dist/tests/${context.page.filename}`, context.content))
         .then(x => page.url)
       );
