@@ -22,7 +22,7 @@
     }
     &.active {
       color: $list-group-link-color;
-      background-color: $list-view-active-bg;
+      background-color: transparent;
       background-clip: border-box;
       border-color: $list-view-active-border transparent transparent;
       z-index:auto;
@@ -258,7 +258,7 @@
   }
 }
 .list-view-pf-view {
-  background: $list-group-top-border;
+  background: transparent;
   border: none;
   margin-top: 30px;
 }
