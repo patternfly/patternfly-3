@@ -36,21 +36,20 @@
 
       &:hover,
       &:focus {
-        color: @navbar-pf-vertical-active-color;
-        background-color: transparent;
+        background-color: @navbar-pf-item-hover-bg-color;
 
         .caret,
         .fa,
         .glyphicon,
         .pficon {
-          color: @navbar-pf-vertical-active-color;
+          color: @navbar-pf-item-active-color;
         }
       }
 
       .badge {
         background-color: @notification-badge-color;
         border-radius: 20px;
-        color: @navbar-pf-vertical-active-color;
+        color: @navbar-pf-item-active-color;
         cursor: pointer;
         font-size: (@font-size-base - 3);
         font-weight: 700;
@@ -77,19 +76,19 @@
         font-size: @font-size-base;
         width: auto;
       }
-
     }
 
     .open > .nav-item-iconic {
       &,
       &:hover,
       &:focus {
-        background: transparent;
+        background: @navbar-pf-item-open-bg-color;
+        color: @navbar-pf-item-active-color;
 
         .caret,
         .fa,
         .pficon {
-          color: @navbar-pf-vertical-active-color;
+          color: @navbar-pf-item-active-color;
         }
       }
     }
