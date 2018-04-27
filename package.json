@@ -64,6 +64,7 @@
     "table": "3.7.9"
   },
   "optionalDependencies": {
+    "@types/c3": "^0.6.0",
     "bootstrap-datepicker": "^1.7.1",
     "bootstrap-sass": "^3.3.7",
     "bootstrap-select": "1.12.2",
