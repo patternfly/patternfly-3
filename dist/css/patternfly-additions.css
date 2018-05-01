@@ -1100,7 +1100,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   min-width: 16px;
   padding: 4px 5px;
   line-height: 1.66666667;
-  text-shadow: 0 1px 0 #fff;
   border-width: 1px 0;
   margin-left: -5px;
   margin-right: -5px;
@@ -1623,6 +1622,10 @@ select.selectpicker {
 .c3-chart-arc path {
   stroke: #fff;
 }
+.c3-chart-arc rect {
+  stroke: white;
+  stroke-width: 1;
+}
 .c3-chart-arc text {
   fill: #fff;
   font-size: 13px;
@@ -1752,7 +1755,7 @@ select.selectpicker {
 }
 .c3-chart-arcs .c3-chart-arcs-background {
   fill: #e0e0e0;
-  stroke: none;
+  stroke: #FFF;
 }
 .c3-chart-arcs .c3-chart-arcs-gauge-unit {
   fill: #000;
@@ -5151,6 +5154,13 @@ a.disabled {
 }
 .login-pf {
   height: 100%;
+  background: #030303 url("../img/bg-login.jpg") repeat-x 50% 0;
+  background-size: auto;
+}
+@media (min-width: 768px) {
+  .login-pf {
+    background-size: 100% auto;
+  }
 }
 .login-pf #brand {
   position: relative;

@@ -4,5 +4,5 @@ module.exports = [{
   label: 'pagination-table-view',
   url: 'dist/tests/pagination-table-view.html',
   disabled: false,
-  misMatchThreshold: 7.80
+  misMatchThreshold: 8.30
 }]
