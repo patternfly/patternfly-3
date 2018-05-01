@@ -137,7 +137,7 @@
       justify-content: space-around;
     }
 
-  li {
+  .wizard-pf-step {
     counter-increment: section;
     float:left; /* float for IE9 since it doesn't support flex. If items wrap, they overlap */
     flex-grow: 1;
@@ -218,7 +218,9 @@
       margin-left:1em;
       margin-right:1em;
       text-decoration: none;
-      &:hover {
+    }
+    &:not(.active) {
+      a:hover {
         .wizard-pf-step-number {
           background-color: @color-pf-black-400;
           border-color: @color-pf-black-400;
@@ -226,38 +228,39 @@
         }
       }
     }
-}
-  /* draw the step number in the circle */
-
-  .wizard-pf-step-number {
-    background-color: @color-pf-white;
-    border-radius: 50%;
-    border: solid 2px @color-pf-black-400;
-    color: @color-pf-black-400;
-    font-size: @font-size-base;
-    font-weight: 700;
-    height: 25px;
-    line-height: 22px;
-      @media (min-width: @screen-sm-min) {
-        left: ~"calc(50% - 13px)";
-        position: absolute;
-        top: 27px;
+    .wizard-pf-step-number {
+      background-color: @color-pf-white;
+      border-radius: 50%;
+      border: solid 2px @color-pf-blue-300;
+      color: @color-pf-black-400;
+      font-size: @font-size-base;
+      font-weight: 700;
+      height: 25px;
+      line-height: 22px;
+        @media (min-width: @screen-sm-min) {
+          left: ~"calc(50% - 13px)";
+          position: absolute;
+          top: 27px;
+        }
+      width: 25px;
+    }
+  
+    &.active {
+      .wizard-pf-step-number {
+        background-color: @color-pf-blue-300;
+        border-color: @color-pf-blue-300;
+        cursor: default;
+        color: @color-pf-white;
       }
-    width: 25px;
-  }
-  .active .wizard-pf-step-number {
-    background-color: @color-pf-blue-300;
-    border-color: @color-pf-blue-300;
-    cursor: default;
-    color: @color-pf-white;
-  }
 
-  .viewed-pf .wizard-pf-step-number {
-    color: @color-pf-black;
-    background-color: @color-pf-white;
-    border-color: @color-pf-blue-300;
-  }
-
+      & ~ .wizard-pf-step {
+        .wizard-pf-step-number {
+          border-color: @color-pf-black-400;
+          background: @color-pf-white;
+        }
+      }
+    }
+}
 }
 
 /* styles the main content portion of the wizard */
@@ -443,9 +446,7 @@
 }
 
 .wizard-pf-steps-alt {
-  margin-left: 15px;
-  margin-top: 15px;
-  background-image: linear-gradient(to right, transparent 11px, @color-pf-black-300 11px, @color-pf-black-300 13px, transparent 13px);
+  margin: 15px 0 15px 15px;
   @media (min-width: @screen-sm-min) {
     display:none;
   }
@@ -476,7 +477,13 @@
 }//.wizard-pf-steps-alt
 
 .wizard-pf-step-alt {
-  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+
+  &:not(:last-child) {
+    padding-bottom: 10px;
+  }
+
   a {
     display:flex;
     flex:1;
@@ -490,12 +497,27 @@
   ul {
     margin-left: 11px;
   }
+
+  .wizard-pf-step-alt-number {
+    border-radius: 50%;
+    font-size: @font-size-base;
+    font-weight: 700;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    text-align: center;
+    flex:0 0 auto;
+    border: 2px solid @color-pf-blue-300;
+    background-color: @color-pf-white;
+  }
+
   .wizard-pf-step-alt-title {
+    color: @color-pf-black;
+    font-weight: 700;
+    text-transform: capitalize;
+    display:inline-block;
     margin-left: 5px;
     align-self:center;
-  }
-  .wizard-pf-step-alt-number {
-    flex:0 0 auto;
   }
 
   &.active {
@@ -508,46 +530,37 @@
     .wizard-pf-step-alt-title {
       color: @color-pf-blue-300;
     }
-    .wizard-pf-step-alt-substep:first-of-type {
-      margin-top: 2px; // gives proper spacing below number in circle active state
-    }
 
-
-  }
-  &.viewed {
-    .wizard-pf-step-alt-number {
-      color: @color-pf-black;
-      background-color: @color-pf-white;
-      border-color: @color-pf-blue-300;
+    & ~ .wizard-pf-step-alt {
+      .wizard-pf-step-alt-number {
+        color: @color-pf-black-400;
+        border-color: @color-pf-black-400;
+      }
     }
   }
+  &:not(.active) {
+    a:hover {
+      .wizard-pf-step-alt-number {
+        border-color: @color-pf-black-400;
+        background: @color-pf-black-400;
+        color: @color-pf-white;
+      }
+    }
+  }
 
+  &:before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    height: 100%;
+    border-left: 2px solid @color-pf-black-400;
+    z-index: -1;
+  }
 }//.wizard-pf-step-alt
-
-.wizard-pf-step-alt-number {
-  background-color: @color-pf-white;
-  border-radius: 50%;
-  border: solid 2px @color-pf-black-400;
-  color: @color-pf-black-400;
-  font-size: @font-size-base;
-  font-weight: 700;
-  height: 24px;
-  width: 24px;
-  display: inline-block;
-  text-align: center;
-}
-
-
-.wizard-pf-step-alt-title {
-  color: @color-pf-black;
-  font-weight: 700;
-  text-transform: capitalize;
-  display:inline-block;
-
-}//.wizard-pf-steps-alt-title
 
 .wizard-pf-step-alt-substep {
     display:flex;
+    border-left: 2px solid transparent;
   a {
     padding:5px 0 5px 18px;
     color: @color-pf-black-800;
@@ -556,7 +569,7 @@
 &:not(.disabled) {
   &.active, &:hover {
     background-color: @color-pf-black-200;
-    background-image: linear-gradient(to right, @color-pf-blue-300 2px, transparent 2px);
+    border-color: @color-pf-blue-300;
     a {
       color:@color-pf-blue-300;
     }

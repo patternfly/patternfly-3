@@ -39,7 +39,7 @@
           </ul>
 
           <ul class="wizard-pf-steps-alt">
-            <li class="wizard-pf-step-alt viewed">
+            <li class="wizard-pf-step-alt">
               <a href="#">
                 <span class="wizard-pf-step-alt-number">1</span>
                 <span class="wizard-pf-step-alt-title">First Step</span>
@@ -435,7 +435,9 @@
       $(self.modal + " .wizard-pf-step[data-tabgroup='" + self.currentGroup + "']").addClass("active");
       $(self.modal + " .wizard-pf-sidebar .list-group").addClass("hidden");
       $(self.modal + " .list-group[data-tabgroup='" + self.currentGroup + "']").removeClass("hidden");
-      $(self.modal + " .wizard-pf-step-alt[data-tabgroup='" + self.currentGroup + "']").addClass("viewed");
+      $(self.modal + " .wizard-pf-step-alt")
+        .not("[data-tabgroup='" + self.currentGroup + "']").removeClass("active").end()
+        .filter("[data-tabgroup='" + self.currentGroup + "']").addClass("active");
       $(self.modal + " .wizard-pf-step-alt > ul").addClass("hidden");
       $(self.modal + " .wizard-pf-step-alt[data-tabgroup='" + self.currentGroup + "'] > ul").removeClass("hidden");
     };
@@ -590,7 +592,7 @@
     };
 
     this.detailsNameChange = function() {
-      $(self.modal + " #detailsName").on('change', function() {
+      $(self.modal + " #detailsName").on('change keyup', function() {
         if ($(self.modal + " #detailsName").val()) {
           $(self.modal + " .wizard-pf-step-alt-substep").removeClass('disabled');
           $(self.modal + " .wizard-pf-next").removeClass("disabled");
