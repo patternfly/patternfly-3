@@ -5,5 +5,5 @@ module.exports = [{
   label: 'list',
   url: 'dist/tests/list-pf.html',
   disabled: false,
-  misMatchThreshold: 7.05
+  misMatchThreshold: 7.30
 }]
