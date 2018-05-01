@@ -4,5 +4,5 @@ module.exports = [{
   label: 'table-view-navbar',
   url: 'dist/tests/table-view-navbar.html',
   disabled: false,
-  misMatchThreshold: 7.80
+  misMatchThreshold: 8.30
 }]
