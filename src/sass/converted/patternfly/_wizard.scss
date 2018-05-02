@@ -269,6 +269,7 @@
       height: 25px;
       line-height: 22px;
       width: 25px;
+      display: inline-block;
 
       @media (min-width: $screen-sm-min) {
         left: unquote("calc(50% - 13px)");
