@@ -17,7 +17,8 @@ module.exports = [{
   removeSelectors: ['.container > *:not(#primary-navbar)'],
   selectors: ['.container'],
   clickSelector: '#navbar-utility-menu',
-  hoverSelector: '#navbar-utility-menu + .dropdown-menu .dropdown-submenu > :first-child'
+  hoverSelector: '#navbar-utility-menu + .dropdown-menu .dropdown-submenu > :first-child',
+  misMatchThreshold: 7.30
 }, {
   label: 'navbar-context-selector',
   url: 'dist/tests/navbar.html',
