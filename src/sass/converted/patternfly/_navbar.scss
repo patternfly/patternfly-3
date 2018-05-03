@@ -277,6 +277,9 @@
   .navbar-utility {
     border-bottom: 1px solid $navbar-pf-navbar-header-border-color;
     li.dropdown > .dropdown-toggle {
+      &:hover {
+        outline: 0!important;
+      }
       padding-left: 36px;
       position: relative;
       .pficon-user {
