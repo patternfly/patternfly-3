@@ -112,11 +112,14 @@ $navbar-pf-border-color:                                            $color-pf-bl
 $navbar-pf-color:                                                   $color-pf-black-300 !default;
 $navbar-pf-height:                                                  60px !default;
 $navbar-pf-icon-bar-bg-color:                                       $color-pf-white !default;
+$navbar-pf-item-hover-bg-color:                                     rgba(255, 255, 255, .14) !default;
+$navbar-pf-item-open-bg-color:                                      rgba(255, 255, 255, .24) !default;
+$navbar-pf-item-active-color:                                       $color-pf-white !default;
 $navbar-pf-navbar-navbar-brand-min-width:                           270px !default;
 $navbar-pf-navbar-navbar-brand-padding:                             8px 0 7px !default;
 $navbar-pf-navbar-navbar-persistent-bg-color:                       $color-pf-black-150 !default;
 $navbar-pf-navbar-navbar-persistent-border-color:                   $color-pf-black-300 !default;
-$navbar-pf-vertical-active-color:                                   $color-pf-white !default;
+$navbar-pf-vertical-active-color:                                   $navbar-pf-item-active-color !default;
 $navbar-pf-vertical-bg-color:                                       #1d1d1d !default;
 $navbar-pf-vertical-bg-repeat:                                      no-repeat !default;
 $navbar-pf-vertical-bg-size:                                        auto 100% !default;
@@ -140,10 +143,10 @@ $navbar-pf-vertical-navbar-toggle-icon-bar-hover-bg:                $color-pf-wh
 $navbar-pf-vertical-nav-item-iconic-padding:                        21px 12px !default;
 $nav-pf-container-transition-period:                                250ms !default;
 $nav-pf-menu-transition-period:                                     100ms !default;
-$nav-pf-vertical-active-color:                                      $color-pf-white !default;
 $nav-pf-vertical-active-before-color:                               $color-pf-blue-300 !default;
 $nav-pf-vertical-active-bg-color:                                   $color-pf-black-800 !default;
 $nav-pf-vertical-active-border-color:                               $color-pf-black-900 !default;
+$nav-pf-vertical-active-color:                                      $color-pf-white !default;
 $nav-pf-vertical-active-font-weight:                                600 !default;
 $nav-pf-vertical-active-icon-color:                                 $color-pf-blue-300 !default;
 $nav-pf-vertical-badge-color:                                       $color-pf-white !default;
