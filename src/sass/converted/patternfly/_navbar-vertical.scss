@@ -34,23 +34,25 @@
       padding: $navbar-pf-vertical-nav-item-iconic-padding;
       position: relative;
 
+      &:hover {
+        outline: 0!important;
+      }
+
+      &:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+      }
+
       &:hover,
       &:focus {
-        color: $navbar-pf-vertical-active-color;
-        background-color: transparent;
-
-        .caret,
-        .fa,
-        .glyphicon,
-        .pficon {
-          color: $navbar-pf-vertical-active-color;
-        }
+        background-color: $navbar-pf-item-hover-bg-color;
+        text-decoration: none;
       }
 
       .badge {
         background-color: $notification-badge-color;
         border-radius: 20px;
-        color: $navbar-pf-vertical-active-color;
+        color: $navbar-pf-item-active-color;
         cursor: pointer;
         font-size: ($font-size-base - 3);
         font-weight: 700;
@@ -61,6 +63,7 @@
         min-width: 10px;
         min-height: 10px;
         top: 18px;
+        
         &.badge-pf-bordered {
           border: 1px solid $navbar-pf-vertical-bg-color;
         }
@@ -77,19 +80,19 @@
         font-size: $font-size-base;
         width: auto;
       }
-
     }
 
     .open > .nav-item-iconic {
       &,
       &:hover,
       &:focus {
-        background: transparent;
+        background: $navbar-pf-item-open-bg-color;
+        color: $navbar-pf-item-active-color;
 
         .caret,
         .fa,
         .pficon {
-          color: $navbar-pf-vertical-active-color;
+          color: $navbar-pf-item-active-color;
         }
       }
     }

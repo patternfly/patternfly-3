@@ -10,9 +10,13 @@
       width: @contextselector-pf-bootstrap-select-width-desktop !important;
     }
     &.open {
-      background: @navbar-pf-navbar-primary-active-bg-color-stop;
       > .dropdown-toggle {
-        color: @navbar-pf-vertical-active-color;
+        &,
+        &:hover,
+        &:focus {
+          background: @navbar-pf-item-open-bg-color;
+          color: @navbar-pf-item-active-color;
+        }
         &:focus {
           outline: 0 !important; // don't show restored focus ring when open
         }
@@ -28,7 +32,6 @@
       padding-left: @contextselector-pf-dropdown-toggle-padding-left;
       padding-top: @contextselector-pf-dropdown-toggle-padding-top;
       &:focus {
-        color: @navbar-pf-vertical-active-color;
         // restore the focus ring
         // Default
         outline: thin dotted !important;
@@ -37,9 +40,11 @@
         outline-offset: -2px !important;
       }
       &:hover {
-        background: @navbar-pf-navbar-primary-active-bg-color-stop;
-        color: @navbar-pf-vertical-active-color;
         outline: 0 !important; // don't show restored focus ring when open
+      }
+      &:focus,
+      &:hover {
+        background-color: @navbar-pf-item-hover-bg-color;
       }
       .filter-option {
         text-overflow: ellipsis;
