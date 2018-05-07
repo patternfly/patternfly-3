@@ -75,11 +75,20 @@
       .pficon {
         color: $navbar-pf-vertical-color;
         font-size: ($font-size-base + 4);
+        position: relative;
       }
 
       .caret {
         font-size: $font-size-base;
         width: auto;
+      }
+
+      > .dropdown-title {
+        position: relative;
+      }
+
+      > .pficon-user {
+        padding-right: $navbar-pf-item-icon-padding-right;
       }
     }
 

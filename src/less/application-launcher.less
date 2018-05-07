@@ -116,8 +116,10 @@
 
   .navbar-utility .applauncher-pf, .applauncher-pf {
 
-    &.open > .dropdown-toggle,
-        &.open > .dropdown-toggle:focus {
+    &.open {
+      > .dropdown-toggle {
+        &,
+        &:focus {
           background-color: @navbar-pf-navbar-nav-active-bg-color;
           color: @navbar-pf-active-color;
 
@@ -127,6 +129,8 @@
             color: @navbar-pf-navbar-utility-color;
           }
         }
+      }
+    }
 
         &.open {
           .dropdown-menu > li > a {
@@ -152,6 +156,11 @@
                 color: @applauncher-pf-menu-link-color-disabled !important;
               }
 
+              &:hover,
+              &:focus {
+                color: @navbar-pf-active-color;
+              }
+
               @media (min-width: @screen-sm-min) {
                 border-left: 1px solid @navbar-pf-navbar-utility-border-color;
                 padding: @applauncher-pf-dropdown-toggle-padding;
@@ -160,7 +169,8 @@
         }
 
         .applauncher-pf-icon {
-              padding-right:@applauncher-pf-icon-padding-right;
+              padding-right: @navbar-pf-item-icon-padding-right;
+              position: relative;
               
               @media (min-width: @screen-sm-min) {
                 padding: 0;
@@ -172,7 +182,6 @@
           display: inline;
           position: relative;
         }
-
 
         .applauncher-pf-link {
           overflow: hidden;

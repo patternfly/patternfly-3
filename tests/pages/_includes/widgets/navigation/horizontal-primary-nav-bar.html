@@ -19,7 +19,7 @@
       {% endif %}
       <li class="dropdown">
         <button class="btn btn-link nav-item-iconic" id="horizontalDropdownMenu1{{include.navindex}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          <span title="Help" class="fa pficon-help"></span>
+          <span title="Help" class="fa pficon-help dropdown-title"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="horizontalDropdownMenu1{{include.navindex}}">
           <li><a href="#0">Help</a></li>
@@ -29,7 +29,9 @@
       <li class="dropdown">
         <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
           <span class="pficon pficon-user"></span>
-          Brian Johnson <b class="caret"></b>
+          <span class="dropdown-title">
+            Brian Johnson <b class="caret"></b>
+          </span>
         </button>
         <ul class="dropdown-menu">
           <li>
