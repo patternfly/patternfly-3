@@ -29,28 +29,37 @@
   }
   .navbar-nav {
     margin: 0;
-    > .active > a,
-    > .active > a:hover,
-    > .active > a:focus {
-      background-color: @navbar-pf-navbar-nav-active-bg-color;
-      color: @navbar-pf-active-color;
-    }
-    > li > a {
-      color: @navbar-pf-color;
-      line-height: 1;
-      padding: 10px 20px;
-      text-shadow: none;
-      &:hover,
-      &:focus {
-        color: @navbar-pf-active-color;
-      }
-    }
-    > .open {
-      > a {
+    > .active {
+      > a,
+      > button {
         &,
         &:hover,
         &:focus {
-          background-color: @navbar-pf-navbar-nav-active-bg-color;
+          background-color: @navbar-pf-item-open-bg-color;
+          color: @navbar-pf-active-color;
+        }
+      }
+    }
+    > li {
+      > a,
+      > button {
+        color: @navbar-pf-color;
+        line-height: 1;
+        padding: 10px 20px;
+        text-shadow: none;
+        &:hover,
+        &:focus {
+          color: @navbar-pf-active-color;
+        }
+      }
+    }
+    > .open {
+      > a,
+      > button {
+        &,
+        &:hover,
+        &:focus {
+          background-color: @navbar-pf-item-open-bg-color;
           color: @navbar-pf-active-color;
         }
       }
@@ -92,7 +101,7 @@
           &,
           &:hover,
           &:focus {
-            background-color: @navbar-pf-navbar-nav-active-active-open-bg-color !important;
+            background-color: @navbar-pf-item-open-bg-color !important;
             color: @navbar-pf-active-color;
           }
         }
@@ -301,9 +310,12 @@
     .navbar-brand {
       padding: @navbar-pf-navbar-navbar-brand-padding;
     }
-    .navbar-nav > li > a {
-      padding-bottom: 14px;
-      padding-top: 14px;
+    .navbar-nav > li {
+      > a,
+      > button {
+        padding-bottom: 14px;
+        padding-top: 14px;
+      }
     }
     .navbar-persistent {
       font-size: @font-size-large;
@@ -416,30 +428,35 @@
           }
         }
       }
-      > li > a {
-        border-bottom: 1px solid transparent;
-        border-top: 1px solid transparent;
-        position: relative;
-        margin: -1px 0 0;
-        &:hover {
-          background-color: @navbar-pf-navbar-primary-hover-bg-color-stop;
-          border-top-color: @navbar-pf-navbar-primary-hover-border-color;
-          color: @navbar-pf-color;
-          #gradient > .vertical(@navbar-pf-navbar-primary-hover-bg-color-start, @navbar-pf-navbar-primary-hover-bg-color-stop);
+      > li {
+        > a,
+        > button {
+          border-bottom: 1px solid transparent;
+          border-top: 1px solid transparent;
+          position: relative;
+          margin: -1px 0 0;
+          &:hover {
+            background-color: @navbar-pf-item-hover-bg-color;
+            border-top-color: @navbar-pf-navbar-primary-hover-border-color;
+            color: @navbar-pf-color;
+            #gradient > .vertical(@navbar-pf-navbar-primary-hover-bg-color-start, @navbar-pf-navbar-primary-hover-bg-color-stop);
+          }
         }
       }
-      > .active > a,
-      > .active > a:hover,
-      > .active > a:focus,
-      > .open > a,
-      > .open > a:hover,
-      > .open > a:focus {
-        background-color: @navbar-pf-navbar-primary-active-bg-color-stop;
-        border-bottom-color: @navbar-pf-navbar-primary-active-bg-color-stop;
-        border-top-color: @navbar-pf-navbar-primary-active-border-color;
-        .box-shadow(none);
-        color: @navbar-pf-active-color;
-        #gradient > .vertical(@navbar-pf-navbar-primary-active-bg-color-start, @navbar-pf-navbar-primary-active-bg-color-stop);
+      > .active {
+        > a,
+        > button {
+          &,
+          &:hover,
+          &:focus {
+            background-color: @navbar-pf-item-open-bg-color;
+            border-bottom-color: @navbar-pf-navbar-primary-active-bg-color-stop;
+            border-top-color: @navbar-pf-navbar-primary-active-border-color;
+            .box-shadow(none);
+            color: @navbar-pf-active-color;
+            #gradient > .vertical(@navbar-pf-navbar-primary-active-bg-color-start, @navbar-pf-navbar-primary-active-bg-color-stop);
+          }
+        }
       }
       li.context {
         &.context-bootstrap-select .filter-option {
@@ -476,31 +493,44 @@
     }
     .navbar-utility {
       border-bottom: 0;
-      font-size: @font-size-small;
       position: absolute;
       right: 0;
       top: 0;
-      > .active > a,
-      > .active > a:hover,
-      > .active > a:focus,
-      > .open > a,
-      > .open > a:hover,
-      > .open > a:focus {
-        background: @navbar-pf-item-open-bg-color;
-        color: @navbar-pf-active-color;
-      }
-      > li > a {
-        border-left: 1px solid @navbar-pf-navbar-utility-border-color;
-        color: @navbar-pf-navbar-utility-color !important;
-        padding: 7px 10px;
-        &:hover {
-          background: @navbar-pf-navbar-utility-hover-bg-color;
-          border-left-color: @navbar-pf-navbar-utility-hover-border-color;
+      > .active,
+      > .open {
+        > a,
+        > button {
+          &,
+          &:hover,
+          &:focus {
+            background: @navbar-pf-item-open-bg-color;
+            color: @navbar-pf-active-color;
+          }
         }
       }
-      > li.open > a {
-        border-left-color: @navbar-pf-navbar-utility-open-border-color;
-        color: @navbar-pf-active-color !important;
+      > li {
+        > a,
+        > button {
+          border: solid @navbar-pf-navbar-utility-border-color;
+          border-width: 0 0 0 1px;
+          color: @navbar-pf-navbar-utility-color !important;
+          padding: 7px 10px;
+          font-size: @font-size-small;
+          margin: 0;
+          &:hover {
+            background: @navbar-pf-item-hover-bg-color;
+            border-left-color: @navbar-pf-navbar-utility-hover-border-color;
+            text-decoration: none;
+            outline: 0;
+          }
+        }
+      }
+      > li.open {
+        > a,
+        > button {
+          border-left-color: @navbar-pf-navbar-utility-open-border-color;
+          color: @navbar-pf-active-color !important;
+        }
       }
       li.dropdown > .dropdown-toggle {
         padding-left: 26px;

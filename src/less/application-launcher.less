@@ -105,9 +105,8 @@
 
 .navbar-utility .applauncher-pf {
     .dropdown-menu {
-      border-width: @applauncher-pf-menu-link-border-width !important;
+      //border-width: @applauncher-pf-menu-link-border-width !important;
       @media (min-width: @screen-sm-min) {
-              margin-top: 3px;
               right:0;
             }
     }//.dropdown-menu
@@ -117,8 +116,8 @@
 
   .navbar-utility .applauncher-pf, .applauncher-pf {
 
-    &.open > a,
-        &.open > a:focus {
+    &.open > .dropdown-toggle,
+        &.open > .dropdown-toggle:focus {
           background-color: @navbar-pf-navbar-nav-active-bg-color;
           color: @navbar-pf-active-color;
 
@@ -142,7 +141,6 @@
 
         &.dropdown > .dropdown-toggle,
             .dropdown-toggle {
-              background-color: inherit;
               color: @applauncher-pf-menu-link-color;
               text-align: left;
               text-decoration: none;
@@ -163,9 +161,10 @@
 
         .applauncher-pf-icon {
               padding-right:@applauncher-pf-icon-padding-right;
-
+              
               @media (min-width: @screen-sm-min) {
                 padding: 0;
+                display: block;
               }
             }
 
@@ -207,7 +206,6 @@
 
       @media (min-width: @screen-sm-min) {
         padding: 22px 10px;
-        line-height: inherit;
       }
     }
   }
