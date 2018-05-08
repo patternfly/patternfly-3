@@ -1,0 +1,62 @@
+<div class="date-time-range-picker-pf input-group" id="{{include.rangeId}}">
+  <input type="text" class="form-control" id="{{include.startId}}">
+  <span class="input-group-addon">To</span>
+  <input type="text" class="form-control" id="{{include.endId}}">
+  <div class="dropdown btn-group dropdown-kebab-pf">
+    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <span class="fa fa-ellipsis-v"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownKebab">
+      <li><a href="#!">7 days</a></li>
+      <li><a href="#!">15 days</a></li>
+      <li><a href="#!">30 days</a></li>
+      <li><a href="#!">90 days</a></li>
+    </ul>
+  </div>
+</div>
+<script>
+  $(function () {
+    var $startDate = $('#{{include.startId}}');
+    var $endDate = $('#{{include.endId}}');
+
+    $startDate.datetimepicker({
+      format: 'L',
+      showTodayButton: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+    $endDate.datetimepicker({
+      format: 'L',
+      useCurrent: false,
+      showTodayButton: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+
+    $startDate.on('dp.change', function (e) {
+      $endDate.data('DateTimePicker').minDate(e.date);
+    });
+    $endDate.on('dp.change', function (e) {
+      $startDate.data('DateTimePicker').maxDate(e.date);
+    });
+
+    $('#{{include.rangeId}}').on('click', 'a', function (e) {
+      var sDate = $startDate.data('DateTimePicker').date();
+      var eDate = $endDate.data('DateTimePicker').date();
+      var duration = parseInt(e.target.textContent);
+      if (!sDate && !eDate) {
+        $startDate.data('DateTimePicker').date(moment());
+        $endDate.data('DateTimePicker').date(moment().add(duration, 'days'));
+      } else if (sDate && !eDate) {
+        $endDate.data('DateTimePicker').date(sDate.add(duration, 'days'));
+      } else if (!sDate && eDate) {
+        $startDate.data('DateTimePicker').date(eDate.subtract(duration, 'days'));
+      } else {
+        $endDate.data('DateTimePicker').minDate(false);
+        $endDate.data('DateTimePicker').date(sDate.add(duration, 'days'));
+      }
+    });
+  });
+</script>
