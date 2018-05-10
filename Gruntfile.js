@@ -1,6 +1,7 @@
 /*global module,require*/
 /* eslint-disable */
 var pageBuilder = require('./tests/pages/_script/page-builder'),
+  rcueBuilder = require('./tests/pages/_script/rcue-builder'),
   open = require('open');
 
 module.exports = function (grunt) {
@@ -119,7 +120,7 @@ module.exports = function (grunt) {
           }
         ]
       },
-      less: {
+      patternfly: {
         files: [
           // copy Patternfly less files
           {
@@ -128,6 +129,21 @@ module.exports = function (grunt) {
             src: ['*'],
             dest: 'dist/less/'
           },
+        ]
+      },
+      rcue: {
+        files: [
+          // copy RCUE less files
+          {
+            expand: true,
+            cwd: 'src/less/',
+            src: ['*'],
+            dest: 'dist/less/'
+          },
+        ]
+      },
+      less: {
+        files: [
           // Dependencies
           // copy Bootstrap less files
           {
@@ -191,7 +207,6 @@ module.exports = function (grunt) {
       },
       sass: {
         files: [
-
           // copy bootstrap-select sass files
           {
             expand: true,
@@ -288,6 +303,24 @@ module.exports = function (grunt) {
           maxSelectors: 65534,
           beForgiving: true
         }
+      },
+      rcueless: {
+        src: [
+          'tests/build/less/rcue*.min.css'
+        ],
+        options: {
+          maxSelectors: 4095,
+          beForgiving: true
+        }
+      },
+      rcuesass: {
+        src: [
+          'tests/build/sass/rcue.min.css'
+        ],
+        options: {
+          maxSelectors: 65534,
+          beForgiving: true
+        }
       }
     },
     jekyll: {
@@ -306,7 +339,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'tests/build',
-          src: ['**/patternfly*.css', '**/!*.min.css'],
+          src: ['**/patternfly*.css', '**/rcue*.css', '**/!*.min.css'],
           dest: 'tests/build',
           ext: '.min.css',
         }],
@@ -347,6 +380,38 @@ module.exports = function (grunt) {
           sourceMapFilename: 'tests/build/less/patternfly-additions.css.map',
           sourceMapURL: 'patternfly-additions.css.map'
         }
+      },
+      rcue: {
+        files: {
+          'tests/build/less/rcue.css': 'src/less/rcue.less',
+        },
+        options: {
+          paths: [
+            'src/less/',
+            'node_modules/'
+          ],
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapFilename: 'tests/build/less/rcue.css.map',
+          sourceMapURL: 'rcue.css.map'
+        }
+      },
+      rcueAdditions: {
+        files: {
+          'tests/build/less/rcue-additions.css': 'src/less/rcue-additions.less'
+        },
+        options: {
+          paths: [
+            'src/less/',
+            'node_modules/'
+          ],
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapFilename: 'tests/build/less/rcue-additions.css.map',
+          sourceMapURL: 'rcue-additions.css.map'
+        }
       }
     },
     lessToSass: {
@@ -357,6 +422,15 @@ module.exports = function (grunt) {
             cwd: 'src/less',
             src: ['*.less','!patternfly.less', '!patternfly-additions.less', '!application-launcher.less'],
             dest: 'src/sass/converted/patternfly/',
+            rename: function(dest, src) {
+              return dest + '_' + src.replace('.less', '.scss');
+            }
+          },
+          {
+            expand: true,
+            cwd: 'src/less',
+            src: ['*.less','!rcue.less', '!rcue-additions.less', '!application-launcher.less'],
+            dest: 'src/sass/converted/rcue/',
             rename: function(dest, src) {
               return dest + '_' + src.replace('.less', '.scss');
             }
@@ -505,6 +579,21 @@ module.exports = function (grunt) {
           ],
         }
       },
+      rcue: {
+        rcue: {
+          files: {
+            'tests/build/sass/rcue.css': 'src/sass/build.scss',
+          },
+          options: {
+            outputStyle: 'expanded',
+            includePaths: [
+              'node_modules/bootstrap-sass/assets/stylesheets',
+              'node_modules/font-awesome-sass/assets/stylesheets',
+              'node_modules/'
+            ],
+          }
+        }
+      }
     },
     uglify: {
       options: {
@@ -540,11 +629,23 @@ module.exports = function (grunt) {
       },
       jekyll: {
         files: 'tests/pages/**/*',
-        tasks: ['pages']
+        tasks: ['patternfly-pages', 'rcue-pages']
       },
       styles: {
         files: ['src/less/*.less', 'src/sass/**/*.scss'],
-        tasks: ['clean:testBuild', 'lessToSass', 'copy:less', 'copy:sass', 'less', 'sass', 'shipcss']
+        tasks: ['clean:testBuild',
+                'lessToSass',
+                'copy:less',
+                'copy:sass',
+                'copy:patternfly',
+                // 'copy:rcue',
+                'sass:patternfly',
+                'less:patternfly',
+                'less:patternflyAdditions',
+                // 'sass:rcue',
+                // 'less:rcue',
+                // 'less:rcueAdditions',
+                'shipcss']
       },
       js: {
         files: ['src/js/*.js'],
@@ -607,16 +708,36 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('pages', 'Builds the PatternFly test pages.', function (_target) {
+  // use the PatternFly script to target the PatternFly configuration
+  grunt.registerTask('patternfly-pages', 'Builds the PatternFly test pages.', function (_target) {
     var target = _target || process.env.PF_PAGE_BUILDER || 'script';
     var done;
     if (target === 'jekyll') { // eg: grunt build:jekyll || PF_PAGE_BUILDER=jekyll build
-      grunt.log.writeln('Builidng test pages with ruby jekyll');
+      grunt.log.writeln('Building patternfly test pages with ruby jekyll');
       grunt.task.run('run:bundleInstall', 'jekyll');
     } else if (target === 'script') {  // eg: grunt build:script
-      grunt.log.writeln('Builidng test pages with liquid.js');
+      grunt.log.writeln('Building patternfly test pages with liquid.js');
       done = this.async();
       pageBuilder.build()
+        .then(function () {
+          done();
+        });
+    } else {
+      grunt.log.writeln('Invalid taget:', target);
+    }
+  });
+
+  // use the RCUE script to target the RCUE configuration
+  grunt.registerTask('rcue-pages', 'Builds the RCUE test pages.', function (_target) {
+    var target = _target || process.env.PF_PAGE_BUILDER || 'script';
+    var done;
+    if (target === 'rcue') { // eg: grunt build:rcue || PF_PAGE_BUILDER=rcue build
+      grunt.log.writeln('Building rcue test pages with ruby jekyll');
+      grunt.task.run('run:bundleInstall', 'rcue');
+    } else if (target === 'script') {  // eg: grunt build:script
+      grunt.log.writeln('Building rcue test pages with liquid.js');
+      done = this.async();
+      rcueBuilder.build()
         .then(function () {
           done();
         });
@@ -632,21 +753,75 @@ module.exports = function (grunt) {
     } else {
       grunt.task.run('copy:lessBuild');
     }
-  })
+  });
 
+  // build PatternFly and RCUE together for distribution
   grunt.registerTask('build', function(){
     grunt.task.run([
       'clean',
       'concat',
-      'pages',
+      'rcue-pages',
+      'patternfly-pages',
       'lessToSass',
       'copy:fonts',
       'copy:images',
+      'copy:rcue',
+      'copy:patternfly',
       'copy:less',
       'copy:sass',
       'copy:js',
-      'sass',
-      'less',
+      'sass:rcue',
+      'less:rcue',
+      'less:rcueAdditions',
+      'sass:patternfly',
+      'less:patternfly',
+      'less:patternflyAdditions',
+      'shipcss',
+      'eslint',
+      'uglify',
+      'htmlhint',
+      'stylelint'
+    ]);
+  });
+
+  grunt.registerTask('build-patternfly', function(){
+    grunt.task.run([
+      'clean',
+      'concat',
+      'patternfly-pages',
+      'lessToSass',
+      'copy:fonts',
+      'copy:images',
+      'copy:patternfly',
+      'copy:less',
+      'copy:sass',
+      'copy:js',
+      'sass:patternfly',
+      'less:patternfly',
+      'less:patternflyAdditions',
+      'shipcss',
+      'eslint',
+      'uglify',
+      'htmlhint',
+      'stylelint'
+    ]);
+  });
+
+  grunt.registerTask('build-rcue', function(){
+    grunt.task.run([
+      'clean',
+      'concat',
+      'rcue-pages',
+      'lessToSass',
+      'copy:fonts',
+      'copy:images',
+      'copy:rcue',
+      'copy:less',
+      'copy:sass',
+      'copy:js',
+      'sass:rcue',
+      'less:rcue',
+      'less:rcueAdditions',
       'shipcss',
       'eslint',
       'uglify',
