@@ -34,6 +34,7 @@
       padding: $navbar-pf-vertical-nav-item-iconic-padding;
       position: relative;
       margin: 0;
+      border: 0;
 
       &:hover {
         outline: 0!important;
@@ -85,10 +86,13 @@
 
       > .dropdown-title {
         position: relative;
+        display: inline-block;
+        line-height: 1.55;
       }
 
       > .pficon-user {
-        padding-right: $navbar-pf-item-icon-padding-right;
+        padding-right: calc($navbar-pf-item-icon-padding-right + 3px);
+        float: left;
       }
     }
 
