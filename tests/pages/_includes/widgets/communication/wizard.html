@@ -132,7 +132,7 @@
               <form class="form-horizontal">
                 <!-- replacing id with data-id to pass build errors -->
                 <div class="form-group required">
-                  <label class="col-sm-2 control-label" for="textInput-markup" required>Name</label>
+                  <label class="col-sm-2 control-label required-pf" for="textInput-markup" required>Name</label>
                   <div class="col-sm-10">
                     <input id="detailsName" type="text" data-id="textInput-markup" class="form-control">
                   </div>
@@ -474,6 +474,8 @@
     this.updateBackBtnDisplay = function() {
       if (self.currentTab == self.tabs[0]) {
         $(self.modal + " .wizard-pf-back").addClass("disabled");
+      } else {
+        $(self.modal + " .wizard-pf-back").removeClass("disabled");
       }
     };
 
@@ -561,7 +563,7 @@
     };
     // Back button clicked
     this.backBtnClicked = function() {
-      $(self.modal + " .wizard-pf-back").click(function() {
+      $('body').on('click', self.modal + " .wizard-pf-back:not(.disabled)", function() {
         // if not the first page
         if (self.currentTab != self.tabs[0]) {
           // go back a page (i.e. -1)
@@ -574,7 +576,7 @@
 
     // Next button clicked
     this.nextBtnClicked = function() {
-      $(self.modal + " .wizard-pf-next").click(function() {
+      $('body').on('click', self.modal + " .wizard-pf-next:not(.disabled)", function() {
         // go forward a page (i.e. +1)
         self.wizardPaging(1);
         // show/hide/disable/enable buttons if needed
