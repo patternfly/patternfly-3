@@ -301,12 +301,7 @@
       </div><!-- /.wizard-pf-body -->
 
       <div class="modal-footer wizard-pf-footer">
-        <button type="button" class="btn btn-default btn-cancel wizard-pf-cancel wizard-pf-dismiss">Cancel</button>
-        <button type="button" class="btn btn-default wizard-pf-back disabled">
-          <span class="i fa fa-angle-left"></span>
-          Back
-        </button>
-        <button type="button" class="btn btn-primary wizard-pf-next disabled">
+        <button type="button" class="btn btn-primary wizard-pf-next disabled" disabled="disabled">
           Next
           <span class="i fa fa-angle-right"></span>
         </button>
@@ -314,8 +309,12 @@
           Deploy
           <span class="i fa fa-angle-right"></span>
         </button>
+        <button type="button" class="btn btn-default wizard-pf-back disabled" disabled="disabled">
+          <span class="i fa fa-angle-left"></span>
+          Back
+        </button>
+        <button type="button" class="btn btn-default btn-cancel wizard-pf-cancel wizard-pf-dismiss">Cancel</button>
         <button type="button" class="btn btn-primary hidden wizard-pf-close wizard-pf-dismiss">Close</button>
-
       </div><!-- /.wizard-pf-footer -->
 
     </div><!-- /.modal-content -->
@@ -429,6 +428,8 @@
       self.detailsNameChange();
     };
 
+    
+
     // update which tab group is active
     this.updateTabGroup = function() {
       $(self.modal + " .wizard-pf-step.active").removeClass("active");
@@ -440,6 +441,16 @@
         .filter("[data-tabgroup='" + self.currentGroup + "']").addClass("active");
       $(self.modal + " .wizard-pf-step-alt > ul").addClass("hidden");
       $(self.modal + " .wizard-pf-step-alt[data-tabgroup='" + self.currentGroup + "'] > ul").removeClass("hidden");
+    };
+
+    // enable a button
+    this.enableBtn = function($el) {
+      $el.removeClass("disabled").removeAttr("disabled");
+    };
+
+    // disable a button
+    this.disableBtn = function($el) {
+      $el.addClass("disabled").attr("disabled", "disabled");
     };
 
     // update which tab is active
@@ -472,10 +483,11 @@
 
     // update display state of Back button
     this.updateBackBtnDisplay = function() {
+      var $backBtn = $(self.modal + " .wizard-pf-back");
       if (self.currentTab == self.tabs[0]) {
-        $(self.modal + " .wizard-pf-back").addClass("disabled");
+        self.disableBtn($backBtn)
       } else {
-        $(self.modal + " .wizard-pf-back").removeClass("disabled");
+        self.enableBtn($backBtn)
       }
     };
 
@@ -595,13 +607,14 @@
 
     this.detailsNameChange = function() {
       $(self.modal + " #detailsName").on('change keyup', function() {
+        var $nextBtn = $(self.modal + " .wizard-pf-next");
         if ($(self.modal + " #detailsName").val()) {
           $(self.modal + " .wizard-pf-step-alt-substep").removeClass('disabled');
-          $(self.modal + " .wizard-pf-next").removeClass("disabled");
+          self.enableBtn($nextBtn);
         } else {
           $(self.modal + " .wizard-pf-step-alt-substep").addClass('disabled');
           $(self.modal + " .wizard-pf-step-alt-substep.active").removeClass('disabled');
-          $(self.modal + " .wizard-pf-next").addClass("disabled");
+          self.disableBtn($nextBtn);
         }
       });
     };
@@ -668,8 +681,8 @@
     // contents display in that div (i.e. replaces process message with
     // success message).
     this.finish = function() {
-      $(self.modal + " .wizard-pf-back").addClass("disabled"); // if Back remains enabled during this step, then the Close button needs to be removed when the user clicks Back
-      $(self.modal + " .wizard-pf-finish").addClass("disabled");
+      self.disableBtn($(self.modal + " .wizard-pf-back")); // if Back remains enabled during this step, then the Close button needs to be removed when the user clicks Back
+      self.disableBtn($(self.modal + " .wizard-pf-finish"));
       // code for kicking off process goes here
       // the next code is just to simulate the expected experience, in that
       // when the process is complete, the success message etc. would display

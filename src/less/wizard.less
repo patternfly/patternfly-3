@@ -459,9 +459,18 @@
   border-top: 1px solid @color-pf-black-300;
   margin-top: 0;
   padding-bottom: 17px;
+  display: flex;
+  justify-content: flex-end;
 
-  .btn-cancel {
+  .wizard-pf-cancel {
     margin-right:25px;
+    order: -1;
+  }
+
+  .wizard-pf-next,
+  .wizard-pf-deploy {
+    order: 1;
+    margin-left: 8px;
   }
 }
 
