@@ -301,17 +301,17 @@
       </div><!-- /.wizard-pf-body -->
 
       <div class="modal-footer wizard-pf-footer">
-        <button type="button" class="btn btn-primary wizard-pf-next disabled" disabled="disabled">
-          Next
-          <span class="i fa fa-angle-right"></span>
-        </button>
-        <button type="button" class="btn btn-primary hidden wizard-pf-finish">
-          Deploy
+        <button type="submit" class="btn btn-primary wizard-pf-next disabled" disabled="disabled">
+          <span class="wizard-pf-button-text">
+            Next
+          </span>
           <span class="i fa fa-angle-right"></span>
         </button>
         <button type="button" class="btn btn-default wizard-pf-back disabled" disabled="disabled">
           <span class="i fa fa-angle-left"></span>
-          Back
+          <span class="wizard-pf-button-text">
+            Back
+          </span>
         </button>
         <button type="button" class="btn btn-default btn-cancel wizard-pf-cancel wizard-pf-dismiss">Cancel</button>
         <button type="button" class="btn btn-primary hidden wizard-pf-close wizard-pf-dismiss">Close</button>
@@ -421,14 +421,14 @@
       self.altSubStepClick();
       self.backBtnClicked();
       self.nextBtnClicked();
-      self.finishBtnClick();
       self.cancelBtnClick();
 
       // Listen for required value change
       self.detailsNameChange();
-    };
 
-    
+      // Handle form submit event
+      self.formSubmitted();
+    };
 
     // update which tab group is active
     this.updateTabGroup = function() {
@@ -494,11 +494,9 @@
     // update display state of next/finish button
     this.updateNextBtnDisplay = function() {
       if (self.currentTab == self.tabSummary) {
-        $(self.modal + " .wizard-pf-next").addClass("hidden");
-        $(self.modal + " .wizard-pf-finish").removeClass("hidden");
+        $(self.modal + " .wizard-pf-next").focus().find(".wizard-pf-button-text").text("Deploy");
       } else {
-        $(self.modal + " .wizard-pf-finish").addClass("hidden");
-        $(self.modal + " .wizard-pf-next").removeClass("hidden");
+        $(self.modal + " .wizard-pf-next .wizard-pf-button-text").text("Next");
       }
     };
 
@@ -512,17 +510,7 @@
     this.updateToCurrentPage = function() {
       self.updateTabGroup();
       self.updateActiveTab();
-
       self.updateVisibleContents();
-
-      if (self.currentTab === self.tabLast) {
-        $(self.modal + " .wizard-pf-next").addClass("hidden");
-        $(self.modal + " .wizard-pf-finish").removeClass("hidden");
-        self.finish();
-      } else {
-        // show/hide/disable/enable buttons if needed
-        self.updateWizardFooterDisplay();
-      }
     };
 
     // when the user clicks a step, then the tab group for that step is displayed
@@ -575,7 +563,7 @@
     };
     // Back button clicked
     this.backBtnClicked = function() {
-      $('body').on('click', self.modal + " .wizard-pf-back:not(.disabled)", function() {
+      $('body').on('click', self.modal + " .wizard-pf-back", function() {
         // if not the first page
         if (self.currentTab != self.tabs[0]) {
           // go back a page (i.e. -1)
@@ -588,20 +576,24 @@
 
     // Next button clicked
     this.nextBtnClicked = function() {
-      $('body').on('click', self.modal + " .wizard-pf-next:not(.disabled)", function() {
-        // go forward a page (i.e. +1)
-        self.wizardPaging(1);
-        // show/hide/disable/enable buttons if needed
-        self.updateWizardFooterDisplay();
+      $('body').on('click', self.modal + " .wizard-pf-next", function() {
+        if (self.currentTab == self.tabSummary) {
+          self.wizardPaging(1);
+          self.finish();
+        } else {
+          // go forward a page (i.e. +1)
+          self.wizardPaging(1);
+          // show/hide/disable/enable buttons if needed
+          self.updateWizardFooterDisplay();
+        }
       });
     };
 
-    // Finish button clicked
-    // Deploy/Finish button would only display during the second to last step.
-    this.finishBtnClick = function() {
-      $(self.modal + " .wizard-pf-finish").click(function() {
-        self.wizardPaging(1);
-        self.finish();
+    // Form submitted
+    this.formSubmitted = function() {
+      $('form').on('submit', function(e) {
+        e.preventDefault();
+        $('button[type="submit"]:not(.disabled)').trigger('click');
       });
     };
 
@@ -627,7 +619,6 @@
       $(self.modal + " .wizard-pf-step-alt > a").off('click');
       $(self.modal + " .wizard-pf-back").off("click");
       $(self.modal + " .wizard-pf-next").off("click");
-      $(self.modal + " .wizard-pf-finish").off("click");
       $(self.modal + " .wizard-pf-dismiss").off("click");
 
       $(self.modal + " #detailsName").off('change');
@@ -682,19 +673,18 @@
     // success message).
     this.finish = function() {
       self.disableBtn($(self.modal + " .wizard-pf-back")); // if Back remains enabled during this step, then the Close button needs to be removed when the user clicks Back
-      self.disableBtn($(self.modal + " .wizard-pf-finish"));
+      self.disableBtn($(self.modal + " .wizard-pf-next"));
       // code for kicking off process goes here
       // the next code is just to simulate the expected experience, in that
       // when the process is complete, the success message etc. would display
       setTimeout (function() {
         $(self.modal + " .wizard-pf-cancel").addClass("hidden");
-        $(self.modal + " .wizard-pf-finish").addClass("hidden");
+        $(self.modal + " .wizard-pf-next").addClass("hidden");
         $(self.modal + " .wizard-pf-close").removeClass("hidden");
         $(self.modal + " .wizard-pf-process").addClass("hidden");
         $(self.modal + " .wizard-pf-complete").removeClass("hidden");
       }, 3000);
     };
-
   };
 
 </script>
