@@ -33,6 +33,8 @@
       max-height: ($navbar-pf-vertical-height - $navbar-pf-vertical-border-width); // to keep Firefox from oversizing icons
       padding: $navbar-pf-vertical-nav-item-iconic-padding;
       position: relative;
+      margin: 0;
+      border: 0;
 
       &:hover {
         outline: 0!important;
@@ -74,11 +76,23 @@
       .pficon {
         color: $navbar-pf-vertical-color;
         font-size: ($font-size-base + 4);
+        position: relative;
       }
 
       .caret {
         font-size: $font-size-base;
         width: auto;
+      }
+
+      > .dropdown-title {
+        position: relative;
+        display: inline-block;
+        line-height: 1.55;
+      }
+
+      > .pficon-user {
+        padding-right: calc($navbar-pf-item-icon-padding-right + 3px);
+        float: left;
       }
     }
 
