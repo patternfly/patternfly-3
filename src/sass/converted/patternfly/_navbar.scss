@@ -300,6 +300,9 @@
           outline: 0!important;
         }
         position: relative;
+        > .fa {
+          line-height: 0;
+        }
       }
     }
     @media (max-width: $grid-float-breakpoint-max) {
