@@ -19,7 +19,7 @@
               </a>
             </li>
 
-            <li class="wizard-pf-step">
+            <li class="wizard-pf-step disabled">
               <a href="#">
                 <span class="wizard-pf-step-number">2</span>
                 <span class="wizard-pf-step-title">Second Step</span>
@@ -28,7 +28,7 @@
               </a>
             </li>
 
-            <li class="wizard-pf-step">
+            <li class="wizard-pf-step disabled">
               <a href="#">
                 <span class="wizard-pf-step-number">3</span>
                 <span class="wizard-pf-step-title">Review</span>
@@ -39,7 +39,7 @@
           </ul>
 
           <ul class="wizard-pf-steps-alt">
-            <li class="wizard-pf-step-alt">
+            <li class="wizard-pf-step-alt active">
               <a href="#">
                 <span class="wizard-pf-step-alt-number">1</span>
                 <span class="wizard-pf-step-alt-title">First Step</span>
@@ -62,7 +62,7 @@
             </li>
 
             <li class="wizard-pf-step-alt">
-              <a  href="#">
+              <a href="#">
                 <span class="wizard-pf-step-alt-number">3</span>
                 <span class="wizard-pf-step-alt-title">Review</span>
               </a>
@@ -71,9 +71,7 @@
                 <li class="wizard-pf-step-alt-substep disabled"><a href="#">3B. Progress</a></li>
               </ul>
             </li>
-
           </ul>
-
         </div>
 
         <div class="wizard-pf-row">
@@ -85,7 +83,7 @@
                   <span class="wizard-pf-substep-title">Details</span>
                 </a>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item disabled">
                 <a href="#">
                   <span class="wizard-pf-substep-number">1B.</span>
                   <span class="wizard-pf-substep-title">Settings</span>
@@ -93,13 +91,13 @@
               </li>
             </ul>
             <ul class="list-group hidden">
-              <li class="list-group-item">
+              <li class="list-group-item disabled">
                 <a href="#">
                   <span class="wizard-pf-substep-number">2A.</span>
                   <span class="wizard-pf-substep-title">Details</span>
                 </a>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item disabled">
                 <a href="#">
                   <span class="wizard-pf-substep-number">2B.</span>
                   <span class="wizard-pf-substep-title">Settings</span>
@@ -107,13 +105,13 @@
               </li>
             </ul>
             <ul class="list-group hidden">
-              <li class="list-group-item">
+              <li class="list-group-item disabled">
                 <a>
                   <span class="wizard-pf-substep-number">3A.</span>
                   <span class="wizard-pf-substep-title">Summary</span>
                 </a>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item disabled">
                 <a>
                   <span class="wizard-pf-substep-number">3B.</span>
                   <span class="wizard-pf-substep-title">Progress</span>
@@ -379,7 +377,7 @@
         });
       });
 
-      // assign active and hidden states to teh steps alt classes
+      // assign active and hidden states to the steps alt classes
       $(self.modal + " .wizard-pf-steps-alt-indicator").removeClass('active');
       $(self.modal + " .wizard-pf-steps-alt").addClass('hidden');
       $(self.modal + " .wizard-pf-steps-alt-indicator").on('click', function() {
@@ -511,11 +509,12 @@
       self.updateTabGroup();
       self.updateActiveTab();
       self.updateVisibleContents();
+      self.updateWizardFooterDisplay();
     };
 
     // when the user clicks a step, then the tab group for that step is displayed
     this.tabGroupSelect = function() {
-      $(self.modal + " .wizard-pf-step>a").click(function() {
+      $('body').on('click', self.modal + " .wizard-pf-step:not(.disabled) > a", function(e) {
         self.currentGroup = $(this).parent().data("tabgroup");
         // update value for currentTab -- if a tab is already marked as active
         // for the new tab group, use that, otherwise set it to the first tab
@@ -531,7 +530,7 @@
 
     // when the user clicks a tab, then the tab contents are displayed
     this.tabSelect = function() {
-      $(self.modal + " .wizard-pf-sidebar .list-group-item>a").click(function() {
+      $('body').on('click', self.modal + " .wizard-pf-sidebar .list-group-item:not(.disabled) > a", function(e) {
         // update value of currentTab to new active tab
         self.currentTab = $(this).parent().data("tab");
         self.updateToCurrentPage();
@@ -541,7 +540,8 @@
     this.altStepClick = function() {
       $(self.modal + " .wizard-pf-step-alt").each(function() {
         var $this = $(this);
-        $this.find('> a').on('click', function() {
+        $(this).find('> a').on('click', function(e) {
+          e.preventDefault();
           var subStepList = $this.find('> ul');
           if (subStepList && (subStepList.length > 0)) {
             $this.find('> ul').toggleClass('hidden');
@@ -553,14 +553,15 @@
     };
 
     this.altSubStepClick = function() {
-      $(self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep > a").on('click', function() {
+      $('body').on('click', self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep:not(.disabled) > a", function(e) {
+        e.preventDefault();
         // update value of currentTab to new active tab
         self.currentTab = $(this).parent().data("tab");
         self.currentGroup = $(this).parent().parent().parent().data("tabgroup");
-
         self.updateToCurrentPage();
       });
     };
+
     // Back button clicked
     this.backBtnClicked = function() {
       $('body').on('click', self.modal + " .wizard-pf-back", function() {
@@ -597,17 +598,29 @@
       });
     };
 
-    this.detailsNameChange = function() {
-      $(self.modal + " #detailsName").on('change keyup', function() {
-        var $nextBtn = $(self.modal + " .wizard-pf-next");
-        if ($(self.modal + " #detailsName").val()) {
-          $(self.modal + " .wizard-pf-step-alt-substep").removeClass('disabled');
+    this.validateRequired = function($el) {
+      var $nextBtn = $(self.modal + " .wizard-pf-next"),
+          $step = $(self.modal + " .wizard-pf-step"),
+          $stepAltSubStep = $(self.modal + " .wizard-pf-step-alt-substep"),
+          $sidebarItem = $(self.modal + " .wizard-pf-sidebar .list-group-item");
+
+        if ($el.val()) {
+          $stepAltSubStep.removeClass('disabled');
+          $step.removeClass('disabled');
+          $sidebarItem.removeClass('disabled');
           self.enableBtn($nextBtn);
         } else {
-          $(self.modal + " .wizard-pf-step-alt-substep").addClass('disabled');
-          $(self.modal + " .wizard-pf-step-alt-substep.active").removeClass('disabled');
+          $stepAltSubStep.not('.active').addClass('disabled');
+          $step.not('.active').addClass('disabled');
+          $sidebarItem.not('.active').addClass('disabled');
           self.disableBtn($nextBtn);
         }
+    }
+
+    this.detailsNameChange = function() {
+      var $el = $(self.modal + " #detailsName");
+      $el.on('change keyup load focus', function() {
+        self.validateRequired($el);
       });
     };
 

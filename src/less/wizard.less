@@ -57,16 +57,16 @@
         width: 14em;
 
         &:hover {
-          text-decoration: none;
           background-color: @color-pf-black-200;
-        }
-
-        &:focus {
-          //corrects odd behavior when hover and focus are combined.
           text-decoration: none;
 
-          span {
-            text-decoration: underline;
+          &:focus {
+            //corrects odd behavior when hover and focus are combined.
+            text-decoration: none;
+
+            span {
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -249,7 +249,7 @@
       text-decoration: none;
     }
 
-    &:not(.active) {
+    &:not(.active):not(.disabled) {
       a:hover {
         .wizard-pf-step-number {
           background-color: @color-pf-black-400;
@@ -554,7 +554,8 @@
     display:flex;
     flex:1;
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
 
       .wizard-pf-step-alt-title {
@@ -655,12 +656,14 @@
       font-weight:700;
     }
   }
+}
 
+.wizard-pf-step,
+.wizard-pf-step-alt-substep,
+.wizard-pf-sidebar .list-group-item {
   &.disabled {
-    cursor: not-allowed;
-
-    a {
-      pointer-events: none;
+    > a:hover {
+      cursor: not-allowed;
     }
   }
 }
