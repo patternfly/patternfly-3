@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.46.1",
+  "version": "0.0.0-semantically-released",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
@@ -44,9 +44,9 @@
       "optional": true
     },
     "c3": {
-      "version": "0.4.22",
+      "version": "0.4.23",
       "from": "c3@>=0.4.11 <0.5.0",
-      "resolved": "https://registry.npmjs.org/c3/-/c3-0.4.22.tgz",
+      "resolved": "https://registry.npmjs.org/c3/-/c3-0.4.23.tgz",
       "optional": true
     },
     "d3": {
