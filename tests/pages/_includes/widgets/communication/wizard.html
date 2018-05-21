@@ -598,6 +598,14 @@
       });
     };
 
+    // Disable click events
+    $('body').on('click', $('form').add(self.modal + " .wizard-pf-step > a",
+      self.modal + " .wizard-pf-step-alt > a",
+      self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep > a",
+      self.modal + " .wizard-pf-sidebar .list-group-item > a"), function(e) {
+        e.preventDefault();
+    });
+
     this.validateRequired = function($el) {
       var $nextBtn = $(self.modal + " .wizard-pf-next"),
           $step = $(self.modal + " .wizard-pf-step"),
@@ -633,7 +641,6 @@
       $(self.modal + " .wizard-pf-back").off("click");
       $(self.modal + " .wizard-pf-next").off("click");
       $(self.modal + " .wizard-pf-dismiss").off("click");
-
       $(self.modal + " #detailsName").off('change');
 
       // reset final step
@@ -648,6 +655,9 @@
       // reset buttons in final step
       $(self.modal + " .wizard-pf-close").addClass("hidden");
       $(self.modal + " .wizard-pf-cancel").removeClass("hidden");
+      $(self.modal + " .wizard-pf-next").removeClass("hidden").find(".wizard-pf-button-text").text("Next");
+      // reset input fields
+      $(self.modal + " .form-control").val("");
     };
 
     // Cancel/Close button clicked
