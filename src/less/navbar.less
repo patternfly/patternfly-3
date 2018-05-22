@@ -69,6 +69,7 @@
         &:focus {
           background-color: @navbar-pf-item-open-bg-color;
           color: @navbar-pf-active-color;
+          outline: 0;
         }
       }
     }
@@ -300,6 +301,9 @@
           outline: 0!important;
         }
         position: relative;
+        > .fa {
+          line-height: 0;
+        }
       }
     }
     @media (max-width: @grid-float-breakpoint-max) {

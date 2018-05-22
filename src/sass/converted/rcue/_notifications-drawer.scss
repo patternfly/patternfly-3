@@ -239,10 +239,11 @@
   .drawer-pf {
     height: unquote("calc(100vh - #{$drawer-pf-top-horizontal} - 20px)");
     top: $drawer-pf-top-horizontal;
+    border-top: 0;
     @media (max-width: $screen-xs-max) {
       width:100%;
       height: calc(unquote("100vh - #{$drawer-pf-top-horizontal} - 32px"));
-      top:calc(unquote("#{$drawer-pf-top-horizontal} + 8px"));
+      top:calc(unquote("#{$drawer-pf-top-horizontal} + 10px"));
     }
   }
   .drawer-pf-trigger-icon { cursor: pointer; }
