@@ -2414,7 +2414,6 @@ select.selectpicker {
   .navbar-pf .applauncher-pf .applauncher-pf-icon,
   .navbar-pf-alt .applauncher-pf .applauncher-pf-icon {
     padding: 0;
-    display: block;
   }
 }
 .navbar-pf .navbar-utility .applauncher-pf .applauncher-pf-title,
@@ -5598,6 +5597,7 @@ a.disabled {
 .navbar-pf .navbar-nav > .open > button:focus {
   background-color: rgba(255, 255, 255, 0.24);
   color: #fff;
+  outline: 0;
 }
 .navbar-pf .navbar-nav .badge {
   background-color: #0088ce;
@@ -5847,6 +5847,10 @@ a.disabled {
 .navbar-pf .navbar-utility li.dropdown > a:hover,
 .navbar-pf .navbar-utility li.dropdown > button:hover {
   outline: 0!important;
+}
+.navbar-pf .navbar-utility li.dropdown > a > .fa,
+.navbar-pf .navbar-utility li.dropdown > button > .fa {
+  line-height: 0;
 }
 @media (max-width: 767px) {
   .navbar-pf .navbar-utility > li + li {
@@ -6331,6 +6335,7 @@ a.disabled {
 .navbar-pf-vertical .nav .open > .nav-item-iconic:focus {
   background: rgba(255, 255, 255, 0.24);
   color: #fff;
+  outline: 0;
 }
 .navbar-pf-vertical .nav .open > .nav-item-iconic .caret,
 .navbar-pf-vertical .nav .open > .nav-item-iconic:hover .caret,
@@ -6749,14 +6754,15 @@ a.disabled {
 }
 /* Exclusive styles to work with Horizontal Navigation */
 .navbar-pf .drawer-pf {
-  height: calc(100vh - 26px - 20px);
-  top: 26px;
+  height: calc(100vh - 25px - 20px);
+  top: 25px;
+  border-top: 0;
 }
 @media (max-width: 767px) {
   .navbar-pf .drawer-pf {
     width: 100%;
-    height: calc(100vh - 26px - 32px);
-    top: calc(26px + 8px);
+    height: calc(100vh - 25px - 32px);
+    top: calc(25px + 10px);
   }
 }
 .navbar-pf .drawer-pf-trigger-icon {

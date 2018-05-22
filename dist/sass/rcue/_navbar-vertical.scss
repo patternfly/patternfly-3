@@ -102,6 +102,7 @@
       &:focus {
         background: $navbar-pf-item-open-bg-color;
         color: $navbar-pf-item-active-color;
+        outline: 0;
 
         .caret,
         .fa,
