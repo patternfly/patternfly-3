@@ -81,7 +81,7 @@ module.exports = function (grunt) {
             'dist/js/patternfly-functions.js'
           ]
         }
-      }
+      },
     },
     copy: {
       fonts: {
@@ -259,7 +259,12 @@ module.exports = function (grunt) {
       js: {
         files: [
           // copy js src file
-          {expand: true, cwd: 'src/js/', src: ['*.js'], dest: 'dist/js/'}
+          { expand: true, cwd: 'src/js/', src: ['*.js'], dest: 'dist/js/' }
+        ]
+      },
+      ts: {
+        files: [
+          { expand: true, cwd: 'src/js/', src: ['*.d.ts'], dest: 'dist/js/' }
         ]
       },
       lessBuild: {
@@ -770,6 +775,7 @@ module.exports = function (grunt) {
       'copy:less',
       'copy:sass',
       'copy:js',
+      'copy:ts',
       'sass:rcue',
       'less:rcue',
       'less:rcueAdditions',
