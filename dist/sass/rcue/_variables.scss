@@ -491,7 +491,11 @@ $panel-inner-border:                                                $color-pf-bl
 $popover-arrow-color:                                               $color-pf-white !default;
 $popover-arrow-outer-color:                                         $color-pf-black-400 !default;
 $popover-border-color:                                              $color-pf-black-400 !default;
+$popover-border-bottom-color:                                       $color-pf-black-150 !default;
+$popover-border-width:                                              10px !default;
+$popover-border-top-width:                                          0 !default;
 $popover-max-width:                                                 220px !default;
+$popover-position-top:                                              -20px !default;
 $popover-title-bg:                                                  $color-pf-black-150 !default;
 $pre-bg:                                                            $color-pf-black-100 !default;
 $progress-bg:                                                       $color-pf-black-200 !default;
