@@ -1,6 +1,9 @@
 (function (window) {
   'use strict';
 
+  // Ensure we are assigning these to the patternfly property of the window argument, and not the implicit global patternfly
+  var patternfly = window.patternfly;
+
   // Util: PatternFly C3 Chart Defaults
   patternfly.pfSetDonutChartTitle = function (selector, primary, secondary) {
     var donutChartRightTitle = window.d3.select(selector).select('text.c3-chart-arcs-title');
@@ -443,4 +446,4 @@
       getDefaultSingleAreaConfig: getDefaultSingleAreaConfig
     };
   };
-})(window);
+})(typeof window !== 'undefined' ? window : global);
