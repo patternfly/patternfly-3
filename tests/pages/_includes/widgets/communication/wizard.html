@@ -541,7 +541,6 @@
       $(self.modal + " .wizard-pf-step-alt").each(function() {
         var $this = $(this);
         $(this).find('> a').on('click', function(e) {
-          e.preventDefault();
           var subStepList = $this.find('> ul');
           if (subStepList && (subStepList.length > 0)) {
             $this.find('> ul').toggleClass('hidden');
@@ -554,7 +553,6 @@
 
     this.altSubStepClick = function() {
       $('body').on('click', self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep:not(.disabled) > a", function(e) {
-        e.preventDefault();
         // update value of currentTab to new active tab
         self.currentTab = $(this).parent().data("tab");
         self.currentGroup = $(this).parent().parent().parent().data("tabgroup");
@@ -593,13 +591,13 @@
     // Form submitted
     this.formSubmitted = function() {
       $('form').on('submit', function(e) {
-        e.preventDefault();
         $('button[type="submit"]:not(.disabled)').trigger('click');
       });
     };
 
     // Disable click events
-    $('body').on('click', $('form').add(self.modal + " .wizard-pf-step > a",
+    $('body').on('click', $('form',
+      self.modal + " .wizard-pf-step > a",
       self.modal + " .wizard-pf-step-alt > a",
       self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep > a",
       self.modal + " .wizard-pf-sidebar .list-group-item > a"), function(e) {
@@ -697,6 +695,11 @@
     this.finish = function() {
       self.disableBtn($(self.modal + " .wizard-pf-back")); // if Back remains enabled during this step, then the Close button needs to be removed when the user clicks Back
       self.disableBtn($(self.modal + " .wizard-pf-next"));
+      // disable progress link navigation
+      $(self.modal + " .wizard-pf-step").addClass('disabled');
+      $(self.modal + " .wizard-pf-step-alt").addClass('disabled');
+      $(self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep").addClass('disabled');
+      $(self.modal + " .wizard-pf-sidebar .list-group-item").addClass('disabled');
       // code for kicking off process goes here
       // the next code is just to simulate the expected experience, in that
       // when the process is complete, the success message etc. would display
