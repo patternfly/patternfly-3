@@ -69,11 +69,9 @@
             </ul>
           </li>
         </ul>
+        <ul class="nav navbar-nav navbar-primary">
         {% for node in site.weighted_pages %}
           {% if node.categories contains 'Layouts' and node.weight %}
-            {% if forloop.first %}
-              <ul class="nav navbar-nav navbar-primary">
-            {% endif %}
             {% if page.url == node.url %}
             <li class="active">
               <a href="{{ node.url| remove_first:'/' }}" class="active">{{ node.title }}</a>
@@ -83,10 +81,8 @@
               <a href="{{ node.url | remove_first:'/' }}">{{ node.title }}</a>
             </li>
             {% endif %}
-            {% if forloop.last %}
-              </ul>
-            {% endif %}
           {% endif %}
         {% endfor %}
+        </ul>
       </div>
     </nav>{% endstrip %}
