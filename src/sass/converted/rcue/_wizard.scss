@@ -639,18 +639,14 @@
     color: $color-pf-black-800;
   }
 
-  &:not(.disabled) {
-    &.active,
-    &:hover {
-      background-color: $color-pf-black-200;
-      border-color: $color-pf-blue-300;
-
-      a {
-        color:$color-pf-blue-300;
-      }
+  &.active,
+  &:not(.disabled):hover {
+    background-color: $color-pf-black-200;
+    border-color: $color-pf-blue-300;
+    a {
+      color:$color-pf-blue-300;
     }
   }
-
   &.active {
     a {
       font-weight:700;

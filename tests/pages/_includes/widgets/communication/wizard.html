@@ -68,7 +68,7 @@
               </a>
               <ul class="hidden">
                 <li class="wizard-pf-step-alt-substep disabled"><a href="#">3A. Summary</a></li>
-                <li class="wizard-pf-step-alt-substep disabled"><a href="#">3B. Progress</a></li>
+                <li class="wizard-pf-step-alt-substep disabled wizard-pf-progress-link"><a href="#">3B. Progress</a></li>
               </ul>
             </li>
           </ul>
@@ -111,7 +111,7 @@
                   <span class="wizard-pf-substep-title">Summary</span>
                 </a>
               </li>
-              <li class="list-group-item disabled">
+              <li class="list-group-item disabled wizard-pf-progress-link">
                 <a>
                   <span class="wizard-pf-substep-number">3B.</span>
                   <span class="wizard-pf-substep-title">Progress</span>
@@ -591,13 +591,13 @@
     // Form submitted
     this.formSubmitted = function() {
       $('form').on('submit', function(e) {
+        e.preventDefault();
         $('button[type="submit"]:not(.disabled)').trigger('click');
       });
     };
 
     // Disable click events
-    $('body').on('click', $('form',
-      self.modal + " .wizard-pf-step > a",
+    $('body').on('click', $(self.modal + " .wizard-pf-step > a",
       self.modal + " .wizard-pf-step-alt > a",
       self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep > a",
       self.modal + " .wizard-pf-sidebar .list-group-item > a"), function(e) {
@@ -607,8 +607,8 @@
     this.validateRequired = function($el) {
       var $nextBtn = $(self.modal + " .wizard-pf-next"),
           $step = $(self.modal + " .wizard-pf-step"),
-          $stepAltSubStep = $(self.modal + " .wizard-pf-step-alt-substep"),
-          $sidebarItem = $(self.modal + " .wizard-pf-sidebar .list-group-item");
+          $stepAltSubStep = $(self.modal + " .wizard-pf-step-alt-substep:not(.wizard-pf-progress-link)"),
+          $sidebarItem = $(self.modal + " .wizard-pf-sidebar .list-group-item:not(.wizard-pf-progress-link)");
 
         if ($el.val()) {
           $stepAltSubStep.removeClass('disabled');
