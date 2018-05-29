@@ -3580,6 +3580,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .contextselector-pf .bootstrap-select > .dropdown-toggle .filter-option {
   text-overflow: ellipsis;
+  position: relative;
 }
 .contextselector-pf .bootstrap-select .dropdown-menu li a span.text {
   display: block;
@@ -5849,7 +5850,9 @@ a.disabled {
   outline: 0!important;
 }
 .navbar-pf .navbar-utility li.dropdown > a > .fa,
-.navbar-pf .navbar-utility li.dropdown > button > .fa {
+.navbar-pf .navbar-utility li.dropdown > button > .fa,
+.navbar-pf .navbar-utility li.dropdown > a .pficon,
+.navbar-pf .navbar-utility li.dropdown > button .pficon {
   line-height: 0;
 }
 @media (max-width: 767px) {

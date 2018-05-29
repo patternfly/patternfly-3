@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.47.1",
+  "version": "0.0.0-semantically-released",
   "dependencies": {
     "@types/c3": {
       "version": "0.6.0",
@@ -27,21 +27,21 @@
       "optional": true
     },
     "@types/d3-brush": {
-      "version": "1.0.7",
+      "version": "1.0.8",
       "from": "@types/d3-brush@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-brush/-/d3-brush-1.0.7.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-brush/-/d3-brush-1.0.8.tgz",
       "optional": true
     },
     "@types/d3-chord": {
-      "version": "1.0.6",
+      "version": "1.0.7",
       "from": "@types/d3-chord@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-chord/-/d3-chord-1.0.6.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-chord/-/d3-chord-1.0.7.tgz",
       "optional": true
     },
     "@types/d3-collection": {
-      "version": "1.0.6",
+      "version": "1.0.7",
       "from": "@types/d3-collection@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-collection/-/d3-collection-1.0.6.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-collection/-/d3-collection-1.0.7.tgz",
       "optional": true
     },
     "@types/d3-color": {
@@ -56,15 +56,15 @@
       "optional": true
     },
     "@types/d3-drag": {
-      "version": "1.2.0",
+      "version": "1.2.1",
       "from": "@types/d3-drag@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-drag/-/d3-drag-1.2.0.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-drag/-/d3-drag-1.2.1.tgz",
       "optional": true
     },
     "@types/d3-dsv": {
-      "version": "1.0.31",
+      "version": "1.0.33",
       "from": "@types/d3-dsv@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-dsv/-/d3-dsv-1.0.31.tgz"
+      "resolved": "https://registry.npmjs.org/@types/d3-dsv/-/d3-dsv-1.0.33.tgz"
     },
     "@types/d3-ease": {
       "version": "1.0.7",
@@ -73,9 +73,9 @@
       "optional": true
     },
     "@types/d3-force": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "from": "@types/d3-force@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-force/-/d3-force-1.1.0.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-force/-/d3-force-1.1.1.tgz",
       "optional": true
     },
     "@types/d3-format": {
@@ -85,15 +85,15 @@
       "optional": true
     },
     "@types/d3-geo": {
-      "version": "1.10.2",
+      "version": "1.10.3",
       "from": "@types/d3-geo@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-geo/-/d3-geo-1.10.2.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-geo/-/d3-geo-1.10.3.tgz",
       "optional": true
     },
     "@types/d3-hierarchy": {
-      "version": "1.1.1",
+      "version": "1.1.2",
       "from": "@types/d3-hierarchy@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-hierarchy/-/d3-hierarchy-1.1.1.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-hierarchy/-/d3-hierarchy-1.1.2.tgz",
       "optional": true
     },
     "@types/d3-interpolate": {
@@ -102,9 +102,9 @@
       "resolved": "https://registry.npmjs.org/@types/d3-interpolate/-/d3-interpolate-1.1.6.tgz"
     },
     "@types/d3-path": {
-      "version": "1.0.6",
+      "version": "1.0.7",
       "from": "@types/d3-path@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-path/-/d3-path-1.0.6.tgz"
+      "resolved": "https://registry.npmjs.org/@types/d3-path/-/d3-path-1.0.7.tgz"
     },
     "@types/d3-polygon": {
       "version": "1.0.6",
@@ -119,15 +119,15 @@
       "optional": true
     },
     "@types/d3-queue": {
-      "version": "3.0.5",
+      "version": "3.0.6",
       "from": "@types/d3-queue@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-queue/-/d3-queue-3.0.5.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-queue/-/d3-queue-3.0.6.tgz",
       "optional": true
     },
     "@types/d3-random": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "from": "@types/d3-random@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-random/-/d3-random-1.1.0.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-random/-/d3-random-1.1.1.tgz",
       "optional": true
     },
     "@types/d3-request": {
@@ -137,26 +137,26 @@
       "optional": true
     },
     "@types/d3-scale": {
-      "version": "1.0.12",
+      "version": "1.0.13",
       "from": "@types/d3-scale@>=1.0.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/@types/d3-scale/-/d3-scale-1.0.12.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-scale/-/d3-scale-1.0.13.tgz",
       "optional": true
     },
     "@types/d3-selection": {
-      "version": "1.3.0",
+      "version": "1.3.1",
       "from": "@types/d3-selection@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-selection/-/d3-selection-1.3.0.tgz"
+      "resolved": "https://registry.npmjs.org/@types/d3-selection/-/d3-selection-1.3.1.tgz"
     },
     "@types/d3-shape": {
-      "version": "1.2.2",
+      "version": "1.2.3",
       "from": "@types/d3-shape@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-shape/-/d3-shape-1.2.2.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-shape/-/d3-shape-1.2.3.tgz",
       "optional": true
     },
     "@types/d3-time": {
-      "version": "1.0.7",
+      "version": "1.0.8",
       "from": "@types/d3-time@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-time/-/d3-time-1.0.7.tgz"
+      "resolved": "https://registry.npmjs.org/@types/d3-time/-/d3-time-1.0.8.tgz"
     },
     "@types/d3-time-format": {
       "version": "2.1.0",
@@ -183,9 +183,9 @@
       "optional": true
     },
     "@types/d3-zoom": {
-      "version": "1.7.0",
+      "version": "1.7.1",
       "from": "@types/d3-zoom@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-zoom/-/d3-zoom-1.7.0.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-zoom/-/d3-zoom-1.7.1.tgz",
       "optional": true
     },
     "@types/geojson": {
