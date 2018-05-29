@@ -632,14 +632,11 @@
 
     this.resetToInitialState = function() {
       // drop click event listeners
-      $(self.modal + " .wizard-pf-step>a").off("click");
-      $(self.modal + " .wizard-pf-sidebar .list-group-item>a").off("click");
       $(self.modal + " .wizard-pf-steps-alt-indicator").off('click');
       $(self.modal + " .wizard-pf-step-alt > a").off('click');
-      $(self.modal + " .wizard-pf-back").off("click");
-      $(self.modal + " .wizard-pf-next").off("click");
-      $(self.modal + " .wizard-pf-dismiss").off("click");
       $(self.modal + " #detailsName").off('change');
+      $("form").off("submit");
+      $("body").off("click");
 
       // reset final step
       $(self.modal + " .wizard-pf-process").removeClass("hidden");
