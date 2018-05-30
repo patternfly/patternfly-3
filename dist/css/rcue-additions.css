@@ -3422,6 +3422,276 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   font-size: 14px;
   margin-right: 5px;
 }
+.bullet-chart-pf {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.bullet-chart-pf.bullet-chart-pf-vertical {
+  height: 100%;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+.bullet-chart-pf-chart {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 100%;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-chart {
+  -ms-flex: initial;
+      flex: initial;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  height: 100%;
+  width: initial;
+}
+.bullet-chart-pf-title-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 10px 0 25px;
+  padding-right: 10px;
+  text-align: right;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-title-container {
+  margin-bottom: 0;
+  padding-right: 0;
+  text-align: center;
+}
+.bullet-chart-pf-title {
+  font-size: 14px;
+}
+.bullet-chart-pf-details {
+  color: #9c9c9c;
+  font-size: 12px;
+  line-height: 9px;
+}
+.bullet-chart-pf-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex: 5;
+      flex: 5;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-container {
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  -ms-flex: initial;
+      flex: initial;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-container.show-axis {
+  margin-left: -25px;
+}
+.bullet-chart-pf-data-container {
+  -ms-flex: 1;
+      flex: 1;
+  position: relative;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-data-container {
+  height: initial;
+}
+.bullet-chart-pf-vertical-data-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 5;
+      flex: 5;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.bullet-chart-pf-vertical-data-container .bullet-chart-pf-data-container {
+  -ms-flex: initial;
+      flex: initial;
+}
+.bullet-chart-pf-values-container {
+  height: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-values-container {
+  height: 100%;
+  margin: 0 20px;
+  width: 20px;
+}
+.bullet-chart-pf-value-bar {
+  height: 100%;
+  position: absolute;
+  transition: left 600ms ease;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-value-bar {
+  bottom: 0;
+  height: initial;
+  top: initial;
+  width: 100%;
+}
+.bullet-chart-pf-value-dot {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0;
+  height: 20px;
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+  position: absolute;
+  transition: left 600ms ease;
+  width: 20px;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-value-dot {
+  top: initial;
+  -ms-transform: translateY(50%);
+      transform: translateY(50%);
+}
+.bullet-chart-pf-threshold-indicator {
+  border: 0 solid #72767b;
+  border-left-width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 400;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-threshold-indicator {
+  border-left-width: 0;
+  border-top-width: 1px;
+  height: 1px;
+  left: 0;
+  top: initial;
+  width: 100%;
+}
+.bullet-chart-pf-threshold-indicator.error {
+  border-color: #cc0000;
+}
+.bullet-chart-pf-threshold-indicator.warning {
+  border-color: #ec7a08;
+}
+.bullet-chart-pf-range-bar {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-range-bar {
+  bottom: 0;
+  height: initial;
+  top: initial;
+  width: 100%;
+}
+.bullet-chart-pf-range-bar.range-1 {
+  background-color: #f5f5f5;
+}
+.bullet-chart-pf-range-bar.range-2 {
+  background-color: #ededed;
+}
+.bullet-chart-pf-range-bar.range-3 {
+  background-color: #dbdbdb;
+}
+.bullet-chart-pf-axis {
+  border-top: 1px solid #72767b;
+  height: 25px;
+  position: relative;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-axis {
+  height: initial;
+  width: 25px;
+  border-right: 1px solid #72767b;
+  border-top: 0;
+}
+.bullet-chart-pf-title-container .bullet-chart-pf-axis {
+  border-top: 0;
+}
+.bullet-chart-pf-axis-tic {
+  padding-top: 5px;
+  position: absolute;
+  text-align: center;
+  width: 30px;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-axis-tic {
+  padding-top: 0;
+  padding-right: 5px;
+  width: 100%;
+  text-align: right;
+  line-height: 21px;
+}
+.bullet-chart-pf-axis-tic:before {
+  border-left: 1px solid #72767b;
+  content: "";
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  top: -1px;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-axis-tic:before {
+  border-left: 0;
+  border-top: 1px solid #72767b;
+  height: initial;
+  left: initial;
+  right: -1px;
+  top: calc(50% - 1px);
+  width: 3px;
+}
+.bullet-chart-pf-overflow {
+  -ms-flex: 1;
+      flex: 1;
+}
+.bullet-chart-pf-legend {
+  margin-top: 7px;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-legend {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-left: 10px;
+  margin-top: 0;
+  text-align: left;
+}
+.bullet-chart-pf-legend-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.bullet-chart-pf-vertical .bullet-chart-pf-legend-item {
+  margin-right: 0;
+  margin-top: 10px;
+}
+.bullet-chart-pf-legend-item-box {
+  display: inline-block;
+  height: 13px;
+  margin-right: 3px;
+  width: 13px;
+}
+.bullet-chart-pf-legend-item-box.range-1 {
+  background-color: #f5f5f5;
+}
+.bullet-chart-pf-legend-item-box.range-2 {
+  background-color: #ededed;
+}
+.bullet-chart-pf-legend-item-box.range-3 {
+  background-color: #dbdbdb;
+}
+.bullet-chart-pf-legend-item-text {
+  display: inline-block;
+  line-height: 14px;
+  max-width: 150px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  top: 1px;
+  white-space: nowrap;
+  word-wrap: normal;
+}
 .c3 path {
   stroke: #d1d1d1;
 }
