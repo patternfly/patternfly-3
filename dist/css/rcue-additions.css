@@ -4866,10 +4866,11 @@ a.disabled {
   background-color: #edf8ff;
 }
 .list-pf-item.active {
-  background-color: #ededed;
+  background-color: #edf8ff;
   border-color: #bbb;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  box-shadow: 0 2px 6px rgba(3, 3, 3, 0.2);
 }
 .list-pf-expansion {
   background-color: #fff;
