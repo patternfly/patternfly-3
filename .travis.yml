@@ -36,7 +36,6 @@ after_success:
        npm run semantic-release-post;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -o;
-       sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -r;
      fi'
 
 branches:
