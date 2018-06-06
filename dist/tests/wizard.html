@@ -63,7 +63,7 @@
               </a>
             </li>
 
-            <li class="wizard-pf-step">
+            <li class="wizard-pf-step disabled">
               <a href="#">
                 <span class="wizard-pf-step-number">2</span>
                 <span class="wizard-pf-step-title">Second Step</span>
@@ -72,7 +72,7 @@
               </a>
             </li>
 
-            <li class="wizard-pf-step">
+            <li class="wizard-pf-step disabled">
               <a href="#">
                 <span class="wizard-pf-step-number">3</span>
                 <span class="wizard-pf-step-title">Review</span>
@@ -83,7 +83,7 @@
           </ul>
 
           <ul class="wizard-pf-steps-alt">
-            <li class="wizard-pf-step-alt viewed">
+            <li class="wizard-pf-step-alt active">
               <a href="#">
                 <span class="wizard-pf-step-alt-number">1</span>
                 <span class="wizard-pf-step-alt-title">First Step</span>
@@ -106,18 +106,16 @@
             </li>
 
             <li class="wizard-pf-step-alt">
-              <a  href="#">
+              <a href="#">
                 <span class="wizard-pf-step-alt-number">3</span>
                 <span class="wizard-pf-step-alt-title">Review</span>
               </a>
               <ul class="hidden">
                 <li class="wizard-pf-step-alt-substep disabled"><a href="#">3A. Summary</a></li>
-                <li class="wizard-pf-step-alt-substep disabled"><a href="#">3B. Progress</a></li>
+                <li class="wizard-pf-step-alt-substep disabled wizard-pf-progress-link"><a href="#">3B. Progress</a></li>
               </ul>
             </li>
-
           </ul>
-
         </div>
 
         <div class="wizard-pf-row">
@@ -129,7 +127,7 @@
                   <span class="wizard-pf-substep-title">Details</span>
                 </a>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item disabled">
                 <a href="#">
                   <span class="wizard-pf-substep-number">1B.</span>
                   <span class="wizard-pf-substep-title">Settings</span>
@@ -137,13 +135,13 @@
               </li>
             </ul>
             <ul class="list-group hidden">
-              <li class="list-group-item">
+              <li class="list-group-item disabled">
                 <a href="#">
                   <span class="wizard-pf-substep-number">2A.</span>
                   <span class="wizard-pf-substep-title">Details</span>
                 </a>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item disabled">
                 <a href="#">
                   <span class="wizard-pf-substep-number">2B.</span>
                   <span class="wizard-pf-substep-title">Settings</span>
@@ -151,13 +149,13 @@
               </li>
             </ul>
             <ul class="list-group hidden">
-              <li class="list-group-item">
+              <li class="list-group-item disabled">
                 <a>
                   <span class="wizard-pf-substep-number">3A.</span>
                   <span class="wizard-pf-substep-title">Summary</span>
                 </a>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item disabled wizard-pf-progress-link">
                 <a>
                   <span class="wizard-pf-substep-number">3B.</span>
                   <span class="wizard-pf-substep-title">Progress</span>
@@ -176,7 +174,7 @@
               <form class="form-horizontal">
                 <!-- replacing id with data-id to pass build errors -->
                 <div class="form-group required">
-                  <label class="col-sm-2 control-label" for="textInput-markup" required>Name</label>
+                  <label class="col-sm-2 control-label required-pf" for="textInput-markup" required>Name</label>
                   <div class="col-sm-10">
                     <input id="detailsName" type="text" data-id="textInput-markup" class="form-control">
                   </div>
@@ -345,21 +343,20 @@
       </div><!-- /.wizard-pf-body -->
 
       <div class="modal-footer wizard-pf-footer">
-        <button type="button" class="btn btn-default btn-cancel wizard-pf-cancel wizard-pf-dismiss">Cancel</button>
-        <button type="button" class="btn btn-default wizard-pf-back disabled">
+        <button type="submit" class="btn btn-primary wizard-pf-next disabled" disabled="disabled">
+          <span class="wizard-pf-button-text">
+            Next
+          </span>
+          <span class="i fa fa-angle-right"></span>
+        </button>
+        <button type="button" class="btn btn-default wizard-pf-back disabled" disabled="disabled">
           <span class="i fa fa-angle-left"></span>
-          Back
+          <span class="wizard-pf-button-text">
+            Back
+          </span>
         </button>
-        <button type="button" class="btn btn-primary wizard-pf-next disabled">
-          Next
-          <span class="i fa fa-angle-right"></span>
-        </button>
-        <button type="button" class="btn btn-primary hidden wizard-pf-finish">
-          Deploy
-          <span class="i fa fa-angle-right"></span>
-        </button>
+        <button type="button" class="btn btn-default btn-cancel wizard-pf-cancel wizard-pf-dismiss">Cancel</button>
         <button type="button" class="btn btn-primary hidden wizard-pf-close wizard-pf-dismiss">Close</button>
-
       </div><!-- /.wizard-pf-footer -->
 
     </div><!-- /.modal-content -->
@@ -424,7 +421,7 @@
         });
       });
 
-      // assign active and hidden states to teh steps alt classes
+      // assign active and hidden states to the steps alt classes
       $(self.modal + " .wizard-pf-steps-alt-indicator").removeClass('active');
       $(self.modal + " .wizard-pf-steps-alt").addClass('hidden');
       $(self.modal + " .wizard-pf-steps-alt-indicator").on('click', function() {
@@ -466,11 +463,13 @@
       self.altSubStepClick();
       self.backBtnClicked();
       self.nextBtnClicked();
-      self.finishBtnClick();
       self.cancelBtnClick();
 
       // Listen for required value change
       self.detailsNameChange();
+
+      // Handle form submit event
+      self.formSubmitted();
     };
 
     // update which tab group is active
@@ -479,9 +478,21 @@
       $(self.modal + " .wizard-pf-step[data-tabgroup='" + self.currentGroup + "']").addClass("active");
       $(self.modal + " .wizard-pf-sidebar .list-group").addClass("hidden");
       $(self.modal + " .list-group[data-tabgroup='" + self.currentGroup + "']").removeClass("hidden");
-      $(self.modal + " .wizard-pf-step-alt[data-tabgroup='" + self.currentGroup + "']").addClass("viewed");
+      $(self.modal + " .wizard-pf-step-alt")
+        .not("[data-tabgroup='" + self.currentGroup + "']").removeClass("active").end()
+        .filter("[data-tabgroup='" + self.currentGroup + "']").addClass("active");
       $(self.modal + " .wizard-pf-step-alt > ul").addClass("hidden");
       $(self.modal + " .wizard-pf-step-alt[data-tabgroup='" + self.currentGroup + "'] > ul").removeClass("hidden");
+    };
+
+    // enable a button
+    this.enableBtn = function($el) {
+      $el.removeClass("disabled").removeAttr("disabled");
+    };
+
+    // disable a button
+    this.disableBtn = function($el) {
+      $el.addClass("disabled").attr("disabled", "disabled");
     };
 
     // update which tab is active
@@ -514,19 +525,20 @@
 
     // update display state of Back button
     this.updateBackBtnDisplay = function() {
+      var $backBtn = $(self.modal + " .wizard-pf-back");
       if (self.currentTab == self.tabs[0]) {
-        $(self.modal + " .wizard-pf-back").addClass("disabled");
+        self.disableBtn($backBtn)
+      } else {
+        self.enableBtn($backBtn)
       }
     };
 
     // update display state of next/finish button
     this.updateNextBtnDisplay = function() {
       if (self.currentTab == self.tabSummary) {
-        $(self.modal + " .wizard-pf-next").addClass("hidden");
-        $(self.modal + " .wizard-pf-finish").removeClass("hidden");
+        $(self.modal + " .wizard-pf-next").focus().find(".wizard-pf-button-text").text("Deploy");
       } else {
-        $(self.modal + " .wizard-pf-finish").addClass("hidden");
-        $(self.modal + " .wizard-pf-next").removeClass("hidden");
+        $(self.modal + " .wizard-pf-next .wizard-pf-button-text").text("Next");
       }
     };
 
@@ -540,22 +552,13 @@
     this.updateToCurrentPage = function() {
       self.updateTabGroup();
       self.updateActiveTab();
-
       self.updateVisibleContents();
-
-      if (self.currentTab === self.tabLast) {
-        $(self.modal + " .wizard-pf-next").addClass("hidden");
-        $(self.modal + " .wizard-pf-finish").removeClass("hidden");
-        self.finish();
-      } else {
-        // show/hide/disable/enable buttons if needed
-        self.updateWizardFooterDisplay();
-      }
+      self.updateWizardFooterDisplay();
     };
 
     // when the user clicks a step, then the tab group for that step is displayed
     this.tabGroupSelect = function() {
-      $(self.modal + " .wizard-pf-step>a").click(function() {
+      $('body').on('click', self.modal + " .wizard-pf-step:not(.disabled) > a", function(e) {
         self.currentGroup = $(this).parent().data("tabgroup");
         // update value for currentTab -- if a tab is already marked as active
         // for the new tab group, use that, otherwise set it to the first tab
@@ -571,7 +574,7 @@
 
     // when the user clicks a tab, then the tab contents are displayed
     this.tabSelect = function() {
-      $(self.modal + " .wizard-pf-sidebar .list-group-item>a").click(function() {
+      $('body').on('click', self.modal + " .wizard-pf-sidebar .list-group-item:not(.disabled) > a", function(e) {
         // update value of currentTab to new active tab
         self.currentTab = $(this).parent().data("tab");
         self.updateToCurrentPage();
@@ -581,7 +584,7 @@
     this.altStepClick = function() {
       $(self.modal + " .wizard-pf-step-alt").each(function() {
         var $this = $(this);
-        $this.find('> a').on('click', function() {
+        $(this).find('> a').on('click', function(e) {
           var subStepList = $this.find('> ul');
           if (subStepList && (subStepList.length > 0)) {
             $this.find('> ul').toggleClass('hidden');
@@ -593,17 +596,17 @@
     };
 
     this.altSubStepClick = function() {
-      $(self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep > a").on('click', function() {
+      $('body').on('click', self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep:not(.disabled) > a", function(e) {
         // update value of currentTab to new active tab
         self.currentTab = $(this).parent().data("tab");
         self.currentGroup = $(this).parent().parent().parent().data("tabgroup");
-
         self.updateToCurrentPage();
       });
     };
+
     // Back button clicked
     this.backBtnClicked = function() {
-      $(self.modal + " .wizard-pf-back").click(function() {
+      $('body').on('click', self.modal + " .wizard-pf-back", function() {
         // if not the first page
         if (self.currentTab != self.tabs[0]) {
           // go back a page (i.e. -1)
@@ -616,48 +619,68 @@
 
     // Next button clicked
     this.nextBtnClicked = function() {
-      $(self.modal + " .wizard-pf-next").click(function() {
-        // go forward a page (i.e. +1)
-        self.wizardPaging(1);
-        // show/hide/disable/enable buttons if needed
-        self.updateWizardFooterDisplay();
+      $('body').on('click', self.modal + " .wizard-pf-next", function() {
+        if (self.currentTab == self.tabSummary) {
+          self.wizardPaging(1);
+          self.finish();
+        } else {
+          // go forward a page (i.e. +1)
+          self.wizardPaging(1);
+          // show/hide/disable/enable buttons if needed
+          self.updateWizardFooterDisplay();
+        }
       });
     };
 
-    // Finish button clicked
-    // Deploy/Finish button would only display during the second to last step.
-    this.finishBtnClick = function() {
-      $(self.modal + " .wizard-pf-finish").click(function() {
-        self.wizardPaging(1);
-        self.finish();
+    // Form submitted
+    this.formSubmitted = function() {
+      $('form').on('submit', function(e) {
+        e.preventDefault();
+        $('button[type="submit"]:not(.disabled)').trigger('click');
       });
     };
+
+    // Disable click events
+    $('body').on('click', $(self.modal + " .wizard-pf-step > a",
+      self.modal + " .wizard-pf-step-alt > a",
+      self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep > a",
+      self.modal + " .wizard-pf-sidebar .list-group-item > a"), function(e) {
+        e.preventDefault();
+    });
+
+    this.validateRequired = function($el) {
+      var $nextBtn = $(self.modal + " .wizard-pf-next"),
+          $step = $(self.modal + " .wizard-pf-step"),
+          $stepAltSubStep = $(self.modal + " .wizard-pf-step-alt-substep:not(.wizard-pf-progress-link)"),
+          $sidebarItem = $(self.modal + " .wizard-pf-sidebar .list-group-item:not(.wizard-pf-progress-link)");
+
+        if ($el.val()) {
+          $stepAltSubStep.removeClass('disabled');
+          $step.removeClass('disabled');
+          $sidebarItem.removeClass('disabled');
+          self.enableBtn($nextBtn);
+        } else {
+          $stepAltSubStep.not('.active').addClass('disabled');
+          $step.not('.active').addClass('disabled');
+          $sidebarItem.not('.active').addClass('disabled');
+          self.disableBtn($nextBtn);
+        }
+    }
 
     this.detailsNameChange = function() {
-      $(self.modal + " #detailsName").on('change', function() {
-        if ($(self.modal + " #detailsName").val()) {
-          $(self.modal + " .wizard-pf-step-alt-substep").removeClass('disabled');
-          $(self.modal + " .wizard-pf-next").removeClass("disabled");
-        } else {
-          $(self.modal + " .wizard-pf-step-alt-substep").addClass('disabled');
-          $(self.modal + " .wizard-pf-step-alt-substep.active").removeClass('disabled');
-          $(self.modal + " .wizard-pf-next").addClass("disabled");
-        }
+      var $el = $(self.modal + " #detailsName");
+      $el.on('change keyup load focus', function() {
+        self.validateRequired($el);
       });
     };
 
     this.resetToInitialState = function() {
       // drop click event listeners
-      $(self.modal + " .wizard-pf-step>a").off("click");
-      $(self.modal + " .wizard-pf-sidebar .list-group-item>a").off("click");
       $(self.modal + " .wizard-pf-steps-alt-indicator").off('click');
       $(self.modal + " .wizard-pf-step-alt > a").off('click');
-      $(self.modal + " .wizard-pf-back").off("click");
-      $(self.modal + " .wizard-pf-next").off("click");
-      $(self.modal + " .wizard-pf-finish").off("click");
-      $(self.modal + " .wizard-pf-dismiss").off("click");
-
       $(self.modal + " #detailsName").off('change');
+      $("form").off("submit");
+      $("body").off("click");
 
       // reset final step
       $(self.modal + " .wizard-pf-process").removeClass("hidden");
@@ -671,6 +694,9 @@
       // reset buttons in final step
       $(self.modal + " .wizard-pf-close").addClass("hidden");
       $(self.modal + " .wizard-pf-cancel").removeClass("hidden");
+      $(self.modal + " .wizard-pf-next").removeClass("hidden").find(".wizard-pf-button-text").text("Next");
+      // reset input fields
+      $(self.modal + " .form-control").val("");
     };
 
     // Cancel/Close button clicked
@@ -708,20 +734,24 @@
     // contents display in that div (i.e. replaces process message with
     // success message).
     this.finish = function() {
-      $(self.modal + " .wizard-pf-back").addClass("disabled"); // if Back remains enabled during this step, then the Close button needs to be removed when the user clicks Back
-      $(self.modal + " .wizard-pf-finish").addClass("disabled");
+      self.disableBtn($(self.modal + " .wizard-pf-back")); // if Back remains enabled during this step, then the Close button needs to be removed when the user clicks Back
+      self.disableBtn($(self.modal + " .wizard-pf-next"));
+      // disable progress link navigation
+      $(self.modal + " .wizard-pf-step").addClass('disabled');
+      $(self.modal + " .wizard-pf-step-alt").addClass('disabled');
+      $(self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep").addClass('disabled');
+      $(self.modal + " .wizard-pf-sidebar .list-group-item").addClass('disabled');
       // code for kicking off process goes here
       // the next code is just to simulate the expected experience, in that
       // when the process is complete, the success message etc. would display
       setTimeout (function() {
         $(self.modal + " .wizard-pf-cancel").addClass("hidden");
-        $(self.modal + " .wizard-pf-finish").addClass("hidden");
+        $(self.modal + " .wizard-pf-next").addClass("hidden");
         $(self.modal + " .wizard-pf-close").removeClass("hidden");
         $(self.modal + " .wizard-pf-process").addClass("hidden");
         $(self.modal + " .wizard-pf-complete").removeClass("hidden");
       }, 3000);
     };
-
   };
 
 </script>

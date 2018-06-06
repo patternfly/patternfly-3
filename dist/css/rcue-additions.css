@@ -8843,13 +8843,13 @@ table.dataTable th:active {
     width: 14em;
   }
   .wizard-pf-sidebar .list-group-item > a:hover {
-    text-decoration: none;
     background-color: #ededed;
-  }
-  .wizard-pf-sidebar .list-group-item > a:focus {
     text-decoration: none;
   }
-  .wizard-pf-sidebar .list-group-item > a:focus span {
+  .wizard-pf-sidebar .list-group-item > a:hover:focus {
+    text-decoration: none;
+  }
+  .wizard-pf-sidebar .list-group-item > a:hover:focus span {
     text-decoration: underline;
   }
   .wizard-pf-sidebar .list-group-item.active {
@@ -8916,7 +8916,6 @@ table.dataTable th:active {
   list-style: none;
   margin-bottom: 0;
   padding: 15px 0;
-  /* draw the step number in the circle */
 }
 @media (min-width: 768px) {
   .wizard-pf-steps-indicator {
@@ -8927,7 +8926,7 @@ table.dataTable th:active {
         justify-content: space-around;
   }
 }
-.wizard-pf-steps-indicator li {
+.wizard-pf-steps-indicator .wizard-pf-step {
   counter-increment: section;
   float: left;
   /* float for IE9 since it doesn't support flex. If items wrap, they overlap */
@@ -8942,15 +8941,15 @@ table.dataTable th:active {
   text-align: center;
   /* draw the line between the circles */
 }
-.wizard-pf-steps-indicator li:not(.active) {
+.wizard-pf-steps-indicator .wizard-pf-step:not(.active) {
   display: none;
 }
 @media (min-width: 768px) {
-  .wizard-pf-steps-indicator li:not(.active) {
+  .wizard-pf-steps-indicator .wizard-pf-step:not(.active) {
     display: block;
   }
 }
-.wizard-pf-steps-indicator li a {
+.wizard-pf-steps-indicator .wizard-pf-step a {
   -ms-flex-align: center;
       align-items: center;
   display: -ms-flexbox;
@@ -8960,41 +8959,41 @@ table.dataTable th:active {
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .wizard-pf-steps-indicator li a {
+  .wizard-pf-steps-indicator .wizard-pf-step a {
     font-weight: normal;
     -ms-flex-pack: center;
         justify-content: center;
   }
 }
-.wizard-pf-steps-indicator li a .wizard-pf-step-title {
+.wizard-pf-steps-indicator .wizard-pf-step a .wizard-pf-step-title {
   margin-left: 10px;
 }
 @media (min-width: 768px) {
-  .wizard-pf-steps-indicator li a .wizard-pf-step-title {
+  .wizard-pf-steps-indicator .wizard-pf-step a .wizard-pf-step-title {
     margin-left: 0;
   }
 }
-.wizard-pf-steps-indicator li a .wizard-pf-step-title-substep {
+.wizard-pf-steps-indicator .wizard-pf-step a .wizard-pf-step-title-substep {
   font-weight: normal;
   margin-left: 10px;
   text-transform: capitalize;
 }
-.wizard-pf-steps-indicator li a .wizard-pf-step-title-substep:before {
+.wizard-pf-steps-indicator .wizard-pf-step a .wizard-pf-step-title-substep:before {
   content: "\00BB";
   font-size: 20px;
   margin-right: 10px;
 }
-.wizard-pf-steps-indicator li a .wizard-pf-step-title-substep:not(.active) {
+.wizard-pf-steps-indicator .wizard-pf-step a .wizard-pf-step-title-substep:not(.active) {
   display: none;
 }
 @media (min-width: 768px) {
-  .wizard-pf-steps-indicator li {
+  .wizard-pf-steps-indicator .wizard-pf-step {
     /* don't draw the line between the circles on the ends */
   }
-  .wizard-pf-steps-indicator li .wizard-pf-step-title-substep {
+  .wizard-pf-steps-indicator .wizard-pf-step .wizard-pf-step-title-substep {
     display: none;
   }
-  .wizard-pf-steps-indicator li:before {
+  .wizard-pf-steps-indicator .wizard-pf-step:before {
     background-color: #bbb;
     content: "";
     height: 2px;
@@ -9003,19 +9002,19 @@ table.dataTable th:active {
     right: 0;
     top: 40px;
   }
-  .wizard-pf-steps-indicator li:first-child:before {
+  .wizard-pf-steps-indicator .wizard-pf-step:first-child:before {
     left: 50%;
     right: 0;
   }
-  .wizard-pf-steps-indicator li:last-child:before {
+  .wizard-pf-steps-indicator .wizard-pf-step:last-child:before {
     left: 0;
     right: 50%;
   }
-  .wizard-pf-steps-indicator li:only-of-type:before {
+  .wizard-pf-steps-indicator .wizard-pf-step:only-of-type:before {
     background-color: transparent;
   }
 }
-.wizard-pf-steps-indicator li a {
+.wizard-pf-steps-indicator .wizard-pf-step a {
   color: #030303;
   cursor: pointer;
   font-size: 16px;
@@ -9023,39 +9022,39 @@ table.dataTable th:active {
   margin-right: 1em;
   text-decoration: none;
 }
-.wizard-pf-steps-indicator li a:hover .wizard-pf-step-number {
+.wizard-pf-steps-indicator .wizard-pf-step:not(.active):not(.disabled) a:hover .wizard-pf-step-number {
   background-color: #bbb;
   border-color: #bbb;
   color: #fff;
 }
-.wizard-pf-steps-indicator .wizard-pf-step-number {
+.wizard-pf-steps-indicator .wizard-pf-step .wizard-pf-step-number {
   background-color: #fff;
   border-radius: 50%;
-  border: solid 2px #bbb;
+  border: solid 2px #39a5dc;
   color: #bbb;
   font-size: 12px;
   font-weight: 700;
   height: 25px;
   line-height: 22px;
   width: 25px;
+  display: inline-block;
 }
 @media (min-width: 768px) {
-  .wizard-pf-steps-indicator .wizard-pf-step-number {
+  .wizard-pf-steps-indicator .wizard-pf-step .wizard-pf-step-number {
     left: calc(50% - 13px);
     position: absolute;
     top: 27px;
   }
 }
-.wizard-pf-steps-indicator .active .wizard-pf-step-number {
+.wizard-pf-steps-indicator .wizard-pf-step.active .wizard-pf-step-number {
   background-color: #39a5dc;
   border-color: #39a5dc;
   cursor: default;
   color: #fff;
 }
-.wizard-pf-steps-indicator .viewed-pf .wizard-pf-step-number {
-  color: #030303;
-  background-color: #fff;
-  border-color: #39a5dc;
+.wizard-pf-steps-indicator .wizard-pf-step.active ~ .wizard-pf-step .wizard-pf-step-number {
+  border-color: #bbb;
+  background: #fff;
 }
 /* styles the main content portion of the wizard */
 .wizard-pf-main {
@@ -9191,9 +9190,20 @@ table.dataTable th:active {
   border-top: 1px solid #d1d1d1;
   margin-top: 0;
   padding-bottom: 17px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
-.wizard-pf-footer .btn-cancel {
+.wizard-pf-footer .wizard-pf-cancel {
   margin-right: 25px;
+  -ms-flex-order: -1;
+      order: -1;
+}
+.wizard-pf-footer .wizard-pf-next {
+  -ms-flex-order: 1;
+      order: 1;
+  margin-left: 8px;
 }
 @media (min-width: 768px) {
   .wizard-pf-row {
@@ -9220,9 +9230,7 @@ table.dataTable th:active {
   padding: 0;
 }
 .wizard-pf-steps-alt {
-  margin-left: 15px;
-  margin-top: 15px;
-  background-image: linear-gradient(to right, transparent 11px, #d1d1d1 11px, #d1d1d1 13px, transparent 13px);
+  margin: 15px 0 15px 15px;
 }
 @media (min-width: 768px) {
   .wizard-pf-steps-alt {
@@ -9254,7 +9262,11 @@ table.dataTable th:active {
   content: "\f106";
 }
 .wizard-pf-step-alt {
-  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+.wizard-pf-step-alt:not(:last-child) {
+  padding-bottom: 10px;
 }
 .wizard-pf-step-alt a {
   display: -ms-flexbox;
@@ -9262,24 +9274,39 @@ table.dataTable th:active {
   -ms-flex: 1;
       flex: 1;
 }
-.wizard-pf-step-alt a:hover {
+.wizard-pf-step-alt a:hover,
+.wizard-pf-step-alt a:focus {
   text-decoration: none;
 }
-.wizard-pf-step-alt a:hover .wizard-pf-step-alt-title {
+.wizard-pf-step-alt a:hover .wizard-pf-step-alt-title,
+.wizard-pf-step-alt a:focus .wizard-pf-step-alt-title {
   color: #39a5dc;
 }
 .wizard-pf-step-alt ul {
   margin-left: 11px;
 }
+.wizard-pf-step-alt .wizard-pf-step-alt-number {
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  text-align: center;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+  border: 2px solid #39a5dc;
+  background-color: #fff;
+}
 .wizard-pf-step-alt .wizard-pf-step-alt-title {
+  color: #030303;
+  font-weight: 700;
+  text-transform: capitalize;
+  display: inline-block;
   margin-left: 5px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-.wizard-pf-step-alt .wizard-pf-step-alt-number {
-  -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
 }
 .wizard-pf-step-alt.active .wizard-pf-step-alt-number {
   background-color: #39a5dc;
@@ -9290,57 +9317,48 @@ table.dataTable th:active {
 .wizard-pf-step-alt.active .wizard-pf-step-alt-title {
   color: #39a5dc;
 }
-.wizard-pf-step-alt.active .wizard-pf-step-alt-substep:first-of-type {
-  margin-top: 2px;
-}
-.wizard-pf-step-alt.viewed .wizard-pf-step-alt-number {
-  color: #030303;
-  background-color: #fff;
-  border-color: #39a5dc;
-}
-.wizard-pf-step-alt-number {
-  background-color: #fff;
-  border-radius: 50%;
-  border: solid 2px #bbb;
+.wizard-pf-step-alt.active ~ .wizard-pf-step-alt .wizard-pf-step-alt-number {
   color: #bbb;
-  font-size: 12px;
-  font-weight: 700;
-  height: 24px;
-  width: 24px;
-  display: inline-block;
-  text-align: center;
+  border-color: #bbb;
 }
-.wizard-pf-step-alt-title {
-  color: #030303;
-  font-weight: 700;
-  text-transform: capitalize;
-  display: inline-block;
+.wizard-pf-step-alt:not(.active) a:hover .wizard-pf-step-alt-number {
+  border-color: #bbb;
+  background: #bbb;
+  color: #fff;
+}
+.wizard-pf-step-alt:before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  height: 100%;
+  border-left: 2px solid #bbb;
+  z-index: -1;
 }
 .wizard-pf-step-alt-substep {
   display: -ms-flexbox;
   display: flex;
+  border-left: 2px solid transparent;
 }
 .wizard-pf-step-alt-substep a {
   padding: 5px 0 5px 18px;
   color: #393f44;
 }
-.wizard-pf-step-alt-substep:not(.disabled).active,
+.wizard-pf-step-alt-substep.active,
 .wizard-pf-step-alt-substep:not(.disabled):hover {
   background-color: #ededed;
-  background-image: linear-gradient(to right, #39a5dc 2px, transparent 2px);
+  border-color: #39a5dc;
 }
-.wizard-pf-step-alt-substep:not(.disabled).active a,
+.wizard-pf-step-alt-substep.active a,
 .wizard-pf-step-alt-substep:not(.disabled):hover a {
   color: #39a5dc;
 }
 .wizard-pf-step-alt-substep.active a {
   font-weight: 700;
 }
-.wizard-pf-step-alt-substep.disabled {
+.wizard-pf-step.disabled > a:hover,
+.wizard-pf-step-alt-substep.disabled > a:hover,
+.wizard-pf-sidebar .list-group-item.disabled > a:hover {
   cursor: not-allowed;
-}
-.wizard-pf-step-alt-substep.disabled a {
-  pointer-events: none;
 }
 /* RCUE-specific */
 .about-modal-pf {
