@@ -136,8 +136,12 @@
     }
   },
   "files": [
-    "dist/",
-    "tests/",
+    "dist/css/",
+    "dist/fonts/",
+    "dist/img/",
+    "dist/js/",
+    "dist/less/",
+    "dist/sass/",
     "npm-shrinkwrap.json"
   ]
 }
