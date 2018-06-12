@@ -36,3 +36,75 @@
     }
   }
 }
+
+// Message Dialog Component - built on top of PatternFly Modal
+.message-dialog-pf {
+  // message-dialog header
+  .modal-header {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-right: 18px;
+    padding-top: 0;
+    &:after,
+    &:before {
+      content: none;
+    }
+  }
+
+  // message-dialog title
+  .modal-title {
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  // message-dialog close button
+  .close {
+    color: #616161;
+    &:hover {
+      color: #363636;
+    }
+  }
+
+  // message-dialog body
+  .modal-body.message-dialog-pf-body {
+    display: flex;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 20px;
+  }
+
+  // message-dialog primary text
+  .message-dialog-pf-text-primary {
+    font-size: 16px;
+  }
+
+  // Spacing between primary and secondary text
+  .message-dialog-pf-text-primary + .message-dialog-pf-text-secondary {
+    margin-top: 20px;
+  }
+
+  // message-dialog footer
+  .modal-footer {
+    margin-top: 0;
+    padding-right: 15px;
+    padding-top: 20px;
+  }
+
+  // message-dialog icon
+  .message-dialog-pf-icon {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    margin-right: 15px;
+  }
+
+  // Color override for info icon
+  .pficon-info {
+    color: $color-pf-black-500;
+  }
+}
