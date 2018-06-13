@@ -28,9 +28,17 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="autofocusQuestion">No</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function() {
+  $('#{{include.messageDialogId}}').on('shown.bs.modal', function() {
+    $('#autofocusQuestion').focus();
+  });
+});
+</script>

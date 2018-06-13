@@ -28,9 +28,17 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="autofocusDelete">Cancel</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function() {
+  $('#{{include.messageDialogId}}').on('shown.bs.modal', function() {
+    $('#autofocusDelete').focus();
+  });
+});
+</script>
