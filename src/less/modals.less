@@ -41,14 +41,9 @@
 .message-dialog-pf {
   // message-dialog header
   .modal-header {
-    align-items: center;
     display: flex;
-    height: 40px;
     justify-content: space-between;
-    padding-bottom: 0;
     padding-left: 20px;
-    padding-right: 18px;
-    padding-top: 0;
     &:after,
     &:before {
       content: none;
@@ -59,6 +54,7 @@
   .modal-title {
     display: inline-block;
     font-weight: bold;
+    line-height: 20px;
   }
 
   // message-dialog close button
@@ -97,9 +93,8 @@
 
   // message-dialog icon
   .message-dialog-pf-icon {
-    display: flex;
-    flex-direction: column;
     font-size: 30px;
+    line-height: 0;
     margin-right: 15px;
   }
 
