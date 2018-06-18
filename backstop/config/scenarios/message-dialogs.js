@@ -53,12 +53,5 @@ module.exports = [
     removeSelectors: ['.page-header + .alert'],
     clickSelector: '[data-target="#message-dialog-7"]',
     selectors: ['body']
-  },
-  {
-    label: 'message-dialog-minimum-height',
-    url: 'dist/tests/message-dialogs.html',
-    removeSelectors: ['.page-header + .alert'],
-    clickSelector: '[data-target="#message-dialog-8"]',
-    selectors: ['body']
   }
 ];
