@@ -1228,16 +1228,19 @@
 (function ($) {
   'use strict';
 
-  $.fn.setupVerticalNavigation = function (handleItemSelections, ignoreDrawer) {
+  $.fn.setupVerticalNavigation = function (handleItemSelections, ignoreDrawer, userOptions) {
 
-    var navElement = $('.nav-pf-vertical'),
+    var options = $.extend({
+        hoverDelay: 500,
+        hideDelay: 700,
+      }, userOptions || {}),
+
+      navElement = $('.nav-pf-vertical'),
       bodyContentElement = $('.container-pf-nav-pf-vertical'),
       toggleNavBarButton = $('.navbar-toggle'),
       handleResize = true,
       explicitCollapse = false,
       subDesktop = false,
-      hoverDelay = 500,
-      hideDelay = hoverDelay + 200,
 
       inMobileState = function () {
         return bodyContentElement.hasClass('hidden-nav');
@@ -1672,7 +1675,7 @@
                 navElement.addClass('hover-secondary-nav-pf');
                 $this.addClass('is-hover');
                 $this[0].navHoverTimeout = undefined;
-              }, hoverDelay);
+              }, options.hoverDelay);
             }
           }
         });
@@ -1690,7 +1693,7 @@
               }
               $this.removeClass('is-hover');
               $this[0].navUnHoverTimeout = undefined;
-            }, hideDelay);
+            }, options.hideDelay);
           }
         });
 
@@ -1706,7 +1709,7 @@
                 navElement.addClass('hover-tertiary-nav-pf');
                 $this.addClass('is-hover');
                 $this[0].navHoverTimeout = undefined;
-              }, hoverDelay);
+              }, options.hoverDelay);
             }
           }
         });
@@ -1722,7 +1725,7 @@
               }
               $this.removeClass('is-hover');
               $this[0].navUnHoverTimeout = undefined;
-            }, hideDelay);
+            }, options.hideDelay);
           }
         });
       },
