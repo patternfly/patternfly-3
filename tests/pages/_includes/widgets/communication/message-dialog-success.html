@@ -1,6 +1,6 @@
 <button class="btn btn-default" data-toggle="modal" data-target="#{{ include.messageDialogId }}">Success Dialog</button>
 <div class="modal fade" id="{{ include.messageDialogId }}" tabindex="-1" role="dialog" aria-labelledby="mySuccessDialogLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog message-dialog-pf message-dialog-pf-icon">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -8,8 +8,8 @@
         </button>
         <h4 class="modal-title" id="mySuccessDialogLabel">Modal Title Here</h4>
       </div>
-      <div class="modal-body message-dialog-pf-body">
-        <span aria-hidden="true" class="pficon pficon-ok message-dialog-pf-icon"></span>
+      <div class="modal-body">
+        <span aria-hidden="true" class="pficon pficon-ok"></span>
         <div>
           <p class="lead">
             Main dialog text
