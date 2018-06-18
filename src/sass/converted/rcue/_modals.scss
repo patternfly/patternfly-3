@@ -37,14 +37,14 @@
   }
 }
 
-// message-dialog body layout
-.message-dialog-pf .modal-body {
-  display: flex;
-}
+// message-dialog pattern
+.message-dialog-pf {
+  .modal-body {
+    display: flex;
+  }
 
-// message-dialog icon
-.message-dialog-pf-icon .modal-body .pficon,
-.message-diaog-pf-icon .modal-body .fa {
-  font-size: 30px;
-  margin-right: 15px;
+  &-icon {
+    font-size: 30px;
+    margin-right: 15px;
+  }
 }

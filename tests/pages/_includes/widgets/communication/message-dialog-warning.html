@@ -1,6 +1,6 @@
 <button class="btn btn-default" data-toggle="modal" data-target="#{{ include.messageDialogId }}">Warning Dialog</button>
 <div class="modal fade" id="{{ include.messageDialogId }}" tabindex="-1" role="dialog" aria-labelledby="myWarningDialogLabel" aria-hidden="true">
-  <div class="modal-dialog message-dialog-pf message-dialog-pf-icon">
+  <div class="modal-dialog message-dialog-pf">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -9,7 +9,7 @@
         <h4 class="modal-title" id="myWarningDialogLabel">Modal Title Here</h4>
       </div>
       <div class="modal-body">
-        <span aria-hidden="true" class="pficon pficon-warning-triangle-o"></span>
+        <span aria-hidden="true" class="pficon pficon-warning-triangle-o message-dialog-pf-icon"></span>
         <div>
           <p class="lead">
             Main dialog text
