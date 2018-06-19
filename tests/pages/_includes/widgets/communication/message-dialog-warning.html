@@ -1,0 +1,42 @@
+<button class="btn btn-default" data-toggle="modal" data-target="#{{ include.messageDialogId }}">Warning Dialog</button>
+<div class="modal fade" id="{{ include.messageDialogId }}" tabindex="-1" role="dialog" aria-labelledby="myWarningDialogLabel" aria-hidden="true">
+  <div class="modal-dialog message-dialog-pf">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title" id="myWarningDialogLabel">Modal Title Here</h4>
+      </div>
+      <div class="modal-body">
+        <span aria-hidden="true" class="pficon pficon-warning-triangle-o"></span>
+        <div>
+          <p class="lead">
+            Main dialog text
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="autofocusWarning">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Action</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  $('#{{include.messageDialogId}}').on('shown.bs.modal', function() {
+    $('#autofocusWarning').focus();
+  });
+});
+</script>
