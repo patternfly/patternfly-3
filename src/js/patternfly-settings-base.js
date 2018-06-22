@@ -13,4 +13,4 @@
 
   window.patternfly = patternfly;
 
-})(window);
+})(typeof window !== 'undefined' ? window : global);
