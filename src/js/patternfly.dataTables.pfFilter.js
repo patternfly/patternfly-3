@@ -213,6 +213,36 @@
   // Local functions
 
   /**
+   * update filters if server-side processing is enabled
+   * see more https://www.datatables.net/release-datatables/examples/data_sources/server_side.html
+   *
+   * @param {DataTable.Api} dt DataTable
+   * @private
+   */
+  function updateRemoteFilters (dt) {
+    var ctx = dt.settings()[0];
+    var filters = [];
+
+    $.each(ctx._pfFilter.filters, function (index, filter) {
+      if (filters[filter.column] === undefined) {
+        filters[filter.column] = [];
+      }
+
+      filters[filter.column].push(filter.value);
+    });
+
+    dt.search('').columns().search(''); // clear before update
+
+    $.each(filters, function (column, values) {
+      if (values === undefined) {
+        return;
+      }
+
+      dt.column(column).search(values.join('|'), true, false, ctx._pfFilter.filterCaseInsensitive);
+    });
+  }
+
+  /**
    * Add active filter control
    *
    * @param {DataTable.Api} dt DataTable
@@ -242,6 +272,9 @@
       }
       if (ctx._pfFilter.filters.length === 0) {
         ctx._pfFilter.activeFilters.addClass("hidden"); // Hide
+      }
+      if (ctx.oInit.serverSide) {
+        updateRemoteFilters(dt);
       }
       dt.draw();
       updateFilterResults(dt);
@@ -274,6 +307,9 @@
     // Add new filter
     if (!found) {
       ctx._pfFilter.filters.push(filter);
+      if (ctx.oInit.serverSide) {
+        updateRemoteFilters(dt);
+      }
       dt.draw();
       addActiveFilterControl(dt, filter);
       updateFilterResults(dt);
@@ -292,6 +328,9 @@
     ctx._pfFilter.filters.length = 0; // Reset filters
     ctx._pfFilter.activeFilterControls.html(""); // Remove active filter controls
     ctx._pfFilter.activeFilters.addClass("hidden"); // Hide active filters area
+    if (ctx.oInit.serverSide) {
+      updateRemoteFilters(dt);
+    }
     dt.draw();
   }
 
