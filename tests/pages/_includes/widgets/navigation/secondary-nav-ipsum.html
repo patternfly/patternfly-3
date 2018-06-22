@@ -1,19 +1,26 @@
-<div id="-secondary" class="nav-pf-secondary-nav">
+<div id="ipsum-secondary" class="nav-pf-secondary-nav" aria-hidden="true">
   <div class="nav-item-pf-header">
-    <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav"></a>
+    <a href="#0" class="secondary-collapse-toggle-pf" data-toggle="collapse-secondary-nav">
+      <span class="sr-only toggle-label-expanded-pf">Pin Secondary Navigation Menu</span>
+      <span class="sr-only toggle-label-collapsed-pf" aria-hidden="true">Unpin Secondary Navigation Menu</span>
+      <span class="sr-only toggle-label-back-pf" aria-hidden="true">Back to Primary Navigation Menu</span>
+    </a>
     <span>Ipsum</span>
   </div>
-  <ul class="list-group">
-    <li class="list-group-item active {% if page.nav-tertiary %}tertiary-nav-item-pf{% endif %}" data-target="#ipsum-intellegam-tertiary">
-      <a href="#0">
+  <ul class="list-group" role="list" aria-label="Secondary Navigation Menu">
+    <li class="list-group-item active {% if page.nav-tertiary %}tertiary-nav-item-pf{% endif %}" role="listitem" data-target="#ipsum-intellegam-tertiary">
+      <a href="#0"
+        {% if page.nav-tertiary %}aria-expanded="false"{% endif %}>
         <span class="list-group-item-value">Intellegam</span>
+        <span class="sr-only">(Active Menu Item)</span>
       </a>
       {% if page.nav-tertiary %}
       {% include widgets/navigation/tertiary-ipsum-intellegam.html %}
       {% endif %}
     </li>
-    <li class="list-group-item {% if page.nav-tertiary %}tertiary-nav-item-pf{% endif %}" data-target="#ipsum-copiosae-tertiary">
-      <a href="#0">
+    <li class="list-group-item {% if page.nav-tertiary %}tertiary-nav-item-pf{% endif %}" role="listitem" data-target="#ipsum-copiosae-tertiary">
+      <a href="#0"
+        {% if page.nav-tertiary %}aria-expanded="false"{% endif %}>
         <span class="list-group-item-value">Copiosae</span>
       </a>
       {% if page.nav-tertiary %}
@@ -21,7 +28,8 @@
       {% endif %}
     </li>
     <li class="list-group-item {% if page.nav-tertiary %}tertiary-nav-item-pf{% endif %}" data-target="#ipsum-patrioque-tertiary">
-      <a href="#0" >
+      <a href="#0"
+        {% if page.nav-tertiary %}aria-expanded="false"{% endif %}>
         <span class="list-group-item-value">Patrioque</span>
       </a>
       {% if page.nav-tertiary %}
@@ -29,7 +37,7 @@
       {% endif %}
     </li>
     {% if page.nav-tertiary %}
-    <li class="list-group-item">
+    <li class="list-group-item" role="listitem">
       <a href="#0">
         <span class="list-group-item-value">Accumsan</span>
         {% if page.nav-badges %}

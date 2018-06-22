@@ -92,21 +92,21 @@
         text-align: center;
         width: @nav-pf-vertical-icon-width;
       }
-      &:hover {
+      &:hover,
+      &:focus {
         text-decoration: none;
       }
     }
-    &.active,
-    &:hover {
-      > a {
-        background-color: @nav-pf-vertical-active-bg-color;
-        color: @nav-pf-vertical-active-color;
-        font-weight: @nav-pf-vertical-active-font-weight;
-        .fa,
-        .glyphicon,
-        .pficon {
-          color: @nav-pf-vertical-active-icon-color;
-        }
+    &.active > a,
+    &:hover > a,
+    & > a:focus {
+      background-color: @nav-pf-vertical-active-bg-color;
+      color: @nav-pf-vertical-active-color;
+      font-weight: @nav-pf-vertical-active-font-weight;
+      .fa,
+      .glyphicon,
+      .pficon {
+        color: @nav-pf-vertical-active-icon-color;
       }
     }
     &.active {
@@ -592,12 +592,12 @@
     &.active > a:before {
       display: none;
     }
-    &.active,
-    &:hover {
-      > a {
-        background-color: @nav-pf-vertical-secondary-active-bg-color;
-        color: @nav-pf-vertical-secondary-active-color;
-      }
+    &.active > a,
+    &:hover > a,
+    & > a:focus {
+      background-color: @nav-pf-vertical-secondary-active-bg-color;
+      color: @nav-pf-vertical-secondary-active-color;
+      text-decoration: none;
     }
     .badge-container-pf {
       top: 5px;
@@ -896,20 +896,16 @@
   }
 }
 .nav-pf-vertical-collapsible-menus {
-  .secondary-collapse-toggle-pf {
-    display: inline-block;
-  }
   .secondary-nav-item-pf.active {
     .secondary-collapse-toggle-pf {
+      display: inline-block;
       opacity: 1;
       pointer-events: all;
     }
   }
-  .tertiary-collapse-toggle-pf {
-    display: inline-block;
-  }
   .tertiary-nav-item-pf.active {
     .tertiary-collapse-toggle-pf {
+      display: inline-block;
       opacity: 1;
       pointer-events: all;
     }
@@ -948,5 +944,24 @@
   }
   .nav-pf-tertiary-nav {
     transition: visibility @nav-pf-menu-transition-period, opacity @nav-pf-menu-transition-period linear;
+  }
+}
+
+// make hidden parent menu items not keyboard-accessible when a submenu is
+// pinned or the mobile nav is shown
+.list-group > .list-group-item > a {
+  .collapsed-tertiary-nav-pf > &,
+  .collapsed-tertiary-nav-pf .nav-pf-secondary-nav > &,
+  .show-mobile-tertiary > &,
+  .show-mobile-tertiary .nav-pf-secondary-nav > &,
+  .collapsed-secondary-nav-pf > &,
+  .show-mobile-secondary > & {
+    display: none;
+  }
+}
+.secondary-nav-item-pf.active .secondary-collapse-toggle-pf {
+  .show-mobile-tertiary.nav-pf-vertical-collapsible-menus &,
+  .collapsed-tertiary-nav-pf.nav-pf-vertical-collapsible-menus & {
+    display: none;
   }
 }
