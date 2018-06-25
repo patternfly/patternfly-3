@@ -91,7 +91,7 @@
       }
 
       > .pficon-user {
-        padding-right: calc($navbar-pf-item-icon-padding-right + 3px);
+        padding-right: unquote("calc(#{$navbar-pf-item-icon-padding-right} + 3px)");
         float: left;
       }
     }
