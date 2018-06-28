@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.51.2",
+  "version": "0.0.0-semantically-released",
   "dependencies": {
     "@types/c3": {
       "version": "0.6.0",

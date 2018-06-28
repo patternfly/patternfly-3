@@ -5316,7 +5316,7 @@ button.list-group-item {
 .list-group-item.disabled,
 .list-group-item.disabled:hover,
 .list-group-item.disabled:focus {
-  background-color: #f1f1f1;
+  background-color: #fafafa;
   color: #9c9c9c;
   cursor: not-allowed;
 }
@@ -9746,6 +9746,11 @@ h6 .label {
 .list-group-item {
   border-left: 0;
   border-right: 0;
+}
+.list-group-item.disabled,
+.list-group-item.disabled:hover,
+.list-group-item.disabled:focus {
+  background-color: #fafafa;
 }
 .list-group-item-heading {
   font-weight: 600;

@@ -5068,7 +5068,7 @@ a.disabled {
   clear: both;
 }
 .list-view-pf .list-group-item.list-view-pf-expand-active {
-  background-color: #edf8ff;
+  background-color: #def3ff;
   box-shadow: 0 2px 6px rgba(3, 3, 3, 0.2);
   z-index: 1;
 }
