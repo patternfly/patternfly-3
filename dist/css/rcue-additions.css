@@ -4083,6 +4083,33 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   width: 1px;
   z-index: 201;
 }
+.date-time-picker-pf .input-group-addon .fa,
+.date-time-picker-pf .input-group-addon .pficon {
+  width: 12px;
+}
+.date-time-range-picker-pf .form-control,
+.date-time-range-picker-pf .form-control:not(:first-child):not(:last-child) {
+  border-radius: 1px;
+}
+.date-time-range-picker-pf .form-control:first-child {
+  border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
+}
+.date-time-range-picker-pf .form-control:last-child {
+  border-bottom-left-radius: 1px;
+  border-top-left-radius: 1px;
+}
+.date-time-range-picker-pf .input-group-addon {
+  background-color: transparent;
+  border: none;
+  line-height: 1.66666667;
+  padding: 2px 6px;
+}
+.date-time-range-picker-pf .dropdown-kebab-pf {
+  float: right;
+  margin-left: 0;
+  margin-right: -15px;
+}
 .experimental-pf > * {
   border: 2px solid #92d400;
 }
@@ -7509,6 +7536,20 @@ table.dataTable th:active {
 }
 .table-view-pf-select-results {
   text-align: right;
+}
+.bootstrap-datetimepicker-widget .today-button-pf:before {
+  content: "Today";
+}
+.bootstrap-datetimepicker-widget.timepicker-sbs .datepicker,
+.bootstrap-datetimepicker-widget.timepicker-sbs .accordion-toggle {
+  border-right: 1px solid #d1d1d1;
+}
+.bootstrap-datetimepicker-widget.timepicker-sbs .timepicker {
+  padding-left: 0;
+  margin-top: 50px;
+}
+.bootstrap-datetimepicker-widget.timepicker-sbs .picker-switch {
+  width: 50%;
 }
 .bootstrap-datetimepicker-widget a[data-action] {
   border: 0;

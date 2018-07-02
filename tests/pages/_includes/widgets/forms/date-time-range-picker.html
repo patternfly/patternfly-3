@@ -1,0 +1,35 @@
+<div class="date-time-range-picker-pf input-group">
+  <input type="text" class="form-control" id="{{include.startId}}">
+  <span class="input-group-addon">To</span>
+  <input type="text" class="form-control" id="{{include.endId}}">
+</div>
+<script>
+  $(function () {
+    var $startDate = $('#{{include.startId}}');
+    var $endDate = $('#{{include.endId}}');
+
+    $startDate.datetimepicker({
+      showTodayButton: true,
+      toolbarPlacement: 'bottom',
+      sideBySide: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+    $endDate.datetimepicker({
+      useCurrent: false,
+      showTodayButton: true,
+      toolbarPlacement: 'bottom',
+      sideBySide: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+    $startDate.on('dp.change', function (e) {
+      $endDate.data('DateTimePicker').minDate(e.date);
+    });
+    $endDate.on('dp.change', function (e) {
+      $startDate.data('DateTimePicker').maxDate(e.date);
+    });
+  });
+</script>

@@ -1,0 +1,19 @@
+<div class="input-group date-time-picker-pf" id="{{include.id}}">
+  <input type="text" class="form-control">
+  <span class="input-group-addon">
+    <span class="fa fa-clock-o"></span>
+  </span>
+</div>
+<script>
+  $(function () {
+    $('#{{include.id}}').datetimepicker({
+      format: 'LT',
+      allowInputToggle: true,
+      keyBinds: {
+        enter: function () {
+          this.hide();
+        }
+      }
+    });
+  });
+</script>

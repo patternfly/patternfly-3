@@ -1,0 +1,49 @@
+---
+alert-message: ', <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://eonasdan.github.io/bootstrap-datetimepicker">http://eonasdan.github.io/bootstrap-datetimepicker</a>.'
+categories: [Widgets]
+layout: page
+title: Date and Time
+resource: true
+url-js-extra: ['https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js',
+               'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js']
+---
+<div id="date-picker-wrapper">
+  <h3>DatePicker</h3>
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-lg-4 col-md-5 col-sm-6">
+      {% include widgets/forms/single-date-picker.html id="datetimepicker1" %}
+    </div>
+  </div>
+</div>
+<div id="time-picker-wrapper">
+  <h3>TimePicker</h3>
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-lg-4 col-md-5 col-sm-6">
+      {% include widgets/forms/single-time-picker.html id="datetimepicker2" %}
+    </div>
+  </div>
+</div>
+<div id="date-time-picker-wrapper">
+  <h3>DateTimePicker</h3>
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-lg-4 col-md-5 col-sm-6">
+      {% include widgets/forms/date-time-picker.html id="datetimepicker3" %}
+    </div>
+  </div>
+</div>
+<div id="date-range-picker-wrapper">
+  <h3>DateRangePicker</h3>
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-lg-4 col-md-5 col-sm-6">
+      {% include widgets/forms/date-range-picker.html rangeId="range1" startId="datetimepicker4" endId="datetimepicker5" %}
+    </div>
+  </div>
+</div>
+<div id="date-time-range-picker-wrapper">
+  <h3>DateTimeRangePicker</h3>
+  <div class="row">
+    <div class="col-lg-4 col-md-5 col-sm-6">
+      {% include widgets/forms/date-time-range-picker.html startId="datetimepicker6" endId="datetimepicker7" %}
+    </div>
+  </div>
+</div>
