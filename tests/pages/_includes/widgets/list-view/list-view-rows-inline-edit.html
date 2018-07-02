@@ -1,0 +1,531 @@
+<div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="confirmDialogLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title" id="confirmDialogLabel">Continue without saving</h4>
+      </div>
+      <div class="modal-body">
+        <span>Are you sure you want to leave without saving your changes ?</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default confirm-dialog-pf-cancel" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary confirm-dialog-pf-ok">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="list-group list-view-pf list-view-pf-view">
+  <script id="row-template" type="text/template">
+    <div class="list-group-item list-view-pf-editable">
+      <div class="list-view-pf-main-info">
+        <div class="list-view-pf-left">
+          <span class="fa fa-plane list-view-pf-icon-sm"></span>
+        </div>
+        <div class="list-view-pf-body">
+          <div class="list-view-pf-description">
+            <div class="list-group-item-text list-view-pf-value"></div>
+            <input type="text" value="Event XXX - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+          </div>
+          <div class="list-view-pf-additional-info">
+            <div class="list-view-pf-additional-info-item">
+              <span class="list-view-pf-value"></span>
+              <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+                <option>Host</option>
+                <option>Cluster</option>
+                <option>Node</option>
+                <option>Image</option>
+              </select>
+            </div>
+            <div class="list-view-pf-additional-info-item">
+              <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date"></span>
+            </div>
+            <div class="list-view-pf-additional-info-item">
+              <span class="list-view-pf-value"></span>
+              <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state" autocomplete="off" checked>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-view-pf-actions">
+        <button class="btn btn-default list-view-pf-edit">Edit</button>
+        {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+        <button type="button" class="btn btn-link list-view-pf-save" aria-label="Save"><i class="fa fa-check"></i></button>
+        <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+      </div>
+    </div>
+  </script>
+  <div class="list-group-item list-view-pf-editable list-view-pf-create active hidden">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <input type="text" value="Event XXX - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option selected>Host</option>
+              <option>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date"></span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button type="button" class="btn btn-link list-view-pf-save" aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event One - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event One - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Host</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option selected>Host</option>
+              <option>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Jan 11,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Enabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-magic list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Two - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Two - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Cluster</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option>Host</option>
+              <option selected>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Aug 8,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Enabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-gamepad list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Three - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Three - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Node</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option>Host</option>
+              <option>Cluster</option>
+              <option selected>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Feb 25,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Disabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-linux list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Four - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Four - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Image</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option>Host</option>
+              <option>Cluster</option>
+              <option>Node</option>
+              <option selected>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Dec 10,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Enabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-briefcase list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Five - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Five - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Host</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option selected>Host</option>
+              <option>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Oct 20,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Enabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-coffee list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Six - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Six - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Cluster</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off">
+              <option>Host</option>
+              <option selected>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Sept 18,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Disabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      {% include widgets/kebab.html dropmenuType="dropdown" dropmenuPosition="pull-right" dropdownPosition="dropdown-menu-right" dropmenuVariation="dropdown-kebab-pf" %}
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    //Initialize Bootstrap Switch
+    function initBootstrapSwitch($cbs) {
+      $cbs.bootstrapSwitch()
+      .each(function (i, cb) {
+        $(cb).closest('.bootstrap-switch-wrapper').attr({
+          'tabindex': 0,
+          'role': 'checkbox',
+          'aria-checked': $(cb).prop('checked'),
+          'aria-label': 'switch state'
+        });
+      });
+    }
+    initBootstrapSwitch($('.list-view-pf-switch'));
+    $('.list-view-pf').on('keydown', '.bootstrap-switch-wrapper', function (e) {
+      if (e.which === 32) {
+        e.preventDefault();
+      }
+    });
+    $('.list-view-pf').on('keyup', '.bootstrap-switch-wrapper', function (e) {
+      if (e.which === 13 || e.which === 32) {
+        $(this).find('.list-view-pf-switch').bootstrapSwitch('toggleState');
+      }
+    });
+
+    // toggle dropdown menu
+    $('.list-view-pf').on('show.bs.dropdown', '.list-view-pf-actions', function () {
+      var $this = $(this);
+      var $dropdown = $this.find('.dropdown');
+      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+      $dropdown.toggleClass('dropup', space < 10);
+    });
+
+    $('.list-view-pf-editable').find('.list-view-pf-editor:not(div)').each(function () {
+      var $this = $(this);
+      $this.data('old-value', $this.is(':checkbox') ? $this.is(':checked') : $this.val());
+    });
+
+    function editNewRow () {
+      $('.list-view-pf-create').removeClass('hidden')
+        .find('.list-view-pf-date').text('Mar 13,2018')
+        .end().find('.list-view-pf-textbox').trigger('select');
+      $('.list-view-pf-editable.active:not(.list-view-pf-create)').removeClass('active');
+    }
+
+    $('#confirmDialog').on('shown.bs.modal', function () {
+      $(this).find('.confirm-dialog-pf-cancel').trigger('focus');
+    })
+
+    // trigger create state
+    $('#add-a-row').on('click', function () {
+      if (!$('.list-view-pf-create.hidden').length) {
+        return;
+      }
+      var $activeSaveButton = $('.list-view-pf-save:not(:disabled):not(:hidden)');
+      if ($activeSaveButton.length) {
+        $('#confirmDialog')
+          .data('to-edit', $('.list-view-pf-create')).modal('show');
+      } else {
+        editNewRow();
+      }
+    });
+
+    function editExistingRow($clickRow) {
+      $('.list-view-pf-create').addClass('hidden');
+      $('.list-view-pf-editable.active:not(.list-view-pf-create)').removeClass('active');
+      $clickRow.addClass('active').find('.list-view-pf-textbox').trigger('select');
+    }
+
+    // trigger edit state
+    $('.list-view-pf').on('click', '.list-view-pf-edit', function () {
+      var $clickRow = $(this).closest('.list-view-pf-editable');
+      var $activeSaveButton = $('.list-view-pf-save:not(:disabled):not(:hidden)');
+      if ($activeSaveButton.length) {
+        $('#confirmDialog')
+          .data('to-edit', $clickRow).modal('show');
+      } else {
+        editExistingRow($clickRow);
+      }
+    });
+
+    // close active row on clicking away
+    $('body').on('click', function (e) {
+      var $target = $(e.target);
+      var $activeRow = $('.list-view-pf-editable.active:not(.hidden)');
+      if ($activeRow.length &&
+        e.target.id !== 'add-a-row' &&
+        !$target.is('.list-view-pf-edit') &&
+        !$target.closest('.modal').length &&
+        !$target.closest('.list-view-pf-editable.active', '.list-view-pf').length) {
+        if ($activeRow.find('.list-view-pf-save:not(:disabled)').length) {
+          $('#confirmDialog')
+            .data('to-edit', null).modal('show');
+        } else {
+          $activeRow.find('.list-view-pf-cancel').trigger('click');
+        }
+      }
+    });
+
+    function monitorValueChange (e) {
+      var $row = $(e.target).closest('.list-view-pf-editable');
+      var changed = false;
+      $row.find('.list-view-pf-editor:not(div)').each(function(index, editor) {
+        if (($(editor).is(':checkbox') && $(editor).data('old-value') !== $(editor).is(':checked')) ||
+          (!$(editor).is(':checkbox') && $(editor).data('old-value') !== $(editor).val().trim())) {
+            changed = true;
+            return false;
+          }
+      });
+      $row.find('.list-view-pf-save').prop('disabled', !changed);
+      if (e.type === 'switchChange') {
+        $row.find('.bootstrap-switch-wrapper').attr('aria-checked', arguments[1]);
+      }
+    }
+
+    $('.list-view-pf').on('input changed.bs.select switchChange.bootstrapSwitch', '.list-view-pf-editor:not(div)', monitorValueChange);
+
+    function keepValues($row, titleVal, typeVal, stateVal) {
+      $row.find('.list-view-pf-title').data('old-value', titleVal)
+        .siblings('.list-view-pf-value').text(titleVal);
+      $row.find('select.list-view-pf-type').data('old-value', typeVal)
+        .closest('.list-view-pf-additional-info-item').find('.list-view-pf-value').text(typeVal);
+      $row.find('.list-view-pf-state').data('old-value', stateVal)
+        .closest('.list-view-pf-additional-info-item').find('.list-view-pf-value').text(stateVal ? 'Enabled' : 'Disabled');
+    }
+
+    function setValues($row, titleVal, typeVal, stateVal) {
+      $row.find('.list-view-pf-title').val(titleVal);
+      $row.find('select.list-view-pf-type').selectpicker('val', typeVal);
+      $row.find('.list-view-pf-state').bootstrapSwitch('state', stateVal, true);
+    }
+
+    $('.list-view-pf').on('click', '.list-view-pf-save', function (e) {
+      var $row = $(this).closest('.list-view-pf-editable');
+      var $title = $row.find('.list-view-pf-title');
+      var $type = $row.find('select.list-view-pf-type');
+      var $state = $row.find('.list-view-pf-state');
+      var titleVal = $title.val().trim();
+      var typeVal = $type.val();
+      var stateVal = $state.is(':checked');
+
+      if ($row.is('.list-view-pf-create')) {
+        var $newRow;
+        $row.addClass('hidden').find('.list-view-pf-save').prop('disabled', false);
+        setValues($row, 'Event XXX - Sed ut perspiciatis unde omnis iste natus', 'Host', true);
+        $row.after($('#row-template').html());
+        $newRow = $row.next();
+        keepValues($newRow, titleVal, typeVal, stateVal);
+        $newRow.find('.list-view-pf-save').prop('disabled', true);
+        $newRow.find('.selectpicker').selectpicker('render');
+        initBootstrapSwitch($newRow.find('.list-view-pf-switch'));
+        setValues($newRow, titleVal, typeVal, stateVal);
+        $newRow.find('.list-view-pf-date').text('Mar 13,2018');
+      } else {
+        $row.removeClass('active').find('.list-view-pf-save').prop('disabled', true);
+        keepValues($row, titleVal, typeVal, stateVal);
+      }
+    });
+
+    $('.list-view-pf').on('click', '.list-view-pf-cancel', function () {
+      var $row = $(this).closest('.list-view-pf-editable');
+      setValues($row, $row.find('.list-view-pf-title').data('old-value'), $row.find('select.list-view-pf-type').data('old-value'), $row.find('.list-view-pf-state').data('old-value'));
+      if ($row.is('.list-view-pf-create')) {
+        $row.addClass('hidden');
+      } else {
+        $row.removeClass('active').find('.list-view-pf-save').prop('disabled', true);
+      }
+    });
+
+    $('#confirmDialog').on('click', '.confirm-dialog-pf-ok', function (e) {
+      var $confirm = $(e.delegateTarget);
+      var $toEdit = $confirm.data('to-edit');
+      $confirm.modal('hide');
+      $('.list-view-pf-save:not(:disabled):not(:hidden)').siblings('.list-view-pf-cancel').trigger('click');
+      if (!$toEdit) {
+        return;
+      }
+      if ($toEdit.is('.list-view-pf-create')) {
+        editNewRow();
+      } else {
+        editExistingRow($toEdit);
+      }
+    });
+
+    $('#confirmDialog').on('click', '.confirm-dialog-pf-cancel, .close', function (e) {
+      $(e.delegateTarget).modal('hide');
+      $('.list-view-pf-save:not(:disabled):not(:hidden)').trigger('focus');
+    });
+
+    $('#confirmDialog').on('keydown', '.confirm-dialog-pf-ok', function (e) {
+      if (e.which === 9) {
+        e.preventDefault();
+        $(e.delegateTarget).find('.modal-header .close').trigger('focus');
+      }
+    });
+
+    $('#confirmDialog').on('keydown', '.close', function (e) {
+      if (e.which === 9) {
+        e.preventDefault();
+        $(e.delegateTarget).find('.confirm-dialog-pf-cancel').trigger('focus');
+      }
+    });
+  });
+</script>
