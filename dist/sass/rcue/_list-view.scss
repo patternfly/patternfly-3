@@ -302,3 +302,89 @@
   position: relative;
   width: 100%;
 }
+.list-view-pf-editable {
+  &.active,
+  &.list-view-pf-create {
+    .list-view-pf-editor,
+    .list-view-pf-editor.bootstrap-select,
+    .bootstrap-switch,
+    .list-view-pf-actions .list-view-pf-save,
+    .list-view-pf-actions .list-view-pf-cancel {
+      display: initial;
+    }
+    .list-view-pf-edit,
+    .list-view-pf-value:not(.list-view-pf-readonly),
+    .dropdown-kebab-pf {
+      display: none;
+    }
+  }
+  .list-view-pf-editor,
+  .list-view-pf-editor.bootstrap-select,
+  .bootstrap-switch,
+  .list-view-pf-actions .list-view-pf-save,
+  .list-view-pf-actions .list-view-pf-cancel {
+    display: none;
+  }
+  &.active {
+    .list-view-pf-additional-info {
+      @media (min-width: $screen-sm-min) {
+        margin-top: ($grid-gutter-width/2);
+      }
+      @media (min-width: $screen-md-min) {
+        margin-top: 0;
+      }
+      .list-view-pf-additional-info-item {
+        margin-top: ($grid-gutter-width/2);
+        @media (min-width: $screen-sm-min) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .list-view-pf-textbox {
+    margin-right: ($grid-gutter-width/2);
+    width: 100%;
+  }
+  .list-view-pf-readonly {
+    color: $color-pf-black-500;
+  }
+  .list-view-pf-actions {
+    margin: ($grid-gutter-width/4) 0;
+    width: 100px;
+    text-align: right;
+    .list-view-pf-save,
+    .list-view-pf-cancel {
+      font-size: $font-size-h1;
+      @media (max-width: $screen-sm-min) {
+        margin-left: 0;
+      }
+    }
+  }
+  .list-view-pf-description {
+    flex: 100%;
+    @media (min-width: $screen-sm-min) {
+      flex: 100%;
+    }
+    @media (min-width: $screen-md-min) {
+      flex: 25%;
+    }
+  }
+  .list-view-pf-additional-info {
+    flex: 100%;
+    .list-view-pf-additional-info-item {
+      flex: 100%;
+    }
+    @media (min-width: $screen-sm-min) {
+      flex: 100%;
+      .list-view-pf-additional-info-item {
+        flex: 1;
+      }
+    }
+    @media (min-width: $screen-md-min) {
+      flex: 75%;
+      .list-view-pf-additional-info-item {
+        flex: 1;
+      }
+    }
+  }
+}

@@ -5430,6 +5430,117 @@ a.disabled {
   position: relative;
   width: 100%;
 }
+.list-view-pf-editable.active .list-view-pf-editor,
+.list-view-pf-editable.list-view-pf-create .list-view-pf-editor,
+.list-view-pf-editable.active .list-view-pf-editor.bootstrap-select,
+.list-view-pf-editable.list-view-pf-create .list-view-pf-editor.bootstrap-select,
+.list-view-pf-editable.active .bootstrap-switch,
+.list-view-pf-editable.list-view-pf-create .bootstrap-switch,
+.list-view-pf-editable.active .list-view-pf-actions .list-view-pf-save,
+.list-view-pf-editable.list-view-pf-create .list-view-pf-actions .list-view-pf-save,
+.list-view-pf-editable.active .list-view-pf-actions .list-view-pf-cancel,
+.list-view-pf-editable.list-view-pf-create .list-view-pf-actions .list-view-pf-cancel {
+  display: initial;
+}
+.list-view-pf-editable.active .list-view-pf-edit,
+.list-view-pf-editable.list-view-pf-create .list-view-pf-edit,
+.list-view-pf-editable.active .list-view-pf-value:not(.list-view-pf-readonly),
+.list-view-pf-editable.list-view-pf-create .list-view-pf-value:not(.list-view-pf-readonly),
+.list-view-pf-editable.active .dropdown-kebab-pf,
+.list-view-pf-editable.list-view-pf-create .dropdown-kebab-pf {
+  display: none;
+}
+.list-view-pf-editable .list-view-pf-editor,
+.list-view-pf-editable .list-view-pf-editor.bootstrap-select,
+.list-view-pf-editable .bootstrap-switch,
+.list-view-pf-editable .list-view-pf-actions .list-view-pf-save,
+.list-view-pf-editable .list-view-pf-actions .list-view-pf-cancel {
+  display: none;
+}
+@media (min-width: 768px) {
+  .list-view-pf-editable.active .list-view-pf-additional-info {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .list-view-pf-editable.active .list-view-pf-additional-info {
+    margin-top: 0;
+  }
+}
+.list-view-pf-editable.active .list-view-pf-additional-info .list-view-pf-additional-info-item {
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .list-view-pf-editable.active .list-view-pf-additional-info .list-view-pf-additional-info-item {
+    margin-top: 0;
+  }
+}
+.list-view-pf-editable .list-view-pf-textbox {
+  margin-right: 20px;
+  width: 100%;
+}
+.list-view-pf-editable .list-view-pf-readonly {
+  color: #8b8d8f;
+}
+.list-view-pf-editable .list-view-pf-actions {
+  margin: 10px 0;
+  width: 100px;
+  text-align: right;
+}
+.list-view-pf-editable .list-view-pf-actions .list-view-pf-save,
+.list-view-pf-editable .list-view-pf-actions .list-view-pf-cancel {
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .list-view-pf-editable .list-view-pf-actions .list-view-pf-save,
+  .list-view-pf-editable .list-view-pf-actions .list-view-pf-cancel {
+    margin-left: 0;
+  }
+}
+.list-view-pf-editable .list-view-pf-description {
+  -ms-flex: 100%;
+      flex: 100%;
+}
+@media (min-width: 768px) {
+  .list-view-pf-editable .list-view-pf-description {
+    -ms-flex: 100%;
+        flex: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .list-view-pf-editable .list-view-pf-description {
+    -ms-flex: 25%;
+        flex: 25%;
+  }
+}
+.list-view-pf-editable .list-view-pf-additional-info {
+  -ms-flex: 100%;
+      flex: 100%;
+}
+.list-view-pf-editable .list-view-pf-additional-info .list-view-pf-additional-info-item {
+  -ms-flex: 100%;
+      flex: 100%;
+}
+@media (min-width: 768px) {
+  .list-view-pf-editable .list-view-pf-additional-info {
+    -ms-flex: 100%;
+        flex: 100%;
+  }
+  .list-view-pf-editable .list-view-pf-additional-info .list-view-pf-additional-info-item {
+    -ms-flex: 1;
+        flex: 1;
+  }
+}
+@media (min-width: 992px) {
+  .list-view-pf-editable .list-view-pf-additional-info {
+    -ms-flex: 75%;
+        flex: 75%;
+  }
+  .list-view-pf-editable .list-view-pf-additional-info .list-view-pf-additional-info-item {
+    -ms-flex: 1;
+        flex: 1;
+  }
+}
 .list-view-pf-dnd .dndDragging.drag-original {
   display: none;
 }
