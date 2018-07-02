@@ -1,0 +1,19 @@
+<div class="input-group date-time-picker-pf" id="{{include.id}}">
+  <input type="text" class="form-control"/>
+  <span class="input-group-addon">
+    <span class="fa fa-calendar"></span>
+  </span>
+</div>
+<script>
+  $(function () {
+    $('#{{include.id}}').datetimepicker({
+      allowInputToggle: true,
+      showTodayButton: true,
+      toolbarPlacement: 'bottom',
+      sideBySide: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+  });
+</script>
