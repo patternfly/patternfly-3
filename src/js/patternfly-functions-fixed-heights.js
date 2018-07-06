@@ -81,7 +81,7 @@
     setCollapseHeights();
 
     // Update on window resizing
-    $(window).resize(setCollapseHeights);
+    $(window).on('resize', setCollapseHeights);
 
   };
 }(jQuery));

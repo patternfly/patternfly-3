@@ -2,7 +2,7 @@
   'use strict';
 
   var patternfly = {
-    version: "3.51.3"
+    version: "0.0.0-semantically-released",
   };
 
   // definition of breakpoint sizes for tablet and desktop modes
@@ -668,7 +668,7 @@
     }
   });
 
-  $(window).resize(function () {
+  $(window).on('resize', function () {
     // Call sidebar() on resize if .sidebar-pf exists
     if ($('.sidebar-pf').length > 0) {
       $.fn.sidebar();
@@ -1144,7 +1144,7 @@
     setCollapseHeights();
 
     // Update on window resizing
-    $(window).resize(setCollapseHeights);
+    $(window).on('resize', setCollapseHeights);
 
   };
 }(jQuery));

@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.52.0",
+  "version": "0.0.0-semantically-released",
   "dependencies": {
     "@types/c3": {
       "version": "0.6.0",
@@ -171,9 +171,9 @@
       "optional": true
     },
     "@types/d3-transition": {
-      "version": "1.1.1",
+      "version": "1.1.2",
       "from": "@types/d3-transition@*",
-      "resolved": "https://registry.npmjs.org/@types/d3-transition/-/d3-transition-1.1.1.tgz",
+      "resolved": "https://registry.npmjs.org/@types/d3-transition/-/d3-transition-1.1.2.tgz",
       "optional": true
     },
     "@types/d3-voronoi": {
