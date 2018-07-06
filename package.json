@@ -100,7 +100,7 @@
     "patternfly": "grunt build-patternfly",
     "rcue": "grunt build-rcue",
     "jekyll": "ruby --version || echo \"Ruby required\"; bundler -v || gem install bundler; bundle check || bundle install; set -e",
-    "start": "grunt build serve",
+    "start": "grunt serve",
     "start-patternfly": "grunt build-patternfly serve",
     "start-rcue": "grunt build-rcue serve",
     "grunt": "grunt",
