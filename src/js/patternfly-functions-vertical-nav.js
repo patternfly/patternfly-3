@@ -8,6 +8,8 @@
     var options = $.extend({
         hoverDelay: 500,
         hideDelay: 700,
+        rememberOpenState: true,
+        storage: 'localStorage',
       }, userOptions || {}),
 
       navElement = $('.nav-pf-vertical'),
@@ -16,6 +18,7 @@
       handleResize = true,
       explicitCollapse = false,
       subDesktop = false,
+      storageLocation = options.storage === 'sessionStorage' ? 'sessionStorage' : 'localStorage',
 
       inMobileState = function () {
         return bodyContentElement.hasClass('hidden-nav');
@@ -283,10 +286,14 @@
               }
             }
           } else if (navElement.hasClass('collapsed')) {
-            window.localStorage.setItem('patternfly-navigation-primary', 'expanded');
+            if (options.rememberOpenState) {
+              window[storageLocation].setItem('patternfly-navigation-primary', 'expanded');
+            }
             expandMenu();
           } else {
-            window.localStorage.setItem('patternfly-navigation-primary', 'collapsed');
+            if (options.rememberOpenState) {
+              window[storageLocation].setItem('patternfly-navigation-primary', 'collapsed');
+            }
             collapseMenu();
           }
         });
@@ -393,12 +400,16 @@
               e.stopImmediatePropagation();
             } else {
               if ($this.hasClass('collapsed')) {
-                window.localStorage.setItem('patternfly-navigation-secondary', 'expanded');
-                window.localStorage.setItem('patternfly-navigation-tertiary', 'expanded');
+                if (options.rememberOpenState) {
+                  window[storageLocation].setItem('patternfly-navigation-secondary', 'expanded');
+                  window[storageLocation].setItem('patternfly-navigation-tertiary', 'expanded');
+                }
                 updateSecondaryCollapsedState(false, $this);
                 forceHideSecondaryMenu();
               } else {
-                window.localStorage.setItem('patternfly-navigation-secondary', 'collapsed');
+                if (options.rememberOpenState) {
+                  window[storageLocation].setItem('patternfly-navigation-secondary', 'collapsed');
+                }
                 updateSecondaryCollapsedState(true, $this);
               }
             }
@@ -419,12 +430,16 @@
                 e.stopImmediatePropagation();
               } else {
                 if ($this.hasClass('collapsed')) {
-                  window.localStorage.setItem('patternfly-navigation-secondary', 'expanded');
-                  window.localStorage.setItem('patternfly-navigation-tertiary', 'expanded');
+                  if (options.rememberOpenState) {
+                    window[storageLocation].setItem('patternfly-navigation-secondary', 'expanded');
+                    window[storageLocation].setItem('patternfly-navigation-tertiary', 'expanded');
+                  }
                   updateTertiaryCollapsedState(false, $this);
                   forceHideSecondaryMenu();
                 } else {
-                  window.localStorage.setItem('patternfly-navigation-tertiary', 'collapsed');
+                  if (options.rememberOpenState) {
+                    window[storageLocation].setItem('patternfly-navigation-tertiary', 'collapsed');
+                  }
                   updateTertiaryCollapsedState(true, $this);
                 }
               }
@@ -510,16 +525,16 @@
           return;
         }
 
-        if (window.localStorage.getItem('patternfly-navigation-primary') === 'collapsed') {
+        if (window[storageLocation].getItem('patternfly-navigation-primary') === 'collapsed') {
           collapseMenu();
         }
 
         if ($('.nav-pf-vertical.nav-pf-vertical-collapsible-menus').length > 0) {
-          if (window.localStorage.getItem('patternfly-navigation-secondary') === 'collapsed') {
+          if (window[storageLocation].getItem('patternfly-navigation-secondary') === 'collapsed') {
             updateSecondaryCollapsedState(true, $('.secondary-nav-item-pf.active [data-toggle=collapse-secondary-nav]'));
           }
 
-          if (window.localStorage.getItem('patternfly-navigation-tertiary') === 'collapsed') {
+          if (window[storageLocation].getItem('patternfly-navigation-tertiary') === 'collapsed') {
             updateTertiaryCollapsedState(true, $('.tertiary-nav-item-pf.active [data-toggle=collapse-tertiary-nav]'));
           }
         }
@@ -556,7 +571,9 @@
         //Set tooltips
         setTooltips();
 
-        loadFromLocalStorage();
+        if (options.rememberOpenState) {
+          loadFromLocalStorage();
+        }
 
         // Show the nav menus
         navElement.removeClass('hide-nav-pf');
