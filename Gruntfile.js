@@ -16,6 +16,9 @@ module.exports = function (grunt) {
   // '--sass' command line argument exists?
   var sassBuild = grunt.option('sass');
 
+  // '--skipRebuild' command line argument exists?
+  var skipRebuild = grunt.option('skipRebuild');
+
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -836,11 +839,16 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('serve', [
-    'connect:server',
-    'open',
-    'watch'
-  ]);
+  grunt.registerTask('serve', function () {
+    if (!skipRebuild){
+      grunt.task.run('build');
+    }
+    grunt.task.run([
+      'connect:server',
+      'open',
+      'watch'
+    ]);
+  });
 
   grunt.registerTask('open', function () {
     open('http://localhost:9000');
