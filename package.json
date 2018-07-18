@@ -5,6 +5,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "bootstrap": "~3.3.7",
+    "datatables": "^1.10.18",
     "font-awesome": "^4.7.0",
     "jquery": "~3.2.1"
   },
