@@ -9,7 +9,9 @@
 
 # [PatternFly](https://www.patternfly.org) reference implementation
 
-This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations.  For information on how to quickly get started using PatternFly, see the [Quick Start Guide](QUICKSTART.md).  If you wish to contribute to PatternFly, please follow the instructions under "Contributing to PatternFly".
+This reference implementation of PatternFly is based on [Bootstrap v3](http://getbootstrap.com/).  Think of PatternFly as a "skinned" version of Bootstrap with additional components and customizations.  For information on how to quickly get started using PatternFly, see the [Quick Start Guide](QUICKSTART.md).  Looking for RCUE (Red Hat Common User Experience) information? See the [RCUE Quick Start Guide](RCUE-QUICKSTART.md).
+
+If you wish to contribute to PatternFly, please follow the instructions under "Contributing to PatternFly".
 
 
 # Installation
