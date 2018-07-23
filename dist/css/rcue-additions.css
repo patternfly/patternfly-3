@@ -8185,21 +8185,26 @@ table.dataTable th:active {
   text-align: center;
   width: 24px;
 }
-.nav-pf-vertical .list-group-item > a:hover {
+.nav-pf-vertical .list-group-item > a:hover,
+.nav-pf-vertical .list-group-item > a:focus {
   text-decoration: none;
 }
 .nav-pf-vertical .list-group-item.active > a,
-.nav-pf-vertical .list-group-item:hover > a {
+.nav-pf-vertical .list-group-item:hover > a,
+.nav-pf-vertical .list-group-item > a:focus {
   background-color: #393f44;
   color: #fff;
   font-weight: 600;
 }
 .nav-pf-vertical .list-group-item.active > a .fa,
 .nav-pf-vertical .list-group-item:hover > a .fa,
+.nav-pf-vertical .list-group-item > a:focus .fa,
 .nav-pf-vertical .list-group-item.active > a .glyphicon,
 .nav-pf-vertical .list-group-item:hover > a .glyphicon,
+.nav-pf-vertical .list-group-item > a:focus .glyphicon,
 .nav-pf-vertical .list-group-item.active > a .pficon,
-.nav-pf-vertical .list-group-item:hover > a .pficon {
+.nav-pf-vertical .list-group-item:hover > a .pficon,
+.nav-pf-vertical .list-group-item > a:focus .pficon {
   color: #39a5dc;
 }
 .nav-pf-vertical .list-group-item.active > a:before {
@@ -8634,14 +8639,12 @@ table.dataTable th:active {
   margin-left: 20px;
   width: calc(200px - 20px);
 }
-.nav-pf-secondary-nav .list-group-item > a:hover .list-group-item-value {
-  text-decoration: underline;
-}
 .nav-pf-secondary-nav .list-group-item.active > a:before {
   display: none;
 }
 .nav-pf-secondary-nav .list-group-item.active > a,
-.nav-pf-secondary-nav .list-group-item:hover > a {
+.nav-pf-secondary-nav .list-group-item:hover > a,
+.nav-pf-secondary-nav .list-group-item > a:focus {
   background-color: #4d5258;
   color: #fff;
 }
@@ -8766,7 +8769,8 @@ table.dataTable th:active {
   display: none;
 }
 .nav-pf-tertiary-nav .list-group-item.active > a,
-.nav-pf-tertiary-nav .list-group-item:hover > a {
+.nav-pf-tertiary-nav .list-group-item:hover > a,
+.nav-pf-tertiary-nav .list-group-item > a:focus {
   background-color: #393f44;
   color: #fff;
 }

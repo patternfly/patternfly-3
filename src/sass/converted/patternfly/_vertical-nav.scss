@@ -92,21 +92,21 @@
         text-align: center;
         width: $nav-pf-vertical-icon-width;
       }
-      &:hover {
+      &:hover,
+      &:focus {
         text-decoration: none;
       }
     }
-    &.active,
-    &:hover {
-      > a {
-        background-color: $nav-pf-vertical-active-bg-color;
-        color: $nav-pf-vertical-active-color;
-        font-weight: $nav-pf-vertical-active-font-weight;
-        .fa,
-        .glyphicon,
-        .pficon {
-          color: $nav-pf-vertical-active-icon-color;
-        }
+    &.active > a,
+    &:hover > a,
+    & > a:focus {
+      background-color: $nav-pf-vertical-active-bg-color;
+      color: $nav-pf-vertical-active-color;
+      font-weight: $nav-pf-vertical-active-font-weight;
+      .fa,
+      .glyphicon,
+      .pficon {
+        color: $nav-pf-vertical-active-icon-color;
       }
     }
     &.active {
@@ -582,22 +582,15 @@
       padding: $nav-pf-vertical-secondary-link-padding;
       margin-left: 20px;
       width: unquote("calc(#{$nav-pf-vertical-width} - 20px)");
-
-      &:hover {
-        .list-group-item-value {
-          text-decoration: underline;
-        }
-      }
     }
     &.active > a:before {
       display: none;
     }
-    &.active,
-    &:hover {
-      > a {
-        background-color: $nav-pf-vertical-secondary-active-bg-color;
-        color: $nav-pf-vertical-secondary-active-color;
-      }
+    &.active > a,
+    &:hover > a,
+    & > a:focus {
+      background-color: $nav-pf-vertical-secondary-active-bg-color;
+      color: $nav-pf-vertical-secondary-active-color;
     }
     .badge-container-pf {
       top: 5px;
@@ -731,12 +724,11 @@
     &.active > a:before {
       display: none;
     }
-    &.active,
-    &:hover {
-      > a {
-        background-color: $nav-pf-vertical-tertiary-active-bg-color;
-        color: $nav-pf-vertical-tertiary-active-color;
-      }
+    &.active > a,
+    &:hover > a,
+    & > a:focus {
+      background-color: $nav-pf-vertical-tertiary-active-bg-color;
+      color: $nav-pf-vertical-tertiary-active-color;
     }
     .badge-container-pf {
       top: 5px;
