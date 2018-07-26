@@ -18,7 +18,6 @@ env:
 
 before_install:
   - rvm install 2.4.1
-  - if [[ `npm -v` != "5.4.0" ]]; then npm i -g npm@5.4.0; fi
   - npm install -g bower grunt-cli
   - npm install patternfly-eng-release
 
