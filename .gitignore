@@ -15,7 +15,7 @@ bower_components/
 
 # Ignore local nodejs packages
 node_modules/
-npm-debug.log
+npm-debug.log.*
 
 # Ignore node files
 *.man

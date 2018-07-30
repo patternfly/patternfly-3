@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '6'
+  - '8'
 
 cache: false
 
@@ -18,7 +18,7 @@ env:
 
 before_install:
   - rvm install 2.4.1
-  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+  - npm install -g npm@5.4.0
   - npm install -g bower grunt-cli
   - npm install patternfly-eng-release
 
