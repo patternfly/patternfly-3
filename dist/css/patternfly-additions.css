@@ -4780,7 +4780,7 @@ fieldset[disabled] .btn-experimental-pf.active {
   margin-left: 0;
 }
 .layout-pf.layout-pf-fixed .container-pf-nav-pf-vertical.hide-nav-pf {
-  margin-left: 0 !important;
+  visibility: hidden !important;
 }
 .layout-pf.layout-pf-fixed .container-pf-nav-pf-vertical.collapsed-secondary-nav-pf,
 .layout-pf.layout-pf-fixed .container-pf-nav-pf-vertical.collapsed-tertiary-nav-pf {
