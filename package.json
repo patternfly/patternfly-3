@@ -126,10 +126,6 @@
     "type": "git",
     "url": "https://github.com/patternfly/patternfly.git"
   },
-  "engines": {
-    "node": ">=8.9.0",
-    "npm": ">=5.5.1"
-  },
   "bugs": {
     "url": "https://github.com/patternfly/patternfly/issues"
   },
