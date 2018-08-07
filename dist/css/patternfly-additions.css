@@ -7650,16 +7650,18 @@ table.dataTable th:active {
 .bootstrap-datetimepicker-widget .today-button-pf:before {
   content: "Today";
 }
-.bootstrap-datetimepicker-widget.timepicker-sbs .datepicker,
-.bootstrap-datetimepicker-widget.timepicker-sbs .accordion-toggle {
-  border-right: 1px solid #d1d1d1;
-}
-.bootstrap-datetimepicker-widget.timepicker-sbs .timepicker {
-  padding-left: 0;
-  margin-top: 50px;
-}
-.bootstrap-datetimepicker-widget.timepicker-sbs .picker-switch {
-  width: 50%;
+@media (min-width: 992px) {
+  .bootstrap-datetimepicker-widget.timepicker-sbs .datepicker,
+  .bootstrap-datetimepicker-widget.timepicker-sbs .accordion-toggle {
+    border-right: 1px solid #d1d1d1;
+  }
+  .bootstrap-datetimepicker-widget.timepicker-sbs .timepicker {
+    padding-left: 0;
+    margin-top: 50px;
+  }
+  .bootstrap-datetimepicker-widget.timepicker-sbs .picker-switch {
+    width: 50%;
+  }
 }
 .bootstrap-datetimepicker-widget a[data-action] {
   border: 0;

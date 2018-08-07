@@ -6,15 +6,17 @@
     content: "Today";
   }
   &.timepicker-sbs {
-    .datepicker, .accordion-toggle {
-      border-right: 1px solid @color-pf-black-300;
-    }
-    .timepicker {
-      padding-left: 0;
-      margin-top: 50px;
-    }
-    .picker-switch {
-      width: 50%;
+    @media (min-width: @screen-md-min) {
+      .datepicker, .accordion-toggle {
+        border-right: 1px solid @color-pf-black-300;
+      }
+      .timepicker {
+        padding-left: 0;
+        margin-top: 50px;
+      }
+      .picker-switch {
+        width: 50%;
+      }
     }
   }
   a[data-action] {
