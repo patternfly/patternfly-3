@@ -2162,6 +2162,27 @@ select.selectpicker {
   white-space: nowrap;
   word-wrap: normal;
 }
+.fixed-height-accordion-pf {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.fixed-height-accordion-pf .panel {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.fixed-height-accordion-pf .panel.panel-open {
+  -ms-flex: 1;
+      flex: 1;
+}
+.fixed-height-accordion-pf .panel .collapse.in {
+  -ms-flex: 1;
+      flex: 1;
+  overflow-y: auto;
+}
 .about-modal-pf {
   background-color: #292e34;
   background-image: url("../img/bg-login-2.png");
