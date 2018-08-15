@@ -1,0 +1,38 @@
+---
+categories: [Navigation]
+css-extra: false
+layout: layout-flexbox
+resource: true
+full-page: true
+sidebar: true
+hide-icons: false
+submenus: true
+nav-tertiary: true
+collapsible-menus: true
+title: Flexbox Vertical Navigation with Inner Scroll Content
+url-js-extra: ['https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js']
+---
+{% include widgets/layouts/navbar-vertical.html %}
+<div class="flex-content-container-pf">
+  {% include widgets/navigation/vertical-navigation-menus.html %}
+
+  <div class="container-pf-nav-pf-vertical hide-nav-pf content-inner-fixed-vertical-pf">
+    {% include widgets/layouts/toolbar.html %}
+    <div class="content-inner-fixed-horizontal-pf content-inner-content-pf reversed">
+      <div class="content-inner-content-pf container-fluid">
+        {% include widgets/list-view/list-view-standard-rows.html %}
+      </div>
+      <div class="content-sidebar-pf sidebar-pf sidebar-pf-left container-fluid">
+        {% include widgets/navigation/sidebar.html %}
+      </div>
+    </div>
+    {% include widgets/pagination/pagination.html %}
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Initialize the vertical navigation
+    $().setupVerticalNavigation(true);
+  });
+</script>

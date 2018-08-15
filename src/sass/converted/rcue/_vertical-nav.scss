@@ -942,3 +942,35 @@
     transition: visibility $nav-pf-menu-transition-period, opacity $nav-pf-menu-transition-period linear;
   }
 }
+
+.container-pf-nav-pf-vertical.container-pf-sidebar {
+  @media (min-width: $screen-sm-min) {
+    .sidebar-pf {
+      bottom: 0;
+      position: fixed;
+      top: $navbar-pf-height;
+      width: $sidebar-pf-vertical-width;
+      > .fixed-height-accordion-pf {
+        height: 100%;
+      }
+    }
+    .container-right-pf {
+      margin-left: $sidebar-pf-vertical-width;
+    }
+    .container-left-pf {
+      margin-right: $sidebar-pf-vertical-width;
+    }
+    &.container-fluid {
+      .sidebar-pf {
+        margin-left: unquote("calc(-1 * (#{$grid-gutter-width} / 2))");
+        width: unquote("calc(#{$sidebar-pf-vertical-width} + #{$grid-gutter-width})");
+      }
+      .container-right-pf {
+        margin-left: unquote("calc(#{$sidebar-pf-vertical-width} + (#{$grid-gutter-width} / 2))");
+      }
+      .container-left-pf {
+        margin-right: unquote("calc(#{$sidebar-pf-vertical-width} + (#{$grid-gutter-width} / 2))");
+      }
+    }
+  }
+}
