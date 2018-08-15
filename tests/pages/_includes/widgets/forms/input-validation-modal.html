@@ -7,23 +7,23 @@
         <h4 class="modal-title">Modal title</h4>
       </div>
       <div class="modal-body">
-        {% if include.has-error == true %}{% include widgets/communication/alert-danger.html %}{% endif %}
+        {% if include.has_error == true %}{% include widgets/communication/alert-danger.html %}{% endif %}
         <form class="form-horizontal">
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="{{include.id-default}}">Default</label>
+            <label class="col-sm-2 control-label" for="{{include.id_default}}">Default</label>
             <div class="col-sm-10">
-              <input type="text" id="{{include.id-default}}" class="form-control"></div>
+              <input type="text" id="{{include.id_default}}" class="form-control"></div>
           </div>
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="{{include.id-disabled}}">Disabled</label>
+            <label class="col-sm-2 control-label" for="{{include.id_disabled}}">Disabled</label>
             <div class="col-sm-10">
-              <input type="text" id="{{include.id-disabled}}" class="form-control" disabled></div>
+              <input type="text" id="{{include.id_disabled}}" class="form-control" disabled></div>
           </div>
-          <div class="form-group {% if include.has-error == true %}has-error{% endif %}">
-            <label class="col-sm-2 control-label" for="{{include.id-error}}">{% if include.has-error == true %}With{% else %}No{% endif %} error</label>
+          <div class="form-group {% if include.has_error == true %}has-error{% endif %}">
+            <label class="col-sm-2 control-label" for="{{include.id_error}}">{% if include.has_error == true %}With{% else %}No{% endif %} error</label>
             <div class="col-sm-10">
-              <input type="text" id="{{include.id-error}}" class="form-control">
-{% if include.has-error == true %}
+              <input type="text" id="{{include.id_error}}" class="form-control">
+{% if include.has_error == true %}
               <span class="help-block">Please correct the error</span>
 {% endif %}
             </div>

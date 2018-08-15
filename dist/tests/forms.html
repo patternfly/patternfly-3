@@ -479,6 +479,7 @@
 
     // click the field section heading to expand the section
     $("#AdvOptSection .field-section-toggle-pf").click(function(event){
+      event.preventDefault();
       $(this).parents(".fields-section-pf").find(".fa").toggleClass("fa-angle-down");
       $(this).parents(".fields-section-pf").find(".form-group").toggleClass("hidden");
       if ($(this).parent().attr('aria-expanded') == 'false') {
@@ -569,6 +570,7 @@
 
     // click the field section heading to expand the section
     $("#AdvOptSectionMod .field-section-toggle-pf").click(function(event){
+      event.preventDefault();
       $(this).parents(".fields-section-pf").find(".fa").toggleClass("fa-angle-down");
       $(this).parents(".fields-section-pf").find(".form-group").toggleClass("hidden");
       if ($(this).parent().attr('aria-expanded') == 'false') {
