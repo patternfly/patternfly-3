@@ -106,7 +106,7 @@
 // --------------------------------------------------
 .login-pf-page {
   padding-top: $login-pf-page-padding-top;
-  padding-bottom: $login-pf-page-padding-bottom;
+  // padding-bottom: $login-pf-page-padding-bottom;
 
   .login-pf-brand {
     margin-top: $login-pf-brand-margin-top;
@@ -161,7 +161,7 @@
     }
     display:flex;
     flex-direction: column;
-    h1, p {
+    h1 {
       text-align: center;
     }
     h1 {
@@ -189,9 +189,6 @@
       }
     }
   }
-  .text-danger-p-styling {
-      padding-top: $text-danger-p-padding-top;
-  }
 
   .login-pf-signup {
     margin: $login-pf-signup-margin-top 0 0;
@@ -210,6 +207,10 @@
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
+    padding-bottom: $login-pf-page-footer-padding-bottom-mobile;
+      @media (min-width: $screen-sm-min) {
+        padding-bottom: $login-pf-page-footer-padding-bottom-desktop;
+      }
     &-links {
       display: flex;
       margin: $login-pf-page-footer-links-margin-top 0 0 0;
