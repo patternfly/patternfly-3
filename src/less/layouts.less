@@ -140,7 +140,10 @@
 }
 
 .layout-flexbox-pf {
-  height: 100%;
+  min-height: 100%;
+  @media (min-width: @screen-sm-min) {
+    height: 100%;
+  }
   & body {
     display: flex;
     flex-direction: column;

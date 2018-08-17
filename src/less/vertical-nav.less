@@ -944,9 +944,15 @@
 }
 
 .container-pf-nav-pf-vertical.container-pf-sidebar {
+  .sidebar-pf > .fixed-height-accordion-pf {
+    .panel-body {
+      background: @sidebar-pf-bg;
+    }
+  }
   @media (min-width: @screen-sm-min) {
     .sidebar-pf {
       bottom: 0;
+      margin: -1px 0;
       position: fixed;
       top: @navbar-pf-height;
       width: @sidebar-pf-vertical-width;
