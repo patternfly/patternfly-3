@@ -31,7 +31,6 @@ patternfly.spec
 .DS_Store
 
 #Ignore generated dist files
-/dist
 
 # Ignore less and sass test builds
 /tests/build
