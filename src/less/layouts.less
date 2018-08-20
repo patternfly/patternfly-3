@@ -139,18 +139,17 @@
   }
 }
 
+.transitions .layout-flexbox-pf .container-pf-nav-pf-vertical {
+  transition: @flyout-transition-pf;
+}
+
 .layout-flexbox-pf {
-  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
   @media (min-width: @screen-sm-min) {
-    height: 100%;
-  }
-  & body {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-  &.transitions .container-pf-nav-pf-vertical {
-    transition: @flyout-transition-pf;
+    height: 100vh;
   }
   .flex-content-container-pf {
     display: flex;
