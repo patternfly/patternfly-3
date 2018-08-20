@@ -5702,14 +5702,17 @@ a.disabled {
 .login-pf .container .submit {
   text-align: right;
 }
+.login-pf-page {
+  padding-top: 20px;
+}
 .login-pf-page .login-pf-brand {
-  margin-top: 20px;
+  margin-top: 0px;
   max-width: 360px;
   width: 70%;
 }
 @media (min-width: 768px) {
   .login-pf-page .login-pf-brand {
-    margin-top: 62px;
+    margin-top: 22px;
   }
 }
 .login-pf-page .login-pf-page-header {
@@ -5765,11 +5768,10 @@ a.disabled {
 }
 @media (min-width: 768px) {
   .login-pf-page .login-pf-header {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
-.login-pf-page .login-pf-header h1,
-.login-pf-page .login-pf-header p {
+.login-pf-page .login-pf-header h1 {
   text-align: center;
 }
 .login-pf-page .login-pf-header h1 {
@@ -5821,6 +5823,12 @@ a.disabled {
       justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .login-pf-page .login-pf-page-footer {
+    padding-bottom: 100px;
+  }
 }
 .login-pf-page .login-pf-page-footer-links {
   display: -ms-flexbox;
