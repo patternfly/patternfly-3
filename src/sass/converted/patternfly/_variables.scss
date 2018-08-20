@@ -401,8 +401,9 @@ $navbar-pf-alt-navbar-toggle-icon-bar-hover-bg:                     $navbar-pf-v
 
 // Login page
 // -------------------
-$login-pf-brand-margin-top:                                               20px !default;
-$login-pf-brand-desktop-margin-top:                                       62px !default;
+$login-pf-brand-margin-top:                                               0px !default;
+$login-pf-page-padding-top:                                               20px !default;
+$login-pf-brand-desktop-margin-top:                                       22px !default;
 $login-pf-page-header-margin-bottom:                                      20px !default;
 $login-pf-page-header-desktop-margin-bottom:                              40px !default;
 $login-pf-page-header-paragraph-margin-top:                               20px !default;
@@ -413,13 +414,15 @@ $login-pf-checkbox-label-margin-bottom:                                   15px !
 $login-pf-dropdown-toggle-padding-right:                                  15px !default;
 $login-pf-btn-primary-margin-top:                                         40px !default;
 $login-pf-header-margin-bottom:                                           20px !default;
-$login-pf-header-desktop-margin-bottom:                                   30px !default;
+$login-pf-header-desktop-margin-bottom:                                   10px !default;
 $login-pf-signup-margin-top:                                              40px !default;
 $login-pf-signup-a-margin-left:                                           10px !default;
 $login-pf-page-footer-links-margin-top:                                   60px !default;
 $login-pf-page-footer-links-li-margin-right:                              20px !default;
 $login-pf-page-footer-sso-margin-top:                                     40px !default;
 $login-pf-page-footer-sso-logos-li-margin:                                5px !default;
+$login-pf-page-footer-padding-bottom-mobile:                              50px !default;
+$login-pf-page-footer-padding-bottom-desktop:                             100px !default;
 $login-pf-page-accounts-margin:                                           20px !default;
 $login-pf-accounts-section-heading-margin-top:                            30px !default;
 $login-pf-accounts-section-heading-margin-bottom:                         30px !default;
@@ -438,6 +441,8 @@ $login-pf-social-margin:                                           40px 0 0 0 !d
 $alert-info-border:                                                 $color-pf-black-500 !default;
 $alert-link-font-weight:                                            500 !default;
 $alert-padding:                                                     11px !default;
+$alert-margin-left:                                                 250px !default;
+$alert-margin-right:                                                250px !default;
 $body-bg:                                                           $color-pf-white !default;
 $border-radius-base:                                                1px !default;
 $brand-danger:                                                      $color-pf-red !default;
@@ -519,6 +524,7 @@ $alert-success-text:                                                $gray-dark !
 $alert-warning-bg:                                                  lighten($color-pf-orange-100, 8%) !default;
 $alert-warning-border:                                              $brand-warning !default;
 $alert-warning-text:                                                $gray-dark !default;
+$text-danger-p-padding-top:                                         10px !default;
 $badge-border-radius:                                               $border-radius-base !default;
 $border-radius-large:                                               $border-radius-base !default;
 $border-radius-small:                                               $border-radius-base !default;

@@ -105,6 +105,9 @@
 // The following styles are for the new login
 // --------------------------------------------------
 .login-pf-page {
+  padding-top: $login-pf-page-padding-top;
+  // padding-bottom: $login-pf-page-padding-bottom;
+
   .login-pf-brand {
     margin-top: $login-pf-brand-margin-top;
     max-width:360px;
@@ -158,7 +161,7 @@
     }
     display:flex;
     flex-direction: column;
-    h1, p {
+    h1 {
       text-align: center;
     }
     h1 {
@@ -186,6 +189,7 @@
       }
     }
   }
+
   .login-pf-signup {
     margin: $login-pf-signup-margin-top 0 0;
     font-size: ceil(($font-size-base * 1.25));
@@ -203,6 +207,10 @@
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
+    padding-bottom: $login-pf-page-footer-padding-bottom-mobile;
+      @media (min-width: $screen-sm-min) {
+        padding-bottom: $login-pf-page-footer-padding-bottom-desktop;
+      }
     &-links {
       display: flex;
       margin: $login-pf-page-footer-links-margin-top 0 0 0;
