@@ -2676,6 +2676,12 @@ select.selectpicker {
 .blank-slate-pf button {
   margin-bottom: 5px;
 }
+.blank-slate-pf.blank-slate-content-pf {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 20px;
+}
 .combobox-container.combobox-selected .glyphicon-remove {
   display: inline-block;
 }
