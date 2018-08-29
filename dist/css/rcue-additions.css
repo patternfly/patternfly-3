@@ -4277,6 +4277,10 @@ fieldset[disabled] .btn-experimental-pf.active {
 .filter-pf-select-dropdown .caret {
   font-style: normal;
 }
+.filter-pf-select-dropdown.filter-selected {
+  font-style: normal;
+  color: inherit;
+}
 .filter-pf-active-label {
   margin-right: 5px;
 }
