@@ -89,10 +89,7 @@
   },
   "release": {
     "branch": "master-dist",
-    "debug": false,
-    "verifyConditions": {
-      "path": "./node_modules/semantic-release/src/lib/plugin-noop.js"
-    }
+    "debug": false
   },
   "scripts": {
     "test": "grunt karma",
