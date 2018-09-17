@@ -88,7 +88,6 @@
     "patternfly-bootstrap-treeview": "~2.1.0"
   },
   "release": {
-    "branch": "master-dist",
     "debug": false
   },
   "scripts": {
