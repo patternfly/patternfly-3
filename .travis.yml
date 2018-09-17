@@ -28,11 +28,14 @@ script:
   - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
 
 after_success:
-  - 'if [[ "$TRAVIS_SECURE_ENV_VARS" = "true" && "$TRAVIS_BRANCH" = "master-dist" ]]; then
-       npm prune;
+  - 'if [[ "$TRAVIS_SECURE_ENV_VARS" = "true" && "$TRAVIS_BRANCH" = "master" ]]; then
        npm run semantic-release-prepare;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -p;
-       npm run semantic-release-publish;
+     fi'
+
+  - 'if [[ "$TRAVIS_SECURE_ENV_VARS" = "true" && "$TRAVIS_BRANCH" = "master-dist" ]]; then
+       npm prune;
+       npm run semantic-release;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_publish-webjar.sh -p;
        sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_release-all.sh -o;
      fi'
