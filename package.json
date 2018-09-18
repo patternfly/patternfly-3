@@ -89,10 +89,9 @@
   },
   "release": {
     "branch": "master-dist",
-    "debug": false,
-    "verifyConditions": {
-      "path": "./node_modules/semantic-release/src/lib/plugin-noop.js"
-    }
+    "publish": ["@semantic-release/npm", "@semantic-release/github"],
+    "npmPublish": false,
+    "debug": false
   },
   "scripts": {
     "test": "grunt karma",
@@ -104,7 +103,7 @@
     "start-patternfly": "grunt build-patternfly serve",
     "start-rcue": "grunt build-rcue serve",
     "grunt": "grunt",
-    "semantic-release": "semantic-release --prepare && npm publish && semantic-release --publish",
+    "semantic-release": "semantic-release",
     "semantic-release-publish": "semantic-release --publish",
     "semantic-release-prepare": "semantic-release --prepare",
     "commit": "git-cz",
