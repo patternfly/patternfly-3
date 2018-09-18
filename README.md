@@ -152,8 +152,8 @@ npm start
 or
 
 ```
-grunt serve                  # will build first by default
-grunt serve --skipRebuild    # flag would allow you to skip the rebuild to save some time
+grunt serve                 # will build first by default
+grunt serve --skipRebuild   # flag would allow you to skip the rebuild to save some time
 ```
 
 This local static asset server (i.e., [http://localhost:9000](http://localhost:9000)) has the advantage of having livereload integration. Thus, if you start the Gruntjs server, any changes you make to `.html` or `.less` files will be automatically reloaded into your browser and the changes reflected almost immediately. This has the obvious benefit of not having to refresh your browser and still be able to see the changes as you add or remove them from your development files.  Additionally, any changes made to Jekyll source files (`tests/pages/`) will trigger a Jekyll build.
