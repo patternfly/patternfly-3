@@ -152,7 +152,7 @@ npm start
 or
 
 ```
-grunt serve    # will build first by default
+grunt serve                  # will build first by default
 grunt serve --skipRebuild    # flag would allow you to skip the rebuild to save some time
 ```
 
