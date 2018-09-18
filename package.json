@@ -88,6 +88,9 @@
     "patternfly-bootstrap-treeview": "~2.1.0"
   },
   "release": {
+    "branch": "master-dist",
+    "publish": ["@semantic-release/npm", "@semantic-release/github"],
+    "npmPublish": false,
     "debug": false
   },
   "scripts": {
@@ -101,6 +104,7 @@
     "start-rcue": "grunt build-rcue serve",
     "grunt": "grunt",
     "semantic-release": "semantic-release",
+    "semantic-release-publish": "semantic-release --publish",
     "semantic-release-prepare": "semantic-release --prepare",
     "commit": "git-cz",
     "commitmsg": "commitlint -e",
