@@ -94,6 +94,9 @@
 .#{$icon-prefix}-domain:before {
   content: $pficon-var-domain;
 }
+.#{$icon-prefix}-drag-drop:before {
+  content: $pficon-var-drag-drop;
+}
 .#{$icon-prefix}-edit:before {
   content: $pficon-var-edit;
 }
