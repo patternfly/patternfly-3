@@ -95,7 +95,7 @@
       "@semantic-release/npm",
       {
         "path": "@semantic-release/exec",
-        "cmd": "sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -p -v ${nextRelease.version}"
+        "cmd": "sh -x ./node_modules/patternfly-eng-release/scripts/semantic-release/_bump.sh -p -s -v ${nextRelease.version}"
       },
       {
         "path": "@semantic-release/git",
