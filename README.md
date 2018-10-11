@@ -62,7 +62,7 @@ exclude: [
 Sass is included in the `dist/sass` directory. Just add `node_modules` to your build tool's Sass include paths then `@import 'patternfly/dist/sass/patternfly';` in your Sass to get started!
 
 #### Using Webpack?
-There are two touch points for integratign patternfly sass, one in your webpack conrfig, and another in your sass. Below is an example module rule for loading patternfly .scss files using webpack
+There are two touch points for integrating patternfly sass: one in your webpack config, and another in your sass. Below is an example module rule for loading patternfly .scss files using webpack.
 
 ```javascript
 module: {
