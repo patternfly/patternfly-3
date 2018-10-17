@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.54.8",
+  "version": "3.55.0",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "dependencies": {
@@ -58,7 +58,7 @@
     "npm-check-updates": "^2.12.1",
     "nsp": "^2.6.1",
     "open": "0.0.5",
-    "patternfly-eng-release": "^3.26.83",
+    "patternfly-eng-release": "^3.26.84",
     "pixrem": "^3.0.1",
     "require-all": "^2.2.0",
     "semantic-release": "^15.8.1",
