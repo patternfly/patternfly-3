@@ -4916,6 +4916,30 @@ fieldset[disabled] .btn-experimental-pf.active {
 .layout-pf-alt.layout-pf-alt-fixed-with-footer body {
   padding-bottom: 37px;
 }
+.loading-state-pf {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 12px;
+  height: 100%;
+}
+.loading-state-pf:before {
+  content: "";
+  height: 25%;
+  display: block;
+}
+.loading-state-pf.loading-state-pf-lg {
+  font-size: 15px;
+}
+.loading-state-pf.loading-state-pf-sm {
+  font-size: 9px;
+}
+.loading-state-pf.loading-state-pf-xs {
+  font-size: 6px;
+}
 a.disabled {
   color: #8b8d8f;
   cursor: not-allowed;
