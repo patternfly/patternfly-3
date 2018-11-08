@@ -3177,6 +3177,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   padding-left: 10px;
 }
 .card-pf-aggregate-status-notifications .fa,
+.card-pf-aggregate-status-notifications .fas,
+.card-pf-aggregate-status-notifications .far,
+.card-pf-aggregate-status-notifications .fab,
+.card-pf-aggregate-status-notifications .fal,
 .card-pf-aggregate-status-notifications .pficon {
   font-size: 18px;
   margin-right: 7px;
@@ -3210,6 +3214,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   padding: 20px 20px 10px;
 }
 .card-pf-footer a .fa,
+.card-pf-footer a .fas,
+.card-pf-footer a .far,
+.card-pf-footer a .fab,
+.card-pf-footer a .fal,
 .card-pf-footer a .pficon {
   margin-right: 5px;
 }
@@ -3221,6 +3229,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   position: relative;
 }
 .card-pf-link-with-icon .fa,
+.card-pf-link-with-icon .fas,
+.card-pf-link-with-icon .far,
+.card-pf-link-with-icon .fab,
+.card-pf-link-with-icon .fal,
 .card-pf-link-with-icon .pficon {
   font-size: 16px;
   left: 0;
@@ -3268,6 +3280,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   margin: 10px 0 0;
 }
 .card-pf-aggregate-status .card-pf-title .fa,
+.card-pf-aggregate-status .card-pf-title .fas,
+.card-pf-aggregate-status .card-pf-title .far,
+.card-pf-aggregate-status .card-pf-title .fab,
+.card-pf-aggregate-status .card-pf-title .fal,
 .card-pf-aggregate-status .card-pf-title .pficon {
   color: #292e34;
   font-size: 16px;
@@ -3290,6 +3306,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   display: inline-block;
 }
 .card-pf-aggregate-status-mini .card-pf-title .fa,
+.card-pf-aggregate-status-mini .card-pf-title .fas,
+.card-pf-aggregate-status-mini .card-pf-title .far,
+.card-pf-aggregate-status-mini .card-pf-title .fab,
+.card-pf-aggregate-status-mini .card-pf-title .fal,
 .card-pf-aggregate-status-mini .card-pf-title .pficon {
   font-size: 26px;
   margin-right: 0;
@@ -3378,6 +3398,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   color: #3f9c35;
 }
 .card-pf-view .card-pf-item .fa + .card-pf-item-text,
+.card-pf-view .card-pf-item .fas + .card-pf-item-text,
+.card-pf-view .card-pf-item .far + .card-pf-item-text,
+.card-pf-view .card-pf-item .fab + .card-pf-item-text,
+.card-pf-view .card-pf-item .fal + .card-pf-item-text,
 .card-pf-view .card-pf-item .pficon + .card-pf-item-text {
   margin-left: 10px;
 }
@@ -3391,6 +3415,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   margin-top: 15px;
 }
 .card-pf-view .card-pf-title .fa,
+.card-pf-view .card-pf-title .fas,
+.card-pf-view .card-pf-title .far,
+.card-pf-view .card-pf-title .fab,
+.card-pf-view .card-pf-title .fal,
 .card-pf-view .card-pf-title .pficon {
   font-size: 18px;
   margin-right: 2px;
@@ -3455,6 +3483,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   margin-bottom: 10px;
 }
 .card-pf-view.card-pf-view-xs .card-pf-title .fa,
+.card-pf-view.card-pf-view-xs .card-pf-title .fas,
+.card-pf-view.card-pf-view-xs .card-pf-title .far,
+.card-pf-view.card-pf-view-xs .card-pf-title .fab,
+.card-pf-view.card-pf-view-xs .card-pf-title .fal,
 .card-pf-view.card-pf-view-xs .card-pf-title .pficon {
   font-size: 14px;
   margin-right: 5px;
@@ -4121,6 +4153,10 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   z-index: 201;
 }
 .date-time-picker-pf .input-group-addon .fa,
+.date-time-picker-pf .input-group-addon .fas,
+.date-time-picker-pf .input-group-addon .far,
+.date-time-picker-pf .input-group-addon .fab,
+.date-time-picker-pf .input-group-addon .fal,
 .date-time-picker-pf .input-group-addon .pficon {
   width: 12px;
 }
@@ -4999,7 +5035,15 @@ a.disabled {
   padding-left: 20px;
 }
 .list-pf-chevron .fa,
-.list-pf-select .fa {
+.list-pf-select .fa,
+.list-pf-chevron .fas,
+.list-pf-select .fas,
+.list-pf-chevron .far,
+.list-pf-select .far,
+.list-pf-chevron .fab,
+.list-pf-select .fab,
+.list-pf-chevron .fal,
+.list-pf-select .fal {
   font-size: 22px;
 }
 .list-pf-content-flex {
@@ -5287,7 +5331,11 @@ a.disabled {
   line-height: 1em;
 }
 .list-view-pf-additional-info-item .pficon,
-.list-view-pf-additional-info-item .fa {
+.list-view-pf-additional-info-item .fa,
+.list-view-pf-additional-info-item .fas,
+.list-view-pf-additional-info-item .far,
+.list-view-pf-additional-info-item .fab,
+.list-view-pf-additional-info-item .fal {
   font-size: 16px;
   margin-right: 10px;
 }
@@ -5370,35 +5418,59 @@ a.disabled {
   line-height: 1em;
 }
 .list-view-pf-left .pficon,
-.list-view-pf-left .fa {
+.list-view-pf-left .fa,
+.list-view-pf-left .fas,
+.list-view-pf-left .far,
+.list-view-pf-left .fab,
+.list-view-pf-left .fal {
   border-radius: 50%;
   font-size: 2em;
 }
 .list-view-pf-left .pficon.list-view-pf-icon-md,
-.list-view-pf-left .fa.list-view-pf-icon-md {
+.list-view-pf-left .fa.list-view-pf-icon-md,
+.list-view-pf-left .fas.list-view-pf-icon-md,
+.list-view-pf-left .far.list-view-pf-icon-md,
+.list-view-pf-left .fab.list-view-pf-icon-md,
+.list-view-pf-left .fal.list-view-pf-icon-md {
   background-color: #f5f5f5;
   height: 50px;
   line-height: 50px;
   width: 50px;
 }
 .list-view-pf-left .pficon.list-view-pf-icon-danger,
-.list-view-pf-left .fa.list-view-pf-icon-danger {
+.list-view-pf-left .fa.list-view-pf-icon-danger,
+.list-view-pf-left .fas.list-view-pf-icon-danger,
+.list-view-pf-left .far.list-view-pf-icon-danger,
+.list-view-pf-left .fab.list-view-pf-icon-danger,
+.list-view-pf-left .fal.list-view-pf-icon-danger {
   background-color: #ffe6e6;
   color: #cc0000;
 }
 .list-view-pf-left .pficon.list-view-pf-icon-info,
-.list-view-pf-left .fa.list-view-pf-icon-info {
+.list-view-pf-left .fa.list-view-pf-icon-info,
+.list-view-pf-left .fas.list-view-pf-icon-info,
+.list-view-pf-left .far.list-view-pf-icon-info,
+.list-view-pf-left .fab.list-view-pf-icon-info,
+.list-view-pf-left .fal.list-view-pf-icon-info {
   color: #8b8d8f;
 }
 .list-view-pf-left .pficon.list-view-pf-icon-lg,
-.list-view-pf-left .fa.list-view-pf-icon-lg {
+.list-view-pf-left .fa.list-view-pf-icon-lg,
+.list-view-pf-left .fas.list-view-pf-icon-lg,
+.list-view-pf-left .far.list-view-pf-icon-lg,
+.list-view-pf-left .fab.list-view-pf-icon-lg,
+.list-view-pf-left .fal.list-view-pf-icon-lg {
   background-color: #f5f5f5;
   height: 60px;
   line-height: 60px;
   width: 60px;
 }
 .list-view-pf-left .pficon.list-view-pf-icon-sm,
-.list-view-pf-left .fa.list-view-pf-icon-sm {
+.list-view-pf-left .fa.list-view-pf-icon-sm,
+.list-view-pf-left .fas.list-view-pf-icon-sm,
+.list-view-pf-left .far.list-view-pf-icon-sm,
+.list-view-pf-left .fab.list-view-pf-icon-sm,
+.list-view-pf-left .fal.list-view-pf-icon-sm {
   border: 2px solid #39a5dc;
   font-size: 1.4em;
   height: 30px;
@@ -5406,17 +5478,29 @@ a.disabled {
   width: 30px;
 }
 .list-view-pf-left .pficon.list-view-pf-icon-sm:before,
-.list-view-pf-left .fa.list-view-pf-icon-sm:before {
+.list-view-pf-left .fa.list-view-pf-icon-sm:before,
+.list-view-pf-left .fas.list-view-pf-icon-sm:before,
+.list-view-pf-left .far.list-view-pf-icon-sm:before,
+.list-view-pf-left .fab.list-view-pf-icon-sm:before,
+.list-view-pf-left .fal.list-view-pf-icon-sm:before {
   display: block;
   line-height: 26px;
 }
 .list-view-pf-left .pficon.list-view-pf-icon-success,
-.list-view-pf-left .fa.list-view-pf-icon-success {
+.list-view-pf-left .fa.list-view-pf-icon-success,
+.list-view-pf-left .fas.list-view-pf-icon-success,
+.list-view-pf-left .far.list-view-pf-icon-success,
+.list-view-pf-left .fab.list-view-pf-icon-success,
+.list-view-pf-left .fal.list-view-pf-icon-success {
   background-color: #e9f4e9;
   color: #3f9c35;
 }
 .list-view-pf-left .pficon.list-view-pf-icon-warning,
-.list-view-pf-left .fa.list-view-pf-icon-warning {
+.list-view-pf-left .fa.list-view-pf-icon-warning,
+.list-view-pf-left .fas.list-view-pf-icon-warning,
+.list-view-pf-left .far.list-view-pf-icon-warning,
+.list-view-pf-left .fab.list-view-pf-icon-warning,
+.list-view-pf-left .fal.list-view-pf-icon-warning {
   background-color: #fdf2e5;
   color: #ec7a08;
 }
@@ -6336,6 +6420,14 @@ a.disabled {
 }
 .navbar-pf .navbar-utility li.dropdown > a > .fa,
 .navbar-pf .navbar-utility li.dropdown > button > .fa,
+.navbar-pf .navbar-utility li.dropdown > a .fas,
+.navbar-pf .navbar-utility li.dropdown > button .fas,
+.navbar-pf .navbar-utility li.dropdown > a .far,
+.navbar-pf .navbar-utility li.dropdown > button .far,
+.navbar-pf .navbar-utility li.dropdown > a .fab,
+.navbar-pf .navbar-utility li.dropdown > button .fab,
+.navbar-pf .navbar-utility li.dropdown > a .fal,
+.navbar-pf .navbar-utility li.dropdown > button .fal,
 .navbar-pf .navbar-utility li.dropdown > a .pficon,
 .navbar-pf .navbar-utility li.dropdown > button .pficon {
   line-height: 0;
@@ -6654,6 +6746,14 @@ a.disabled {
 .navbar-pf-alt .nav .nav-item-iconic:focus .caret,
 .navbar-pf-alt .nav .nav-item-iconic:hover .fa,
 .navbar-pf-alt .nav .nav-item-iconic:focus .fa,
+.navbar-pf-alt .nav .nav-item-iconic:hover .fas,
+.navbar-pf-alt .nav .nav-item-iconic:focus .fas,
+.navbar-pf-alt .nav .nav-item-iconic:hover .far,
+.navbar-pf-alt .nav .nav-item-iconic:focus .far,
+.navbar-pf-alt .nav .nav-item-iconic:hover .fab,
+.navbar-pf-alt .nav .nav-item-iconic:focus .fab,
+.navbar-pf-alt .nav .nav-item-iconic:hover .fal,
+.navbar-pf-alt .nav .nav-item-iconic:focus .fal,
 .navbar-pf-alt .nav .nav-item-iconic:hover .glyphicon,
 .navbar-pf-alt .nav .nav-item-iconic:focus .glyphicon,
 .navbar-pf-alt .nav .nav-item-iconic:hover .pficon,
@@ -6673,6 +6773,10 @@ a.disabled {
 }
 .navbar-pf-alt .nav .nav-item-iconic .caret,
 .navbar-pf-alt .nav .nav-item-iconic .fa,
+.navbar-pf-alt .nav .nav-item-iconic .fas,
+.navbar-pf-alt .nav .nav-item-iconic .far,
+.navbar-pf-alt .nav .nav-item-iconic .fab,
+.navbar-pf-alt .nav .nav-item-iconic .fal,
 .navbar-pf-alt .nav .nav-item-iconic .pficon {
   color: #d1d1d1;
   font-size: 16px;
@@ -6692,6 +6796,18 @@ a.disabled {
 .navbar-pf-alt .nav .open > .nav-item-iconic .fa,
 .navbar-pf-alt .nav .open > .nav-item-iconic:hover .fa,
 .navbar-pf-alt .nav .open > .nav-item-iconic:focus .fa,
+.navbar-pf-alt .nav .open > .nav-item-iconic .fas,
+.navbar-pf-alt .nav .open > .nav-item-iconic:hover .fas,
+.navbar-pf-alt .nav .open > .nav-item-iconic:focus .fas,
+.navbar-pf-alt .nav .open > .nav-item-iconic .far,
+.navbar-pf-alt .nav .open > .nav-item-iconic:hover .far,
+.navbar-pf-alt .nav .open > .nav-item-iconic:focus .far,
+.navbar-pf-alt .nav .open > .nav-item-iconic .fab,
+.navbar-pf-alt .nav .open > .nav-item-iconic:hover .fab,
+.navbar-pf-alt .nav .open > .nav-item-iconic:focus .fab,
+.navbar-pf-alt .nav .open > .nav-item-iconic .fal,
+.navbar-pf-alt .nav .open > .nav-item-iconic:hover .fal,
+.navbar-pf-alt .nav .open > .nav-item-iconic:focus .fal,
 .navbar-pf-alt .nav .open > .nav-item-iconic .pficon,
 .navbar-pf-alt .nav .open > .nav-item-iconic:hover .pficon,
 .navbar-pf-alt .nav .open > .nav-item-iconic:focus .pficon {
@@ -6800,6 +6916,10 @@ a.disabled {
 }
 .navbar-pf-vertical .nav .nav-item-iconic .caret,
 .navbar-pf-vertical .nav .nav-item-iconic .fa,
+.navbar-pf-vertical .nav .nav-item-iconic .fas,
+.navbar-pf-vertical .nav .nav-item-iconic .far,
+.navbar-pf-vertical .nav .nav-item-iconic .fab,
+.navbar-pf-vertical .nav .nav-item-iconic .fal,
 .navbar-pf-vertical .nav .nav-item-iconic .pficon {
   color: #d1d1d1;
   font-size: 16px;
@@ -6831,6 +6951,18 @@ a.disabled {
 .navbar-pf-vertical .nav .open > .nav-item-iconic .fa,
 .navbar-pf-vertical .nav .open > .nav-item-iconic:hover .fa,
 .navbar-pf-vertical .nav .open > .nav-item-iconic:focus .fa,
+.navbar-pf-vertical .nav .open > .nav-item-iconic .fas,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:hover .fas,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:focus .fas,
+.navbar-pf-vertical .nav .open > .nav-item-iconic .far,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:hover .far,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:focus .far,
+.navbar-pf-vertical .nav .open > .nav-item-iconic .fab,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:hover .fab,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:focus .fab,
+.navbar-pf-vertical .nav .open > .nav-item-iconic .fal,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:hover .fal,
+.navbar-pf-vertical .nav .open > .nav-item-iconic:focus .fal,
 .navbar-pf-vertical .nav .open > .nav-item-iconic .pficon,
 .navbar-pf-vertical .nav .open > .nav-item-iconic:hover .pficon,
 .navbar-pf-vertical .nav .open > .nav-item-iconic:focus .pficon {
@@ -6988,6 +7120,10 @@ a.disabled {
   background: #0088ce;
 }
 .nav-pf-vertical-alt .list-group-item .fa,
+.nav-pf-vertical-alt .list-group-item .fas,
+.nav-pf-vertical-alt .list-group-item .far,
+.nav-pf-vertical-alt .list-group-item .fab,
+.nav-pf-vertical-alt .list-group-item .fal,
 .nav-pf-vertical-alt .list-group-item .glyphicon,
 .nav-pf-vertical-alt .list-group-item .pficon {
   float: left;
@@ -7122,7 +7258,11 @@ a.disabled {
   padding: 10px 0;
 }
 .drawer-pf-action .btn-link .pficon,
-.drawer-pf-action .btn-link .fa {
+.drawer-pf-action .btn-link .fa,
+.drawer-pf-action .btn-link .fas,
+.drawer-pf-action .btn-link .far,
+.drawer-pf-action .btn-link .fab,
+.drawer-pf-action .btn-link .fal {
   margin-right: 3px;
 }
 .drawer-pf-action .btn-link .pficon-close {
@@ -7358,7 +7498,11 @@ a.disabled {
     top: 1px;
   }
 }
-.sidebar-pf .nav-pills > li.active > a .fa {
+.sidebar-pf .nav-pills > li.active > a .fa,
+.sidebar-pf .nav-pills > li.active > a .fas,
+.sidebar-pf .nav-pills > li.active > a .far,
+.sidebar-pf .nav-pills > li.active > a .fab,
+.sidebar-pf .nav-pills > li.active > a .fal {
   color: #fff;
 }
 .sidebar-pf .nav-pills > li > a {
@@ -7374,7 +7518,11 @@ a.disabled {
   background: #def3ff;
   border-color: #bee1f4;
 }
-.sidebar-pf .nav-pills > li > a .fa {
+.sidebar-pf .nav-pills > li > a .fa,
+.sidebar-pf .nav-pills > li > a .fas,
+.sidebar-pf .nav-pills > li > a .far,
+.sidebar-pf .nav-pills > li > a .fab,
+.sidebar-pf .nav-pills > li > a .fal {
   color: #6a7079;
   font-size: 15px;
   margin-right: 10px;
@@ -7788,6 +7936,10 @@ table.dataTable th:active {
   padding: 0;
 }
 .time-picker-pf .input-group-addon .fa,
+.time-picker-pf .input-group-addon .fas,
+.time-picker-pf .input-group-addon .far,
+.time-picker-pf .input-group-addon .fab,
+.time-picker-pf .input-group-addon .fal,
 .time-picker-pf .input-group-addon .pficon {
   width: 12px;
 }
@@ -8253,6 +8405,10 @@ table.dataTable th:active {
   }
 }
 .nav-pf-vertical .list-group-item > a .fa,
+.nav-pf-vertical .list-group-item > a .fas,
+.nav-pf-vertical .list-group-item > a .far,
+.nav-pf-vertical .list-group-item > a .fab,
+.nav-pf-vertical .list-group-item > a .fal,
 .nav-pf-vertical .list-group-item > a .glyphicon,
 .nav-pf-vertical .list-group-item > a .pficon {
   color: #72767b;
@@ -8277,6 +8433,18 @@ table.dataTable th:active {
 .nav-pf-vertical .list-group-item.active > a .fa,
 .nav-pf-vertical .list-group-item:hover > a .fa,
 .nav-pf-vertical .list-group-item > a:focus .fa,
+.nav-pf-vertical .list-group-item.active > a .fas,
+.nav-pf-vertical .list-group-item:hover > a .fas,
+.nav-pf-vertical .list-group-item > a:focus .fas,
+.nav-pf-vertical .list-group-item.active > a .far,
+.nav-pf-vertical .list-group-item:hover > a .far,
+.nav-pf-vertical .list-group-item > a:focus .far,
+.nav-pf-vertical .list-group-item.active > a .fab,
+.nav-pf-vertical .list-group-item:hover > a .fab,
+.nav-pf-vertical .list-group-item > a:focus .fab,
+.nav-pf-vertical .list-group-item.active > a .fal,
+.nav-pf-vertical .list-group-item:hover > a .fal,
+.nav-pf-vertical .list-group-item > a:focus .fal,
 .nav-pf-vertical .list-group-item.active > a .glyphicon,
 .nav-pf-vertical .list-group-item:hover > a .glyphicon,
 .nav-pf-vertical .list-group-item > a:focus .glyphicon,
@@ -8331,6 +8499,10 @@ table.dataTable th:active {
   margin: 30px 20px 10px 20px;
 }
 .nav-pf-vertical.hidden-icons-pf > .list-group > .list-group-item > a .fa,
+.nav-pf-vertical.hidden-icons-pf > .list-group > .list-group-item > a .fas,
+.nav-pf-vertical.hidden-icons-pf > .list-group > .list-group-item > a .far,
+.nav-pf-vertical.hidden-icons-pf > .list-group > .list-group-item > a .fab,
+.nav-pf-vertical.hidden-icons-pf > .list-group > .list-group-item > a .fal,
 .nav-pf-vertical.hidden-icons-pf > .list-group > .list-group-item > a .glyphicon,
 .nav-pf-vertical.hidden-icons-pf > .list-group > .list-group-item > a .pficon {
   display: none;
@@ -8365,7 +8537,11 @@ table.dataTable th:active {
   text-align: center;
 }
 .nav-pf-vertical .badge-container-pf .badge .pficon,
-.nav-pf-vertical .badge-container-pf .badge .fa {
+.nav-pf-vertical .badge-container-pf .badge .fa,
+.nav-pf-vertical .badge-container-pf .badge .fas,
+.nav-pf-vertical .badge-container-pf .badge .far,
+.nav-pf-vertical .badge-container-pf .badge .fab,
+.nav-pf-vertical .badge-container-pf .badge .fal {
   font-size: 14px;
   height: 20px;
   line-height: 1.66666667;

@@ -9788,6 +9788,10 @@ h6 .label {
   display: flex;
 }
 .message-dialog-pf .modal-body .fa,
+.message-dialog-pf .modal-body .fas,
+.message-dialog-pf .modal-body .far,
+.message-dialog-pf .modal-body .fab,
+.message-dialog-pf .modal-body .fal,
 .message-dialog-pf .modal-body .pficon {
   font-size: 30px;
   margin-right: 15px;
@@ -10414,6 +10418,10 @@ td > .progress:first-child:last-child {
   margin-right: 5px;
 }
 .progress-description .fa,
+.progress-description .fas,
+.progress-description .far,
+.progress-description .fab,
+.progress-description .fal,
 .progress-description .pficon {
   font-size: 14px;
   margin-right: 3px;
