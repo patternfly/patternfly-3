@@ -567,6 +567,10 @@ $panel-success-border:                                              $brand-succe
 $panel-success-heading-bg:                                          $brand-success !default;
 $panel-warning-border:                                              $brand-warning !default;
 $panel-warning-heading-bg:                                          $brand-warning !default;
+$spinner-size:                                                      ($font-size-base * 2) !default;
+$spinner-size-lg:                                                   ($font-size-base * 2.5) !default;
+$spinner-size-sm:                                                   ($font-size-base * 1.5) !default;
+$spinner-size-xs:                                                   $font-size-base !default;
 $state-warning-text:                                                $brand-warning !default;
 $state-danger-text:                                                 $brand-danger !default;
 // Reference variable declared in block above
