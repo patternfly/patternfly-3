@@ -56,7 +56,7 @@
     border-left: 1px solid $color-pf-black-300;
     padding-left: ($grid-gutter-width/2);
   }
-  .fa {
+  .fa, .fas, .far, .fab, .fal {
     font-size: 22px;
   }
 }
