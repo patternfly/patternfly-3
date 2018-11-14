@@ -4338,6 +4338,25 @@ fieldset[disabled] .btn-experimental-pf.active {
   right: 0;
   z-index: 1030;
 }
+.hint-block-pf {
+  background-color: #def3ff;
+  color: #004368;
+  padding: 10px 15px 15px;
+}
+.hint-block-pf .hint-block-pf-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.hint-block-pf .hint-block-pf-body {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.hint-block-pf > .btn {
+  margin-top: 30px;
+}
 @font-face {
   font-family: "PatternFlyIcons-webfont";
   src: url("../fonts/PatternFlyIcons-webfont.eot");
