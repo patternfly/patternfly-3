@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en-us" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+  <head>
+    <title>List View - Inline Edit - PatternFly</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <!-- iPad retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../img/apple-touch-icon-precomposed-152.png">
+    <!-- iPad retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/apple-touch-icon-precomposed-144.png">
+    <!-- iPad non-retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../img/apple-touch-icon-precomposed-76.png">
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/apple-touch-icon-precomposed-72.png">
+    <!-- iPhone 6 Plus icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon-precomposed-180.png">
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/apple-touch-icon-precomposed-114.png">
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../img/apple-touch-icon-precomposed-57.png">
+    <link rel="stylesheet" href="../css/patternfly.min.css" >
+    <link rel="stylesheet" href="../css/patternfly-additions.min.css" >
+      <link href="tests.css" rel="stylesheet" media="screen, print">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
+    <script src="../js/patternfly.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-pf" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="..//img/brand.svg" alt="PatternFly Enterprise Application" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-utility">
+          <li class="dropdown">
+            <button class="btn btn-link nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span title="Help" class="fa pficon-help dropdown-title"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#0">Help</a></li>
+              <li><a href="#0">About</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+              <span class="pficon pficon-user"></span>
+              <span class="dropdown-title">
+                Brian Johnson <b class="caret"></b>
+              </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#0">Link</a>
+              </li>
+              <li>
+                <a href="#0">Another link</a>
+              </li>
+              <li>
+                <a href="#0">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#0">More options</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#0">Link</a>
+                  </li>
+                  <li>
+                    <a href="#0">Another link</a>
+                  </li>
+                  <li>
+                    <a href="#0">Something else here</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li>
+                    <a href="#0">Separated link</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#0">One more separated link</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#0">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-primary">
+            <li>
+              <a href="basic.html">Basic</a>
+            </li>
+            <li>
+              <a href="bootstrap-treeview-2.html">Tree View</a>
+            </li>
+            <li>
+              <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+              <a href="form.html">Form</a>
+            </li>
+            <li>
+              <a href="tab.html">Tab</a>
+            </li>
+            <li>
+              <a href="typography-2.html">Typography</a>
+            </li>
+            <li>
+              <a href="card-view-multi-select.html">Card View - Multi Select</a>
+            </li>
+            <li>
+              <a href="card-view-single-select.html">Card View - Single Select</a>
+            </li>
+            <li>
+              <a href="cards.html">Cards</a>
+            </li>
+            <li>
+              <a href="pagination-card-view.html">Pagination - Card View</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+      <div class="container-fluid">
+        <div class="row toolbar-pf">
+          <div class="col-sm-12">
+            <form class="toolbar-pf-actions">
+              <div class="form-group toolbar-pf-filter">
+                <label class="sr-only" for="filter">Name</label>
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" id="input-filter-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li class="selected"><a href="#">Name</a></li>
+                      <li><a href="#">Type</a></li>
+                      <li><a href="#">Color</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                  <input type="text" class="form-control" id="filter" placeholder="Filter By Name...">
+                </div><!-- /input-group -->
+              </div>
+              <div class="form-group">
+                <div class="dropdown btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" id="filter-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="selected"><a href="#">Name</a></li>
+                    <li><a href="#">Type</a></li>
+                    <li><a href="#">Last Modified</a></li>
+                  </ul>
+                </div>
+                <button class="btn btn-link" type="button">
+                  <span class="fa fa-sort-alpha-asc"></span>
+                </button>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-default" type="button">Action</button>
+                <button class="btn btn-default" type="button">Action</button>
+                <div class="dropdown btn-group  dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another Action</a></li>
+    <li><a href="#">Something Else Here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated Link</a></li>
+  </ul>
+</div>
+
+              </div>
+              
+              
+              <div class="form-group">
+                <button class="btn btn-primary" id="add-a-row" type="button">Create</button>
+              </div>
+              
+              <div class="toolbar-pf-action-right">
+                <div class="form-group toolbar-pf-find">
+                  <button class="btn btn-link btn-find" type="button">
+                    <span class="fa fa-search"></span>
+                  </button>
+                  <div class="find-pf-dropdown-container">
+                    <input type="text" class="form-control" id="find" placeholder="Find By Keyword...">
+                    <div class="find-pf-buttons">
+                      <span class="find-pf-nums">1 of 3</span>
+                      <button class="btn btn-link" type="button">
+                        <span class="fa fa-angle-up"></span>
+                      </button>
+                      <button class="btn btn-link" type="button">
+                        <span class="fa fa-angle-down"></span>
+                      </button>
+                      <button class="btn btn-link btn-find-close" type="button">
+                        <span class="pficon pficon-close"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group toolbar-pf-view-selector">
+                  <button class="btn btn-link "><i class="fa fa-th"></i></button>
+                  <button class="btn btn-link "><i class="fa fa-th-large"></i></button>
+                  <button class="btn btn-link active"><i class="fa fa-th-list"></i></button>
+                </div>
+              </div>
+            </form>
+            <div class="row toolbar-pf-results">
+              <div class="col-sm-12">
+                <h5>40 Results</h5>
+                <p>Active filters:</p>
+                <ul class="list-inline">
+                  <li>
+                    <span class="label label-info">
+                      Name: nameofthething
+                      <a href="#"><span class="fa fa-times"></span></a>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="label label-info">
+                      Name: nameofthething
+                      <a href="#"><span class="fa fa-times"></span></a>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="label label-info">
+                      Name: nameofthething
+                      <a href="#"><span class="fa fa-times"></span></a>
+                    </span>
+                  </li>
+                </ul>
+                <p><a href="#">Clear All Filters</a></p>
+              </div><!-- /col -->
+            </div><!-- /row -->
+          </div><!-- /col -->
+        </div><!-- /row -->
+      </div><!-- /container -->
+
+<div class="container-fluid">
+<div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="confirmDialogLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title" id="confirmDialogLabel">Continue without saving</h4>
+      </div>
+      <div class="modal-body">
+        <span>Are you sure you want to leave without saving your changes ?</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default confirm-dialog-pf-cancel" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary confirm-dialog-pf-ok">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="list-group list-view-pf list-view-pf-view">
+  <script id="row-template" type="text/template">
+    <div class="list-group-item list-view-pf-editable">
+      <div class="list-view-pf-main-info">
+        <div class="list-view-pf-left">
+          <span class="fa fa-plane list-view-pf-icon-sm"></span>
+        </div>
+        <div class="list-view-pf-body">
+          <div class="list-view-pf-description">
+            <div class="list-group-item-text list-view-pf-value"></div>
+            <input type="text" value="Event XXX - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+          </div>
+          <div class="list-view-pf-additional-info">
+            <div class="list-view-pf-additional-info-item">
+              <span class="list-view-pf-value"></span>
+              <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+                <option>Host</option>
+                <option>Cluster</option>
+                <option>Node</option>
+                <option>Image</option>
+              </select>
+            </div>
+            <div class="list-view-pf-additional-info-item">
+              <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date"></span>
+            </div>
+            <div class="list-view-pf-additional-info-item">
+              <span class="list-view-pf-value"></span>
+              <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state" autocomplete="off" checked>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-view-pf-actions">
+        <button class="btn btn-default list-view-pf-edit">Edit</button>
+        <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another Action</a></li>
+    <li><a href="#">Something Else Here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated Link</a></li>
+  </ul>
+</div>
+
+        <button type="button" class="btn btn-link list-view-pf-save" aria-label="Save"><i class="fa fa-check"></i></button>
+        <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+      </div>
+    </div>
+  </script>
+  <div class="list-group-item list-view-pf-editable list-view-pf-create active hidden">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <input type="text" value="Event XXX - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option selected>Host</option>
+              <option>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date"></span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button type="button" class="btn btn-link list-view-pf-save" aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event One - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event One - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Host</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option selected>Host</option>
+              <option>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Jan 11,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Enabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another Action</a></li>
+    <li><a href="#">Something Else Here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated Link</a></li>
+  </ul>
+</div>
+
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-magic list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Two - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Two - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Cluster</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option>Host</option>
+              <option selected>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Aug 8,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Enabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another Action</a></li>
+    <li><a href="#">Something Else Here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated Link</a></li>
+  </ul>
+</div>
+
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-gamepad list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Three - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Three - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Node</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option>Host</option>
+              <option>Cluster</option>
+              <option selected>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Feb 25,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Disabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another Action</a></li>
+    <li><a href="#">Something Else Here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated Link</a></li>
+  </ul>
+</div>
+
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-linux list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Four - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Four - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Image</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option>Host</option>
+              <option>Cluster</option>
+              <option>Node</option>
+              <option selected>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Dec 10,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Enabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another Action</a></li>
+    <li><a href="#">Something Else Here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated Link</a></li>
+  </ul>
+</div>
+
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-briefcase list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Five - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Five - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Host</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off" aria-label="choose type">
+              <option selected>Host</option>
+              <option>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Oct 20,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Enabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another Action</a></li>
+    <li><a href="#">Something Else Here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated Link</a></li>
+  </ul>
+</div>
+
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+  <div class="list-group-item list-view-pf-editable">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-coffee list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-text list-view-pf-value">
+            Event Six - Sed ut perspiciatis unde omnis iste natus
+          </div>
+          <input type="text" value="Event Six - Sed ut perspiciatis unde omnis iste natus" class="list-view-pf-editor list-view-pf-textbox list-view-pf-title" autocomplete="off" aria-label="edit title"/>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Cluster</span>
+            <select class="selectpicker list-view-pf-editor list-view-pf-type" autocomplete="off">
+              <option>Host</option>
+              <option selected>Cluster</option>
+              <option>Node</option>
+              <option>Image</option>
+            </select>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value list-view-pf-readonly list-view-pf-date">Sept 18,2017</span>
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="list-view-pf-value">Disabled</span>
+            <input type="checkbox" class="list-view-pf-switch list-view-pf-editor list-view-pf-state"  autocomplete="off">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default list-view-pf-edit">Edit</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another Action</a></li>
+    <li><a href="#">Something Else Here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated Link</a></li>
+  </ul>
+</div>
+
+      <button type="button" class="btn btn-link list-view-pf-save" disabled aria-label="Save"><i class="fa fa-check"></i></button>
+      <button type="button" class="btn btn-link list-view-pf-cancel" aria-label="Cancel"><i class="pficon pficon-close"></i></button>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    //Initialize Bootstrap Switch
+    function initBootstrapSwitch($cbs) {
+      $cbs.bootstrapSwitch()
+      .each(function (i, cb) {
+        $(cb).closest('.bootstrap-switch-wrapper').attr({
+          'tabindex': 0,
+          'role': 'checkbox',
+          'aria-checked': $(cb).prop('checked'),
+          'aria-label': 'switch state'
+        });
+      });
+    }
+    initBootstrapSwitch($('.list-view-pf-switch'));
+    $('.list-view-pf').on('keydown', '.bootstrap-switch-wrapper', function (e) {
+      if (e.which === 32) {
+        e.preventDefault();
+      }
+    });
+    $('.list-view-pf').on('keyup', '.bootstrap-switch-wrapper', function (e) {
+      if (e.which === 13 || e.which === 32) {
+        $(this).find('.list-view-pf-switch').bootstrapSwitch('toggleState');
+      }
+    });
+
+    // toggle dropdown menu
+    $('.list-view-pf').on('show.bs.dropdown', '.list-view-pf-actions', function () {
+      var $this = $(this);
+      var $dropdown = $this.find('.dropdown');
+      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+      $dropdown.toggleClass('dropup', space < 10);
+    });
+
+    $('.list-view-pf-editable').find('.list-view-pf-editor:not(div)').each(function () {
+      var $this = $(this);
+      $this.data('old-value', $this.is(':checkbox') ? $this.is(':checked') : $this.val());
+    });
+
+    function editNewRow () {
+      $('.list-view-pf-create').removeClass('hidden')
+        .find('.list-view-pf-date').text('Mar 13,2018')
+        .end().find('.list-view-pf-textbox').trigger('select');
+      $('.list-view-pf-editable.active:not(.list-view-pf-create)').removeClass('active');
+    }
+
+    $('#confirmDialog').on('shown.bs.modal', function () {
+      $(this).find('.confirm-dialog-pf-cancel').trigger('focus');
+    })
+
+    // trigger create state
+    $('#add-a-row').on('click', function () {
+      if (!$('.list-view-pf-create.hidden').length) {
+        return;
+      }
+      var $activeSaveButton = $('.list-view-pf-save:not(:disabled):not(:hidden)');
+      if ($activeSaveButton.length) {
+        $('#confirmDialog')
+          .data('to-edit', $('.list-view-pf-create')).modal('show');
+      } else {
+        editNewRow();
+      }
+    });
+
+    function editExistingRow($clickRow) {
+      $('.list-view-pf-create').addClass('hidden');
+      $('.list-view-pf-editable.active:not(.list-view-pf-create)').removeClass('active');
+      $clickRow.addClass('active').find('.list-view-pf-textbox').trigger('select');
+    }
+
+    // trigger edit state
+    $('.list-view-pf').on('click', '.list-view-pf-edit', function () {
+      var $clickRow = $(this).closest('.list-view-pf-editable');
+      var $activeSaveButton = $('.list-view-pf-save:not(:disabled):not(:hidden)');
+      if ($activeSaveButton.length) {
+        $('#confirmDialog')
+          .data('to-edit', $clickRow).modal('show');
+      } else {
+        editExistingRow($clickRow);
+      }
+    });
+
+    // close active row on clicking away
+    $('body').on('click', function (e) {
+      var $target = $(e.target);
+      var $activeRow = $('.list-view-pf-editable.active:not(.hidden)');
+      if ($activeRow.length &&
+        e.target.id !== 'add-a-row' &&
+        !$target.is('.list-view-pf-edit') &&
+        !$target.closest('.modal').length &&
+        !$target.closest('.list-view-pf-editable.active', '.list-view-pf').length) {
+        if ($activeRow.find('.list-view-pf-save:not(:disabled)').length) {
+          $('#confirmDialog')
+            .data('to-edit', null).modal('show');
+        } else {
+          $activeRow.find('.list-view-pf-cancel').trigger('click');
+        }
+      }
+    });
+
+    function monitorValueChange (e) {
+      var $row = $(e.target).closest('.list-view-pf-editable');
+      var changed = false;
+      $row.find('.list-view-pf-editor:not(div)').each(function(index, editor) {
+        if (($(editor).is(':checkbox') && $(editor).data('old-value') !== $(editor).is(':checked')) ||
+          (!$(editor).is(':checkbox') && $(editor).data('old-value') !== $(editor).val().trim())) {
+            changed = true;
+            return false;
+          }
+      });
+      $row.find('.list-view-pf-save').prop('disabled', !changed);
+      if (e.type === 'switchChange') {
+        $row.find('.bootstrap-switch-wrapper').attr('aria-checked', arguments[1]);
+      }
+    }
+
+    $('.list-view-pf').on('input changed.bs.select switchChange.bootstrapSwitch', '.list-view-pf-editor:not(div)', monitorValueChange);
+
+    function keepValues($row, titleVal, typeVal, stateVal) {
+      $row.find('.list-view-pf-title').data('old-value', titleVal)
+        .siblings('.list-view-pf-value').text(titleVal);
+      $row.find('select.list-view-pf-type').data('old-value', typeVal)
+        .closest('.list-view-pf-additional-info-item').find('.list-view-pf-value').text(typeVal);
+      $row.find('.list-view-pf-state').data('old-value', stateVal)
+        .closest('.list-view-pf-additional-info-item').find('.list-view-pf-value').text(stateVal ? 'Enabled' : 'Disabled');
+    }
+
+    function setValues($row, titleVal, typeVal, stateVal) {
+      $row.find('.list-view-pf-title').val(titleVal);
+      $row.find('select.list-view-pf-type').selectpicker('val', typeVal);
+      $row.find('.list-view-pf-state').bootstrapSwitch('state', stateVal, true);
+    }
+
+    $('.list-view-pf').on('click', '.list-view-pf-save', function (e) {
+      var $row = $(this).closest('.list-view-pf-editable');
+      var $title = $row.find('.list-view-pf-title');
+      var $type = $row.find('select.list-view-pf-type');
+      var $state = $row.find('.list-view-pf-state');
+      var titleVal = $title.val().trim();
+      var typeVal = $type.val();
+      var stateVal = $state.is(':checked');
+
+      if ($row.is('.list-view-pf-create')) {
+        var $newRow;
+        $row.addClass('hidden').find('.list-view-pf-save').prop('disabled', false);
+        setValues($row, 'Event XXX - Sed ut perspiciatis unde omnis iste natus', 'Host', true);
+        $row.after($('#row-template').html());
+        $newRow = $row.next();
+        keepValues($newRow, titleVal, typeVal, stateVal);
+        $newRow.find('.list-view-pf-save').prop('disabled', true);
+        $newRow.find('.selectpicker').selectpicker('render');
+        initBootstrapSwitch($newRow.find('.list-view-pf-switch'));
+        setValues($newRow, titleVal, typeVal, stateVal);
+        $newRow.find('.list-view-pf-date').text('Mar 13,2018');
+      } else {
+        $row.removeClass('active').find('.list-view-pf-save').prop('disabled', true);
+        keepValues($row, titleVal, typeVal, stateVal);
+      }
+    });
+
+    $('.list-view-pf').on('click', '.list-view-pf-cancel', function () {
+      var $row = $(this).closest('.list-view-pf-editable');
+      setValues($row, $row.find('.list-view-pf-title').data('old-value'), $row.find('select.list-view-pf-type').data('old-value'), $row.find('.list-view-pf-state').data('old-value'));
+      if ($row.is('.list-view-pf-create')) {
+        $row.addClass('hidden');
+      } else {
+        $row.removeClass('active').find('.list-view-pf-save').prop('disabled', true);
+      }
+    });
+
+    $('#confirmDialog').on('click', '.confirm-dialog-pf-ok', function (e) {
+      var $confirm = $(e.delegateTarget);
+      var $toEdit = $confirm.data('to-edit');
+      $confirm.modal('hide');
+      $('.list-view-pf-save:not(:disabled):not(:hidden)').siblings('.list-view-pf-cancel').trigger('click');
+      if (!$toEdit) {
+        return;
+      }
+      if ($toEdit.is('.list-view-pf-create')) {
+        editNewRow();
+      } else {
+        editExistingRow($toEdit);
+      }
+    });
+
+    $('#confirmDialog').on('click', '.confirm-dialog-pf-cancel, .close', function (e) {
+      $(e.delegateTarget).modal('hide');
+      $('.list-view-pf-save:not(:disabled):not(:hidden)').trigger('focus');
+    });
+
+    $('#confirmDialog').on('keydown', '.confirm-dialog-pf-ok', function (e) {
+      if (e.which === 9) {
+        e.preventDefault();
+        $(e.delegateTarget).find('.modal-header .close').trigger('focus');
+      }
+    });
+
+    $('#confirmDialog').on('keydown', '.close', function (e) {
+      if (e.which === 9) {
+        e.preventDefault();
+        $(e.delegateTarget).find('.confirm-dialog-pf-cancel').trigger('focus');
+      }
+    });
+  });
+</script>
+</div>
+
+  </body>
+</html>
