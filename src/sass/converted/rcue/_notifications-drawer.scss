@@ -217,7 +217,7 @@
     top: $drawer-pf-top-vertical; //menu height;
       @media (max-width: $screen-xs-max) {
         width:100%;
-        height: calc(unquote("100vh - #{$drawer-pf-top-vertical}"));
+        height: unquote("calc(100vh - #{$drawer-pf-top-vertical})");
       }
 
   }
@@ -242,8 +242,8 @@
     border-top: 0;
     @media (max-width: $screen-xs-max) {
       width:100%;
-      height: calc(unquote("100vh - #{$drawer-pf-top-horizontal} - 32px"));
-      top:calc(unquote("#{$drawer-pf-top-horizontal} + 10px"));
+      height: unquote("calc(100vh - #{$drawer-pf-top-horizontal} - 32px)");
+      top: unquote("calc(#{$drawer-pf-top-horizontal} + 10px)");
     }
   }
   .drawer-pf-trigger-icon { cursor: pointer; }
