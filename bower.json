@@ -22,9 +22,9 @@
     "patternfly.spec.in"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.7",
+    "bootstrap": "~3.4.0",
     "bootstrap-datepicker": "^1.7.1",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.0",
     "bootstrap-select": "~1.12.2",
     "bootstrap-slider": "seiyria-bootstrap-slider#^9.9.0",
     "bootstrap-switch": "<=3.3.3",
