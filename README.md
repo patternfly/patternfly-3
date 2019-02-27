@@ -470,4 +470,4 @@ Official tracking of bugs occurs in Jira.  See https://patternfly.atlassian.net/
 
 ## License
 
-Modifications to Bootstrap are copyright 2013 Red Hat, Inc. and licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+Modifications to Bootstrap are copyright 2019 Red Hat, Inc. and licensed under the [MIT License](./LICENSE.txt).
