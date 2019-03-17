@@ -25,7 +25,7 @@
     "bootstrap": "~3.4.0",
     "bootstrap-datepicker": "^1.7.1",
     "bootstrap-sass": "^3.4.0",
-    "bootstrap-select": "~1.12.2",
+    "bootstrap-select": "~1.13.10",
     "bootstrap-slider": "seiyria-bootstrap-slider#^9.9.0",
     "bootstrap-switch": "<=3.3.3",
     "bootstrap-touchspin": "~3.1.1",
