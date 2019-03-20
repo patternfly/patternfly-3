@@ -2,7 +2,7 @@
   "name": "patternfly",
   "version": "0.0.0-semantically-released",
   "author": "Red Hat",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "~3.4.0",
     "font-awesome": "^4.7.0",
