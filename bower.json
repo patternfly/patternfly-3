@@ -2,7 +2,7 @@
   "name": "patternfly",
   "version": "3.59.1",
   "authors": "Red Hat",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "homepage": "https://www.patternfly.org",
   "main": [
     "dist/js/patternfly.js",
