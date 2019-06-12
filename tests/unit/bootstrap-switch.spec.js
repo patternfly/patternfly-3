@@ -30,12 +30,12 @@ describe("bootstrap switch test suite", function () {
 
   it('should toggle the first switch to ON', function (done) {
 
-    var onButton = $('.btn-group:first button[data-switch-value="true"]');
+    var onButton = $('.btn-group').first().find('button[data-switch-value="true"]').first();
 
     onButton.click();
 
     setTimeout(function () {
-      var switch1 = $('.bootstrap-switch:first');
+      var switch1 = $('.bootstrap-switch').first();
       expect(switch1).toHaveClass('bootstrap-switch-on');
       done();
     }, globals.wait);
