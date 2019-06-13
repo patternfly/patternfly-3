@@ -8,8 +8,8 @@
   patternfly.pfSetDonutChartTitle = function (selector, primary, secondary) {
     var donutChartRightTitle = window.d3.select(selector).select('text.c3-chart-arcs-title');
     donutChartRightTitle.text("");
-    donutChartRightTitle.insert('tspan').text(primary).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-    donutChartRightTitle.insert('tspan').text(secondary).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+    donutChartRightTitle.insert('tspan').text(primary).classed('donut-title-big-pf', true).attr('y', 0).attr('x', 0);
+    donutChartRightTitle.insert('tspan').text(secondary).classed('donut-title-small-pf', true).attr('y', 20).attr('x', 0);
   };
 
   patternfly.pfDonutTooltipContents = function (d, defaultTitleFormat, defaultValueFormat, color) {

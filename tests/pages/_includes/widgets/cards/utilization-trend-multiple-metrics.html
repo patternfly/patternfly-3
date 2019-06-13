@@ -46,8 +46,8 @@
           var chart1 = c3.generate(donutConfig);
           var donutChartTitle = d3.select("#{{include.id3}}").select('text.c3-chart-arcs-title');
           donutChartTitle.text("");
-          donutChartTitle.insert('tspan').text("950").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-          donutChartTitle.insert('tspan').text("MHz Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+          donutChartTitle.insert('tspan').text("950").classed('donut-title-big-pf', true).attr('y', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text("MHz Used").classed('donut-title-small-pf', true).attr('y', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
           sparklineConfig.bindto = '#{{include.id4}}';
@@ -99,8 +99,8 @@
           var chart3 = c3.generate(donutConfig);
           var donutChartTitle = d3.select("#{{include.id5}}").select('text.c3-chart-arcs-title');
           donutChartTitle.text("");
-          donutChartTitle.insert('tspan').text("176").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-          donutChartTitle.insert('tspan').text("GB Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+          donutChartTitle.insert('tspan').text("176").classed('donut-title-big-pf', true).attr('y', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text("GB Used").classed('donut-title-small-pf', true).attr('y', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
           sparklineConfig.bindto = '#{{include.id6}}';
@@ -152,8 +152,8 @@
           var chart5 = c3.generate(donutConfig);
           var donutChartTitle = d3.select("#{{include.id7}}").select('text.c3-chart-arcs-title');
           donutChartTitle.text("");
-          donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-          donutChartTitle.insert('tspan').text("Gbps Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+          donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('y', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text("Gbps Used").classed('donut-title-small-pf', true).attr('y', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
           sparklineConfig.bindto = '#{{include.id8}}';
