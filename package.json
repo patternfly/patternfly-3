@@ -71,7 +71,7 @@
     "bootstrap-sass": "^3.4.0",
     "bootstrap-select": "1.12.2",
     "bootstrap-slider": "^9.9.0",
-    "bootstrap-switch": "~3.3.4",
+    "bootstrap-switch": "3.3.4",
     "bootstrap-touchspin": "~3.1.1",
     "c3": "~0.4.11",
     "d3": "~3.5.17",
