@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/Patternfly/patternfly'
   s.license  = 'Apache-2.0'
 
-  s.add_runtime_dependency 'sass', '~> 3.4.15'
+  s.add_runtime_dependency 'sassc', '~> 3.6.1'
   s.add_runtime_dependency 'bootstrap-sass', '~> 3.4.0'
   s.add_runtime_dependency 'font-awesome-sass', '~> 4.6.2'
 
