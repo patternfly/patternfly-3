@@ -56,7 +56,6 @@
     "matchdep": "^2.0.0",
     "mz": "^2.6.0",
     "npm-check-updates": "^3.1.21",
-    "nsp": "^3.2.1",
     "open": "^6.4.0",
     "patternfly-eng-release": "^3.26.46",
     "pixrem": "^3.0.1",
