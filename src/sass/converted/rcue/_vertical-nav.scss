@@ -413,7 +413,8 @@
       width: $nav-pf-vertical-badges-width;
     }
   }
-  .secondary-nav-item-pf,    // Keep sub-menu indicators below collapsed menu
+  // Keep sub-menu indicators below collapsed menu
+  .secondary-nav-item-pf,
   .tertiary-nav-item-pf {
     &.active,
     &.hover {

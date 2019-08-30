@@ -6,7 +6,7 @@ try {
 
 } catch (e) {
   const requireAll = require('require-all');
-  const reportTypes = (process.env.NODE_ENV === 'test') ? ['CI'] : ['browser'];
+  const reportTypes = process.env.CI ? ['CI'] : ['browser'];
   let scenarioConfigs = requireAll(`${__dirname}/scenarios`);
   let scenariosToLoad = [];
 
