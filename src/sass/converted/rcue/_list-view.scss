@@ -70,7 +70,7 @@
       flex:     1 0 auto; // it covers whats left from the title
       float: left; // IE9 fallback
       margin: 0 $grid-gutter-width 0 0;
-      width: unquote("calc(75% - 40px)") // IE9 fallback
+      width: unquote("calc(75% - 40px)"); // IE9 fallback
     }
   }
   .close {

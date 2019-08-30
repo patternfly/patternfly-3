@@ -2238,7 +2238,7 @@ select.selectpicker {
     padding: 9px;
   }
   .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon {
-    -ms-flex: 1 0 0px;
+    -ms-flex: 1 0 0;
         flex: 1 0 0;
     text-align: left;
   }
@@ -2555,7 +2555,7 @@ select.selectpicker {
   .navbar-pf-alt .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon,
   .navbar-pf .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon,
   .navbar-pf-alt .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon {
-    -ms-flex: 1 0 0px;
+    -ms-flex: 1 0 0;
         flex: 1 0 0;
     text-align: left;
   }
@@ -3958,7 +3958,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   box-shadow: 0 6px 12px rgba(3, 3, 3, 0.175);
   background-clip: padding-box;
   list-style: none;
-  margin: -1px 0 0 0;
+  margin: -1px 0 0;
   padding: 5px 10px;
   width: 150px;
   z-index: 1000;
@@ -4990,6 +4990,7 @@ a.disabled {
 @media (min-width: 992px) {
   .list-pf:not(.list-pf-stacked) .list-pf-container {
     -ms-flex-align: center;
+        -ms-grid-row-align: center;
         align-items: center;
   }
 }
@@ -5033,6 +5034,7 @@ a.disabled {
 @media (min-width: 992px) {
   .list-pf:not(.list-pf-stacked) .list-pf-content-flex {
     -ms-flex-align: center;
+        -ms-grid-row-align: center;
         align-items: center;
   }
 }
@@ -5082,6 +5084,7 @@ a.disabled {
 }
 .list-pf-stacked .list-pf-content-wrapper {
   -ms-flex-align: start;
+      -ms-grid-row-align: flex-start;
       align-items: flex-start;
 }
 .list-pf-main-content {
@@ -5207,6 +5210,7 @@ a.disabled {
 @media (min-width: 992px) {
   .list-view-pf .list-group-item {
     -ms-flex-align: center;
+        -ms-grid-row-align: center;
         align-items: center;
   }
 }
@@ -5323,6 +5327,7 @@ a.disabled {
 }
 .list-view-pf-body {
   -ms-flex-align: center;
+      -ms-grid-row-align: center;
       align-items: center;
   display: table-cell;
   -ms-flex: 1;
@@ -5489,10 +5494,12 @@ a.disabled {
 @media (min-width: 992px) {
   .list-view-pf-main-info {
     -ms-flex-align: center;
+        -ms-grid-row-align: center;
         align-items: center;
   }
   .list-view-pf-top-align .list-view-pf-main-info {
     -ms-flex-align: start;
+        -ms-grid-row-align: flex-start;
         align-items: flex-start;
   }
 }
@@ -9686,7 +9693,6 @@ table.dataTable th:active {
   display: inline-block;
   margin-left: 5px;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
 }
 .wizard-pf-step-alt.active .wizard-pf-step-alt-number {
