@@ -86,7 +86,7 @@
     "moment": "^2.19.1",
     "moment-timezone": "^0.4.1",
     "patternfly-bootstrap-combobox": "~1.1.7",
-    "patternfly-bootstrap-treeview": "~2.1.0"
+    "patternfly-bootstrap-treeview": "~2.1.10"
   },
   "release": {
     "branch": "master-dist",
