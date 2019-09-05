@@ -38,10 +38,10 @@
     "font-awesome": "~4.7.0",
     "font-awesome-sass": "~4.7.0",
     "google-code-prettify": "~1.0.5",
-    "jquery": "~3.2.1",
+    "jquery": "~3.4.1",
     "matchHeight": "~0.7.2",
     "moment": "^2.19.1",
     "patternfly-bootstrap-combobox": "~1.1.7",
-    "patternfly-bootstrap-treeview": "~2.1.0"
+    "patternfly-bootstrap-treeview": "~2.1.10"
   }
 }
