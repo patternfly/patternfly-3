@@ -25,6 +25,7 @@ before_install:
 install: true
 
 script:
+  - gem install bundler:1.15.4
   - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -p
 
 after_success:
