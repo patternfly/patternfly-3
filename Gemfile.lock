@@ -3,7 +3,7 @@ GEM
   specs:
     addressable (2.4.0)
     colorator (1.1.0)
-    ffi (1.9.14)
+    ffi (1.12.2)
     forwardable-extended (2.6.0)
     jekyll (3.3.0)
       addressable (~> 2.4)
