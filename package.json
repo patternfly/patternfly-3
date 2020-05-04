@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.59.4",
+  "version": "3.59.5",
   "author": "Red Hat",
   "license": "MIT",
   "dependencies": {
