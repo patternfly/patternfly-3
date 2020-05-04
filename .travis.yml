@@ -50,4 +50,4 @@ deploy:
   gem: patternfly-sass
   on:
     branch: master-dist
-    repo: patternfly/patternfly
+    repo: patternfly/patternfly-3
