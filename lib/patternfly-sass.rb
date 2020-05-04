@@ -55,12 +55,12 @@ module Patternfly
     private
 
     def configure_sass
-      require 'sass'
+      require 'sassc'
 
-      ::Sass.load_paths << stylesheets_path
+      ::SassC.load_paths << stylesheets_path
 
       # bootstrap requires minimum precision of 8, see https://github.com/twbs/bootstrap-sass/issues/409
-      ::Sass::Script::Number.precision = [8, ::Sass::Script::Number.precision].max
+      ::SassC::Script::Value::Number.precision = [8, ::SassC::Script::Value::Number.precision].max
     end
 
     def register_compass_extension
