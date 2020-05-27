@@ -104,10 +104,10 @@
  */
 (function (factory) {
   "use strict";
-  if (typeof define === "function" && define.amd ) {
+  if (typeof define === "function" && define.amd) {
     // AMD
-    define (["jquery", "datatables.net"], function ($) {
-      return factory ($, window, document);
+    define(["jquery", "datatables.net"], function ($) {
+      return factory($, window, document);
     });
   } else if (typeof exports === "object") {
     // CommonJS
@@ -208,9 +208,45 @@
       }
       return showThisRow;
     });
+
+    $.event.trigger({
+      type: "init.pf",
+      message: "pfFilter has been initialized",
+      time: new Date()
+    });
   };
 
   // Local functions
+
+  /**
+   * update filters if server-side processing is enabled
+   * see more https://www.datatables.net/release-datatables/examples/data_sources/server_side.html
+   *
+   * @param {DataTable.Api} dt DataTable
+   * @private
+   */
+  function updateRemoteFilters (dt) {
+    var ctx = dt.settings()[0];
+    var filters = [];
+
+    $.each(ctx._pfFilter.filters, function (index, filter) {
+      if (filters[filter.column] === undefined) {
+        filters[filter.column] = [];
+      }
+
+      filters[filter.column].push(filter.value);
+    });
+
+    dt.search('').columns().search(''); // clear before update
+
+    $.each(filters, function (column, values) {
+      if (values === undefined) {
+        return;
+      }
+
+      dt.column(column).search(values.join('|'), true, false, ctx._pfFilter.filterCaseInsensitive);
+    });
+  }
 
   /**
    * Add active filter control
@@ -227,7 +263,7 @@
     var i;
 
     // Append active filter control
-    ctx._pfFilter.activeFilterControls.append('<li><span class="label label-info">' + filter.name + ': ' +
+    ctx._pfFilter.activeFilterControls.append('<li><span class="label label-primary">' + filter.name + ': ' +
       filter.value + '<a href="#"><span class="pficon pficon-close"/></a></span></li>');
 
     // Handle click to clear active filter
@@ -242,6 +278,9 @@
       }
       if (ctx._pfFilter.filters.length === 0) {
         ctx._pfFilter.activeFilters.addClass("hidden"); // Hide
+      }
+      if (ctx.oInit.serverSide) {
+        updateRemoteFilters(dt);
       }
       dt.draw();
       updateFilterResults(dt);
@@ -274,6 +313,9 @@
     // Add new filter
     if (!found) {
       ctx._pfFilter.filters.push(filter);
+      if (ctx.oInit.serverSide) {
+        updateRemoteFilters(dt);
+      }
       dt.draw();
       addActiveFilterControl(dt, filter);
       updateFilterResults(dt);
@@ -292,6 +334,9 @@
     ctx._pfFilter.filters.length = 0; // Reset filters
     ctx._pfFilter.activeFilterControls.html(""); // Remove active filter controls
     ctx._pfFilter.activeFilters.addClass("hidden"); // Hide active filters area
+    if (ctx.oInit.serverSide) {
+      updateRemoteFilters(dt);
+    }
     dt.draw();
   }
 
@@ -377,7 +422,16 @@
    */
   function updateFilterResults (dt) {
     var ctx = dt.settings()[0];
-    var filteredRows = dt.rows({"page": "current", "search": "applied"}).flatten().length;
+    var filteredRows;
+
+    if (ctx.oInit.serverSide) {
+      dt.on('draw', function () {
+        filteredRows = dt.ajax.json().recordsFiltered;
+        ctx._pfFilter.filterResults.html(filteredRows + " Results");
+      });
+    } else {
+      filteredRows = dt.rows({ "page": "current", "search": "applied" }).flatten().length;
+    }
     if (ctx._pfFilter.filterResults === undefined || ctx._pfFilter.filterResults.length === 0) {
       return;
     }

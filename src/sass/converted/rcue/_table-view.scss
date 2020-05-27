@@ -149,7 +149,6 @@ table.dataTable {
       margin-bottom: 0;
     }
   }
-
 }
 
 // Inline action button and kebab
@@ -165,6 +164,10 @@ table.dataTable {
     height: 100%;
     width: 100%;
   }
+  .table-view-pf-save,
+  .table-view-pf-cancel {
+    width: 50%;
+  }
   .dropdown,
   .table-view-pf-btn {
     height: 100%;
@@ -174,6 +177,15 @@ table.dataTable {
   }
   &:last-child {
     width: 24px;
+  }
+}
+
+// Inline edit td
+.table-view-pf-editable > .table-view-pf-editor {
+  width: 100%;
+  color: $color-pf-black;
+  .filter-option {
+    color: $color-pf-black;
   }
 }
 
