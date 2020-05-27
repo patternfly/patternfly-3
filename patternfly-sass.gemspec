@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   s.files = [
     'patternfly-sass.gemspec',
+    'package.json',
     'LICENSE.txt',
     'README.md',
     'CODE_OF_CONDUCT.md',
