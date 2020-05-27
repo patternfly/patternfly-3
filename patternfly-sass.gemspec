@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'sassc', "> 2.0.1", "< 3.0"
   s.add_runtime_dependency 'bootstrap-sass', '~> 3.4.0'
-  s.add_runtime_dependency 'font-awesome-sass', '~> 4.6.2'
+  s.add_runtime_dependency 'font-awesome-sass', '>= 4.6.2', "< 6.0"
 
   s.files = [
     'patternfly-sass.gemspec',
