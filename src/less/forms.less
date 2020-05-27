@@ -164,6 +164,9 @@ span.required-pf {
     position: relative;
     input {
       padding-right: @input-height-base;
+      &::-ms-clear {
+        display: none;
+      }
     }
     .form-control-pf-empty {
       background: none;
