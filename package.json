@@ -3,6 +3,7 @@
   "version": "0.0.0-semantically-released",
   "author": "Red Hat",
   "license": "MIT",
+  "main": "dist/js/patternfly.js",
   "dependencies": {
     "bootstrap": "~3.4.1",
     "font-awesome": "^4.7.0",
