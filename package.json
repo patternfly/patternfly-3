@@ -60,7 +60,7 @@
     "patternfly-eng-release": "^3.26.46",
     "pixrem": "^3.0.1",
     "require-all": "^2.2.0",
-    "semantic-release": "^15.13.24",
+    "semantic-release": "^17.2.3",
     "stylelint": "^10.1.0",
     "table": "3.7.9"
   },
