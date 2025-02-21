@@ -21,7 +21,7 @@
     "cz-conventional-changelog": "^2.0.0",
     "express": "^4.16.2",
     "front-matter": "^2.1.1",
-    "grunt": "~1.0.1",
+    "grunt": "~1.5.3",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-concat": "^1.0.0",
